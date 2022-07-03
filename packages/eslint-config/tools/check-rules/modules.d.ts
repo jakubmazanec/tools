@@ -1,0 +1,12 @@
+declare module 'eslint-plugin-eslint-comments';
+declare module 'eslint-plugin-import';
+declare module 'eslint-plugin-jest';
+declare module 'eslint-plugin-jsx-a11y';
+declare module 'eslint-plugin-node';
+declare module 'eslint-plugin-prettier';
+declare module 'eslint-plugin-promise';
+declare module 'eslint-plugin-react';
+declare module 'eslint-plugin-react-hooks';
+declare module 'eslint-plugin-testing-library';
+declare module 'eslint-plugin-unicorn';
+declare module '@next/eslint-plugin-next';
