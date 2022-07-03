@@ -1,0 +1,43 @@
+{
+  "$schema": "https://turborepo.org/schema.json",
+  "baseBranch": "origin/main",
+  "pipeline": {
+    "build": {
+      "dependsOn": ["clean", "codegen", "^build"],
+      "outputs": [".next/**", "build/**", "dist/**"]
+    },
+    "clean": {
+      "cache": false
+    },
+    "codegen": {
+      "cache": false
+    },
+    "docs": {
+      "dependsOn": ["codegen"],
+      "outputs": ["docs"]
+    },
+    "format": {
+      "cache": false
+    },
+    "lint": {
+      "dependsOn": ["@jakubmazanec/eslint-config#build", "^build"],
+      "outputs": []
+    },
+    "test": {
+      "dependsOn": ["^build", "typecheck", "lint"],
+      "outputs": []
+    },
+    "typecheck": {
+      "dependsOn": ["^build"],
+      "outputs": []
+    }
+  },
+  "globalDependencies": [
+    ".editorconfig",
+    ".eslintrc.cjs",
+    ".prettierignore",
+    "prettier.config.js",
+    "tsconfig.options.json",
+    "tsconfig.typecheck.json"
+  ]
+}

@@ -1,0 +1,198 @@
+name: Release
+
+on: [push, workflow_dispatch]
+
+jobs:
+  main_branch_release:
+    name: Main branch release
+    runs-on: ubuntu-latest
+    if: "github.ref_name == 'main'"
+    steps:
+      - name: Cancel previous runs
+        uses: styfle/cancel-workflow-action@0.9.1
+        with:
+          access_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/checkout@v2
+        with:
+          token: ${{secrets.PAT}}
+          fetch-depth: 0
+
+      - name: Configure git
+        run: |
+          git config user.email "jakub@mazanec.dev"
+          git config user.name "Jakub Mazanec"
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Authenticate to npm registry
+        run: |
+          echo "//registry.npmjs.com/:_authToken=NPM_TOKEN" > .npmrc
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Install packages
+        run: npm ci
+
+      - name: Run tests
+        run: npm run test
+
+      - name: Build packages
+        run: npm run build
+
+      - name: Version packages
+        run: |
+          npx changeset version
+
+      - name: Commit changes
+        run: |
+          git add -A
+          git reset .npmrc
+          git status
+          git commit -m"Release [skip actions]"
+
+      - name: Publish packages
+        run: |
+          npx changeset publish --no-git-tag
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Update lockfile
+        run: |
+          npm install
+          git add package-lock.json
+          git status
+          git commit --amend --no-edit
+
+      - name: Add git tags
+        run: |
+          npx changeset tag
+
+      - name: Push changes
+        run: |
+          git push --follow-tags
+
+      - name: Checkout main branch
+        run: |
+          git fetch -p origin
+          git checkout main
+          git branch --set-upstream-to=origin/main main
+          git reset --hard origin/main
+          git pull
+
+      - name: Checkout development branch
+        run: |
+          git checkout -B development
+          git branch --set-upstream-to=origin/development development
+          git reset --hard origin/development
+
+      - name: Merge and commit
+        run: |
+          git merge main --no-verify
+          git push -u origin development --no-verify
+
+  development_branch_release:
+    name: Development branch release
+    runs-on: ubuntu-latest
+    if: "github.ref_name == 'development'"
+    steps:
+      - name: Cancel previous runs
+        uses: styfle/cancel-workflow-action@0.9.1
+        with:
+          access_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Configure git
+        run: |
+          git config user.email "jakub@mazanec.dev"
+          git config user.name "Jakub Mazanec"
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Authenticate to npm registry
+        run: |
+          echo "//registry.npmjs.com/:_authToken=NPM_TOKEN" > .npmrc
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Install packages
+        run: npm ci
+
+      - name: Run tests
+        run: npm run test
+
+      - name: Build packages
+        run: npm run build
+
+      - name: Version packages
+        run: |
+          npx changeset version --snapshot next
+
+      - name: Publish packages
+        run: |
+          npx changeset publish --tag next --no-git-tag
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+  feature_branch_release:
+    name: Feature branch release
+    runs-on: ubuntu-latest
+    if: "github.ref_name != 'main' && github.ref_name != 'development'"
+    steps:
+      - name: Cancel previous runs
+        uses: styfle/cancel-workflow-action@0.9.1
+        with:
+          access_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Configure git
+        run: |
+          git config user.email "jakub@mazanec.dev"
+          git config user.name "Jakub Mazanec"
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Authenticate to npm registry
+        run: |
+          echo "//registry.npmjs.com/:_authToken=NPM_TOKEN" > .npmrc
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Install packages
+        run: npm ci
+
+      - name: Run tests
+        run: npm run test
+
+      - name: Build packages
+        run: npm run build
+
+      - name: Version packages
+        run: |
+          npx changeset version --snapshot
+
+      - name: Publish packages
+        run: |
+          npx changeset publish --tag unstable --no-git-tag
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
