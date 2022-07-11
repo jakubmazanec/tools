@@ -27,7 +27,7 @@
     "@swc/cli": "^0.1.57",
     "@swc/core": "^1.2.208",
     "@testing-library/jest-dom": "^5.16.4",
-    "@types/node": "^16.11.42",
+    "@types/node": "^16.11.43",
     "cross-env": "^7.0.3",
     "del-cli": "^4.0.1",
     "eslint": "^8.19.0",
