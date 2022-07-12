@@ -1,7 +1,7 @@
 {
-  "name": "@jakubmazanec/workflow-test",
+  "name": "@jakubmazanec/js-tools",
   "private": true,
-  "description": "Workflow test",
+  "description": "Collection of JavaScript and TypeScript tools.",
   "license": "MIT",
   "author": "Jakub Mazanec <jakub@mazanec.dev>",
   "workspaces": [
