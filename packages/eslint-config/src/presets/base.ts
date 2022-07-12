@@ -12,6 +12,7 @@ import a11yRules from '../rules/a11y';
 import eslintRules from '../rules/eslint';
 import commentsRules from '../rules/eslint-comments';
 import importRules from '../rules/import';
+import jestFormattingRules from '../rules/jest-formatting';
 import jestRules from '../rules/jest-rules';
 import promiseRules from '../rules/promise';
 import reactRules from '../rules/react';
@@ -107,6 +108,7 @@ const config: eslint.Linter.Config = {
       },
       rules: {
         ...jestRules,
+        ...jestFormattingRules,
         ...testingLibraryRules,
 
         // override ESLint rules
