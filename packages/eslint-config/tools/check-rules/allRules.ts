@@ -6,6 +6,7 @@ import * as eslintPluginTypescript from '@typescript-eslint/eslint-plugin';
 import * as eslintPluginEslintComments from 'eslint-plugin-eslint-comments';
 import * as eslintPluginImport from 'eslint-plugin-import';
 import * as eslintPluginJest from 'eslint-plugin-jest';
+import * as eslintPluginJestFormatting from 'eslint-plugin-jest-formatting';
 import * as eslintPluginJsxA11y from 'eslint-plugin-jsx-a11y';
 import * as eslintPluginNode from 'eslint-plugin-node';
 import * as eslintPluginPrettier from 'eslint-plugin-prettier';
@@ -47,6 +48,12 @@ const importRules = (Object.entries(eslintPluginImport.rules) as Array<[string, 
 const jestRules = (Object.entries(eslintPluginJest.rules) as Array<[string, Rule]>)
   .filter(([, rule]) => !rule.meta?.deprecated)
   .map(([ruleName]) => `jest/${ruleName}`);
+
+const jestFormattingRules = (
+  Object.entries(eslintPluginJestFormatting.rules) as Array<[string, Rule]>
+)
+  .filter(([, rule]) => !rule.meta?.deprecated)
+  .map(([ruleName]) => `jest-formatting/${ruleName}`);
 
 const jsxA11yRules = (Object.entries(eslintPluginJsxA11y.rules) as Array<[string, Rule]>)
   .filter(([, rule]) => !rule.meta?.deprecated)
@@ -92,6 +99,7 @@ export const allRules = [
   ...eslintCommentsRules,
   ...importRules,
   ...jestRules,
+  ...jestFormattingRules,
   ...jsxA11yRules,
   ...nodeRules,
   ...prettierRules,
