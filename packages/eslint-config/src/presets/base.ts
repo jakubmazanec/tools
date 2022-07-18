@@ -90,7 +90,7 @@ const config: eslint.Linter.Config = {
     {
       files: [`*.test.${JS_AND_TS_EXTENSIONS_GLOB_PART}`],
 
-      plugins: ['jest', 'testing-library'],
+      plugins: ['jest', 'jest-formatting', 'testing-library'],
 
       settings: {
         'testing-library/custom-queries': 'off',
