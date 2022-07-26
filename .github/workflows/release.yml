@@ -192,7 +192,7 @@ jobs:
 
       - name: Version packages
         run: |
-          npx changeset version --snapshot
+          npx changeset version --snapshot --prereleaseTemplate {commit}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

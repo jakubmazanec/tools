@@ -7,8 +7,11 @@
   "baseBranch": "main",
   "updateInternalDependencies": "minor",
   "ignore": [],
+  "snapshot": {
+    "useCalculatedVersion": true,
+    "prereleaseTemplate": "{tag}.{commit}"
+  },
   "___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH": {
-    "onlyUpdatePeerDependentsWhenOutOfRange": true,
-    "useCalculatedVersionForSnapshots": true
+    "onlyUpdatePeerDependentsWhenOutOfRange": true
   }
 }
