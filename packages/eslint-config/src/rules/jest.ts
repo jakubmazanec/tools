@@ -4,7 +4,7 @@ const config: eslint.Linter.Config['rules'] = {
   // eslint-plugin-jest
   'jest/consistent-test-it': 'off', // have control over test and it usages
   'jest/expect-expect': 'warn', // enforce assertion to be made in a test body
-  'jest/max-nested-describe': ['error', {max: 3}], // enforces a maximum depth to nested describe calls
+  'jest/max-nested-describe': 'off', // enforces a maximum depth to nested describe calls
   'jest/no-alias-methods': 'warn', // disallow alias methods
   'jest/no-commented-out-tests': 'warn', // disallow commented out tests
   'jest/no-conditional-expect': 'error', // prevent calling expect conditionally
