@@ -139,7 +139,7 @@ jobs:
 
       - name: Version packages
         run: |
-          npx changeset version --snapshot next.$(date +%Y%m%d)
+          npx changeset version --snapshot next --snapshot-prerelease-template "{tag}.{commit}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -192,7 +192,7 @@ jobs:
 
       - name: Version packages
         run: |
-          npx changeset version --snapshot $(date +%Y%m%d)
+          npx changeset version --snapshot --snapshot-prerelease-template "{commit}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
