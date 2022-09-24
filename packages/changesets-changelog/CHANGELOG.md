@@ -1,5 +1,13 @@
 # @jakubmazanec/changesets-changelog
 
+## 1.0.1
+
+### Patch Changes
+
+- [#8](https://github.com/jakubmazanec/js-tools/pull/8)
+  [`efea340`](https://github.com/jakubmazanec/js-tools/commit/efea340387a59334a82c6a663984dfd9514e1008)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Adds missing license files.
+
 ## 1.0.0
 
 ### Major Changes

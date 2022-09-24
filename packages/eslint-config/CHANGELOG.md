@@ -1,5 +1,20 @@
 # @jakubmazanec/eslint-config
 
+## 1.3.0
+
+### Minor Changes
+
+- [#10](https://github.com/jakubmazanec/js-tools/pull/10)
+  [`6971df5`](https://github.com/jakubmazanec/js-tools/commit/6971df5982fec2ae48377207c3f9b325b90b8ce7)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Updates `consistent-type-exports` and
+  `consistent-type-import` rules config.
+
+### Patch Changes
+
+- [#8](https://github.com/jakubmazanec/js-tools/pull/8)
+  [`efea340`](https://github.com/jakubmazanec/js-tools/commit/efea340387a59334a82c6a663984dfd9514e1008)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Adds missing license files.
+
 ## 1.2.0
 
 ### Minor Changes
