@@ -6,6 +6,7 @@ jobs:
   main_branch_release:
     name: Main branch release
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     if: "github.ref_name == 'main'"
     steps:
       - name: Cancel previous runs
@@ -20,8 +21,8 @@ jobs:
 
       - name: Configure git
         run: |
-          git config user.email "jakub@mazanec.dev"
-          git config user.name "Jakub Mazanec"
+          git config user.email "bot@mazanec.dev"
+          git config user.name "Bot"
 
       - uses: actions/setup-node@v2
         with:
@@ -100,6 +101,7 @@ jobs:
   development_branch_release:
     name: Development branch release
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     if: "github.ref_name == 'development'"
     steps:
       - name: Cancel previous runs
@@ -114,8 +116,8 @@ jobs:
 
       - name: Configure git
         run: |
-          git config user.email "jakub@mazanec.dev"
-          git config user.name "Jakub Mazanec"
+          git config user.email "bot@mazanec.dev"
+          git config user.name "Bot"
 
       - uses: actions/setup-node@v2
         with:
@@ -137,6 +139,16 @@ jobs:
       - name: Build packages
         run: npm run build
 
+      - name: Update documentation
+        run: |
+          npm run document --if-present
+          npm run format --if-present
+          git add **/docs/**
+          git status
+          git commit -m"Update docs [skip actions]"
+          git push
+        continue-on-error: true
+
       - name: Version packages
         run: |
           npx changeset version --snapshot next --snapshot-prerelease-template "{tag}.{commit}"
@@ -153,6 +165,7 @@ jobs:
   feature_branch_release:
     name: Feature branch release
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     if: "github.ref_name != 'main' && github.ref_name != 'development'"
     steps:
       - name: Cancel previous runs
@@ -167,8 +180,8 @@ jobs:
 
       - name: Configure git
         run: |
-          git config user.email "jakub@mazanec.dev"
-          git config user.name "Jakub Mazanec"
+          git config user.email "bot@mazanec.dev"
+          git config user.name "Bot"
 
       - uses: actions/setup-node@v2
         with:

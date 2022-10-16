@@ -6,6 +6,7 @@ jobs:
   merge:
     name: Merge
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v2
         with:
@@ -14,8 +15,8 @@ jobs:
 
       - name: Configure git
         run: |
-          git config user.email "jakub@mazanec.dev"
-          git config user.name "Jakub Mazanec"
+          git config user.email "bot@mazanec.dev"
+          git config user.name "Bot"
 
       - uses: actions/setup-node@v2
         with:
