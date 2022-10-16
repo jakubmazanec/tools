@@ -3,8 +3,8 @@
   "baseBranch": "origin/main",
   "pipeline": {
     "build": {
-      "dependsOn": ["clean", "codegen", "^build"],
-      "outputs": [".next/**", "build/**", "dist/**"]
+      "dependsOn": ["^build", "clean", "codegen"],
+      "outputs": ["build/**", "dist/**"]
     },
     "clean": {
       "cache": false
@@ -12,9 +12,9 @@
     "codegen": {
       "cache": false
     },
-    "docs": {
+    "document": {
       "dependsOn": ["codegen"],
-      "outputs": ["docs"]
+      "outputs": ["docs/**"]
     },
     "format": {
       "cache": false
