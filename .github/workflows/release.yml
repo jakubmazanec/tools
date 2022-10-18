@@ -139,16 +139,6 @@ jobs:
       - name: Build packages
         run: npm run build
 
-      - name: Update documentation
-        run: |
-          npm run document --if-present
-          npm run format --if-present
-          git add **/docs/**
-          git status
-          git commit -m"Update docs [skip actions]"
-          git push
-        continue-on-error: true
-
       - name: Version packages
         run: |
           npx changeset version --snapshot next --snapshot-prerelease-template "{tag}.{commit}"
@@ -202,6 +192,16 @@ jobs:
 
       - name: Build packages
         run: npm run build
+
+      - name: Update documentation
+        run: |
+          npm run document --if-present
+          npm run format --if-present
+          git add **/docs/**
+          git status
+          git commit -m"Update docs [skip actions]"
+          git push --force
+        continue-on-error: true
 
       - name: Version packages
         run: |
