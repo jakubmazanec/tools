@@ -12,7 +12,7 @@
   "sideEffects": false,
   "type": "commonjs",
   "exports": {
-    ".": "./dist/config.js",
+    ".": "./dist/main.js",
     "./nextjs": "./dist/presets/nextjs.js",
     "./nodejs": "./dist/presets/nodejs.js",
     "./prettier": "./dist/presets/prettier.js"

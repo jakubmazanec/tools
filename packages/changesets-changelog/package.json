@@ -11,7 +11,7 @@
   "author": "Jakub Mazanec <jakub@mazanec.dev>",
   "sideEffects": false,
   "type": "commonjs",
-  "exports": "./dist/changesets-changelog.js",
+  "exports": "./dist/main.js",
   "files": [
     "dist",
     "src"
