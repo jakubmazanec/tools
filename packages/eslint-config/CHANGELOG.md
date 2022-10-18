@@ -1,5 +1,14 @@
 # @jakubmazanec/eslint-config
 
+## 1.3.1
+
+### Patch Changes
+
+- [#12](https://github.com/jakubmazanec/js-tools/pull/12)
+  [`e1d8155`](https://github.com/jakubmazanec/js-tools/commit/e1d8155b5c8bb992ec2cb63aa2aa6f7217d82c5f)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fix package entry points so they're
+  standardized.
+
 ## 1.3.0
 
 ### Minor Changes
