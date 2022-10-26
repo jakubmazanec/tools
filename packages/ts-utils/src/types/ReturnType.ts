@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any -- needed */
+
 /**
  * Constructs a type consisting of the return type of function `T`.
  * Similarly like built-in `ReturnType` utility type, but works also on nullable and other types,

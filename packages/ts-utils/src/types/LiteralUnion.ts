@@ -19,4 +19,4 @@ import type {Primitive} from './Primitive.js';
  * @typeParam L Union of literal types
  * @typeParam T Primitive type
  */
-export type LiteralUnion<L, T extends Primitive> = L | (T & Record<never, never>);
+export type LiteralUnion<L, T extends Primitive> = L | (Record<never, never> & T);

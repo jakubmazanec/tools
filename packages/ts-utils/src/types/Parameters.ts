@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any -- needed */
+
 /**
  * Constructs a tuple type from the types used in the parameters of a function type `T`.
  * Similarly like built-in `Parameters` utility type, but works also on nullable and other types.

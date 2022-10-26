@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-empty-interface -- needed */
+/* eslint-disable @typescript-eslint/no-explicit-any, @typescript-eslint/no-empty-interface -- needed */
 
 import type {Primitive} from './Primitive.js';
 
