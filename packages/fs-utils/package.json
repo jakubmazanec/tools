@@ -1,0 +1,39 @@
+{
+  "name": "@jakubmazanec/fs-utils",
+  "version": "0.0.0",
+  "description": "Collection of utilities for working with file system.",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jakubmazanec/js-tools.git",
+    "directory": "packages/fs-utils"
+  },
+  "license": "LGPL-3.0-only",
+  "author": "Jakub Mazanec <jakub@mazanec.dev>",
+  "sideEffects": false,
+  "type": "module",
+  "exports": "./dist/main.js",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "swc src -d dist && tsc",
+    "clean": "del-cli dist *.tsbuildinfo",
+    "document": "typedoc --options typedoc.config.cjs",
+    "format": "prettier . --write --ignore-unknown --ignore-path ../../.prettierignore",
+    "lint": "eslint .",
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --passWithNoTests",
+    "typecheck": "tsc --project tsconfig.typecheck.json"
+  },
+  "dependencies": {
+    "fs-extra": "^10.0.1"
+  },
+  "devDependencies": {
+    "@jest/globals": "^29.5.0",
+    "@types/fs-extra": "^9.0.13"
+  },
+  "packageManager": "npm@8.19.4",
+  "engines": {
+    "node": ">=16.20.0"
+  }
+}

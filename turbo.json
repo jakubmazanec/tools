@@ -13,13 +13,13 @@
     },
     "document": {
       "dependsOn": ["^build", "codegen"],
-      "outputs": ["docs"]
+      "outputs": ["docs/**"]
     },
     "format": {
       "cache": false
     },
     "lint": {
-      "dependsOn": ["@jakubmazanec/eslint-config#build", "^build"],
+      "dependsOn": ["@jakubmazanec/eslint-config#build", "^build", "codegen"],
       "outputs": []
     },
     "test": {
@@ -27,7 +27,7 @@
       "outputs": ["coverage/**"]
     },
     "typecheck": {
-      "dependsOn": ["^build"],
+      "dependsOn": ["^build", "codegen"],
       "outputs": []
     }
   },

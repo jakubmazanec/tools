@@ -1,0 +1,33 @@
+---
+to: '.github/workflows/pull-request.yaml'
+strategy: overwrite
+---
+name: Check pull request
+
+on:
+  pull_request:
+    branches:
+      - development
+
+jobs:
+  pull_request_check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          token: ${{secrets.GITHUB_TOKEN}}
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install packages
+        run: npm ci
+
+      - name: Run tests
+        run: npm run test
+
+      - name: Check for changesets
+        run: npx changeset status --since=origin/development

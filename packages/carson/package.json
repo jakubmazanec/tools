@@ -1,0 +1,83 @@
+{
+  "name": "@jakubmazanec/carson",
+  "version": "0.0.0",
+  "description": "Tool for managing workspace and project configuration.",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jakubmazanec/js-tools.git",
+    "directory": "packages/carson"
+  },
+  "license": "AGPL-3.0-only",
+  "author": "Jakub Mazanec <jakub@mazanec.dev>",
+  "sideEffects": false,
+  "type": "module",
+  "exports": "./dist/main.js",
+  "bin": {
+    "carson": "bin/carson.js"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "swc src -d dist && tsc",
+    "clean": "del-cli dist *.tsbuildinfo",
+    "develop": "swc src -d dist --watch",
+    "document": "typedoc --options typedoc.config.cjs",
+    "format": "prettier . --write --ignore-unknown --ignore-path ../../.prettierignore",
+    "lint": "eslint .",
+    "start": "node --loader ts-node/esm/transpile-only --inspect src/run.ts",
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --passWithNoTests",
+    "typecheck": "tsc --project tsconfig.typecheck.json"
+  },
+  "dependencies": {
+    "@jakubmazanec/args": "^1.0.0",
+    "@jakubmazanec/cli": "^0.0.0",
+    "@jakubmazanec/error": "^2.0.0",
+    "@jakubmazanec/fs-utils": "^0.0.0",
+    "@jakubmazanec/template": "^1.0.0",
+    "@jakubmazanec/ts-utils": "^2.0.0",
+    "@jakubmazanec/zod-utils": "^0.0.0",
+    "chalk": "^5.2.0",
+    "diff": "^5.1.0",
+    "fast-glob": "^3.2.11",
+    "fflate": "^0.7.4",
+    "fs-extra": "^10.0.1",
+    "json5": "^2.2.1",
+    "lodash": "^4.17.21",
+    "micromatch": "^4.0.5",
+    "prettier": "^2.8.5",
+    "prettier-plugin-packagejson": "^2.4.3",
+    "semver": "^7.3.6",
+    "simple-git": "^3.15.1",
+    "yaml": "^2.1.3",
+    "zen-observable": "^0.10.0",
+    "zod": "^3.14.4"
+  },
+  "devDependencies": {
+    "@jest/globals": "^29.5.0",
+    "@types/diff": "^5.0.2",
+    "@types/fs-extra": "^9.0.13",
+    "@types/lodash": "^4.14.195",
+    "@types/micromatch": "^4.0.2",
+    "@types/node": "^16.18.3",
+    "@types/react": "^18.0.26",
+    "@types/semver": "^7.3.9",
+    "@types/zen-observable": "^0.8.3",
+    "ink": "^3.2.0",
+    "react": "^18.2.0"
+  },
+  "peerDependencies": {
+    "ink": "^3.0.0",
+    "react": "^18.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@types/react": {
+      "optional": true
+    }
+  },
+  "packageManager": "npm@8.19.4",
+  "engines": {
+    "node": ">=16.20.0"
+  }
+}

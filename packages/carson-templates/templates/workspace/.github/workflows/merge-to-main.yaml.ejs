@@ -1,0 +1,53 @@
+---
+to: '.github/workflows/merge-to-main.yaml'
+strategy: overwrite
+---
+name: Merge development to main
+
+on: [workflow_dispatch]
+
+jobs:
+  merge:
+    name: Merge
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          token: ${{secrets.PAT}}
+          fetch-depth: 0
+
+      - name: Configure git
+        run: |
+          git config user.email "bot@mazanec.dev"
+          git config user.name "Bot"
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install packages
+        run: npm ci
+
+      - name: Check for changesets
+        run: npx changeset status --since=origin/main
+
+      - name: Checkout development branch
+        run: |
+          git fetch -p origin
+          git checkout development
+          git branch --set-upstream-to=origin/development development
+          git reset --hard origin/development
+          git pull
+
+      - name: Checkout main branch
+        run: |
+          git checkout -B main
+          git branch --set-upstream-to=origin/main main
+          git reset --hard origin/main
+
+      - name: Merge and commit
+        run: |
+          git merge development --no-verify
+          git push -u origin main --no-verify

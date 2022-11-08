@@ -1,3 +1,4 @@
+<!-- header -->
 <div align="center">
 
 # @jakubmazanec/template
@@ -5,6 +6,7 @@
 TypeScript-first library for working with templates using EJS and Zod.
 
 </div>
+<!-- header -->
 
 ## Installation
 

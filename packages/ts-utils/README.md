@@ -1,3 +1,4 @@
+<!-- header -->
 <div align="center">
 
 # @jakubmazanec/ts-utils
@@ -5,6 +6,7 @@
 Collection of TypeScript types and utilities.
 
 </div>
+<!-- header -->
 
 ## Installation
 

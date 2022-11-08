@@ -5,6 +5,9 @@ module.exports = {
     '@jakubmazanec/eslint-config/nodejs',
     '@jakubmazanec/eslint-config/prettier',
   ],
+  rules: {
+    'no-await-in-loop': 'off',
+  },
   ignorePatterns: [
     '.next/',
     'bin/',

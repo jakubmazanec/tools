@@ -2,7 +2,7 @@ import path from 'node:path';
 import {z} from 'zod';
 
 import {TEST_TEMPLATES_DIRECTORY_PATH} from './constants.js';
-import {Template} from '../src/main.js';
+import {Template} from '../src/Template.js';
 
 describe('Template', () => {
   describe('rendering', () => {

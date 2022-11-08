@@ -1,0 +1,10 @@
+{
+  "template": "@jakubmazanec/carson-templates:projects/library",
+  "overrides": {
+    "packageJson": {
+      "scripts": {
+        "test": "cross-env FORCE_COLOR=1 NODE_OPTIONS=--experimental-vm-modules jest --passWithNoTests"
+      }
+    }
+  }
+}

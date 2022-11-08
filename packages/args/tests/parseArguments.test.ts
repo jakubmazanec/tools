@@ -435,9 +435,9 @@ describe('parseArgs()', () => {
             type: 'string',
             defaultValue: 42,
           },
-          // @ts-expect-error - this is actually invalid value for property `choices`
           {
             type: 'number',
+            // @ts-expect-error - this is actually invalid value for property `choices`
             choices: ['42', '47'],
           },
         ],

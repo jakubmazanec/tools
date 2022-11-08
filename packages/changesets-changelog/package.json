@@ -21,7 +21,7 @@
     "clean": "del-cli dist *.tsbuildinfo",
     "format": "prettier . --write --ignore-unknown --ignore-path ../../.prettierignore",
     "lint": "eslint .",
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "typecheck": "tsc --project tsconfig.typecheck.json"
   },
   "dependencies": {

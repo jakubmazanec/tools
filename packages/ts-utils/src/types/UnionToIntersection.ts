@@ -12,7 +12,7 @@ export type UnionToIntersection<U> = boolean extends U
   : UnionToIntersectionHelper<U>;
 
 /**
- * Helper type for {@linkcode UnionToIntersection}.
+ * Helper type for {@link UnionToIntersection}.
  */
 type UnionToIntersectionHelper<U> = (U extends unknown ? (k: U) => void : never) extends (
   k: infer I,

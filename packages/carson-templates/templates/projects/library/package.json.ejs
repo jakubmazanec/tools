@@ -1,0 +1,38 @@
+---
+to: 'package.json'
+strategy: merge
+---
+<%
+let developmentDependencies = getDependencies({
+  '@jest/globals': '^29.0.0',
+}, workspace);
+let packageJson = lodash.merge(
+  {
+    repository: {
+      type: 'git',
+      url: workspace.repository?.url ?? '',
+      directory: project.relativePath,
+    },
+    type: 'module',
+    exports: './dist/main.js',
+    files: ['dist', 'src'],
+    scripts: {
+      build: 'swc src -d dist && tsc',
+      clean: 'del-cli dist *.tsbuildinfo',
+      document: 'typedoc --options typedoc.config.cjs',
+      format:
+        'prettier . --write --ignore-unknown --ignore-path ../../.prettierignore',
+      lint: 'eslint .',
+      test: 'cross-env NODE_OPTIONS=--experimental-vm-modules jest --passWithNoTests',
+      typecheck: 'tsc --project tsconfig.typecheck.json',
+    },
+    devDependencies: developmentDependencies,
+    packageManager: 'npm@8.19.4',
+    engines: {
+      node: '>=16.20.0',
+    },
+  },
+  project.config.overrides?.packageJson ?? {},
+);
+-%>
+<%- JSON.stringify(packageJson) %>

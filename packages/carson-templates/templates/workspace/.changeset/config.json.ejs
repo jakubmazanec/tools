@@ -1,0 +1,28 @@
+---
+to: '.changeset/config.json'
+strategy: overwrite
+---
+<%
+function urlToShortGithubUrl(value) {
+  return value.replaceAll(/(git@github\.com:)|(https:\/\/github\.com\/)|(\.git)/gi, '');
+}
+-%>
+{
+  "$schema": "https://unpkg.com/@changesets/config@1.6.1/schema.json",
+  <% if (workspace.repository?.url) { -%>
+  "changelog": ["@jakubmazanec/changesets-changelog", {"repository": "<%- urlToShortGithubUrl(workspace.repository.url) %>"}],
+  <% } -%>
+  "commit": false,
+  "linked": [],
+  "access": "public",
+  "baseBranch": "development",
+  "updateInternalDependencies": "minor",
+  "ignore": [],
+  "snapshot": {
+    "useCalculatedVersion": true,
+    "prereleaseTemplate": "{tag}.{commit}"
+  },
+  "___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH": {
+    "onlyUpdatePeerDependentsWhenOutOfRange": true
+  }
+}

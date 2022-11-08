@@ -16,7 +16,7 @@ import {
  * @param errorName Error name.
  * @param errorMessages Object containing all possible error messages.
  * @param errorData Runtime representation of the `ErrorData` type parameter; can be either a class expression, or a Zod schema.
- * @return Class that implements {@linkcode CustomErrorWithData}.
+ * @return Class that implements {@link CustomErrorWithData}.
  */
 export function createCustomErrorWithData<ErrorCode extends string, ErrorData extends AnyZodObject>(
   errorName: string,

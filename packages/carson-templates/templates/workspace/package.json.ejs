@@ -1,0 +1,50 @@
+---
+to: 'package.json'
+strategy: merge
+---
+<%
+let developmentDependencies = getDependencies({
+  '@changesets/cli': '^2.0.0',
+  '@jakubmazanec/carson': '^0.0.0',
+  '@jakubmazanec/carson-templates': '^0.0.0',
+  '@swc/cli': '^0.1.0',
+  '@swc/core': '^1.0.0',
+  '@testing-library/jest-dom': '^5.0.0',
+  '@types/node': '^16.0.0',
+  chokidar: '^3.0.0',
+  'cross-env': '^7.0.0',
+  'del-cli': '^5.0.0',
+  eslint: '^8.0.0',
+  jest: '^29.0.0',
+  'patch-package': '^6.0.0',
+  prettier: '^2.0.0',
+  'prettier-plugin-packagejson': '^2.0.0',
+  'ts-jest': '^29.0.0',
+  'ts-node': '^10.0.0',
+  turbo: '^1.0.0',
+  typedoc: '^0.24.0',
+  'typedoc-plugin-markdown': '^3.0.0',
+  typescript: '^5.0.0',
+}, workspace);
+-%>
+{
+  "private": true,
+  "scripts": {
+    "build": "turbo run build --no-daemon",
+    "changeset": "changeset",
+    "clean": "turbo run clean --no-daemon",
+    "document": "turbo run document --no-daemon",
+    "format": "turbo run format --no-daemon && prettier ./*.* --write --ignore-unknown",
+    "lint": "turbo run lint --no-daemon",
+    "prepare": "patch-package && carson update workspace",
+    "reinstall": "npm run uninstall && npm install",
+    "test": "turbo run test --no-daemon",
+    "typecheck": "turbo run typecheck --no-daemon",
+    "uninstall": "del-cli ./**/node_modules ./package-lock.json"
+  },
+  "devDependencies": <%- JSON.stringify(developmentDependencies, null, 2) %>,
+  "packageManager": "npm@8.19.4",
+  "engines": {
+    "node": ">=16.20.0"
+  }
+}

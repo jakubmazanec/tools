@@ -8,7 +8,7 @@ import {type CustomError, type CustomErrorOptions, type ErrorMessages} from './t
  *
  * @param errorName Error name.
  * @param errorMessages Object containing all possible error messages.
- * @return Class that implements {@linkcode CustomError}.
+ * @return Class that implements {@link CustomError}.
  */
 export function createCustomError<ErrorCode extends string>(
   errorName: string,

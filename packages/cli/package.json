@@ -1,0 +1,62 @@
+{
+  "name": "@jakubmazanec/cli",
+  "version": "0.0.0",
+  "description": "TypeScript-first library for building CLIs.",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jakubmazanec/js-tools.git",
+    "directory": "packages/cli"
+  },
+  "license": "LGPL-3.0-only",
+  "author": "Jakub Mazanec <jakub@mazanec.dev>",
+  "sideEffects": false,
+  "type": "module",
+  "exports": "./dist/main.js",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "swc src -d dist && tsc",
+    "clean": "del-cli dist *.tsbuildinfo",
+    "develop": "concurrently \"swc src -d dist --watch\" \"tsc --watch\"",
+    "document": "typedoc --options typedoc.config.cjs",
+    "format": "prettier . --write --ignore-unknown --ignore-path ../../.prettierignore",
+    "lint": "eslint .",
+    "test": "cross-env FORCE_COLOR=1 NODE_OPTIONS=--experimental-vm-modules jest --passWithNoTests",
+    "typecheck": "tsc --project tsconfig.typecheck.json"
+  },
+  "dependencies": {
+    "@jakubmazanec/args": "^1.0.0",
+    "@jakubmazanec/error": "^2.0.0",
+    "@jakubmazanec/ts-utils": "^2.0.0",
+    "@jakubmazanec/zod-utils": "^0.0.0",
+    "chalk": "^5.2.0",
+    "lodash": "^4.17.21",
+    "react-error-boundary": "^4.0.7",
+    "zod": "^3.14.4"
+  },
+  "devDependencies": {
+    "@jest/globals": "^29.5.0",
+    "@types/lodash": "^4.14.195",
+    "@types/node": "^16.18.3",
+    "@types/react": "^18.0.26",
+    "ink": "^3.2.0",
+    "ink-testing-library": "^3.0.0",
+    "react": "^18.2.0"
+  },
+  "peerDependencies": {
+    "@types/react": "17.x || 18.x",
+    "ink": "^3.0.0",
+    "react": "17.x || 18.x"
+  },
+  "peerDependenciesMeta": {
+    "@types/react": {
+      "optional": true
+    }
+  },
+  "packageManager": "npm@8.19.4",
+  "engines": {
+    "node": ">=16.20.0"
+  }
+}
