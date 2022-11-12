@@ -69,14 +69,14 @@ const fooOrBar4: FooOrBar = {
 
 #### Type parameters
 
-| Name | Type                          | Description |
-| :--- | :---------------------------- | :---------- |
-| `T`  | `T`                           |             |
-| `P`  | extends keyof `T` = keyof `T` |             |
+| Name | Type                          | Description                                                             |
+| :--- | :---------------------------- | :---------------------------------------------------------------------- |
+| `T`  | `T`                           | Base for the new type                                                   |
+| `P`  | extends keyof `T` = keyof `T` | String literal or union of string literals specifying properties of `T` |
 
 #### Defined in
 
-[packages/ts-utils/src/types/AtLeastOneRequired.ts:34](https://github.com/jakubmazanec/js-tools/blob/9dd506a/packages/ts-utils/src/types/AtLeastOneRequired.ts#L34)
+[packages/ts-utils/src/types/AtLeastOneRequired.ts:34](https://github.com/jakubmazanec/js-tools/blob/3f5ae59/packages/ts-utils/src/types/AtLeastOneRequired.ts#L34)
 
 ---
 
@@ -123,13 +123,13 @@ settings = updateSettings({ minimap: { enabled: true } });
 
 #### Type parameters
 
-| Name | Description |
-| :--- | :---------- |
-| `T`  |             |
+| Name | Description           |
+| :--- | :-------------------- |
+| `T`  | Base for the new type |
 
 #### Defined in
 
-[packages/ts-utils/src/types/DeepPartial.ts:36](https://github.com/jakubmazanec/js-tools/blob/9dd506a/packages/ts-utils/src/types/DeepPartial.ts#L36)
+[packages/ts-utils/src/types/DeepPartial.ts:36](https://github.com/jakubmazanec/js-tools/blob/3f5ae59/packages/ts-utils/src/types/DeepPartial.ts#L36)
 
 ---
 
@@ -156,13 +156,13 @@ data.foo.push('bar'); // error TS2339: Property 'push' does not exist on type 'r
 
 #### Type parameters
 
-| Name | Description |
-| :--- | :---------- |
-| `T`  |             |
+| Name | Description           |
+| :--- | :-------------------- |
+| `T`  | Base for the new type |
 
 #### Defined in
 
-[packages/ts-utils/src/types/DeepReadonly.ts:22](https://github.com/jakubmazanec/js-tools/blob/9dd506a/packages/ts-utils/src/types/DeepReadonly.ts#L22)
+[packages/ts-utils/src/types/DeepReadonly.ts:22](https://github.com/jakubmazanec/js-tools/blob/3f5ae59/packages/ts-utils/src/types/DeepReadonly.ts#L22)
 
 ---
 
@@ -180,16 +180,16 @@ type NonNullable<T> = If<T, null | undefined, never, T>;
 
 #### Type parameters
 
-| Name | Description |
-| :--- | :---------- |
-| `X`  |             |
-| `Y`  |             |
-| `T`  |             |
-| `F`  |             |
+| Name | Description                                    |
+| :--- | :--------------------------------------------- |
+| `X`  | Type on the left of the `extends`              |
+| `Y`  | Type on the right of the `extends`             |
+| `T`  | Type returned when `X` is assignable to `Y`    |
+| `F`  | Type returned when `X` isn't assignable to `Y` |
 
 #### Defined in
 
-[packages/ts-utils/src/types/If.ts:15](https://github.com/jakubmazanec/js-tools/blob/9dd506a/packages/ts-utils/src/types/If.ts#L15)
+[packages/ts-utils/src/types/If.ts:15](https://github.com/jakubmazanec/js-tools/blob/3f5ae59/packages/ts-utils/src/types/If.ts#L15)
 
 ---
 
@@ -209,14 +209,14 @@ type Result = IsEqual<{foo: string}, {foo: string}> // `typeof Result` is `true`
 
 #### Type parameters
 
-| Name | Description |
-| :--- | :---------- |
-| `A1` |             |
-| `A2` |             |
+| Name | Description            |
+| :--- | :--------------------- |
+| `A1` | First type to compare  |
+| `A2` | Second type to compare |
 
 #### Defined in
 
-[packages/ts-utils/src/types/IsEqual.ts:15](https://github.com/jakubmazanec/js-tools/blob/9dd506a/packages/ts-utils/src/types/IsEqual.ts#L15)
+[packages/ts-utils/src/types/IsEqual.ts:15](https://github.com/jakubmazanec/js-tools/blob/3f5ae59/packages/ts-utils/src/types/IsEqual.ts#L15)
 
 ---
 
@@ -242,14 +242,14 @@ const: animal: Animal = ''; // Auto-completion works: 'cat' and 'dog' is suggest
 
 #### Type parameters
 
-| Name | Type                                       | Description |
-| :--- | :----------------------------------------- | :---------- |
-| `L`  | `L`                                        |             |
-| `T`  | extends [`Primitive`](README.md#primitive) |             |
+| Name | Type                                       | Description            |
+| :--- | :----------------------------------------- | :--------------------- |
+| `L`  | `L`                                        | Union of literal types |
+| `T`  | extends [`Primitive`](README.md#primitive) | Primitive type         |
 
 #### Defined in
 
-[packages/ts-utils/src/types/LiteralUnion.ts:22](https://github.com/jakubmazanec/js-tools/blob/9dd506a/packages/ts-utils/src/types/LiteralUnion.ts#L22)
+[packages/ts-utils/src/types/LiteralUnion.ts:22](https://github.com/jakubmazanec/js-tools/blob/3f5ae59/packages/ts-utils/src/types/LiteralUnion.ts#L22)
 
 ---
 
@@ -265,7 +265,7 @@ const: animal: Animal = ''; // Auto-completion works: 'cat' and 'dog' is suggest
 
 #### Defined in
 
-[packages/ts-utils/src/types/NonArray.ts:3](https://github.com/jakubmazanec/js-tools/blob/9dd506a/packages/ts-utils/src/types/NonArray.ts#L3)
+[packages/ts-utils/src/types/NonArray.ts:3](https://github.com/jakubmazanec/js-tools/blob/3f5ae59/packages/ts-utils/src/types/NonArray.ts#L3)
 
 ---
 
@@ -281,7 +281,7 @@ const: animal: Animal = ''; // Auto-completion works: 'cat' and 'dog' is suggest
 
 #### Defined in
 
-[packages/ts-utils/src/types/NonArrayLike.ts:3](https://github.com/jakubmazanec/js-tools/blob/9dd506a/packages/ts-utils/src/types/NonArrayLike.ts#L3)
+[packages/ts-utils/src/types/NonArrayLike.ts:3](https://github.com/jakubmazanec/js-tools/blob/3f5ae59/packages/ts-utils/src/types/NonArrayLike.ts#L3)
 
 ---
 
@@ -298,13 +298,13 @@ type Result = OptionalKeys<{ foo?: number; bar?: string; baz: boolean; }>; // `t
 
 #### Type parameters
 
-| Name | Type             | Description |
-| :--- | :--------------- | :---------- |
-| `T`  | extends `object` |             |
+| Name | Type             | Description           |
+| :--- | :--------------- | :-------------------- |
+| `T`  | extends `object` | Base for the new type |
 
 #### Defined in
 
-[packages/ts-utils/src/types/OptionalKeys.ts:10](https://github.com/jakubmazanec/js-tools/blob/9dd506a/packages/ts-utils/src/types/OptionalKeys.ts#L10)
+[packages/ts-utils/src/types/OptionalKeys.ts:10](https://github.com/jakubmazanec/js-tools/blob/3f5ae59/packages/ts-utils/src/types/OptionalKeys.ts#L10)
 
 ---
 
@@ -327,13 +327,13 @@ type Result = Parameters<typeof foo.get>; // `typeof Result` is `[id: number]`
 
 #### Type parameters
 
-| Name | Type                                                                              | Description |
-| :--- | :-------------------------------------------------------------------------------- | :---------- |
-| `T`  | extends `""` \| `false` \| (...`args`: `any`[]) => `any` \| `null` \| `undefined` |             |
+| Name | Type                                                                              | Description           |
+| :--- | :-------------------------------------------------------------------------------- | :-------------------- |
+| `T`  | extends `""` \| `false` \| (...`args`: `any`[]) => `any` \| `null` \| `undefined` | Base for the new type |
 
 #### Defined in
 
-[packages/ts-utils/src/types/Parameters.ts:19](https://github.com/jakubmazanec/js-tools/blob/9dd506a/packages/ts-utils/src/types/Parameters.ts#L19)
+[packages/ts-utils/src/types/Parameters.ts:19](https://github.com/jakubmazanec/js-tools/blob/3f5ae59/packages/ts-utils/src/types/Parameters.ts#L19)
 
 ---
 
@@ -345,7 +345,7 @@ Union of primitive types.
 
 #### Defined in
 
-[packages/ts-utils/src/types/Primitive.ts:4](https://github.com/jakubmazanec/js-tools/blob/9dd506a/packages/ts-utils/src/types/Primitive.ts#L4)
+[packages/ts-utils/src/types/Primitive.ts:4](https://github.com/jakubmazanec/js-tools/blob/3f5ae59/packages/ts-utils/src/types/Primitive.ts#L4)
 
 ---
 
@@ -362,13 +362,13 @@ type Result = RequiredKeys<{ foo: number; bar: string; baz?: boolean; }>; // `ty
 
 #### Type parameters
 
-| Name | Type             | Description |
-| :--- | :--------------- | :---------- |
-| `T`  | extends `object` |             |
+| Name | Type             | Description           |
+| :--- | :--------------- | :-------------------- |
+| `T`  | extends `object` | Base for the new type |
 
 #### Defined in
 
-[packages/ts-utils/src/types/RequiredKeys.ts:10](https://github.com/jakubmazanec/js-tools/blob/9dd506a/packages/ts-utils/src/types/RequiredKeys.ts#L10)
+[packages/ts-utils/src/types/RequiredKeys.ts:10](https://github.com/jakubmazanec/js-tools/blob/3f5ae59/packages/ts-utils/src/types/RequiredKeys.ts#L10)
 
 ---
 
@@ -393,13 +393,13 @@ type Result = ReturnType<typeof foo.get>; // `typeof Result` is `string`
 
 #### Type parameters
 
-| Name | Type                                                                              | Description |
-| :--- | :-------------------------------------------------------------------------------- | :---------- |
-| `T`  | extends `""` \| `false` \| (...`args`: `any`[]) => `any` \| `null` \| `undefined` |             |
+| Name | Type                                                                              | Description           |
+| :--- | :-------------------------------------------------------------------------------- | :-------------------- |
+| `T`  | extends `""` \| `false` \| (...`args`: `any`[]) => `any` \| `null` \| `undefined` | Base for the new type |
 
 #### Defined in
 
-[packages/ts-utils/src/types/ReturnType.ts:20](https://github.com/jakubmazanec/js-tools/blob/9dd506a/packages/ts-utils/src/types/ReturnType.ts#L20)
+[packages/ts-utils/src/types/ReturnType.ts:20](https://github.com/jakubmazanec/js-tools/blob/3f5ae59/packages/ts-utils/src/types/ReturnType.ts#L20)
 
 ---
 
@@ -415,13 +415,13 @@ type Result = TupleToUnion<['foo', 'bar']>; // `typeof Result` is `"foo" | "bar"
 
 #### Type parameters
 
-| Name | Type                                        | Description |
-| :--- | :------------------------------------------ | :---------- |
-| `T`  | extends `unknown`[] \| readonly `unknown`[] |             |
+| Name | Type                                        | Description           |
+| :--- | :------------------------------------------ | :-------------------- |
+| `T`  | extends `unknown`[] \| readonly `unknown`[] | Base for the new type |
 
 #### Defined in
 
-[packages/ts-utils/src/types/TupleToUnion.ts:10](https://github.com/jakubmazanec/js-tools/blob/9dd506a/packages/ts-utils/src/types/TupleToUnion.ts#L10)
+[packages/ts-utils/src/types/TupleToUnion.ts:10](https://github.com/jakubmazanec/js-tools/blob/3f5ae59/packages/ts-utils/src/types/TupleToUnion.ts#L10)
 
 ---
 
@@ -438,13 +438,13 @@ type Result = UnionToIntersection<{ foo: string } | { bar: string }>; // `typeof
 
 #### Type parameters
 
-| Name | Description |
-| :--- | :---------- |
-| `U`  |             |
+| Name | Description           |
+| :--- | :-------------------- |
+| `U`  | Base for the new type |
 
 #### Defined in
 
-[packages/ts-utils/src/types/UnionToIntersection.ts:10](https://github.com/jakubmazanec/js-tools/blob/9dd506a/packages/ts-utils/src/types/UnionToIntersection.ts#L10)
+[packages/ts-utils/src/types/UnionToIntersection.ts:10](https://github.com/jakubmazanec/js-tools/blob/3f5ae59/packages/ts-utils/src/types/UnionToIntersection.ts#L10)
 
 ## Functions
 
@@ -482,6 +482,10 @@ assert(is<Foo>(foobar, foobar.kind === 'Foo'));
 
 asserts condition
 
+#### Defined in
+
+[packages/ts-utils/src/utils/assert.ts:39](https://github.com/jakubmazanec/js-tools/blob/3f5ae59/packages/ts-utils/src/utils/assert.ts#L39)
+
 ---
 
 ### is
@@ -511,9 +515,9 @@ if (is<Foo>(foobar, typeof foobar.value === 'string')) {
 
 #### Type parameters
 
-| Name | Description |
-| :--- | :---------- |
-| `T`  |             |
+| Name | Description               |
+| :--- | :------------------------ |
+| `T`  | Potential type of `value` |
 
 #### Parameters
 
@@ -527,6 +531,10 @@ if (is<Foo>(foobar, typeof foobar.value === 'string')) {
 value is T
 
 Value of `isMatched`
+
+#### Defined in
+
+[packages/ts-utils/src/utils/is.ts:28](https://github.com/jakubmazanec/js-tools/blob/3f5ae59/packages/ts-utils/src/utils/is.ts#L28)
 
 ---
 
@@ -548,9 +556,9 @@ if (isNonNullable(foobar)) {
 
 #### Type parameters
 
-| Name | Description |
-| :--- | :---------- |
-| `T`  |             |
+| Name | Description     |
+| :--- | :-------------- |
+| `T`  | Type of `value` |
 
 #### Parameters
 
@@ -563,3 +571,7 @@ if (isNonNullable(foobar)) {
 value is NonNullable<T\>
 
 `true` if `value` is non-nullable
+
+#### Defined in
+
+[packages/ts-utils/src/utils/isNonNullable.ts:18](https://github.com/jakubmazanec/js-tools/blob/3f5ae59/packages/ts-utils/src/utils/isNonNullable.ts#L18)

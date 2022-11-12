@@ -31,33 +31,33 @@
     "typecheck": "tsc --project tsconfig.typecheck.json"
   },
   "dependencies": {
-    "@next/eslint-plugin-next": "^12.2.2",
-    "@typescript-eslint/eslint-plugin": "^5.30.5",
-    "@typescript-eslint/parser": "^5.30.5",
+    "@next/eslint-plugin-next": "^13.0.2",
+    "@typescript-eslint/eslint-plugin": "^5.42.1",
+    "@typescript-eslint/parser": "^5.42.1",
     "confusing-browser-globals": "^1.0.11",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-import-resolver-typescript": "^3.2.5",
+    "eslint-import-resolver-typescript": "^3.5.2",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jest": "^26.5.3",
+    "eslint-plugin-jest": "^27.1.4",
     "eslint-plugin-jest-formatting": "^3.1.0",
-    "eslint-plugin-jsx-a11y": "^6.6.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-promise": "^6.0.0",
-    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.31.10",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-testing-library": "^5.5.1",
-    "eslint-plugin-unicorn": "^43.0.1"
+    "eslint-plugin-testing-library": "^5.9.1",
+    "eslint-plugin-unicorn": "^44.0.2"
   },
   "devDependencies": {
     "@types/confusing-browser-globals": "^1.0.0",
-    "@types/eslint": "^8.4.5",
-    "@types/node": "^16.11.43",
-    "eslint": "^8.19.0"
+    "@types/eslint": "^8.4.10",
+    "@types/node": "^16.18.3",
+    "eslint": "^8.27.0"
   },
   "peerDependencies": {
-    "eslint": "^8.19.0",
+    "eslint": "^8.27.0",
     "prettier": "^2.7.1",
     "typescript": "^4.7.4"
   },
@@ -66,8 +66,8 @@
       "optional": true
     }
   },
-  "packageManager": "npm@8.11.0",
+  "packageManager": "npm@8.19.2",
   "engines": {
-    "node": ">=16.15.0"
+    "node": ">=16.18.1"
   }
 }

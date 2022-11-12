@@ -26,12 +26,12 @@
   },
   "dependencies": {
     "@changesets/get-github-info": "0.5.1",
-    "dotenv": "^16.0.1"
+    "dotenv": "^16.0.3"
   },
   "devDependencies": {
-    "@changesets/parse": "^0.3.13",
-    "@changesets/types": "^5.0.0",
-    "@types/node": "^16.11.43"
+    "@changesets/parse": "^0.3.15",
+    "@changesets/types": "^5.2.0",
+    "@types/node": "^16.18.3"
   },
   "peerDependencies": {
     "eslint": "^8.19.0",
@@ -43,8 +43,8 @@
       "optional": true
     }
   },
-  "packageManager": "npm@8.11.0",
+  "packageManager": "npm@8.19.2",
   "engines": {
-    "node": ">=16.15.0"
+    "node": ">=16.18.1"
   }
 }

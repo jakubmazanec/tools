@@ -49,6 +49,7 @@ const config: eslint.Linter.Config['rules'] = {
   'unicorn/no-static-only-class': 'error', // forbid classes that only have static members
   'unicorn/no-thenable': 'error', // disallow then property
   'unicorn/no-this-assignment': 'off', // disallow assigning this to a variable
+  'unicorn/no-unnecessary-await': 'error', // disallow awaiting non-promise values
   'unicorn/no-unreadable-array-destructuring': 'warn', // disallow unreadable array destructuring
   'unicorn/no-unreadable-iife': 'off', // disallow unreadable IIFEs
   'unicorn/no-unsafe-regex': 'off', // disallow unsafe regular expressions
@@ -115,6 +116,7 @@ const config: eslint.Linter.Config['rules'] = {
   'unicorn/require-number-to-fixed-digits-argument': 'error', // enforce using the digits argument with Number#toFixed()
   'unicorn/require-post-message-target-origin': 'error', // enforce using the targetOrigin argument with window.postMessage()
   'unicorn/string-content': 'off', // enforce better string content
+  'unicorn/switch-case-braces': ['error', 'always'], // enforce consistent brace style for case clauses
   'unicorn/template-indent': 'off', // fix whitespace-insensitive template indentation
   'unicorn/text-encoding-identifier-case': 'warn', // enforce consistent case for text encoding identifiers
   'unicorn/throw-new-error': 'error', // require new when throwing an error
