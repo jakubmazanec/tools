@@ -43,11 +43,15 @@ A subclass of `Error` that indicates an assertion failure.
 
 Error.constructor
 
+#### Defined in
+
+[packages/ts-utils/src/utils/assert.ts:8](https://github.com/jakubmazanec/js-tools/blob/3f5ae59/packages/ts-utils/src/utils/assert.ts#L8)
+
 ## Properties
 
 ### cause
 
-• `Optional` **cause**: `Error`
+• `Optional` **cause**: `unknown`
 
 #### Inherited from
 
@@ -69,7 +73,7 @@ Error.message
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1029
+node_modules/typescript/lib/lib.es5.d.ts:1041
 
 ---
 
@@ -83,7 +87,7 @@ Error.name
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1028
+node_modules/typescript/lib/lib.es5.d.ts:1040
 
 ---
 
@@ -97,7 +101,7 @@ Error.stack
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1030
+node_modules/typescript/lib/lib.es5.d.ts:1042
 
 ---
 
@@ -132,7 +136,7 @@ Error.prepareStackTrace
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:11
+node_modules/@types/node/ts4.8/globals.d.ts:11
 
 ---
 
@@ -146,7 +150,7 @@ Error.stackTraceLimit
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:13
+node_modules/@types/node/ts4.8/globals.d.ts:13
 
 ## Methods
 
@@ -170,3 +174,7 @@ Create .stack property on a target object
 #### Inherited from
 
 Error.captureStackTrace
+
+#### Defined in
+
+node_modules/@types/node/ts4.8/globals.d.ts:4
