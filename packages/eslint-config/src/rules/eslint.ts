@@ -68,6 +68,7 @@ const config: eslint.Linter.Config['rules'] = {
   'linebreak-style': 'off', // enforce consistent linebreak style
   'lines-around-comment': 'off', // require empty lines around comments
   'lines-between-class-members': ['warn', 'always', {exceptAfterSingleLine: true}], // require or disallow an empty line between class members
+  'logical-assignment-operators': ['warn', 'always', {enforceForIfStatements: true}], // require or disallow logical assignment logical operator shorthand
   'max-classes-per-file': ['warn', 1], // enforce a maximum number of classes per file
   'max-depth': 'off', // enforce a maximum depth that blocks can be nested
   'max-len': 'off', // enforce a maximum line length
@@ -123,6 +124,7 @@ const config: eslint.Linter.Config['rules'] = {
   'no-extra-label': 'error', // disallow unnecessary labels
   'no-extra-parens': 'off', // disallow unnecessary parentheses
   'no-extra-semi': 'off', // disallow unnecessary semicolons
+  'no-empty-static-block': 'error', // disallow empty static blocks
   'no-fallthrough': 'error', // disallow fallthrough of case statements
   'no-floating-decimal': 'off', // disallow leading or trailing decimal points in numeric literals
   'no-func-assign': 'error', // disallow reassigning function declarations
@@ -155,6 +157,7 @@ const config: eslint.Linter.Config['rules'] = {
   'no-nested-ternary': 'error', // disallow nested ternary expressions
   'no-new': 'error', // disallow new operators outside of assignments or comparisons
   'no-new-func': 'error', // disallow new operators with the Function object
+  'no-new-native-nonconstructor': 'error', // disallow new operators with global non-constructor functions
   'no-new-object': 'error', // disallow Object constructors
   'no-new-symbol': 'error', // disallow new operators with the Symbol object
   'no-new-wrappers': 'error', // disallow new operators with the String, Number, and Boolean objects

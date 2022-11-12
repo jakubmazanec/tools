@@ -4,6 +4,7 @@ const config: eslint.Linter.Config['rules'] = {
   // eslint-plugin-jest
   'jest/consistent-test-it': 'off', // have control over test and it usages
   'jest/expect-expect': 'warn', // enforce assertion to be made in a test body
+  'jest/max-expects': 'off', // enforces a maximum number assertion calls in a test body
   'jest/max-nested-describe': 'off', // enforces a maximum depth to nested describe calls
   'jest/no-alias-methods': 'warn', // disallow alias methods
   'jest/no-commented-out-tests': 'warn', // disallow commented out tests
@@ -19,21 +20,23 @@ const config: eslint.Linter.Config['rules'] = {
   'jest/no-identical-title': 'error', // disallow identical titles
   'jest/no-interpolation-in-snapshots': 'error', // disallow string interpolation inside snapshots
   'jest/no-jasmine-globals': 'error', // disallow Jasmine globals
-  'jest/no-jest-import': 'error', // disallow importing Jest
   'jest/no-large-snapshots': 'off', // disallow large snapshots
   'jest/no-mocks-import': 'error', // disallow manually importing from __mocks__
+  'jest/no-restricted-jest-methods': 'off', // disallow specific jest. methods
   'jest/no-restricted-matchers': 'off', // disallow specific matchers & modifiers
   'jest/no-standalone-expect': 'error', // disallow using expect outside of it or test blocks
   'jest/no-test-prefixes': 'error', // use .only and .skip over f and x
   'jest/no-test-return-statement': 'error', // disallow explicitly returning from tests
   'jest/prefer-called-with': 'warn', // suggest using toBeCalledWith() or toHaveBeenCalledWith()
   'jest/prefer-comparison-matcher': 'warn', // suggest using the built-in comparison matchers
+  'jest/prefer-each': 'warn', // prefer using .each rather than manual loops
   'jest/prefer-equality-matcher': 'warn', // suggest using the built-in equality matchers
   'jest/prefer-expect-assertions': 'off', // suggest using expect.assertions() OR expect.hasAssertions()
   'jest/prefer-expect-resolves': 'error', // prefer await expect(...).resolves over expect(await ...) syntax
   'jest/prefer-hooks-in-order': 'warn', // prefer having hooks in a consistent order
   'jest/prefer-hooks-on-top': 'warn', // suggest having hooks before any test cases
   'jest/prefer-lowercase-title': 'off', // enforce lowercase title
+  'jest/prefer-mock-promise-shorthand': 'error', // prefer mock resolved/rejected shorthands for promises
   'jest/prefer-snapshot-hint': 'off', // prefer including a hint with external snapshots
   'jest/prefer-spy-on': 'error', // suggest using jest.spyOn()
   'jest/prefer-strict-equal': 'off', // suggest using toStrictEqual()

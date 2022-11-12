@@ -297,6 +297,7 @@ const config: eslint.Linter.Config['rules'] = {
   '@typescript-eslint/no-unsafe-argument': 'error', // disallows calling an function with an any type value
   '@typescript-eslint/no-unsafe-assignment': 'error', // disallows assigning any to variables and properties
   '@typescript-eslint/no-unsafe-call': 'error', // disallows calling an any type value
+  '@typescript-eslint/no-unsafe-declaration-merging': 'error', // disallows unsafe declaration merging
   '@typescript-eslint/no-unsafe-member-access': 'error', // disallows member access on any typed variables
   '@typescript-eslint/no-unsafe-return': 'error', // disallows returning any from a function
   '@typescript-eslint/no-unused-expressions': 'error', // disallow unused expressions
@@ -350,7 +351,7 @@ const config: eslint.Linter.Config['rules'] = {
   '@typescript-eslint/restrict-template-expressions': 'off', // enforce template literal expressions to be of string type
   '@typescript-eslint/return-await': 'error', // rules for awaiting returned promises
   '@typescript-eslint/semi': 'off', // require or disallow semicolons instead of ASI
-  '@typescript-eslint/sort-type-union-intersection-members': 'warn', // enforces that members of a type union/intersection are sorted alphabetically
+  '@typescript-eslint/sort-type-constituents': 'warn', // enforce constituents of a type union/intersection to be sorted alphabetically
   '@typescript-eslint/space-before-blocks': 'off', // enforces consistent spacing before blocks
   '@typescript-eslint/space-before-function-paren': 'off', // enforce consistent spacing before function definition opening parenthesis
   '@typescript-eslint/space-infix-ops': 'off', // this rule is aimed at ensuring there are spaces around infix operators
