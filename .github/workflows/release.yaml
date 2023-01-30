@@ -111,7 +111,7 @@ jobs:
 
       - uses: actions/checkout@v2
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PAT }}
           fetch-depth: 0
 
       - name: Configure git
@@ -138,6 +138,16 @@ jobs:
 
       - name: Build packages
         run: npm run build
+
+      - name: Update documentation
+        run: |
+          npm run document --if-present
+          npm run format --if-present
+          git add **/docs/**
+          git status
+          git commit -m"Update docs [skip actions]"
+          git push --force
+        continue-on-error: true
 
       - name: Version packages
         run: |
@@ -192,16 +202,6 @@ jobs:
 
       - name: Build packages
         run: npm run build
-
-      - name: Update documentation
-        run: |
-          npm run document --if-present
-          npm run format --if-present
-          git add **/docs/**
-          git status
-          git commit -m"Update docs [skip actions]"
-          git push --force
-        continue-on-error: true
 
       - name: Version packages
         run: |
