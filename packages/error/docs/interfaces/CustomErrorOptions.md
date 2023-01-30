@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[createCustomError.ts:24](https://github.com/jakubmazanec/js-tools/blob/3f5ae59/packages/error/src/createCustomError.ts#L24)
+[createCustomError.ts:24](https://github.com/jakubmazanec/js-tools/blob/e09375c/packages/error/src/createCustomError.ts#L24)
 
 ---
 
@@ -31,4 +31,4 @@
 
 #### Defined in
 
-[createCustomError.ts:23](https://github.com/jakubmazanec/js-tools/blob/3f5ae59/packages/error/src/createCustomError.ts#L23)
+[createCustomError.ts:23](https://github.com/jakubmazanec/js-tools/blob/e09375c/packages/error/src/createCustomError.ts#L23)
