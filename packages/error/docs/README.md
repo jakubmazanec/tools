@@ -33,7 +33,7 @@ Type representing custom error.
 
 #### Defined in
 
-[types/CustomError.ts:6](https://github.com/jakubmazanec/js-tools/blob/3f5ae59/packages/error/src/types/CustomError.ts#L6)
+[types/CustomError.ts:6](https://github.com/jakubmazanec/js-tools/blob/e09375c/packages/error/src/types/CustomError.ts#L6)
 
 ---
 
@@ -51,7 +51,7 @@ Object type whose property keys are `ErrorCode` and whose property values are `s
 
 #### Defined in
 
-[types/ErrorMessages.ts:4](https://github.com/jakubmazanec/js-tools/blob/3f5ae59/packages/error/src/types/ErrorMessages.ts#L4)
+[types/ErrorMessages.ts:4](https://github.com/jakubmazanec/js-tools/blob/e09375c/packages/error/src/types/ErrorMessages.ts#L4)
 
 ## Functions
 
@@ -97,4 +97,4 @@ data to the error instance.
 
 #### Defined in
 
-[createCustomError.ts:31](https://github.com/jakubmazanec/js-tools/blob/3f5ae59/packages/error/src/createCustomError.ts#L31)
+[createCustomError.ts:31](https://github.com/jakubmazanec/js-tools/blob/e09375c/packages/error/src/createCustomError.ts#L31)
