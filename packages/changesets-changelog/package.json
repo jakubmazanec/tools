@@ -33,16 +33,6 @@
     "@changesets/types": "^5.2.0",
     "@types/node": "^16.18.3"
   },
-  "peerDependencies": {
-    "eslint": "^8.19.0",
-    "prettier": "^2.7.1",
-    "typescript": "^4.7.4"
-  },
-  "peerDependenciesMeta": {
-    "prettier": {
-      "optional": true
-    }
-  },
   "packageManager": "npm@8.19.2",
   "engines": {
     "node": ">=16.18.1"
