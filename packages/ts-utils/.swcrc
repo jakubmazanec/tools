@@ -4,7 +4,13 @@
       "syntax": "typescript",
       "tsx": true,
       "dynamicImport": true
-    }
+    },
+    "transform": {
+      "react": {
+        "runtime": "automatic"
+      }
+    },
+    "target": "es2022"
   },
   "module": {
     "type": "es6"

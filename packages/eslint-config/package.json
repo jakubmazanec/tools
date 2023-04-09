@@ -66,8 +66,8 @@
       "optional": true
     }
   },
-  "packageManager": "npm@8.19.2",
+  "packageManager": "npm@8.19.4",
   "engines": {
-    "node": ">=16.18.1"
+    "node": ">=16.20.0"
   }
 }

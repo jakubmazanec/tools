@@ -1,0 +1,11 @@
+---
+to: <%- attributes.variables.name %>.json
+variables:
+  - name: foo
+    enabled: <%- foo %>
+  - name: bar
+    enabled: <%- bar %>
+---
+{
+    "<%- attributes.variables.name %>": <%- attributes.variables.enabled %>
+}

@@ -1,0 +1,49 @@
+{
+  "name": "@jakubmazanec/template",
+  "version": "0.0.0",
+  "description": "TypeScript-first library for working with templates using EJS and Zod.",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jakubmazanec/js-tools.git",
+    "directory": "packages/template"
+  },
+  "license": "LGPL-3.0-only",
+  "author": "Jakub Mazanec <jakub@mazanec.dev>",
+  "sideEffects": false,
+  "type": "module",
+  "exports": "./dist/main.js",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "swc src -d dist && tsc",
+    "clean": "del-cli dist *.tsbuildinfo",
+    "document": "typedoc --options typedoc.config.cjs",
+    "format": "prettier . --write --ignore-unknown --ignore-path ../../.prettierignore",
+    "lint": "eslint .",
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --passWithNoTests",
+    "typecheck": "tsc --project tsconfig.typecheck.json"
+  },
+  "dependencies": {
+    "@jakubmazanec/error": "^1.0.0",
+    "ejs": "^3.1.9",
+    "fs-extra": "^11.1.1",
+    "gray-matter": "^4.0.3",
+    "lodash.omit": "^4.5.0",
+    "prettier": "^2.8.7",
+    "yaml": "^2.2.1",
+    "zod": "^3.21.4"
+  },
+  "devDependencies": {
+    "@jest/globals": "^29.5.0",
+    "@types/ejs": "^3.1.2",
+    "@types/fs-extra": "^11.0.1",
+    "@types/lodash.omit": "^4.5.7",
+    "@types/node": "^16.18.3"
+  },
+  "packageManager": "npm@8.19.4",
+  "engines": {
+    "node": ">=16.20.0"
+  }
+}
