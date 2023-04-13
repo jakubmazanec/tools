@@ -45,7 +45,7 @@ Error.constructor
 
 #### Defined in
 
-[packages/ts-utils/src/utils/assert.ts:8](https://github.com/jakubmazanec/js-tools/blob/6cd8f78/packages/ts-utils/src/utils/assert.ts#L8)
+[packages/ts-utils/src/utils/assert.ts:8](https://github.com/jakubmazanec/js-tools/blob/b6a7554/packages/ts-utils/src/utils/assert.ts#L8)
 
 ## Properties
 
@@ -59,7 +59,7 @@ Error.cause
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es2022.error.d.ts:26
+node_modules/typescript/lib/lib.es2022.error.d.ts:24
 
 ---
 
@@ -73,7 +73,7 @@ Error.message
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1041
+node_modules/typescript/lib/lib.es5.d.ts:1055
 
 ---
 
@@ -87,7 +87,7 @@ Error.name
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1040
+node_modules/typescript/lib/lib.es5.d.ts:1054
 
 ---
 
@@ -101,7 +101,7 @@ Error.stack
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1042
+node_modules/typescript/lib/lib.es5.d.ts:1056
 
 ---
 
@@ -136,7 +136,7 @@ Error.prepareStackTrace
 
 #### Defined in
 
-node_modules/@types/node/ts4.8/globals.d.ts:11
+node_modules/@types/node/globals.d.ts:11
 
 ---
 
@@ -150,7 +150,7 @@ Error.stackTraceLimit
 
 #### Defined in
 
-node_modules/@types/node/ts4.8/globals.d.ts:13
+node_modules/@types/node/globals.d.ts:13
 
 ## Methods
 
@@ -177,4 +177,4 @@ Error.captureStackTrace
 
 #### Defined in
 
-node_modules/@types/node/ts4.8/globals.d.ts:4
+node_modules/@types/node/globals.d.ts:4
