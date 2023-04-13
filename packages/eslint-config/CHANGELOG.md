@@ -1,5 +1,40 @@
 # @jakubmazanec/eslint-config
 
+## 2.0.0
+
+### Major Changes
+
+- [#15](https://github.com/jakubmazanec/js-tools/pull/15)
+  [`33935c6`](https://github.com/jakubmazanec/js-tools/commit/33935c689d4d98bc6a8e633a94457b56bcaa356a)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Adds new rules to the ESLint config:
+  `logical-assignment-operators`, `no-empty-static-block`, `no-new-native-nonconstructor`,
+  `jest/max-expects`, `jest/no-restricted-jest-methods`, `jest/prefer-each`,
+  `jest/prefer-mock-promise-shorthand`, `promise/no-multiple-resolved`,
+  `@typescript-eslint/no-unsafe-declaration-merging`, `@typescript-eslint/sort-type-constituents`,
+  `unicorn/no-unnecessary-await`, and `unicorn/switch-case-braces`. Also removes deprecated rules.
+
+### Patch Changes
+
+- [#17](https://github.com/jakubmazanec/js-tools/pull/17)
+  [`7998284`](https://github.com/jakubmazanec/js-tools/commit/7998284e8f736dec85db028cf1a130c244e315b5)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Adds missing readme and contributing files.
+
+- [#15](https://github.com/jakubmazanec/js-tools/pull/15)
+  [`33935c6`](https://github.com/jakubmazanec/js-tools/commit/33935c689d4d98bc6a8e633a94457b56bcaa356a)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Updates dependencies.
+
+- [#16](https://github.com/jakubmazanec/js-tools/pull/16)
+  [`0decb90`](https://github.com/jakubmazanec/js-tools/commit/0decb90bd81fe38cba718c3b1063c2610044fcd2)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes peer dependencies.
+
+- [#17](https://github.com/jakubmazanec/js-tools/pull/17)
+  [`7998284`](https://github.com/jakubmazanec/js-tools/commit/7998284e8f736dec85db028cf1a130c244e315b5)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes SWC config.
+
+- [#17](https://github.com/jakubmazanec/js-tools/pull/17)
+  [`7998284`](https://github.com/jakubmazanec/js-tools/commit/7998284e8f736dec85db028cf1a130c244e315b5)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes Jest config.
+
 ## 1.3.1
 
 ### Patch Changes
