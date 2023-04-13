@@ -10,11 +10,11 @@ jobs:
     if: "github.ref_name == 'main'"
     steps:
       - name: Cancel previous runs
-        uses: styfle/cancel-workflow-action@0.9.1
+        uses: styfle/cancel-workflow-action@0.11.0
         with:
           access_token: ${{ secrets.GITHUB_TOKEN }}
 
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           token: ${{secrets.PAT}}
           fetch-depth: 0
@@ -24,7 +24,7 @@ jobs:
           git config user.email "bot@mazanec.dev"
           git config user.name "Bot"
 
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
         with:
           node-version: 16
           registry-url: 'https://registry.npmjs.org'
