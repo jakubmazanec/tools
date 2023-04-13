@@ -1,61 +1,36 @@
-/* eslint-disable @typescript-eslint/no-explicit-any -- needed */
-import {ERROR_MESSAGE_TOKEN_PATTERN, INTERNAL_ERROR_MESSAGES, UNKNOWN_ERROR} from './constants.js';
-import type {CustomError, ErrorMessages} from './types.js';
-
-function createErrorMessage<T extends string>(
-  errorCode: T,
-  errorMessages: ErrorMessages<T>,
-  messageParameters: unknown[] = [],
-): string {
-  let errorMessage = errorMessages[errorCode];
-
-  if (!errorMessage) {
-    return '';
-  }
-
-  return `${errorCode}: ${errorMessage.replace(
-    ERROR_MESSAGE_TOKEN_PATTERN,
-    (match: string, index: number) => String(messageParameters[index]),
-  )}`;
-}
-
-export interface CustomErrorOptions<T> {
-  messageParameters?: unknown[];
-  data: T;
-}
+import {INTERNAL_ERROR_MESSAGES, UNKNOWN_ERROR} from './constants.js';
+import {createErrorMessage} from './internals.js';
+import {type CustomError, type CustomErrorOptions, type ErrorMessages} from './types.js';
 
 /**
- * Function for creating custom error classes. Such custom error class properly subclasses built-in `Error`, simplifies
- * generating error messages via predefined error codes and allows attaching custom data to the error instance.
+ * Function for creating custom error classes. Such custom error class properly subclasses built-in `Error` and simplifies
+ * generating error messages via predefined error codes.
+ *
+ * @param errorName Error name.
+ * @param errorMessages Object containing all possible error messages.
+ * @return Class that implements {@linkcode CustomError}.
  */
-export function createCustomError<
-  ErrorCode extends string,
-  // eslint-disable-next-line @typescript-eslint/no-redeclare -- because `ErrorData` is used only as a type, we don't mind
-  ErrorData extends abstract new (...args: any) => any,
->(
+export function createCustomError<ErrorCode extends string>(
   errorName: string,
   errorMessages: ErrorMessages<ErrorCode>,
-  ErrorData?: ErrorData,
-): new (code: ErrorCode, options?: CustomErrorOptions<InstanceType<ErrorData>>) => CustomError<
-  ErrorCode | typeof UNKNOWN_ERROR,
-  InstanceType<ErrorData>
+): new (code: ErrorCode, options?: CustomErrorOptions) => CustomError<
+  ErrorCode | typeof UNKNOWN_ERROR
 > {
-  return class InternalCustomError
-    extends Error
-    implements CustomError<ErrorCode, InstanceType<ErrorData>>
-  {
+  return class InternalCustomError extends Error implements CustomError<ErrorCode> {
     code: ErrorCode | typeof UNKNOWN_ERROR;
-    data?: InstanceType<ErrorData>;
 
-    constructor(errorCode: ErrorCode, options?: CustomErrorOptions<InstanceType<ErrorData>>) {
-      super(createErrorMessage(errorCode, errorMessages, options?.messageParameters));
+    constructor(errorCode: ErrorCode, options?: CustomErrorOptions) {
+      let errorMessage = createErrorMessage(errorCode, errorMessages, options?.messageParameters);
+      let errorOptions: ErrorOptions = {};
+
+      if (typeof options?.cause !== 'undefined') {
+        errorOptions.cause = options.cause;
+      }
+
+      super(errorMessage, errorOptions);
 
       this.code = errorCode;
       this.name = errorName;
-
-      if (typeof options?.data !== 'undefined') {
-        this.data = options.data;
-      }
 
       // if the message is empty, we are making this an unknown error
       if (!this.message) {

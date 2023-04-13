@@ -1,0 +1,14 @@
+---
+to: <%- attributes.variables.name %>.json
+if: <%- attributes.variables.enabled %>
+variables:
+  - name: foo
+    enabled: true
+  - name: bar
+    enabled: true
+  - name: baz
+    enabled: false
+---
+{
+    "<%- attributes.variables.name %>": <%- attributes.variables.enabled %>
+}

@@ -1,22 +1,20 @@
 export default {
-  preset: 'ts-jest/presets/default-esm',
+  preset: 'ts-jest/presets/default',
   globals: {
     'ts-jest': {
-      useESM: true,
+      tsconfig: 'tsconfig.typecheck.json',
     },
   },
-  moduleNameMapper: {
-    '^(\\.{1,2}/.*)\\.js$': '$1',
-  },
+
   collectCoverage: true,
   coverageDirectory: '<rootDir>/coverage/',
   collectCoverageFrom: ['<rootDir>/src/**/*.{ts,tsx}'],
   coverageThreshold: {
     global: {
-      branches: 0,
-      functions: 0,
-      lines: 0,
-      statements: 0,
+      branches: 50,
+      functions: 50,
+      lines: 50,
+      statements: 50,
     },
   },
 };

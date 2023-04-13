@@ -3,6 +3,7 @@ export default {
   globals: {
     'ts-jest': {
       useESM: true,
+      isolatedModules: true,
       tsconfig: 'tsconfig.typecheck.json',
     },
   },

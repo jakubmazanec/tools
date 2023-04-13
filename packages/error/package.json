@@ -7,7 +7,7 @@
     "url": "git@github.com:jakubmazanec/js-tools.git",
     "directory": "packages/error"
   },
-  "license": "MIT",
+  "license": "LGPL-3.0-only",
   "author": "Jakub Mazanec <jakub@mazanec.dev>",
   "sideEffects": false,
   "type": "module",
@@ -22,14 +22,17 @@
     "document": "typedoc --options typedoc.config.cjs",
     "format": "prettier . --write --ignore-unknown --ignore-path ../../.prettierignore",
     "lint": "eslint .",
-    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest",
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --passWithNoTests",
     "typecheck": "tsc --project tsconfig.typecheck.json"
   },
-  "devDependencies": {
-    "@jest/globals": "^28.1.3"
+  "dependencies": {
+    "zod": "^3.21.4"
   },
-  "packageManager": "npm@8.19.2",
+  "devDependencies": {
+    "@jest/globals": "^29.5.0"
+  },
+  "packageManager": "npm@8.19.4",
   "engines": {
-    "node": ">=16.18.1"
+    "node": ">=16.20.0"
   }
 }
