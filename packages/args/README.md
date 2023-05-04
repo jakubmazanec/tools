@@ -27,7 +27,7 @@ this:
 
 ```
 ┌─ 1 ─┐ ┌─ 2 ──┐ ┌─── 3 ───┐ ┌─── 4 ───┐ ┌─ 5 ─┐ ┌ 6 ┐ ┌─── 7 ───┐    ┌─────── 8 ──────┐
-binname do stuff --key value --key=value -key -K -aBDc foo bar baz -- --key value bar -B
+binname do stuff --key value --key=value -key -K -aBCd foo bar baz -- --key value bar -B
 └───────────────────────────────────────── 9 ──────────────────────────────────────────┘
 ```
 
