@@ -1,8 +1,8 @@
-import {type Argv} from '../types.js';
+import {type Argv} from '../Argv.js';
 import {isShortOptionsGroup} from './isShortOptionsGroup.js';
 
 /**
- * A function that converts any argument that is a short options group into separate short options.
+ * Converts short options group in a provided list of arguments into separate short options.
  *
  * @param argv Arguments.
  * @return Arguments that contain no short options group

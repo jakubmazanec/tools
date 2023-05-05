@@ -1,4 +1,4 @@
-/** A type representing parser's normalized command configuration. */
+/** Normalized parser's command configuration. */
 export type NormalizedCommandConfig = {
   command: string;
   args: string[];

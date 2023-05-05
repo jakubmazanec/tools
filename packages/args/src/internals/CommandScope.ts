@@ -1,4 +1,5 @@
-import {type NormalizedCommandConfig, type NormalizedCommandsConfig} from '../types.js';
+import {type NormalizedCommandConfig} from './NormalizedCommandConfig.js';
+import {type NormalizedCommandsConfig} from './NormalizedCommandsConfig.js';
 
 /**
  * `CommandScope` handles storing information about parsing of a command.

@@ -1,4 +1,4 @@
-import {type OptionsConfig} from '../types.js';
+import {type OptionsConfig} from '../OptionsConfig.js';
 
 /**
  * Converts options config to a map (i.e. an object) of short option names (object keys) to long option names (values).

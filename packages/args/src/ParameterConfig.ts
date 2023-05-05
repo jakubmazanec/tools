@@ -93,7 +93,7 @@ export type StringParameterConfig =
       validate?: ((value: string) => void) | undefined;
     };
 
-/** A type representing parser's parameter configuration. */
+/** Parser's parameter configuration. */
 export type ParameterConfig =
   | BooleanParameterConfig
   | NumberParameterConfig

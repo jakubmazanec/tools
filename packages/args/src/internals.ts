@@ -1,9 +1,9 @@
 export * from './internals/castValue.js';
+export * from './internals/Checker.js';
 export * from './internals/CommandScope.js';
 export * from './internals/commandToArguments.js';
 export * from './internals/createOptionShortNameMap.js';
 export * from './internals/expandArguments.js';
-export * from './internals/Checker.js';
 export * from './internals/isCommand.js';
 export * from './internals/isFalseString.js';
 export * from './internals/isLongOption.js';
@@ -11,4 +11,6 @@ export * from './internals/isOptionLike.js';
 export * from './internals/isShortOption.js';
 export * from './internals/isShortOptionsGroup.js';
 export * from './internals/isTrueString.js';
+export * from './internals/NormalizedCommandConfig.js';
+export * from './internals/NormalizedCommandsConfig.js';
 export * from './internals/OptionScope.js';

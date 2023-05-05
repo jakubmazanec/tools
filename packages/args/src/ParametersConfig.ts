@@ -1,6 +1,6 @@
 import {type ParameterConfig} from './ParameterConfig.js';
 
-/** A type representing parser's parameters configuration. */
+/** Parser's parameters configuration. */
 export type ParametersConfig =
   | readonly [
       ParameterConfig,

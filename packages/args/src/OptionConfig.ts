@@ -268,7 +268,7 @@ export type StringsOptionConfig =
       validate?: ((value: string[]) => void) | undefined;
     };
 
-/** A type representing parser's option configuration. */
+/** Parser's option configuration. */
 export type OptionConfig =
   | BooleanOptionConfig
   | BooleansOptionConfig

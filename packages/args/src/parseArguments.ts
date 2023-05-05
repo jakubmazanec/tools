@@ -1,3 +1,9 @@
+import {type Arguments} from './Arguments.js';
+import {type ArgumentsCommand} from './ArgumentsCommand.js';
+import {type ArgumentsOptions} from './ArgumentsOptions.js';
+import {type ArgumentsParameters} from './ArgumentsParameters.js';
+import {type ArgumentsUnknownOptions} from './ArgumentsUnknownOptions.js';
+import {type Argv} from './Argv.js';
 import {
   castValue,
   Checker,
@@ -10,20 +16,12 @@ import {
   isOptionLike,
   isShortOption,
   isTrueString,
+  type NormalizedCommandsConfig,
   OptionScope,
 } from './internals.js';
+import {type ParameterConfig} from './ParameterConfig.js';
+import {type ParserConfig} from './ParserConfig.js';
 import {ParsingError} from './ParsingError.js';
-import {
-  type Arguments,
-  type ArgumentsCommand,
-  type ArgumentsOptions,
-  type ArgumentsParameters,
-  type ArgumentsUnknownOptions,
-  type Argv,
-  type NormalizedCommandsConfig,
-  type ParameterConfig,
-  type ParserConfig,
-} from './types.js';
 
 /* eslint-disable no-param-reassign -- we need to add properties to the `parsedOption` object */
 function commitOptionScope(optionScope: OptionScope, parsedOptions: Record<string, unknown>) {

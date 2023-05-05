@@ -1,4 +1,6 @@
-import {type CommandsConfig, type OptionsConfig, type ParametersConfig} from '../types.js';
+import {type CommandsConfig} from '../CommandsConfig.js';
+import {type OptionsConfig} from '../OptionsConfig.js';
+import {type ParametersConfig} from '../ParametersConfig.js';
 import {ValidationError} from '../ValidationError.js';
 import {isCommand} from './isCommand.js';
 import {isLongOption} from './isLongOption.js';

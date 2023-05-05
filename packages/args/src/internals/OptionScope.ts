@@ -1,7 +1,8 @@
 import camelCase from 'lodash.camelcase';
 
+import {type OptionConfig} from '../OptionConfig.js';
+import {type OptionsConfig} from '../OptionsConfig.js';
 import {ParsingError} from '../ParsingError.js';
-import {type OptionConfig, type OptionsConfig} from '../types.js';
 import {castValue} from './castValue.js';
 
 /**

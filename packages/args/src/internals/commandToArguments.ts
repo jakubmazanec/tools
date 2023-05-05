@@ -1,5 +1,5 @@
 /**
- * A function that converts a string representing a command into the arguments, i.e. array of strings.
+ * Converts a string representing a command into the arguments, i.e. array of strings.
  *
  * @param value The value to convert.
  * @return Arguments.
