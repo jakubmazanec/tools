@@ -63,7 +63,7 @@ console.log(await template.render({value: 42})); // ->  [{attributes: {to: 'valu
 
 #### Defined in
 
-[packages/template/src/Template.ts:113](https://github.com/jakubmazanec/js-tools/blob/ef65ded/packages/template/src/Template.ts#L113)
+[packages/template/src/Template.ts:113](https://github.com/jakubmazanec/js-tools/blob/ead364c/packages/template/src/Template.ts#L113)
 
 ## Properties
 
@@ -85,7 +85,7 @@ Each variable that is a string is also rendered.
 
 #### Defined in
 
-[packages/template/src/Template.ts:100](https://github.com/jakubmazanec/js-tools/blob/ef65ded/packages/template/src/Template.ts#L100)
+[packages/template/src/Template.ts:100](https://github.com/jakubmazanec/js-tools/blob/ead364c/packages/template/src/Template.ts#L100)
 
 ---
 
@@ -97,7 +97,7 @@ Zod schema for custom template attributes.
 
 #### Defined in
 
-[packages/template/src/Template.ts:108](https://github.com/jakubmazanec/js-tools/blob/ef65ded/packages/template/src/Template.ts#L108)
+[packages/template/src/Template.ts:108](https://github.com/jakubmazanec/js-tools/blob/ead364c/packages/template/src/Template.ts#L108)
 
 ---
 
@@ -109,7 +109,7 @@ Template content. Templates are written in [EJS](https://ejs.co/).
 
 #### Defined in
 
-[packages/template/src/Template.ts:97](https://github.com/jakubmazanec/js-tools/blob/ef65ded/packages/template/src/Template.ts#L97)
+[packages/template/src/Template.ts:97](https://github.com/jakubmazanec/js-tools/blob/ead364c/packages/template/src/Template.ts#L97)
 
 ---
 
@@ -121,7 +121,7 @@ Zod schema for template data.
 
 #### Defined in
 
-[packages/template/src/Template.ts:111](https://github.com/jakubmazanec/js-tools/blob/ef65ded/packages/template/src/Template.ts#L111)
+[packages/template/src/Template.ts:111](https://github.com/jakubmazanec/js-tools/blob/ead364c/packages/template/src/Template.ts#L111)
 
 ---
 
@@ -133,7 +133,7 @@ Template function.
 
 #### Defined in
 
-[packages/template/src/Template.ts:105](https://github.com/jakubmazanec/js-tools/blob/ef65ded/packages/template/src/Template.ts#L105)
+[packages/template/src/Template.ts:105](https://github.com/jakubmazanec/js-tools/blob/ead364c/packages/template/src/Template.ts#L105)
 
 ## Methods
 
@@ -159,7 +159,7 @@ Template renders.
 
 #### Defined in
 
-[packages/template/src/Template.ts:198](https://github.com/jakubmazanec/js-tools/blob/ef65ded/packages/template/src/Template.ts#L198)
+[packages/template/src/Template.ts:198](https://github.com/jakubmazanec/js-tools/blob/ead364c/packages/template/src/Template.ts#L198)
 
 ---
 
@@ -190,7 +190,7 @@ Reads a template from a file.
 
 #### Defined in
 
-[packages/template/src/Template.ts:136](https://github.com/jakubmazanec/js-tools/blob/ef65ded/packages/template/src/Template.ts#L136)
+[packages/template/src/Template.ts:136](https://github.com/jakubmazanec/js-tools/blob/ead364c/packages/template/src/Template.ts#L136)
 
 ---
 
@@ -224,4 +224,4 @@ Template renders.
 
 #### Defined in
 
-[packages/template/src/Template.ts:172](https://github.com/jakubmazanec/js-tools/blob/ef65ded/packages/template/src/Template.ts#L172)
+[packages/template/src/Template.ts:172](https://github.com/jakubmazanec/js-tools/blob/ead364c/packages/template/src/Template.ts#L172)
