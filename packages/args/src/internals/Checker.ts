@@ -11,7 +11,7 @@ import {isLongOption} from './isLongOption.js';
 export class Checker {
   errors: Error[] = [];
 
-  checkCommandsConfig(commandsConfig: CommandsConfig) {
+  checkCommandsConfig(commandsConfig: CommandsConfig | []) {
     for (let commandConfig of commandsConfig) {
       if (!isCommand(commandConfig)) {
         this.addError(new ValidationError('INVALID_COMMAND', {messageParameters: [commandConfig]}));
