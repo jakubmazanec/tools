@@ -1,0 +1,42 @@
+{
+  "name": "@jakubmazanec/args",
+  "version": "0.0.0",
+  "description": "TypeScript-first library for parsing command line arguments.",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jakubmazanec/js-tools.git",
+    "directory": "packages/args"
+  },
+  "license": "LGPL-3.0-only",
+  "author": "Jakub Mazanec <jakub@mazanec.dev>",
+  "sideEffects": false,
+  "type": "module",
+  "exports": "./dist/main.js",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "swc src -d dist && tsc",
+    "clean": "del-cli dist *.tsbuildinfo",
+    "document": "typedoc --options typedoc.config.cjs",
+    "format": "prettier . --write --ignore-unknown --ignore-path ../../.prettierignore",
+    "lint": "eslint .",
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --passWithNoTests",
+    "typecheck": "tsc --project tsconfig.typecheck.json"
+  },
+  "dependencies": {
+    "@jakubmazanec/error": "^2.0.0",
+    "@jakubmazanec/ts-utils": "^2.0.0",
+    "lodash.camelcase": "^4.3.0"
+  },
+  "devDependencies": {
+    "@jest/globals": "^29.5.0",
+    "@types/lodash.camelcase": "^4.3.7",
+    "@types/node": "^16.18.3"
+  },
+  "packageManager": "npm@8.19.4",
+  "engines": {
+    "node": ">=16.20.0"
+  }
+}
