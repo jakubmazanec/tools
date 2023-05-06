@@ -36,7 +36,7 @@ function commitOptionScope(optionScope: OptionScope, parsedOptions: Record<strin
 /* eslint-enable no-param-reassign */
 
 /**
- * Parse a list of command line arguments into an arguments object. Based on provided parser config, raw arguments can be parsed as commands, options and parameters.
+ * Parses a list of command line arguments into an arguments object. Based on provided parser config, raw arguments can be parsed as commands, options and parameters.
  *
  * @param argv Raw arguments to be parsed.
  * @param parserConfig Parser configuration.

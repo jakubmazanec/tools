@@ -6,7 +6,7 @@ import {isCommand} from './isCommand.js';
 import {isLongOption} from './isLongOption.js';
 
 /**
- * `Checker` is used for handling various check before, during, and after parsing of the arguments.
+ * `Checker` is used for handling various checks before, during, and after parsing of the arguments.
  */
 export class Checker {
   errors: Error[] = [];
