@@ -32,8 +32,9 @@ jobs:
           gitStatus=$(git status --porcelain)
           git config --unset core.filemode
 
-          if [ -n "$gitStatus" ]; then
+          if [[ -n $gitStatus ]]; then
             echo "You have uncommitted changes!"
+            git status
             exit 1
           fi
 
@@ -46,8 +47,9 @@ jobs:
           gitStatus=$(git status --porcelain)
           git config --unset core.filemode
 
-          if [ -n "$gitStatus" ]; then
+          if [[ -n $gitStatus ]]; then
             echo "You have uncommitted changes!"
+            git status
             exit 1
           fi
 
