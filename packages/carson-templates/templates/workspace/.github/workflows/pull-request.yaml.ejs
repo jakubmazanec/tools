@@ -31,7 +31,7 @@ jobs:
           git config core.filemode false
           git_status=$(git status --porcelain)
 
-          if [ -n $git_status ]; then
+          if [[ -n $git_status ]]; then
             echo "You have uncommitted changes!"
             git status
             git config --unset core.filemode
