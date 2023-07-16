@@ -31,6 +31,7 @@ jobs:
           if [[ -n $gitStatus ]]; then
             echo "You have uncommitted changes!"
             git status
+            git diff packages/args/package.json
             exit 1
           fi
 
