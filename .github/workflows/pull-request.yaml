@@ -25,14 +25,16 @@ jobs:
       - name: Check for changes
         run: |
           git config core.filemode false
-          gitStatus=$(git status --porcelain)
-          git config --unset core.filemode
+          git_status=$(git status --porcelain)
 
-          if [[ -n $gitStatus ]]; then
+          if [ -n $git_status ]; then
             echo "You have uncommitted changes!"
-            git status
+            git status --porcelain
+            git config --unset core.filemode
             exit 1
           fi
+
+          git config --unset core.filemode
 
       - name: Run tests
         run: npm test
@@ -40,14 +42,16 @@ jobs:
       - name: Check for changes
         run: |
           git config core.filemode false
-          gitStatus=$(git status --porcelain)
-          git config --unset core.filemode
+          git_status=$(git status --porcelain)
 
-          if [[ -n $gitStatus ]]; then
+          if [ -n $git_status ]; then
             echo "You have uncommitted changes!"
-            git status
+            git status --porcelain
+            git config --unset core.filemode
             exit 1
           fi
+
+          git config --unset core.filemode
 
       - name: Check for changesets
         run: npx changeset status --since=origin/development

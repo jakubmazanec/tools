@@ -33,26 +33,22 @@ jobs:
           node-version: 16
           registry-url: 'https://registry.npmjs.org'
 
-      - name: Authenticate to npm registry
-        run: |
-          echo "//registry.npmjs.com/:_authToken=NPM_TOKEN" > .npmrc
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-
       - name: Install packages
         run: npm ci
 
       - name: Check for changes
         run: |
           git config core.filemode false
-          gitStatus=$(git status --porcelain | grep -v "^?? .npmrc$" | grep -v "^ M .npmrc$")
-          git config --unset core.filemode
+          git_status=$(git status --porcelain)
 
-          if [[ -n $gitStatus ]]; then
+          if [ -n $git_status ]; then
             echo "You have uncommitted changes!"
-            git status
+            git status --porcelain
+            git config --unset core.filemode
             exit 1
           fi
+
+          git config --unset core.filemode
 
       - name: Run tests
         run: npm test
@@ -60,17 +56,25 @@ jobs:
       - name: Check for changes
         run: |
           git config core.filemode false
-          gitStatus=$(git status --porcelain | grep -v "^?? .npmrc$" | grep -v "^ M .npmrc$")
-          git config --unset core.filemode
+          git_status=$(git status --porcelain)
 
-          if [[ -n $gitStatus ]]; then
+          if [ -n $git_status ]; then
             echo "You have uncommitted changes!"
-            git status
+            git status --porcelain
+            git config --unset core.filemode
             exit 1
           fi
 
+          git config --unset core.filemode
+
       - name: Build packages
         run: npm run build
+
+      - name: Authenticate to npm registry
+        run: |
+          echo "//registry.npmjs.com/:_authToken=NPM_TOKEN" > .npmrc
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Version packages
         run: |
@@ -134,7 +138,7 @@ jobs:
     if: "github.ref_name == '<%- getDevelopmentBranch(workspace) %>'"
     steps:
       - name: Cancel previous runs
-        uses: styfle/cancel-workflow-action@0.9.1
+        uses: styfle/cancel-workflow-action@0.11.0
         with:
           access_token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -153,26 +157,22 @@ jobs:
           node-version: 16
           registry-url: 'https://registry.npmjs.org'
 
-      - name: Authenticate to npm registry
-        run: |
-          echo "//registry.npmjs.com/:_authToken=NPM_TOKEN" > .npmrc
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-
       - name: Install packages
         run: npm ci
 
       - name: Check for changes
         run: |
           git config core.filemode false
-          gitStatus=$(git status --porcelain | grep -v "^?? .npmrc$" | grep -v "^ M .npmrc$")
-          git config --unset core.filemode
+          git_status=$(git status --porcelain)
 
-          if [[ -n $gitStatus ]]; then
+          if [ -n $git_status ]; then
             echo "You have uncommitted changes!"
-            git status
+            git status --porcelain
+            git config --unset core.filemode
             exit 1
           fi
+
+          git config --unset core.filemode
 
       - name: Run tests
         run: npm test
@@ -180,14 +180,16 @@ jobs:
       - name: Check for changes
         run: |
           git config core.filemode false
-          gitStatus=$(git status --porcelain | grep -v "^?? .npmrc$" | grep -v "^ M .npmrc$")
-          git config --unset core.filemode
+          git_status=$(git status --porcelain)
 
-          if [[ -n $gitStatus ]]; then
+          if [ -n $git_status ]; then
             echo "You have uncommitted changes!"
-            git status
+            git status --porcelain
+            git config --unset core.filemode
             exit 1
           fi
+
+          git config --unset core.filemode
 
       - name: Build packages
         run: npm run build
@@ -201,6 +203,12 @@ jobs:
           git commit -m"Update docs [skip actions]"
           git push --force
         continue-on-error: true
+
+      - name: Authenticate to npm registry
+        run: |
+          echo "//registry.npmjs.com/:_authToken=NPM_TOKEN" > .npmrc
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Version packages
         run: |
@@ -223,7 +231,7 @@ jobs:
     if: "github.ref_name != '<%- getMainBranch(workspace) %>' && github.ref_name != '<%- getDevelopmentBranch(workspace) %>'"
     steps:
       - name: Cancel previous runs
-        uses: styfle/cancel-workflow-action@0.9.1
+        uses: styfle/cancel-workflow-action@0.11.0
         with:
           access_token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -242,26 +250,22 @@ jobs:
           node-version: 16
           registry-url: 'https://registry.npmjs.org'
 
-      - name: Authenticate to npm registry
-        run: |
-          echo "//registry.npmjs.com/:_authToken=NPM_TOKEN" > .npmrc
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-
       - name: Install packages
         run: npm ci
 
       - name: Check for changes
         run: |
           git config core.filemode false
-          gitStatus=$(git status --porcelain | grep -v "^?? .npmrc$" | grep -v "^ M .npmrc$")
-          git config --unset core.filemode
+          git_status=$(git status --porcelain)
 
-          if [[ -n $gitStatus ]]; then
+          if [ -n $git_status ]; then
             echo "You have uncommitted changes!"
-            git status
+            git status --porcelain
+            git config --unset core.filemode
             exit 1
           fi
+
+          git config --unset core.filemode
 
       - name: Run tests
         run: npm test
@@ -269,17 +273,25 @@ jobs:
       - name: Check for changes
         run: |
           git config core.filemode false
-          gitStatus=$(git status --porcelain | grep -v "^?? .npmrc$" | grep -v "^ M .npmrc$")
-          git config --unset core.filemode
+          git_status=$(git status --porcelain)
 
-          if [[ -n $gitStatus ]]; then
+          if [ -n $git_status ]; then
             echo "You have uncommitted changes!"
-            git status
+            git status --porcelain
+            git config --unset core.filemode
             exit 1
           fi
 
+          git config --unset core.filemode
+
       - name: Build packages
         run: npm run build
+
+      - name: Authenticate to npm registry
+        run: |
+          echo "//registry.npmjs.com/:_authToken=NPM_TOKEN" > .npmrc
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Version packages
         run: |
