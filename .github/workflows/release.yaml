@@ -41,10 +41,8 @@ jobs:
       - name: Check for changes
         run: |
           git config core.filemode false
-          git update-index --assume-unchanged .npmrc
-          gitStatus = $(git status --porcelain)
+          gitStatus=$(git status --porcelain | grep -v "^?? .npmrc$" | grep -v "^ M .npmrc$")
           git config --unset core.filemode
-          git update-index --no-assume-unchanged .npmrc
 
           if [[ -n $gitStatus ]]; then
             echo "You have uncommitted changes!"
@@ -58,10 +56,8 @@ jobs:
       - name: Check for changes
         run: |
           git config core.filemode false
-          git update-index --assume-unchanged .npmrc
-          gitStatus = $(git status --porcelain)
+          gitStatus=$(git status --porcelain | grep -v "^?? .npmrc$" | grep -v "^ M .npmrc$")
           git config --unset core.filemode
-          git update-index --no-assume-unchanged .npmrc
 
           if [[ -n $gitStatus ]]; then
             echo "You have uncommitted changes!"
@@ -165,10 +161,8 @@ jobs:
       - name: Check for changes
         run: |
           git config core.filemode false
-          git update-index --assume-unchanged .npmrc
-          gitStatus = $(git status --porcelain)
+          gitStatus=$(git status --porcelain | grep -v "^?? .npmrc$" | grep -v "^ M .npmrc$")
           git config --unset core.filemode
-          git update-index --no-assume-unchanged .npmrc
 
           if [[ -n $gitStatus ]]; then
             echo "You have uncommitted changes!"
@@ -182,10 +176,8 @@ jobs:
       - name: Check for changes
         run: |
           git config core.filemode false
-          git update-index --assume-unchanged .npmrc
-          gitStatus = $(git status --porcelain)
+          gitStatus=$(git status --porcelain | grep -v "^?? .npmrc$" | grep -v "^ M .npmrc$")
           git config --unset core.filemode
-          git update-index --no-assume-unchanged .npmrc
 
           if [[ -n $gitStatus ]]; then
             echo "You have uncommitted changes!"
@@ -258,10 +250,8 @@ jobs:
       - name: Check for changes
         run: |
           git config core.filemode false
-          git update-index --assume-unchanged .npmrc
-          gitStatus = $(git status --porcelain)
+          gitStatus=$(git status --porcelain | grep -v "^?? .npmrc$" | grep -v "^ M .npmrc$")
           git config --unset core.filemode
-          git update-index --no-assume-unchanged .npmrc
 
           if [[ -n $gitStatus ]]; then
             echo "You have uncommitted changes!"
@@ -275,10 +265,8 @@ jobs:
       - name: Check for changes
         run: |
           git config core.filemode false
-          git update-index --assume-unchanged .npmrc
-          gitStatus = $(git status --porcelain)
+          gitStatus=$(git status --porcelain | grep -v "^?? .npmrc$" | grep -v "^ M .npmrc$")
           git config --unset core.filemode
-          git update-index --no-assume-unchanged .npmrc
 
           if [[ -n $gitStatus ]]; then
             echo "You have uncommitted changes!"
