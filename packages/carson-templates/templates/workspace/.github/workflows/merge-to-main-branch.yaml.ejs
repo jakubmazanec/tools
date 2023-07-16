@@ -2,7 +2,7 @@
 to: '.github/workflows/merge-to-main.yaml'
 strategy: overwrite
 ---
-name: Merge development to main
+name: Merge development branch to main branch
 
 on: [workflow_dispatch]
 
@@ -31,23 +31,23 @@ jobs:
         run: npm ci
 
       - name: Check for changesets
-        run: npx changeset status --since=origin/main
+        run: npx changeset status --since=origin/<%- getMainBranch(workspace) %>
 
       - name: Checkout development branch
         run: |
           git fetch -p origin
-          git checkout development
-          git branch --set-upstream-to=origin/development development
-          git reset --hard origin/development
+          git checkout <%- getDevelopmentBranch(workspace) %>
+          git branch --set-upstream-to=origin/<%- getDevelopmentBranch(workspace) %> <%- getDevelopmentBranch(workspace) %>
+          git reset --hard origin/<%- getDevelopmentBranch(workspace) %>
           git pull
 
       - name: Checkout main branch
         run: |
-          git checkout -B main
-          git branch --set-upstream-to=origin/main main
-          git reset --hard origin/main
+          git checkout -B <%- getMainBranch(workspace) %>
+          git branch --set-upstream-to=origin/<%- getMainBranch(workspace) %> <%- getMainBranch(workspace) %>
+          git reset --hard origin/<%- getMainBranch(workspace) %>
 
       - name: Merge and commit
         run: |
-          git merge development --no-verify
-          git push -u origin main --no-verify
+          git merge <%- getDevelopmentBranch(workspace) %> --no-verify
+          git push -u origin <%- getMainBranch(workspace) %> --no-verify

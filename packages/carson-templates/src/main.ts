@@ -2,6 +2,29 @@ import {type Project, type Workspace} from '@jakubmazanec/carson';
 
 export {default as lodash} from 'lodash';
 
+const MAIN_BRANCH_NAMES = new Set(['main', 'master']);
+const DEVELOPMENT_BRANCH_NAMES = new Set(['development', 'develop', 'dev']);
+
+export function getMainBranch(workspace: Workspace | Workspace<false>) {
+  for (let branch of workspace.repository?.branches ?? []) {
+    if (MAIN_BRANCH_NAMES.has(branch)) {
+      return branch;
+    }
+  }
+
+  return undefined;
+}
+
+export function getDevelopmentBranch(workspace: Workspace | Workspace<false>) {
+  for (let branch of workspace.repository?.branches ?? []) {
+    if (DEVELOPMENT_BRANCH_NAMES.has(branch)) {
+      return branch;
+    }
+  }
+
+  return undefined;
+}
+
 export function getMajorVersion(version: string) {
   return Number(version.split('.')[0]!.replace(/\D/, ''));
 }

@@ -2,30 +2,6 @@
 to: '.github/workflows/release.yaml'
 strategy: overwrite
 ---
-<%
-const MAIN_BRANCH_NAMES = new Set(['main', 'master']);
-const DEVELOPMENT_BRANCH_NAMES = new Set(['development', 'develop', 'dev']);
-
-function getMainBranch() {
-  for (let branch of workspace.repository?.branches ?? []) {
-    if (MAIN_BRANCH_NAMES.has(branch)) {
-      return branch;
-    }
-  }
-
-  return undefined;
-}
-
-function getDevelopmentBranch() {
-  for (let branch of workspace.repository?.branches ?? []) {
-    if (DEVELOPMENT_BRANCH_NAMES.has(branch)) {
-      return branch;
-    }
-  }
-
-  return undefined;
-}
--%>
 name: Release
 
 on: [push, workflow_dispatch]
@@ -35,7 +11,7 @@ jobs:
     name: Main branch release
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    if: "github.ref_name == '<%- getMainBranch() %>'"
+    if: "github.ref_name == '<%- getMainBranch(workspace) %>'"
     steps:
       - name: Cancel previous runs
         uses: styfle/cancel-workflow-action@0.11.0
@@ -66,8 +42,30 @@ jobs:
       - name: Install packages
         run: npm ci
 
+      - name: Check for changes
+        run: |
+          git config core.filemode false
+          gitStatus = $(git status --porcelain)
+          git config --unset core.filemode
+
+          if [ -n "$git_status" ]; then
+            echo "You have uncommitted changes after running "npm ci"!
+            exit 1
+          fi
+
       - name: Run tests
-        run: npm run test
+        run: npm test
+
+      - name: Check for changes
+        run: |
+          git config core.filemode false
+          gitStatus = $(git status --porcelain)
+          git config --unset core.filemode
+
+          if [ -n "$git_status" ]; then
+            echo "You have uncommitted changes after running "npm test"!
+            exit 1
+          fi
 
       - name: Build packages
         run: npm run build
@@ -111,27 +109,27 @@ jobs:
       - name: Checkout main branch
         run: |
           git fetch -p origin
-          git checkout <%- getMainBranch() %>
-          git branch --set-upstream-to=origin/<%- getMainBranch() %> <%- getMainBranch() %>
-          git reset --hard origin/<%- getMainBranch() %>
+          git checkout <%- getMainBranch(workspace) %>
+          git branch --set-upstream-to=origin/<%- getMainBranch(workspace) %> <%- getMainBranch(workspace) %>
+          git reset --hard origin/<%- getMainBranch(workspace) %>
           git pull
 
       - name: Checkout development branch
         run: |
-          git checkout -B <%- getDevelopmentBranch() %>
-          git branch --set-upstream-to=origin/<%- getDevelopmentBranch() %> <%- getDevelopmentBranch() %>
-          git reset --hard origin/<%- getDevelopmentBranch() %>
+          git checkout -B <%- getDevelopmentBranch(workspace) %>
+          git branch --set-upstream-to=origin/<%- getDevelopmentBranch(workspace) %> <%- getDevelopmentBranch(workspace) %>
+          git reset --hard origin/<%- getDevelopmentBranch(workspace) %>
 
       - name: Merge and commit
         run: |
-          git merge <%- getMainBranch() %> --no-verify
-          git push -u origin <%- getDevelopmentBranch() %> --no-verify
+          git merge <%- getMainBranch(workspace) %> --no-verify
+          git push -u origin <%- getDevelopmentBranch(workspace) %> --no-verify
 
   development_branch_release:
     name: Development branch release
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    if: "github.ref_name == '<%- getDevelopmentBranch() %>'"
+    if: "github.ref_name == '<%- getDevelopmentBranch(workspace) %>'"
     steps:
       - name: Cancel previous runs
         uses: styfle/cancel-workflow-action@0.9.1
@@ -162,8 +160,30 @@ jobs:
       - name: Install packages
         run: npm ci
 
+      - name: Check for changes
+        run: |
+          git config core.filemode false
+          gitStatus = $(git status --porcelain)
+          git config --unset core.filemode
+
+          if [ -n "$git_status" ]; then
+            echo "You have uncommitted changes after running "npm ci"!
+            exit 1
+          fi
+
       - name: Run tests
-        run: npm run test
+        run: npm test
+
+      - name: Check for changes
+        run: |
+          git config core.filemode false
+          gitStatus = $(git status --porcelain)
+          git config --unset core.filemode
+
+          if [ -n "$git_status" ]; then
+            echo "You have uncommitted changes after running "npm test"!
+            exit 1
+          fi
 
       - name: Build packages
         run: npm run build
@@ -196,7 +216,7 @@ jobs:
     name: Feature branch release
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    if: "github.ref_name != '<%- getMainBranch() %>' && github.ref_name != '<%- getDevelopmentBranch() %>'"
+    if: "github.ref_name != '<%- getMainBranch(workspace) %>' && github.ref_name != '<%- getDevelopmentBranch(workspace) %>'"
     steps:
       - name: Cancel previous runs
         uses: styfle/cancel-workflow-action@0.9.1
@@ -227,8 +247,30 @@ jobs:
       - name: Install packages
         run: npm ci
 
+      - name: Check for changes
+        run: |
+          git config core.filemode false
+          gitStatus = $(git status --porcelain)
+          git config --unset core.filemode
+
+          if [ -n "$git_status" ]; then
+            echo "You have uncommitted changes after running "npm ci"!
+            exit 1
+          fi
+
       - name: Run tests
-        run: npm run test
+        run: npm test
+
+      - name: Check for changes
+        run: |
+          git config core.filemode false
+          gitStatus = $(git status --porcelain)
+          git config --unset core.filemode
+
+          if [ -n "$git_status" ]; then
+            echo "You have uncommitted changes after running "npm test"!
+            exit 1
+          fi
 
       - name: Build packages
         run: npm run build
