@@ -3,9 +3,9 @@ to: 'package.json'
 strategy: merge
 ---
 <%
-let developmentDependencies = getDependencies({
-  '@jest/globals': '^29.0.0',
-}, workspace);
+let developmentDependencies = getDependencies([
+  '@jest/globals',
+], workspace);
 let packageJson = lodash.merge(
   {
     repository: {
