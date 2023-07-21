@@ -21,7 +21,7 @@
   ],
   "scripts": {
     "build": "swc src -d dist && tsc",
-    "clean": "del-cli dist *.tsbuildinfo",
+    "clean": "del-cli coverage dist *.tsbuildinfo",
     "develop": "swc src -d dist --watch",
     "document": "typedoc --options typedoc.config.cjs",
     "format": "prettier . --write --ignore-unknown --ignore-path ../../.prettierignore",

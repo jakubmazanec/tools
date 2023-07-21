@@ -2,27 +2,27 @@
 to: 'package.json'
 strategy: merge
 ---
-{
-  "repository": {
-    "type": "git",
-    "directory": "<%- project.relativePath %>"
+<%
+let packageJson = {
+  repository: {
+    type: 'git',
+    directory: '<%- project.relativePath %>',
   },
-  "type": "commonjs",
-  "exports": "./dist/main.js",
-  "files": [
-    "dist",
-    "src"
-  ],
-  "scripts": {
-    "build": "swc src -d dist && tsc",
-    "clean": "del-cli dist *.tsbuildinfo",
-    "format": "prettier . --write --ignore-unknown --ignore-path ../../.prettierignore",
-    "lint": "eslint .",
-    "test": "jest --passWithNoTests",
-    "typecheck": "tsc --project tsconfig.typecheck.json"
+  type: 'commonjs',
+  exports: './dist/main.js',
+  files: ['dist', 'src'],
+  scripts: {
+    build: 'swc src -d dist && tsc',
+    clean: 'del-cli coverage dist *.tsbuildinfo',
+    format: 'prettier . --write --ignore-unknown --ignore-path ../../.prettierignore',
+    lint: 'eslint .',
+    test: 'jest --passWithNoTests',
+    typecheck: 'tsc --project tsconfig.typecheck.json',
   },
-  "packageManager": "npm@8.19.4",
-  "engines": {
-    "node": ">=16.20.0"
-  }
-}
+  packageManager: 'npm@8.19.4',
+  engines: {
+    node: '>=16.20.0',
+  },
+};
+-%>
+<%- JSON.stringify(packageJson) %>

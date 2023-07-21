@@ -17,7 +17,7 @@ let packageJson = lodash.merge(
     files: ['dist', 'src'],
     scripts: {
       build: 'swc src -d dist && tsc',
-      clean: 'del-cli dist *.tsbuildinfo',
+      clean: 'del-cli coverage dist *.tsbuildinfo',
       document: 'typedoc --options typedoc.config.cjs',
       format:
         'prettier . --write --ignore-unknown --ignore-path ../../.prettierignore',
