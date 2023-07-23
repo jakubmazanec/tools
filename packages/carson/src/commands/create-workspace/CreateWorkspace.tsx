@@ -61,7 +61,7 @@ export function CreateWorkspace({args}: CreateWorkspaceProps) {
 
   return (
     <Box flexDirection="column">
-      <Text>{`Creating workspace at ${chalk[colors.highlighted](path)}.`}</Text>
+      <Text>{`Creating workspace at ${chalk[colors.info](workspacePath)}.`}</Text>
 
       <CreateWorkspaceInput
         values={createWorkspaceInputResult}

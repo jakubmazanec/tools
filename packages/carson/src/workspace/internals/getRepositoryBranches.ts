@@ -17,6 +17,14 @@ export async function getRepositoryBranches(repositoryPath: string): Promise<str
     repositoryBranches = branchSummary.all.map((branch) =>
       branch.replace(REMOTE_NAME_PREFIX_REGEXP, ''),
     );
+
+    if (!repositoryBranches.length) {
+      branchSummary = await git.branch(['-a']);
+
+      repositoryBranches = branchSummary.all.map((branch) =>
+        branch.replace(REMOTE_NAME_PREFIX_REGEXP, ''),
+      );
+    }
   } catch (error) {
     // no-op
   }

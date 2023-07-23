@@ -426,6 +426,10 @@ export class Workspace<M extends boolean = true> {
           url: repositoryUrl,
           branches: repositoryBranches ?? [],
         };
+      } else if (repositoryBranches) {
+        this.repository = {
+          branches: repositoryBranches,
+        };
       }
 
       await this.readProjects();
@@ -441,6 +445,10 @@ export class Workspace<M extends boolean = true> {
       this.repository = {
         url: repositoryUrl,
         branches: repositoryBranches ?? [],
+      };
+    } else if (repositoryBranches) {
+      this.repository = {
+        branches: repositoryBranches,
       };
     }
 

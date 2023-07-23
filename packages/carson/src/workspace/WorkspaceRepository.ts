@@ -3,5 +3,5 @@
  */
 export type WorkspaceRepository = {
   branches: string[];
-  url: string;
+  url?: string;
 };
