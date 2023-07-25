@@ -14,4 +14,4 @@
 
 #### Defined in
 
-[packages/zod-utils/src/utils/readPackageJson.ts:10](https://github.com/jakubmazanec/js-tools/blob/d0b9b98/packages/zod-utils/src/utils/readPackageJson.ts#L10)
+[packages/zod-utils/src/utils/readPackageJson.ts:10](https://github.com/jakubmazanec/js-tools/blob/dbf0e41/packages/zod-utils/src/utils/readPackageJson.ts#L10)

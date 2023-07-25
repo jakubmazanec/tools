@@ -35,7 +35,7 @@
 
 #### Defined in
 
-[packages/carson-templates/src/main.ts:59](https://github.com/jakubmazanec/js-tools/blob/d0b9b98/packages/carson-templates/src/main.ts#L59)
+[packages/carson-templates/src/main.ts:75](https://github.com/jakubmazanec/js-tools/blob/dbf0e41/packages/carson-templates/src/main.ts#L75)
 
 ---
 
@@ -55,7 +55,7 @@
 
 #### Defined in
 
-[packages/carson-templates/src/main.ts:45](https://github.com/jakubmazanec/js-tools/blob/d0b9b98/packages/carson-templates/src/main.ts#L45)
+[packages/carson-templates/src/main.ts:61](https://github.com/jakubmazanec/js-tools/blob/dbf0e41/packages/carson-templates/src/main.ts#L61)
 
 ---
 
@@ -75,7 +75,7 @@
 
 #### Defined in
 
-[packages/carson-templates/src/main.ts:35](https://github.com/jakubmazanec/js-tools/blob/d0b9b98/packages/carson-templates/src/main.ts#L35)
+[packages/carson-templates/src/main.ts:51](https://github.com/jakubmazanec/js-tools/blob/dbf0e41/packages/carson-templates/src/main.ts#L51)
 
 ---
 
@@ -95,7 +95,7 @@
 
 #### Defined in
 
-[packages/carson-templates/src/main.ts:55](https://github.com/jakubmazanec/js-tools/blob/d0b9b98/packages/carson-templates/src/main.ts#L55)
+[packages/carson-templates/src/main.ts:71](https://github.com/jakubmazanec/js-tools/blob/dbf0e41/packages/carson-templates/src/main.ts#L71)
 
 ---
 
@@ -116,7 +116,7 @@
 
 #### Defined in
 
-[packages/carson-templates/src/main.ts:104](https://github.com/jakubmazanec/js-tools/blob/d0b9b98/packages/carson-templates/src/main.ts#L104)
+[packages/carson-templates/src/main.ts:124](https://github.com/jakubmazanec/js-tools/blob/dbf0e41/packages/carson-templates/src/main.ts#L124)
 
 ---
 
