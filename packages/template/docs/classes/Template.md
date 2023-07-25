@@ -35,6 +35,7 @@ console.log(await template.render({value: 42})); // ->  [{attributes: {to: 'valu
 - [content](Template.md#content)
 - [dataSchema](Template.md#dataschema)
 - [fn](Template.md#fn)
+- [path](Template.md#path)
 
 ### Methods
 
@@ -63,7 +64,7 @@ console.log(await template.render({value: 42})); // ->  [{attributes: {to: 'valu
 
 #### Defined in
 
-[packages/template/src/Template.ts:113](https://github.com/jakubmazanec/js-tools/blob/ead364c/packages/template/src/Template.ts#L113)
+[packages/template/src/Template.ts:116](https://github.com/jakubmazanec/js-tools/blob/d0b9b98/packages/template/src/Template.ts#L116)
 
 ## Properties
 
@@ -85,7 +86,7 @@ Each variable that is a string is also rendered.
 
 #### Defined in
 
-[packages/template/src/Template.ts:100](https://github.com/jakubmazanec/js-tools/blob/ead364c/packages/template/src/Template.ts#L100)
+[packages/template/src/Template.ts:103](https://github.com/jakubmazanec/js-tools/blob/d0b9b98/packages/template/src/Template.ts#L103)
 
 ---
 
@@ -97,7 +98,7 @@ Zod schema for custom template attributes.
 
 #### Defined in
 
-[packages/template/src/Template.ts:108](https://github.com/jakubmazanec/js-tools/blob/ead364c/packages/template/src/Template.ts#L108)
+[packages/template/src/Template.ts:111](https://github.com/jakubmazanec/js-tools/blob/d0b9b98/packages/template/src/Template.ts#L111)
 
 ---
 
@@ -109,7 +110,7 @@ Template content. Templates are written in [EJS](https://ejs.co/).
 
 #### Defined in
 
-[packages/template/src/Template.ts:97](https://github.com/jakubmazanec/js-tools/blob/ead364c/packages/template/src/Template.ts#L97)
+[packages/template/src/Template.ts:100](https://github.com/jakubmazanec/js-tools/blob/d0b9b98/packages/template/src/Template.ts#L100)
 
 ---
 
@@ -121,7 +122,7 @@ Zod schema for template data.
 
 #### Defined in
 
-[packages/template/src/Template.ts:111](https://github.com/jakubmazanec/js-tools/blob/ead364c/packages/template/src/Template.ts#L111)
+[packages/template/src/Template.ts:114](https://github.com/jakubmazanec/js-tools/blob/d0b9b98/packages/template/src/Template.ts#L114)
 
 ---
 
@@ -133,7 +134,19 @@ Template function.
 
 #### Defined in
 
-[packages/template/src/Template.ts:105](https://github.com/jakubmazanec/js-tools/blob/ead364c/packages/template/src/Template.ts#L105)
+[packages/template/src/Template.ts:108](https://github.com/jakubmazanec/js-tools/blob/d0b9b98/packages/template/src/Template.ts#L108)
+
+---
+
+### path
+
+• `Optional` **path**: `string`
+
+Template path.
+
+#### Defined in
+
+[packages/template/src/Template.ts:97](https://github.com/jakubmazanec/js-tools/blob/d0b9b98/packages/template/src/Template.ts#L97)
 
 ## Methods
 
@@ -159,14 +172,14 @@ Template renders.
 
 #### Defined in
 
-[packages/template/src/Template.ts:198](https://github.com/jakubmazanec/js-tools/blob/ead364c/packages/template/src/Template.ts#L198)
+[packages/template/src/Template.ts:206](https://github.com/jakubmazanec/js-tools/blob/d0b9b98/packages/template/src/Template.ts#L206)
 
 ---
 
 ### read
 
-▸ `Static` **read**<`A`, `D`\>(`templateFilePath`, `options?`):
-`Promise`<[`Template`](Template.md)<`A`, `D`\>\>
+▸ `Static` **read**<`A`, `D`\>(`templatePath`, `options?`): `Promise`<[`Template`](Template.md)<`A`,
+`D`\>\>
 
 Reads a template from a file.
 
@@ -179,10 +192,10 @@ Reads a template from a file.
 
 #### Parameters
 
-| Name               | Type                                                                 | Description                |
-| :----------------- | :------------------------------------------------------------------- | :------------------------- |
-| `templateFilePath` | `string`                                                             | Path to the template file. |
-| `options?`         | [`TemplateReadOptions`](../README.md#templatereadoptions)<`A`, `D`\> | -                          |
+| Name           | Type                                                                 | Description                |
+| :------------- | :------------------------------------------------------------------- | :------------------------- |
+| `templatePath` | `string`                                                             | Path to the template file. |
+| `options?`     | [`TemplateReadOptions`](../README.md#templatereadoptions)<`A`, `D`\> | -                          |
 
 #### Returns
 
@@ -190,13 +203,13 @@ Reads a template from a file.
 
 #### Defined in
 
-[packages/template/src/Template.ts:136](https://github.com/jakubmazanec/js-tools/blob/ead364c/packages/template/src/Template.ts#L136)
+[packages/template/src/Template.ts:143](https://github.com/jakubmazanec/js-tools/blob/d0b9b98/packages/template/src/Template.ts#L143)
 
 ---
 
 ### readAndRender
 
-▸ `Static` **readAndRender**<`A`, `D`\>(`templateFilePath`, `data`, `options?`):
+▸ `Static` **readAndRender**<`A`, `D`\>(`templatePath`, `data`, `options?`):
 `Promise`<[`TemplateRenders`](../README.md#templaterenders)<`A`, `D`\>\>
 
 Reads a template from a file and then renders it.
@@ -210,11 +223,11 @@ Reads a template from a file and then renders it.
 
 #### Parameters
 
-| Name               | Type                                                                                   | Description                           |
-| :----------------- | :------------------------------------------------------------------------------------- | :------------------------------------ |
-| `templateFilePath` | `string`                                                                               | Path to the template file.            |
-| `data`             | `D` extends `undefined` ? `null` : `TypeOf`<`NonNullable`<`D`\>\>                      | Data used for rendering the template. |
-| `options?`         | [`TemplateReadAndRenderOptions`](../README.md#templatereadandrenderoptions)<`A`, `D`\> | Options object.                       |
+| Name           | Type                                                                                   | Description                           |
+| :------------- | :------------------------------------------------------------------------------------- | :------------------------------------ |
+| `templatePath` | `string`                                                                               | Path to the template file.            |
+| `data`         | `D` extends `undefined` ? `null` : `TypeOf`<`NonNullable`<`D`\>\>                      | Data used for rendering the template. |
+| `options?`     | [`TemplateReadAndRenderOptions`](../README.md#templatereadandrenderoptions)<`A`, `D`\> | Options object.                       |
 
 #### Returns
 
@@ -224,4 +237,4 @@ Template renders.
 
 #### Defined in
 
-[packages/template/src/Template.ts:172](https://github.com/jakubmazanec/js-tools/blob/ead364c/packages/template/src/Template.ts#L172)
+[packages/template/src/Template.ts:180](https://github.com/jakubmazanec/js-tools/blob/d0b9b98/packages/template/src/Template.ts#L180)
