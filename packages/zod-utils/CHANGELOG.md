@@ -1,5 +1,13 @@
 # @jakubmazanec/zod-utils
 
+## 1.0.1
+
+### Patch Changes
+
+- [#21](https://github.com/jakubmazanec/js-tools/pull/21)
+  [`dbf0e41`](https://github.com/jakubmazanec/js-tools/commit/dbf0e4108dc43d9ec212c1f4ddea38b2e6d916d4)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Updates Eddie template.
+
 ## 1.0.0
 
 ### Major Changes
