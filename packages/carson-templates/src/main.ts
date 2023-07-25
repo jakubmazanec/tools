@@ -1,16 +1,32 @@
 import {type Project, type Workspace} from '@jakubmazanec/carson';
+import fs from 'node:fs';
+import {createRequire} from 'node:module';
 import semver from 'semver';
 
 export {default as lodash} from 'lodash';
 export {default as semver} from 'semver';
 
+const TEMPLATE_PACKAGE_NAME = '@jakubmazanec/carson-templates';
 const MAIN_BRANCH_NAMES = new Set(['main', 'master']);
 const DEVELOPMENT_BRANCH_NAMES = new Set(['development', 'develop', 'dev']);
 
+let require = createRequire(import.meta.url);
+let templatesPackageVersion =
+  (
+    JSON.parse(
+      fs.readFileSync(require.resolve(`${TEMPLATE_PACKAGE_NAME}/package.json`), {
+        encoding: 'utf8',
+      }),
+    ) as {version?: string}
+  ).version ?? '1.0.0';
+let isTemplatesPackageVersionPrerelease = !!semver.prerelease(templatesPackageVersion)?.length;
+
 const DEPENDENCY_VERSIONS: Record<string, string> = {
   '@changesets/cli': '^2.0.0',
-  '@jakubmazanec/carson': '^0.0.0',
-  '@jakubmazanec/carson-templates': '^0.0.0',
+  '@jakubmazanec/carson': '^0.1.0',
+  [TEMPLATE_PACKAGE_NAME]: isTemplatesPackageVersionPrerelease
+    ? templatesPackageVersion
+    : `^${templatesPackageVersion}`,
   '@jest/globals': '^29.0.0',
   '@swc/cli': '^0.1.0',
   '@swc/core': '^1.0.0',
@@ -70,6 +86,10 @@ export function getDependencies(dependencies: string[], workspace: Workspace | W
   const projectNames = workspace.projects.map((project) => project.name);
 
   for (const [dependencyName, dependencyVersion] of Object.entries(result)) {
+    if (dependencyName === TEMPLATE_PACKAGE_NAME) {
+      continue;
+    }
+
     const installedDependency = workspace.allDependencies.find(
       (dependency) => dependencyName === dependency.name,
     );
