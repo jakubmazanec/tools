@@ -24,7 +24,7 @@
   "scripts": {
     "build": "swc src -d dist && tsc",
     "check-rules": "ts-node --files --project tools/check-rules/tsconfig.json tools/check-rules/index.ts",
-    "clean": "del-cli dist *.tsbuildinfo",
+    "clean": "del-cli coverage dist *.tsbuildinfo",
     "format": "prettier . --write --ignore-unknown --ignore-path ../../.prettierignore",
     "lint": "eslint .",
     "test": "jest --passWithNoTests",
