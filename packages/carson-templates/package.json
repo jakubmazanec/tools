@@ -1,6 +1,6 @@
 {
   "name": "@jakubmazanec/carson-templates",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Collection of Carson templates.",
   "repository": {
     "type": "git",
@@ -30,7 +30,7 @@
     "typecheck": "tsc --project tsconfig.typecheck.json"
   },
   "dependencies": {
-    "@jakubmazanec/carson": "^0.0.0",
+    "@jakubmazanec/carson": "^0.1.0",
     "lodash": "^4.17.21",
     "semver": "^7.3.6"
   },

@@ -1,6 +1,6 @@
 {
   "name": "@jakubmazanec/args",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "TypeScript-first library for parsing command line arguments.",
   "repository": {
     "type": "git",
@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "@jakubmazanec/error": "^2.0.0",
-    "@jakubmazanec/ts-utils": "^2.0.0",
+    "@jakubmazanec/ts-utils": "^2.1.0",
     "lodash.camelcase": "^4.3.0"
   },
   "devDependencies": {
