@@ -1,0 +1,14 @@
+---
+to: 'tsconfig.json'
+strategy: overwrite
+---
+{
+  "extends": "../../tsconfig.options.json",
+  "compilerOptions": {
+    "emitDeclarationOnly": true,
+    "outDir": "./dist",
+    "rootDir": "./src"
+  },
+  "include": ["./src/**/*"],
+  "references": <%- JSON.stringify(getReferences(workspace, project), null, 2) %>
+}

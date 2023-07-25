@@ -7,19 +7,19 @@ import yaml from 'yaml';
 import {type z, type AnyZodObject} from 'zod';
 
 import {NO_INFERRED_PARSER_REGEXP} from './constants.js';
+import {templateAttributesSchema, type TemplateAttributes} from './TemplateAttributes.js';
 import {TemplateError} from './TemplateError.js';
-import {
-  templateAttributesSchema,
-  type TemplateAttributes,
-  type TemplateFunction,
-  type TemplateRender,
-  type TemplateRenders,
-} from './types.js';
+import {type TemplateFunction} from './TemplateFunction.js';
+import {type TemplateRender} from './TemplateRender.js';
+import {type TemplateRenders} from './TemplateRenders.js';
 
 export type TemplateOptions<
   A extends AnyZodObject | undefined = undefined,
   D extends AnyZodObject | undefined = undefined,
 > = {
+  /** Template path. */
+  path?: string;
+
   /** Template content. */
   content: string;
 
@@ -93,6 +93,9 @@ export class Template<
   A extends AnyZodObject | undefined = undefined,
   D extends AnyZodObject | undefined = undefined,
 > {
+  /** Template path. */
+  path?: string;
+
   /** Template content. Templates are written in [EJS](https://ejs.co/). */
   readonly content: string;
 
@@ -110,7 +113,11 @@ export class Template<
   /** Zod schema for template data. */
   readonly dataSchema: D extends AnyZodObject ? D : null;
 
-  constructor({content, attributes, attributesSchema, dataSchema}: TemplateOptions<A, D>) {
+  constructor({path, content, attributes, attributesSchema, dataSchema}: TemplateOptions<A, D>) {
+    if (path) {
+      this.path = path;
+    }
+
     this.content = content;
     this.attributes = attributes;
     this.fn = ejs.compile(this.content);
@@ -131,13 +138,13 @@ export class Template<
   /**
    * Reads a template from a file.
    *
-   * @param templateFilePath Path to the template file.
+   * @param templatePath Path to the template file.
    */
   static async read<
     A extends AnyZodObject | undefined = undefined,
     D extends AnyZodObject | undefined = undefined,
-  >(templateFilePath: string, options?: TemplateReadOptions<A, D>): Promise<Template<A, D>> {
-    let {data: attributes, content} = matter(await fs.readFile(templateFilePath, 'utf8'));
+  >(templatePath: string, options?: TemplateReadOptions<A, D>): Promise<Template<A, D>> {
+    let {data: attributes, content} = matter(await fs.readFile(templatePath, 'utf8'));
     let attributesSchema = options?.attributesSchema
       ? templateAttributesSchema.merge(options.attributesSchema)
       : templateAttributesSchema;
@@ -147,13 +154,14 @@ export class Template<
       throw new TemplateError('INVALID_ATTRIBUTES', {
         cause: attributesParseResult.error,
         data: {
-          path: templateFilePath,
+          path: templatePath,
           zodIssues: attributesParseResult.error.issues,
         },
       });
     }
 
     return new this({
+      path: templatePath,
       attributes,
       content,
       attributesSchema: options?.attributesSchema,
@@ -164,7 +172,7 @@ export class Template<
   /**
    * Reads a template from a file and then renders it.
    *
-   * @param templateFilePath Path to the template file.
+   * @param templatePath Path to the template file.
    * @param data Data used for rendering the template.
    * @param options Options object.
    * @return Template renders.
@@ -173,11 +181,11 @@ export class Template<
     A extends AnyZodObject | undefined = undefined,
     D extends AnyZodObject | undefined = undefined,
   >(
-    templateFilePath: string,
+    templatePath: string,
     data: D extends undefined ? null : z.infer<NonNullable<D>>,
     options?: TemplateReadAndRenderOptions<A, D>,
   ) {
-    let template = await Template.read<A, D>(templateFilePath, {
+    let template = await Template.read<A, D>(templatePath, {
       attributesSchema: options?.attributesSchema,
       dataSchema: options?.dataSchema,
     });

@@ -1,3 +1,4 @@
+<!-- header -->
 <div align="center">
 
 # @jakubmazanec/changesets-changelog
@@ -5,6 +6,7 @@
 Changelog for projects using Changesets.
 
 </div>
+<!-- header -->
 
 ## Installation
 

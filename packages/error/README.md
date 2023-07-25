@@ -1,3 +1,4 @@
+<!-- header -->
 <div align="center">
 
 # @jakubmazanec/error
@@ -5,6 +6,7 @@
 Collection of utilities for creating and handling errors.
 
 </div>
+<!-- header -->
 
 ## Installation
 

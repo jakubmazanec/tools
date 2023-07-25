@@ -1,0 +1,53 @@
+---
+to: '.github/workflows/merge-to-main.yaml'
+strategy: overwrite
+---
+name: Merge development branch to main branch
+
+on: [workflow_dispatch]
+
+jobs:
+  merge:
+    name: Merge
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          token: ${{secrets.PAT}}
+          fetch-depth: 0
+
+      - name: Configure git
+        run: |
+          git config user.email "bot@mazanec.dev"
+          git config user.name "Bot"
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install packages
+        run: npm ci
+
+      - name: Check for changesets
+        run: npx changeset status --since=origin/<%- getMainBranch(workspace) %>
+
+      - name: Checkout development branch
+        run: |
+          git fetch -p origin
+          git checkout <%- getDevelopmentBranch(workspace) %>
+          git branch --set-upstream-to=origin/<%- getDevelopmentBranch(workspace) %> <%- getDevelopmentBranch(workspace) %>
+          git reset --hard origin/<%- getDevelopmentBranch(workspace) %>
+          git pull
+
+      - name: Checkout main branch
+        run: |
+          git checkout -B <%- getMainBranch(workspace) %>
+          git branch --set-upstream-to=origin/<%- getMainBranch(workspace) %> <%- getMainBranch(workspace) %>
+          git reset --hard origin/<%- getMainBranch(workspace) %>
+
+      - name: Merge and commit
+        run: |
+          git merge <%- getDevelopmentBranch(workspace) %> --no-verify
+          git push -u origin <%- getMainBranch(workspace) %> --no-verify

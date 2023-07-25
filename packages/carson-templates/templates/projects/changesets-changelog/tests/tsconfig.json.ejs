@@ -1,0 +1,17 @@
+---
+to: 'tests/tsconfig.json'
+strategy: overwrite
+---
+{
+  "extends": "../../../tsconfig.options.json",
+  "compilerOptions": {
+    "composite": false,
+    "noEmit": true
+  },
+  "include": ["./**/*"],
+  "references": [
+    {
+      "path": ".."
+    }
+  ]
+}

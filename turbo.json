@@ -2,7 +2,7 @@
   "$schema": "https://turborepo.org/schema.json",
   "pipeline": {
     "build": {
-      "dependsOn": ["^build", "clean", "codegen"],
+      "dependsOn": ["^build", "codegen"],
       "outputs": ["build/**", "dist/**"]
     },
     "clean": {
@@ -11,23 +11,28 @@
     "codegen": {
       "cache": false
     },
+    "develop": {
+      "dependsOn": ["codegen"],
+      "cache": false,
+      "persistent": true
+    },
     "document": {
       "dependsOn": ["^build", "codegen"],
-      "outputs": ["docs"]
+      "outputs": ["docs/**"]
     },
     "format": {
       "cache": false
     },
     "lint": {
-      "dependsOn": ["@jakubmazanec/eslint-config#build", "^build"],
+      "dependsOn": ["@jakubmazanec/eslint-config#build", "^build", "codegen"],
       "outputs": []
     },
     "test": {
-      "dependsOn": ["^build", "clean", "typecheck", "lint"],
+      "dependsOn": ["^build", "typecheck", "lint"],
       "outputs": ["coverage/**"]
     },
     "typecheck": {
-      "dependsOn": ["^build"],
+      "dependsOn": ["^build", "codegen"],
       "outputs": []
     }
   },

@@ -1,0 +1,32 @@
+{
+  "extends": "../../tsconfig.options.json",
+  "compilerOptions": {
+    "emitDeclarationOnly": true,
+    "outDir": "./dist",
+    "rootDir": "./src"
+  },
+  "include": ["./src/**/*"],
+  "references": [
+    {
+      "path": "../../packages/args"
+    },
+    {
+      "path": "../../packages/cli"
+    },
+    {
+      "path": "../../packages/error"
+    },
+    {
+      "path": "../../packages/fs-utils"
+    },
+    {
+      "path": "../../packages/template"
+    },
+    {
+      "path": "../../packages/ts-utils"
+    },
+    {
+      "path": "../../packages/zod-utils"
+    }
+  ]
+}

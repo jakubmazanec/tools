@@ -1,0 +1,8 @@
+{
+  "workspaces": [
+    "./packages/*"
+  ],
+  "devDependencies": {
+    "del-cli": "^4.0.1"
+  }
+}

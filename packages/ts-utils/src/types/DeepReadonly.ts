@@ -30,17 +30,17 @@ export type DeepReadonly<T> = T extends Primitive | ((...args: any[]) => unknown
   : unknown;
 
 /**
- * Helper type for {@linkcode DeepReadonly}.
+ * Helper type for {@link DeepReadonly}.
  */
 type DeepReadonlyMap<K, V> = ReadonlyMap<DeepReadonly<K>, DeepReadonly<V>>;
 
 /**
- * Helper type for {@linkcode DeepReadonly}.
+ * Helper type for {@link DeepReadonly}.
  */
 type DeepReadonlySet<I> = ReadonlySet<DeepReadonly<I>>;
 
 /**
- * Helper type for {@linkcode DeepReadonly}.
+ * Helper type for {@link DeepReadonly}.
  */
 type DeepReadonlyObject<O extends object> = {
   readonly [K in keyof O]: DeepReadonly<O[K]>;

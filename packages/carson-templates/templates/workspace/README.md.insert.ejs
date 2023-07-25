@@ -1,0 +1,10 @@
+---
+to: 'README.md'
+strategy: [insert, projects]
+---
+
+## Projects
+
+<% for (let project of workspace.projects) { %>
+- [<%- project.name %>](./<%- project.relativePath %>) – <%- project.packageJson.description -%>
+<% } %>

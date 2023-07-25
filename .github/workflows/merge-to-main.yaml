@@ -1,4 +1,4 @@
-name: Merge development to main
+name: Merge development branch to main branch
 
 on: [workflow_dispatch]
 

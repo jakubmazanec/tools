@@ -1,3 +1,4 @@
+<!-- header -->
 <div align="center">
 
 # @jakubmazanec/eslint-config
@@ -5,6 +6,7 @@
 ESLint config for TypeScript projects.
 
 </div>
+<!-- header -->
 
 ## Installation
 

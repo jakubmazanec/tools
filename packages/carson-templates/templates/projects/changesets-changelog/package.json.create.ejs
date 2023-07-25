@@ -1,0 +1,15 @@
+---
+to: 'package.json'
+strategy: create
+---
+{
+  "name": "<%- project.name %>",
+  "version": "0.0.0",
+  "description": "",
+  "repository": {
+    "url": "<%- workspace.repository?.url ?? '' %>"
+  },
+  "license": "MIT",
+  "author": "Jakub Mazanec <jakub@mazanec.dev>",
+  "sideEffects": false
+}

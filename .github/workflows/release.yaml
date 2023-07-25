@@ -29,24 +29,53 @@ jobs:
           node-version: 16
           registry-url: 'https://registry.npmjs.org'
 
+      - name: Install packages
+        run: npm ci
+
+      - name: Check for changes
+        run: |
+          git config core.filemode false
+          git_status=$(git status --porcelain)
+
+          if [[ -n $git_status ]]; then
+            echo "You have uncommitted changes!"
+            git status --porcelain
+            git config --unset core.filemode
+            exit 1
+          fi
+
+          git config --unset core.filemode
+
+      - name: Run tests
+        run: npm test
+
+      - name: Check for changes
+        run: |
+          git config core.filemode false
+          git_status=$(git status --porcelain)
+
+          if [[ -n $git_status ]]; then
+            echo "You have uncommitted changes!"
+            git status --porcelain
+            git config --unset core.filemode
+            exit 1
+          fi
+
+          git config --unset core.filemode
+
+      - name: Build packages
+        run: npm run build
+
       - name: Authenticate to npm registry
         run: |
           echo "//registry.npmjs.com/:_authToken=NPM_TOKEN" > .npmrc
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - name: Install packages
-        run: npm ci
-
-      - name: Run tests
-        run: npm run test
-
-      - name: Build packages
-        run: npm run build
-
       - name: Version packages
         run: |
           npx changeset version
+          git status
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -105,11 +134,11 @@ jobs:
     if: "github.ref_name == 'development'"
     steps:
       - name: Cancel previous runs
-        uses: styfle/cancel-workflow-action@0.9.1
+        uses: styfle/cancel-workflow-action@0.11.0
         with:
           access_token: ${{ secrets.GITHUB_TOKEN }}
 
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           token: ${{ secrets.PAT }}
           fetch-depth: 0
@@ -119,22 +148,44 @@ jobs:
           git config user.email "bot@mazanec.dev"
           git config user.name "Bot"
 
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
         with:
           node-version: 16
           registry-url: 'https://registry.npmjs.org'
 
-      - name: Authenticate to npm registry
-        run: |
-          echo "//registry.npmjs.com/:_authToken=NPM_TOKEN" > .npmrc
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-
       - name: Install packages
         run: npm ci
 
+      - name: Check for changes
+        run: |
+          git config core.filemode false
+          git_status=$(git status --porcelain)
+
+          if [[ -n $git_status ]]; then
+            echo "You have uncommitted changes!"
+            git status --porcelain
+            git config --unset core.filemode
+            exit 1
+          fi
+
+          git config --unset core.filemode
+
       - name: Run tests
-        run: npm run test
+        run: npm test
+
+      - name: Check for changes
+        run: |
+          git config core.filemode false
+          git_status=$(git status --porcelain)
+
+          if [[ -n $git_status ]]; then
+            echo "You have uncommitted changes!"
+            git status --porcelain
+            git config --unset core.filemode
+            exit 1
+          fi
+
+          git config --unset core.filemode
 
       - name: Build packages
         run: npm run build
@@ -149,9 +200,16 @@ jobs:
           git push --force
         continue-on-error: true
 
+      - name: Authenticate to npm registry
+        run: |
+          echo "//registry.npmjs.com/:_authToken=NPM_TOKEN" > .npmrc
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
       - name: Version packages
         run: |
           npx changeset version --snapshot next --snapshot-prerelease-template "{tag}.{commit}"
+          git status
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -169,11 +227,11 @@ jobs:
     if: "github.ref_name != 'main' && github.ref_name != 'development'"
     steps:
       - name: Cancel previous runs
-        uses: styfle/cancel-workflow-action@0.9.1
+        uses: styfle/cancel-workflow-action@0.11.0
         with:
           access_token: ${{ secrets.GITHUB_TOKEN }}
 
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
@@ -183,10 +241,47 @@ jobs:
           git config user.email "bot@mazanec.dev"
           git config user.name "Bot"
 
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
         with:
           node-version: 16
           registry-url: 'https://registry.npmjs.org'
+
+      - name: Install packages
+        run: npm ci
+
+      - name: Check for changes
+        run: |
+          git config core.filemode false
+          git_status=$(git status --porcelain)
+
+          if [[ -n $git_status ]]; then
+            echo "You have uncommitted changes!"
+            git status --porcelain
+            git config --unset core.filemode
+            exit 1
+          fi
+
+          git config --unset core.filemode
+
+      - name: Run tests
+        run: npm test
+
+      - name: Check for changes
+        run: |
+          git config core.filemode false
+          git_status=$(git status --porcelain)
+
+          if [[ -n $git_status ]]; then
+            echo "You have uncommitted changes!"
+            git status --porcelain
+            git config --unset core.filemode
+            exit 1
+          fi
+
+          git config --unset core.filemode
+
+      - name: Build packages
+        run: npm run build
 
       - name: Authenticate to npm registry
         run: |
@@ -194,18 +289,10 @@ jobs:
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - name: Install packages
-        run: npm ci
-
-      - name: Run tests
-        run: npm run test
-
-      - name: Build packages
-        run: npm run build
-
       - name: Version packages
         run: |
           npx changeset version --snapshot --snapshot-prerelease-template "{commit}"
+          git status
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

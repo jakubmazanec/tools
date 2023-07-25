@@ -1,0 +1,13 @@
+diff --git a/node_modules/istanbul-lib-instrument/src/read-coverage.js b/node_modules/istanbul-lib-instrument/src/read-coverage.js
+index 5b76dbb..5bf2bd7 100644
+--- a/node_modules/istanbul-lib-instrument/src/read-coverage.js
++++ b/node_modules/istanbul-lib-instrument/src/read-coverage.js
+@@ -21,7 +21,7 @@ function getAst(code) {
+             allowImportExportEverywhere: true,
+             allowReturnOutsideFunction: true,
+             allowSuperOutsideMethod: true,
+-            sourceType: 'script',
++            sourceType: 'module',
+             plugins: defaults.instrumenter.parserPlugins
+         }
+     });

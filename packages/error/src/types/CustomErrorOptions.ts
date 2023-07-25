@@ -1,5 +1,5 @@
 /**
- * Type representing options object used when instantianting class returned from {@linkcode createCustomError}.
+ * Type representing options object used when instantianting class returned from {@link createCustomError}.
  */
 export type CustomErrorOptions = {
   /** Array of values that are used as parameters to generate the error message. */

@@ -7,5 +7,5 @@
     "noEmit": true,
     "rootDir": "."
   },
-  "include": ["./src/**/*", "./tests/**/*", "./tools/**/*", "./*"]
+  "include": ["./src/**/*", "./tests/**/*", "./*"]
 }

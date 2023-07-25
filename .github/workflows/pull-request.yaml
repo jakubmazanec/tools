@@ -22,8 +22,36 @@ jobs:
       - name: Install packages
         run: npm ci
 
+      - name: Check for changes
+        run: |
+          git config core.filemode false
+          git_status=$(git status --porcelain)
+
+          if [[ -n $git_status ]]; then
+            echo "You have uncommitted changes!"
+            git status
+            git config --unset core.filemode
+            exit 1
+          fi
+
+          git config --unset core.filemode
+
       - name: Run tests
-        run: npm run test
+        run: npm test
+
+      - name: Check for changes
+        run: |
+          git config core.filemode false
+          git_status=$(git status --porcelain)
+
+          if [[ -n $git_status ]]; then
+            echo "You have uncommitted changes!"
+            git status --porcelain
+            git config --unset core.filemode
+            exit 1
+          fi
+
+          git config --unset core.filemode
 
       - name: Check for changesets
         run: npx changeset status --since=origin/development

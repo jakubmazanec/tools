@@ -8,10 +8,10 @@
   "include": ["./src/**/*"],
   "references": [
     {
-      "path": "../error"
+      "path": "../../packages/error"
     },
     {
-      "path": "../ts-utils"
+      "path": "../../packages/ts-utils"
     }
   ]
 }

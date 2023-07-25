@@ -1,0 +1,69 @@
+---
+to: 'package.json'
+strategy: merge
+---
+<%
+let developmentDependencies = getDependencies(
+  [
+    '@changesets/cli',
+    '@jakubmazanec/carson',
+    '@jakubmazanec/carson-templates',
+    '@swc/cli',
+    '@swc/core',
+    '@testing-library/jest-dom',
+    '@types/node',
+    'chokidar',
+    'cross-env',
+    'del-cli',
+    'eslint',
+    'jest',
+    'patch-package',
+    'prettier',
+    'prettier-plugin-packagejson',
+    'ts-jest',
+    'ts-node',
+    'turbo',
+    'typedoc',
+    'typedoc-plugin-markdown',
+    'typescript',
+  ],
+  workspace,
+);
+let packageJson = lodash.merge(
+  {
+    private: true,
+    scripts: {
+      build: 'turbo run build --no-daemon',
+      changeset: 'changeset',
+      clean: 'turbo run clean --no-daemon',
+      document: 'turbo run document --no-daemon',
+      format: 'turbo run format --no-daemon && prettier ./*.* --write --ignore-unknown',
+      lint: 'turbo run lint --no-daemon',
+      prepare: 'patch-package',
+      reinstall: 'npm run uninstall && npm install',
+      test: 'turbo run test --no-daemon',
+      typecheck: 'turbo run typecheck --no-daemon',
+      uninstall: 'del-cli ./**/node_modules ./package-lock.json',
+    },
+    devDependencies: developmentDependencies,
+    packageManager: 'npm@8.19.4',
+    engines: {
+      node: '>=16.20.0',
+    },
+  },
+  workspace.config.overrides?.packageJson ?? {},
+);
+
+if (workspace.projects.find((project) => project.name === '@jakubmazanec/carson')) {
+  packageJson.scripts.prepare +=
+    ' && turbo run build --no-daemon --filter=@jakubmazanec/carson --filter=@jakubmazanec/carson-templates';
+}
+
+packageJson.scripts.prepare += ' && carson update workspace';
+-%>
+<%- JSON.stringify(packageJson) %>
+
+
+
+
+

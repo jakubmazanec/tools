@@ -1,0 +1,308 @@
+---
+to: '.github/workflows/release.yaml'
+strategy: overwrite
+---
+name: Release
+
+on: [push, workflow_dispatch]
+
+jobs:
+  main_branch_release:
+    name: Main branch release
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    if: "github.ref_name == '<%- getMainBranch(workspace) %>'"
+    steps:
+      - name: Cancel previous runs
+        uses: styfle/cancel-workflow-action@0.11.0
+        with:
+          access_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/checkout@v3
+        with:
+          token: ${{secrets.PAT}}
+          fetch-depth: 0
+
+      - name: Configure git
+        run: |
+          git config user.email "bot@mazanec.dev"
+          git config user.name "Bot"
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install packages
+        run: npm ci
+
+      - name: Check for changes
+        run: |
+          git config core.filemode false
+          git_status=$(git status --porcelain)
+
+          if [[ -n $git_status ]]; then
+            echo "You have uncommitted changes!"
+            git status --porcelain
+            git config --unset core.filemode
+            exit 1
+          fi
+
+          git config --unset core.filemode
+
+      - name: Run tests
+        run: npm test
+
+      - name: Check for changes
+        run: |
+          git config core.filemode false
+          git_status=$(git status --porcelain)
+
+          if [[ -n $git_status ]]; then
+            echo "You have uncommitted changes!"
+            git status --porcelain
+            git config --unset core.filemode
+            exit 1
+          fi
+
+          git config --unset core.filemode
+
+      - name: Build packages
+        run: npm run build
+
+      - name: Authenticate to npm registry
+        run: |
+          echo "//registry.npmjs.com/:_authToken=NPM_TOKEN" > .npmrc
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Version packages
+        run: |
+          npx changeset version
+          git status
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit changes
+        run: |
+          git add -A
+          git reset .npmrc
+          git status
+          git commit -m"Release [skip actions]"
+
+      - name: Publish packages
+        run: |
+          npx changeset publish --no-git-tag
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Update lockfile
+        run: |
+          npm install
+          git add package-lock.json
+          git status
+          git commit --amend --no-edit
+
+      - name: Add git tags
+        run: |
+          npx changeset tag
+
+      - name: Push changes
+        run: |
+          git push --follow-tags
+
+      - name: Checkout main branch
+        run: |
+          git fetch -p origin
+          git checkout <%- getMainBranch(workspace) %>
+          git branch --set-upstream-to=origin/<%- getMainBranch(workspace) %> <%- getMainBranch(workspace) %>
+          git reset --hard origin/<%- getMainBranch(workspace) %>
+          git pull
+
+      - name: Checkout development branch
+        run: |
+          git checkout -B <%- getDevelopmentBranch(workspace) %>
+          git branch --set-upstream-to=origin/<%- getDevelopmentBranch(workspace) %> <%- getDevelopmentBranch(workspace) %>
+          git reset --hard origin/<%- getDevelopmentBranch(workspace) %>
+
+      - name: Merge and commit
+        run: |
+          git merge <%- getMainBranch(workspace) %> --no-verify
+          git push -u origin <%- getDevelopmentBranch(workspace) %> --no-verify
+
+  development_branch_release:
+    name: Development branch release
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    if: "github.ref_name == '<%- getDevelopmentBranch(workspace) %>'"
+    steps:
+      - name: Cancel previous runs
+        uses: styfle/cancel-workflow-action@0.11.0
+        with:
+          access_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.PAT }}
+          fetch-depth: 0
+
+      - name: Configure git
+        run: |
+          git config user.email "bot@mazanec.dev"
+          git config user.name "Bot"
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install packages
+        run: npm ci
+
+      - name: Check for changes
+        run: |
+          git config core.filemode false
+          git_status=$(git status --porcelain)
+
+          if [[ -n $git_status ]]; then
+            echo "You have uncommitted changes!"
+            git status --porcelain
+            git config --unset core.filemode
+            exit 1
+          fi
+
+          git config --unset core.filemode
+
+      - name: Run tests
+        run: npm test
+
+      - name: Check for changes
+        run: |
+          git config core.filemode false
+          git_status=$(git status --porcelain)
+
+          if [[ -n $git_status ]]; then
+            echo "You have uncommitted changes!"
+            git status --porcelain
+            git config --unset core.filemode
+            exit 1
+          fi
+
+          git config --unset core.filemode
+
+      - name: Build packages
+        run: npm run build
+
+      - name: Update documentation
+        run: |
+          npm run document --if-present
+          npm run format --if-present
+          git add **/docs/**
+          git status
+          git commit -m"Update docs [skip actions]"
+          git push --force
+        continue-on-error: true
+
+      - name: Authenticate to npm registry
+        run: |
+          echo "//registry.npmjs.com/:_authToken=NPM_TOKEN" > .npmrc
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Version packages
+        run: |
+          npx changeset version --snapshot next --snapshot-prerelease-template "{tag}.{commit}"
+          git status
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish packages
+        run: |
+          npx changeset publish --tag next --no-git-tag
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+  feature_branch_release:
+    name: Feature branch release
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    if: "github.ref_name != '<%- getMainBranch(workspace) %>' && github.ref_name != '<%- getDevelopmentBranch(workspace) %>'"
+    steps:
+      - name: Cancel previous runs
+        uses: styfle/cancel-workflow-action@0.11.0
+        with:
+          access_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Configure git
+        run: |
+          git config user.email "bot@mazanec.dev"
+          git config user.name "Bot"
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install packages
+        run: npm ci
+
+      - name: Check for changes
+        run: |
+          git config core.filemode false
+          git_status=$(git status --porcelain)
+
+          if [[ -n $git_status ]]; then
+            echo "You have uncommitted changes!"
+            git status --porcelain
+            git config --unset core.filemode
+            exit 1
+          fi
+
+          git config --unset core.filemode
+
+      - name: Run tests
+        run: npm test
+
+      - name: Check for changes
+        run: |
+          git config core.filemode false
+          git_status=$(git status --porcelain)
+
+          if [[ -n $git_status ]]; then
+            echo "You have uncommitted changes!"
+            git status --porcelain
+            git config --unset core.filemode
+            exit 1
+          fi
+
+          git config --unset core.filemode
+
+      - name: Build packages
+        run: npm run build
+
+      - name: Authenticate to npm registry
+        run: |
+          echo "//registry.npmjs.com/:_authToken=NPM_TOKEN" > .npmrc
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Version packages
+        run: |
+          npx changeset version --snapshot --snapshot-prerelease-template "{commit}"
+          git status
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish packages
+        run: |
+          npx changeset publish --tag unstable --no-git-tag
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

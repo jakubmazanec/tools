@@ -11,5 +11,7 @@ export * from './types/Parameters.js';
 export * from './types/Primitive.js';
 export * from './types/RequiredKeys.js';
 export * from './types/ReturnType.js';
+export * from './types/Simplify.js';
 export * from './types/TupleToUnion.js';
 export * from './types/UnionToIntersection.js';
+export * from './types/Writable.js';

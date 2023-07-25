@@ -54,29 +54,29 @@ export type DeepPartial<T> = T extends Date | Primitive | RegExp
   : unknown;
 
 /**
- * Helper type for {@linkcode DeepPartial}.
+ * Helper type for {@link DeepPartial}.
  */
 interface DeepPartialMap<KeyType, ValueType>
   extends Map<DeepPartial<KeyType>, DeepPartial<ValueType>> {}
 
 /**
- * Helper type for {@linkcode DeepPartial}.
+ * Helper type for {@link DeepPartial}.
  */
 interface DeepPartialSet<T> extends Set<DeepPartial<T>> {}
 
 /**
- * Helper type for {@linkcode DeepPartial}.
+ * Helper type for {@link DeepPartial}.
  */
 interface DeepPartialReadonlyMap<KeyType, ValueType>
   extends ReadonlyMap<DeepPartial<KeyType>, DeepPartial<ValueType>> {}
 
 /**
- * Helper type for {@linkcode DeepPartial}.
+ * Helper type for {@link DeepPartial}.
  */
 interface DeepPartialReadonlySet<T> extends ReadonlySet<DeepPartial<T>> {}
 
 /**
- * Helper type for {@linkcode DeepPartial}.
+ * Helper type for {@link DeepPartial}.
  */
 type DeepPartialObject<ObjectType extends object> = {
   [KeyType in keyof ObjectType]?: DeepPartial<ObjectType[KeyType]>;

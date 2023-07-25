@@ -1,0 +1,59 @@
+---
+to: 'turbo.json'
+strategy: overwrite
+---
+<%
+let turboConfig = {
+  $schema: 'https://turborepo.org/schema.json',
+  pipeline: {
+    build: {
+      dependsOn: ['^build', 'codegen'],
+      outputs: ['build/**', 'dist/**'],
+    },
+    clean: {
+      cache: false,
+    },
+    codegen: {
+      cache: false,
+    },
+    develop: {
+      dependsOn: ['codegen'],
+      cache: false,
+      persistent: true,
+    },
+    document: {
+      dependsOn: ['^build', 'codegen'],
+      outputs: ['docs/**'],
+    },
+    format: {
+      cache: false,
+    },
+    lint: {
+      dependsOn: ['^build', 'codegen'],
+      outputs: [],
+    },
+    test: {
+      dependsOn: ['^build', 'typecheck', 'lint'],
+      outputs: ['coverage/**'],
+    },
+    typecheck: {
+      dependsOn: ['^build', 'codegen'],
+      outputs: [],
+    },
+  },
+  globalDependencies: [
+    '.editorconfig',
+    '.eslintrc.cjs',
+    '.prettierignore',
+    'prettier.config.js',
+    'tsconfig.options.json',
+    'tsconfig.typecheck.json',
+  ],
+};
+
+if (workspace.projects.find((project) => project.name === '@jakubmazanec/eslint-config')) {
+  turboConfig.pipeline.lint.dependsOn = ['@jakubmazanec/eslint-config#build', '^build', 'codegen'];
+}
+-%>
+<%- JSON.stringify(turboConfig, null, 2) %>
+

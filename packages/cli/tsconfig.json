@@ -1,0 +1,23 @@
+{
+  "extends": "../../tsconfig.options.json",
+  "compilerOptions": {
+    "emitDeclarationOnly": true,
+    "outDir": "./dist",
+    "rootDir": "./src"
+  },
+  "include": ["./src/**/*"],
+  "references": [
+    {
+      "path": "../../packages/args"
+    },
+    {
+      "path": "../../packages/error"
+    },
+    {
+      "path": "../../packages/ts-utils"
+    },
+    {
+      "path": "../../packages/zod-utils"
+    }
+  ]
+}

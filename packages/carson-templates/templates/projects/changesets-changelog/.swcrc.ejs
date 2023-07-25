@@ -1,0 +1,30 @@
+---
+to: '.swcrc'
+strategy: overwrite
+---
+{
+  "jsc": {
+    "parser": {
+      "syntax": "typescript",
+      "tsx": true,
+      "dynamicImport": true
+    },
+    "transform": {
+      "react": {
+        "runtime": "automatic"
+      }
+    },
+    "target": "es2022"
+  },
+  "module": {
+    "type": "commonjs",
+    "strict": true,
+    "noInterop": true
+  },
+  "env": {
+    "targets": {
+      "node": 16
+    }
+  },
+  "sourceMaps": true
+}
