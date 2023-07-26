@@ -1,5 +1,20 @@
 # @jakubmazanec/carson-templates
 
+## 0.1.2
+
+### Patch Changes
+
+- [#22](https://github.com/jakubmazanec/js-tools/pull/22)
+  [`6c3a1f2`](https://github.com/jakubmazanec/js-tools/commit/6c3a1f2decb43f6b19b71d65f536ea59dab289a9)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Template `workspace` now generates
+  `@jakubmazanec/carson` version based on what version this template package depends on.
+
+- [#22](https://github.com/jakubmazanec/js-tools/pull/22)
+  [`6c3a1f2`](https://github.com/jakubmazanec/js-tools/commit/6c3a1f2decb43f6b19b71d65f536ea59dab289a9)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Template `workspace` no longer adds
+  `@jakubmazanec/carson` or `@jakubmazanec/carson-templates` to the workspace `package.json` if the
+  workspace already contains them as a project.
+
 ## 0.1.1
 
 ### Patch Changes

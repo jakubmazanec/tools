@@ -1,5 +1,14 @@
 # @jakubmazanec/changesets-changelog
 
+## 1.0.6
+
+### Patch Changes
+
+- [#22](https://github.com/jakubmazanec/js-tools/pull/22)
+  [`6c3a1f2`](https://github.com/jakubmazanec/js-tools/commit/6c3a1f2decb43f6b19b71d65f536ea59dab289a9)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes `changeset version` not working
+  locally.
+
 ## 1.0.5
 
 ### Patch Changes
