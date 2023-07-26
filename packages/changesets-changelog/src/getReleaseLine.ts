@@ -45,14 +45,18 @@ export async function getReleaseLine(
     let commitToFetchFrom = commitFromSummary ?? changeset.commit;
 
     if (commitToFetchFrom) {
-      let {links} = await getInfo({
-        repo: String(options.repository),
-        commit: commitToFetchFrom,
-      });
+      try {
+        let {links} = await getInfo({
+          repo: String(options.repository),
+          commit: commitToFetchFrom,
+        });
 
-      commitLink = links.commit;
-      pullRequestLink = links.pull ?? undefined;
-      usersLink = links.user ?? undefined;
+        commitLink = links.commit;
+        pullRequestLink = links.pull ?? undefined;
+        usersLink = links.user ?? undefined;
+      } catch {
+        commitLink = undefined;
+      }
     }
   } else {
     let {links} = await getInfoFromPullRequest({
