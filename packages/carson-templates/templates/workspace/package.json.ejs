@@ -2,33 +2,33 @@
 to: 'package.json'
 strategy: merge
 ---
-<%
-let developmentDependencies = getDependencies(
-  [
-    '@changesets/cli',
-    '@jakubmazanec/carson',
-    '@jakubmazanec/carson-templates',
-    '@swc/cli',
-    '@swc/core',
-    '@testing-library/jest-dom',
-    '@types/node',
-    'chokidar',
-    'cross-env',
-    'del-cli',
-    'eslint',
-    'jest',
-    'patch-package',
-    'prettier',
-    'prettier-plugin-packagejson',
-    'ts-jest',
-    'ts-node',
-    'turbo',
-    'typedoc',
-    'typedoc-plugin-markdown',
-    'typescript',
-  ],
-  workspace,
-);
+<%let dependencies = [
+  '@changesets/cli',
+  '@jakubmazanec/carson',
+  '@jakubmazanec/carson-templates',
+  '@swc/cli',
+  '@swc/core',
+  '@testing-library/jest-dom',
+  '@types/node',
+  'chokidar',
+  'cross-env',
+  'del-cli',
+  'eslint',
+  'jest',
+  'patch-package',
+  'prettier',
+  'prettier-plugin-packagejson',
+  'ts-jest',
+  'ts-node',
+  'turbo',
+  'typedoc',
+  'typedoc-plugin-markdown',
+  'typescript',
+].filter((dependency) => {
+  return !workspace.projects.find((project) => project.name === dependency);
+});
+
+let developmentDependencies = getDependencies(dependencies, workspace);
 let packageJson = lodash.merge(
   {
     private: true,
