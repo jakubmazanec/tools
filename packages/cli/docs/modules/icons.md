@@ -22,7 +22,7 @@
 
 #### Defined in
 
-[cli/src/ui/icons.ts:9](https://github.com/jakubmazanec/js-tools/blob/dbf0e41/packages/cli/src/ui/icons.ts#L9)
+[cli/src/ui/icons.ts:9](https://github.com/jakubmazanec/js-tools/blob/6c3a1f2/packages/cli/src/ui/icons.ts#L9)
 
 ---
 
@@ -32,7 +32,7 @@
 
 #### Defined in
 
-[cli/src/ui/icons.ts:6](https://github.com/jakubmazanec/js-tools/blob/dbf0e41/packages/cli/src/ui/icons.ts#L6)
+[cli/src/ui/icons.ts:6](https://github.com/jakubmazanec/js-tools/blob/6c3a1f2/packages/cli/src/ui/icons.ts#L6)
 
 ---
 
@@ -42,7 +42,7 @@
 
 #### Defined in
 
-[cli/src/ui/icons.ts:5](https://github.com/jakubmazanec/js-tools/blob/dbf0e41/packages/cli/src/ui/icons.ts#L5)
+[cli/src/ui/icons.ts:5](https://github.com/jakubmazanec/js-tools/blob/6c3a1f2/packages/cli/src/ui/icons.ts#L5)
 
 ---
 
@@ -52,7 +52,7 @@
 
 #### Defined in
 
-[cli/src/ui/icons.ts:13](https://github.com/jakubmazanec/js-tools/blob/dbf0e41/packages/cli/src/ui/icons.ts#L13)
+[cli/src/ui/icons.ts:13](https://github.com/jakubmazanec/js-tools/blob/6c3a1f2/packages/cli/src/ui/icons.ts#L13)
 
 ---
 
@@ -62,7 +62,7 @@
 
 #### Defined in
 
-[cli/src/ui/icons.ts:11](https://github.com/jakubmazanec/js-tools/blob/dbf0e41/packages/cli/src/ui/icons.ts#L11)
+[cli/src/ui/icons.ts:11](https://github.com/jakubmazanec/js-tools/blob/6c3a1f2/packages/cli/src/ui/icons.ts#L11)
 
 ---
 
@@ -72,7 +72,7 @@
 
 #### Defined in
 
-[cli/src/ui/icons.ts:7](https://github.com/jakubmazanec/js-tools/blob/dbf0e41/packages/cli/src/ui/icons.ts#L7)
+[cli/src/ui/icons.ts:7](https://github.com/jakubmazanec/js-tools/blob/6c3a1f2/packages/cli/src/ui/icons.ts#L7)
 
 ---
 
@@ -82,7 +82,7 @@
 
 #### Defined in
 
-[cli/src/ui/icons.ts:12](https://github.com/jakubmazanec/js-tools/blob/dbf0e41/packages/cli/src/ui/icons.ts#L12)
+[cli/src/ui/icons.ts:12](https://github.com/jakubmazanec/js-tools/blob/6c3a1f2/packages/cli/src/ui/icons.ts#L12)
 
 ---
 
@@ -92,7 +92,7 @@
 
 #### Defined in
 
-[cli/src/ui/icons.ts:10](https://github.com/jakubmazanec/js-tools/blob/dbf0e41/packages/cli/src/ui/icons.ts#L10)
+[cli/src/ui/icons.ts:10](https://github.com/jakubmazanec/js-tools/blob/6c3a1f2/packages/cli/src/ui/icons.ts#L10)
 
 ---
 
@@ -102,4 +102,4 @@
 
 #### Defined in
 
-[cli/src/ui/icons.ts:8](https://github.com/jakubmazanec/js-tools/blob/dbf0e41/packages/cli/src/ui/icons.ts#L8)
+[cli/src/ui/icons.ts:8](https://github.com/jakubmazanec/js-tools/blob/6c3a1f2/packages/cli/src/ui/icons.ts#L8)
