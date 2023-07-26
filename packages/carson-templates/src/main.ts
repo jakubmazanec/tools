@@ -6,24 +6,39 @@ import semver from 'semver';
 export {default as lodash} from 'lodash';
 export {default as semver} from 'semver';
 
+const CARSON_PACKAGE_NAME = '@jakubmazanec/carson';
 const TEMPLATE_PACKAGE_NAME = '@jakubmazanec/carson-templates';
 const MAIN_BRANCH_NAMES = new Set(['main', 'master']);
 const DEVELOPMENT_BRANCH_NAMES = new Set(['development', 'develop', 'dev']);
 
 let require = createRequire(import.meta.url);
-let templatesPackageVersion =
-  (
-    JSON.parse(
-      fs.readFileSync(require.resolve(`${TEMPLATE_PACKAGE_NAME}/package.json`), {
-        encoding: 'utf8',
-      }),
-    ) as {version?: string}
-  ).version ?? '1.0.0';
+let carsonPackageVersion =
+  semver
+    .minVersion(
+      (
+        JSON.parse(
+          fs.readFileSync(require.resolve(`${TEMPLATE_PACKAGE_NAME}/package.json`), {
+            encoding: 'utf8',
+          }),
+        ) as {peerDependencies: Record<string, string>}
+      ).peerDependencies[CARSON_PACKAGE_NAME] ?? '^1.0.0',
+    )
+    ?.format() ?? '1.0.0';
+let isCarsonPackageVersionPrerelease = !!semver.prerelease(carsonPackageVersion)?.length;
+let templatesPackageVersion = (
+  JSON.parse(
+    fs.readFileSync(require.resolve(`${TEMPLATE_PACKAGE_NAME}/package.json`), {
+      encoding: 'utf8',
+    }),
+  ) as {version: string}
+).version;
 let isTemplatesPackageVersionPrerelease = !!semver.prerelease(templatesPackageVersion)?.length;
 
 const DEPENDENCY_VERSIONS: Record<string, string> = {
   '@changesets/cli': '^2.0.0',
-  '@jakubmazanec/carson': '^0.1.0',
+  [CARSON_PACKAGE_NAME]: isCarsonPackageVersionPrerelease
+    ? carsonPackageVersion
+    : `^${carsonPackageVersion}`,
   [TEMPLATE_PACKAGE_NAME]: isTemplatesPackageVersionPrerelease
     ? templatesPackageVersion
     : `^${templatesPackageVersion}`,

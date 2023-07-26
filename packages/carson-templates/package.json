@@ -30,13 +30,16 @@
     "typecheck": "tsc --project tsconfig.typecheck.json"
   },
   "dependencies": {
-    "@jakubmazanec/carson": "^0.1.0",
     "lodash": "^4.17.21",
     "semver": "^7.3.6"
   },
   "devDependencies": {
+    "@jakubmazanec/carson": "^0.1.0",
     "@jest/globals": "^29.5.0",
     "@types/lodash": "^4.14.195"
+  },
+  "peerDependencies": {
+    "@jakubmazanec/carson": "^0.1.0"
   },
   "packageManager": "npm@8.19.4",
   "engines": {
