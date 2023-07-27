@@ -175,11 +175,6 @@ export class Workspace<M extends boolean = true> {
       });
     }
 
-    await saveWorkspaceConfig({
-      workspacePath: workspace.path,
-      workspaceConfig: {template: templateId},
-    });
-
     let templateRenders = await renderCarsonTemplate({
       templateId,
       templateData: {
@@ -192,6 +187,11 @@ export class Workspace<M extends boolean = true> {
       templateRenders,
       path: workspace.path,
       ignoreStrategies: ['check'],
+    });
+
+    await saveWorkspaceConfig({
+      workspacePath: workspace.path,
+      workspaceConfig: {template: templateId},
     });
 
     return Workspace.read(workspace.path);
