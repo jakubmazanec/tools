@@ -41,10 +41,10 @@ export function createCustomErrorWithData<ErrorCode extends string, ErrorData>(
   errorName: string,
   errorMessages: ErrorMessages<ErrorCode>,
   errorData: ErrorData,
-): new (code: ErrorCode, options?: CustomErrorWithDataOptions<ErrorData>) => CustomErrorWithData<
-  ErrorCode | typeof UNKNOWN_ERROR,
-  ErrorData
-> {
+): new (
+  code: ErrorCode,
+  options?: CustomErrorWithDataOptions<ErrorData>,
+) => CustomErrorWithData<ErrorCode | typeof UNKNOWN_ERROR, ErrorData> {
   return class InternalCustomError
     extends Error
     implements CustomErrorWithData<ErrorCode, ErrorData>

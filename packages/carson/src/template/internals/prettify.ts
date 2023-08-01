@@ -9,7 +9,7 @@ export async function prettify(content: string, targetPath: string) {
   try {
     let prettierOptions = await prettier.resolveConfig(targetPath, {editorconfig: true});
 
-    prettifiedContent = prettier.format(content, {
+    prettifiedContent = await prettier.format(content, {
       ...prettierOptions,
       filepath: targetPath,
       plugins: [packageJsonPrettierPlugin],

@@ -34,7 +34,7 @@ export async function applyTemplateRenders({
   ignoreStrategies,
 }: ApplyTemplateRendersOptions) {
   // we need to clear Prettier cache, because we are changing file system
-  prettier.clearConfigCache();
+  await prettier.clearConfigCache();
 
   // first, we read the existing snapshots and use them to undo previous changes
   let templateRenderSnapshotsPath = path.join(
