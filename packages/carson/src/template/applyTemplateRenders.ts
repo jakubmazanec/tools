@@ -139,5 +139,7 @@ export async function applyTemplateRenders({
     }
   }
 
+  await fs.ensureDir(path.join(targetPath, CARSON_CONFIG_DIRECTORY));
+
   await saveTemplateRenderSnapshots(templateRenders, templateRenderSnapshotsPath);
 }
