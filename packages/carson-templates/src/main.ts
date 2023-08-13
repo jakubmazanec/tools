@@ -53,7 +53,7 @@ const DEPENDENCY_VERSIONS: Record<string, string> = {
   eslint: '^8.0.0',
   jest: '^29.0.0',
   'patch-package': '^6.0.0',
-  prettier: '^2.0.0',
+  prettier: '^3.0.0',
   'prettier-plugin-packagejson': '^2.0.0',
   'ts-jest': '^29.0.0',
   'ts-node': '^10.0.0',

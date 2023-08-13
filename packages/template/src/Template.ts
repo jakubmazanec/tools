@@ -251,7 +251,7 @@ export class Template<
 
       if (!options?.disablePrettier) {
         try {
-          content = prettier.format(content, {
+          content = await prettier.format(content, {
             ...options?.prettierOptions,
             filepath: renderedAttributes.to,
           });

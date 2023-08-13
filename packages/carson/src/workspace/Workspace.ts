@@ -8,6 +8,7 @@ import {z} from 'zod';
 
 import {
   compareProjectPath,
+  containsProject,
   getPackageJsonWorkspaces,
   getRepositoryBranches,
   getRepositoryUrl,
@@ -174,11 +175,6 @@ export class Workspace<M extends boolean = true> {
       });
     }
 
-    await saveWorkspaceConfig({
-      workspacePath: workspace.path,
-      workspaceConfig: {template: templateId},
-    });
-
     let templateRenders = await renderCarsonTemplate({
       templateId,
       templateData: {
@@ -191,6 +187,11 @@ export class Workspace<M extends boolean = true> {
       templateRenders,
       path: workspace.path,
       ignoreStrategies: ['check'],
+    });
+
+    await saveWorkspaceConfig({
+      workspacePath: workspace.path,
+      workspaceConfig: {template: templateId},
     });
 
     return Workspace.read(workspace.path);
@@ -598,9 +599,13 @@ export class Workspace<M extends boolean = true> {
       });
 
       for (let packagePath of packagePaths) {
-        let project = await Project.read(path.join(this.path, packagePath), this);
+        let projectPath = path.join(this.path, packagePath);
 
-        projects.push(project);
+        if (await containsProject(projectPath)) {
+          let project = await Project.read(projectPath, this);
+
+          projects.push(project);
+        }
       }
 
       this.projects = projects;

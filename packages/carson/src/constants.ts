@@ -11,3 +11,4 @@ export const WORKSPACE_CONFIG_FILENAME = 'workspace.json';
 export const SNAPSHOTS_FILENAME = '.snapshots';
 export const TEMPLATES_PATH = 'templates';
 export const TEMPLATE_CONFIG_FILENAME = 'config.json';
+export const PACKAGE_JSON_FILENAME = 'package.json';

@@ -13,9 +13,10 @@ import {type CustomError, type CustomErrorOptions, type ErrorMessages} from './t
 export function createCustomError<ErrorCode extends string>(
   errorName: string,
   errorMessages: ErrorMessages<ErrorCode>,
-): new (code: ErrorCode, options?: CustomErrorOptions) => CustomError<
-  ErrorCode | typeof UNKNOWN_ERROR
-> {
+): new (
+  code: ErrorCode,
+  options?: CustomErrorOptions,
+) => CustomError<ErrorCode | typeof UNKNOWN_ERROR> {
   return class InternalCustomError extends Error implements CustomError<ErrorCode> {
     code: ErrorCode | typeof UNKNOWN_ERROR;
 

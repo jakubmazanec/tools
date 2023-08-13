@@ -110,8 +110,6 @@ export class Project<M extends boolean = true> {
       });
     }
 
-    await saveProjectConfig({projectPath: project.path, projectConfig: {template: templateId}});
-
     let templateRenders = await renderCarsonTemplate({
       templateId,
       templateData: {
@@ -126,6 +124,8 @@ export class Project<M extends boolean = true> {
       path: project.path,
       ignoreStrategies: ['check'],
     });
+
+    await saveProjectConfig({projectPath: project.path, projectConfig: {template: templateId}});
 
     await project.read();
 
