@@ -1,5 +1,13 @@
 # @jakubmazanec/error
 
+## 2.0.3
+
+### Patch Changes
+
+- [#23](https://github.com/jakubmazanec/js-tools/pull/23)
+  [`e71beb3`](https://github.com/jakubmazanec/js-tools/commit/e71beb333f6dddcdedbe3b284c8aeaed0d1d0f66)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes incorrect SWC config.
+
 ## 2.0.2
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
   "name": "@jakubmazanec/fs-utils",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Collection of utilities for working with file system.",
   "repository": {
     "type": "git",

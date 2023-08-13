@@ -1,6 +1,6 @@
 {
   "name": "@jakubmazanec/template",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "TypeScript-first library for working with templates using EJS and Zod.",
   "repository": {
     "type": "git",

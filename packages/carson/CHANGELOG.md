@@ -1,5 +1,29 @@
 # @jakubmazanec/carson
 
+## 0.1.1
+
+### Patch Changes
+
+- [#23](https://github.com/jakubmazanec/js-tools/pull/23)
+  [`e71beb3`](https://github.com/jakubmazanec/js-tools/commit/e71beb333f6dddcdedbe3b284c8aeaed0d1d0f66)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – When creating a new workspace or a project,
+  the Carson config is now saved only after a successful template render, so a possible rendering
+  failure doesn't create a malformed workspace or project directory.
+
+- [#23](https://github.com/jakubmazanec/js-tools/pull/23)
+  [`e71beb3`](https://github.com/jakubmazanec/js-tools/commit/e71beb333f6dddcdedbe3b284c8aeaed0d1d0f66)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes incorrect SWC config.
+
+- [#23](https://github.com/jakubmazanec/js-tools/pull/23)
+  [`e71beb3`](https://github.com/jakubmazanec/js-tools/commit/e71beb333f6dddcdedbe3b284c8aeaed0d1d0f66)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Updates Prettier.
+
+- [#23](https://github.com/jakubmazanec/js-tools/pull/23)
+  [`e71beb3`](https://github.com/jakubmazanec/js-tools/commit/e71beb333f6dddcdedbe3b284c8aeaed0d1d0f66)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes how projects are identified in a
+  workspace; now the project directory must contain at least either a `package.json` file or a
+  `.carson` directory.
+
 ## 0.1.0
 
 ### Minor Changes
