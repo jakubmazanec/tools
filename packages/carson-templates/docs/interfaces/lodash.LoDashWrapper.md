@@ -20,13 +20,13 @@
 
 ▸ **toString**(): `string`
 
-**`See`**
-
-\_.toString
-
 #### Returns
 
 `string`
+
+**`See`**
+
+\_.toString
 
 #### Defined in
 

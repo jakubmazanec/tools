@@ -37,7 +37,7 @@
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:272
+node_modules/@types/semver/classes/comparator.d.ts:5
 
 ## Properties
 
@@ -47,7 +47,7 @@ node_modules/@types/semver/index.d.ts:272
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:277
+node_modules/@types/semver/classes/comparator.d.ts:10
 
 ---
 
@@ -57,7 +57,7 @@ node_modules/@types/semver/index.d.ts:277
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:275
+node_modules/@types/semver/classes/comparator.d.ts:8
 
 ---
 
@@ -67,7 +67,7 @@ node_modules/@types/semver/index.d.ts:275
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:278
+node_modules/@types/semver/classes/comparator.d.ts:11
 
 ---
 
@@ -77,7 +77,7 @@ node_modules/@types/semver/index.d.ts:278
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:274
+node_modules/@types/semver/classes/comparator.d.ts:7
 
 ---
 
@@ -87,7 +87,7 @@ node_modules/@types/semver/index.d.ts:274
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:276
+node_modules/@types/semver/classes/comparator.d.ts:9
 
 ## Methods
 
@@ -108,7 +108,7 @@ node_modules/@types/semver/index.d.ts:276
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:281
+node_modules/@types/semver/classes/comparator.d.ts:14
 
 ---
 
@@ -128,7 +128,7 @@ node_modules/@types/semver/index.d.ts:281
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:279
+node_modules/@types/semver/classes/comparator.d.ts:12
 
 ---
 
@@ -148,4 +148,4 @@ node_modules/@types/semver/index.d.ts:279
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:280
+node_modules/@types/semver/classes/comparator.d.ts:13

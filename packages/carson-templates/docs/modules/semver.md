@@ -2,6 +2,10 @@
 
 ## Table of contents
 
+### Namespaces
+
+- [inc](semver.inc.md)
+
 ### Classes
 
 - [Comparator](../classes/semver.Comparator.md)
@@ -12,6 +16,7 @@
 
 - [CoerceOptions](../interfaces/semver.CoerceOptions.md)
 - [Options](../interfaces/semver.Options.md)
+- [RangeOptions](../interfaces/semver.RangeOptions.md)
 
 ### Type Aliases
 
@@ -30,6 +35,7 @@
 - [compare](semver.md#compare)
 - [compareBuild](semver.md#comparebuild)
 - [compareIdentifiers](semver.md#compareidentifiers)
+- [compareLoose](semver.md#compareloose)
 - [diff](semver.md#diff)
 - [eq](semver.md#eq)
 - [gt](semver.md#gt)
@@ -54,7 +60,10 @@
 - [rcompareIdentifiers](semver.md#rcompareidentifiers)
 - [rsort](semver.md#rsort)
 - [satisfies](semver.md#satisfies)
+- [simplifyRange](semver.md#simplifyrange)
 - [sort](semver.md#sort)
+- [subset](semver.md#subset)
+- [toComparators](semver.md#tocomparators)
 - [valid](semver.md#valid)
 - [validRange](semver.md#validrange)
 
@@ -67,7 +76,7 @@
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:112
+node_modules/@types/semver/index.d.ts:136
 
 ---
 
@@ -78,7 +87,7 @@ node_modules/@types/semver/index.d.ts:112
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:12
+node_modules/@types/semver/index.d.ts:112
 
 ## Variables
 
@@ -88,7 +97,7 @@ node_modules/@types/semver/index.d.ts:12
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:10
+node_modules/@types/semver/index.d.ts:110
 
 ## Functions
 
@@ -112,7 +121,7 @@ null if version is invalid.
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:52
+node_modules/@types/semver/functions/clean.d.ts:6
 
 ---
 
@@ -139,7 +148,7 @@ comparison string is provided.
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:111
+node_modules/@types/semver/functions/cmp.d.ts:9
 
 ---
 
@@ -162,7 +171,7 @@ Coerces a string to SemVer if possible
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:47
+node_modules/@types/semver/functions/coerce.d.ts:7
 
 ---
 
@@ -193,29 +202,26 @@ Sorts in ascending order when passed to `Array.sort()`.
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:124
+node_modules/@types/semver/functions/compare.d.ts:14
 
 ---
 
 ### compareBuild
 
-▸ **compareBuild**(`a`, `b`): `1` \| `0` \| `-1`
+▸ **compareBuild**(`a`, `b`, `optionsOrLoose?`): `1` \| `0` \| `-1`
 
 Compares two versions including build identifiers (the bit after `+` in the semantic version
 string).
 
 Sorts in ascending order when passed to `Array.sort()`.
 
-**`Since`**
-
-6.1.0
-
 #### Parameters
 
-| Name | Type                                                |
-| :--- | :-------------------------------------------------- |
-| `a`  | `string` \| [`SemVer`](../classes/semver.SemVer.md) |
-| `b`  | `string` \| [`SemVer`](../classes/semver.SemVer.md) |
+| Name              | Type                                                      |
+| :---------------- | :-------------------------------------------------------- |
+| `a`               | `string` \| [`SemVer`](../classes/semver.SemVer.md)       |
+| `b`               | `string` \| [`SemVer`](../classes/semver.SemVer.md)       |
+| `optionsOrLoose?` | `boolean` \| [`Options`](../interfaces/semver.Options.md) |
 
 #### Returns
 
@@ -225,9 +231,13 @@ Sorts in ascending order when passed to `Array.sort()`.
 - `1` if `v1` is greater
 - `-1` if `v2` is greater.
 
+**`Since`**
+
+6.1.0
+
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:157
+node_modules/@types/semver/functions/compare-build.d.ts:16
 
 ---
 
@@ -252,24 +262,44 @@ Sorts in ascending order when passed to `Array.sort()`.
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:137
+node_modules/@types/semver/internals/identifiers.d.ts:6
+
+---
+
+### compareLoose
+
+▸ **compareLoose**(`v1`, `v2`): `1` \| `0` \| `-1`
+
+#### Parameters
+
+| Name | Type                                                |
+| :--- | :-------------------------------------------------- |
+| `v1` | `string` \| [`SemVer`](../classes/semver.SemVer.md) |
+| `v2` | `string` \| [`SemVer`](../classes/semver.SemVer.md) |
+
+#### Returns
+
+`1` \| `0` \| `-1`
+
+#### Defined in
+
+node_modules/@types/semver/functions/compare-loose.d.ts:3
 
 ---
 
 ### diff
 
-▸ **diff**(`v1`, `v2`, `optionsOrLoose?`): [`ReleaseType`](semver.md#releasetype) \| `null`
+▸ **diff**(`v1`, `v2`): [`ReleaseType`](semver.md#releasetype) \| `null`
 
 Returns difference between two versions by the release type (major, premajor, minor, preminor,
 patch, prepatch, or prerelease), or null if the versions are the same.
 
 #### Parameters
 
-| Name              | Type                                                      |
-| :---------------- | :-------------------------------------------------------- |
-| `v1`              | `string` \| [`SemVer`](../classes/semver.SemVer.md)       |
-| `v2`              | `string` \| [`SemVer`](../classes/semver.SemVer.md)       |
-| `optionsOrLoose?` | `boolean` \| [`Options`](../interfaces/semver.Options.md) |
+| Name | Type                                                |
+| :--- | :-------------------------------------------------- |
+| `v1` | `string` \| [`SemVer`](../classes/semver.SemVer.md) |
+| `v2` | `string` \| [`SemVer`](../classes/semver.SemVer.md) |
 
 #### Returns
 
@@ -277,7 +307,7 @@ patch, prepatch, or prerelease), or null if the versions are the same.
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:171
+node_modules/@types/semver/functions/diff.d.ts:7
 
 ---
 
@@ -302,7 +332,7 @@ You already know how to compare strings.
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:100
+node_modules/@types/semver/functions/eq.d.ts:7
 
 ---
 
@@ -326,7 +356,7 @@ v1 > v2
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:84
+node_modules/@types/semver/functions/gt.d.ts:7
 
 ---
 
@@ -350,7 +380,7 @@ v1 >= v2
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:88
+node_modules/@types/semver/functions/gte.d.ts:7
 
 ---
 
@@ -362,11 +392,11 @@ Return true if version is greater than all the versions possible in the range.
 
 #### Parameters
 
-| Name              | Type                                                      |
-| :---------------- | :-------------------------------------------------------- |
-| `version`         | `string` \| [`SemVer`](../classes/semver.SemVer.md)       |
-| `range`           | `string` \| [`Range`](../classes/semver.Range.md)         |
-| `optionsOrLoose?` | `boolean` \| [`Options`](../interfaces/semver.Options.md) |
+| Name              | Type                                                                |
+| :---------------- | :------------------------------------------------------------------ |
+| `version`         | `string` \| [`SemVer`](../classes/semver.SemVer.md)                 |
+| `range`           | `string` \| [`Range`](../classes/semver.Range.md)                   |
+| `optionsOrLoose?` | `boolean` \| [`RangeOptions`](../interfaces/semver.RangeOptions.md) |
 
 #### Returns
 
@@ -374,7 +404,7 @@ Return true if version is greater than all the versions possible in the range.
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:197
+node_modules/@types/semver/ranges/gtr.d.ts:8
 
 ---
 
@@ -400,17 +430,18 @@ it's not valid.
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:57
+node_modules/@types/semver/functions/inc.d.ts:12
 
-▸ **inc**(`version`, `release`, `identifier?`): `string` \| `null`
+▸ **inc**(`version`, `release`, `identifier?`, `identifierBase?`): `string` \| `null`
 
 #### Parameters
 
-| Name          | Type                                                |
-| :------------ | :-------------------------------------------------- |
-| `version`     | `string` \| [`SemVer`](../classes/semver.SemVer.md) |
-| `release`     | [`ReleaseType`](semver.md#releasetype)              |
-| `identifier?` | `string`                                            |
+| Name              | Type                                                        |
+| :---------------- | :---------------------------------------------------------- |
+| `version`         | `string` \| [`SemVer`](../classes/semver.SemVer.md)         |
+| `release`         | [`ReleaseType`](semver.md#releasetype)                      |
+| `identifier?`     | `string`                                                    |
+| `identifierBase?` | `false` \| [`IdentifierBase`](semver.inc.md#identifierbase) |
 
 #### Returns
 
@@ -418,7 +449,7 @@ node_modules/@types/semver/index.d.ts:57
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:58
+node_modules/@types/semver/functions/inc.d.ts:18
 
 ---
 
@@ -430,11 +461,11 @@ Return true if any of the ranges comparators intersect
 
 #### Parameters
 
-| Name              | Type                                                      |
-| :---------------- | :-------------------------------------------------------- |
-| `range1`          | `string` \| [`Range`](../classes/semver.Range.md)         |
-| `range2`          | `string` \| [`Range`](../classes/semver.Range.md)         |
-| `optionsOrLoose?` | `boolean` \| [`Options`](../interfaces/semver.Options.md) |
+| Name              | Type                                                                |
+| :---------------- | :------------------------------------------------------------------ |
+| `range1`          | `string` \| [`Range`](../classes/semver.Range.md)                   |
+| `range2`          | `string` \| [`Range`](../classes/semver.Range.md)                   |
+| `optionsOrLoose?` | `boolean` \| [`RangeOptions`](../interfaces/semver.RangeOptions.md) |
 
 #### Returns
 
@@ -442,7 +473,7 @@ Return true if any of the ranges comparators intersect
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:210
+node_modules/@types/semver/ranges/intersects.d.ts:7
 
 ---
 
@@ -466,7 +497,7 @@ v1 < v2
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:92
+node_modules/@types/semver/functions/lt.d.ts:7
 
 ---
 
@@ -490,7 +521,7 @@ v1 <= v2
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:96
+node_modules/@types/semver/functions/lte.d.ts:7
 
 ---
 
@@ -502,11 +533,11 @@ Return true if version is less than all the versions possible in the range.
 
 #### Parameters
 
-| Name              | Type                                                      |
-| :---------------- | :-------------------------------------------------------- |
-| `version`         | `string` \| [`SemVer`](../classes/semver.SemVer.md)       |
-| `range`           | `string` \| [`Range`](../classes/semver.Range.md)         |
-| `optionsOrLoose?` | `boolean` \| [`Options`](../interfaces/semver.Options.md) |
+| Name              | Type                                                                |
+| :---------------- | :------------------------------------------------------------------ |
+| `version`         | `string` \| [`SemVer`](../classes/semver.SemVer.md)                 |
+| `range`           | `string` \| [`Range`](../classes/semver.Range.md)                   |
+| `optionsOrLoose?` | `boolean` \| [`RangeOptions`](../interfaces/semver.RangeOptions.md) |
 
 #### Returns
 
@@ -514,7 +545,7 @@ Return true if version is less than all the versions possible in the range.
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:201
+node_modules/@types/semver/ranges/ltr.d.ts:8
 
 ---
 
@@ -537,7 +568,7 @@ Return the major version number.
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:63
+node_modules/@types/semver/functions/major.d.ts:7
 
 ---
 
@@ -555,11 +586,11 @@ Return the highest version in the list that satisfies the range, or null if none
 
 #### Parameters
 
-| Name              | Type                                                      |
-| :---------------- | :-------------------------------------------------------- |
-| `versions`        | readonly `T`[]                                            |
-| `range`           | `string` \| [`Range`](../classes/semver.Range.md)         |
-| `optionsOrLoose?` | `boolean` \| [`Options`](../interfaces/semver.Options.md) |
+| Name              | Type                                                                |
+| :---------------- | :------------------------------------------------------------------ |
+| `versions`        | readonly `T`[]                                                      |
+| `range`           | `string` \| [`Range`](../classes/semver.Range.md)                   |
+| `optionsOrLoose?` | `boolean` \| [`RangeOptions`](../interfaces/semver.RangeOptions.md) |
 
 #### Returns
 
@@ -567,7 +598,7 @@ Return the highest version in the list that satisfies the range, or null if none
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:185
+node_modules/@types/semver/ranges/max-satisfying.d.ts:8
 
 ---
 
@@ -585,11 +616,11 @@ Return the lowest version in the list that satisfies the range, or null if none 
 
 #### Parameters
 
-| Name              | Type                                                      |
-| :---------------- | :-------------------------------------------------------- |
-| `versions`        | readonly `T`[]                                            |
-| `range`           | `string` \| [`Range`](../classes/semver.Range.md)         |
-| `optionsOrLoose?` | `boolean` \| [`Options`](../interfaces/semver.Options.md) |
+| Name              | Type                                                                |
+| :---------------- | :------------------------------------------------------------------ |
+| `versions`        | readonly `T`[]                                                      |
+| `range`           | `string` \| [`Range`](../classes/semver.Range.md)                   |
+| `optionsOrLoose?` | `boolean` \| [`RangeOptions`](../interfaces/semver.RangeOptions.md) |
 
 #### Returns
 
@@ -597,7 +628,7 @@ Return the lowest version in the list that satisfies the range, or null if none 
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:189
+node_modules/@types/semver/ranges/min-satisfying.d.ts:8
 
 ---
 
@@ -620,7 +651,7 @@ Return the lowest version that can possibly match the given range.
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:193
+node_modules/@types/semver/ranges/min-version.d.ts:8
 
 ---
 
@@ -643,7 +674,7 @@ Return the minor version number.
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:68
+node_modules/@types/semver/functions/minor.d.ts:7
 
 ---
 
@@ -667,7 +698,7 @@ v1 != v2 The opposite of eq.
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:104
+node_modules/@types/semver/functions/neq.d.ts:7
 
 ---
 
@@ -681,12 +712,12 @@ ltr.)
 
 #### Parameters
 
-| Name              | Type                                                      |
-| :---------------- | :-------------------------------------------------------- |
-| `version`         | `string` \| [`SemVer`](../classes/semver.SemVer.md)       |
-| `range`           | `string` \| [`Range`](../classes/semver.Range.md)         |
-| `hilo`            | `">"` \| `"<"`                                            |
-| `optionsOrLoose?` | `boolean` \| [`Options`](../interfaces/semver.Options.md) |
+| Name              | Type                                                                |
+| :---------------- | :------------------------------------------------------------------ |
+| `version`         | `string` \| [`SemVer`](../classes/semver.SemVer.md)                 |
+| `range`           | `string` \| [`Range`](../classes/semver.Range.md)                   |
+| `hilo`            | `">"` \| `"<"`                                                      |
+| `optionsOrLoose?` | `boolean` \| [`RangeOptions`](../interfaces/semver.RangeOptions.md) |
 
 #### Returns
 
@@ -694,7 +725,7 @@ ltr.)
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:206
+node_modules/@types/semver/ranges/outside.d.ts:9
 
 ---
 
@@ -717,7 +748,7 @@ Return the parsed version as a SemVer object, or null if it's not valid.
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:37
+node_modules/@types/semver/functions/parse.d.ts:7
 
 ---
 
@@ -740,13 +771,13 @@ Return the patch version number.
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:73
+node_modules/@types/semver/functions/patch.d.ts:7
 
 ---
 
 ### prerelease
 
-▸ **prerelease**(`version`, `optionsOrLoose?`): `ReadonlyArray`<`string`\> \| `null`
+▸ **prerelease**(`version`, `optionsOrLoose?`): `ReadonlyArray`<`string` \| `number`\> \| `null`
 
 Returns an array of prerelease components, or null if none exist.
 
@@ -759,11 +790,11 @@ Returns an array of prerelease components, or null if none exist.
 
 #### Returns
 
-`ReadonlyArray`<`string`\> \| `null`
+`ReadonlyArray`<`string` \| `number`\> \| `null`
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:78
+node_modules/@types/semver/functions/prerelease.d.ts:7
 
 ---
 
@@ -789,7 +820,7 @@ Sorts in descending order when passed to `Array.sort()`.
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:130
+node_modules/@types/semver/functions/rcompare.d.ts:9
 
 ---
 
@@ -814,7 +845,7 @@ Sorts in descending order when passed to `Array.sort()`.
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:143
+node_modules/@types/semver/internals/identifiers.d.ts:13
 
 ---
 
@@ -843,7 +874,7 @@ Sorts an array of semver entries in descending order using `compareBuild()`.
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:166
+node_modules/@types/semver/functions/rsort.d.ts:7
 
 ---
 
@@ -855,11 +886,11 @@ Return true if the version satisfies the range.
 
 #### Parameters
 
-| Name              | Type                                                      |
-| :---------------- | :-------------------------------------------------------- |
-| `version`         | `string` \| [`SemVer`](../classes/semver.SemVer.md)       |
-| `range`           | `string` \| [`Range`](../classes/semver.Range.md)         |
-| `optionsOrLoose?` | `boolean` \| [`Options`](../interfaces/semver.Options.md) |
+| Name              | Type                                                                |
+| :---------------- | :------------------------------------------------------------------ |
+| `version`         | `string` \| [`SemVer`](../classes/semver.SemVer.md)                 |
+| `range`           | `string` \| [`Range`](../classes/semver.Range.md)                   |
+| `optionsOrLoose?` | `boolean` \| [`RangeOptions`](../interfaces/semver.RangeOptions.md) |
 
 #### Returns
 
@@ -867,7 +898,36 @@ Return true if the version satisfies the range.
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:181
+node_modules/@types/semver/functions/satisfies.d.ts:8
+
+---
+
+### simplifyRange
+
+▸ **simplifyRange**(`ranges`, `range`, `options?`): `string` \|
+[`Range`](../classes/semver.Range.md)
+
+Return a "simplified" range that matches the same items in `versions` list as the range specified.
+Note that it does _not_ guarantee that it would match the same versions in all cases, only for the
+set of versions provided. This is useful when generating ranges by joining together multiple
+versions with `||` programmatically, to provide the user with something a bit more ergonomic. If the
+provided range is shorter in string-length than the generated range, then that is returned.
+
+#### Parameters
+
+| Name       | Type                                              |
+| :--------- | :------------------------------------------------ |
+| `ranges`   | `string`[]                                        |
+| `range`    | `string` \| [`Range`](../classes/semver.Range.md) |
+| `options?` | [`Options`](../interfaces/semver.Options.md)      |
+
+#### Returns
+
+`string` \| [`Range`](../classes/semver.Range.md)
+
+#### Defined in
+
+node_modules/@types/semver/ranges/simplify.d.ts:12
 
 ---
 
@@ -896,7 +956,54 @@ Sorts an array of semver entries in ascending order using `compareBuild()`.
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:162
+node_modules/@types/semver/functions/sort.d.ts:7
+
+---
+
+### subset
+
+▸ **subset**(`sub`, `dom`, `options?`): `boolean`
+
+Return true if the subRange range is entirely contained by the superRange range.
+
+#### Parameters
+
+| Name       | Type                                                   |
+| :--------- | :----------------------------------------------------- |
+| `sub`      | `string` \| [`Range`](../classes/semver.Range.md)      |
+| `dom`      | `string` \| [`Range`](../classes/semver.Range.md)      |
+| `options?` | [`RangeOptions`](../interfaces/semver.RangeOptions.md) |
+
+#### Returns
+
+`boolean`
+
+#### Defined in
+
+node_modules/@types/semver/ranges/subset.d.ts:7
+
+---
+
+### toComparators
+
+▸ **toComparators**(`range`, `optionsOrLoose?`): `string`[][]
+
+Mostly just for testing and legacy API reasons
+
+#### Parameters
+
+| Name              | Type                                                      |
+| :---------------- | :-------------------------------------------------------- |
+| `range`           | `string` \| [`Range`](../classes/semver.Range.md)         |
+| `optionsOrLoose?` | `boolean` \| [`Options`](../interfaces/semver.Options.md) |
+
+#### Returns
+
+`string`[][]
+
+#### Defined in
+
+node_modules/@types/semver/ranges/to-comparators.d.ts:7
 
 ---
 
@@ -919,13 +1026,13 @@ Return the parsed version as a string, or null if it's not valid.
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:42
+node_modules/@types/semver/functions/valid.d.ts:6
 
 ---
 
 ### validRange
 
-▸ **validRange**(`range`, `optionsOrLoose?`): `string`
+▸ **validRange**(`range`, `optionsOrLoose?`): `string` \| `null`
 
 Return the valid range or null if it's not valid
 
@@ -934,12 +1041,12 @@ Return the valid range or null if it's not valid
 | Name              | Type                                                                       |
 | :---------------- | :------------------------------------------------------------------------- |
 | `range`           | `undefined` \| `null` \| `string` \| [`Range`](../classes/semver.Range.md) |
-| `optionsOrLoose?` | `boolean` \| [`Options`](../interfaces/semver.Options.md)                  |
+| `optionsOrLoose?` | `boolean` \| [`RangeOptions`](../interfaces/semver.RangeOptions.md)        |
 
 #### Returns
 
-`string`
+`string` \| `null`
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:177
+node_modules/@types/semver/ranges/valid.d.ts:7

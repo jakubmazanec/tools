@@ -36,7 +36,7 @@ Type representing template attributes.
 
 #### Defined in
 
-[packages/template/src/TemplateAttributes.ts:19](https://github.com/jakubmazanec/js-tools/blob/6c3a1f2/packages/template/src/TemplateAttributes.ts#L19)
+[packages/template/src/TemplateAttributes.ts:19](https://github.com/jakubmazanec/js-tools/blob/e71beb3/packages/template/src/TemplateAttributes.ts#L19)
 
 ---
 
@@ -49,7 +49,7 @@ Type of `variables`` property of [TemplateAttributes](README.md#templateattribut
 
 #### Defined in
 
-[packages/template/src/TemplateVariables.ts:14](https://github.com/jakubmazanec/js-tools/blob/6c3a1f2/packages/template/src/TemplateVariables.ts#L14)
+[packages/template/src/TemplateVariables.ts:14](https://github.com/jakubmazanec/js-tools/blob/e71beb3/packages/template/src/TemplateVariables.ts#L14)
 
 ---
 
@@ -61,7 +61,7 @@ Type representing a template content.
 
 #### Defined in
 
-[packages/template/src/TemplateContent.ts:4](https://github.com/jakubmazanec/js-tools/blob/6c3a1f2/packages/template/src/TemplateContent.ts#L4)
+[packages/template/src/TemplateContent.ts:4](https://github.com/jakubmazanec/js-tools/blob/e71beb3/packages/template/src/TemplateContent.ts#L4)
 
 ---
 
@@ -87,7 +87,7 @@ Type representing a template function that takes data and returns rendered strin
 
 #### Defined in
 
-[packages/template/src/TemplateFunction.ts:4](https://github.com/jakubmazanec/js-tools/blob/6c3a1f2/packages/template/src/TemplateFunction.ts#L4)
+[packages/template/src/TemplateFunction.ts:4](https://github.com/jakubmazanec/js-tools/blob/e71beb3/packages/template/src/TemplateFunction.ts#L4)
 
 ---
 
@@ -114,7 +114,7 @@ Type representing a template function that takes data and returns rendered strin
 
 #### Defined in
 
-[packages/template/src/Template.ts:16](https://github.com/jakubmazanec/js-tools/blob/6c3a1f2/packages/template/src/Template.ts#L16)
+[packages/template/src/Template.ts:16](https://github.com/jakubmazanec/js-tools/blob/e71beb3/packages/template/src/Template.ts#L16)
 
 ---
 
@@ -140,7 +140,7 @@ Type representing a template function that takes data and returns rendered strin
 
 #### Defined in
 
-[packages/template/src/Template.ts:49](https://github.com/jakubmazanec/js-tools/blob/6c3a1f2/packages/template/src/Template.ts#L49)
+[packages/template/src/Template.ts:49](https://github.com/jakubmazanec/js-tools/blob/e71beb3/packages/template/src/Template.ts#L49)
 
 ---
 
@@ -164,7 +164,7 @@ Type representing a template function that takes data and returns rendered strin
 
 #### Defined in
 
-[packages/template/src/Template.ts:38](https://github.com/jakubmazanec/js-tools/blob/6c3a1f2/packages/template/src/Template.ts#L38)
+[packages/template/src/Template.ts:38](https://github.com/jakubmazanec/js-tools/blob/e71beb3/packages/template/src/Template.ts#L38)
 
 ---
 
@@ -191,7 +191,7 @@ An object type representing the result of a template render.
 
 #### Defined in
 
-[packages/template/src/TemplateRender.ts:11](https://github.com/jakubmazanec/js-tools/blob/6c3a1f2/packages/template/src/TemplateRender.ts#L11)
+[packages/template/src/TemplateRender.ts:11](https://github.com/jakubmazanec/js-tools/blob/e71beb3/packages/template/src/TemplateRender.ts#L11)
 
 ---
 
@@ -208,7 +208,7 @@ An object type representing the result of a template render.
 
 #### Defined in
 
-[packages/template/src/Template.ts:66](https://github.com/jakubmazanec/js-tools/blob/6c3a1f2/packages/template/src/Template.ts#L66)
+[packages/template/src/Template.ts:66](https://github.com/jakubmazanec/js-tools/blob/e71beb3/packages/template/src/Template.ts#L66)
 
 ---
 
@@ -225,7 +225,7 @@ An object type representing the result of a template render.
 
 #### Defined in
 
-[packages/template/src/TemplateRenders.ts:5](https://github.com/jakubmazanec/js-tools/blob/6c3a1f2/packages/template/src/TemplateRenders.ts#L5)
+[packages/template/src/TemplateRenders.ts:5](https://github.com/jakubmazanec/js-tools/blob/e71beb3/packages/template/src/TemplateRenders.ts#L5)
 
 ## Variables
 
@@ -251,7 +251,7 @@ A subclass of `Error` that indicates a template failure.
 
 #### Defined in
 
-[packages/template/src/TemplateError.ts:9](https://github.com/jakubmazanec/js-tools/blob/6c3a1f2/packages/template/src/TemplateError.ts#L9)
+[packages/template/src/TemplateError.ts:9](https://github.com/jakubmazanec/js-tools/blob/e71beb3/packages/template/src/TemplateError.ts#L9)
 
 ---
 
@@ -268,7 +268,7 @@ Zod schema for [TemplateAttributes](README.md#templateattributes).
 
 #### Defined in
 
-[packages/template/src/TemplateAttributes.ts:8](https://github.com/jakubmazanec/js-tools/blob/6c3a1f2/packages/template/src/TemplateAttributes.ts#L8)
+[packages/template/src/TemplateAttributes.ts:8](https://github.com/jakubmazanec/js-tools/blob/e71beb3/packages/template/src/TemplateAttributes.ts#L8)
 
 ---
 
@@ -281,4 +281,4 @@ Zod schema for [TemplateAttributesVariables](README.md#templateattributesvariabl
 
 #### Defined in
 
-[packages/template/src/TemplateVariables.ts:6](https://github.com/jakubmazanec/js-tools/blob/6c3a1f2/packages/template/src/TemplateVariables.ts#L6)
+[packages/template/src/TemplateVariables.ts:6](https://github.com/jakubmazanec/js-tools/blob/e71beb3/packages/template/src/TemplateVariables.ts#L6)

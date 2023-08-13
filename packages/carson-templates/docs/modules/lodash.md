@@ -1208,10 +1208,6 @@ node_modules/@types/lodash/common/common.d.ts:7
 
 ▸ (`prev`, `curr`, `indexOrKey`, `list`): `TResult`
 
-**`Deprecated`**
-
-Use MemoListIterator or MemoObjectIterator instead.
-
 ##### Parameters
 
 | Name         | Type      |
@@ -1224,6 +1220,10 @@ Use MemoListIterator or MemoObjectIterator instead.
 ##### Returns
 
 `TResult`
+
+**`Deprecated`**
+
+Use MemoListIterator or MemoObjectIterator instead.
 
 #### Defined in
 
@@ -1454,10 +1454,6 @@ node_modules/@types/lodash/common/common.d.ts:234
 
 ▸ (`prev`, `curr`, `indexOrKey`, `list`): `void`
 
-**`Deprecated`**
-
-Use MemoVoidArrayIterator or MemoVoidDictionaryIterator instead.
-
 ##### Parameters
 
 | Name         | Type      |
@@ -1470,6 +1466,10 @@ Use MemoVoidArrayIterator or MemoVoidDictionaryIterator instead.
 ##### Returns
 
 `void`
+
+**`Deprecated`**
+
+Use MemoVoidArrayIterator or MemoVoidDictionaryIterator instead.
 
 #### Defined in
 

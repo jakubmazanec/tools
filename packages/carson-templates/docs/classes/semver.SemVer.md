@@ -38,14 +38,14 @@
 
 #### Parameters
 
-| Name              | Type                                                      |
-| :---------------- | :-------------------------------------------------------- |
-| `version`         | `string` \| [`SemVer`](semver.SemVer.md)                  |
-| `optionsOrLoose?` | `boolean` \| [`Options`](../interfaces/semver.Options.md) |
+| Name              | Type                                                                |
+| :---------------- | :------------------------------------------------------------------ |
+| `version`         | `string` \| [`SemVer`](semver.SemVer.md)                            |
+| `optionsOrLoose?` | `boolean` \| [`RangeOptions`](../interfaces/semver.RangeOptions.md) |
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:213
+node_modules/@types/semver/classes/semver.d.ts:4
 
 ## Properties
 
@@ -55,7 +55,7 @@ node_modules/@types/semver/index.d.ts:213
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:225
+node_modules/@types/semver/classes/semver.d.ts:16
 
 ---
 
@@ -65,7 +65,7 @@ node_modules/@types/semver/index.d.ts:225
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:216
+node_modules/@types/semver/classes/semver.d.ts:7
 
 ---
 
@@ -75,7 +75,7 @@ node_modules/@types/semver/index.d.ts:216
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:221
+node_modules/@types/semver/classes/semver.d.ts:12
 
 ---
 
@@ -85,7 +85,7 @@ node_modules/@types/semver/index.d.ts:221
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:222
+node_modules/@types/semver/classes/semver.d.ts:13
 
 ---
 
@@ -95,7 +95,7 @@ node_modules/@types/semver/index.d.ts:222
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:217
+node_modules/@types/semver/classes/semver.d.ts:8
 
 ---
 
@@ -105,7 +105,7 @@ node_modules/@types/semver/index.d.ts:217
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:223
+node_modules/@types/semver/classes/semver.d.ts:14
 
 ---
 
@@ -115,7 +115,7 @@ node_modules/@types/semver/index.d.ts:223
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:226
+node_modules/@types/semver/classes/semver.d.ts:17
 
 ---
 
@@ -125,7 +125,7 @@ node_modules/@types/semver/index.d.ts:226
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:215
+node_modules/@types/semver/classes/semver.d.ts:6
 
 ---
 
@@ -135,7 +135,7 @@ node_modules/@types/semver/index.d.ts:215
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:224
+node_modules/@types/semver/classes/semver.d.ts:15
 
 ## Methods
 
@@ -162,7 +162,7 @@ string).
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:236
+node_modules/@types/semver/classes/semver.d.ts:27
 
 ---
 
@@ -188,7 +188,7 @@ Compares the build identifier of two versions.
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:266
+node_modules/@types/semver/classes/semver.d.ts:57
 
 ---
 
@@ -214,7 +214,7 @@ Compares the release portion of two versions.
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:246
+node_modules/@types/semver/classes/semver.d.ts:37
 
 ---
 
@@ -240,7 +240,7 @@ Compares the prerelease portion of two versions.
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:256
+node_modules/@types/semver/classes/semver.d.ts:47
 
 ---
 
@@ -254,7 +254,7 @@ node_modules/@types/semver/index.d.ts:256
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:218
+node_modules/@types/semver/classes/semver.d.ts:9
 
 ---
 
@@ -275,7 +275,7 @@ node_modules/@types/semver/index.d.ts:218
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:268
+node_modules/@types/semver/classes/semver.d.ts:59
 
 ---
 
@@ -289,4 +289,4 @@ node_modules/@types/semver/index.d.ts:268
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:219
+node_modules/@types/semver/classes/semver.d.ts:10

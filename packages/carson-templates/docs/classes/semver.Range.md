@@ -33,14 +33,14 @@
 
 #### Parameters
 
-| Name              | Type                                                      |
-| :---------------- | :-------------------------------------------------------- |
-| `range`           | `string` \| [`Range`](semver.Range.md)                    |
-| `optionsOrLoose?` | `boolean` \| [`Options`](../interfaces/semver.Options.md) |
+| Name              | Type                                                                |
+| :---------------- | :------------------------------------------------------------------ |
+| `range`           | `string` \| [`Range`](semver.Range.md)                              |
+| `optionsOrLoose?` | `boolean` \| [`RangeOptions`](../interfaces/semver.RangeOptions.md) |
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:285
+node_modules/@types/semver/classes/range.d.ts:6
 
 ## Properties
 
@@ -50,7 +50,7 @@ node_modules/@types/semver/index.d.ts:285
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:291
+node_modules/@types/semver/classes/range.d.ts:12
 
 ---
 
@@ -60,7 +60,7 @@ node_modules/@types/semver/index.d.ts:291
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:289
+node_modules/@types/semver/classes/range.d.ts:10
 
 ---
 
@@ -70,7 +70,7 @@ node_modules/@types/semver/index.d.ts:289
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:290
+node_modules/@types/semver/classes/range.d.ts:11
 
 ---
 
@@ -80,7 +80,7 @@ node_modules/@types/semver/index.d.ts:290
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:287
+node_modules/@types/semver/classes/range.d.ts:8
 
 ---
 
@@ -90,7 +90,7 @@ node_modules/@types/semver/index.d.ts:287
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:288
+node_modules/@types/semver/classes/range.d.ts:9
 
 ---
 
@@ -100,7 +100,7 @@ node_modules/@types/semver/index.d.ts:288
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:295
+node_modules/@types/semver/classes/range.d.ts:16
 
 ## Methods
 
@@ -114,7 +114,7 @@ node_modules/@types/semver/index.d.ts:295
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:292
+node_modules/@types/semver/classes/range.d.ts:13
 
 ---
 
@@ -128,7 +128,7 @@ node_modules/@types/semver/index.d.ts:292
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:293
+node_modules/@types/semver/classes/range.d.ts:14
 
 ---
 
@@ -149,7 +149,7 @@ node_modules/@types/semver/index.d.ts:293
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:298
+node_modules/@types/semver/classes/range.d.ts:19
 
 ---
 
@@ -169,7 +169,7 @@ readonly [`Comparator`](semver.Comparator.md)[]
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:296
+node_modules/@types/semver/classes/range.d.ts:17
 
 ---
 
@@ -189,4 +189,4 @@ node_modules/@types/semver/index.d.ts:296
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:297
+node_modules/@types/semver/classes/range.d.ts:18
