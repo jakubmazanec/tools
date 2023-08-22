@@ -1,5 +1,5 @@
 import {ensureEmptyDirectory, findExistingDirectory, isRootPath} from '@jakubmazanec/fs-utils';
-import {readFile, packageJsonSchema, type PackageJson} from '@jakubmazanec/zod-utils';
+import {readFile, jsonSchema, packageJsonSchema, type PackageJson} from '@jakubmazanec/zod-utils';
 import glob from 'fast-glob';
 import fs from 'fs-extra';
 import json5 from 'json5';
@@ -224,6 +224,22 @@ export class Workspace<M extends boolean = true> {
 
     if (rootPackageJson instanceof z.ZodError) {
       rootPackageJson = {};
+
+      // even if the package.json file has errors, maybe there's still a correct workspace field
+      try {
+        let rootJson = await readFile(rootPackageJsonPath, jsonSchema, {
+          parser: (rawString: string) => json5.parse<unknown>(rawString),
+          throwOnZodError: true,
+        });
+        let projectGlobs = getPackageJsonWorkspaces(rootJson);
+
+        // add back to the empty package.json object
+        if (projectGlobs) {
+          rootPackageJson.workspaces = projectGlobs;
+        }
+      } catch {
+        // no-op
+      }
     }
 
     // add projects
@@ -272,7 +288,7 @@ export class Workspace<M extends boolean = true> {
       let doesPackageJsonExist = await fs.pathExists(packageJsonPath);
 
       if (doesPackageJsonExist) {
-        let packageJson = await readFile(packageJsonPath, packageJsonSchema, {
+        let packageJson = await readFile(packageJsonPath, jsonSchema, {
           parser: (rawString: string) => json5.parse<unknown>(rawString),
         });
 
