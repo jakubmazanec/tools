@@ -14,6 +14,8 @@ export function useProgram() {
 
   let exit = useCallback(
     (error: unknown) => {
+      process.exitCode = 1;
+
       showBoundary(error);
       appExit(error as Error);
     },

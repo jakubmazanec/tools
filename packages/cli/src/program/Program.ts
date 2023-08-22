@@ -132,6 +132,8 @@ export class Program {
           let {createElement} = await import('react');
 
           for (let error of parsedArgs.errors) {
+            process.exitCode = 1;
+
             await this.renderElement(
               createElement(this.ErrorBoundaryFallbackComponent, {
                 error,
@@ -146,6 +148,8 @@ export class Program {
             let {createElement} = await import('react');
 
             if (error instanceof Error) {
+              process.exitCode = 1;
+
               await this.renderElement(
                 createElement(this.ErrorBoundaryFallbackComponent, {
                   error,
