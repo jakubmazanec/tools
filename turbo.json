@@ -12,7 +12,7 @@
       "cache": false
     },
     "develop": {
-      "dependsOn": ["codegen"],
+      "dependsOn": ["^build", "codegen"],
       "cache": false,
       "persistent": true
     },
