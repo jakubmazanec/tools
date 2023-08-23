@@ -10,6 +10,16 @@ export const updateWorkspaceCommand = new Command(
     let resolvedPath = path.resolve(process.cwd(), args.options.path ?? '');
     let workspace = await Workspace.findAndRead(resolvedPath, {throwIfNotFound: true});
 
+    if (workspace.errors[0]) {
+      throw workspace.errors[0];
+    }
+
+    for (let project of workspace.projects) {
+      if (project.errors[0]) {
+        throw project.errors[0];
+      }
+    }
+
     await program.renderElement(<UpdateWorkspace workspace={workspace} args={args} />);
   },
   {
