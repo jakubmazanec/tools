@@ -295,7 +295,7 @@ jobs:
 
       - name: Version packages
         run: |
-          npx changeset version --snapshot --snapshot-prerelease-template "{commit}"
+          npx changeset version --snapshot unstable --snapshot-prerelease-template "{tag}.{commit}"
           git status
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

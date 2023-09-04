@@ -2,6 +2,19 @@
 to: '.github/workflows/merge-to-main.yaml'
 strategy: overwrite
 ---
+<%
+function urlToShortGithubUrl(value) {
+  return value?.replaceAll(/(git@github\.com:)|(https:\/\/github\.com\/)|(\.git)/gi, '') ?? '';
+}
+
+function getOwnerFromUrl(url) {
+  return urlToShortGithubUrl(url).split('/')[0] ?? '';
+}
+
+function getRepoFromUrl(url) {
+  return urlToShortGithubUrl(url).split('/')[1] ?? '';
+}
+-%>
 name: Merge development branch to main branch
 
 on: [workflow_dispatch]
@@ -51,3 +64,13 @@ jobs:
         run: |
           git merge <%- getDevelopmentBranch(workspace) %> --no-verify
           git push -u origin <%- getMainBranch(workspace) %> --no-verify
+
+      - name: Trigger release
+        run: |
+          curl -L \
+            -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            https://api.github.com/repos/<%- getOwnerFromUrl(workspace.repository?.url) %>/<%- getRepoFromUrl(workspace.repository?.url) %>/actions/workflows/release.yaml/dispatches \
+            -d '{"ref": "<%- getMainBranch(workspace) %>"}'
