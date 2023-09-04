@@ -36,7 +36,7 @@ The new directory name.
 
 #### Defined in
 
-[createTempDirectory.ts:11](https://github.com/jakubmazanec/js-tools/blob/d5b3e0f/packages/fs-utils/src/createTempDirectory.ts#L11)
+[createTempDirectory.ts:11](https://github.com/jakubmazanec/js-tools/blob/07ff4d8/packages/fs-utils/src/createTempDirectory.ts#L11)
 
 ---
 
@@ -59,7 +59,7 @@ created; if the path exists but isn't an ampty directory, error is thrown.
 
 #### Defined in
 
-[ensureEmptyDirectory.ts:10](https://github.com/jakubmazanec/js-tools/blob/d5b3e0f/packages/fs-utils/src/ensureEmptyDirectory.ts#L10)
+[ensureEmptyDirectory.ts:10](https://github.com/jakubmazanec/js-tools/blob/07ff4d8/packages/fs-utils/src/ensureEmptyDirectory.ts#L10)
 
 ---
 
@@ -83,7 +83,7 @@ The list of directory names.
 
 #### Defined in
 
-[findDirectories.ts:9](https://github.com/jakubmazanec/js-tools/blob/d5b3e0f/packages/fs-utils/src/findDirectories.ts#L9)
+[findDirectories.ts:9](https://github.com/jakubmazanec/js-tools/blob/07ff4d8/packages/fs-utils/src/findDirectories.ts#L9)
 
 ---
 
@@ -110,7 +110,7 @@ let result = findExistingDirectory('/foo/bar/baz'); // if there is no `bar` dire
 
 #### Defined in
 
-[findExistingDirectory.ts:15](https://github.com/jakubmazanec/js-tools/blob/d5b3e0f/packages/fs-utils/src/findExistingDirectory.ts#L15)
+[findExistingDirectory.ts:15](https://github.com/jakubmazanec/js-tools/blob/07ff4d8/packages/fs-utils/src/findExistingDirectory.ts#L15)
 
 ---
 
@@ -134,7 +134,7 @@ Checks if a path is a directory.
 
 #### Defined in
 
-[isDirectory.ts:9](https://github.com/jakubmazanec/js-tools/blob/d5b3e0f/packages/fs-utils/src/isDirectory.ts#L9)
+[isDirectory.ts:9](https://github.com/jakubmazanec/js-tools/blob/07ff4d8/packages/fs-utils/src/isDirectory.ts#L9)
 
 ---
 
@@ -158,7 +158,7 @@ Checks if a path is an empty directory.
 
 #### Defined in
 
-[isEmptyDirectory.ts:9](https://github.com/jakubmazanec/js-tools/blob/d5b3e0f/packages/fs-utils/src/isEmptyDirectory.ts#L9)
+[isEmptyDirectory.ts:9](https://github.com/jakubmazanec/js-tools/blob/07ff4d8/packages/fs-utils/src/isEmptyDirectory.ts#L9)
 
 ---
 
@@ -182,7 +182,7 @@ Checks if a path is a file system root path.
 
 #### Defined in
 
-[isRootPath.ts:9](https://github.com/jakubmazanec/js-tools/blob/d5b3e0f/packages/fs-utils/src/isRootPath.ts#L9)
+[isRootPath.ts:9](https://github.com/jakubmazanec/js-tools/blob/07ff4d8/packages/fs-utils/src/isRootPath.ts#L9)
 
 ---
 
@@ -206,4 +206,4 @@ The converted path.
 
 #### Defined in
 
-[pathToPosixPath.ts:9](https://github.com/jakubmazanec/js-tools/blob/d5b3e0f/packages/fs-utils/src/pathToPosixPath.ts#L9)
+[pathToPosixPath.ts:9](https://github.com/jakubmazanec/js-tools/blob/07ff4d8/packages/fs-utils/src/pathToPosixPath.ts#L9)
