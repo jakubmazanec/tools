@@ -1,5 +1,20 @@
 # @jakubmazanec/carson-templates
 
+## 0.2.0
+
+### Minor Changes
+
+- [#25](https://github.com/jakubmazanec/js-tools/pull/25)
+  [`07ff4d8`](https://github.com/jakubmazanec/js-tools/commit/07ff4d8977ad0416322558031e701e226b902301)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Adds smoke tests: each Carson template is
+  used for creating a new workspace with new projects, which are then built.
+
+### Patch Changes
+
+- [`d5b3e0f`](https://github.com/jakubmazanec/js-tools/commit/d5b3e0fd94ee4d87e5c06a633b5db123b9d80866)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes definition of `develop` task in
+  Turborepo config; the task now has dependency `^build`.
+
 ## 0.1.3
 
 ### Patch Changes

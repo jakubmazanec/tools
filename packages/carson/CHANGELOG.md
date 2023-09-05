@@ -1,5 +1,19 @@
 # @jakubmazanec/carson
 
+## 0.1.2
+
+### Patch Changes
+
+- [#24](https://github.com/jakubmazanec/js-tools/pull/24)
+  [`7ec84e7`](https://github.com/jakubmazanec/js-tools/commit/7ec84e74d812cbd0e0323a9aef70a5b664329610)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes subtle bugs occurring when Carson is
+  searching for or is reading multi-project workspaces.
+
+- [#24](https://github.com/jakubmazanec/js-tools/pull/24)
+  [`7ec84e7`](https://github.com/jakubmazanec/js-tools/commit/7ec84e74d812cbd0e0323a9aef70a5b664329610)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Errors occurring during reading of a
+  workspace or a project are now displayed to the user and halt Carson.
+
 ## 0.1.1
 
 ### Patch Changes

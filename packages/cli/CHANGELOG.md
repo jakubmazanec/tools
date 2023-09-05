@@ -1,5 +1,14 @@
 # @jakubmazanec/cli
 
+## 0.1.3
+
+### Patch Changes
+
+- [#24](https://github.com/jakubmazanec/js-tools/pull/24)
+  [`7ec84e7`](https://github.com/jakubmazanec/js-tools/commit/7ec84e74d812cbd0e0323a9aef70a5b664329610)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes issues with `Program` not exiting with
+  exit code 1 after an error.
+
 ## 0.1.2
 
 ### Patch Changes
