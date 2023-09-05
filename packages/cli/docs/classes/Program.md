@@ -40,7 +40,7 @@ line arguments.
 
 #### Defined in
 
-[cli/src/program/Program.ts:45](https://github.com/jakubmazanec/js-tools/blob/07ff4d8/packages/cli/src/program/Program.ts#L45)
+[cli/src/program/Program.ts:45](https://github.com/jakubmazanec/js-tools/blob/dbb3d42/packages/cli/src/program/Program.ts#L45)
 
 ## Properties
 
@@ -52,7 +52,7 @@ Custom error boundary fallback component
 
 #### Defined in
 
-[cli/src/program/Program.ts:43](https://github.com/jakubmazanec/js-tools/blob/07ff4d8/packages/cli/src/program/Program.ts#L43)
+[cli/src/program/Program.ts:43](https://github.com/jakubmazanec/js-tools/blob/dbb3d42/packages/cli/src/program/Program.ts#L43)
 
 ---
 
@@ -64,7 +64,7 @@ Program executable name.
 
 #### Defined in
 
-[cli/src/program/Program.ts:27](https://github.com/jakubmazanec/js-tools/blob/07ff4d8/packages/cli/src/program/Program.ts#L27)
+[cli/src/program/Program.ts:27](https://github.com/jakubmazanec/js-tools/blob/dbb3d42/packages/cli/src/program/Program.ts#L27)
 
 ---
 
@@ -77,7 +77,7 @@ Program commands
 
 #### Defined in
 
-[cli/src/program/Program.ts:30](https://github.com/jakubmazanec/js-tools/blob/07ff4d8/packages/cli/src/program/Program.ts#L30)
+[cli/src/program/Program.ts:30](https://github.com/jakubmazanec/js-tools/blob/dbb3d42/packages/cli/src/program/Program.ts#L30)
 
 ---
 
@@ -89,7 +89,7 @@ Program description.
 
 #### Defined in
 
-[cli/src/program/Program.ts:24](https://github.com/jakubmazanec/js-tools/blob/07ff4d8/packages/cli/src/program/Program.ts#L24)
+[cli/src/program/Program.ts:24](https://github.com/jakubmazanec/js-tools/blob/dbb3d42/packages/cli/src/program/Program.ts#L24)
 
 ---
 
@@ -99,7 +99,7 @@ Program description.
 
 #### Defined in
 
-[cli/src/program/Program.ts:34](https://github.com/jakubmazanec/js-tools/blob/07ff4d8/packages/cli/src/program/Program.ts#L34)
+[cli/src/program/Program.ts:34](https://github.com/jakubmazanec/js-tools/blob/dbb3d42/packages/cli/src/program/Program.ts#L34)
 
 ---
 
@@ -111,7 +111,7 @@ Program name.
 
 #### Defined in
 
-[cli/src/program/Program.ts:18](https://github.com/jakubmazanec/js-tools/blob/07ff4d8/packages/cli/src/program/Program.ts#L18)
+[cli/src/program/Program.ts:18](https://github.com/jakubmazanec/js-tools/blob/dbb3d42/packages/cli/src/program/Program.ts#L18)
 
 ---
 
@@ -121,7 +121,7 @@ Program name.
 
 #### Defined in
 
-[cli/src/program/Program.ts:36](https://github.com/jakubmazanec/js-tools/blob/07ff4d8/packages/cli/src/program/Program.ts#L36)
+[cli/src/program/Program.ts:36](https://github.com/jakubmazanec/js-tools/blob/dbb3d42/packages/cli/src/program/Program.ts#L36)
 
 ---
 
@@ -133,7 +133,7 @@ Program version.
 
 #### Defined in
 
-[cli/src/program/Program.ts:21](https://github.com/jakubmazanec/js-tools/blob/07ff4d8/packages/cli/src/program/Program.ts#L21)
+[cli/src/program/Program.ts:21](https://github.com/jakubmazanec/js-tools/blob/dbb3d42/packages/cli/src/program/Program.ts#L21)
 
 ## Methods
 
@@ -157,7 +157,7 @@ Program instance.
 
 #### Defined in
 
-[cli/src/program/Program.ts:75](https://github.com/jakubmazanec/js-tools/blob/07ff4d8/packages/cli/src/program/Program.ts#L75)
+[cli/src/program/Program.ts:75](https://github.com/jakubmazanec/js-tools/blob/dbb3d42/packages/cli/src/program/Program.ts#L75)
 
 ---
 
@@ -179,7 +179,7 @@ Renders a React element using Ink and outputs to the configured streams.
 
 #### Defined in
 
-[cli/src/program/Program.ts:87](https://github.com/jakubmazanec/js-tools/blob/07ff4d8/packages/cli/src/program/Program.ts#L87)
+[cli/src/program/Program.ts:87](https://github.com/jakubmazanec/js-tools/blob/dbb3d42/packages/cli/src/program/Program.ts#L87)
 
 ---
 
@@ -201,4 +201,4 @@ Runs the program.
 
 #### Defined in
 
-[cli/src/program/Program.ts:122](https://github.com/jakubmazanec/js-tools/blob/07ff4d8/packages/cli/src/program/Program.ts#L122)
+[cli/src/program/Program.ts:122](https://github.com/jakubmazanec/js-tools/blob/dbb3d42/packages/cli/src/program/Program.ts#L122)
