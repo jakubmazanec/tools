@@ -4,6 +4,7 @@ export * from './program/CommandArguments.js';
 export * from './program/CommandOptions.js';
 export * from './program/getProgramDetail.js';
 export * from './program/Program.js';
+export * from './program/ProgramCreateOptions.js';
 export * from './program/ProgramDetail.js';
 export * from './program/ProgramError.js';
 export * from './program/ProgramOptions.js';
