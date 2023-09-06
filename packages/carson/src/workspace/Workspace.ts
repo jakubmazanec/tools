@@ -165,7 +165,7 @@ export class Workspace<M extends boolean = true> {
     });
 
     try {
-      await ensureEmptyDirectory(workspace.path);
+      await ensureEmptyDirectory(workspace.path, {allowGit: true});
     } catch {
       throw new WorkspaceError('WORKSPACE_PATH_NOT_EMPTY', {
         messageParameters: [workspace.path],
