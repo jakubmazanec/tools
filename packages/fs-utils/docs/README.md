@@ -2,6 +2,10 @@
 
 ## Table of contents
 
+### Type Aliases
+
+- [EnsureEmptyDirectoryOptions](README.md#ensureemptydirectoryoptions)
+
 ### Functions
 
 - [createTempDirectory](README.md#createtempdirectory)
@@ -12,6 +16,24 @@
 - [isEmptyDirectory](README.md#isemptydirectory)
 - [isRootPath](README.md#isrootpath)
 - [pathToPosixPath](README.md#pathtoposixpath)
+
+## Type Aliases
+
+### EnsureEmptyDirectoryOptions
+
+Ƭ **EnsureEmptyDirectoryOptions**: `Object`
+
+[ensureEmptyDirectory](README.md#ensureemptydirectory) options parameter.
+
+#### Type declaration
+
+| Name        | Type      | Description                           |
+| :---------- | :-------- | :------------------------------------ |
+| `allowGit?` | `boolean` | Allows presence of a `.git` directory |
+
+#### Defined in
+
+[ensureEmptyDirectory.ts:9](https://github.com/jakubmazanec/js-tools/blob/26e3dc9/packages/fs-utils/src/ensureEmptyDirectory.ts#L9)
 
 ## Functions
 
@@ -36,22 +58,23 @@ The new directory name.
 
 #### Defined in
 
-[createTempDirectory.ts:11](https://github.com/jakubmazanec/js-tools/blob/dbb3d42/packages/fs-utils/src/createTempDirectory.ts#L11)
+[createTempDirectory.ts:11](https://github.com/jakubmazanec/js-tools/blob/26e3dc9/packages/fs-utils/src/createTempDirectory.ts#L11)
 
 ---
 
 ### ensureEmptyDirectory
 
-▸ **ensureEmptyDirectory**(`targetPath`): `Promise`<`void`\>
+▸ **ensureEmptyDirectory**(`targetPath`, `«destructured»?`): `Promise`<`void`\>
 
 Ensures that a path is actually an empty directory. If the path doesn't exist, the directory is
 created; if the path exists but isn't an ampty directory, error is thrown.
 
 #### Parameters
 
-| Name         | Type     |
-| :----------- | :------- |
-| `targetPath` | `string` |
+| Name             | Type                                                                   |
+| :--------------- | :--------------------------------------------------------------------- |
+| `targetPath`     | `string`                                                               |
+| `«destructured»` | [`EnsureEmptyDirectoryOptions`](README.md#ensureemptydirectoryoptions) |
 
 #### Returns
 
@@ -59,7 +82,7 @@ created; if the path exists but isn't an ampty directory, error is thrown.
 
 #### Defined in
 
-[ensureEmptyDirectory.ts:10](https://github.com/jakubmazanec/js-tools/blob/dbb3d42/packages/fs-utils/src/ensureEmptyDirectory.ts#L10)
+[ensureEmptyDirectory.ts:19](https://github.com/jakubmazanec/js-tools/blob/26e3dc9/packages/fs-utils/src/ensureEmptyDirectory.ts#L19)
 
 ---
 
@@ -83,7 +106,7 @@ The list of directory names.
 
 #### Defined in
 
-[findDirectories.ts:9](https://github.com/jakubmazanec/js-tools/blob/dbb3d42/packages/fs-utils/src/findDirectories.ts#L9)
+[findDirectories.ts:9](https://github.com/jakubmazanec/js-tools/blob/26e3dc9/packages/fs-utils/src/findDirectories.ts#L9)
 
 ---
 
@@ -110,7 +133,7 @@ let result = findExistingDirectory('/foo/bar/baz'); // if there is no `bar` dire
 
 #### Defined in
 
-[findExistingDirectory.ts:15](https://github.com/jakubmazanec/js-tools/blob/dbb3d42/packages/fs-utils/src/findExistingDirectory.ts#L15)
+[findExistingDirectory.ts:15](https://github.com/jakubmazanec/js-tools/blob/26e3dc9/packages/fs-utils/src/findExistingDirectory.ts#L15)
 
 ---
 
@@ -134,7 +157,7 @@ Checks if a path is a directory.
 
 #### Defined in
 
-[isDirectory.ts:9](https://github.com/jakubmazanec/js-tools/blob/dbb3d42/packages/fs-utils/src/isDirectory.ts#L9)
+[isDirectory.ts:9](https://github.com/jakubmazanec/js-tools/blob/26e3dc9/packages/fs-utils/src/isDirectory.ts#L9)
 
 ---
 
@@ -158,7 +181,7 @@ Checks if a path is an empty directory.
 
 #### Defined in
 
-[isEmptyDirectory.ts:9](https://github.com/jakubmazanec/js-tools/blob/dbb3d42/packages/fs-utils/src/isEmptyDirectory.ts#L9)
+[isEmptyDirectory.ts:9](https://github.com/jakubmazanec/js-tools/blob/26e3dc9/packages/fs-utils/src/isEmptyDirectory.ts#L9)
 
 ---
 
@@ -182,7 +205,7 @@ Checks if a path is a file system root path.
 
 #### Defined in
 
-[isRootPath.ts:9](https://github.com/jakubmazanec/js-tools/blob/dbb3d42/packages/fs-utils/src/isRootPath.ts#L9)
+[isRootPath.ts:9](https://github.com/jakubmazanec/js-tools/blob/26e3dc9/packages/fs-utils/src/isRootPath.ts#L9)
 
 ---
 
@@ -206,4 +229,4 @@ The converted path.
 
 #### Defined in
 
-[pathToPosixPath.ts:9](https://github.com/jakubmazanec/js-tools/blob/dbb3d42/packages/fs-utils/src/pathToPosixPath.ts#L9)
+[pathToPosixPath.ts:9](https://github.com/jakubmazanec/js-tools/blob/26e3dc9/packages/fs-utils/src/pathToPosixPath.ts#L9)

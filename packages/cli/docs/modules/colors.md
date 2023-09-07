@@ -23,7 +23,7 @@
 
 #### Defined in
 
-[cli/src/ui/colors.ts:1](https://github.com/jakubmazanec/js-tools/blob/dbb3d42/packages/cli/src/ui/colors.ts#L1)
+[cli/src/ui/colors.ts:1](https://github.com/jakubmazanec/js-tools/blob/26e3dc9/packages/cli/src/ui/colors.ts#L1)
 
 ---
 
@@ -33,7 +33,7 @@
 
 #### Defined in
 
-[cli/src/ui/colors.ts:13](https://github.com/jakubmazanec/js-tools/blob/dbb3d42/packages/cli/src/ui/colors.ts#L13)
+[cli/src/ui/colors.ts:13](https://github.com/jakubmazanec/js-tools/blob/26e3dc9/packages/cli/src/ui/colors.ts#L13)
 
 ---
 
@@ -43,7 +43,7 @@
 
 #### Defined in
 
-[cli/src/ui/colors.ts:2](https://github.com/jakubmazanec/js-tools/blob/dbb3d42/packages/cli/src/ui/colors.ts#L2)
+[cli/src/ui/colors.ts:2](https://github.com/jakubmazanec/js-tools/blob/26e3dc9/packages/cli/src/ui/colors.ts#L2)
 
 ---
 
@@ -53,7 +53,7 @@
 
 #### Defined in
 
-[cli/src/ui/colors.ts:10](https://github.com/jakubmazanec/js-tools/blob/dbb3d42/packages/cli/src/ui/colors.ts#L10)
+[cli/src/ui/colors.ts:10](https://github.com/jakubmazanec/js-tools/blob/26e3dc9/packages/cli/src/ui/colors.ts#L10)
 
 ---
 
@@ -63,7 +63,7 @@
 
 #### Defined in
 
-[cli/src/ui/colors.ts:3](https://github.com/jakubmazanec/js-tools/blob/dbb3d42/packages/cli/src/ui/colors.ts#L3)
+[cli/src/ui/colors.ts:3](https://github.com/jakubmazanec/js-tools/blob/26e3dc9/packages/cli/src/ui/colors.ts#L3)
 
 ---
 
@@ -73,7 +73,7 @@
 
 #### Defined in
 
-[cli/src/ui/colors.ts:8](https://github.com/jakubmazanec/js-tools/blob/dbb3d42/packages/cli/src/ui/colors.ts#L8)
+[cli/src/ui/colors.ts:8](https://github.com/jakubmazanec/js-tools/blob/26e3dc9/packages/cli/src/ui/colors.ts#L8)
 
 ---
 
@@ -83,7 +83,7 @@
 
 #### Defined in
 
-[cli/src/ui/colors.ts:6](https://github.com/jakubmazanec/js-tools/blob/dbb3d42/packages/cli/src/ui/colors.ts#L6)
+[cli/src/ui/colors.ts:6](https://github.com/jakubmazanec/js-tools/blob/26e3dc9/packages/cli/src/ui/colors.ts#L6)
 
 ---
 
@@ -93,7 +93,7 @@
 
 #### Defined in
 
-[cli/src/ui/colors.ts:11](https://github.com/jakubmazanec/js-tools/blob/dbb3d42/packages/cli/src/ui/colors.ts#L11)
+[cli/src/ui/colors.ts:11](https://github.com/jakubmazanec/js-tools/blob/26e3dc9/packages/cli/src/ui/colors.ts#L11)
 
 ---
 
@@ -103,7 +103,7 @@
 
 #### Defined in
 
-[cli/src/ui/colors.ts:5](https://github.com/jakubmazanec/js-tools/blob/dbb3d42/packages/cli/src/ui/colors.ts#L5)
+[cli/src/ui/colors.ts:5](https://github.com/jakubmazanec/js-tools/blob/26e3dc9/packages/cli/src/ui/colors.ts#L5)
 
 ---
 
@@ -113,4 +113,4 @@
 
 #### Defined in
 
-[cli/src/ui/colors.ts:12](https://github.com/jakubmazanec/js-tools/blob/dbb3d42/packages/cli/src/ui/colors.ts#L12)
+[cli/src/ui/colors.ts:12](https://github.com/jakubmazanec/js-tools/blob/26e3dc9/packages/cli/src/ui/colors.ts#L12)

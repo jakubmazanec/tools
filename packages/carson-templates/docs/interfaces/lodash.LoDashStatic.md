@@ -8780,7 +8780,7 @@ entities.
 Note: No other characters are escaped. To escape additional characters use a third-party library
 like he.
 
-hough the ">" character is escaped for symmetry, characters like ">" and "/" don’t need escaping in
+Though the ">" character is escaped for symmetry, characters like ">" and "/" don’t need escaping in
 HTML and have no special meaning unless they're part of a tag or unquoted attribute value. See
 Mathias Bynens’s article (under "semi-related fun fact") for more details.
 

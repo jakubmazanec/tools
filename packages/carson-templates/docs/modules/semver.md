@@ -412,8 +412,8 @@ node_modules/@types/semver/ranges/gtr.d.ts:8
 
 ▸ **inc**(`version`, `release`, `optionsOrLoose?`, `identifier?`): `string` \| `null`
 
-Return the version incremented by the release type (major, minor, patch, or prerelease), or null if
-it's not valid.
+Return the version incremented by the release type (major, premajor, minor, preminor, patch,
+prepatch, or prerelease), or null if it's not valid.
 
 #### Parameters
 
