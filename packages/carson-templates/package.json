@@ -1,6 +1,6 @@
 {
   "name": "@jakubmazanec/carson-templates",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "Collection of Carson templates.",
   "repository": {
     "type": "git",
@@ -34,7 +34,7 @@
     "semver": "^7.3.6"
   },
   "devDependencies": {
-    "@jakubmazanec/carson": "^0.1.0",
+    "@jakubmazanec/carson": "^0.2.0",
     "@jakubmazanec/fs-utils": "^0.1.0",
     "@jest/globals": "^29.5.0",
     "@types/fs-extra": "^9.0.13",
@@ -45,7 +45,7 @@
     "zen-observable": "^0.10.0"
   },
   "peerDependencies": {
-    "@jakubmazanec/carson": "^0.1.0"
+    "@jakubmazanec/carson": "^0.2.0"
   },
   "packageManager": "npm@8.19.4",
   "engines": {

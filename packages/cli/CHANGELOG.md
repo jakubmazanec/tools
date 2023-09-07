@@ -1,5 +1,25 @@
 # @jakubmazanec/cli
 
+## 0.2.0
+
+### Minor Changes
+
+- [#26](https://github.com/jakubmazanec/js-tools/pull/26)
+  [`26e3dc9`](https://github.com/jakubmazanec/js-tools/commit/26e3dc9e9589b46947cb7b3a017d0a41ab889448)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Adds new option `checkForUpdate` when
+  creating new program that automatically checks if there's a newer version of the package with the
+  program's name. Notice is showed at the start of the program if the newer version is found.
+
+- [#26](https://github.com/jakubmazanec/js-tools/pull/26)
+  [`26e3dc9`](https://github.com/jakubmazanec/js-tools/commit/26e3dc9e9589b46947cb7b3a017d0a41ab889448)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Adds new option `displayName` when creating
+  new program that is used for an alternative or better formatted version of the program's `name`.
+
+- [#26](https://github.com/jakubmazanec/js-tools/pull/26)
+  [`26e3dc9`](https://github.com/jakubmazanec/js-tools/commit/26e3dc9e9589b46947cb7b3a017d0a41ab889448)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – BREAKING: New program is created via static
+  async method `Program.create()`; using constructor `new Program()` is no longer allowed.
+
 ## 0.1.3
 
 ### Patch Changes

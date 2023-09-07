@@ -1,5 +1,14 @@
 # @jakubmazanec/carson-templates
 
+## 1.0.0
+
+### Patch Changes
+
+- Updated dependencies
+  [[`26e3dc9`](https://github.com/jakubmazanec/js-tools/commit/26e3dc9e9589b46947cb7b3a017d0a41ab889448),
+  [`26e3dc9`](https://github.com/jakubmazanec/js-tools/commit/26e3dc9e9589b46947cb7b3a017d0a41ab889448)]:
+  - @jakubmazanec/carson@0.2.0
+
 ## 0.2.0
 
 ### Minor Changes

@@ -1,5 +1,26 @@
 # @jakubmazanec/carson
 
+## 0.2.0
+
+### Minor Changes
+
+- [#26](https://github.com/jakubmazanec/js-tools/pull/26)
+  [`26e3dc9`](https://github.com/jakubmazanec/js-tools/commit/26e3dc9e9589b46947cb7b3a017d0a41ab889448)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Adds automatic check for the newest version
+  of Carson.
+
+### Patch Changes
+
+- [#26](https://github.com/jakubmazanec/js-tools/pull/26)
+  [`26e3dc9`](https://github.com/jakubmazanec/js-tools/commit/26e3dc9e9589b46947cb7b3a017d0a41ab889448)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Workspaces can now be created in a directory
+  containing empty Git repository (in addition to a non-existing or empty directory).
+- Updated dependencies
+  [[`26e3dc9`](https://github.com/jakubmazanec/js-tools/commit/26e3dc9e9589b46947cb7b3a017d0a41ab889448),
+  [`26e3dc9`](https://github.com/jakubmazanec/js-tools/commit/26e3dc9e9589b46947cb7b3a017d0a41ab889448),
+  [`26e3dc9`](https://github.com/jakubmazanec/js-tools/commit/26e3dc9e9589b46947cb7b3a017d0a41ab889448)]:
+  - @jakubmazanec/cli@0.2.0
+
 ## 0.1.2
 
 ### Patch Changes
