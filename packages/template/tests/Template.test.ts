@@ -45,7 +45,7 @@ describe('Template', () => {
           },
         ],
       },
-    ])('$label', async ({label, templateFilePath, result}) => {
+    ])('$label', async ({templateFilePath, result}) => {
       await expect(
         Template.readAndRender(path.join(TEST_TEMPLATES_DIRECTORY_PATH, templateFilePath), null),
       ).resolves.toEqual(result);
@@ -59,10 +59,15 @@ describe('Template', () => {
       },
       {
         label: 'bad case #2',
-        templateFilePath: 'json-with-bad-syntax.ejs',
+        templateFilePath: 'json-with-bad-content-syntax.ejs',
         error: 'FAILED_FORMAT: Template render formatting has failed.',
       },
-    ])('$label', async ({label, templateFilePath, error}) => {
+      {
+        label: 'bad case #3',
+        templateFilePath: 'json-with-bad-yaml-syntax.ejs',
+        error: 'INVALID_ATTRIBUTES: Invalid template attributes.',
+      },
+    ])('$label', async ({templateFilePath, error}) => {
       await expect(
         Template.readAndRender(path.join(TEST_TEMPLATES_DIRECTORY_PATH, templateFilePath), null),
       ).rejects.toThrow(error);
@@ -117,7 +122,7 @@ describe('Template', () => {
           },
         ],
       },
-    ])('$label', async ({label, templateFilePath, attributesSchema, dataSchema, data, result}) => {
+    ])('$label', async ({templateFilePath, attributesSchema, dataSchema, data, result}) => {
       await expect(
         Template.readAndRender(path.join(TEST_TEMPLATES_DIRECTORY_PATH, templateFilePath), data, {
           attributesSchema,
@@ -133,12 +138,52 @@ describe('Template', () => {
         attributesSchema: z.object({value: z.string()}),
         error: 'INVALID_ATTRIBUTES: Invalid template attributes.',
       },
-    ])('handles $label', async ({label, templateFilePath, attributesSchema, error}) => {
+    ])('handles $label', async ({templateFilePath, attributesSchema, error}) => {
       await expect(
         Template.readAndRender(path.join(TEST_TEMPLATES_DIRECTORY_PATH, templateFilePath), null, {
           attributesSchema,
         }),
       ).rejects.toThrow(error);
+    });
+  });
+
+  describe('rendering template with extends', () => {
+    test.each([
+      {
+        label: 'good case #1',
+        templateFilePath: 'json-with-extends.ejs',
+        attributesSchema: z.object({type: z.string()}),
+        dataSchema: z.object({foo: z.number()}),
+        data: {foo: 1},
+        result: [
+          {
+            attributes: {extends: './json-with-custom-attributes.ejs', to: 'bar.json', type: 'foo'},
+            data: {foo: 1},
+            content: '{\n  "foo": 1\n}\n',
+          },
+        ],
+      },
+      {
+        label: 'good case #2',
+        templateFilePath: 'json-with-extends-extending.ejs',
+        attributesSchema: z.object({type: z.string()}),
+        dataSchema: z.object({foo: z.number()}),
+        data: {foo: 1},
+        result: [
+          {
+            attributes: {extends: './json-with-extends.ejs', to: 'bar.json', type: 'bar'},
+            data: {foo: 1},
+            content: '{\n  "foo": 1\n}\n',
+          },
+        ],
+      },
+    ])('$label', async ({templateFilePath, attributesSchema, dataSchema, data, result}) => {
+      await expect(
+        Template.readAndRender(path.join(TEST_TEMPLATES_DIRECTORY_PATH, templateFilePath), data, {
+          attributesSchema,
+          dataSchema,
+        }),
+      ).resolves.toEqual(result);
     });
   });
 
@@ -182,7 +227,7 @@ describe('Template', () => {
           path.join(TEST_TEMPLATES_DIRECTORY_PATH, 'js-with-syntax-error.ejs'),
           null,
         ),
-      ).rejects.toThrow('FAILED_RENDER: Rendering has failed.');
+      ).rejects.toThrow('FAILED_RENDER: Template rendering has failed.');
     });
   });
 });

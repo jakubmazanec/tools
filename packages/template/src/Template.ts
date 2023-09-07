@@ -1,7 +1,9 @@
 import ejs from 'ejs';
 import fs from 'fs-extra';
 import matter from 'gray-matter';
+import merge from 'lodash.merge';
 import omit from 'lodash.omit';
+import path from 'node:path';
 import prettier from 'prettier';
 import yaml from 'yaml';
 import {type z, type AnyZodObject} from 'zod';
@@ -113,9 +115,15 @@ export class Template<
   /** Zod schema for template data. */
   readonly dataSchema: D extends AnyZodObject ? D : null;
 
-  constructor({path, content, attributes, attributesSchema, dataSchema}: TemplateOptions<A, D>) {
-    if (path) {
-      this.path = path;
+  constructor({
+    path: templatePath,
+    content,
+    attributes,
+    attributesSchema,
+    dataSchema,
+  }: TemplateOptions<A, D>) {
+    if (templatePath) {
+      this.path = templatePath;
     }
 
     this.content = content;
@@ -144,11 +152,28 @@ export class Template<
     A extends AnyZodObject | undefined = undefined,
     D extends AnyZodObject | undefined = undefined,
   >(templatePath: string, options?: TemplateReadOptions<A, D>): Promise<Template<A, D>> {
-    let {data: attributes, content} = matter(await fs.readFile(templatePath, 'utf8'));
+    let {data: rawAttributes, content} = matter(await fs.readFile(templatePath, 'utf8'));
+
+    // extending another template
+    if (typeof rawAttributes.extends === 'string' && rawAttributes.extends) {
+      let extendedTemplate = await Template.read(
+        path.join(path.dirname(templatePath), rawAttributes.extends),
+        options,
+      ); // you can point to any template, but it will be parsed with the same options, including attribute or data schema
+
+      // attributes are recursively merged
+      rawAttributes = merge(extendedTemplate.attributes, rawAttributes);
+
+      // if content is empty, use content from the extended template
+      if (!content.trim()) {
+        content = extendedTemplate.content;
+      }
+    }
+
     let attributesSchema = options?.attributesSchema
       ? templateAttributesSchema.merge(options.attributesSchema)
       : templateAttributesSchema;
-    let attributesParseResult = attributesSchema.safeParse(attributes);
+    let attributesParseResult = attributesSchema.safeParse(rawAttributes);
 
     if (!attributesParseResult.success) {
       throw new TemplateError('INVALID_ATTRIBUTES', {
@@ -159,6 +184,8 @@ export class Template<
         },
       });
     }
+
+    let attributes = attributesParseResult.data;
 
     return new this({
       path: templatePath,

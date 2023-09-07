@@ -7,6 +7,7 @@ import {templateVariablesSchema} from './TemplateVariables.js';
  */
 export const templateAttributesSchema = z
   .object({
+    extends: z.string().optional(),
     to: z.string(),
     if: z.string().optional(),
     variables: templateVariablesSchema.optional(),
