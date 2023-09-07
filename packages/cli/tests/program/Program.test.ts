@@ -6,7 +6,7 @@ import {Program} from '../../src/program/Program.js';
 describe('Program', () => {
   test('works', async () => {
     let action = jest.fn(async () => {});
-    let program = new Program({
+    let program = await Program.create({
       name: 'App',
       version: '1.0.0',
       description: 'Test CLI app',

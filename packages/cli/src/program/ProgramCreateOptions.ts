@@ -2,9 +2,9 @@ import {type ComponentType} from 'react';
 import {type FallbackProps} from 'react-error-boundary';
 
 /**
- * {@link Program.constructor | Program constructor} options parameter.
+ * {@link Program.create} options parameter.
  */
-export type ProgramOptions = {
+export type ProgramCreateOptions = {
   /** Program name. */
   name?: string | undefined;
 
@@ -14,9 +14,6 @@ export type ProgramOptions = {
   /** Program version. */
   version?: string | undefined;
 
-  /** Program latest version. */
-  latestVersion?: string | undefined;
-
   /** Program description. */
   description?: string | undefined;
 
@@ -24,7 +21,7 @@ export type ProgramOptions = {
   bin?: string | undefined;
 
   /** Custom error boundary fallback component */
-  ErrorBoundaryFallbackComponent?: ComponentType<FallbackProps> | undefined;
+  ErrorBoundaryFallbackComponent?: ComponentType<FallbackProps>;
 
   /** Perform check whether a newer version of the program is available. */
   checkForUpdate?: boolean;

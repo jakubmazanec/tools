@@ -9,7 +9,6 @@ import {
 import {type CommandAction} from './CommandAction.js';
 import {type CommandOptions} from './CommandOptions.js';
 import {type Program} from './Program.js';
-// import {type ProgramCommand} from './ProgramCommand.js';
 
 /**
  * Command encapsulates piece of a CLI's logic and is executed when {@link Program} instance parses that command from the command line arguments.

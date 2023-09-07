@@ -20,9 +20,9 @@ export type HelpProps = BoxProps & {
 export function Help({program, ...boxProps}: HelpProps) {
   return (
     <Box {...boxProps} flexDirection="column">
-      <Text>{`${chalk[colors.notice](program.name ?? '?')} ${chalk[colors.muted](
-        program.version ?? '?',
-      )}`}</Text>
+      <Text>{`${chalk[colors.notice](program.displayName ?? program.name ?? '?')} ${chalk[
+        colors.muted
+      ](program.version ?? '?')}`}</Text>
       <Text color={colors.body}>{program.description}</Text>
 
       {program.commands.length ? (

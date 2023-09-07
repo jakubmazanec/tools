@@ -5,8 +5,8 @@ import {Program} from '../../src/program/Program.js';
 import {Help} from '../../src/ui/Help.js';
 
 describe('Help', () => {
-  test('works', () => {
-    let program = new Program({
+  test('works', async () => {
+    let program = await Program.create({
       name: 'App',
       version: '1.0.0',
       description: 'Test CLI app',

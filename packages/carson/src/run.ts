@@ -9,9 +9,10 @@ let programDetail = getProgramDetail(
   await readPackageJson(path.join(PACKAGE_PATH, 'package.json'), {throwOnZodError: true}),
 );
 
-let program = new Program({
+let program = await Program.create({
   ...programDetail,
-  name: 'Carson',
+  displayName: 'Carson',
+  checkForUpdate: true,
 });
 
 program.addCommand(createWorkspaceCommand);

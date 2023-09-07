@@ -1,12 +1,17 @@
 /* eslint-disable @typescript-eslint/no-explicit-any -- needed */
 import {type ParametersConfig, type Argv, type OptionsConfig} from '@jakubmazanec/args';
+import fs from 'fs-extra';
+import fetchLatestVersion from 'latest-version';
+import path from 'path';
 import {type ComponentType} from 'react';
 import {type FallbackProps} from 'react-error-boundary';
 
 import {type Command} from './Command.js';
+import {type ProgramCreateOptions} from './ProgramCreateOptions.js';
 import {ProgramError} from './ProgramError.js';
 import {type ProgramOptions} from './ProgramOptions.js';
 import {type ProgramStreams} from './ProgramStreams.js';
+import {CACHE_PATH} from '../constants.js';
 import {Wrapper} from '../ui/internals.js';
 import {Failure, Help} from '../ui.js';
 
@@ -17,8 +22,14 @@ export class Program {
   /** Program name. */
   readonly name?: string;
 
+  /** More readable program name. */
+  readonly displayName?: string;
+
   /** Program version. */
   readonly version?: string;
+
+  /** Program latest version. */
+  readonly latestVersion?: string;
 
   /** Program description. */
   readonly description?: string;
@@ -42,13 +53,29 @@ export class Program {
   /** Custom error boundary fallback component */
   ErrorBoundaryFallbackComponent: ComponentType<FallbackProps>;
 
-  constructor({name, version, description, bin, ErrorBoundaryFallbackComponent}: ProgramOptions) {
+  private constructor({
+    name,
+    displayName,
+    version,
+    latestVersion,
+    description,
+    bin,
+    ErrorBoundaryFallbackComponent,
+  }: ProgramOptions) {
     if (name) {
       this.name = name;
     }
 
+    if (displayName) {
+      this.displayName = displayName;
+    }
+
     if (version) {
       this.version = version;
+    }
+
+    if (latestVersion) {
+      this.latestVersion = latestVersion;
     }
 
     if (description) {
@@ -64,6 +91,54 @@ export class Program {
     } else {
       this.ErrorBoundaryFallbackComponent = Failure;
     }
+  }
+
+  static async create({
+    name,
+    version,
+    description,
+    bin,
+    ErrorBoundaryFallbackComponent,
+    checkForUpdate,
+  }: ProgramCreateOptions) {
+    let latestVersion: string | undefined;
+
+    if (checkForUpdate && name) {
+      // first we try to read the cached latest version
+      type CachedLatestVersion = {
+        value: string;
+        datetime: number;
+      };
+
+      let cachePath = path.join(CACHE_PATH, name, 'latest-version.json');
+      let cachedLatestVersion: CachedLatestVersion | undefined;
+
+      try {
+        cachedLatestVersion = (await fs.readJson(cachePath)) as CachedLatestVersion;
+      } catch {
+        // no-op
+      }
+
+      // if there is no cache or the cached value is old, refetch and recache
+      if (!cachedLatestVersion || Date.now() - cachedLatestVersion.datetime > 86_400_00) {
+        latestVersion = await fetchLatestVersion(name);
+
+        await fs.ensureFile(cachePath);
+        await fs.writeJson(cachePath, {
+          value: latestVersion,
+          datetime: Date.now(),
+        });
+      }
+    }
+
+    return new this({
+      name,
+      version,
+      latestVersion,
+      description,
+      bin,
+      ErrorBoundaryFallbackComponent,
+    });
   }
 
   /**
