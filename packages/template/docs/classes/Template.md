@@ -64,16 +64,16 @@ console.log(await template.render({value: 42})); // ->  [{attributes: {to: 'valu
 
 #### Defined in
 
-[packages/template/src/Template.ts:116](https://github.com/jakubmazanec/js-tools/blob/26e3dc9/packages/template/src/Template.ts#L116)
+[packages/template/src/Template.ts:118](https://github.com/jakubmazanec/js-tools/blob/389bfa9/packages/template/src/Template.ts#L118)
 
 ## Properties
 
 ### attributes
 
-• `Readonly` **attributes**: `A` extends `undefined` ? { `if?`: `string` ; `to`: `string` ;
-`variables?`: `Record`<`string`, `unknown`\> \| `Record`<`string`, `unknown`\>[] } : { `if?`:
-`string` ; `to`: `string` ; `variables?`: `Record`<`string`, `unknown`\> \| `Record`<`string`,
-`unknown`\>[] } & `TypeOf`<`NonNullable`<`A`\>\>
+• `Readonly` **attributes**: `A` extends `undefined` ? { `extends?`: `string` ; `if?`: `string` ;
+`to`: `string` ; `variables?`: `Record`<`string`, `unknown`\> \| `Record`<`string`, `unknown`\>[] }
+: { `extends?`: `string` ; `if?`: `string` ; `to`: `string` ; `variables?`: `Record`<`string`,
+`unknown`\> \| `Record`<`string`, `unknown`\>[] } & `TypeOf`<`NonNullable`<`A`\>\>
 
 Template attributes. These control how the template is rendered. Some attributes can be written in
 [EJS](https://ejs.co/) and are rendered before the template content is rendered. It is expected that
@@ -86,7 +86,7 @@ Each variable that is a string is also rendered.
 
 #### Defined in
 
-[packages/template/src/Template.ts:103](https://github.com/jakubmazanec/js-tools/blob/26e3dc9/packages/template/src/Template.ts#L103)
+[packages/template/src/Template.ts:105](https://github.com/jakubmazanec/js-tools/blob/389bfa9/packages/template/src/Template.ts#L105)
 
 ---
 
@@ -98,7 +98,7 @@ Zod schema for custom template attributes.
 
 #### Defined in
 
-[packages/template/src/Template.ts:111](https://github.com/jakubmazanec/js-tools/blob/26e3dc9/packages/template/src/Template.ts#L111)
+[packages/template/src/Template.ts:113](https://github.com/jakubmazanec/js-tools/blob/389bfa9/packages/template/src/Template.ts#L113)
 
 ---
 
@@ -110,7 +110,7 @@ Template content. Templates are written in [EJS](https://ejs.co/).
 
 #### Defined in
 
-[packages/template/src/Template.ts:100](https://github.com/jakubmazanec/js-tools/blob/26e3dc9/packages/template/src/Template.ts#L100)
+[packages/template/src/Template.ts:102](https://github.com/jakubmazanec/js-tools/blob/389bfa9/packages/template/src/Template.ts#L102)
 
 ---
 
@@ -122,7 +122,7 @@ Zod schema for template data.
 
 #### Defined in
 
-[packages/template/src/Template.ts:114](https://github.com/jakubmazanec/js-tools/blob/26e3dc9/packages/template/src/Template.ts#L114)
+[packages/template/src/Template.ts:116](https://github.com/jakubmazanec/js-tools/blob/389bfa9/packages/template/src/Template.ts#L116)
 
 ---
 
@@ -134,7 +134,7 @@ Template function.
 
 #### Defined in
 
-[packages/template/src/Template.ts:108](https://github.com/jakubmazanec/js-tools/blob/26e3dc9/packages/template/src/Template.ts#L108)
+[packages/template/src/Template.ts:110](https://github.com/jakubmazanec/js-tools/blob/389bfa9/packages/template/src/Template.ts#L110)
 
 ---
 
@@ -146,7 +146,7 @@ Template path.
 
 #### Defined in
 
-[packages/template/src/Template.ts:97](https://github.com/jakubmazanec/js-tools/blob/26e3dc9/packages/template/src/Template.ts#L97)
+[packages/template/src/Template.ts:99](https://github.com/jakubmazanec/js-tools/blob/389bfa9/packages/template/src/Template.ts#L99)
 
 ## Methods
 
@@ -172,7 +172,7 @@ Template renders.
 
 #### Defined in
 
-[packages/template/src/Template.ts:206](https://github.com/jakubmazanec/js-tools/blob/26e3dc9/packages/template/src/Template.ts#L206)
+[packages/template/src/Template.ts:233](https://github.com/jakubmazanec/js-tools/blob/389bfa9/packages/template/src/Template.ts#L233)
 
 ---
 
@@ -203,7 +203,7 @@ Reads a template from a file.
 
 #### Defined in
 
-[packages/template/src/Template.ts:143](https://github.com/jakubmazanec/js-tools/blob/26e3dc9/packages/template/src/Template.ts#L143)
+[packages/template/src/Template.ts:151](https://github.com/jakubmazanec/js-tools/blob/389bfa9/packages/template/src/Template.ts#L151)
 
 ---
 
@@ -237,4 +237,4 @@ Template renders.
 
 #### Defined in
 
-[packages/template/src/Template.ts:180](https://github.com/jakubmazanec/js-tools/blob/26e3dc9/packages/template/src/Template.ts#L180)
+[packages/template/src/Template.ts:207](https://github.com/jakubmazanec/js-tools/blob/389bfa9/packages/template/src/Template.ts#L207)
