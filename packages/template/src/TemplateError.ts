@@ -11,7 +11,7 @@ export const TemplateError = createCustomErrorWithData(
   {
     INVALID_ATTRIBUTES: 'Invalid template attributes.',
     FAILED_FORMAT: 'Template render formatting has failed.',
-    FAILED_RENDER: 'Rendering has failed.',
+    FAILED_RENDER: 'Template rendering has failed.',
   },
   class TemplateErrorData {
     template?: Template;

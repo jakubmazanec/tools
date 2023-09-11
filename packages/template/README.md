@@ -28,6 +28,7 @@ Write templates using [EJS](https://ejs.co/) with YAML front matter:
 
 ```
 ---
+extends: './base.ejs'
 to: <%- attributes.variables.path %>
 if: <%- attributes.variables.enabled %>
 variables:
@@ -89,6 +90,11 @@ console.log(await template.render({value: 2}));
 Because `variables` is an array, we can expect two renders; but because one of the variables,
 `enabled` is used for rendering the value of `if` attribute and is set to `false` in the second
 case, only one render is actually returned.
+
+You can extend another template using `extends` attribute that represents path to the template to
+extend, relative to the current template. The extended template is read using the same options
+object. The current template attributes are recursively merged with the extended template
+attributes. If the current template has no content, the content from the extended template is used.
 
 ## Documentation
 
