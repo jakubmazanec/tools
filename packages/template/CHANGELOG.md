@@ -1,5 +1,14 @@
 # @jakubmazanec/template
 
+## 1.1.0
+
+### Minor Changes
+
+- [#27](https://github.com/jakubmazanec/js-tools/pull/27)
+  [`389bfa9`](https://github.com/jakubmazanec/js-tools/commit/389bfa92d74d081d1b8265d709bee16c4dda3b4d)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Template can extend another template using
+  `extends` attribute.
+
 ## 1.0.3
 
 ### Patch Changes
