@@ -12,7 +12,11 @@ import {type ProjectOptions} from './ProjectOptions.js';
 import {type ProjectUpdateOptions} from './ProjectUpdateOptions.js';
 import {saveProjectConfig} from './saveProjectConfig.js';
 import {type Workspace} from './Workspace.js';
-import {CARSON_CONFIG_DIRECTORY, PROJECT_CONFIG_FILENAME} from '../constants.js';
+import {
+  CARSON_CONFIG_DIRECTORY,
+  PROJECT_CONFIG_FILENAME,
+  PROJECT_SNAPSHOT_FILENAME,
+} from '../constants.js';
 import {applyTemplateRenders} from '../template/applyTemplateRenders.js';
 import {renderCarsonTemplate} from '../template/renderCarsonTemplate.js';
 
@@ -99,15 +103,18 @@ export class Project<M extends boolean = true> {
       workspace,
     });
 
-    try {
-      await ensureEmptyDirectory(project.path);
-    } catch {
-      throw new ProjectError('PROJECT_PATH_NOT_EMPTY', {
-        messageParameters: [project.path],
-        data: {
-          path: project.path,
-        },
-      });
+    // if the workspace is single-project, it shares a directory with the project, so we can't insist on it being an empty directory
+    if (workspace.isMultiProject) {
+      try {
+        await ensureEmptyDirectory(project.path);
+      } catch {
+        throw new ProjectError('PROJECT_PATH_NOT_EMPTY', {
+          messageParameters: [project.path],
+          data: {
+            path: project.path,
+          },
+        });
+      }
     }
 
     let templateRenders = await renderCarsonTemplate({
@@ -121,7 +128,8 @@ export class Project<M extends boolean = true> {
 
     await applyTemplateRenders({
       templateRenders,
-      path: project.path,
+      targetPath: project.path,
+      snapshotPath: path.join(project.path, CARSON_CONFIG_DIRECTORY, PROJECT_SNAPSHOT_FILENAME),
       ignoreStrategies: ['check'],
     });
 
@@ -245,7 +253,8 @@ export class Project<M extends boolean = true> {
 
     await applyTemplateRenders({
       templateRenders,
-      path: this.path,
+      targetPath: this.path,
+      snapshotPath: path.join(this.path, CARSON_CONFIG_DIRECTORY, PROJECT_SNAPSHOT_FILENAME),
       ignoreStrategies: ['create'],
     });
 

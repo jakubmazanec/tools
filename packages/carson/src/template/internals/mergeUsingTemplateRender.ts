@@ -19,21 +19,29 @@ export async function mergeUsingTemplateRender(
 
   switch (extension) {
     case '.json': {
-      let targetFile = (await fs.readJson(to)) as Json;
-      let fileToMerge = json.parse<Json>(templateRender.content);
-      let newFile = JSON.stringify(merge(targetFile, fileToMerge));
+      if (await fs.pathExists(to)) {
+        let targetFile = (await fs.readJson(to)) as Json;
+        let fileToMerge = json.parse<Json>(templateRender.content);
+        let newFile = JSON.stringify(merge(targetFile, fileToMerge), null, 2);
 
-      await fs.writeFile(to, await prettify(newFile, to), {encoding: 'utf8'});
+        await fs.writeFile(to, await prettify(newFile, to), {encoding: 'utf8'});
+      } else {
+        await fs.writeFile(to, await prettify(templateRender.content, to), {encoding: 'utf8'});
+      }
 
       break;
     }
 
     case '.yaml': {
-      let targetFile = yaml.parse(await fs.readFile(to, {encoding: 'utf8'})) as unknown;
-      let fileToMerge = yaml.parse(templateRender.content) as unknown;
-      let newFile = yaml.stringify(merge(targetFile, fileToMerge));
+      if (await fs.pathExists(to)) {
+        let targetFile = yaml.parse(await fs.readFile(to, {encoding: 'utf8'})) as unknown;
+        let fileToMerge = yaml.parse(templateRender.content) as unknown;
+        let newFile = yaml.stringify(merge(targetFile, fileToMerge));
 
-      await fs.writeFile(to, await prettify(newFile, to), {encoding: 'utf8'});
+        await fs.writeFile(to, await prettify(newFile, to), {encoding: 'utf8'});
+      } else {
+        await fs.writeFile(to, await prettify(templateRender.content, to), {encoding: 'utf8'});
+      }
 
       break;
     }

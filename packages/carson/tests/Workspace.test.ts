@@ -275,12 +275,14 @@ describe('Workspace', () => {
         projectGlobs: null,
         projects: [
           {
+            name: '@jakubmazanec/foo',
             path: '.',
             relativePath: '',
             config: {
               template: '@jakubmazanec/qux:project',
             },
             packageJson: {
+              name: '@jakubmazanec/foo',
               dependencies: {
                 asd: '1.0.0 - 2.9999.9999',
                 bar: '<1.0.0 || >=2.3.1 <2.4.5 || >=2.5.2 <3.0.0',
@@ -300,46 +302,100 @@ describe('Workspace', () => {
           {
             exactVersions: ['1.0.0'],
             name: 'asd',
-            projects: [],
+            projects: [
+              {
+                exactVersion: '1.0.0',
+                name: '@jakubmazanec/foo',
+                version: '1.0.0 - 2.9999.9999',
+              },
+            ],
             versions: ['1.0.0 - 2.9999.9999'],
           },
           {
             exactVersions: ['0.0.0'],
             name: 'bar',
-            projects: [],
+            projects: [
+              {
+                exactVersion: '0.0.0',
+                name: '@jakubmazanec/foo',
+                version: '<1.0.0 || >=2.3.1 <2.4.5 || >=2.5.2 <3.0.0',
+              },
+            ],
             versions: ['<1.0.0 || >=2.3.1 <2.4.5 || >=2.5.2 <3.0.0'],
           },
           {
             exactVersions: ['1.0.3'],
             name: 'baz',
-            projects: [],
+            projects: [
+              {
+                exactVersion: '1.0.3',
+                name: '@jakubmazanec/foo',
+                version: '>1.0.2 <=2.3.4',
+              },
+            ],
             versions: ['>1.0.2 <=2.3.4'],
           },
           {
             exactVersions: ['2.0.1'],
             name: 'boo',
-            projects: [],
+            projects: [
+              {
+                exactVersion: '2.0.1',
+                name: '@jakubmazanec/foo',
+                version: '^2.0.1',
+              },
+            ],
             versions: ['^2.0.1'],
           },
           {
             exactVersions: ['http://asdf.com/asdf.tar.gz'],
             name: 'foo',
-            projects: [],
+            projects: [
+              {
+                exactVersion: 'http://asdf.com/asdf.tar.gz',
+                name: '@jakubmazanec/foo',
+                version: 'http://asdf.com/asdf.tar.gz',
+              },
+            ],
             versions: ['http://asdf.com/asdf.tar.gz'],
           },
           {
             exactVersions: ['file:../dyl'],
             name: 'qux',
-            projects: [],
+            projects: [
+              {
+                exactVersion: 'file:../dyl',
+                name: '@jakubmazanec/foo',
+                version: 'file:../dyl',
+              },
+            ],
             versions: ['file:../dyl'],
           },
           {
             exactVersions: ['latest'],
             name: 'til',
-            projects: [],
+            projects: [
+              {
+                exactVersion: 'latest',
+                name: '@jakubmazanec/foo',
+                version: 'latest',
+              },
+            ],
             versions: ['latest'],
           },
         ],
+        errors: [],
+      },
+      {
+        workspacePath: 'single-project/with-no-package-json',
+        isMultiProject: false,
+        projectGlobs: null,
+        projects: [],
+        config: {
+          template: '@jakubmazanec/qux:workspace',
+        },
+        packageJson: null,
+        allDependencies: [],
         errors: [],
       },
       {

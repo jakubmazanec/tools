@@ -9,6 +9,7 @@ import {z} from 'zod';
 import {
   compareProjectPath,
   containsProject,
+  containsWorkspace,
   getPackageJsonWorkspaces,
   getRepositoryBranches,
   getRepositoryUrl,
@@ -28,7 +29,12 @@ import type {WorkspaceProjectGlobs} from './WorkspaceProjectGlobs.js';
 import {type WorkspaceProjects} from './WorkspaceProjects.js';
 import {type WorkspaceRepository} from './WorkspaceRepository.js';
 import {type WorkspaceUpdateOptions} from './WorkspaceUpdateOptions.js';
-import {CARSON_CONFIG_DIRECTORY, WORKSPACE_CONFIG_FILENAME} from '../constants.js';
+import {
+  CARSON_CONFIG_DIRECTORY,
+  WORKSPACE_CONFIG_FILENAME,
+  PACKAGE_JSON_FILENAME,
+  WORKSPACE_SNAPSHOT_FILENAME,
+} from '../constants.js';
 import {applyTemplateRenders} from '../template/applyTemplateRenders.js';
 import {renderCarsonTemplate} from '../template/renderCarsonTemplate.js';
 
@@ -185,7 +191,8 @@ export class Workspace<M extends boolean = true> {
 
     await applyTemplateRenders({
       templateRenders,
-      path: workspace.path,
+      targetPath: workspace.path,
+      snapshotPath: path.join(workspace.path, CARSON_CONFIG_DIRECTORY, WORKSPACE_SNAPSHOT_FILENAME),
       ignoreStrategies: ['check'],
     });
 
@@ -274,6 +281,9 @@ export class Workspace<M extends boolean = true> {
 
   /**
    * Traverses file system up from the search path and tries to find a directory that is a root of a workspace.
+   *
+   * @param searchPath Search path.
+   * @returns Workspace path, if found.
    */
   static async find(searchPath: string): Promise<string | undefined> {
     let startingPath = await findExistingDirectory(path.resolve(searchPath));
@@ -284,22 +294,25 @@ export class Workspace<M extends boolean = true> {
     while (
       !(isRootPath(currentPath) || (singlePackageWorkspacePath && multiPackageWorkspacePath))
     ) {
-      let packageJsonPath = path.join(currentPath, 'package.json');
-      let doesPackageJsonExist = await fs.pathExists(packageJsonPath);
+      if (await containsWorkspace(currentPath)) {
+        const packageJsonPath = path.join(currentPath, PACKAGE_JSON_FILENAME);
 
-      if (doesPackageJsonExist) {
-        let packageJson = await readFile(packageJsonPath, jsonSchema, {
-          parser: (rawString: string) => json5.parse<unknown>(rawString),
-        });
+        if (await fs.pathExists(packageJsonPath)) {
+          const packageJson = await readFile(packageJsonPath, jsonSchema, {
+            parser: (rawString: string) => json5.parse<unknown>(rawString),
+          });
 
-        if (!(packageJson instanceof Error)) {
-          let projectGlobs = getPackageJsonWorkspaces(packageJson);
+          if (!(packageJson instanceof Error)) {
+            const projectGlobs = getPackageJsonWorkspaces(packageJson);
 
-          if (projectGlobs?.length) {
-            multiPackageWorkspacePath ??= currentPath;
-          } else {
-            singlePackageWorkspacePath ??= currentPath;
+            if (projectGlobs?.length) {
+              multiPackageWorkspacePath ??= currentPath;
+            } else {
+              singlePackageWorkspacePath ??= currentPath;
+            }
           }
+        } else {
+          singlePackageWorkspacePath ??= currentPath;
         }
       }
 
@@ -493,7 +506,8 @@ export class Workspace<M extends boolean = true> {
 
     await applyTemplateRenders({
       templateRenders,
-      path: this.path,
+      targetPath: this.path,
+      snapshotPath: path.join(this.path, CARSON_CONFIG_DIRECTORY, WORKSPACE_SNAPSHOT_FILENAME),
       ignoreStrategies: ['create'],
     });
 
@@ -625,12 +639,15 @@ export class Workspace<M extends boolean = true> {
       }
 
       this.projects = projects;
-    } else {
-      this.projects = [await Project.read(this.path, this)];
-    }
 
-    this.sortProjects();
-    this.updateDependencies();
+      this.sortProjects();
+      this.updateDependencies();
+    } else if (await containsProject(this.path)) {
+      this.projects = [await Project.read(this.path, this)];
+
+      this.sortProjects();
+      this.updateDependencies();
+    }
 
     return this.projects;
   }
