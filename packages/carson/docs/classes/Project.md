@@ -52,7 +52,7 @@ Project represent a self-contained piece of software (e.g. a package, or an app)
 
 #### Defined in
 
-[packages/carson/src/workspace/Project.ts:46](https://github.com/jakubmazanec/js-tools/blob/389bfa9/packages/carson/src/workspace/Project.ts#L46)
+[packages/carson/src/workspace/Project.ts:50](https://github.com/jakubmazanec/js-tools/blob/e47deb4/packages/carson/src/workspace/Project.ts#L50)
 
 ## Properties
 
@@ -65,7 +65,7 @@ Project configuration; if it's not found, the default is an empty object.
 
 #### Defined in
 
-[packages/carson/src/workspace/Project.ts:35](https://github.com/jakubmazanec/js-tools/blob/389bfa9/packages/carson/src/workspace/Project.ts#L35)
+[packages/carson/src/workspace/Project.ts:39](https://github.com/jakubmazanec/js-tools/blob/e47deb4/packages/carson/src/workspace/Project.ts#L39)
 
 ---
 
@@ -79,7 +79,7 @@ Errors found during reading from the file system.
 
 #### Defined in
 
-[packages/carson/src/workspace/Project.ts:44](https://github.com/jakubmazanec/js-tools/blob/389bfa9/packages/carson/src/workspace/Project.ts#L44)
+[packages/carson/src/workspace/Project.ts:48](https://github.com/jakubmazanec/js-tools/blob/e47deb4/packages/carson/src/workspace/Project.ts#L48)
 
 ---
 
@@ -91,7 +91,7 @@ Project name.
 
 #### Defined in
 
-[packages/carson/src/workspace/Project.ts:26](https://github.com/jakubmazanec/js-tools/blob/389bfa9/packages/carson/src/workspace/Project.ts#L26)
+[packages/carson/src/workspace/Project.ts:30](https://github.com/jakubmazanec/js-tools/blob/e47deb4/packages/carson/src/workspace/Project.ts#L30)
 
 ---
 
@@ -160,7 +160,7 @@ Parsed project `package.json` file; if it's not found, the default is an empty o
 
 #### Defined in
 
-[packages/carson/src/workspace/Project.ts:38](https://github.com/jakubmazanec/js-tools/blob/389bfa9/packages/carson/src/workspace/Project.ts#L38)
+[packages/carson/src/workspace/Project.ts:42](https://github.com/jakubmazanec/js-tools/blob/e47deb4/packages/carson/src/workspace/Project.ts#L42)
 
 ---
 
@@ -172,7 +172,7 @@ Project path.
 
 #### Defined in
 
-[packages/carson/src/workspace/Project.ts:29](https://github.com/jakubmazanec/js-tools/blob/389bfa9/packages/carson/src/workspace/Project.ts#L29)
+[packages/carson/src/workspace/Project.ts:33](https://github.com/jakubmazanec/js-tools/blob/e47deb4/packages/carson/src/workspace/Project.ts#L33)
 
 ---
 
@@ -184,7 +184,7 @@ Project path relative to workspace path.
 
 #### Defined in
 
-[packages/carson/src/workspace/Project.ts:32](https://github.com/jakubmazanec/js-tools/blob/389bfa9/packages/carson/src/workspace/Project.ts#L32)
+[packages/carson/src/workspace/Project.ts:36](https://github.com/jakubmazanec/js-tools/blob/e47deb4/packages/carson/src/workspace/Project.ts#L36)
 
 ---
 
@@ -196,7 +196,7 @@ Parent [Workspace](Workspace.md) instance.
 
 #### Defined in
 
-[packages/carson/src/workspace/Project.ts:41](https://github.com/jakubmazanec/js-tools/blob/389bfa9/packages/carson/src/workspace/Project.ts#L41)
+[packages/carson/src/workspace/Project.ts:45](https://github.com/jakubmazanec/js-tools/blob/e47deb4/packages/carson/src/workspace/Project.ts#L45)
 
 ## Methods
 
@@ -210,7 +210,7 @@ Parent [Workspace](Workspace.md) instance.
 
 #### Defined in
 
-[packages/carson/src/workspace/Project.ts:149](https://github.com/jakubmazanec/js-tools/blob/389bfa9/packages/carson/src/workspace/Project.ts#L149)
+[packages/carson/src/workspace/Project.ts:157](https://github.com/jakubmazanec/js-tools/blob/e47deb4/packages/carson/src/workspace/Project.ts#L157)
 
 ---
 
@@ -230,7 +230,7 @@ Parent [Workspace](Workspace.md) instance.
 
 #### Defined in
 
-[packages/carson/src/workspace/Project.ts:230](https://github.com/jakubmazanec/js-tools/blob/389bfa9/packages/carson/src/workspace/Project.ts#L230)
+[packages/carson/src/workspace/Project.ts:238](https://github.com/jakubmazanec/js-tools/blob/e47deb4/packages/carson/src/workspace/Project.ts#L238)
 
 ---
 
@@ -256,7 +256,7 @@ Parent [Workspace](Workspace.md) instance.
 
 #### Defined in
 
-[packages/carson/src/workspace/Project.ts:86](https://github.com/jakubmazanec/js-tools/blob/389bfa9/packages/carson/src/workspace/Project.ts#L86)
+[packages/carson/src/workspace/Project.ts:90](https://github.com/jakubmazanec/js-tools/blob/e47deb4/packages/carson/src/workspace/Project.ts#L90)
 
 ---
 
@@ -283,4 +283,4 @@ Parent [Workspace](Workspace.md) instance.
 
 #### Defined in
 
-[packages/carson/src/workspace/Project.ts:135](https://github.com/jakubmazanec/js-tools/blob/389bfa9/packages/carson/src/workspace/Project.ts#L135)
+[packages/carson/src/workspace/Project.ts:143](https://github.com/jakubmazanec/js-tools/blob/e47deb4/packages/carson/src/workspace/Project.ts#L143)
