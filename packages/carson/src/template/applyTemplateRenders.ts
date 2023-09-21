@@ -17,11 +17,12 @@ import {
   unmergeUsingTemplateRender,
 } from './internals.js';
 import {type TemplateRenders} from './TemplateRenders.js';
-import {CARSON_CONFIG_DIRECTORY, SNAPSHOTS_FILENAME} from '../constants.js';
+import {CARSON_CONFIG_DIRECTORY} from '../constants.js';
 
 export type ApplyTemplateRendersOptions = {
   templateRenders: TemplateRenders;
-  path: string;
+  targetPath: string;
+  snapshotPath: string;
   ignoreStrategies: string[];
 };
 
@@ -30,21 +31,16 @@ export type ApplyTemplateRendersOptions = {
  */
 export async function applyTemplateRenders({
   templateRenders,
-  path: targetPath,
+  targetPath,
+  snapshotPath,
   ignoreStrategies,
 }: ApplyTemplateRendersOptions) {
   // we need to clear Prettier cache, because we are changing file system
   await prettier.clearConfigCache();
 
   // first, we read the existing snapshots and use them to undo previous changes
-  let templateRenderSnapshotsPath = path.join(
-    targetPath,
-    CARSON_CONFIG_DIRECTORY,
-    SNAPSHOTS_FILENAME,
-  );
-
-  if (await fs.pathExists(templateRenderSnapshotsPath)) {
-    let templateRenderSnapshots = await loadTemplateRenderSnapshots(templateRenderSnapshotsPath);
+  if (await fs.pathExists(snapshotPath)) {
+    let templateRenderSnapshots = await loadTemplateRenderSnapshots(snapshotPath);
 
     for (let templateRenderSnapshot of templateRenderSnapshots) {
       let strategy =
@@ -141,5 +137,5 @@ export async function applyTemplateRenders({
 
   await fs.ensureDir(path.join(targetPath, CARSON_CONFIG_DIRECTORY));
 
-  await saveTemplateRenderSnapshots(templateRenders, templateRenderSnapshotsPath);
+  await saveTemplateRenderSnapshots(templateRenders, snapshotPath);
 }
