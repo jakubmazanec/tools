@@ -10,7 +10,7 @@ export const ValidationError = createCustomError('ValidationError', {
   INVALID_PARAMETER_DEFAULT_AND_CHOICES:
     'Parameter "{0}" has invalid default value "{1}". Default value must be one of the `choices` elements.',
   INVALID_PARAMETER_ORDER:
-    'Optional parameter "{0}" found before required parameter "{1}". Required parameter must be first.',
+    'Parameter "{0}" has invalid order. All parameters before must have a default value or be required too',
   MISSING_OPTION: 'Option "{0}" is required but its value is undefined.',
   INVALID_OPTION_DEFAULT_AND_CHOICES:
     'Option "{0}" has invalid default value "{1}". Default value must be one of the `choices` elements.',
