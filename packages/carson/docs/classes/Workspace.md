@@ -66,7 +66,7 @@ instances.
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:83](https://github.com/jakubmazanec/js-tools/blob/d35ef4d/packages/carson/src/workspace/Workspace.ts#L83)
+[packages/carson/src/workspace/Workspace.ts:83](https://github.com/jakubmazanec/js-tools/blob/9a16bed/packages/carson/src/workspace/Workspace.ts#L83)
 
 ## Properties
 
@@ -78,7 +78,7 @@ All dependencies of all projects and workspace dependencies.
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:75](https://github.com/jakubmazanec/js-tools/blob/d35ef4d/packages/carson/src/workspace/Workspace.ts#L75)
+[packages/carson/src/workspace/Workspace.ts:75](https://github.com/jakubmazanec/js-tools/blob/9a16bed/packages/carson/src/workspace/Workspace.ts#L75)
 
 ---
 
@@ -91,7 +91,7 @@ Workspace configuration; if it's not found, the default is an empty object.
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:60](https://github.com/jakubmazanec/js-tools/blob/d35ef4d/packages/carson/src/workspace/Workspace.ts#L60)
+[packages/carson/src/workspace/Workspace.ts:60](https://github.com/jakubmazanec/js-tools/blob/9a16bed/packages/carson/src/workspace/Workspace.ts#L60)
 
 ---
 
@@ -103,7 +103,7 @@ Dependencies of all projects.
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:69](https://github.com/jakubmazanec/js-tools/blob/d35ef4d/packages/carson/src/workspace/Workspace.ts#L69)
+[packages/carson/src/workspace/Workspace.ts:69](https://github.com/jakubmazanec/js-tools/blob/9a16bed/packages/carson/src/workspace/Workspace.ts#L69)
 
 ---
 
@@ -115,7 +115,7 @@ Versions of each dependency.
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:78](https://github.com/jakubmazanec/js-tools/blob/d35ef4d/packages/carson/src/workspace/Workspace.ts#L78)
+[packages/carson/src/workspace/Workspace.ts:78](https://github.com/jakubmazanec/js-tools/blob/9a16bed/packages/carson/src/workspace/Workspace.ts#L78)
 
 ---
 
@@ -127,7 +127,7 @@ Development dependencies of all projects.
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:72](https://github.com/jakubmazanec/js-tools/blob/d35ef4d/packages/carson/src/workspace/Workspace.ts#L72)
+[packages/carson/src/workspace/Workspace.ts:72](https://github.com/jakubmazanec/js-tools/blob/9a16bed/packages/carson/src/workspace/Workspace.ts#L72)
 
 ---
 
@@ -143,7 +143,7 @@ Errors found during reading from the file system.
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:81](https://github.com/jakubmazanec/js-tools/blob/d35ef4d/packages/carson/src/workspace/Workspace.ts#L81)
+[packages/carson/src/workspace/Workspace.ts:81](https://github.com/jakubmazanec/js-tools/blob/9a16bed/packages/carson/src/workspace/Workspace.ts#L81)
 
 ---
 
@@ -155,7 +155,7 @@ Does the workspace contain a multiple projects?
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:51](https://github.com/jakubmazanec/js-tools/blob/d35ef4d/packages/carson/src/workspace/Workspace.ts#L51)
+[packages/carson/src/workspace/Workspace.ts:51](https://github.com/jakubmazanec/js-tools/blob/9a16bed/packages/carson/src/workspace/Workspace.ts#L51)
 
 ---
 
@@ -168,7 +168,7 @@ found, the default is an empty object.
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:63](https://github.com/jakubmazanec/js-tools/blob/d35ef4d/packages/carson/src/workspace/Workspace.ts#L63)
+[packages/carson/src/workspace/Workspace.ts:63](https://github.com/jakubmazanec/js-tools/blob/9a16bed/packages/carson/src/workspace/Workspace.ts#L63)
 
 ---
 
@@ -180,7 +180,7 @@ Workspace path.
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:48](https://github.com/jakubmazanec/js-tools/blob/d35ef4d/packages/carson/src/workspace/Workspace.ts#L48)
+[packages/carson/src/workspace/Workspace.ts:48](https://github.com/jakubmazanec/js-tools/blob/9a16bed/packages/carson/src/workspace/Workspace.ts#L48)
 
 ---
 
@@ -192,7 +192,7 @@ Globs used to find projects.
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:54](https://github.com/jakubmazanec/js-tools/blob/d35ef4d/packages/carson/src/workspace/Workspace.ts#L54)
+[packages/carson/src/workspace/Workspace.ts:54](https://github.com/jakubmazanec/js-tools/blob/9a16bed/packages/carson/src/workspace/Workspace.ts#L54)
 
 ---
 
@@ -204,7 +204,7 @@ Workspace projects.
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:57](https://github.com/jakubmazanec/js-tools/blob/d35ef4d/packages/carson/src/workspace/Workspace.ts#L57)
+[packages/carson/src/workspace/Workspace.ts:57](https://github.com/jakubmazanec/js-tools/blob/9a16bed/packages/carson/src/workspace/Workspace.ts#L57)
 
 ---
 
@@ -216,7 +216,7 @@ Workspace git repository.
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:66](https://github.com/jakubmazanec/js-tools/blob/d35ef4d/packages/carson/src/workspace/Workspace.ts#L66)
+[packages/carson/src/workspace/Workspace.ts:66](https://github.com/jakubmazanec/js-tools/blob/9a16bed/packages/carson/src/workspace/Workspace.ts#L66)
 
 ## Methods
 
@@ -236,7 +236,7 @@ Workspace git repository.
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:568](https://github.com/jakubmazanec/js-tools/blob/d35ef4d/packages/carson/src/workspace/Workspace.ts#L568)
+[packages/carson/src/workspace/Workspace.ts:568](https://github.com/jakubmazanec/js-tools/blob/9a16bed/packages/carson/src/workspace/Workspace.ts#L568)
 
 ---
 
@@ -256,7 +256,7 @@ Workspace git repository.
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:594](https://github.com/jakubmazanec/js-tools/blob/d35ef4d/packages/carson/src/workspace/Workspace.ts#L594)
+[packages/carson/src/workspace/Workspace.ts:594](https://github.com/jakubmazanec/js-tools/blob/9a16bed/packages/carson/src/workspace/Workspace.ts#L594)
 
 ---
 
@@ -276,7 +276,7 @@ Workspace git repository.
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:529](https://github.com/jakubmazanec/js-tools/blob/d35ef4d/packages/carson/src/workspace/Workspace.ts#L529)
+[packages/carson/src/workspace/Workspace.ts:529](https://github.com/jakubmazanec/js-tools/blob/9a16bed/packages/carson/src/workspace/Workspace.ts#L529)
 
 ---
 
@@ -296,7 +296,7 @@ Workspace git repository.
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:519](https://github.com/jakubmazanec/js-tools/blob/d35ef4d/packages/carson/src/workspace/Workspace.ts#L519)
+[packages/carson/src/workspace/Workspace.ts:519](https://github.com/jakubmazanec/js-tools/blob/9a16bed/packages/carson/src/workspace/Workspace.ts#L519)
 
 ---
 
@@ -310,7 +310,7 @@ Workspace git repository.
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:372](https://github.com/jakubmazanec/js-tools/blob/d35ef4d/packages/carson/src/workspace/Workspace.ts#L372)
+[packages/carson/src/workspace/Workspace.ts:372](https://github.com/jakubmazanec/js-tools/blob/9a16bed/packages/carson/src/workspace/Workspace.ts#L372)
 
 ---
 
@@ -324,7 +324,7 @@ Workspace git repository.
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:623](https://github.com/jakubmazanec/js-tools/blob/d35ef4d/packages/carson/src/workspace/Workspace.ts#L623)
+[packages/carson/src/workspace/Workspace.ts:623](https://github.com/jakubmazanec/js-tools/blob/9a16bed/packages/carson/src/workspace/Workspace.ts#L623)
 
 ---
 
@@ -338,7 +338,7 @@ Workspace git repository.
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:655](https://github.com/jakubmazanec/js-tools/blob/d35ef4d/packages/carson/src/workspace/Workspace.ts#L655)
+[packages/carson/src/workspace/Workspace.ts:655](https://github.com/jakubmazanec/js-tools/blob/9a16bed/packages/carson/src/workspace/Workspace.ts#L655)
 
 ---
 
@@ -358,7 +358,7 @@ Workspace git repository.
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:490](https://github.com/jakubmazanec/js-tools/blob/d35ef4d/packages/carson/src/workspace/Workspace.ts#L490)
+[packages/carson/src/workspace/Workspace.ts:490](https://github.com/jakubmazanec/js-tools/blob/9a16bed/packages/carson/src/workspace/Workspace.ts#L490)
 
 ---
 
@@ -372,7 +372,7 @@ Workspace git repository.
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:659](https://github.com/jakubmazanec/js-tools/blob/d35ef4d/packages/carson/src/workspace/Workspace.ts#L659)
+[packages/carson/src/workspace/Workspace.ts:659](https://github.com/jakubmazanec/js-tools/blob/9a16bed/packages/carson/src/workspace/Workspace.ts#L659)
 
 ---
 
@@ -397,7 +397,7 @@ The new workspace.
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:164](https://github.com/jakubmazanec/js-tools/blob/d35ef4d/packages/carson/src/workspace/Workspace.ts#L164)
+[packages/carson/src/workspace/Workspace.ts:164](https://github.com/jakubmazanec/js-tools/blob/9a16bed/packages/carson/src/workspace/Workspace.ts#L164)
 
 ---
 
@@ -422,7 +422,7 @@ Workspace path, if found.
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:288](https://github.com/jakubmazanec/js-tools/blob/d35ef4d/packages/carson/src/workspace/Workspace.ts#L288)
+[packages/carson/src/workspace/Workspace.ts:288](https://github.com/jakubmazanec/js-tools/blob/9a16bed/packages/carson/src/workspace/Workspace.ts#L288)
 
 ---
 
@@ -458,7 +458,7 @@ Traverses file system up from the search path and tries to find and read a works
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:334](https://github.com/jakubmazanec/js-tools/blob/d35ef4d/packages/carson/src/workspace/Workspace.ts#L334)
+[packages/carson/src/workspace/Workspace.ts:334](https://github.com/jakubmazanec/js-tools/blob/9a16bed/packages/carson/src/workspace/Workspace.ts#L334)
 
 ---
 
@@ -479,4 +479,4 @@ Traverses file system up from the search path and tries to find and read a works
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:207](https://github.com/jakubmazanec/js-tools/blob/d35ef4d/packages/carson/src/workspace/Workspace.ts#L207)
+[packages/carson/src/workspace/Workspace.ts:207](https://github.com/jakubmazanec/js-tools/blob/9a16bed/packages/carson/src/workspace/Workspace.ts#L207)
