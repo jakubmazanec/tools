@@ -782,6 +782,20 @@ describe('parseArgs()', () => {
         },
       },
       {
+        label: 'required parameter can be preceded by parameter with a default value',
+        args: ['foo', 'bar'],
+        config: {
+          parameters: [
+            {type: 'string', defaultValue: 'foo'},
+            {type: 'string', required: true},
+          ],
+        } as const,
+        expectedResult: {
+          parameters: ['foo', 'bar'],
+          errors: [],
+        },
+      },
+      {
         label: 'invalid required parameter order leads to an error (#1)',
         args: ['foo', 'bar'],
         config: {
@@ -791,7 +805,7 @@ describe('parseArgs()', () => {
           parameters: ['foo', 'bar'],
           errors: [
             new ValidationError('INVALID_PARAMETER_ORDER', {
-              messageParameters: [0, 1],
+              messageParameters: [1],
             }),
           ],
         },
@@ -806,7 +820,7 @@ describe('parseArgs()', () => {
           parameters: [undefined, undefined],
           errors: [
             new ValidationError('INVALID_PARAMETER_ORDER', {
-              messageParameters: [0, 1],
+              messageParameters: [1],
             }),
             new ValidationError('MISSING_PARAMETER', {
               messageParameters: [1],
@@ -824,7 +838,7 @@ describe('parseArgs()', () => {
           parameters: [Number.NaN, undefined],
           errors: [
             new ValidationError('INVALID_PARAMETER_ORDER', {
-              messageParameters: [0, 1],
+              messageParameters: [1],
             }),
             new ValidationError('MISSING_PARAMETER', {
               messageParameters: [1],

@@ -39,14 +39,17 @@ export class Checker {
       if (
         i >= 1 &&
         parameterConfig.required === true &&
-        parametersConfig[i - 1]?.required !== true
+        !parametersConfig
+          .slice(0, i)
+          .every(
+            (previousParameterConfig) =>
+              previousParameterConfig.required === true ||
+              typeof previousParameterConfig.defaultValue !== 'undefined',
+          )
       ) {
         this.addError(
           new ValidationError('INVALID_PARAMETER_ORDER', {
-            messageParameters: [
-              parametersConfig[i - 1]?.label ?? i - 1,
-              parameterConfig.label ?? i,
-            ],
+            messageParameters: [parameterConfig.label ?? i],
           }),
         );
       }

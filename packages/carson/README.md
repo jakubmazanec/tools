@@ -73,19 +73,19 @@ Take a look at this simplified example of a workspace:
 ```
 workspace/
 ├── .carson/
-│   ├── .snapshots
+│   ├── workspace.snapshot
 │   └── workspace.json
 ├── packages/
 │   ├── foo/
 │   │   ├── .carson/
-│   │   │   ├── .snapshots
+│   │   │   ├── project.snapshot
 │   │   │   └── project.json
 │   │   ├── src/
 │   │   │   └── main.js
 │   │   └── package.json
 │   └── bar/
 │       ├── .carson/
-│       │   ├── .snapshots
+│       │   ├── project.snapshot
 │       │   └── project.json
 │       ├── src/
 │       │   └── main.js
