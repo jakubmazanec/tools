@@ -56,7 +56,7 @@ jobs:
 
               for (let [packageName, bump] of packageBumps) {
                 message =
-                  message + `Updated dependency \`${packageName}\` to \`${bump}\`.\n`;
+                  message + `Dependency \`${packageName}\` updated to \`${bump}\`.\n`;
               }
 
               let header = packages
