@@ -31,9 +31,9 @@
     "lodash.camelcase": "^4.3.0"
   },
   "devDependencies": {
-    "@jest/globals": "^29.5.0",
+    "@jest/globals": "^29.7.0",
     "@types/lodash.camelcase": "^4.3.7",
-    "@types/node": "^16.18.3"
+    "@types/node": "^16.18.55"
   },
   "packageManager": "npm@8.19.4",
   "engines": {

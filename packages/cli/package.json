@@ -35,22 +35,22 @@
     "fs-extra": "^10.0.1",
     "latest-version": "^7.0.0",
     "lodash": "^4.17.21",
-    "react-error-boundary": "^4.0.7",
-    "zod": "^3.14.4"
+    "react-error-boundary": "^4.0.11",
+    "zod": "^3.22.2"
   },
   "devDependencies": {
-    "@jest/globals": "^29.5.0",
+    "@jest/globals": "^29.7.0",
     "@types/fs-extra": "^9.0.13",
-    "@types/lodash": "^4.14.195",
-    "@types/node": "^16.18.3",
-    "@types/react": "^18.0.26",
+    "@types/lodash": "^4.14.199",
+    "@types/node": "^16.18.55",
+    "@types/react": "^18.2.23",
     "ink": "^3.2.0",
     "ink-testing-library": "^3.0.0",
     "react": "^18.2.0"
   },
   "peerDependencies": {
     "@types/react": "17.x || 18.x",
-    "ink": "^3.0.0",
+    "ink": "^3.2.0",
     "react": "17.x || 18.x"
   },
   "peerDependenciesMeta": {

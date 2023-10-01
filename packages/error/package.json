@@ -26,10 +26,10 @@
     "typecheck": "tsc --project tsconfig.typecheck.json"
   },
   "dependencies": {
-    "zod": "^3.21.4"
+    "zod": "^3.22.2"
   },
   "devDependencies": {
-    "@jest/globals": "^29.5.0"
+    "@jest/globals": "^29.7.0"
   },
   "packageManager": "npm@8.19.4",
   "engines": {
