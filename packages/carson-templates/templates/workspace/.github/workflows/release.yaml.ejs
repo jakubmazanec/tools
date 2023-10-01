@@ -7,11 +7,11 @@ name: Release
 on: [push, workflow_dispatch]
 
 jobs:
-  main_branch_release:
+  release_main_branch:
     name: Main branch release
+    if: ${{ github.ref_name == '<%- getMainBranch(workspace) %>' }}
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    if: "github.ref_name == '<%- getMainBranch(workspace) %>'"
     steps:
       - name: Cancel previous runs
         uses: styfle/cancel-workflow-action@0.11.0
@@ -43,7 +43,7 @@ jobs:
 
           if [[ -n $git_status ]]; then
             echo "You have uncommitted changes!"
-            git status --porcelain
+            git diff
             git config --unset core.filemode
             exit 1
           fi
@@ -60,7 +60,7 @@ jobs:
 
           if [[ -n $git_status ]]; then
             echo "You have uncommitted changes!"
-            git status --porcelain
+            git diff
             git config --unset core.filemode
             exit 1
           fi
@@ -131,11 +131,11 @@ jobs:
           git merge <%- getMainBranch(workspace) %> --no-verify
           git push -u origin <%- getDevelopmentBranch(workspace) %> --no-verify
 
-  development_branch_release:
+  release_development_branch:
     name: Development branch release
+    if: ${{ github.ref_name == '<%- getDevelopmentBranch(workspace) %>' }}
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    if: "github.ref_name == '<%- getDevelopmentBranch(workspace) %>'"
     steps:
       - name: Cancel previous runs
         uses: styfle/cancel-workflow-action@0.11.0
@@ -167,7 +167,7 @@ jobs:
 
           if [[ -n $git_status ]]; then
             echo "You have uncommitted changes!"
-            git status --porcelain
+            git diff
             git config --unset core.filemode
             exit 1
           fi
@@ -184,7 +184,7 @@ jobs:
 
           if [[ -n $git_status ]]; then
             echo "You have uncommitted changes!"
-            git status --porcelain
+            git diff
             git config --unset core.filemode
             exit 1
           fi
@@ -224,11 +224,11 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-  feature_branch_release:
+  release_feature_branch:
     name: Feature branch release
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    if: "github.ref_name != '<%- getMainBranch(workspace) %>' && github.ref_name != '<%- getDevelopmentBranch(workspace) %>'"
+    if: ${{ github.ref_name != '<%- getMainBranch(workspace) %>' && github.ref_name != '<%- getDevelopmentBranch(workspace) %>' && github.actor != 'renovate[bot]' }}
     steps:
       - name: Cancel previous runs
         uses: styfle/cancel-workflow-action@0.11.0
@@ -260,7 +260,7 @@ jobs:
 
           if [[ -n $git_status ]]; then
             echo "You have uncommitted changes!"
-            git status --porcelain
+            git diff
             git config --unset core.filemode
             exit 1
           fi
@@ -277,7 +277,7 @@ jobs:
 
           if [[ -n $git_status ]]; then
             echo "You have uncommitted changes!"
-            git status --porcelain
+            git diff
             git config --unset core.filemode
             exit 1
           fi
