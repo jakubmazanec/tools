@@ -3,7 +3,7 @@ name: Release
 on: [push, workflow_dispatch]
 
 jobs:
-  main_branch_release:
+  release_main_branch:
     name: Main branch release
     runs-on: ubuntu-latest
     timeout-minutes: 15
@@ -39,7 +39,7 @@ jobs:
 
           if [[ -n $git_status ]]; then
             echo "You have uncommitted changes!"
-            git status --porcelain
+            git diff
             git config --unset core.filemode
             exit 1
           fi
@@ -56,7 +56,7 @@ jobs:
 
           if [[ -n $git_status ]]; then
             echo "You have uncommitted changes!"
-            git status --porcelain
+            git diff
             git config --unset core.filemode
             exit 1
           fi
@@ -127,7 +127,7 @@ jobs:
           git merge main --no-verify
           git push -u origin development --no-verify
 
-  development_branch_release:
+  release_development_branch:
     name: Development branch release
     runs-on: ubuntu-latest
     timeout-minutes: 15
@@ -163,7 +163,7 @@ jobs:
 
           if [[ -n $git_status ]]; then
             echo "You have uncommitted changes!"
-            git status --porcelain
+            git diff
             git config --unset core.filemode
             exit 1
           fi
@@ -180,7 +180,7 @@ jobs:
 
           if [[ -n $git_status ]]; then
             echo "You have uncommitted changes!"
-            git status --porcelain
+            git diff
             git config --unset core.filemode
             exit 1
           fi
@@ -220,11 +220,13 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-  feature_branch_release:
+  release_feature_branch:
     name: Feature branch release
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    if: "github.ref_name != 'main' && github.ref_name != 'development'"
+    if:
+      "github.ref_name != 'main' && github.ref_name != 'development' && github.actor !=
+      'renovate[bot]'"
     steps:
       - name: Cancel previous runs
         uses: styfle/cancel-workflow-action@0.11.0
@@ -256,7 +258,7 @@ jobs:
 
           if [[ -n $git_status ]]; then
             echo "You have uncommitted changes!"
-            git status --porcelain
+            git diff
             git config --unset core.filemode
             exit 1
           fi
@@ -273,7 +275,7 @@ jobs:
 
           if [[ -n $git_status ]]; then
             echo "You have uncommitted changes!"
-            git status --porcelain
+            git diff
             git config --unset core.filemode
             exit 1
           fi

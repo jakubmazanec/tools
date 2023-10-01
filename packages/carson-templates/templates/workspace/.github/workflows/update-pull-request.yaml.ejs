@@ -1,0 +1,131 @@
+---
+to: '.github/workflows/update-pull-request.yaml'
+strategy: overwrite
+---
+name: Update pull request
+
+on:
+  pull_request_target:
+    branches: [development]
+
+jobs:
+  update_pull_request:
+    name: Update pull request
+    if: ${{ github.actor == 'renovate[bot]' && contains(github.head_ref, 'renovate/') }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+          token: ${{secrets.PAT}}
+          fetch-depth: 0
+
+      - name: Configure git
+        run: |
+          git config user.email "bot@mazanec.dev"
+          git config user.name "Bot"
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install packages
+        run: npm ci
+
+      - name: Generate changeset
+        uses: actions/github-script@v6
+        with:
+          script: |
+            let { promises: fs } = require('fs');
+
+            async function getPackagesNames(files) {
+              let names = [];
+
+              for (let file of files) {
+                let data = JSON.parse(await fs.readFile(file, 'utf8'));
+
+                if (!data.private) {
+                  names.push(data.name);
+                }
+              }
+
+              return names;
+            }
+
+            async function createChangeset(fileName, packageBumps, packages) {
+              let message = '';
+
+              for (let [packageName, bump] of packageBumps) {
+                message =
+                  message + `Dependency \`${packageName}\` updated to version \`${bump}\`.\n`;
+              }
+
+              message = message.replace('\n', ' ');
+
+              let header = packages
+                .map((packageName) => `'${packageName}': patch`)
+                .join('\n');
+
+              await fs.writeFile(fileName, `---\n${header}\n---\n${message.trim()}\n`);
+            }
+
+            async function getBumps(files) {
+              let bumps = new Map();
+
+              for (let file of files) {
+                let { stdout: changes } = await exec.getExecOutput('git', ['show', file]);
+
+                for (let change of changes.split('\n')) {
+                  if (!change.startsWith('+ ')) {
+                    continue;
+                  }
+
+                  let match = change.match(/"(.*?)"/g);
+
+                  bumps.set(match[0].replace(/"/g, ''), match[1].replace(/"/g, ''));
+                }
+              }
+
+              return bumps;
+            }
+
+            let diffOutput = await exec.getExecOutput('git diff --name-only HEAD~1');
+            let diffFiles = diffOutput.stdout.split('\n');
+
+            if (diffFiles.find((diffFile) => diffFile.startsWith('.changeset'))) {
+              console.log('Changeset already exists, skipping...');
+
+              return;
+            }
+
+            let files = diffFiles
+              .filter((file) => file !== 'package.json') // skip root package.json
+              .filter((file) => file.includes('package.json'));
+            let packageNames = await getPackagesNames(files);
+
+            if (!packageNames.length) {
+              console.log('No package.json changes to published packages, skipping...');
+
+              await exec.exec('npx', ['changeset', '--empty']);
+
+              return;
+            }
+
+            let { stdout: shortHash } = await exec.getExecOutput(
+              'git rev-parse --short HEAD',
+            );
+            let fileName = `.changeset/renovate-${shortHash.trim()}.md`;
+            let packageBumps = await getBumps(files);
+
+            await createChangeset(fileName, packageBumps, packageNames);
+
+      - name: Update Carson
+        run: |
+          npm install
+
+      - name: Commit and push changes
+        run: |
+          git add . --all
+          git commit -m"Update"
+          git push --force

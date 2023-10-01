@@ -6,14 +6,20 @@ on:
       - development
 
 jobs:
-  pull_request_check:
+  check_pull_request:
+    name: Check pull request
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v3
         with:
-          token: ${{secrets.GITHUB_TOKEN}}
+          token: ${{secrets.PAT}}
           fetch-depth: 0
+
+      - name: Configure git
+        run: |
+          git config user.email "bot@mazanec.dev"
+          git config user.name "Bot"
 
       - uses: actions/setup-node@v3
         with:
@@ -54,4 +60,5 @@ jobs:
           git config --unset core.filemode
 
       - name: Check for changesets
+        if: "github.actor != 'renovate[bot]'"
         run: npx changeset status --since=origin/development
