@@ -29,9 +29,9 @@
     "dotenv": "^16.0.3"
   },
   "devDependencies": {
-    "@changesets/parse": "^0.3.15",
-    "@changesets/types": "^5.2.0",
-    "@types/node": "^16.18.3"
+    "@changesets/parse": "^0.3.16",
+    "@changesets/types": "^5.2.1",
+    "@types/node": "^16.18.55"
   },
   "packageManager": "npm@8.19.4",
   "engines": {

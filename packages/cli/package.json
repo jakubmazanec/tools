@@ -39,11 +39,11 @@
     "zod": "^3.14.4"
   },
   "devDependencies": {
-    "@jest/globals": "^29.5.0",
+    "@jest/globals": "^29.7.0",
     "@types/fs-extra": "^9.0.13",
-    "@types/lodash": "^4.14.195",
-    "@types/node": "^16.18.3",
-    "@types/react": "^18.0.26",
+    "@types/lodash": "^4.14.199",
+    "@types/node": "^16.18.55",
+    "@types/react": "^18.2.23",
     "ink": "^3.2.0",
     "ink-testing-library": "^3.0.0",
     "react": "^18.2.0"

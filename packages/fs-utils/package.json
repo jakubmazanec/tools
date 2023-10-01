@@ -29,7 +29,7 @@
     "fs-extra": "^10.0.1"
   },
   "devDependencies": {
-    "@jest/globals": "^29.5.0",
+    "@jest/globals": "^29.7.0",
     "@types/fs-extra": "^9.0.13"
   },
   "packageManager": "npm@8.19.4",
