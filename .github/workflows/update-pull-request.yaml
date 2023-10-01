@@ -1,29 +1,21 @@
-name: Generate changeset
+name: Update pull request
 
 on:
-  workflow_dispatch:
   pull_request_target:
-    paths:
-      - '.github/workflows/renovate.yaml'
-      - '**/package.json'
-      - '**/package-lock.json'
+    branches:
+      - development
 
 jobs:
-  generate-changeset:
-    name: Generate changeset
+  update_pull_request:
+    name: Update pull request
+    if: github.actor == 'renovate[bot]'
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    if: github.actor == 'renovate[bot]'
     steps:
-      - name: Cancel previous runs
-        uses: styfle/cancel-workflow-action@0.11.0
-        with:
-          access_token: ${{ secrets.GITHUB_TOKEN }}
-
       - uses: actions/checkout@v3
         with:
           ref: ${{ github.head_ref }}
-          token: ${{secrets.PAT}}
+          token: ${{secrets.GITHUB_TOKEN}}
           fetch-depth: 0
 
       - name: Configure git
@@ -31,8 +23,16 @@ jobs:
           git config user.email "bot@mazanec.dev"
           git config user.name "Bot"
 
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install packages
+        run: npm ci
+
       - name: Generate changeset
         uses: actions/github-script@v6
+        if: ${{ github.actor == 'renovate[bot]' }}
         with:
           script: |
             let { promises: fs } = require('fs');
@@ -86,14 +86,6 @@ jobs:
               return bumps;
             }
 
-            let branch = await exec.getExecOutput('git branch --show-current');
-
-            if (!branch.stdout.startsWith('renovate/')) {
-              console.log('Not a renovate branch, skipping...');
-
-              return;
-            }
-
             let diffOutput = await exec.getExecOutput('git diff --name-only HEAD~1');
             let diffFiles = diffOutput.stdout.split('\n');
 
@@ -111,6 +103,11 @@ jobs:
             if (!packageNames.length) {
               console.log('No package.json changes to published packages, skipping...');
 
+              await exec.exec('npx', ['changeset', '--empty']);
+              await exec.exec('git', ['add', '.', '--all']);
+              await exec.exec('git commit -C HEAD --amend --no-edit');
+              await exec.exec('git push --force');
+
               return;
             }
 
@@ -121,6 +118,14 @@ jobs:
             let packageBumps = await getBumps(files);
 
             await createChangeset(fileName, packageBumps, packageNames);
-            await exec.exec('git', ['add', fileName]);
+            await exec.exec('git', ['add', '.', '--all']);
             await exec.exec('git commit -C HEAD --amend --no-edit');
             await exec.exec('git push --force');
+
+      - name: Update Carson
+        if: ${{ github.actor == 'renovate[bot]' }}
+        run: |
+          npm install
+          git add . --all
+          git commit -C HEAD --amend --no-edit
+          git push --force
