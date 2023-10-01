@@ -39,7 +39,7 @@ jobs:
 
           if [[ -n $git_status ]]; then
             echo "You have uncommitted changes!"
-            git status --porcelain
+            git diff
             git config --unset core.filemode
             exit 1
           fi
@@ -56,7 +56,7 @@ jobs:
 
           if [[ -n $git_status ]]; then
             echo "You have uncommitted changes!"
-            git status --porcelain
+            git diff
             git config --unset core.filemode
             exit 1
           fi
@@ -163,7 +163,7 @@ jobs:
 
           if [[ -n $git_status ]]; then
             echo "You have uncommitted changes!"
-            git status --porcelain
+            git diff
             git config --unset core.filemode
             exit 1
           fi
@@ -180,7 +180,7 @@ jobs:
 
           if [[ -n $git_status ]]; then
             echo "You have uncommitted changes!"
-            git status --porcelain
+            git diff
             git config --unset core.filemode
             exit 1
           fi
@@ -224,7 +224,9 @@ jobs:
     name: Feature branch release
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    if: "github.ref_name != 'main' && github.ref_name != 'development'"
+    if:
+      "github.ref_name != 'main' && github.ref_name != 'development' && github.actor !=
+      'renovate[bot]'"
     steps:
       - name: Cancel previous runs
         uses: styfle/cancel-workflow-action@0.11.0
@@ -256,7 +258,7 @@ jobs:
 
           if [[ -n $git_status ]]; then
             echo "You have uncommitted changes!"
-            git status --porcelain
+            git diff
             git config --unset core.filemode
             exit 1
           fi
@@ -273,7 +275,7 @@ jobs:
 
           if [[ -n $git_status ]]; then
             echo "You have uncommitted changes!"
-            git status --porcelain
+            git diff
             git config --unset core.filemode
             exit 1
           fi
@@ -282,6 +284,179 @@ jobs:
 
       - name: Build packages
         run: npm run build
+
+      - name: Authenticate to npm registry
+        run: |
+          echo "//registry.npmjs.com/:_authToken=NPM_TOKEN" > .npmrc
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Version packages
+        run: |
+          npx changeset version --snapshot unstable --snapshot-prerelease-template "{tag}.{commit}"
+          git status
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish packages
+        run: |
+          npx changeset publish --tag unstable --no-git-tag
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+  renovate_bot_release:
+    name: Renovate bot release
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    if:
+      "github.ref_name != 'main' && github.ref_name != 'development' && github.actor ==
+      'renovate[bot]'"
+    steps:
+      - name: Cancel previous runs
+        uses: styfle/cancel-workflow-action@0.11.0
+        with:
+          access_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Configure git
+        run: |
+          git config user.email "bot@mazanec.dev"
+          git config user.name "Bot"
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install packages
+        run: npm ci
+
+      - name: Run tests
+        run: npm test
+
+      - name: Build packages
+        run: npm run build
+
+      - name: Generate changeset
+        uses: actions/github-script@v6
+        with:
+          script: |
+            let { promises: fs } = require('fs');
+
+            async function getPackagesNames(files) {
+              let names = [];
+
+              for (let file of files) {
+                let data = JSON.parse(await fs.readFile(file, 'utf8'));
+
+                if (!data.private) {
+                  names.push(data.name);
+                }
+              }
+
+              return names;
+            }
+
+            async function createChangeset(fileName, packageBumps, packages) {
+              let message = '';
+
+              for (let [packageName, bump] of packageBumps) {
+                message =
+                  message + `Dependency \`${packageName}\` updated to \`${bump}\`.\n`;
+              }
+
+              let header = packages
+                .map((packageName) => `'${packageName}': patch`)
+                .join('\n');
+
+              await fs.writeFile(fileName, `---\n${header}\n---\n${message.trim()}\n`);
+            }
+
+            async function getBumps(files) {
+              let bumps = new Map();
+
+              for (let file of files) {
+                let { stdout: changes } = await exec.getExecOutput('git', ['show', file]);
+
+                for (let change of changes.split('\n')) {
+                  if (!change.startsWith('+ ')) {
+                    continue;
+                  }
+
+                  let match = change.match(/"(.*?)"/g);
+
+                  bumps.set(match[0].replace(/"/g, ''), match[1].replace(/"/g, ''));
+                }
+              }
+
+              return bumps;
+            }
+
+            let branch = await exec.getExecOutput('git branch --show-current');
+
+            if (!branch.stdout.startsWith('renovate/')) {
+              console.log('Not a renovate branch, skipping...');
+
+              return;
+            }
+
+            let diffOutput = await exec.getExecOutput('git diff --name-only HEAD~1');
+            let diffFiles = diffOutput.stdout.split('\n');
+
+            if (diffFiles.find((diffFile) => diffFile.startsWith('.changeset'))) {
+              console.log('Changeset already exists, skipping...');
+
+              return;
+            }
+
+            let files = diffFiles
+              .filter((file) => file !== 'package.json') // skip root package.json
+              .filter((file) => file.includes('package.json'));
+            let packageNames = await getPackagesNames(files);
+
+            if (!packageNames.length) {
+              console.log('No package.json changes to published packages, skipping...');
+
+              await exec.exec('npx', ['changeset', '--empty']);
+              await exec.exec('git', ['add', '.', '--all']);
+              await exec.exec('git commit -m"Add changeset [skip actions]"');
+              await exec.exec('git push');
+
+              return;
+            }
+
+            let { stdout: shortHash } = await exec.getExecOutput(
+              'git rev-parse --short HEAD',
+            );
+            let fileName = `.changeset/renovate-${shortHash.trim()}.md`;
+            let packageBumps = await getBumps(files);
+
+            await createChangeset(fileName, packageBumps, packageNames);
+            await exec.exec('git', ['add', '.', '--all']);
+            await exec.exec('git commit -m"Add changeset [skip actions]"');
+            await exec.exec('git push');
+
+      - name: Update Carson
+        uses: actions/github-script@v6
+        with:
+          script: |
+            let branch = await exec.getExecOutput('git branch --show-current');
+
+            if (!branch.stdout.startsWith('renovate/')) {
+              console.log('Not a renovate branch, skipping...');
+
+              return;
+            }
+
+            await exec.exec('npm', ['install']);
+            await exec.exec('git', ['add', '.', '--all']);
+            await exec.exec('git commit -m"Run Carson update [skip actions]"');
+            await exec.exec('git push');
 
       - name: Authenticate to npm registry
         run: |
