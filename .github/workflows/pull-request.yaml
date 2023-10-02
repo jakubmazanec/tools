@@ -12,7 +12,7 @@ jobs:
     timeout-minutes: 15
     if: "github.actor != 'renovate[bot]'"
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
         with:
           token: ${{secrets.GITHUB_TOKEN}}
           fetch-depth: 0
@@ -64,7 +64,7 @@ jobs:
     timeout-minutes: 15
     if: "github.actor == 'renovate[bot]'"
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
         with:
           token: ${{secrets.GITHUB_TOKEN}}
           fetch-depth: 0
