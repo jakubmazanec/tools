@@ -46,9 +46,9 @@ let packageJson = lodash.merge(
       uninstall: 'del-cli ./**/node_modules ./package-lock.json',
     },
     devDependencies: developmentDependencies,
-    packageManager: 'npm@8.19.4',
+    packageManager: 'npm@10.1.0',
     engines: {
-      node: '>=16.20.0',
+      node: '^20.8.0',
     },
   },
   workspace.config.overrides?.packageJson ?? {},

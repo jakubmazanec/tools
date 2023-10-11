@@ -16,7 +16,7 @@ npm install @jakubmazanec/eslint-config
 
 #### Prerequisites
 
-- Node.js 16 or later
+- Node.js 20 or later
 - TypeScript 5 or later
 
 ## Usage

@@ -39,6 +39,7 @@
     "@jest/globals": "^29.5.0",
     "@types/fs-extra": "^9.0.13",
     "@types/lodash": "^4.14.195",
+    "@types/node": "^20.8.5",
     "execa": "^8.0.1",
     "fast-glob": "^3.2.11",
     "fs-extra": "^10.0.1",
@@ -47,8 +48,8 @@
   "peerDependencies": {
     "@jakubmazanec/carson": "^0.2.0"
   },
-  "packageManager": "npm@8.19.4",
+  "packageManager": "npm@10.1.0",
   "engines": {
-    "node": ">=16.20.2"
+    "node": "^20.8.0"
   }
 }

@@ -29,10 +29,11 @@
     "zod": "^3.21.4"
   },
   "devDependencies": {
-    "@jest/globals": "^29.5.0"
+    "@jest/globals": "^29.5.0",
+    "@types/node": "^20.8.5"
   },
-  "packageManager": "npm@8.19.4",
+  "packageManager": "npm@10.1.0",
   "engines": {
-    "node": ">=16.20.2"
+    "node": "^20.8.0"
   }
 }

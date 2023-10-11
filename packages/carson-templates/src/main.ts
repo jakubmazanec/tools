@@ -46,7 +46,7 @@ const DEPENDENCY_VERSIONS: Record<string, string> = {
   '@swc/cli': '^0.1.0',
   '@swc/core': '^1.0.0',
   '@testing-library/jest-dom': '^5.0.0',
-  '@types/node': '^16.0.0',
+  '@types/node': '^20.0.0',
   chokidar: '^3.0.0',
   'cross-env': '^7.0.0',
   'del-cli': '^5.0.0',

@@ -33,7 +33,7 @@ npm install @jakubmazanec/carson @jakubmazanec/carson-templates -g
 
 #### Prerequisites
 
-- Node.js 16 or later
+- Node.js 20 or later
 
 ## Usage
 

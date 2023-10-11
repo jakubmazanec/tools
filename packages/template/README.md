@@ -19,7 +19,7 @@ It cannot be required from a CommonJS module.
 
 #### Prerequisites
 
-- Node.js 16 or later
+- Node.js 20 or later
 - TypeScript 5 or later
 
 ## Usage
