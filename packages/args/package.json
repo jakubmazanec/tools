@@ -33,10 +33,10 @@
   "devDependencies": {
     "@jest/globals": "^29.5.0",
     "@types/lodash.camelcase": "^4.3.7",
-    "@types/node": "^16.18.3"
+    "@types/node": "^16.18.58"
   },
   "packageManager": "npm@8.19.4",
   "engines": {
-    "node": ">=16.20.0"
+    "node": ">=16.20.2"
   }
 }
