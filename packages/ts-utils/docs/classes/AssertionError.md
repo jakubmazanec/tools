@@ -45,7 +45,7 @@ Error.constructor
 
 #### Defined in
 
-[packages/ts-utils/src/utils/assert.ts:8](https://github.com/jakubmazanec/js-tools/blob/9306f5b/packages/ts-utils/src/utils/assert.ts#L8)
+[packages/ts-utils/src/utils/assert.ts:8](https://github.com/jakubmazanec/js-tools/blob/1e0b923/packages/ts-utils/src/utils/assert.ts#L8)
 
 ## Properties
 
