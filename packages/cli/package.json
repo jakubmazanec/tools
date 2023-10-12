@@ -42,7 +42,7 @@
     "@jest/globals": "^29.5.0",
     "@types/fs-extra": "^9.0.13",
     "@types/lodash": "^4.14.195",
-    "@types/node": "^16.18.3",
+    "@types/node": "^20.8.5",
     "@types/react": "^18.0.26",
     "ink": "^3.2.0",
     "ink-testing-library": "^3.0.0",
@@ -58,8 +58,8 @@
       "optional": true
     }
   },
-  "packageManager": "npm@8.19.4",
+  "packageManager": "npm@10.1.0",
   "engines": {
-    "node": ">=16.20.0"
+    "node": "^20.8.0"
   }
 }
