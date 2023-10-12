@@ -25,6 +25,7 @@
 
 ### Variables
 
+- [RELEASE_TYPES](semver.md#release_types)
 - [SEMVER_SPEC_VERSION](semver.md#semver_spec_version)
 
 ### Functions
@@ -76,7 +77,7 @@
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:136
+node_modules/@types/semver/index.d.ts:138
 
 ---
 
@@ -87,9 +88,19 @@ node_modules/@types/semver/index.d.ts:136
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:112
+node_modules/@types/semver/index.d.ts:114
 
 ## Variables
+
+### RELEASE_TYPES
+
+• `Const` **RELEASE_TYPES**: [`ReleaseType`](semver.md#releasetype)[]
+
+#### Defined in
+
+node_modules/@types/semver/index.d.ts:112
+
+---
 
 ### SEMVER_SPEC_VERSION
 

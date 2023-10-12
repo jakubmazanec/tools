@@ -60,7 +60,7 @@ parses that command from the command line arguments.
 
 #### Defined in
 
-[cli/src/program/Command.ts:36](https://github.com/jakubmazanec/js-tools/blob/1e0b923/packages/cli/src/program/Command.ts#L36)
+[cli/src/program/Command.ts:36](https://github.com/jakubmazanec/js-tools/blob/01fc14d/packages/cli/src/program/Command.ts#L36)
 
 ## Properties
 
@@ -71,7 +71,7 @@ parses that command from the command line arguments.
 
 #### Defined in
 
-[cli/src/program/Command.ts:29](https://github.com/jakubmazanec/js-tools/blob/1e0b923/packages/cli/src/program/Command.ts#L29)
+[cli/src/program/Command.ts:29](https://github.com/jakubmazanec/js-tools/blob/01fc14d/packages/cli/src/program/Command.ts#L29)
 
 ---
 
@@ -81,7 +81,7 @@ parses that command from the command line arguments.
 
 #### Defined in
 
-[cli/src/program/Command.ts:27](https://github.com/jakubmazanec/js-tools/blob/1e0b923/packages/cli/src/program/Command.ts#L27)
+[cli/src/program/Command.ts:27](https://github.com/jakubmazanec/js-tools/blob/01fc14d/packages/cli/src/program/Command.ts#L27)
 
 ---
 
@@ -91,7 +91,7 @@ parses that command from the command line arguments.
 
 #### Defined in
 
-[cli/src/program/Command.ts:28](https://github.com/jakubmazanec/js-tools/blob/1e0b923/packages/cli/src/program/Command.ts#L28)
+[cli/src/program/Command.ts:28](https://github.com/jakubmazanec/js-tools/blob/01fc14d/packages/cli/src/program/Command.ts#L28)
 
 ---
 
@@ -101,7 +101,7 @@ parses that command from the command line arguments.
 
 #### Defined in
 
-[cli/src/program/Command.ts:24](https://github.com/jakubmazanec/js-tools/blob/1e0b923/packages/cli/src/program/Command.ts#L24)
+[cli/src/program/Command.ts:24](https://github.com/jakubmazanec/js-tools/blob/01fc14d/packages/cli/src/program/Command.ts#L24)
 
 ---
 
@@ -111,7 +111,7 @@ parses that command from the command line arguments.
 
 #### Defined in
 
-[cli/src/program/Command.ts:23](https://github.com/jakubmazanec/js-tools/blob/1e0b923/packages/cli/src/program/Command.ts#L23)
+[cli/src/program/Command.ts:23](https://github.com/jakubmazanec/js-tools/blob/01fc14d/packages/cli/src/program/Command.ts#L23)
 
 ---
 
@@ -121,7 +121,7 @@ parses that command from the command line arguments.
 
 #### Defined in
 
-[cli/src/program/Command.ts:26](https://github.com/jakubmazanec/js-tools/blob/1e0b923/packages/cli/src/program/Command.ts#L26)
+[cli/src/program/Command.ts:26](https://github.com/jakubmazanec/js-tools/blob/01fc14d/packages/cli/src/program/Command.ts#L26)
 
 ---
 
@@ -131,7 +131,7 @@ parses that command from the command line arguments.
 
 #### Defined in
 
-[cli/src/program/Command.ts:25](https://github.com/jakubmazanec/js-tools/blob/1e0b923/packages/cli/src/program/Command.ts#L25)
+[cli/src/program/Command.ts:25](https://github.com/jakubmazanec/js-tools/blob/01fc14d/packages/cli/src/program/Command.ts#L25)
 
 ## Methods
 
@@ -156,7 +156,7 @@ this command.
 
 #### Defined in
 
-[cli/src/program/Command.ts:82](https://github.com/jakubmazanec/js-tools/blob/1e0b923/packages/cli/src/program/Command.ts#L82)
+[cli/src/program/Command.ts:82](https://github.com/jakubmazanec/js-tools/blob/01fc14d/packages/cli/src/program/Command.ts#L82)
 
 ---
 
@@ -179,4 +179,4 @@ Executes command action with provided parsed arguments and [Program](Program.md)
 
 #### Defined in
 
-[cli/src/program/Command.ts:107](https://github.com/jakubmazanec/js-tools/blob/1e0b923/packages/cli/src/program/Command.ts#L107)
+[cli/src/program/Command.ts:107](https://github.com/jakubmazanec/js-tools/blob/01fc14d/packages/cli/src/program/Command.ts#L107)

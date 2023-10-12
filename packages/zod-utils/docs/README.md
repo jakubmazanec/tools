@@ -39,7 +39,7 @@
 
 #### Defined in
 
-[packages/zod-utils/src/types/Json.ts:11](https://github.com/jakubmazanec/js-tools/blob/1e0b923/packages/zod-utils/src/types/Json.ts#L11)
+[packages/zod-utils/src/types/Json.ts:11](https://github.com/jakubmazanec/js-tools/blob/01fc14d/packages/zod-utils/src/types/Json.ts#L11)
 
 ---
 
@@ -49,7 +49,7 @@
 
 #### Defined in
 
-[packages/zod-utils/src/types/PackageJson.ts:294](https://github.com/jakubmazanec/js-tools/blob/1e0b923/packages/zod-utils/src/types/PackageJson.ts#L294)
+[packages/zod-utils/src/types/PackageJson.ts:294](https://github.com/jakubmazanec/js-tools/blob/01fc14d/packages/zod-utils/src/types/PackageJson.ts#L294)
 
 ---
 
@@ -59,7 +59,7 @@
 
 #### Defined in
 
-[packages/zod-utils/src/types/TsconfigJson.ts:346](https://github.com/jakubmazanec/js-tools/blob/1e0b923/packages/zod-utils/src/types/TsconfigJson.ts#L346)
+[packages/zod-utils/src/types/TsconfigJson.ts:346](https://github.com/jakubmazanec/js-tools/blob/01fc14d/packages/zod-utils/src/types/TsconfigJson.ts#L346)
 
 ## Variables
 
@@ -69,7 +69,7 @@
 
 #### Defined in
 
-[packages/zod-utils/src/types/Json.ts:7](https://github.com/jakubmazanec/js-tools/blob/1e0b923/packages/zod-utils/src/types/Json.ts#L7)
+[packages/zod-utils/src/types/Json.ts:7](https://github.com/jakubmazanec/js-tools/blob/01fc14d/packages/zod-utils/src/types/Json.ts#L7)
 
 ---
 
@@ -246,7 +246,7 @@ undefined; ... 21 more ...; postrestart?: string \| undefined; } ; `sideEffects?
 
 #### Defined in
 
-[packages/zod-utils/src/types/PackageJson.ts:150](https://github.com/jakubmazanec/js-tools/blob/1e0b923/packages/zod-utils/src/types/PackageJson.ts#L150)
+[packages/zod-utils/src/types/PackageJson.ts:150](https://github.com/jakubmazanec/js-tools/blob/01fc14d/packages/zod-utils/src/types/PackageJson.ts#L150)
 
 ---
 
@@ -512,7 +512,7 @@ enable?: boolean \| undefined; include?: string[] \| undefined; exclude?: string
 
 #### Defined in
 
-[packages/zod-utils/src/types/TsconfigJson.ts:333](https://github.com/jakubmazanec/js-tools/blob/1e0b923/packages/zod-utils/src/types/TsconfigJson.ts#L333)
+[packages/zod-utils/src/types/TsconfigJson.ts:333](https://github.com/jakubmazanec/js-tools/blob/01fc14d/packages/zod-utils/src/types/TsconfigJson.ts#L333)
 
 ## Functions
 
@@ -539,7 +539,7 @@ value is TypeOf<S\>
 
 #### Defined in
 
-[packages/zod-utils/src/utils/is.ts:3](https://github.com/jakubmazanec/js-tools/blob/1e0b923/packages/zod-utils/src/utils/is.ts#L3)
+[packages/zod-utils/src/utils/is.ts:3](https://github.com/jakubmazanec/js-tools/blob/01fc14d/packages/zod-utils/src/utils/is.ts#L3)
 
 ---
 
@@ -559,7 +559,7 @@ value is Object
 
 #### Defined in
 
-[packages/zod-utils/src/utils/isPackageJson.ts:3](https://github.com/jakubmazanec/js-tools/blob/1e0b923/packages/zod-utils/src/utils/isPackageJson.ts#L3)
+[packages/zod-utils/src/utils/isPackageJson.ts:3](https://github.com/jakubmazanec/js-tools/blob/01fc14d/packages/zod-utils/src/utils/isPackageJson.ts#L3)
 
 ---
 
@@ -579,7 +579,7 @@ value is Object
 
 #### Defined in
 
-[packages/zod-utils/src/utils/isTsconfigJson.ts:3](https://github.com/jakubmazanec/js-tools/blob/1e0b923/packages/zod-utils/src/utils/isTsconfigJson.ts#L3)
+[packages/zod-utils/src/utils/isTsconfigJson.ts:3](https://github.com/jakubmazanec/js-tools/blob/01fc14d/packages/zod-utils/src/utils/isTsconfigJson.ts#L3)
 
 ---
 
@@ -612,7 +612,7 @@ value is Object
 
 #### Defined in
 
-[packages/zod-utils/src/utils/readFile.ts:11](https://github.com/jakubmazanec/js-tools/blob/1e0b923/packages/zod-utils/src/utils/readFile.ts#L11)
+[packages/zod-utils/src/utils/readFile.ts:11](https://github.com/jakubmazanec/js-tools/blob/01fc14d/packages/zod-utils/src/utils/readFile.ts#L11)
 
 ---
 
@@ -645,7 +645,7 @@ value is Object
 
 #### Defined in
 
-[packages/zod-utils/src/utils/readJson.ts:12](https://github.com/jakubmazanec/js-tools/blob/1e0b923/packages/zod-utils/src/utils/readJson.ts#L12)
+[packages/zod-utils/src/utils/readJson.ts:12](https://github.com/jakubmazanec/js-tools/blob/01fc14d/packages/zod-utils/src/utils/readJson.ts#L12)
 
 ---
 
@@ -678,7 +678,7 @@ value is Object
 
 #### Defined in
 
-[packages/zod-utils/src/utils/readPackageJson.ts:13](https://github.com/jakubmazanec/js-tools/blob/1e0b923/packages/zod-utils/src/utils/readPackageJson.ts#L13)
+[packages/zod-utils/src/utils/readPackageJson.ts:13](https://github.com/jakubmazanec/js-tools/blob/01fc14d/packages/zod-utils/src/utils/readPackageJson.ts#L13)
 
 ---
 
@@ -698,4 +698,4 @@ value is Object
 
 #### Defined in
 
-[packages/zod-utils/src/utils/zodIssuesToString.ts:50](https://github.com/jakubmazanec/js-tools/blob/1e0b923/packages/zod-utils/src/utils/zodIssuesToString.ts#L50)
+[packages/zod-utils/src/utils/zodIssuesToString.ts:50](https://github.com/jakubmazanec/js-tools/blob/01fc14d/packages/zod-utils/src/utils/zodIssuesToString.ts#L50)

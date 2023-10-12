@@ -95,7 +95,7 @@ Array&lt;WorkspaceDependency\&gt;.constructor
 
 #### Defined in
 
-[packages/carson/src/workspace/WorkspaceDependencies.ts:19](https://github.com/jakubmazanec/js-tools/blob/1e0b923/packages/carson/src/workspace/WorkspaceDependencies.ts#L19)
+[packages/carson/src/workspace/WorkspaceDependencies.ts:19](https://github.com/jakubmazanec/js-tools/blob/01fc14d/packages/carson/src/workspace/WorkspaceDependencies.ts#L19)
 
 ## Properties
 
@@ -183,7 +183,7 @@ The workspace the dependencies are installed in.
 
 #### Defined in
 
-[packages/carson/src/workspace/WorkspaceDependencies.ts:17](https://github.com/jakubmazanec/js-tools/blob/1e0b923/packages/carson/src/workspace/WorkspaceDependencies.ts#L17)
+[packages/carson/src/workspace/WorkspaceDependencies.ts:17](https://github.com/jakubmazanec/js-tools/blob/01fc14d/packages/carson/src/workspace/WorkspaceDependencies.ts#L17)
 
 ---
 
@@ -766,7 +766,7 @@ Object whose keys are dependency names and values are sorted versions.
 
 #### Defined in
 
-[packages/carson/src/workspace/WorkspaceDependencies.ts:184](https://github.com/jakubmazanec/js-tools/blob/1e0b923/packages/carson/src/workspace/WorkspaceDependencies.ts#L184)
+[packages/carson/src/workspace/WorkspaceDependencies.ts:184](https://github.com/jakubmazanec/js-tools/blob/01fc14d/packages/carson/src/workspace/WorkspaceDependencies.ts#L184)
 
 ---
 
@@ -977,7 +977,7 @@ Array.push
 
 #### Defined in
 
-[packages/carson/src/workspace/WorkspaceDependencies.ts:40](https://github.com/jakubmazanec/js-tools/blob/1e0b923/packages/carson/src/workspace/WorkspaceDependencies.ts#L40)
+[packages/carson/src/workspace/WorkspaceDependencies.ts:40](https://github.com/jakubmazanec/js-tools/blob/01fc14d/packages/carson/src/workspace/WorkspaceDependencies.ts#L40)
 
 ---
 
@@ -1560,7 +1560,7 @@ The new [WorkspaceDependencies](WorkspaceDependencies.md) instance.
 
 #### Defined in
 
-[packages/carson/src/workspace/WorkspaceDependencies.ts:83](https://github.com/jakubmazanec/js-tools/blob/1e0b923/packages/carson/src/workspace/WorkspaceDependencies.ts#L83)
+[packages/carson/src/workspace/WorkspaceDependencies.ts:83](https://github.com/jakubmazanec/js-tools/blob/01fc14d/packages/carson/src/workspace/WorkspaceDependencies.ts#L83)
 
 ---
 

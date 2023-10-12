@@ -3465,7 +3465,7 @@ _.sortBy(users, 'user', function (o) {
 
 #### Defined in
 
-node_modules/@types/lodash/common/collection.d.ts:1900
+node_modules/@types/lodash/common/collection.d.ts:1904
 
 ▸ **sortBy**<`T`\>(`collection`, `...iteratees`): `T`[keyof `T`][]
 
@@ -3492,7 +3492,7 @@ node_modules/@types/lodash/common/collection.d.ts:1900
 
 #### Defined in
 
-node_modules/@types/lodash/common/collection.d.ts:1904
+node_modules/@types/lodash/common/collection.d.ts:1908
 
 ---
 
@@ -16374,7 +16374,7 @@ node_modules/@types/lodash/common/util.d.ts:960
 
 ### sample
 
-▸ **sample**<`T`\>(`collection`): `undefined` \| `T`
+▸ **sample**<`T`\>(`collection`): `T`
 
 Gets a random element from collection.
 
@@ -16386,19 +16386,45 @@ Gets a random element from collection.
 
 #### Parameters
 
-| Name         | Type                                                                                                                            | Description               |
-| :----------- | :------------------------------------------------------------------------------------------------------------------------------ | :------------------------ |
-| `collection` | `undefined` \| `null` \| [`Dictionary`](lodash.Dictionary.md)<`T`\> \| [`NumericDictionary`](lodash.NumericDictionary.md)<`T`\> | The collection to sample. |
+| Name         | Type                | Description               |
+| :----------- | :------------------ | :------------------------ |
+| `collection` | readonly [`T`, `T`] | The collection to sample. |
 
 #### Returns
 
-`undefined` \| `T`
+`T`
 
 Returns the random element.
 
 #### Defined in
 
 node_modules/@types/lodash/common/collection.d.ts:1648
+
+▸ **sample**<`T`\>(`collection`): `undefined` \| `T`
+
+#### Type parameters
+
+| Name |
+| :--- |
+| `T`  |
+
+#### Parameters
+
+| Name         | Type                                                                                                                            |
+| :----------- | :------------------------------------------------------------------------------------------------------------------------------ |
+| `collection` | `undefined` \| `null` \| [`Dictionary`](lodash.Dictionary.md)<`T`\> \| [`NumericDictionary`](lodash.NumericDictionary.md)<`T`\> |
+
+#### Returns
+
+`undefined` \| `T`
+
+**`See`**
+
+\_.sample
+
+#### Defined in
+
+node_modules/@types/lodash/common/collection.d.ts:1652
 
 ▸ **sample**<`T`\>(`collection`): `undefined` \| `T`[keyof `T`]
 
@@ -16424,7 +16450,7 @@ node_modules/@types/lodash/common/collection.d.ts:1648
 
 #### Defined in
 
-node_modules/@types/lodash/common/collection.d.ts:1652
+node_modules/@types/lodash/common/collection.d.ts:1656
 
 ---
 
@@ -16455,7 +16481,7 @@ Returns the random elements.
 
 #### Defined in
 
-node_modules/@types/lodash/common/collection.d.ts:1704
+node_modules/@types/lodash/common/collection.d.ts:1708
 
 ▸ **sampleSize**<`T`\>(`collection`, `n?`): `T`[keyof `T`][]
 
@@ -16482,7 +16508,7 @@ node_modules/@types/lodash/common/collection.d.ts:1704
 
 #### Defined in
 
-node_modules/@types/lodash/common/collection.d.ts:1708
+node_modules/@types/lodash/common/collection.d.ts:1712
 
 ---
 
@@ -16639,7 +16665,7 @@ Returns the new shuffled array.
 
 #### Defined in
 
-node_modules/@types/lodash/common/collection.d.ts:1759
+node_modules/@types/lodash/common/collection.d.ts:1763
 
 ▸ **shuffle**<`T`\>(`collection`): `T`[keyof `T`][]
 
@@ -16665,7 +16691,7 @@ node_modules/@types/lodash/common/collection.d.ts:1759
 
 #### Defined in
 
-node_modules/@types/lodash/common/collection.d.ts:1763
+node_modules/@types/lodash/common/collection.d.ts:1767
 
 ---
 
@@ -16690,7 +16716,7 @@ Returns the size of collection.
 
 #### Defined in
 
-node_modules/@types/lodash/common/collection.d.ts:1815
+node_modules/@types/lodash/common/collection.d.ts:1819
 
 ---
 
@@ -16779,7 +16805,7 @@ Returns true if any element passes the predicate check, else false.
 
 #### Defined in
 
-node_modules/@types/lodash/common/collection.d.ts:1838
+node_modules/@types/lodash/common/collection.d.ts:1842
 
 ▸ **some**<`T`\>(`collection`, `predicate?`): `boolean`
 
@@ -16806,7 +16832,7 @@ node_modules/@types/lodash/common/collection.d.ts:1838
 
 #### Defined in
 
-node_modules/@types/lodash/common/collection.d.ts:1842
+node_modules/@types/lodash/common/collection.d.ts:1846
 
 ---
 

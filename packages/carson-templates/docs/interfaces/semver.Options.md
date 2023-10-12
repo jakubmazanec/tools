@@ -24,4 +24,4 @@
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:115
+node_modules/@types/semver/index.d.ts:117

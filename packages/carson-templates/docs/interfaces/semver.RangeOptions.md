@@ -23,7 +23,7 @@
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:119
+node_modules/@types/semver/index.d.ts:121
 
 ---
 
@@ -37,4 +37,4 @@ node_modules/@types/semver/index.d.ts:119
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:115
+node_modules/@types/semver/index.d.ts:117
