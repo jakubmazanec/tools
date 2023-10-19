@@ -122,8 +122,8 @@ export function getDependencies(dependencies: string[], workspace: Workspace | W
         }
       }
 
-      // we use existing version only if major versions match; we don't want the user of this template to be able to overwrite any major version number and use potentially incompatible version
-      if (getMajorVersion(version) === getMajorVersion(dependencyVersion)) {
+      // we use existing version if its major version is equal or greater than major version recommended by the template
+      if (getMajorVersion(version) >= getMajorVersion(dependencyVersion)) {
         if (semver.prerelease(version)?.length) {
           result[dependencyName] = version;
         } else {
