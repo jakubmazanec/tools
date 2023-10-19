@@ -36,7 +36,7 @@ Type representing custom error.
 
 #### Defined in
 
-[types/CustomError.ts:6](https://github.com/jakubmazanec/js-tools/blob/19d381b/packages/error/src/types/CustomError.ts#L6)
+[types/CustomError.ts:6](https://github.com/jakubmazanec/js-tools/blob/833790c/packages/error/src/types/CustomError.ts#L6)
 
 ---
 
@@ -56,7 +56,7 @@ Type representing options object used when instantianting class returned from
 
 #### Defined in
 
-[types/CustomErrorOptions.ts:4](https://github.com/jakubmazanec/js-tools/blob/19d381b/packages/error/src/types/CustomErrorOptions.ts#L4)
+[types/CustomErrorOptions.ts:4](https://github.com/jakubmazanec/js-tools/blob/833790c/packages/error/src/types/CustomErrorOptions.ts#L4)
 
 ---
 
@@ -76,7 +76,7 @@ Type representing custom error that can have an arbitrary data attached.
 
 #### Defined in
 
-[types/CustomErrorWithData.ts:6](https://github.com/jakubmazanec/js-tools/blob/19d381b/packages/error/src/types/CustomErrorWithData.ts#L6)
+[types/CustomErrorWithData.ts:6](https://github.com/jakubmazanec/js-tools/blob/833790c/packages/error/src/types/CustomErrorWithData.ts#L6)
 
 ---
 
@@ -103,7 +103,7 @@ Type representing options object used when instantianting class returned from
 
 #### Defined in
 
-[types/CustomErrorWithDataOptions.ts:4](https://github.com/jakubmazanec/js-tools/blob/19d381b/packages/error/src/types/CustomErrorWithDataOptions.ts#L4)
+[types/CustomErrorWithDataOptions.ts:4](https://github.com/jakubmazanec/js-tools/blob/833790c/packages/error/src/types/CustomErrorWithDataOptions.ts#L4)
 
 ---
 
@@ -121,7 +121,7 @@ Object type whose property keys are `ErrorCode` and whose property values are `s
 
 #### Defined in
 
-[types/ErrorMessages.ts:4](https://github.com/jakubmazanec/js-tools/blob/19d381b/packages/error/src/types/ErrorMessages.ts#L4)
+[types/ErrorMessages.ts:4](https://github.com/jakubmazanec/js-tools/blob/833790c/packages/error/src/types/ErrorMessages.ts#L4)
 
 ## Variables
 
@@ -133,7 +133,7 @@ Code for an unknown error. You should never use nor encounter this error code.
 
 #### Defined in
 
-[constants.ts:6](https://github.com/jakubmazanec/js-tools/blob/19d381b/packages/error/src/constants.ts#L6)
+[constants.ts:6](https://github.com/jakubmazanec/js-tools/blob/833790c/packages/error/src/constants.ts#L6)
 
 ## Functions
 
@@ -177,7 +177,7 @@ Class that implements [CustomError](README.md#customerror).
 
 #### Defined in
 
-[createCustomError.ts:13](https://github.com/jakubmazanec/js-tools/blob/19d381b/packages/error/src/createCustomError.ts#L13)
+[createCustomError.ts:13](https://github.com/jakubmazanec/js-tools/blob/833790c/packages/error/src/createCustomError.ts#L13)
 
 ---
 
@@ -225,7 +225,7 @@ Class that implements [CustomErrorWithData](README.md#customerrorwithdata).
 
 #### Defined in
 
-[createCustomErrorWithData.ts:21](https://github.com/jakubmazanec/js-tools/blob/19d381b/packages/error/src/createCustomErrorWithData.ts#L21)
+[createCustomErrorWithData.ts:21](https://github.com/jakubmazanec/js-tools/blob/833790c/packages/error/src/createCustomErrorWithData.ts#L21)
 
 ▸ **createCustomErrorWithData**<`ErrorCode`, `ErrorData`\>(`errorName`, `errorMessages`,
 `errorData`): (`code`: `ErrorCode`, `options?`:
@@ -263,4 +263,4 @@ Class that implements [CustomErrorWithData](README.md#customerrorwithdata).
 
 #### Defined in
 
-[createCustomErrorWithData.ts:29](https://github.com/jakubmazanec/js-tools/blob/19d381b/packages/error/src/createCustomErrorWithData.ts#L29)
+[createCustomErrorWithData.ts:29](https://github.com/jakubmazanec/js-tools/blob/833790c/packages/error/src/createCustomErrorWithData.ts#L29)
