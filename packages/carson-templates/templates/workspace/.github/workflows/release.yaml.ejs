@@ -12,6 +12,9 @@ jobs:
     if: ${{ github.ref_name == '<%- getMainBranch(workspace) %>' }}
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    permissions:
+      contents: read
+      id-token: write
     steps:
       - name: Cancel previous runs
         uses: styfle/cancel-workflow-action@0.11.0
@@ -30,7 +33,7 @@ jobs:
 
       - uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 20
           registry-url: 'https://registry.npmjs.org'
 
       - name: Install packages
@@ -96,6 +99,7 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_CONFIG_PROVENANCE: 'true' # must be string, not boolean
 
       - name: Update lockfile
         run: |
@@ -136,6 +140,9 @@ jobs:
     if: ${{ github.ref_name == '<%- getDevelopmentBranch(workspace) %>' }}
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    permissions:
+      contents: read
+      id-token: write
     steps:
       - name: Cancel previous runs
         uses: styfle/cancel-workflow-action@0.11.0
@@ -154,7 +161,7 @@ jobs:
 
       - uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 20
           registry-url: 'https://registry.npmjs.org'
 
       - name: Install packages
@@ -223,12 +230,16 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_CONFIG_PROVENANCE: 'true' # must be string, not boolean
 
   release_feature_branch:
     name: Feature branch release
+    if: ${{ github.ref_name != '<%- getMainBranch(workspace) %>' && github.ref_name != '<%- getDevelopmentBranch(workspace) %>' && github.actor != 'renovate[bot]' }}
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    if: ${{ github.ref_name != '<%- getMainBranch(workspace) %>' && github.ref_name != '<%- getDevelopmentBranch(workspace) %>' && github.actor != 'renovate[bot]' }}
+    permissions:
+      contents: read
+      id-token: write
     steps:
       - name: Cancel previous runs
         uses: styfle/cancel-workflow-action@0.11.0
@@ -247,7 +258,7 @@ jobs:
 
       - uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 20
           registry-url: 'https://registry.npmjs.org'
 
       - name: Install packages
@@ -306,3 +317,4 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_CONFIG_PROVENANCE: 'true' # must be string, not boolean
