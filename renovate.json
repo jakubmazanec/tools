@@ -18,8 +18,8 @@
       "matchDepTypes": ["devDependencies"]
     },
     {
-      "matchUpdateTypes": ["major", "minor", "patch"],
-      "matchDepTypes": ["peerDependencies"]
+      "matchDepTypes": ["peerDependencies"],
+      "rangeStrategy": "replace"
     },
     {
       "matchDepTypes": ["overrides"],
