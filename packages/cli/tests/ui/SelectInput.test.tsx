@@ -11,8 +11,8 @@ describe('SelectInput', () => {
 
     expect(lastFrame()).toMatchInlineSnapshot(`
       "[35m?[39m [97mTest[39m
-        [92m[92m●[39m[92m[39m [39m[97mFoo[39m[92m
-        [90m[90m○[39m[90m[39m [39m[90mBar[39m[90m"
+        [92m●[39m [97mFoo[39m
+        [90m○[39m [90mBar[39m"
     `);
   });
 
@@ -21,8 +21,8 @@ describe('SelectInput', () => {
 
     expect(lastFrame()).toMatchInlineSnapshot(`
       "[35m?[39m [97mTest[39m
-        [90m[90m○[39m[90m[39m [39m[90mFoo[39m[90m
-        [92m[92m●[39m[92m[39m [39m[97mBar[39m[92m"
+        [90m○[39m [90mFoo[39m
+        [92m●[39m [97mBar[39m"
     `);
   });
 
@@ -37,8 +37,8 @@ describe('SelectInput', () => {
 
     expect(lastFrame()).toMatchInlineSnapshot(`
       "[35m?[39m [97mTest[39m
-        [92m[92m●[39m[92m[39m [39m[97mFoo[39m[92m
-        [90m[90m○[39m[90m[39m [39m[90mBar[39m[90m"
+        [92m●[39m [97mFoo[39m
+        [90m○[39m [90mBar[39m"
     `);
   });
 
@@ -53,8 +53,8 @@ describe('SelectInput', () => {
 
     expect(lastFrame()).toMatchInlineSnapshot(`
       "[35m?[39m [97mTest[39m
-        [90m[90m○[39m[90m[39m [39m[90mFoo[39m[90m
-        [92m[92m●[39m[92m[39m [39m[97mBar[39m[92m"
+        [90m○[39m [90mFoo[39m
+        [92m●[39m [97mBar[39m"
     `);
 
     await sleep(100);
@@ -65,8 +65,8 @@ describe('SelectInput', () => {
 
     expect(lastFrame()).toMatchInlineSnapshot(`
       "[35m?[39m [97mTest[39m
-        [92m[92m●[39m[92m[39m [39m[97mFoo[39m[92m
-        [90m[90m○[39m[90m[39m [39m[90mBar[39m[90m"
+        [92m●[39m [97mFoo[39m
+        [90m○[39m [90mBar[39m"
     `);
 
     await sleep(100);
@@ -77,8 +77,8 @@ describe('SelectInput', () => {
 
     expect(lastFrame()).toMatchInlineSnapshot(`
       "[35m?[39m [97mTest[39m
-        [90m[90m○[39m[90m[39m [39m[90mFoo[39m[90m
-        [92m[92m●[39m[92m[39m [39m[97mBar[39m[92m"
+        [90m○[39m [90mFoo[39m
+        [92m●[39m [97mBar[39m"
     `);
 
     await sleep(100);
@@ -89,8 +89,8 @@ describe('SelectInput', () => {
 
     expect(lastFrame()).toMatchInlineSnapshot(`
       "[35m?[39m [97mTest[39m
-        [92m[92m●[39m[92m[39m [39m[97mFoo[39m[92m
-        [90m[90m○[39m[90m[39m [39m[90mBar[39m[90m"
+        [92m●[39m [97mFoo[39m
+        [90m○[39m [90mBar[39m"
     `);
   });
 
@@ -105,8 +105,8 @@ describe('SelectInput', () => {
 
     expect(lastFrame()).toMatchInlineSnapshot(`
       "[35m?[39m [97mTest[39m
-        [90m[90m○[39m[90m[39m [39m[90mFoo[39m[90m
-        [92m[92m●[39m[92m[39m [39m[97mBar[39m[92m"
+        [90m○[39m [90mFoo[39m
+        [92m●[39m [97mBar[39m"
     `);
 
     await sleep(100);
@@ -117,8 +117,8 @@ describe('SelectInput', () => {
 
     expect(lastFrame()).toMatchInlineSnapshot(`
       "[35m?[39m [97mTest[39m
-        [92m[92m●[39m[92m[39m [39m[97mFoo[39m[92m
-        [90m[90m○[39m[90m[39m [39m[90mBar[39m[90m"
+        [92m●[39m [97mFoo[39m
+        [90m○[39m [90mBar[39m"
     `);
   });
 
