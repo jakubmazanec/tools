@@ -27,7 +27,7 @@
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:117
+node_modules/@types/semver/index.d.ts:107
 
 ---
 
@@ -56,4 +56,4 @@ coerce('1.2.3.4', {rtl: true});
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:135
+node_modules/@types/semver/index.d.ts:125

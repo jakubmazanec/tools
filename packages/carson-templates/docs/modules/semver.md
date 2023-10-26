@@ -77,7 +77,7 @@
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:138
+node_modules/@types/semver/index.d.ts:128
 
 ---
 
@@ -88,7 +88,7 @@ node_modules/@types/semver/index.d.ts:138
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:114
+node_modules/@types/semver/index.d.ts:104
 
 ## Variables
 
@@ -98,7 +98,7 @@ node_modules/@types/semver/index.d.ts:114
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:112
+node_modules/@types/semver/index.d.ts:102
 
 ---
 
@@ -108,7 +108,7 @@ node_modules/@types/semver/index.d.ts:112
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:110
+node_modules/@types/semver/index.d.ts:100
 
 ## Functions
 
