@@ -43,7 +43,7 @@ describe('TextInput', () => {
 
     expect(lastFrame()).toMatchInlineSnapshot(`
       "[35m?[39m [97mTest[39m
-        [97m[7mW[27m[90mrite something[39m[97m[39m"
+        [97m[7mW[27m[90mrite something[39m"
     `);
   });
 
