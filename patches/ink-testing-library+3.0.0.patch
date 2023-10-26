@@ -1,8 +1,8 @@
 diff --git a/node_modules/ink-testing-library/build/index.js b/node_modules/ink-testing-library/build/index.js
-index bbdc07b..365971b 100644
+index bbdc07b..97248ce 100644
 --- a/node_modules/ink-testing-library/build/index.js
 +++ b/node_modules/ink-testing-library/build/index.js
-@@ -68,23 +68,38 @@ class Stderr extends EventEmitter {
+@@ -68,23 +68,35 @@ class Stderr extends EventEmitter {
      }
  }
  class Stdin extends EventEmitter {
@@ -25,7 +25,6 @@ index bbdc07b..365971b 100644
 -                this.emit('data', data);
 +                this.data = data;
 +                this.emit('readable');
-+                // this.emit('data', data);
 +            }
 +        });
 +        Object.defineProperty(this, "read", {
@@ -34,9 +33,7 @@ index bbdc07b..365971b 100644
 +            writable: true,
 +            value: () => {
 +                const data = this.data;
-+
 +                this.data = null;
-+
 +                return data;
              }
          });
@@ -44,7 +41,7 @@ index bbdc07b..365971b 100644
      }
      setEncoding() {
          // Do nothing
-@@ -98,6 +113,12 @@ class Stdin extends EventEmitter {
+@@ -98,6 +110,12 @@ class Stdin extends EventEmitter {
      pause() {
          // Do nothing
      }
