@@ -17,10 +17,10 @@
     "src"
   ],
   "scripts": {
-    "build": "swc src -d dist && tsc",
+    "build": "del-cli dist tsconfig.tsbuildinfo && swc src -d dist && tsc",
     "clean": "del-cli coverage dist *.tsbuildinfo",
     "develop": "concurrently \"swc src -d dist --watch\" \"tsc --watch\"",
-    "document": "typedoc --options typedoc.config.cjs",
+    "document": "del-cli docs && typedoc --options typedoc.config.cjs",
     "format": "prettier . --write --ignore-unknown --ignore-path ../../.prettierignore",
     "lint": "eslint .",
     "test": "cross-env FORCE_COLOR=1 NODE_OPTIONS=--experimental-vm-modules jest --passWithNoTests",
