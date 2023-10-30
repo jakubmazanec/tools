@@ -21,12 +21,12 @@
     "templates"
   ],
   "scripts": {
-    "build": "swc src -d dist && tsc",
+    "build": "del-cli dist tsconfig.tsbuildinfo && swc src -d dist && tsc",
     "clean": "del-cli coverage dist *.tsbuildinfo",
-    "document": "typedoc --options typedoc.config.cjs",
+    "document": "del-cli docs && typedoc --options typedoc.config.cjs",
     "format": "prettier . --write --ignore-unknown --ignore-path ../../.prettierignore",
     "lint": "eslint .",
-    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --passWithNoTests",
+    "test": "del-cli coverage && cross-env NODE_OPTIONS=--experimental-vm-modules jest --passWithNoTests",
     "typecheck": "tsc --project tsconfig.typecheck.json"
   },
   "dependencies": {
