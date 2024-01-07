@@ -1,0 +1,67 @@
+---
+to: 'package.json'
+strategy: merge
+---
+<%
+let dependencies = [
+  '@remix-run/express',
+  '@remix-run/node',
+  '@remix-run/react',
+  '@remix-run/serve',
+  'cross-env',
+  'isbot',
+  'react',
+  'react-dom'
+];
+let developmentDependencies = [
+  '@remix-run/dev',
+  '@types/node',
+  '@types/react',
+  '@types/react-dom',
+  '@vitest/coverage-v8',
+  'autoprefixer',
+  'cross-env',
+  'del-cli',
+  'eslint',
+  'prettier',
+  'prettier-plugin-packagejson',
+  'prettier-plugin-tailwindcss',
+  'tailwindcss',
+  'vite',
+  'vitest',
+  'typescript',
+];
+
+let packageJson = lodash.merge(
+  {
+    private: true,
+    repository: {
+      type: 'git',
+      directory: project.relativePath,
+    },
+    type: 'module',
+    scripts: {
+      build: 'del-cli build && remix vite:build',
+      clean: 'del-cli coverage build *.tsbuildinfo',
+      develop: 'cross-env PORT=5000 remix vite:dev',
+      format: FORMAT_COMMAND,
+      start:
+        'cross-env NODE_ENV=production PORT=5000 remix-serve ./build/server/index.js --port 5000',
+      test: 'del-cli coverage && vitest run --coverage',
+      typecheck: 'tsc --project tsconfig.typecheck.json',
+    },
+    dependencies: getDependencies(dependencies, workspace),
+    devDependencies: getDependencies(developmentDependencies, workspace),
+    packageManager: 'npm@10.1.0',
+    engines: {
+      node: '^20.8.0',
+    },
+  },
+  project.config.overrides?.packageJson ?? {},
+);
+
+if (project.config.deployment?.appName) {
+  packageJson.scripts.deploy = `flyctl deploy ../.. --config ${project.relativePath}/fly.toml`;
+}
+-%>
+<%- JSON.stringify(packageJson) %>

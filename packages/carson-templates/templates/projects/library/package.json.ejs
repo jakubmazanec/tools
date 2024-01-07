@@ -3,9 +3,27 @@ to: 'package.json'
 strategy: merge
 ---
 <%
-let developmentDependencies = getDependencies([
-  '@jest/globals',
-], workspace);
+let developmentDependencies = getDependencies(
+  [
+    '@jest/globals',
+    '@swc/cli',
+    '@swc/core',
+    '@types/node',
+    'chokidar',
+    'concurrently',
+    'cross-env',
+    'del-cli',
+    'eslint',
+    'jest',
+    'prettier',
+    'prettier-plugin-packagejson',
+    'ts-jest',
+    'typedoc',
+    'typedoc-plugin-markdown',
+    'typescript',
+  ],
+  workspace,
+);
 let packageJson = lodash.merge(
   {
     repository: {
@@ -18,9 +36,9 @@ let packageJson = lodash.merge(
     scripts: {
       build: 'del-cli dist tsconfig.tsbuildinfo && swc src -d dist && tsc',
       clean: 'del-cli coverage dist *.tsbuildinfo',
+      develop: 'concurrently "swc src -d dist --watch" "tsc --watch"',
       document: 'del-cli docs && typedoc --options typedoc.config.cjs',
-      format:
-        'prettier . --write --ignore-unknown --ignore-path ../../.prettierignore',
+      format: FORMAT_COMMAND,
       lint: 'eslint .',
       test: 'del-cli coverage && cross-env NODE_OPTIONS=--experimental-vm-modules jest --passWithNoTests',
       typecheck: 'tsc --project tsconfig.typecheck.json',

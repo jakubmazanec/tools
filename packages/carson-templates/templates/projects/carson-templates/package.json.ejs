@@ -3,6 +3,25 @@ to: 'package.json'
 strategy: merge
 ---
 <%
+let developmentDependencies = getDependencies(
+  [
+    '@jest/globals',
+    '@swc/cli',
+    '@swc/core',
+    '@types/node',
+    'cross-env',
+    'del-cli',
+    'eslint',
+    'jest',
+    'prettier',
+    'prettier-plugin-packagejson',
+    'ts-jest',
+    'typedoc',
+    'typedoc-plugin-markdown',
+    'typescript',
+  ],
+  workspace,
+);
 let packageJson = {
   repository: {
     type: 'git',
@@ -18,14 +37,12 @@ let packageJson = {
     build: 'del-cli dist tsconfig.tsbuildinfo && swc src -d dist && tsc',
     clean: 'del-cli coverage dist *.tsbuildinfo',
     document: 'del-cli docs && typedoc --options typedoc.config.cjs',
-    format: 'prettier . --write --ignore-unknown --ignore-path ../../.prettierignore',
+      format: FORMAT_COMMAND,
     lint: 'eslint .',
     test: 'del-cli coverage && cross-env NODE_OPTIONS=--experimental-vm-modules jest --passWithNoTests',
     typecheck: 'tsc --project tsconfig.typecheck.json',
   },
-  devDependencies: {
-    '@jest/globals': '^29.5.0',
-  },
+  devDependencies: developmentDependencies,
   packageManager: 'npm@10.1.0',
   engines: {
     node: '^20.8.0',

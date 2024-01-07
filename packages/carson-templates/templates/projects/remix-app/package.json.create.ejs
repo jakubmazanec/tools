@@ -1,0 +1,14 @@
+---
+to: 'package.json'
+strategy: create
+---
+{
+  "name": "<%- project.name %>",
+  "version": "0.0.0",
+  "description": "",
+  "repository": {
+    "url": "<%- workspace.repository?.url ?? '' %>"
+  },
+  "license": "AGPL-3.0-only",
+  "author": "Jakub Mazanec <jakub@mazanec.dev>"
+}
