@@ -89,9 +89,9 @@ export function TextInput({
 
   if (showCursor && focus) {
     renderedPlaceholder =
-      placeholder.length > 0
-        ? chalk.inverse(placeholder[0]) + chalk[colors.muted](placeholder.slice(1))
-        : chalk.inverse(' ');
+      placeholder.length > 0 ?
+        chalk.inverse(placeholder[0]) + chalk[colors.muted](placeholder.slice(1))
+      : chalk.inverse(' ');
 
     renderedValue = value.length > 0 ? '' : chalk.inverse(' ');
 
@@ -205,18 +205,21 @@ export function TextInput({
         <Box marginRight={1}>
           <Text color={colors.highlighted}>{label}</Text>
         </Box>
-        {isComplete ? (
+        {isComplete ?
           <Text color={colors.body}>{value}</Text>
-        ) : (
-          <Text color={colors.highlighted}>
-            {placeholder ? (value.length > 0 ? renderedValue : renderedPlaceholder) : renderedValue}
+        : <Text color={colors.highlighted}>
+            {placeholder ?
+              value.length > 0 ?
+                renderedValue
+              : renderedPlaceholder
+            : renderedValue}
           </Text>
-        )}
-        {validationError ? (
+        }
+        {validationError ?
           <Box marginTop={0}>
             <Text color={colors.warning}>{validationError}</Text>
           </Box>
-        ) : null}
+        : null}
       </Box>
     </Box>
   );

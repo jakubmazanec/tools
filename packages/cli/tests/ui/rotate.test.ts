@@ -1,3 +1,5 @@
+import {describe, test, expect} from '@jest/globals';
+
 import {rotate} from '../../src/ui/internals/rotate.js';
 
 describe('rotate', () => {

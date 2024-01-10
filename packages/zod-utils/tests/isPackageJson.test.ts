@@ -1,3 +1,5 @@
+import {describe, test, expect} from '@jest/globals';
+
 import {isPackageJson} from '../src/main.js';
 
 describe('isPackageJson', () => {

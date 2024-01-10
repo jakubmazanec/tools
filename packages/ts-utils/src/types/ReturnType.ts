@@ -18,4 +18,8 @@
  * @typeParam T Base for the new type
  */
 export type ReturnType<T extends '' | false | ((...args: any[]) => any) | null | undefined> =
-  T extends (...args: any[]) => infer R ? (R extends PromiseLike<infer J> ? J : R) : never;
+  T extends (...args: any[]) => infer R ?
+    R extends PromiseLike<infer J> ?
+      J
+    : R
+  : never;

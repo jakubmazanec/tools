@@ -6,7 +6,7 @@ import {
   runUpdateWorkspace,
 } from '@jakubmazanec/carson';
 import {createTempDirectory} from '@jakubmazanec/fs-utils';
-import {jest} from '@jest/globals';
+import {jest, describe, test, expect} from '@jest/globals';
 import {execa} from 'execa';
 import fs from 'fs-extra';
 import path from 'node:path';
@@ -61,8 +61,9 @@ describe.each([
     // then we create all projects; be aware that if projectTemplateIds.length is greater than 1, workspace template must be for multi-project workspace
     for (let [index, projectTemplateId] of projectTemplateIds.entries()) {
       let projectName = `project-${index}`;
-      let possiblePaths = workspace.projectGlobs
-        ? workspace.projectGlobs
+      let possiblePaths =
+        workspace.projectGlobs ?
+          workspace.projectGlobs
             .filter((projectGlob) => ONLY_ONE_STAR_REGEXP.test(projectGlob))
             .map((projectGlob) => projectGlob.replace(/\*/, packageNameToDirectory(projectName)))
             .map((projectGlob) => path.join(workspace.path, projectGlob))

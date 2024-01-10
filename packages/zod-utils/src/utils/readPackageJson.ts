@@ -14,9 +14,8 @@ export async function readPackageJson<O extends ReadPackageJsonOptions | undefin
   path: fs.FileHandle | PathLike,
   options?: O,
 ): Promise<
-  O extends undefined
-    ? PackageJson | ZodError<PackageJson>
-    : If<NonNullable<O>['throwOnZodError'], true, PackageJson, PackageJson | ZodError<PackageJson>>
+  O extends undefined ? PackageJson | ZodError<PackageJson>
+  : If<NonNullable<O>['throwOnZodError'], true, PackageJson, PackageJson | ZodError<PackageJson>>
 >;
 export async function readPackageJson(
   path: fs.FileHandle | PathLike,

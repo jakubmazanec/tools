@@ -1,3 +1,4 @@
+import {describe, test, expect} from '@jest/globals';
 import {render} from 'ink-testing-library';
 
 import {Failure} from '../../src/ui/Failure.js';

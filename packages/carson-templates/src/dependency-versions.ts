@@ -28,12 +28,10 @@ let templatesPackageVersion = (
 let isTemplatesPackageVersionPrerelease = !!semver.prerelease(templatesPackageVersion)?.length;
 
 export const DEPENDENCY_VERSIONS: Record<string, string> = {
-  [CARSON_PACKAGE_NAME]: isCarsonPackageVersionPrerelease
-    ? carsonPackageVersion
-    : `^${carsonPackageVersion}`,
-  [TEMPLATE_PACKAGE_NAME]: isTemplatesPackageVersionPrerelease
-    ? templatesPackageVersion
-    : `^${templatesPackageVersion}`,
+  [CARSON_PACKAGE_NAME]:
+    isCarsonPackageVersionPrerelease ? carsonPackageVersion : `^${carsonPackageVersion}`,
+  [TEMPLATE_PACKAGE_NAME]:
+    isTemplatesPackageVersionPrerelease ? templatesPackageVersion : `^${templatesPackageVersion}`,
 
   '@changesets/cli': '^2.0.0',
   '@jest/globals': '^29.0.0',

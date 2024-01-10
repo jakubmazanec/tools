@@ -116,9 +116,8 @@ export function SelectInput({
     {isActive: focus},
   );
 
-  let visibleItems: SelectInputItem[] = hasLimit
-    ? rotate(items, rotatedIndex).slice(0, limit)
-    : items;
+  let visibleItems: SelectInputItem[] =
+    hasLimit ? rotate(items, rotatedIndex).slice(0, limit) : items;
 
   return (
     <Box {...boxProps}>
@@ -130,30 +129,27 @@ export function SelectInput({
         <Box marginRight={1}>
           <Text color={colors.highlighted}>{label}</Text>
         </Box>
-        {isComplete ? (
+        {isComplete ?
           <Text color={colors.body}>
             {items[selectedIndex]?.label ?? String(items[selectedIndex]?.value)}
           </Text>
-        ) : (
-          <Box flexDirection="column">
+        : <Box flexDirection="column">
             {visibleItems.map((item, index) => {
               let isSelected = index === selectedIndex;
 
               return (
                 <Box key={item.value}>
                   <Box marginRight={1}>
-                    {isSelected ? (
+                    {isSelected ?
                       <Text color={colors.selected}>{icons.selectedCircle}</Text>
-                    ) : (
-                      <Text color={colors.unselected}>{icons.unselectedCircle}</Text>
-                    )}
+                    : <Text color={colors.unselected}>{icons.unselectedCircle}</Text>}
                   </Box>
                   <Text color={isSelected ? colors.highlighted : colors.muted}>{item.label}</Text>
                 </Box>
               );
             })}
           </Box>
-        )}
+        }
       </Box>
     </Box>
   );

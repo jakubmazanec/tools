@@ -8,8 +8,9 @@ import {type WorkspaceRepository} from './WorkspaceRepository.js';
 /**
  * {@link Workspace.constructor | Workspace constructor} options parameter.
  */
-export type WorkspaceOptions<M extends boolean> = M extends true
-  ? {
+export type WorkspaceOptions<M extends boolean> =
+  M extends true ?
+    {
       path: string;
       isMultiProject?: M;
       projectGlobs?: string[];

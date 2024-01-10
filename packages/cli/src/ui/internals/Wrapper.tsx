@@ -28,7 +28,7 @@ export const Wrapper: FC<PropsWithChildren<WrapperProps>> = ({program, children}
   return (
     <ErrorBoundary FallbackComponent={Failure}>
       <programContext.Provider value={programContextValue}>
-        {program.latestVersion && program.latestVersion !== program.version ? (
+        {program.latestVersion && program.latestVersion !== program.version ?
           <Box>
             <Box
               flexDirection="column"
@@ -49,7 +49,7 @@ export const Wrapper: FC<PropsWithChildren<WrapperProps>> = ({program, children}
             </Box>
             <Spacer />
           </Box>
-        ) : null}
+        : null}
         <Box>{children}</Box>
       </programContext.Provider>
     </ErrorBoundary>

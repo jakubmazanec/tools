@@ -1,3 +1,5 @@
+import {describe, test, expect} from '@jest/globals';
+
 import {type IsEqual} from '@jakubmazanec/ts-utils';
 
 import {parseArguments} from '../src/parseArguments.js';
@@ -471,7 +473,7 @@ describe('parseArgs()', () => {
       expect(true).toBe(true); // this test is only for typechecking
     });
 
-    it('runtime types correspond (#1)', () => {
+    test('runtime types correspond (#1)', () => {
       let result = parseArguments([], {
         parameters: [
           {
@@ -493,7 +495,7 @@ describe('parseArgs()', () => {
       expect(typeof result.parameters[0]).toBe('undefined');
     });
 
-    it('runtime types correspond (#2)', () => {
+    test('runtime types correspond (#2)', () => {
       let result = parseArguments(['foo', 'bar', 'baz'], {
         parameters: [
           {
@@ -518,7 +520,7 @@ describe('parseArgs()', () => {
       expect(typeof result.parameters[3]).toBe('undefined');
     });
 
-    it('runtime types correspond (#3)', () => {
+    test('runtime types correspond (#3)', () => {
       let result = parseArguments([], {
         parameters: [
           {

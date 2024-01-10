@@ -1,3 +1,5 @@
+import {describe, test, expect} from '@jest/globals';
+
 import {getPackageJsonWorkspaces} from '../../src/workspace/internals.js';
 
 describe('getPackageJsonWorkspaces()', () => {

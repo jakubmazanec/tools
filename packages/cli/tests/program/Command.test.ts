@@ -1,5 +1,6 @@
 import {type Arguments, type Argv} from '@jakubmazanec/args';
 import {type Simplify, type IsEqual} from '@jakubmazanec/ts-utils';
+import {describe, test, expect} from '@jest/globals';
 
 import {Command} from '../../src/program/Command.js';
 import {type Program} from '../../src/program.js';
@@ -24,22 +25,22 @@ describe('Command', () => {
         {
           readonly name: 'do stuff';
           readonly description?: string;
-          readonly parameters: [{type: 'string'}];
-          readonly options: {foo: {type: 'number'}};
+          readonly parameters: readonly [{readonly type: 'string'}];
+          readonly options: {readonly foo: {readonly type: 'number'}};
           readonly allowUnknownOptions: false;
           readonly allowUnknownParameters: false;
           parseArguments: (argv: Argv) => Arguments<{
             commands: readonly ['do stuff'];
-            parameters: [{type: 'string'}];
-            options: {foo: {type: 'number'}};
+            parameters: readonly [{readonly type: 'string'}];
+            options: {readonly foo: {readonly type: 'number'}};
             allowUnknownOptions: false;
             allowUnknownParameters: false;
           }>;
           run: (
             parsedArguments: Arguments<{
               commands: readonly ['do stuff'];
-              parameters: [{type: 'string'}];
-              options: {foo: {type: 'number'}};
+              parameters: readonly [{readonly type: 'string'}];
+              options: {readonly foo: {readonly type: 'number'}};
               allowUnknownOptions: false;
               allowUnknownParameters: false;
             }>,
@@ -51,7 +52,7 @@ describe('Command', () => {
       expect(isTypeCorrect).toBe(true); // this test is only for typechecking
     });
 
-    it('runtime types correspond', () => {
+    test('runtime types correspond', () => {
       let command = new Command('do stuff', async () => {}, {
         parameters: [
           {

@@ -25,9 +25,8 @@
     "build": "del-cli dist tsconfig.tsbuildinfo && swc src -d dist && tsc",
     "check-rules": "ts-node --files --project tools/check-rules/tsconfig.json tools/check-rules/index.ts",
     "clean": "del-cli coverage dist *.tsbuildinfo",
-    "format": "prettier . --write --ignore-unknown --ignore-path ../../.prettierignore",
+    "format": "prettier . --write --ignore-unknown",
     "lint": "eslint .",
-    "test": "del-cli coverage && jest --passWithNoTests",
     "typecheck": "tsc --project tsconfig.typecheck.json"
   },
   "dependencies": {
@@ -51,10 +50,16 @@
     "eslint-plugin-unicorn": "^46.0.0"
   },
   "devDependencies": {
+    "@swc/cli": "^0.1.62",
+    "@swc/core": "^1.3.56",
     "@types/confusing-browser-globals": "^1.0.0",
     "@types/eslint": "^8.21.3",
     "@types/node": "^20.8.5",
-    "eslint": "^8.36.0"
+    "del-cli": "^5.0.0",
+    "eslint": "^8.36.0",
+    "prettier": "^3.0.0",
+    "prettier-plugin-packagejson": "^2.4.3",
+    "typescript": "^5.1.3"
   },
   "peerDependencies": {
     "eslint": "^8.27.0",

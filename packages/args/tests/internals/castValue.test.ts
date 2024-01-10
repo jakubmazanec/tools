@@ -1,3 +1,5 @@
+import {describe, test, expect} from '@jest/globals';
+
 import {castValue} from '../../src/internals.js';
 
 describe('castValue()', () => {

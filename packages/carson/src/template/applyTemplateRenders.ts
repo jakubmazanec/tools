@@ -44,9 +44,9 @@ export async function applyTemplateRenders({
 
     for (let templateRenderSnapshot of templateRenderSnapshots) {
       let strategy =
-        typeof templateRenderSnapshot.attributes.strategy === 'string'
-          ? templateRenderSnapshot.attributes.strategy
-          : templateRenderSnapshot.attributes.strategy[0];
+        typeof templateRenderSnapshot.attributes.strategy === 'string' ?
+          templateRenderSnapshot.attributes.strategy
+        : templateRenderSnapshot.attributes.strategy[0];
 
       if (ignoreStrategies.includes(strategy)) {
         continue;
@@ -75,9 +75,9 @@ export async function applyTemplateRenders({
   // second, we apply strategies that create files
   for (let templateRender of templateRenders) {
     let strategy =
-      typeof templateRender.attributes.strategy === 'string'
-        ? templateRender.attributes.strategy
-        : templateRender.attributes.strategy[0];
+      typeof templateRender.attributes.strategy === 'string' ?
+        templateRender.attributes.strategy
+      : templateRender.attributes.strategy[0];
 
     if (ignoreStrategies.includes(strategy)) {
       continue;
@@ -100,9 +100,9 @@ export async function applyTemplateRenders({
   // third, we apply strategies that change files
   for (let templateRender of templateRenders) {
     let strategy =
-      typeof templateRender.attributes.strategy === 'string'
-        ? templateRender.attributes.strategy
-        : templateRender.attributes.strategy[0];
+      typeof templateRender.attributes.strategy === 'string' ?
+        templateRender.attributes.strategy
+      : templateRender.attributes.strategy[0];
 
     if (ignoreStrategies.includes(strategy)) {
       continue;

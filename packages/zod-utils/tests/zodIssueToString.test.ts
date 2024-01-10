@@ -1,3 +1,4 @@
+import {describe, test, expect} from '@jest/globals';
 import * as z from 'zod';
 
 import {zodIssuesToStrings} from '../src/main.js';
@@ -62,7 +63,7 @@ describe('zodIssuesToStrings', () => {
           (result as {error: z.ZodError}).error instanceof z.ZodError &&
           (result as {error: z.ZodError}).error.issues.length === expectedIssuesCount,
       ).toBeTruthy();
-      expect(zodIssuesToStrings((result as {error: z.ZodError}).error.issues)).toMatchObject(
+      expect(zodIssuesToStrings((result as {error: z.ZodError}).error.issues)).toEqual(
         expectedStrings,
       );
     },

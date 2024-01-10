@@ -1,3 +1,4 @@
+import {describe, test, expect} from '@jest/globals';
 import path from 'node:path';
 
 import {TEST_FILES_PATH} from './constants.js';

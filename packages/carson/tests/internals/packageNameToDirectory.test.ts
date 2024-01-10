@@ -1,3 +1,5 @@
+import {describe, test, expect} from '@jest/globals';
+
 import {packageNameToDirectory} from '../../src/commands/internals.js';
 
 describe('packageNameToDirectory()', () => {

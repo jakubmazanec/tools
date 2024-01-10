@@ -14,9 +14,8 @@ export type TemplateRender<
 > = {
   /** Rendered template attributes. They created from the `to` and `variables` attributes, and from all of the custom template attributes.
    */
-  attributes: A extends undefined
-    ? Omit<TemplateAttributes, 'if'>
-    : Omit<TemplateAttributes, 'if'> & z.infer<NonNullable<A>>;
+  attributes: A extends undefined ? Omit<TemplateAttributes, 'if'>
+  : Omit<TemplateAttributes, 'if'> & z.infer<NonNullable<A>>;
 
   /** Data used to render the template. */
   data: D extends undefined ? null : z.infer<NonNullable<D>>;

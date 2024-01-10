@@ -69,9 +69,8 @@ export function parseArguments<const O extends ParserConfig>(
   let commandFirstArguments = normalizedCommandsConfig.map(
     (commandConfig) => commandConfig.args[0],
   );
-  let optionShortNameMap = parserConfig.options
-    ? createOptionShortNameMap(parserConfig.options)
-    : {};
+  let optionShortNameMap =
+    parserConfig.options ? createOptionShortNameMap(parserConfig.options) : {};
 
   // variables for keeping track of the parsing
   let parsedCommand: string | undefined;
@@ -343,13 +342,13 @@ export function parseArguments<const O extends ParserConfig>(
 
   return {
     command: (normalizedCommandsConfig.length ? parsedCommand : null) as ArgumentsCommand<O>,
-    parameters: (parametersConfig.length || parserConfig.allowUnknownParameters
-      ? parsedParameters
-      : null) as ArgumentsParameters<O>,
+    parameters: (parametersConfig.length || parserConfig.allowUnknownParameters ?
+      parsedParameters
+    : null) as ArgumentsParameters<O>,
     options: (Object.keys(optionsConfig).length ? parsedOptions : null) as ArgumentsOptions<O>,
-    unknownOptions: (parserConfig.allowUnknownOptions
-      ? parsedUnknownOptions
-      : null) as ArgumentsUnknownOptions<O>,
+    unknownOptions: (parserConfig.allowUnknownOptions ? parsedUnknownOptions : (
+      null
+    )) as ArgumentsUnknownOptions<O>,
     rest: restArgs,
     errors: checker.errors,
   };

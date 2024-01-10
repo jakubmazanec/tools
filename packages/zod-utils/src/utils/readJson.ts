@@ -17,9 +17,8 @@ export async function readJson<
   schema: S,
   options?: O,
 ): Promise<
-  O extends undefined
-    ? z.infer<S> | ZodError<z.infer<S>>
-    : If<NonNullable<O>['throwOnZodError'], true, z.infer<S>, z.infer<S> | ZodError<z.infer<S>>>
+  O extends undefined ? z.infer<S> | ZodError<z.infer<S>>
+  : If<NonNullable<O>['throwOnZodError'], true, z.infer<S>, z.infer<S> | ZodError<z.infer<S>>>
 >;
 export async function readJson(
   path: fs.FileHandle | PathLike,

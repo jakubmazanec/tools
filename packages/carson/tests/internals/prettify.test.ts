@@ -1,3 +1,5 @@
+import {describe, test, expect} from '@jest/globals';
+
 import path from 'node:path';
 
 import {prettify} from '../../src/template/internals/prettify.js';

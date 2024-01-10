@@ -108,7 +108,7 @@ export function CreateProject({args, workspace}: CreateProjectProps) {
         onComplete={setCreateProjectInputResult}
       />
 
-      {status === 'in-progress' || status === 'finished' ? (
+      {status === 'in-progress' || status === 'finished' ?
         <Box marginTop={1} flexDirection="column">
           <Header showSpinner={status === 'in-progress'} icon={icons.success} marginBottom={1}>
             <Text>Creating project...</Text>
@@ -118,13 +118,13 @@ export function CreateProject({args, workspace}: CreateProjectProps) {
             <Text key={job}>{`${icons.info} ${job}`}</Text>
           ))}
         </Box>
-      ) : null}
+      : null}
 
-      {status === 'finished' ? (
+      {status === 'finished' ?
         <Header marginTop={1} icon={icons.success}>
           <Text>Done.</Text>
         </Header>
-      ) : null}
+      : null}
     </Box>
   );
 }

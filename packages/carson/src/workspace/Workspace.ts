@@ -335,21 +335,17 @@ export class Workspace<M extends boolean = true> {
     searchPath: string,
     options?: O,
   ): Promise<
-    O extends undefined
-      ? Workspace | Workspace<false> | undefined
-      : NonNullable<O>['throwIfNotFound'] extends true
-      ? Workspace | Workspace<false>
-      : Workspace | Workspace<false> | undefined
+    O extends undefined ? Workspace | Workspace<false> | undefined
+    : NonNullable<O>['throwIfNotFound'] extends true ? Workspace | Workspace<false>
+    : Workspace | Workspace<false> | undefined
   > {
     let workspacePath = await Workspace.find(searchPath);
 
     if (workspacePath) {
       return Workspace.read(workspacePath) as Promise<
-        O extends undefined
-          ? Workspace | Workspace<false> | undefined
-          : NonNullable<O>['throwIfNotFound'] extends true
-          ? Workspace | Workspace<false>
-          : Workspace | Workspace<false> | undefined
+        O extends undefined ? Workspace | Workspace<false> | undefined
+        : NonNullable<O>['throwIfNotFound'] extends true ? Workspace | Workspace<false>
+        : Workspace | Workspace<false> | undefined
       >;
     } else if (options?.throwIfNotFound) {
       throw new WorkspaceError('NO_WORKSPACE_FOUND', {
@@ -361,11 +357,9 @@ export class Workspace<M extends boolean = true> {
     }
 
     return undefined as unknown as Promise<
-      O extends undefined
-        ? Workspace | Workspace<false> | undefined
-        : NonNullable<O>['throwIfNotFound'] extends true
-        ? Workspace | Workspace<false>
-        : Workspace | Workspace<false> | undefined
+      O extends undefined ? Workspace | Workspace<false> | undefined
+      : NonNullable<O>['throwIfNotFound'] extends true ? Workspace | Workspace<false>
+      : Workspace | Workspace<false> | undefined
     >;
   }
 

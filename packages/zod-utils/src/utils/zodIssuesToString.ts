@@ -35,12 +35,12 @@ function zodIssueToString(zodIssue: z.ZodIssue): string {
 
   if (zodIssue.code === z.ZodIssueCode.invalid_enum_value) {
     return `Expected ${
-      zodIssue.options.length === 1
-        ? `"${zodIssue.options[0]}"`
-        : `${zodIssue.options
-            .map((option) => `"${option}"`)
-            .slice(0, -1)
-            .join(', ')} or "${zodIssue.options.at(-1)}"`
+      zodIssue.options.length === 1 ?
+        `"${zodIssue.options[0]}"`
+      : `${zodIssue.options
+          .map((option) => `"${option}"`)
+          .slice(0, -1)
+          .join(', ')} or "${zodIssue.options.at(-1)}"`
     }${zodIssuePathToText(zodIssue.path)}`;
   }
 

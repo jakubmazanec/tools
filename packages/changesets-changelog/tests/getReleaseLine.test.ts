@@ -1,3 +1,5 @@
+import {jest, describe, test, expect} from '@jest/globals';
+
 import {getReleaseLine} from '../src/getReleaseLine';
 import {createGetReleaseLineArgs} from './utils/createGetReleaseLineArgs';
 

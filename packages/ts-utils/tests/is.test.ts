@@ -1,3 +1,5 @@
+import {describe, test, expect} from '@jest/globals';
+
 import {is} from '../src/main.js';
 
 const isNull = (value: unknown) => value === null;
@@ -21,7 +23,7 @@ describe('is', () => {
       results.push(maybeNumber.toUpperCase());
     }
 
-    expect(results).toMatchObject(['FOO', 43]);
+    expect(results).toEqual(['FOO', 43]);
   });
 
   test.each([

@@ -19,14 +19,11 @@ import type {Primitive} from './Primitive.js';
  *
  * @typeParam T Base for the new type
  */
-export type DeepReadonly<T> = T extends Primitive | ((...args: any[]) => unknown)
-  ? T
-  : T extends ReadonlyMap<infer K, infer V>
-  ? DeepReadonlyMap<K, V>
-  : T extends ReadonlySet<infer I>
-  ? DeepReadonlySet<I>
-  : T extends object
-  ? DeepReadonlyObject<T>
+export type DeepReadonly<T> =
+  T extends Primitive | ((...args: any[]) => unknown) ? T
+  : T extends ReadonlyMap<infer K, infer V> ? DeepReadonlyMap<K, V>
+  : T extends ReadonlySet<infer I> ? DeepReadonlySet<I>
+  : T extends object ? DeepReadonlyObject<T>
   : unknown;
 
 /**

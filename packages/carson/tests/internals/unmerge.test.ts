@@ -1,3 +1,5 @@
+import {describe, test, expect} from '@jest/globals';
+
 import {merge, unmerge} from '../../src/template/internals.js';
 
 describe('unmerge()', () => {

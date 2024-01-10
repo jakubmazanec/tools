@@ -33,22 +33,22 @@ import type {Primitive} from './Primitive.js';
  *
  * @typeParam T Base for the new type
  */
-export type DeepPartial<T> = T extends Date | Primitive | RegExp
-  ? T
-  : T extends Map<infer KeyType, infer ValueType>
-  ? DeepPartialMap<KeyType, ValueType>
-  : T extends Set<infer ItemType>
-  ? DeepPartialSet<ItemType>
-  : T extends ReadonlyMap<infer KeyType, infer ValueType>
-  ? DeepPartialReadonlyMap<KeyType, ValueType>
-  : T extends ReadonlySet<infer ItemType>
-  ? DeepPartialReadonlySet<ItemType>
-  : T extends (...args: any[]) => unknown
-  ? T | undefined
-  : T extends object
-  ? T extends Array<infer I> // Test for arrays/tuples, per https://github.com/microsoft/TypeScript/issues/35156
-    ? I[] extends T // Test for arrays (non-tuples) specifically
-      ? Array<DeepPartial<I | undefined>> // Recreate relevant array type to prevent eager evaluation of circular reference
+export type DeepPartial<T> =
+  T extends Date | Primitive | RegExp ? T
+  : T extends Map<infer KeyType, infer ValueType> ? DeepPartialMap<KeyType, ValueType>
+  : T extends Set<infer ItemType> ? DeepPartialSet<ItemType>
+  : T extends ReadonlyMap<infer KeyType, infer ValueType> ?
+    DeepPartialReadonlyMap<KeyType, ValueType>
+  : T extends ReadonlySet<infer ItemType> ? DeepPartialReadonlySet<ItemType>
+  : T extends (...args: any[]) => unknown ? T | undefined
+  : T extends object ?
+    T extends (
+      Array<infer I> // Test for arrays/tuples, per https://github.com/microsoft/TypeScript/issues/35156
+    ) ?
+      I[] extends (
+        T // Test for arrays (non-tuples) specifically
+      ) ?
+        Array<DeepPartial<I | undefined>> // Recreate relevant array type to prevent eager evaluation of circular reference
       : DeepPartialObject<T> // Tuples behave properly
     : DeepPartialObject<T>
   : unknown;

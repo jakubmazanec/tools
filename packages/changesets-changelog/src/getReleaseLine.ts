@@ -1,8 +1,12 @@
 import {getInfo, getInfoFromPullRequest} from '@changesets/get-github-info';
-import type {VersionType, NewChangesetWithCommit} from '@changesets/types';
+import {type VersionType, type NewChangeset} from '@changesets/types';
+
+export type GetReleaseLineChangeset = NewChangeset & {
+  commit?: string | undefined;
+};
 
 export async function getReleaseLine(
-  changeset: NewChangesetWithCommit,
+  changeset: GetReleaseLineChangeset,
   type: VersionType,
   options?: Record<string, unknown>,
 ) {

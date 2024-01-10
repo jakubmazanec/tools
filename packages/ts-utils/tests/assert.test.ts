@@ -1,3 +1,5 @@
+import {describe, test, expect} from '@jest/globals';
+
 import {is, assert} from '../src/main.js';
 
 const DEFAULT_ASSERTION_ERROR_MESSAGE = 'Wrong assertion encountered';
@@ -12,7 +14,7 @@ describe('assert', () => {
 
     results.push(value.toUpperCase());
 
-    expect(results).toMatchObject(['FOO']);
+    expect(results).toEqual(['FOO']);
   });
 
   test('throws', () => {

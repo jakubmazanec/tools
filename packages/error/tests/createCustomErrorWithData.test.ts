@@ -1,3 +1,4 @@
+import {describe, test, expect} from '@jest/globals';
 import {z} from 'zod';
 
 import {createCustomErrorWithData} from '../src/main.js';

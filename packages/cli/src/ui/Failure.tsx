@@ -29,31 +29,31 @@ export function Failure({error, errorDetail, ...boxProps}: FailureProps) {
         <Text color={colors.highlighted}>{label}</Text>
       </Header>
 
-      {description ? (
+      {description ?
         <Box flexDirection="column" marginLeft={2}>
           <Text color={colors.failure}>{description}</Text>
         </Box>
-      ) : null}
+      : null}
 
-      {stack ? (
+      {stack ?
         <Box flexDirection="column" marginTop={1} marginLeft={2}>
           <Text color={colors.muted}>{stack}</Text>
         </Box>
-      ) : null}
+      : null}
 
-      {cause ? (
+      {cause ?
         <>
           <Box flexDirection="column" marginTop={1} marginLeft={2}>
             <Text color={colors.muted}>{cause.description}</Text>
           </Box>
 
-          {cause.stack ? (
+          {cause.stack ?
             <Box flexDirection="column" marginTop={1} marginLeft={2}>
               <Text color={colors.muted}>{cause.stack}</Text>
             </Box>
-          ) : null}
+          : null}
         </>
-      ) : null}
+      : null}
     </Box>
   );
 }

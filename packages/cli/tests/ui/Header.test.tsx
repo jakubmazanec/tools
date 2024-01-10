@@ -1,3 +1,4 @@
+import {describe, test, expect} from '@jest/globals';
 import {Text} from 'ink';
 import {render} from 'ink-testing-library';
 

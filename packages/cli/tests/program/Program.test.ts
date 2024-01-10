@@ -1,4 +1,4 @@
-import {jest} from '@jest/globals';
+import {jest, describe, test, expect} from '@jest/globals';
 
 import {Command} from '../../src/program/Command.js';
 import {Program} from '../../src/program/Program.js';

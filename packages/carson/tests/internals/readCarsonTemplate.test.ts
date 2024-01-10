@@ -1,3 +1,5 @@
+import {describe, test, expect} from '@jest/globals';
+
 import {readCarsonTemplate} from '../../src/template/internals/readCarsonTemplate.js';
 
 describe('readCarsonTemplate()', () => {

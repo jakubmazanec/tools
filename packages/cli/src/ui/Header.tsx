@@ -25,12 +25,16 @@ export function Header({
 }: PropsWithChildren<HeaderProps>) {
   return (
     <Box {...boxProps}>
-      {icon || showSpinner ? (
+      {icon || showSpinner ?
         <Box marginRight={1}>
-          {showSpinner ? <Spinner /> : null}
-          {!showSpinner && icon ? <Text>{icon}</Text> : null}
+          {showSpinner ?
+            <Spinner />
+          : null}
+          {!showSpinner && icon ?
+            <Text>{icon}</Text>
+          : null}
         </Box>
-      ) : null}
+      : null}
       <Box>{children}</Box>
     </Box>
   );

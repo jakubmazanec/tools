@@ -1,3 +1,5 @@
+import {describe, test, expect} from '@jest/globals';
+
 import {importCarsonTemplate} from '../../src/template/internals/importCarsonTemplate.js';
 
 describe('importCarsonTemplate()', () => {

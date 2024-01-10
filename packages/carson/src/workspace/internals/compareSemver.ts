@@ -8,11 +8,13 @@ import semver from 'semver';
  * @returns Number whose positivity indicates the relative order of the two elements.
  */
 export function compareSemver(a: string, b: string) {
-  let firstSemver = semver.validRange(a)
-    ? semver.minVersion(a)?.format() ?? semver.coerce(a)?.format() ?? '0.0.0'
+  let firstSemver =
+    semver.validRange(a) ?
+      semver.minVersion(a)?.format() ?? semver.coerce(a)?.format() ?? '0.0.0'
     : '0.0.0';
-  let secondSemver = semver.validRange(b)
-    ? semver.minVersion(b)?.format() ?? semver.coerce(b)?.format() ?? '0.0.0'
+  let secondSemver =
+    semver.validRange(b) ?
+      semver.minVersion(b)?.format() ?? semver.coerce(b)?.format() ?? '0.0.0'
     : '0.0.0';
 
   let comparison = semver.compare(firstSemver, secondSemver);

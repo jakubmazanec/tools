@@ -91,8 +91,9 @@ export class WorkspaceDependencies<M extends boolean = true> extends Array<Works
         ...workspace.packageJson?.dependencies,
         ...workspace.packageJson?.devDependencies,
       })) {
-        let exactDependencyVersion = semver.validRange(dependencyVersion)
-          ? semver.minVersion(dependencyVersion)?.format() ??
+        let exactDependencyVersion =
+          semver.validRange(dependencyVersion) ?
+            semver.minVersion(dependencyVersion)?.format() ??
             semver.coerce(dependencyVersion)?.format() ??
             dependencyVersion.trim()
           : dependencyVersion.trim();
@@ -113,8 +114,9 @@ export class WorkspaceDependencies<M extends boolean = true> extends Array<Works
         for (let [dependencyName, dependencyVersion] of Object.entries(
           project.packageJson.dependencies ?? {},
         )) {
-          let exactDependencyVersion = semver.validRange(dependencyVersion)
-            ? semver.minVersion(dependencyVersion)?.format() ??
+          let exactDependencyVersion =
+            semver.validRange(dependencyVersion) ?
+              semver.minVersion(dependencyVersion)?.format() ??
               semver.coerce(dependencyVersion)?.format() ??
               dependencyVersion.trim()
             : dependencyVersion.trim();
@@ -144,8 +146,9 @@ export class WorkspaceDependencies<M extends boolean = true> extends Array<Works
         for (let [dependencyName, dependencyVersion] of Object.entries(
           project.packageJson.devDependencies ?? {},
         )) {
-          let exactDependencyVersion = semver.validRange(dependencyVersion)
-            ? semver.minVersion(dependencyVersion)?.format() ??
+          let exactDependencyVersion =
+            semver.validRange(dependencyVersion) ?
+              semver.minVersion(dependencyVersion)?.format() ??
               semver.coerce(dependencyVersion)?.format() ??
               dependencyVersion.trim()
             : dependencyVersion.trim();
@@ -185,9 +188,8 @@ export class WorkspaceDependencies<M extends boolean = true> extends Array<Works
     let versions: Record<string, string[]> = {};
 
     for (let dependency of this) {
-      versions[dependency.name] = options?.useExactVersions
-        ? dependency.exactVersions
-        : dependency.versions;
+      versions[dependency.name] =
+        options?.useExactVersions ? dependency.exactVersions : dependency.versions;
     }
 
     return versions;

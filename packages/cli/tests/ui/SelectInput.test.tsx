@@ -1,4 +1,4 @@
-import {jest} from '@jest/globals';
+import {jest, describe, test, expect} from '@jest/globals';
 import {render} from 'ink-testing-library';
 
 import {SelectInput} from '../../src/ui/form/SelectInput.js';

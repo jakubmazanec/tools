@@ -12,6 +12,5 @@
  * @typeParam T First type to compare
  * @typeParam U Second type to compare
  */
-export type IsEqual<T, U> = (<G>() => G extends T ? 1 : 2) extends <G>() => G extends U ? 1 : 2
-  ? true
-  : false;
+export type IsEqual<T, U> =
+  (<G>() => G extends T ? 1 : 2) extends <G>() => G extends U ? 1 : 2 ? true : false;

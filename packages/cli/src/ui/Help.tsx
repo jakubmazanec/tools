@@ -25,7 +25,7 @@ export function Help({program, ...boxProps}: HelpProps) {
       ](program.version ?? '?')}`}</Text>
       <Text color={colors.body}>{program.description}</Text>
 
-      {program.commands.length ? (
+      {program.commands.length ?
         <>
           <Header icon={icons.info} marginTop={1}>
             <Text color={colors.highlighted}>Usage</Text>
@@ -62,7 +62,7 @@ export function Help({program, ...boxProps}: HelpProps) {
             );
           })}
         </>
-      ) : null}
+      : null}
     </Box>
   );
 }

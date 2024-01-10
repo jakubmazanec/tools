@@ -1,3 +1,5 @@
+import {describe, test, expect} from '@jest/globals';
+
 import {expandArguments} from '../../src/internals.js';
 
 describe('expandArguments()', () => {
@@ -7,6 +9,6 @@ describe('expandArguments()', () => {
     {argv: ['-a', '-bcd'], result: ['-a', '-b', '-c', '-d']},
     {argv: ['-ab', '--cd'], result: ['-a', '-b', '--cd']},
   ])('correctly expands group options', ({argv, result}) => {
-    expect(expandArguments(argv)).toMatchObject(result);
+    expect(expandArguments(argv)).toEqual(result);
   });
 });

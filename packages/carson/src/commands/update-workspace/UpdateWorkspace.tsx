@@ -49,11 +49,11 @@ export function UpdateWorkspace({workspace, args}: UpdateWorkspaceProps) {
         ))}
       </Box>
 
-      {isFinished ? (
+      {isFinished ?
         <Header marginTop={1} icon={icons.success}>
           <Text>Done.</Text>
         </Header>
-      ) : null}
+      : null}
     </Box>
   );
 }

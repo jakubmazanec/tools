@@ -16,9 +16,8 @@ export async function readFile<
   schema: S,
   options?: O,
 ): Promise<
-  O extends undefined
-    ? z.infer<S> | ZodError<z.infer<S>>
-    : If<NonNullable<O>['throwOnZodError'], true, z.infer<S>, z.infer<S> | ZodError<z.infer<S>>>
+  O extends undefined ? z.infer<S> | ZodError<z.infer<S>>
+  : If<NonNullable<O>['throwOnZodError'], true, z.infer<S>, z.infer<S> | ZodError<z.infer<S>>>
 >;
 export async function readFile(
   path: fs.FileHandle | PathLike,

@@ -1,3 +1,5 @@
+import {describe, test, expect} from '@jest/globals';
+
 import {isRootPath} from '../src/isRootPath.js';
 
 describe('isRootPath()', () => {

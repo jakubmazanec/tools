@@ -95,15 +95,15 @@ export function FormRow<C extends FormConfig>({
           key={String(rowName)}
           label={config.label ?? ''}
           items={
-            rows
-              ? (
-                  (
-                    rows as {
-                      [key: string]: unknown;
-                    }
-                  )[rowName as string] as {choices: Array<{value: string; label: string}>}
-                ).choices
-              : []
+            rows ?
+              (
+                (
+                  rows as {
+                    [key: string]: unknown;
+                  }
+                )[rowName as string] as {choices: Array<{value: string; label: string}>}
+              ).choices
+            : []
           }
           focus={focus}
           isComplete={isComplete}

@@ -1,3 +1,5 @@
+import {describe, test, expect} from '@jest/globals';
+
 import {getProgramDetail} from '../../src/program/getProgramDetail.js';
 
 describe('getProgramDetail', () => {
