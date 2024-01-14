@@ -5,20 +5,17 @@ strategy: merge
 <%
 let developmentDependencies = getDependencies(
   [
-    '@jest/globals',
-    '@swc/cli',
-    '@swc/core',
     '@types/node',
-    'cross-env',
+    '@vitest/coverage-v8',
     'del-cli',
+    'esbuild',
     'eslint',
-    'jest',
     'prettier',
     'prettier-plugin-packagejson',
-    'ts-jest',
     'typedoc',
     'typedoc-plugin-markdown',
     'typescript',
+    'vitest',
   ],
   workspace,
 );
@@ -34,12 +31,12 @@ let packageJson = {
   },
   files: ['dist', 'src', 'templates'],
   scripts: {
-    build: 'del-cli dist tsconfig.tsbuildinfo && swc src -d dist && tsc',
+    build: `del-cli dist tsconfig.tsbuildinfo && ${BUILD_TO_ESM_COMMAND} && tsc`,
     clean: 'del-cli coverage dist *.tsbuildinfo',
     document: 'del-cli docs && typedoc --options typedoc.config.cjs',
       format: FORMAT_COMMAND,
     lint: 'eslint .',
-    test: 'del-cli coverage && cross-env NODE_OPTIONS=--experimental-vm-modules jest --passWithNoTests',
+    test: `del-cli coverage && ${TEST_COMMAND}`,
     typecheck: 'tsc --project tsconfig.typecheck.json',
   },
   devDependencies: developmentDependencies,

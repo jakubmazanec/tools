@@ -4,7 +4,12 @@ export const TEMPLATE_PACKAGE_NAME = '@jakubmazanec/carson-templates';
 export const MAIN_BRANCH_NAMES = new Set(['main', 'master']);
 export const DEVELOPMENT_BRANCH_NAMES = new Set(['development', 'develop', 'dev']);
 
+export const BUILD_TO_ESM_COMMAND =
+  'esbuild "src/**/*" --platform=node --target=node20.8 --outdir=dist --sourcemap';
+export const BUILD_TO_CJS_COMMAND =
+  'esbuild "src/**/*" --platform=node --target=node20.8 --format=cjs --outdir=dist --sourcemap';
 export const FORMAT_COMMAND = 'prettier . --write --ignore-unknown';
+export const TEST_COMMAND = 'vitest run --coverage';
 
 export const LINT_IGNORE_PATTERNS = [
   '.cache/',

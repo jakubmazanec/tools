@@ -22,7 +22,7 @@
     "src"
   ],
   "scripts": {
-    "build": "del-cli dist tsconfig.tsbuildinfo && swc src -d dist && tsc",
+    "build": "del-cli dist tsconfig.tsbuildinfo && esbuild \"src/**/*\" --platform=node --target=node20.8 --outdir=dist --sourcemap --format=cjs && tsc",
     "check-rules": "ts-node --files --project tools/check-rules/tsconfig.json tools/check-rules/index.ts",
     "clean": "del-cli coverage dist *.tsbuildinfo",
     "format": "prettier . --write --ignore-unknown",

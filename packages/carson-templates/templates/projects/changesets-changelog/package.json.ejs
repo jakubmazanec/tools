@@ -5,17 +5,15 @@ strategy: merge
 <%
 let developmentDependencies = getDependencies(
   [
-    '@jest/globals',
-    '@swc/cli',
-    '@swc/core',
     '@types/node',
+    '@vitest/coverage-v8',
     'del-cli',
+    'esbuild',
     'eslint',
-    'jest',
     'prettier',
     'prettier-plugin-packagejson',
-    'ts-jest',
     'typescript',
+    'vitest',
   ],
   workspace,
 );
@@ -29,11 +27,11 @@ let packageJson = lodash.merge(
     exports: './dist/main.js',
     files: ['dist', 'src'],
     scripts: {
-      build: 'del-cli dist tsconfig.tsbuildinfo && swc src -d dist && tsc',
+      build: `del-cli dist tsconfig.tsbuildinfo && ${BUILD_TO_CJS_COMMAND} && tsc`,
       clean: 'del-cli coverage dist *.tsbuildinfo',
       format: FORMAT_COMMAND,
       lint: 'eslint .',
-      test: 'del-cli coverage && jest --passWithNoTests',
+      test: `del-cli coverage && ${TEST_COMMAND}`,
       typecheck: 'tsc --project tsconfig.typecheck.json',
     },
     devDependencies: developmentDependencies,

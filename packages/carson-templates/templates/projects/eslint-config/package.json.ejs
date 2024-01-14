@@ -5,10 +5,9 @@ strategy: merge
 <%
 let developmentDependencies = getDependencies(
   [
-    '@swc/cli',
-    '@swc/core',
     '@types/node',
     'del-cli',
+    'esbuild',
     'eslint',
     'prettier',
     'prettier-plugin-packagejson',
@@ -31,7 +30,7 @@ let packageJson = lodash.merge(
     },
     files: ['dist', 'src'],
     scripts: {
-      build: 'del-cli dist tsconfig.tsbuildinfo && swc src -d dist && tsc',
+      build: `del-cli dist tsconfig.tsbuildinfo && ${BUILD_TO_CJS_COMMAND} && tsc`,
       clean: 'del-cli coverage dist *.tsbuildinfo',
       format: FORMAT_COMMAND,
       lint: 'eslint .',
