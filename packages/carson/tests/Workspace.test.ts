@@ -1,5 +1,4 @@
-import {jest, describe, test, expect} from '@jest/globals';
-import * as fsUtils from '@jakubmazanec/fs-utils';
+import {vitest, describe, test, expect} from 'vitest';
 import path from 'node:path';
 
 import {TEST_WORKSPACES_PATH} from './constants.js';
@@ -8,10 +7,14 @@ import {WorkspaceError} from '../src/workspace/WorkspaceError.js';
 import {type WorkspaceOptionsProject} from '../src/workspace/WorkspaceOptionsProject.js';
 
 // we need to mock `isRootPath` so it considers directory with test workspaces as the file system root
-jest.unstable_mockModule('@jakubmazanec/fs-utils', () => ({
-  ...fsUtils,
-  isRootPath: jest.fn().mockImplementation((value) => value === TEST_WORKSPACES_PATH),
-}));
+vitest.mock('@jakubmazanec/fs-utils', async (importOriginal) => {
+  const mod = await importOriginal<typeof import('@jakubmazanec/fs-utils')>();
+
+  return {
+    ...mod,
+    isRootPath: vitest.fn().mockImplementation((value) => value === TEST_WORKSPACES_PATH),
+  };
+});
 
 describe('Workspace', () => {
   describe('single-project', () => {

@@ -1,4 +1,4 @@
-import {jest, describe, test, expect} from '@jest/globals';
+import {vitest, describe, test, expect} from 'vitest';
 
 import {getReleaseLine} from '../src/getReleaseLine';
 import {createGetReleaseLineArgs} from './utils/createGetReleaseLineArgs';
@@ -16,7 +16,7 @@ function getMockGithubData() {
 // eslint-disable-next-line jest/require-hook -- needed
 let mockGithubData = getMockGithubData();
 
-jest.mock('@changesets/get-github-info', () => {
+vitest.mock('@changesets/get-github-info', () => {
   let {user, pull, commit, repository} = getMockGithubData();
   let links = {
     user: `[@${user}](https://github.com/${user})`,

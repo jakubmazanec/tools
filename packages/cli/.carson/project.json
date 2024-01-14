@@ -3,7 +3,7 @@
   "overrides": {
     "packageJson": {
       "scripts": {
-        "test": "cross-env FORCE_COLOR=1 NODE_OPTIONS=--experimental-vm-modules jest --passWithNoTests"
+        "test": "del-cli coverage && cross-env FORCE_COLOR=1 vitest run --coverage"
       }
     }
   }

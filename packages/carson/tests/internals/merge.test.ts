@@ -1,4 +1,4 @@
-import {describe, test, expect} from '@jest/globals';
+import {describe, test, expect} from 'vitest';
 
 import {merge} from '../../src/template/internals.js';
 

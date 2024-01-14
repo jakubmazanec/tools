@@ -1,4 +1,4 @@
-import {describe, test, expect} from '@jest/globals';
+import {describe, test, expect} from 'vitest';
 import {z, ZodError} from 'zod';
 
 import {readJson} from '../src/main.js';

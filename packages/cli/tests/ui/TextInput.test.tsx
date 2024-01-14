@@ -1,4 +1,4 @@
-import {jest, describe, test, expect} from '@jest/globals';
+import {vitest, describe, test, expect} from 'vitest';
 import {render} from 'ink-testing-library';
 import {useState} from 'react';
 
@@ -150,7 +150,7 @@ describe('TextInput', () => {
   });
 
   test('onSubmit', async () => {
-    let onSubmit = jest.fn();
+    let onSubmit = vitest.fn();
 
     function App() {
       let [value, setValue] = useState('');

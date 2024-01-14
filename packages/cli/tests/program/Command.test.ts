@@ -1,6 +1,6 @@
 import {type Arguments, type Argv} from '@jakubmazanec/args';
 import {type Simplify, type IsEqual} from '@jakubmazanec/ts-utils';
-import {describe, test, expect} from '@jest/globals';
+import {describe, test, expect} from 'vitest';
 
 import {Command} from '../../src/program/Command.js';
 import {type Program} from '../../src/program.js';
