@@ -64,7 +64,6 @@
     "@types/semver": "^7.3.9",
     "@types/zen-observable": "^0.8.3",
     "@vitest/coverage-v8": "^1.2.0",
-    "chokidar": "^3.5.3",
     "concurrently": "^8.0.0",
     "del-cli": "^5.0.0",
     "esbuild": "^0.19.11",

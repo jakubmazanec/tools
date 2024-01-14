@@ -44,7 +44,6 @@
     "@types/lodash.omit": "^4.5.7",
     "@types/node": "^20.8.5",
     "@vitest/coverage-v8": "^1.2.0",
-    "chokidar": "^3.5.3",
     "concurrently": "^8.0.0",
     "del-cli": "^5.0.0",
     "esbuild": "^0.19.11",
