@@ -12,14 +12,15 @@ import a11yRules from '../rules/a11y';
 import eslintRules from '../rules/eslint';
 import commentsRules from '../rules/eslint-comments';
 import importRules from '../rules/import';
-import jestRules from '../rules/jest';
-import jestFormattingRules from '../rules/jest-formatting';
 import promiseRules from '../rules/promise';
 import reactRules from '../rules/react';
 import reactHooksRules from '../rules/react-hooks';
+import simpleImportSortRules from '../rules/simple-import-sort';
+import stylisticRules from '../rules/stylistic';
 import testingLibraryRules from '../rules/testing-library';
 import typescriptRules from '../rules/typescript';
 import unicornRules from '../rules/unicorn';
+import vitestRules from '../rules/vitest';
 
 const config: eslint.Linter.Config = {
   parserOptions: {
@@ -29,38 +30,23 @@ const config: eslint.Linter.Config = {
       jsx: true,
     },
   },
-  plugins: ['import', 'react', 'react-hooks', 'jsx-a11y', 'eslint-comments', 'promise', 'unicorn'],
+  plugins: [
+    '@stylistic',
+    'eslint-comments',
+    'import',
+    'jsx-a11y',
+    'promise',
+    'react',
+    'react-hooks',
+    'simple-import-sort',
+    'unicorn',
+  ],
   env: {
     browser: true,
-    es2020: true,
-    worker: true,
+    es2023: true,
     serviceworker: true,
-  },
-  globals: {
-    __DEV__: 'readonly',
-
-    // metrics and analytics providers
-    ga: 'readonly',
-    newrelic: 'readonly',
-
-    // mostly for easier compatibility between browsers, workers, etc
-    global: 'readonly',
-
-    // mostly references to `process.env.NODE_ENV`
-    process: 'readonly',
-
-    // references for globalThis
-    globalThis: 'readonly',
-
-    // Webpack variables
-    __webpack_public_path__: 'writeable',
-    __webpack_require__: 'readonly',
-    __webpack_chunk_load__: 'readonly',
-    __webpack_modules__: 'readonly',
-    __webpack_hash__: 'readonly',
-    __non_webpack_require__: 'readonly',
-    __webpack_exports_info__: 'readonly',
-    DEBUG: 'readonly',
+    'shared-node-browser': true,
+    worker: true,
   },
   settings: {
     'import/ignore': [
@@ -74,13 +60,21 @@ const config: eslint.Linter.Config = {
       version: 'detect',
     },
     propWrapperFunctions: ['forbidExtraProps', 'exact', 'Object.freeze'],
+    'jsx-a11y': {
+      polymorphicPropName: 'as',
+      components: {
+        Button: 'button',
+      },
+    },
   },
 
   rules: {
     ...eslintRules,
+    ...stylisticRules,
     ...commentsRules,
     ...promiseRules,
     ...importRules,
+    ...simpleImportSortRules,
     ...reactRules,
     ...reactHooksRules,
     ...a11yRules,
@@ -89,26 +83,20 @@ const config: eslint.Linter.Config = {
   overrides: [
     {
       files: [`*.test.${JS_AND_TS_EXTENSIONS_GLOB_PART}`],
-
-      plugins: ['jest', 'jest-formatting', 'testing-library'],
-
+      plugins: ['vitest', 'testing-library'],
       settings: {
         'testing-library/custom-queries': 'off',
         'testing-library/custom-renders': 'off',
         'testing-library/utils-module': 'off',
       },
-
       globals: {
         jsdom: 'readonly',
       },
-
       env: {
-        jest: true,
         node: true,
       },
       rules: {
-        ...jestRules,
-        ...jestFormattingRules,
+        ...vitestRules,
         ...testingLibraryRules,
 
         // override ESLint rules
@@ -120,17 +108,13 @@ const config: eslint.Linter.Config = {
     },
     {
       files: [`*.${TS_EXTENSIONS_GLOB_PART}`],
-
       plugins: ['@typescript-eslint'],
-
       parser: '@typescript-eslint/parser',
-
       parserOptions: {
-        project: 'tsconfig.typecheck.json',
-        // Fixed issue with webstorm
-        tsconfigRootDir: process.cwd(),
+        // project: 'tsconfig.typecheck.json',
+        // tsconfigRootDir: process.cwd(),
+        EXPERIMENTAL_useProjectService: true,
       },
-
       settings: {
         node: {
           tryExtensions: JS_AND_TS_EXTENSIONS,

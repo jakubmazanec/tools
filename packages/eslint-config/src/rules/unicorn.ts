@@ -2,6 +2,7 @@ import type eslint from 'eslint';
 
 const config: eslint.Linter.Config['rules'] = {
   // override ESLint rules
+  'no-negated-condition': 'off', // disallow negated conditions
   'no-nested-ternary': 'off', // disallow nested ternary expressions
   'no-warning-comments': 'off', // disallow specified warning terms in comments
 
@@ -40,6 +41,7 @@ const config: eslint.Linter.Config['rules'] = {
   'unicorn/no-invalid-remove-event-listener': 'error', // prevent calling EventTarget#removeEventListener() with the result of an expression
   'unicorn/no-keyword-prefix': 'off', // disallow identifiers starting with new or class
   'unicorn/no-lonely-if': 'warn', // disallow if statements as the only statement in if blocks without else
+  'unicorn/no-negated-condition': 'error', // disallow negated conditions
   'unicorn/no-nested-ternary': 'error', // disallow nested ternary expressions
   'unicorn/no-new-array': 'error', // disallow new Array()
   'unicorn/no-new-buffer': 'error', // enforce the use of Buffer.from() and Buffer.alloc() instead of the deprecated new Buffer()
@@ -49,10 +51,11 @@ const config: eslint.Linter.Config['rules'] = {
   'unicorn/no-static-only-class': 'error', // forbid classes that only have static members
   'unicorn/no-thenable': 'error', // disallow then property
   'unicorn/no-this-assignment': 'off', // disallow assigning this to a variable
+  'unicorn/no-typeof-undefined': 'error', // disallow comparing undefined using typeof
   'unicorn/no-unnecessary-await': 'error', // disallow awaiting non-promise values
+  'unicorn/no-unnecessary-polyfills': 'error', // enforce the use of built-in methods instead of unnecessary polyfills
   'unicorn/no-unreadable-array-destructuring': 'warn', // disallow unreadable array destructuring
   'unicorn/no-unreadable-iife': 'off', // disallow unreadable IIFEs
-  'unicorn/no-unsafe-regex': 'off', // disallow unsafe regular expressions
   'unicorn/no-unused-properties': 'off', // disallow unused object properties
   'unicorn/no-useless-fallback-in-spread': 'error', // forbid useless fallback when spreading in object literals
   'unicorn/no-useless-length-check': 'off', // disallow useless array length check
@@ -70,6 +73,7 @@ const config: eslint.Linter.Config['rules'] = {
   'unicorn/prefer-array-index-of': 'warn', // prefer Array#indexOf() over Array#findIndex() when looking for the index of an item
   'unicorn/prefer-array-some': 'warn', // prefer .some(…) over .find(…)
   'unicorn/prefer-at': 'warn', // prefer .at() method for index access and String#charAt()
+  'unicorn/prefer-blob-reading-methods': 'error', // prefer Blob#arrayBuffer() over FileReader#readAsArrayBuffer(…) and Blob#text() over FileReader#readAsText(…)
   'unicorn/prefer-code-point': 'warn', // prefer String#codePointAt(…) over String#charCodeAt(…) and String.fromCodePoint(…) over String.fromCharCode(…)
   'unicorn/prefer-date-now': 'warn', // prefer Date.now() to get the number of milliseconds since the Unix Epoch
   'unicorn/prefer-default-parameters': 'error', // prefer default parameters over reassignment
@@ -99,7 +103,8 @@ const config: eslint.Linter.Config['rules'] = {
   'unicorn/prefer-reflect-apply': 'off', // prefer Reflect.apply() over Function#apply()
   'unicorn/prefer-regexp-test': 'warn', // prefer RegExp#test() over String#match() and RegExp#exec()
   // Autofix can be breaking
-  'unicorn/prefer-set-has': 'warn', // prefer Set#has() over Array#includes() when checking for existence or non-existence
+  'unicorn/prefer-set-has': 'error', // prefer Set#has() over Array#includes() when checking for existence or non-existence
+  'unicorn/prefer-set-size': 'error', // prefer using Set#size instead of Array#length
   'unicorn/prefer-spread': 'error', // prefer the spread operator over Array.from()
   'unicorn/prefer-string-replace-all': 'warn', // prefer String#replaceAll() over regex searches with the global flag
   'unicorn/prefer-string-slice': 'warn', // prefer String#slice() over String#substr() and String#substring()

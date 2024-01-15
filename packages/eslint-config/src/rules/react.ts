@@ -4,7 +4,7 @@ const config: eslint.Linter.Config['rules'] = {
   // eslint-plugin-react rules
   'react/boolean-prop-naming': 'off', // enforces consistent naming for boolean props
   'react/button-has-type': ['error', {reset: false}], // forbid "button" element without an explicit "type" attribute
-  'react/default-props-match-prop-types': 'error', // enforce all defaultProps are defined and not "required" in propTypes
+  'react/default-props-match-prop-types': 'off', // enforce all defaultProps are defined and not "required" in propTypes
   'react/destructuring-assignment': 'warn', // rule enforces consistent usage of destructuring assignment in component
   'react/display-name': 'off', // prevent missing displayName in a React component definition
   'react/forbid-component-props': 'off', // forbid certain props on Components
@@ -14,7 +14,38 @@ const config: eslint.Linter.Config['rules'] = {
   'react/forbid-prop-types': [
     'error',
     {
-      forbid: ['any', 'array', 'object'],
+      forbid: [
+        'array',
+        'bigint',
+        'bool',
+        'func',
+        'number',
+        'object',
+        'string',
+        'symbol',
+        'node',
+        'element',
+        'elementType',
+        'instanceOf',
+        'oneOf',
+        'oneOfType',
+        'string',
+        'number',
+        'instanceOf',
+        'arrayOf',
+        'number',
+        'objectOf',
+        'number',
+        'shape',
+        'string',
+        'number',
+        'exact',
+        'string',
+        'number',
+        'func',
+        'any',
+        'arrayOf',
+      ],
       checkContextTypes: true,
       checkChildContextTypes: true,
     },
@@ -54,7 +85,6 @@ const config: eslint.Linter.Config['rules'] = {
   'react/jsx-pascal-case': 'error', // enforce PascalCase for user-defined JSX components
   'react/jsx-props-no-multi-spaces': 'off', // disallow multiple spaces between inline JSX props
   'react/jsx-props-no-spreading': 'off', // prevent JSX prop spreading
-  'react/jsx-sort-default-props': 'off', // enforce default props alphabetical sorting
   'react/jsx-sort-props': [
     'warn',
     {
@@ -84,6 +114,7 @@ const config: eslint.Linter.Config['rules'] = {
   'react/no-is-mounted': 'error', // prevent usage of isMounted
   'react/no-multi-comp': 'off', // prevent multiple component definition per
   'react/no-namespace': 'error', // enforce that namespaces are not used in React elements
+  'react/no-object-type-as-default-prop': 'error', // disallow usage of referential-type variables as default param in functional component
   'react/no-redundant-should-component-update': 'error', // flag shouldComponentUpdate when extending PureComponent
   'react/no-render-return-value': 'error', // prevent usage of the return value of React.render
   'react/no-set-state': 'off', // prevent usage of setState
@@ -135,15 +166,8 @@ const config: eslint.Linter.Config['rules'] = {
       },
     },
   ], // enforce component methods order
-  'react/sort-prop-types': [
-    'warn',
-    {
-      ignoreCase: true,
-      callbacksLast: true,
-      requiredFirst: false,
-      sortShapeProp: true,
-    },
-  ], // enforce propTypes declarations alphabetical sorting
+  'react/sort-default-props': 'off', // enforce defaultProps declarations alphabetical sorting
+  'react/sort-prop-types': 'off', // enforce propTypes declarations alphabetical sorting
   'react/state-in-constructor': ['warn', 'never'], // state initialization in an ES6 class component should be in a constructor
   'react/static-property-placement': 'off', // defines where React component static properties should be positioned
   'react/style-prop-object': 'warn', // enforce style prop value is an object

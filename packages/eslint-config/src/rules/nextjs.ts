@@ -6,6 +6,7 @@ const config: eslint.Linter.Config['rules'] = {
   '@next/next/inline-script-id': 'error', // enforce id attribute on next/script components with inline content
   '@next/next/next-script-for-ga': 'error', // use the Script component to defer loading of the script until necessary
   '@next/next/no-assign-module-variable': 'off', // prevent assignment to the `module` variable
+  '@next/next/no-async-client-component': 'error', // prevent client components from being async functions
   '@next/next/no-before-interactive-script-outside-document': 'warn', // disallow using next/script beforeInteractive strategy outside the next/_document component
   '@next/next/no-css-tags': 'off', // prevent manual stylesheet tags
   '@next/next/no-document-import-in-page': 'error', // disallow importing next/document outside of pages/document.js

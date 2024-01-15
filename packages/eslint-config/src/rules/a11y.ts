@@ -3,6 +3,7 @@ import type eslint from 'eslint';
 const config: eslint.Linter.Config['rules'] = {
   // eslint-plugin-jsx-a11y rules
   'jsx-a11y/alt-text': 'warn', // enforce all elements that require alternative text have meaningful information to relay back to end user
+  'jsx-a11y/anchor-ambiguous-text': 'off', // enforce <a> text to not exactly match "click here", "here", "link", or "a link"
   'jsx-a11y/anchor-has-content': ['warn', {components: ['Link']}], // enforce all anchors to contain accessible content
   'jsx-a11y/anchor-is-valid': [
     'error',
@@ -29,6 +30,7 @@ const config: eslint.Linter.Config['rules'] = {
   'jsx-a11y/media-has-caption': 'warn', // enforces that <audio> and <video> elements must have a <track> for captions
   'jsx-a11y/mouse-events-have-key-events': 'warn', // enforce that onMouseOver/onMouseOut are accompanied by onFocus/onBlur for keyboard-only users
   'jsx-a11y/no-access-key': 'warn', // enforce that the accessKey prop is not used on any element to avoid complications with keyboard commands used by a screen reader
+  'jsx-a11y/no-aria-hidden-on-focusable': 'warn', // disallow aria-hidden="true" from being set on focusable elements
   'jsx-a11y/no-autofocus': 'off', // enforce autoFocus prop is not used
   'jsx-a11y/no-distracting-elements': 'error', // enforce distracting elements are not used
   'jsx-a11y/no-interactive-element-to-noninteractive-role': 'warn', // interactive elements should not be assigned non-interactive roles
@@ -37,6 +39,7 @@ const config: eslint.Linter.Config['rules'] = {
   'jsx-a11y/no-noninteractive-tabindex': 'error', // tabIndex should only be declared on interactive elements
   'jsx-a11y/no-redundant-roles': 'error', // enforce explicit role property is not the same as implicit/default role property on element
   'jsx-a11y/no-static-element-interactions': 'warn', // enforce that non-interactive, visible elements (such as <div>) that have click handlers use the role attribute
+  'jsx-a11y/prefer-tag-over-role': 'warn', // enforces using semantic DOM elements over the ARIA role property
   'jsx-a11y/role-has-required-aria-props': 'error', // enforce that elements with ARIA roles must have all required attributes for that role
   'jsx-a11y/role-supports-aria-props': 'error', // enforce that elements with explicit or implicit roles defined contain only aria-* properties supported by that role
   'jsx-a11y/scope': 'error', // enforce scope prop is only used on <th> elements

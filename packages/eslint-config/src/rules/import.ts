@@ -8,8 +8,10 @@ const config: eslint.Linter.Config['rules'] = {
   'sort-imports': 'off', // enforce sorted import declarations within modules
 
   // eslint-plugin-import rules
+  'import/consistent-type-specifier-style': ['error', 'prefer-inline'], // enforce or ban the use of inline type-only markers for named imports
   'import/default': 'off', // ensure a default export is present, given a default import
   'import/dynamic-import-chunkname': 'off', // enforce a leading comment with the webpackChunkName for dynamic imports
+  'import/no-empty-named-blocks': 'error', // forbid empty named import blocks
   'import/export': 'error', // report any invalid exports, i.e. re-export of the same name
   'import/exports-last': 'off', // ensure all exports appear after other statements
   'import/extensions': 'off', // ensure consistent use of file extension within the import path
@@ -19,7 +21,7 @@ const config: eslint.Linter.Config['rules'] = {
   'import/no-internal-modules': 'off', // prevent importing the submodules of other modules
   'import/named': 'error', // ensure named imports correspond to a named export in the remote file
   'import/namespace': 'off', // ensure imported namespaces contain dereferenced properties as they are dereferenced
-  'import/newline-after-import': 'warn', // enforce a newline after import statements
+  'import/newline-after-import': 'error', // enforce a newline after import statements
   'import/no-absolute-path': 'error', // forbid import of modules using absolute paths
   'import/no-amd': 'error', // report AMD require and define calls
   'import/no-anonymous-default-export': 'off', // forbid anonymous values as default exports
@@ -60,7 +62,7 @@ const config: eslint.Linter.Config['rules'] = {
   'import/no-webpack-loader-syntax': 'error', // forbid webpack loader syntax in imports
   'import/unambiguous': 'off', // report potentially ambiguous parse goal (script vs. module)
   'import/order': [
-    'warn',
+    'error',
     {
       groups: [['builtin', 'external']],
       'newlines-between': 'always',
