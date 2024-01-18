@@ -22,4 +22,12 @@ module.exports = {
   semi: true,
   singleQuote: true,
   trailingComma: 'all',
+  overrides: [
+    {
+      files: ['tsconfig.json'],
+      options: {
+        trailingComma: 'none',
+      },
+    },
+  ],
 };
