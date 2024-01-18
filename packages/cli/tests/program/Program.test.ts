@@ -1,4 +1,4 @@
-import {vitest, describe, test, expect} from 'vitest';
+import {describe, expect, test, vitest} from 'vitest';
 
 import {Command} from '../../src/program/Command.js';
 import {Program} from '../../src/program/Program.js';

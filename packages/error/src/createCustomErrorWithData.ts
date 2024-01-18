@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any -- needed */
-import {type z, type AnyZodObject} from 'zod';
+import {type AnyZodObject, type z} from 'zod';
 
 import {INTERNAL_ERROR_MESSAGES, UNKNOWN_ERROR} from './constants.js';
 import {createErrorMessage} from './internals.js';
@@ -56,7 +56,7 @@ export function createCustomErrorWithData<ErrorCode extends string, ErrorData>(
       let errorMessage = createErrorMessage(errorCode, errorMessages, options?.messageParameters);
       let errorOptions: ErrorOptions = {};
 
-      if (typeof options?.cause !== 'undefined') {
+      if (options?.cause !== undefined) {
         errorOptions.cause = options.cause;
       }
 
@@ -65,7 +65,7 @@ export function createCustomErrorWithData<ErrorCode extends string, ErrorData>(
       this.code = errorCode;
       this.name = errorName;
 
-      if (typeof options?.data !== 'undefined') {
+      if (options?.data !== undefined) {
         this.data = options.data;
       }
 

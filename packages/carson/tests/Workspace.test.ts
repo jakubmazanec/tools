@@ -1,10 +1,10 @@
-import {vitest, describe, test, expect} from 'vitest';
 import path from 'node:path';
+import {describe, expect, test, vitest} from 'vitest';
 
-import {TEST_WORKSPACES_PATH} from './constants.js';
 import {ProjectError} from '../src/workspace/ProjectError.js';
 import {WorkspaceError} from '../src/workspace/WorkspaceError.js';
 import {type WorkspaceOptionsProject} from '../src/workspace/WorkspaceOptionsProject.js';
+import {TEST_WORKSPACES_PATH} from './constants.js';
 
 // we need to mock `isRootPath` so it considers directory with test workspaces as the file system root
 vitest.mock('@jakubmazanec/fs-utils', async (importOriginal) => {

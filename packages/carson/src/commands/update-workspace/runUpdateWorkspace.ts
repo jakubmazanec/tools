@@ -1,8 +1,8 @@
 import {type CommandArguments} from '@jakubmazanec/cli';
 import Observable from 'zen-observable';
 
-import {type updateWorkspaceCommand} from './updateWorkspaceCommand.js';
 import {type Workspace} from '../../workspace.js';
+import {type updateWorkspaceCommand} from './updateWorkspaceCommand.js';
 
 export type UpdateWorkspaceAndProjectsOptions = {
   workspace: Workspace | Workspace<false>;

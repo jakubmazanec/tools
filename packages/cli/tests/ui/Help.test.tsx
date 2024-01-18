@@ -1,5 +1,5 @@
-import {describe, test, expect} from 'vitest';
 import {render} from 'ink-testing-library';
+import {describe, expect, test} from 'vitest';
 
 import {Command} from '../../src/program/Command.js';
 import {Program} from '../../src/program/Program.js';

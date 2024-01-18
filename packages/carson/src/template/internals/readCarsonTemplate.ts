@@ -4,13 +4,13 @@ import glob from 'fast-glob';
 import fs from 'fs-extra';
 import path from 'node:path';
 
-import {parseCarsonTemplateId} from './parseCarsonTemplateId.js';
-import {resolveModule} from './resolveModule.js';
-import {TEMPLATES_PATH, TEMPLATE_CONFIG_FILENAME} from '../../constants.js';
+import {TEMPLATE_CONFIG_FILENAME, TEMPLATES_PATH} from '../../constants.js';
 import {type CarsonTemplate} from '../CarsonTemplate.js';
 import {carsonTemplateConfigSchema} from '../CarsonTemplateConfig.js';
 import {CarsonTemplateError} from '../CarsonTemplateError.js';
 import {templateAttributesSchema} from '../TemplateAttributes.js';
+import {parseCarsonTemplateId} from './parseCarsonTemplateId.js';
+import {resolveModule} from './resolveModule.js';
 
 export async function readCarsonTemplate(templateId: string): Promise<CarsonTemplate> {
   let [moduleId, templateName] = parseCarsonTemplateId(templateId);

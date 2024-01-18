@@ -1,5 +1,5 @@
-import {vitest, describe, test, expect} from 'vitest';
 import {render} from 'ink-testing-library';
+import {describe, expect, test, vitest} from 'vitest';
 
 import {SelectInput} from '../../src/ui/form/SelectInput.js';
 import {DOWN_ARROW, ENTER, ITEMS, UP_ARROW} from '../constants.js';

@@ -1,8 +1,8 @@
-import {Program, getProgramDetail} from '@jakubmazanec/cli';
+import {getProgramDetail, Program} from '@jakubmazanec/cli';
 import {readPackageJson} from '@jakubmazanec/zod-utils';
 import path from 'node:path';
 
-import {createWorkspaceCommand, updateWorkspaceCommand, createProjectCommand} from './commands.js';
+import {createProjectCommand, createWorkspaceCommand, updateWorkspaceCommand} from './commands.js';
 import {PACKAGE_PATH} from './constants.js';
 
 let programDetail = getProgramDetail(

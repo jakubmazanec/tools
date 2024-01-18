@@ -1,9 +1,9 @@
 import fs from 'fs-extra';
 import path from 'node:path';
 
-import {type WorkspaceConfig} from './WorkspaceConfig.js';
 import {CARSON_CONFIG_DIRECTORY, WORKSPACE_CONFIG_FILENAME} from '../constants.js';
 import {prettify} from '../template/internals.js';
+import {type WorkspaceConfig} from './WorkspaceConfig.js';
 
 /**
  * {@link saveWorkspaceConfig} options parameter.

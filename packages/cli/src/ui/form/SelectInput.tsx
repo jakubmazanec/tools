@@ -1,11 +1,11 @@
-import {Box, type BoxProps, Text, useInput, type Key} from 'ink';
+import {Box, type BoxProps, type Key, Text, useInput} from 'ink';
 import _ from 'lodash';
-import {useState, useEffect, useRef} from 'react';
+import {useEffect, useRef, useState} from 'react';
 
-import {type SelectInputItem} from './SelectInputItem.js';
 import * as colors from '../colors.js';
 import * as icons from '../icons.js';
 import {rotate} from '../internals.js';
+import {type SelectInputItem} from './SelectInputItem.js';
 
 /**
  * {@linkcode SelectInput} component props.

@@ -1,8 +1,8 @@
 import {type CommandArguments} from '@jakubmazanec/cli';
 import Observable from 'zen-observable';
 
-import {type createWorkspaceCommand} from './createWorkspaceCommand.js';
 import {Workspace} from '../../workspace.js';
+import {type createWorkspaceCommand} from './createWorkspaceCommand.js';
 
 export type CreateWorkspaceOptions = {
   workspacePath: string;

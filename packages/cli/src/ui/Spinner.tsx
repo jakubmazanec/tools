@@ -1,5 +1,5 @@
 import {Text} from 'ink';
-import {useState, useEffect} from 'react';
+import {useEffect, useState} from 'react';
 
 const SPINNER = {
   interval: 80,

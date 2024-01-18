@@ -1,11 +1,10 @@
-import {describe, test, expect} from 'vitest';
-
 import {type IsEqual} from '@jakubmazanec/ts-utils';
+import {describe, expect, test} from 'vitest';
 
 import {parseArguments} from '../src/parseArguments.js';
 import {ParsingError} from '../src/ParsingError.js';
 import {ValidationError} from '../src/ValidationError.js';
-import {EMPTY_PARSED_ARGUMENTS, SPECIAL_CHARACTERS, NUMBER_STRING} from './constants.js';
+import {EMPTY_PARSED_ARGUMENTS, NUMBER_STRING, SPECIAL_CHARACTERS} from './constants.js';
 
 describe('parseArgs()', () => {
   describe('correct typings', () => {

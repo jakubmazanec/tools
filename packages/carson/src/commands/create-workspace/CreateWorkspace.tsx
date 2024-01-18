@@ -1,13 +1,13 @@
-import {Header, icons, colors, type CommandArguments, useProgram} from '@jakubmazanec/cli';
+import {colors, type CommandArguments, Header, icons, useProgram} from '@jakubmazanec/cli';
 import chalk from 'chalk';
 import {Box, Text} from 'ink';
 import path from 'node:path';
 import {useEffect, useState} from 'react';
 
+import {type CommandStatus} from '../internals.js';
 import {type createWorkspaceCommand} from './createWorkspaceCommand.js';
 import {CreateWorkspaceInput, type CreateWorkspaceInputResult} from './CreateWorkspaceInput.js';
 import {runCreateWorkspace} from './runCreateWorkspace.js';
-import {type CommandStatus} from '../internals.js';
 
 export type CreateWorkspaceProps = {
   args: CommandArguments<typeof createWorkspaceCommand>;

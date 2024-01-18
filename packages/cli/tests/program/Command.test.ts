@@ -1,9 +1,9 @@
 import {type Arguments, type Argv} from '@jakubmazanec/args';
-import {type Simplify, type IsEqual} from '@jakubmazanec/ts-utils';
-import {describe, test, expect} from 'vitest';
+import {type IsEqual, type Simplify} from '@jakubmazanec/ts-utils';
+import {describe, expect, test} from 'vitest';
 
-import {Command} from '../../src/program/Command.js';
 import {type Program} from '../../src/program.js';
+import {Command} from '../../src/program/Command.js';
 
 describe('Command', () => {
   describe('correct typings', () => {

@@ -1,11 +1,19 @@
 import {ensureEmptyDirectory, findExistingDirectory, isRootPath} from '@jakubmazanec/fs-utils';
-import {readFile, jsonSchema, packageJsonSchema, type PackageJson} from '@jakubmazanec/zod-utils';
+import {jsonSchema, type PackageJson, packageJsonSchema, readFile} from '@jakubmazanec/zod-utils';
 import glob from 'fast-glob';
 import fs from 'fs-extra';
 import json5 from 'json5';
 import path from 'node:path';
 import {z} from 'zod';
 
+import {
+  CARSON_CONFIG_DIRECTORY,
+  PACKAGE_JSON_FILENAME,
+  WORKSPACE_CONFIG_FILENAME,
+  WORKSPACE_SNAPSHOT_FILENAME,
+} from '../constants.js';
+import {applyTemplateRenders} from '../template/applyTemplateRenders.js';
+import {renderCarsonTemplate} from '../template/renderCarsonTemplate.js';
 import {
   compareProjectPath,
   containsProject,
@@ -23,20 +31,12 @@ import {type WorkspaceCreateProjectOptions} from './WorkspaceCreateProjectOption
 import {WorkspaceDependencies} from './WorkspaceDependencies.js';
 import {WorkspaceError} from './WorkspaceError.js';
 import {type WorkspaceFindAndReadOptions} from './WorkspaceFindAndReadOptions.js';
-import type {WorkspaceOptions} from './WorkspaceOptions.js';
+import {type WorkspaceOptions} from './WorkspaceOptions.js';
 import {type WorkspacePackageJson} from './WorkspacePackageJson.js';
-import type {WorkspaceProjectGlobs} from './WorkspaceProjectGlobs.js';
+import {type WorkspaceProjectGlobs} from './WorkspaceProjectGlobs.js';
 import {type WorkspaceProjects} from './WorkspaceProjects.js';
 import {type WorkspaceRepository} from './WorkspaceRepository.js';
 import {type WorkspaceUpdateOptions} from './WorkspaceUpdateOptions.js';
-import {
-  CARSON_CONFIG_DIRECTORY,
-  WORKSPACE_CONFIG_FILENAME,
-  PACKAGE_JSON_FILENAME,
-  WORKSPACE_SNAPSHOT_FILENAME,
-} from '../constants.js';
-import {applyTemplateRenders} from '../template/applyTemplateRenders.js';
-import {renderCarsonTemplate} from '../template/renderCarsonTemplate.js';
 
 /**
  * Workspace represent a directory, usually a git repository, that contains {@link Project} instances.
@@ -83,7 +83,7 @@ export class Workspace<M extends boolean = true> {
   constructor(options: WorkspaceOptions<M>) {
     this.path = options.path;
 
-    if (typeof options.isMultiProject === 'undefined' || options.isMultiProject) {
+    if (options.isMultiProject === undefined || options.isMultiProject) {
       this.isMultiProject = true as M;
 
       let projectGlobOption = (options as WorkspaceOptions<true>).projectGlobs;

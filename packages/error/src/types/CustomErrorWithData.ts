@@ -1,4 +1,4 @@
-import type {UNKNOWN_ERROR} from '../constants.js';
+import {type UNKNOWN_ERROR} from '../constants.js';
 
 /**
  * Type representing custom error that can have an arbitrary data attached.

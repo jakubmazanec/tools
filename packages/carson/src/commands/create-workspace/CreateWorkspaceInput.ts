@@ -1,4 +1,4 @@
-import {type FormResult, createForm} from '@jakubmazanec/cli';
+import {createForm, type FormResult} from '@jakubmazanec/cli';
 
 const TEMPLATE_ID_REGEXP = /^.+:.+$/;
 

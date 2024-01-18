@@ -150,7 +150,7 @@ export function parseArguments<const O extends ParserConfig>(
           parserConfig.allowUnknownOptions,
         );
 
-        if (typeof parsedOptions[newOptionScope.name] !== 'undefined') {
+        if (parsedOptions[newOptionScope.name] !== undefined) {
           if (newOptionScope.config.multiple) {
             newOptionScope.previousParsedValue = parsedOptions[newOptionScope.name];
           } else if (newOptionScope.config.type === 'number' && newOptionScope.config.count) {
@@ -158,7 +158,7 @@ export function parseArguments<const O extends ParserConfig>(
           }
         }
 
-        if (typeof optionValue !== 'undefined') {
+        if (optionValue !== undefined) {
           newOptionScope.captureArg(optionValue);
         }
 
@@ -229,10 +229,7 @@ export function parseArguments<const O extends ParserConfig>(
 
           commandScope = null;
         }
-      } else if (
-        typeof parsedCommand === 'undefined' &&
-        commandFirstArguments.includes(arg.toLowerCase())
-      ) {
+      } else if (parsedCommand === undefined && commandFirstArguments.includes(arg.toLowerCase())) {
         // let's handle command
 
         let newCommandScope = new CommandScope(arg, normalizedCommandsConfig);
@@ -250,7 +247,7 @@ export function parseArguments<const O extends ParserConfig>(
 
         if (
           parameterConfig.type !== 'boolean' &&
-          typeof parameterConfig.choices !== 'undefined' &&
+          parameterConfig.choices !== undefined &&
           !parameterConfig.choices.includes(parameterValue as never) // during runtime `parameterValue` has correct type
         ) {
           throw new ParsingError('INVALID_PARAMETER', {
@@ -307,29 +304,23 @@ export function parseArguments<const O extends ParserConfig>(
 
     // if there are missing parsed parameters, add undefined
     for (let [i] of parametersConfig.entries()) {
-      if (typeof parsedParameters[i] === 'undefined') {
+      if (parsedParameters[i] === undefined) {
         parsedParameters[i] = undefined;
       }
     }
 
     // handle default option values...
     for (let [optionName, optionConfig] of Object.entries(optionsConfig)) {
-      if (
-        typeof parsedOptions[optionName] === 'undefined' &&
-        typeof optionConfig.defaultValue !== 'undefined'
-      ) {
+      if (parsedOptions[optionName] === undefined && optionConfig.defaultValue !== undefined) {
         parsedOptions[optionName] = optionConfig.defaultValue;
-      } else if (typeof parsedOptions[optionName] === 'undefined') {
+      } else if (parsedOptions[optionName] === undefined) {
         parsedOptions[optionName] = undefined;
       }
     }
 
     // handle default parameters values...
     for (let [i, parameterConfig] of parametersConfig.entries()) {
-      if (
-        typeof parsedParameters[i] === 'undefined' &&
-        typeof parameterConfig.defaultValue !== 'undefined'
-      ) {
+      if (parsedParameters[i] === undefined && parameterConfig.defaultValue !== undefined) {
         parsedParameters[i] = parameterConfig.defaultValue;
       }
     }

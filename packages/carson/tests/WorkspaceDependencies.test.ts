@@ -1,8 +1,8 @@
-import {describe, test, expect} from 'vitest';
 import path from 'node:path';
+import {describe, expect, test} from 'vitest';
 
-import {TEST_WORKSPACES_PATH} from './constants.js';
 import {Workspace, WorkspaceDependencies} from '../src/workspace.js';
+import {TEST_WORKSPACES_PATH} from './constants.js';
 
 describe('WorkspaceDependencies', () => {
   describe('new WorkspaceDependencies()', () => {

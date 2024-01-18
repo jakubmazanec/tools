@@ -43,7 +43,7 @@ export class OptionScope {
 
     if (
       ((this.config.type === 'number' && !this.config.count) || this.config.type === 'string') &&
-      typeof this.config.choices !== 'undefined' &&
+      this.config.choices !== undefined &&
       !this.config.choices.includes(value as never)
     ) {
       throw new ParsingError('INVALID_OPTION', {

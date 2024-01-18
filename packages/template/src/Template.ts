@@ -6,10 +6,10 @@ import omit from 'lodash.omit';
 import path from 'node:path';
 import prettier from 'prettier';
 import yaml from 'yaml';
-import {type z, type AnyZodObject} from 'zod';
+import {type AnyZodObject, type z} from 'zod';
 
 import {NO_INFERRED_PARSER_REGEXP} from './constants.js';
-import {templateAttributesSchema, type TemplateAttributes} from './TemplateAttributes.js';
+import {type TemplateAttributes, templateAttributesSchema} from './TemplateAttributes.js';
 import {TemplateError} from './TemplateError.js';
 import {type TemplateFunction} from './TemplateFunction.js';
 import {type TemplateRender} from './TemplateRender.js';

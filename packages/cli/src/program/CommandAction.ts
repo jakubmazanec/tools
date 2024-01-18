@@ -1,4 +1,4 @@
-import {type OptionsConfig, type ParametersConfig, type Arguments} from '@jakubmazanec/args';
+import {type Arguments, type OptionsConfig, type ParametersConfig} from '@jakubmazanec/args';
 
 import {type Program} from './Program.js';
 

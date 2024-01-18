@@ -1,10 +1,10 @@
 import chalk from 'chalk';
-import {Box, Text, type BoxProps} from 'ink';
+import {Box, type BoxProps, Text} from 'ink';
 
+import {type Program} from '../program.js';
 import * as colors from './colors.js';
 import {Header} from './Header.js';
 import * as icons from './icons.js';
-import {type Program} from '../program.js';
 
 /**
  * {@link Help} component props.

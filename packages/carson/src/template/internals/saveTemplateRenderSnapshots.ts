@@ -1,8 +1,8 @@
 import {deflateSync, strToU8} from 'fflate';
 import fs from 'fs-extra';
 
-import {type TemplateRenderSnapshots} from './TemplateRenderSnapshots.js';
 import {type TemplateRenders} from '../TemplateRenders.js';
+import {type TemplateRenderSnapshots} from './TemplateRenderSnapshots.js';
 
 export async function saveTemplateRenderSnapshots(
   templateRenders: TemplateRenders,

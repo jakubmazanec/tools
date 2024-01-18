@@ -1,8 +1,8 @@
 import {Command} from '@jakubmazanec/cli';
 import path from 'node:path';
 
-import {CreateProject} from './CreateProject.js';
 import {Workspace} from '../../workspace.js';
+import {CreateProject} from './CreateProject.js';
 
 export const createProjectCommand = new Command(
   'create project',

@@ -1,9 +1,9 @@
 import {type TupleToUnion} from '@jakubmazanec/ts-utils';
 
 import {
-  type ParameterConfig,
   type BooleanParameterConfig,
   type NumberParameterConfig,
+  type ParameterConfig,
   type StringParameterConfig,
 } from './ParameterConfig.js';
 import {type ParametersConfig} from './ParametersConfig.js';

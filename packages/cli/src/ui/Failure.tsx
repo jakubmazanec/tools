@@ -1,4 +1,4 @@
-import {Box, Text, type BoxProps} from 'ink';
+import {Box, type BoxProps, Text} from 'ink';
 
 import * as colors from './colors.js';
 import {type ErrorDetail} from './ErrorDetail.js';

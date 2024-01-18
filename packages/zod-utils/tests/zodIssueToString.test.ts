@@ -1,4 +1,4 @@
-import {describe, test, expect} from 'vitest';
+import {describe, expect, test} from 'vitest';
 import * as z from 'zod';
 
 import {zodIssuesToStrings} from '../src/main.js';

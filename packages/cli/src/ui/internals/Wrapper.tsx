@@ -1,11 +1,11 @@
 import {Box, Spacer, Text} from 'ink';
-import {useMemo, type FC, type PropsWithChildren} from 'react';
+import {type FC, type PropsWithChildren, useMemo} from 'react';
 import {ErrorBoundary} from 'react-error-boundary';
 
-import {programContext} from './programContext.js';
 import {type Program} from '../../program.js';
 import {highlighted, notice} from '../colors.js';
 import {Failure} from '../Failure.js';
+import {programContext} from './programContext.js';
 
 /**
  * {@link Wrapper} component props.

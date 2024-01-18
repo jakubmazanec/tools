@@ -1,8 +1,8 @@
 import {Command} from '@jakubmazanec/cli';
 import path from 'node:path';
 
-import {UpdateWorkspace} from './UpdateWorkspace.js';
 import {Workspace} from '../../workspace.js';
+import {UpdateWorkspace} from './UpdateWorkspace.js';
 
 export const updateWorkspaceCommand = new Command(
   'update workspace',

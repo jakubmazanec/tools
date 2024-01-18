@@ -4,6 +4,7 @@ import fs from 'fs-extra';
 import path from 'node:path';
 import prettier from 'prettier';
 
+import {CARSON_CONFIG_DIRECTORY} from '../constants.js';
 import {CarsonTemplateError} from './CarsonTemplateError.js';
 import {
   createUsingTemplateRender,
@@ -17,7 +18,6 @@ import {
   unmergeUsingTemplateRender,
 } from './internals.js';
 import {type TemplateRenders} from './TemplateRenders.js';
-import {CARSON_CONFIG_DIRECTORY} from '../constants.js';
 
 export type ApplyTemplateRendersOptions = {
   templateRenders: TemplateRenders;

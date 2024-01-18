@@ -1,4 +1,4 @@
-import {type Json, type PackageJson, isPackageJson} from '@jakubmazanec/zod-utils';
+import {isPackageJson, type Json, type PackageJson} from '@jakubmazanec/zod-utils';
 
 function isStringList(value: unknown): value is string[] {
   if (Array.isArray(value) && value.some((item) => typeof item === 'string')) {

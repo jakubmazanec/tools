@@ -4,10 +4,10 @@ import json from 'json5';
 import path from 'node:path';
 import yaml from 'yaml';
 
+import {type TemplateRender} from '../TemplateRender.js';
 import {merge} from './merge.js';
 import {prettify} from './prettify.js';
 import {type TemplateRenderSnapshot} from './TemplateRenderSnapshot.js';
-import {type TemplateRender} from '../TemplateRender.js';
 
 export async function createUsingTemplateRender(
   templateRender: TemplateRender | TemplateRenderSnapshot,

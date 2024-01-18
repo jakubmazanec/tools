@@ -2,10 +2,10 @@ import fs from 'fs-extra';
 import _ from 'lodash';
 import path from 'node:path';
 
-import {prettify} from './prettify.js';
-import {type TemplateRenderSnapshot} from './TemplateRenderSnapshot.js';
 import {CarsonTemplateError} from '../CarsonTemplateError.js';
 import {type TemplateRender} from '../TemplateRender.js';
+import {prettify} from './prettify.js';
+import {type TemplateRenderSnapshot} from './TemplateRenderSnapshot.js';
 
 export async function uninsertUsingTemplateRender(
   templateRender: TemplateRender | TemplateRenderSnapshot,

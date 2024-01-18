@@ -1,15 +1,15 @@
 /* eslint-disable no-await-in-loop -- needed */
 import {
-  Workspace,
-  runCreateWorkspace,
   runCreateProject,
+  runCreateWorkspace,
   runUpdateWorkspace,
+  Workspace,
 } from '@jakubmazanec/carson';
 import {createTempDirectory} from '@jakubmazanec/fs-utils';
 import {execa} from 'execa';
 import fs from 'fs-extra';
 import path from 'node:path';
-import {vitest, describe, test, expect} from 'vitest';
+import {describe, expect, test, vitest} from 'vitest';
 
 import {NPMRC_PATH, ONLY_ONE_STAR_REGEXP} from './constants.js';
 import {observableToPromise} from './observableToPromise.js';

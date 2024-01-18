@@ -1,5 +1,5 @@
 import {getInfo} from '@changesets/get-github-info';
-import type {ModCompWithPackage, NewChangesetWithCommit} from '@changesets/types';
+import {type ModCompWithPackage, type NewChangesetWithCommit} from '@changesets/types';
 
 export async function getDependencyReleaseLine(
   changesets: NewChangesetWithCommit[],

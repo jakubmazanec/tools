@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any, @typescript-eslint/no-empty-interface -- needed */
 
-import type {Primitive} from './Primitive.js';
+import {type Primitive} from './Primitive.js';
 
 /**
  * Same as built-in `Partial`, but works recursively. Useful when 1) you have a config object to which you need to merge another object, which would be a deep partial of a default object, or 2) you need to test or mock complex object, but most of its keys would be redundant for this purpose.

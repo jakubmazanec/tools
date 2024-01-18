@@ -1,5 +1,5 @@
-import {describe, test, expect} from 'vitest';
 import {render} from 'ink-testing-library';
+import {describe, expect, test} from 'vitest';
 
 import {Failure} from '../../src/ui/Failure.js';
 import {getErrorDetail} from '../../src/ui/getErrorDetail.js';

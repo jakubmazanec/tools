@@ -25,7 +25,7 @@ export class Checker {
       if (
         parameterConfig.type !== 'boolean' &&
         parameterConfig.choices && // default values and chocies do not contradict each other
-        typeof parameterConfig.defaultValue !== 'undefined' &&
+        parameterConfig.defaultValue !== undefined &&
         !parameterConfig.choices.includes(parameterConfig.defaultValue as never)
       ) {
         this.addError(
@@ -44,7 +44,7 @@ export class Checker {
           .every(
             (previousParameterConfig) =>
               previousParameterConfig.required === true ||
-              typeof previousParameterConfig.defaultValue !== 'undefined',
+              previousParameterConfig.defaultValue !== undefined,
           )
       ) {
         this.addError(
@@ -85,7 +85,7 @@ export class Checker {
         (optionConfig.type === 'string' ||
           (optionConfig.type === 'number' && !optionConfig.count)) &&
         optionConfig.choices &&
-        typeof optionConfig.defaultValue !== 'undefined' &&
+        optionConfig.defaultValue !== undefined &&
         !optionConfig.choices.includes(optionConfig.defaultValue as never)
       ) {
         this.addError(
@@ -102,7 +102,7 @@ export class Checker {
       let parsedParameter = parsedParameters[i];
 
       // required parameters must have value
-      if (parameterConfig.required === true && typeof parsedParameter === 'undefined') {
+      if (parameterConfig.required === true && parsedParameter === undefined) {
         this.addError(
           new ValidationError('MISSING_PARAMETER', {
             messageParameters: [parameterConfig.label ?? i],
@@ -117,7 +117,7 @@ export class Checker {
       let parsedOption = parsedOptions[optionName];
 
       // check required
-      if (optionConfig.required && typeof parsedOption === 'undefined') {
+      if (optionConfig.required && parsedOption === undefined) {
         this.addError(
           new ValidationError('MISSING_OPTION', {
             messageParameters: [optionName],
@@ -127,7 +127,7 @@ export class Checker {
 
       // check arity
       if (
-        typeof parsedOption !== 'undefined' &&
+        parsedOption !== undefined &&
         ((optionConfig.type === 'string' && optionConfig.multiple) ||
           (optionConfig.type === 'number' && optionConfig.multiple)) &&
         typeof optionConfig.arity === 'number' &&

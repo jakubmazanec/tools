@@ -1,17 +1,10 @@
 import {ensureEmptyDirectory, pathToPosixPath} from '@jakubmazanec/fs-utils';
-import {readFile, packageJsonSchema, type PackageJson} from '@jakubmazanec/zod-utils';
+import {type PackageJson, packageJsonSchema, readFile} from '@jakubmazanec/zod-utils';
 import fs from 'fs-extra';
 import json5 from 'json5';
 import path from 'node:path';
 import {z} from 'zod';
 
-import {type ProjectConfig, projectConfigSchema} from './ProjectConfig.js';
-import {type ProjectCreateOptions} from './ProjectCreateOptions.js';
-import {ProjectError} from './ProjectError.js';
-import {type ProjectOptions} from './ProjectOptions.js';
-import {type ProjectUpdateOptions} from './ProjectUpdateOptions.js';
-import {saveProjectConfig} from './saveProjectConfig.js';
-import {type Workspace} from './Workspace.js';
 import {
   CARSON_CONFIG_DIRECTORY,
   PROJECT_CONFIG_FILENAME,
@@ -19,6 +12,13 @@ import {
 } from '../constants.js';
 import {applyTemplateRenders} from '../template/applyTemplateRenders.js';
 import {renderCarsonTemplate} from '../template/renderCarsonTemplate.js';
+import {type ProjectConfig, projectConfigSchema} from './ProjectConfig.js';
+import {type ProjectCreateOptions} from './ProjectCreateOptions.js';
+import {ProjectError} from './ProjectError.js';
+import {type ProjectOptions} from './ProjectOptions.js';
+import {type ProjectUpdateOptions} from './ProjectUpdateOptions.js';
+import {saveProjectConfig} from './saveProjectConfig.js';
+import {type Workspace} from './Workspace.js';
 
 /**
  * Project represent a self-contained piece of software (e.g. a package, or an app) that is part of a {@link Workspace}. Currently only Node.js projects are supported.

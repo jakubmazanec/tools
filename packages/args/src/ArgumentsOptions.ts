@@ -1,14 +1,14 @@
 import {type TupleToUnion} from '@jakubmazanec/ts-utils';
 
 import {
-  type CountOptionConfig,
-  type BooleansOptionConfig,
-  type NumbersOptionConfig,
-  type StringsOptionConfig,
-  type OptionConfig,
   type BooleanOptionConfig,
+  type BooleansOptionConfig,
+  type CountOptionConfig,
   type NumberOptionConfig,
+  type NumbersOptionConfig,
+  type OptionConfig,
   type StringOptionConfig,
+  type StringsOptionConfig,
 } from './OptionConfig.js';
 import {type OptionsConfig} from './OptionsConfig.js';
 import {type ParserConfig} from './ParserConfig.js';

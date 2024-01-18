@@ -1,7 +1,7 @@
 import {type If} from '@jakubmazanec/ts-utils';
 import {type PathLike} from 'node:fs';
 import type fs from 'node:fs/promises';
-import {type z, type ZodTypeAny, type ZodError} from 'zod';
+import {type z, type ZodError, type ZodTypeAny} from 'zod';
 
 import {readFile} from './readFile.js';
 

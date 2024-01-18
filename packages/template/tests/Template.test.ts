@@ -1,9 +1,9 @@
-import {describe, test, expect} from 'vitest';
 import path from 'node:path';
+import {describe, expect, test} from 'vitest';
 import {z} from 'zod';
 
-import {TEST_TEMPLATES_DIRECTORY_PATH} from './constants.js';
 import {Template} from '../src/Template.js';
+import {TEST_TEMPLATES_DIRECTORY_PATH} from './constants.js';
 
 describe('Template', () => {
   describe('rendering', () => {

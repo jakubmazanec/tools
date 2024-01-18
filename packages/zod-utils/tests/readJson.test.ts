@@ -1,4 +1,4 @@
-import {describe, test, expect} from 'vitest';
+import {describe, expect, test} from 'vitest';
 import {z, ZodError} from 'zod';
 
 import {readJson} from '../src/main.js';

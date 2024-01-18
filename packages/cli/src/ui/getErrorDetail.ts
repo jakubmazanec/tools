@@ -1,4 +1,4 @@
-import {ValidationError, ParsingError} from '@jakubmazanec/args';
+import {ParsingError, ValidationError} from '@jakubmazanec/args';
 import {zodIssuesToStrings} from '@jakubmazanec/zod-utils';
 import {ZodError} from 'zod';
 

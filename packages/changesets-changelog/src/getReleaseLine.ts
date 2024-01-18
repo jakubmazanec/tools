@@ -1,5 +1,5 @@
 import {getInfo, getInfoFromPullRequest} from '@changesets/get-github-info';
-import {type VersionType, type NewChangeset} from '@changesets/types';
+import {type NewChangeset, type VersionType} from '@changesets/types';
 
 export type GetReleaseLineChangeset = NewChangeset & {
   commit?: string | undefined;

@@ -1,9 +1,9 @@
 import fs from 'fs-extra';
 import path from 'node:path';
 
-import {type ProjectConfig} from './ProjectConfig.js';
 import {CARSON_CONFIG_DIRECTORY, PROJECT_CONFIG_FILENAME} from '../constants.js';
 import {prettify} from '../template/internals.js';
+import {type ProjectConfig} from './ProjectConfig.js';
 
 /**
  * {@link saveProjectConfig} options parameter.

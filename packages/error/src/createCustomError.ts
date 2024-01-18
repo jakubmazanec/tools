@@ -24,7 +24,7 @@ export function createCustomError<ErrorCode extends string>(
       let errorMessage = createErrorMessage(errorCode, errorMessages, options?.messageParameters);
       let errorOptions: ErrorOptions = {};
 
-      if (typeof options?.cause !== 'undefined') {
+      if (options?.cause !== undefined) {
         errorOptions.cause = options.cause;
       }
 

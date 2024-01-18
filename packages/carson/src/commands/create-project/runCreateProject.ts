@@ -1,8 +1,8 @@
 import {type CommandArguments} from '@jakubmazanec/cli';
 import Observable from 'zen-observable';
 
-import {type createProjectCommand} from './createProjectCommand.js';
 import {type Workspace} from '../../workspace.js';
+import {type createProjectCommand} from './createProjectCommand.js';
 
 export type CreateProjectOptions = {
   projectPath: string;

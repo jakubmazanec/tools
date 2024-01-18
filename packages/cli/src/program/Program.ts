@@ -1,19 +1,19 @@
 /* eslint-disable @typescript-eslint/no-explicit-any -- needed */
-import {type ParametersConfig, type Argv, type OptionsConfig} from '@jakubmazanec/args';
+import {type Argv, type OptionsConfig, type ParametersConfig} from '@jakubmazanec/args';
 import fs from 'fs-extra';
 import fetchLatestVersion from 'latest-version';
 import path from 'path';
 import {type ComponentType} from 'react';
 import {type FallbackProps} from 'react-error-boundary';
 
+import {CACHE_PATH} from '../constants.js';
+import {Failure, Help} from '../ui.js';
+import {Wrapper} from '../ui/internals.js';
 import {type Command} from './Command.js';
 import {type ProgramCreateOptions} from './ProgramCreateOptions.js';
 import {ProgramError} from './ProgramError.js';
 import {type ProgramOptions} from './ProgramOptions.js';
 import {type ProgramStreams} from './ProgramStreams.js';
-import {CACHE_PATH} from '../constants.js';
-import {Wrapper} from '../ui/internals.js';
-import {Failure, Help} from '../ui.js';
 
 /**
  * Program manages and executes {@link Command} instances attached to it based on parsing command line arguments.

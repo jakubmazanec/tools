@@ -1,4 +1,4 @@
-import {vitest, describe, test, expect} from 'vitest';
+import {describe, expect, test, vitest} from 'vitest';
 
 import {getReleaseLine} from '../src/getReleaseLine';
 import {createGetReleaseLineArgs} from './utils/createGetReleaseLineArgs';

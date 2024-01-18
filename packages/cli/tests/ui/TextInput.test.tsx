@@ -1,6 +1,6 @@
-import {vitest, describe, test, expect} from 'vitest';
 import {render} from 'ink-testing-library';
 import {useState} from 'react';
+import {describe, expect, test, vitest} from 'vitest';
 
 import {TextInput} from '../../src/ui/form/TextInput.js';
 import {DELETE, ENTER, LEFT_ARROW, NOOP, RIGHT_ARROW, SHIFT_PLUS_TAB, TAB} from '../constants.js';

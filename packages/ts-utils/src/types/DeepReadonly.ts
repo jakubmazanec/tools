@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any -- needed */
 
-import type {Primitive} from './Primitive.js';
+import {type Primitive} from './Primitive.js';
 
 /**
  * Same as built-in `Readonly`, but works recursively:

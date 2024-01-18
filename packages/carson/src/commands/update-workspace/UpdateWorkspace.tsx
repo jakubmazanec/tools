@@ -1,11 +1,11 @@
-import {type CommandArguments, Header, icons, colors, useProgram} from '@jakubmazanec/cli';
+import {colors, type CommandArguments, Header, icons, useProgram} from '@jakubmazanec/cli';
 import chalk from 'chalk';
 import {Box, Text} from 'ink';
 import {useEffect, useState} from 'react';
 
+import {type Workspace} from '../../workspace.js';
 import {runUpdateWorkspace} from './runUpdateWorkspace.js';
 import {type updateWorkspaceCommand} from './updateWorkspaceCommand.js';
-import {type Workspace} from '../../workspace.js';
 
 export type UpdateWorkspaceProps = {
   args: CommandArguments<typeof updateWorkspaceCommand>;

@@ -1,14 +1,14 @@
-import {Header, icons, colors, type CommandArguments, useProgram} from '@jakubmazanec/cli';
+import {colors, type CommandArguments, Header, icons, useProgram} from '@jakubmazanec/cli';
 import chalk from 'chalk';
 import {Box, Text} from 'ink';
 import path from 'node:path';
 import {useEffect, useState} from 'react';
 
+import {type Workspace} from '../../workspace.js';
+import {type CommandStatus, packageNameToDirectory} from '../internals.js';
 import {type createProjectCommand} from './createProjectCommand.js';
 import {CreateProjectInput, type CreateProjectInputResult} from './CreateProjectInput.js';
 import {runCreateProject} from './runCreateProject.js';
-import {type Workspace} from '../../workspace.js';
-import {packageNameToDirectory, type CommandStatus} from '../internals.js';
 
 const ONLY_ONE_STAR_REGEXP = /^(?!(.*?\*){2,}|.*? |\*$).*?\*.*$/;
 

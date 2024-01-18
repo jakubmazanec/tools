@@ -1,9 +1,9 @@
 import {
+  type Arguments,
   type Argv,
-  parseArguments,
   type OptionsConfig,
   type ParametersConfig,
-  type Arguments,
+  parseArguments,
 } from '@jakubmazanec/args';
 
 import {type CommandAction} from './CommandAction.js';

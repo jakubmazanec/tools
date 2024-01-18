@@ -4,11 +4,11 @@ import json from 'json5';
 import path from 'node:path';
 import yaml from 'yaml';
 
+import {CarsonTemplateError} from '../CarsonTemplateError.js';
+import {type TemplateRender} from '../TemplateRender.js';
 import {merge} from './merge.js';
 import {prettify} from './prettify.js';
 import {type TemplateRenderSnapshot} from './TemplateRenderSnapshot.js';
-import {CarsonTemplateError} from '../CarsonTemplateError.js';
-import {type TemplateRender} from '../TemplateRender.js';
 
 export async function mergeUsingTemplateRender(
   templateRender: TemplateRender | TemplateRenderSnapshot,

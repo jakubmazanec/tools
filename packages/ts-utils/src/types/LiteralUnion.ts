@@ -1,4 +1,4 @@
-import type {Primitive} from './Primitive.js';
+import {type Primitive} from './Primitive.js';
 
 /**
  * Creates union type by combining primitve types and literal types while allowing auto-completion in IDEs.
