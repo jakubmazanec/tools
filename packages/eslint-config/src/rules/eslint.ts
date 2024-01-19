@@ -56,7 +56,7 @@ const config: eslint.Linter.Config['rules'] = {
   'no-alert': 'error', // disallow the use of alert, confirm, and prompt
   'no-array-constructor': 'warn', // disallow Array constructors
   'no-async-promise-executor': 'error', // disallow using an async function as a Promise executor
-  'no-await-in-loop': 'warn', // disallow await inside of loops
+  'no-await-in-loop': 'off', // disallow await inside of loops
   'no-bitwise': 'error', // disallow bitwise operators
   'no-caller': 'error', // disallow the use of arguments.caller or arguments.callee
   'no-case-declarations': 'error', // disallow lexical declarations in case clauses
