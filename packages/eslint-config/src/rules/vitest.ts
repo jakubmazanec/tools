@@ -11,7 +11,8 @@ const config: eslint.Linter.Config['rules'] = {
   'vitest/no-commented-out-tests': 'warn', // disallow commented out tests
   'vitest/no-conditional-expect': 'error', // disallow conditional expects
   'vitest/no-conditional-in-test': 'off', // disallow conditional tests
-  'vitest/no-conditional-tests': 'error', // disallow conditional tests
+  // TODO: turn the rul on when this is fixed: https://github.com/veritem/eslint-plugin-vitest/issues/358
+  'vitest/no-conditional-tests': 'off', // disallow conditional tests
   'vitest/no-disabled-tests': 'error', // disallow disabled tests
   'vitest/no-duplicate-hooks': 'error', // disallow duplicate hooks and teardown hooks
   'vitest/no-focused-tests': 'error', // disallow focused tests

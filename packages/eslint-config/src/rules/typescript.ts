@@ -323,7 +323,10 @@ const config: eslint.Linter.Config['rules'] = {
   '@typescript-eslint/prefer-includes': 'warn', // enforce includes method over indexOf method
   '@typescript-eslint/prefer-literal-enum-member': 'warn', // require that all enum members be literal values to prevent unintended enum member name shadow issues
   '@typescript-eslint/prefer-namespace-keyword': 'error', // require the use of the namespace keyword instead of the module keyword to declare custom TypeScript modules
-  '@typescript-eslint/prefer-nullish-coalescing': 'error', // enforce the usage of the nullish coalescing operator instead of logical chaining
+  '@typescript-eslint/prefer-nullish-coalescing': [
+    'error',
+    {ignoreConditionalTests: true, ignoreTernaryTests: true, ignoreMixedLogicalExpressions: true},
+  ], // enforce the usage of the nullish coalescing operator instead of logical chaining
   '@typescript-eslint/prefer-optional-chain': 'error', // prefer using concise optional chain expressions instead of chained logical ands
   '@typescript-eslint/prefer-promise-reject-errors': 'error', // require using Error objects as Promise rejection reasons
   '@typescript-eslint/prefer-readonly': 'warn', // requires that private members are marked as readonly if they're never modified outside of the constructor
