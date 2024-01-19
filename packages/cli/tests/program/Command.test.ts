@@ -49,7 +49,7 @@ describe('Command', () => {
         }
       > = true;
 
-      expect(isTypeCorrect).toBe(true); // this test is only for typechecking
+      expect(isTypeCorrect).toBeTruthy(); // this test is only for typechecking
     });
 
     test('runtime types correspond', () => {

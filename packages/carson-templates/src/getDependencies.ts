@@ -19,7 +19,7 @@ export function getDependencies(dependencies: string[], workspace: Workspace | W
     }
   }
 
-  const projectNames = workspace.projects.map((project) => project.name);
+  const projectNames = new Set(workspace.projects.map((project) => project.name));
 
   for (const [dependencyName, dependencyVersion] of Object.entries(result)) {
     if (dependencyName === TEMPLATE_PACKAGE_NAME) {
@@ -35,7 +35,7 @@ export function getDependencies(dependencies: string[], workspace: Workspace | W
       const version = [...installedDependency.exactVersions].sort().reverse()[0] as string;
 
       // if the dependency is actually a project in the workspace, we use existing version
-      if (projectNames.includes(dependencyName)) {
+      if (projectNames.has(dependencyName)) {
         if (semver.prerelease(version)?.length) {
           result[dependencyName] = version;
         } else {

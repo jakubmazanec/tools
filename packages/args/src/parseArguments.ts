@@ -66,8 +66,8 @@ export function parseArguments<const O extends ParserConfig>(
     command: command.toLowerCase(),
     args: commandToArguments(command.toLowerCase()),
   }));
-  let commandFirstArguments = normalizedCommandsConfig.map(
-    (commandConfig) => commandConfig.args[0],
+  let commandFirstArguments = new Set(
+    normalizedCommandsConfig.map((commandConfig) => commandConfig.args[0]),
   );
   let optionShortNameMap =
     parserConfig.options ? createOptionShortNameMap(parserConfig.options) : {};
@@ -229,7 +229,7 @@ export function parseArguments<const O extends ParserConfig>(
 
           commandScope = null;
         }
-      } else if (parsedCommand === undefined && commandFirstArguments.includes(arg.toLowerCase())) {
+      } else if (parsedCommand === undefined && commandFirstArguments.has(arg.toLowerCase())) {
         // let's handle command
 
         let newCommandScope = new CommandScope(arg, normalizedCommandsConfig);

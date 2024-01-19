@@ -26,7 +26,7 @@ describe('Workspace', () => {
       });
 
       expect(workspace.path).toBe(TEST_WORKSPACES_PATH);
-      expect(workspace.isMultiProject).toBe(false);
+      expect(workspace.isMultiProject).toBeFalsy();
       expect(workspace.projectGlobs).toBeNull();
       expect(
         workspace.projects.map(({workspace, ...rest}) => ({
@@ -57,7 +57,7 @@ describe('Workspace', () => {
       });
 
       expect(workspace.path).toBe(TEST_WORKSPACES_PATH);
-      expect(workspace.isMultiProject).toBe(false);
+      expect(workspace.isMultiProject).toBeFalsy();
       expect(workspace.projectGlobs).toBeNull();
       expect(
         workspace.projects.map(({workspace, ...rest}) => ({
@@ -112,7 +112,7 @@ describe('Workspace', () => {
       });
 
       expect(workspace.path).toBe(TEST_WORKSPACES_PATH);
-      expect(workspace.isMultiProject).toBe(true);
+      expect(workspace.isMultiProject).toBeTruthy();
       expect(workspace.projectGlobs).toEqual([]);
       expect(workspace.projects).toEqual([]);
       expect(workspace.config).toEqual({});
@@ -130,7 +130,7 @@ describe('Workspace', () => {
       });
 
       expect(workspace.path).toBe(TEST_WORKSPACES_PATH);
-      expect(workspace.isMultiProject).toBe(true);
+      expect(workspace.isMultiProject).toBeTruthy();
       expect(workspace.projectGlobs).toEqual(['./packages/*']);
       expect(workspace.projects).toEqual([]);
       expect(workspace.config).toEqual({});
@@ -156,7 +156,7 @@ describe('Workspace', () => {
       });
 
       expect(workspace.path).toBe(TEST_WORKSPACES_PATH);
-      expect(workspace.isMultiProject).toBe(true);
+      expect(workspace.isMultiProject).toBeTruthy();
       expect(workspace.projectGlobs).toEqual([]);
       expect(
         workspace.projects.map(({workspace, ...rest}) => ({

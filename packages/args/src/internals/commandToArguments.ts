@@ -9,12 +9,10 @@ export function commandToArguments(value: string): string[] {
   let args: string[] = [];
 
   for (let [, rawValue] of rawArgs.entries()) {
-    if (rawValue !== undefined) {
-      if (rawValue === '' && args.at(-1)) {
-        args[args.length - 1] += ' ';
-      } else {
-        args.push(rawValue);
-      }
+    if (rawValue === '' && args.at(-1)) {
+      args[args.length - 1] += ' ';
+    } else {
+      args.push(rawValue);
     }
   }
 

@@ -13,7 +13,7 @@ function getMockGithubData() {
 }
 
 // TODO: figure out how to refactor this
-// eslint-disable-next-line jest/require-hook -- needed
+// eslint-disable-next-line vitest/require-hook -- needed
 let mockGithubData = getMockGithubData();
 
 vitest.mock('@changesets/get-github-info', () => {

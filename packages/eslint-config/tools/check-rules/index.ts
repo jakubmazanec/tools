@@ -1,4 +1,3 @@
-import {allRules} from './allRules';
 import a11yRulesConfig from '../../src/rules/a11y';
 import eslintRulesConfig from '../../src/rules/eslint';
 import eslintCommentsRulesConfig from '../../src/rules/eslint-comments';
@@ -14,6 +13,7 @@ import testingLibraryRulesConfig from '../../src/rules/testing-library';
 import typescriptRulesConfig from '../../src/rules/typescript';
 import unicornRulesConfig from '../../src/rules/unicorn';
 import vitestRulesConfig from '../../src/rules/vitest';
+import {allRules} from './allRules';
 
 let a11yRules = Object.entries(a11yRulesConfig!).map(([ruleName]) => ruleName);
 let eslintRules = Object.entries(eslintRulesConfig!).map(([ruleName]) => ruleName);

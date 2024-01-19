@@ -41,7 +41,7 @@ type SelectInputProps = BoxProps & {
  */
 export function SelectInput({
   label,
-  items = [],
+  items,
   focus = true,
   initialIndex = 0,
   limit: userDefinedLimit,

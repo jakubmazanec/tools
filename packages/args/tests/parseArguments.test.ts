@@ -24,7 +24,7 @@ describe('parseArgs()', () => {
         }
       > = true;
 
-      expect(isTypeCorrect).toBe(true); // this test is only for typechecking
+      expect(isTypeCorrect).toBeTruthy(); // this test is only for typechecking
     });
 
     test('no errors (#2)', () => {
@@ -58,7 +58,7 @@ describe('parseArgs()', () => {
         }
       > = true;
 
-      expect(isTypeCorrect).toBe(true); // this test is only for typechecking
+      expect(isTypeCorrect).toBeTruthy(); // this test is only for typechecking
     });
 
     test('no errors (#3)', () => {
@@ -116,7 +116,7 @@ describe('parseArgs()', () => {
         }
       > = true;
 
-      expect(isTypeCorrect).toBe(true); // this test is only for typechecking
+      expect(isTypeCorrect).toBeTruthy(); // this test is only for typechecking
     });
 
     test('no errors (#4)', () => {
@@ -174,7 +174,7 @@ describe('parseArgs()', () => {
         }
       > = true;
 
-      expect(isTypeCorrect).toBe(true); // this test is only for typechecking
+      expect(isTypeCorrect).toBeTruthy(); // this test is only for typechecking
     });
 
     test('no errors (#5)', () => {
@@ -415,7 +415,7 @@ describe('parseArgs()', () => {
         }
       > = true;
 
-      expect(isTypeCorrect).toBe(true); // this test is only for typechecking
+      expect(isTypeCorrect).toBeTruthy(); // this test is only for typechecking
     });
 
     test('expected errors', () => {
@@ -469,7 +469,7 @@ describe('parseArgs()', () => {
         },
       });
 
-      expect(true).toBe(true); // this test is only for typechecking
+      expect(true).toBeTruthy(); // this test is only for typechecking
     });
 
     test('runtime types correspond (#1)', () => {
