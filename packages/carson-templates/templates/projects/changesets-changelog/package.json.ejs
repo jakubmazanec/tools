@@ -25,7 +25,7 @@ let packageJson = lodash.merge(
     },
     type: 'commonjs',
     exports: `./${BUILD_DIRECTORY}/main.js`,
-    files: [BUILD_DIRECTORY, 'src'],
+    files: [BUILD_DIRECTORY, SOURCE_DIRECTORY],
     scripts: {
       build: `del-cli ${BUILD_DIRECTORY} tsconfig.tsbuildinfo && ${BUILD_TO_CJS_COMMAND} && tsc`,
       clean: `del-cli coverage ${BUILD_DIRECTORY} *.tsbuildinfo`,

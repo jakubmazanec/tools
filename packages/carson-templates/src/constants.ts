@@ -1,7 +1,8 @@
 export const BUILD_DIRECTORY = 'build';
+export const SOURCE_DIRECTORY = 'source';
 
-export const BUILD_TO_ESM_COMMAND = `esbuild "src/**/*" --platform=node --target=node20.8 --outdir=${BUILD_DIRECTORY} --sourcemap`;
-export const BUILD_TO_CJS_COMMAND = `esbuild "src/**/*" --platform=node --target=node20.8 --format=cjs --outdir=${BUILD_DIRECTORY} --sourcemap`;
+export const BUILD_TO_ESM_COMMAND = `esbuild "${SOURCE_DIRECTORY}/**/*" --platform=node --target=node20.8 --outdir=${BUILD_DIRECTORY} --sourcemap`;
+export const BUILD_TO_CJS_COMMAND = `esbuild "${SOURCE_DIRECTORY}/**/*" --platform=node --target=node20.8 --format=cjs --outdir=${BUILD_DIRECTORY} --sourcemap`;
 export const FORMAT_COMMAND = 'prettier . --write --ignore-unknown';
 export const TEST_COMMAND = 'vitest run --coverage';
 
@@ -81,4 +82,13 @@ export const PRETTIER_OPTIONS = {
       },
     },
   ],
+};
+
+export const TYPEDOC_CONFIG = {
+  plugin: 'typedoc-plugin-markdown',
+  entryPoints: [`./${SOURCE_DIRECTORY}/main.ts`],
+  out: 'docs',
+  readme: 'none',
+  githubPages: false,
+  hideBreadcrumbs: true,
 };

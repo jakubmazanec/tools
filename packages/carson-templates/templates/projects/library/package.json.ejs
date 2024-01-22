@@ -3,6 +3,14 @@ to: 'package.json'
 strategy: merge
 ---
 <%
+let files = [BUILD_DIRECTORY, SOURCE_DIRECTORY];
+
+if (project.packageJson.bin) {
+  files.push('bin');
+}
+
+files.sort();
+
 let developmentDependencies = getDependencies(
   [
     '@types/node',
@@ -28,7 +36,7 @@ let packageJson = lodash.merge(
     },
     type: 'module',
     exports: `./${BUILD_DIRECTORY}/main.js`,
-    files: [BUILD_DIRECTORY, 'src'],
+    files,
     scripts: {
       build: `del-cli ${BUILD_DIRECTORY} tsconfig.tsbuildinfo && ${BUILD_TO_ESM_COMMAND} && tsc`,
       clean: `del-cli coverage ${BUILD_DIRECTORY} *.tsbuildinfo`,

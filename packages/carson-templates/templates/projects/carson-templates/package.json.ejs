@@ -29,7 +29,7 @@ let packageJson = {
     '.': `./${BUILD_DIRECTORY}/main.js`,
     './package.json': './package.json',
   },
-  files: [BUILD_DIRECTORY, 'src', 'templates'],
+  files: [BUILD_DIRECTORY, SOURCE_DIRECTORY, 'templates'],
   scripts: {
     build: `del-cli ${BUILD_DIRECTORY} tsconfig.tsbuildinfo && ${BUILD_TO_ESM_COMMAND} && tsc`,
     clean: `del-cli coverage ${BUILD_DIRECTORY} *.tsbuildinfo`,

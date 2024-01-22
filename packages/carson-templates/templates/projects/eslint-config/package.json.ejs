@@ -28,7 +28,7 @@ let packageJson = lodash.merge(
       './nodejs': `./${BUILD_DIRECTORY}/presets/nodejs.js`,
       './prettier': `./${BUILD_DIRECTORY}/presets/prettier.js`,
     },
-    files: [BUILD_DIRECTORY, 'src'],
+    files: [BUILD_DIRECTORY, SOURCE_DIRECTORY],
     scripts: {
       build: `del-cli ${BUILD_DIRECTORY} tsconfig.tsbuildinfo && ${BUILD_TO_CJS_COMMAND} && tsc`,
       clean: `del-cli coverage ${BUILD_DIRECTORY} *.tsbuildinfo`,
