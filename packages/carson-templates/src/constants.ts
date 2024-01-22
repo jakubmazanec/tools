@@ -1,44 +1,42 @@
+export const BUILD_DIRECTORY = 'build';
+
+export const BUILD_TO_ESM_COMMAND = `esbuild "src/**/*" --platform=node --target=node20.8 --outdir=${BUILD_DIRECTORY} --sourcemap`;
+export const BUILD_TO_CJS_COMMAND = `esbuild "src/**/*" --platform=node --target=node20.8 --format=cjs --outdir=${BUILD_DIRECTORY} --sourcemap`;
+export const FORMAT_COMMAND = 'prettier . --write --ignore-unknown';
+export const TEST_COMMAND = 'vitest run --coverage';
+
 export const CARSON_PACKAGE_NAME = '@jakubmazanec/carson';
 export const TEMPLATE_PACKAGE_NAME = '@jakubmazanec/carson-templates';
 
 export const MAIN_BRANCH_NAMES = new Set(['main', 'master']);
 export const DEVELOPMENT_BRANCH_NAMES = new Set(['development', 'develop', 'dev']);
 
-export const BUILD_TO_ESM_COMMAND =
-  'esbuild "src/**/*" --platform=node --target=node20.8 --outdir=dist --sourcemap';
-export const BUILD_TO_CJS_COMMAND =
-  'esbuild "src/**/*" --platform=node --target=node20.8 --format=cjs --outdir=dist --sourcemap';
-export const FORMAT_COMMAND = 'prettier . --write --ignore-unknown';
-export const TEST_COMMAND = 'vitest run --coverage';
-
 export const LINT_IGNORE_PATTERNS = [
   '.cache/',
   '.turbo/',
   'bin/',
-  'build/',
   'coverage/',
-  'dist/',
   'node_modules/',
   'public/',
   '*.d.ts',
   '*.json',
   '*.md',
   '*.mdx',
-];
+  `${BUILD_DIRECTORY}/`,
+].sort();
 
 export const FORMAT_IGNORE_PATTERNS = [
   '.cache/',
   '.turbo/',
-  'build/',
   'coverage/',
-  'dist/',
   'node_modules/',
   'public/',
   'npm-shrinkwrap.json',
   'package-lock.json',
   'CHANGELOG.md',
   'LICENSE.md',
-];
+  `${BUILD_DIRECTORY}/`,
+].sort();
 
 export const TSCONFIG_COMPILER_OPTIONS = {
   allowSyntheticDefaultImports: true,
@@ -57,4 +55,30 @@ export const TSCONFIG_COMPILER_OPTIONS = {
   skipLibCheck: true,
   strict: true,
   target: 'es2022',
+};
+
+export const PRETTIER_OPTIONS = {
+  arrowParens: 'always',
+  bracketSameLine: false,
+  bracketSpacing: false,
+  embeddedLanguageFormatting: 'auto',
+  experimentalTernaries: true,
+  htmlWhitespaceSensitivity: 'css',
+  jsxSingleQuote: false,
+  printWidth: 100,
+  proseWrap: 'always',
+  quoteProps: 'as-needed',
+  requirePragma: false,
+  semi: true,
+  singleQuote: true,
+  trailingComma: 'all',
+  // TODO: remove when this is fixed: https://github.com/prettier/prettier/issues/15956
+  overrides: [
+    {
+      files: ['tsconfig.json'],
+      options: {
+        trailingComma: 'none',
+      },
+    },
+  ],
 };

@@ -26,13 +26,13 @@ let packageJson = {
   },
   type: 'module',
   exports: {
-    '.': './dist/main.js',
+    '.': `./${BUILD_DIRECTORY}/main.js`,
     './package.json': './package.json',
   },
-  files: ['dist', 'src', 'templates'],
+  files: [BUILD_DIRECTORY, 'src', 'templates'],
   scripts: {
-    build: `del-cli dist tsconfig.tsbuildinfo && ${BUILD_TO_ESM_COMMAND} && tsc`,
-    clean: 'del-cli coverage dist *.tsbuildinfo',
+    build: `del-cli ${BUILD_DIRECTORY} tsconfig.tsbuildinfo && ${BUILD_TO_ESM_COMMAND} && tsc`,
+    clean: `del-cli coverage ${BUILD_DIRECTORY} *.tsbuildinfo`,
     document: 'del-cli docs && typedoc --options typedoc.config.cjs',
       format: FORMAT_COMMAND,
     lint: 'eslint .',

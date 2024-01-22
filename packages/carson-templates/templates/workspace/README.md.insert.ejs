@@ -1,5 +1,6 @@
 ---
 to: 'README.md'
+if: <%- Boolean(workspace.projects.length) %>
 strategy: [insert, projects]
 ---
 

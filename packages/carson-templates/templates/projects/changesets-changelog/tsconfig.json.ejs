@@ -8,7 +8,7 @@ let tsconfig = lodash.merge(
     compilerOptions: {
       ...TSCONFIG_COMPILER_OPTIONS,
       emitDeclarationOnly: true,
-      outDir: './dist',
+      outDir: `./${BUILD_DIRECTORY}`,
       rootDir: './src',
     },
     include: ['./src/**/*'],

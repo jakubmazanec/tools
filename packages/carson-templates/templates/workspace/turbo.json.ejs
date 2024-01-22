@@ -8,7 +8,7 @@ let turboConfig = {
   pipeline: {
     build: {
       dependsOn: ['^build', 'codegen'],
-      outputs: ['build/**', 'dist/**'],
+      outputs: [`${BUILD_DIRECTORY}/**`],
     },
     clean: {
       cache: false,
