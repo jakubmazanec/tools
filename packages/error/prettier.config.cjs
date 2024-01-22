@@ -14,7 +14,6 @@ module.exports = {
   experimentalTernaries: true,
   htmlWhitespaceSensitivity: 'css',
   jsxSingleQuote: false,
-  plugins: ['prettier-plugin-packagejson'],
   printWidth: 100,
   proseWrap: 'always',
   quoteProps: 'as-needed',
@@ -30,4 +29,5 @@ module.exports = {
       },
     },
   ],
+  plugins: ['prettier-plugin-packagejson'],
 };

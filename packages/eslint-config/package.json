@@ -12,19 +12,19 @@
   "sideEffects": false,
   "type": "commonjs",
   "exports": {
-    ".": "./dist/main.js",
-    "./nextjs": "./dist/presets/nextjs.js",
-    "./nodejs": "./dist/presets/nodejs.js",
-    "./prettier": "./dist/presets/prettier.js"
+    ".": "./build/main.js",
+    "./nextjs": "./build/presets/nextjs.js",
+    "./nodejs": "./build/presets/nodejs.js",
+    "./prettier": "./build/presets/prettier.js"
   },
   "files": [
-    "dist",
+    "build",
     "src"
   ],
   "scripts": {
-    "build": "del-cli dist tsconfig.tsbuildinfo && esbuild \"src/**/*\" --platform=node --target=node20.8 --format=cjs --outdir=dist --sourcemap && tsc",
+    "build": "del-cli build tsconfig.tsbuildinfo && esbuild \"src/**/*\" --platform=node --target=node20.8 --format=cjs --outdir=build --sourcemap && tsc",
     "check-rules": "ts-node --files --project tools/check-rules/tsconfig.json tools/check-rules/index.ts",
-    "clean": "del-cli coverage dist *.tsbuildinfo",
+    "clean": "del-cli coverage build *.tsbuildinfo",
     "format": "prettier . --write --ignore-unknown",
     "lint": "eslint .",
     "typecheck": "tsc --project tsconfig.typecheck.json"

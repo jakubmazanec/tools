@@ -11,15 +11,15 @@
   "author": "Jakub Mazanec <jakub@mazanec.dev>",
   "sideEffects": false,
   "type": "module",
-  "exports": "./dist/main.js",
+  "exports": "./build/main.js",
   "files": [
-    "dist",
+    "build",
     "src"
   ],
   "scripts": {
-    "build": "del-cli dist tsconfig.tsbuildinfo && esbuild \"src/**/*\" --platform=node --target=node20.8 --outdir=dist --sourcemap && tsc",
-    "clean": "del-cli coverage dist *.tsbuildinfo",
-    "develop": "concurrently \"esbuild \"src/**/*\" --platform=node --target=node20.8 --outdir=dist --sourcemap --watch\" \"tsc --watch\"",
+    "build": "del-cli build tsconfig.tsbuildinfo && esbuild \"src/**/*\" --platform=node --target=node20.8 --outdir=build --sourcemap && tsc",
+    "clean": "del-cli coverage build *.tsbuildinfo",
+    "develop": "concurrently \"esbuild \"src/**/*\" --platform=node --target=node20.8 --outdir=build --sourcemap --watch\" \"tsc --watch\"",
     "document": "del-cli docs && typedoc --options typedoc.config.cjs",
     "format": "prettier . --write --ignore-unknown",
     "lint": "eslint .",

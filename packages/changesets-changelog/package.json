@@ -11,14 +11,14 @@
   "author": "Jakub Mazanec <jakub@mazanec.dev>",
   "sideEffects": false,
   "type": "commonjs",
-  "exports": "./dist/main.js",
+  "exports": "./build/main.js",
   "files": [
-    "dist",
+    "build",
     "src"
   ],
   "scripts": {
-    "build": "del-cli dist tsconfig.tsbuildinfo && esbuild \"src/**/*\" --platform=node --target=node20.8 --format=cjs --outdir=dist --sourcemap && tsc",
-    "clean": "del-cli coverage dist *.tsbuildinfo",
+    "build": "del-cli build tsconfig.tsbuildinfo && esbuild \"src/**/*\" --platform=node --target=node20.8 --format=cjs --outdir=build --sourcemap && tsc",
+    "clean": "del-cli coverage build *.tsbuildinfo",
     "format": "prettier . --write --ignore-unknown",
     "lint": "eslint .",
     "test": "del-cli coverage && vitest run --coverage",

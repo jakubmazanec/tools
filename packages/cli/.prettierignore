@@ -8,12 +8,11 @@
 
 .cache/
 .turbo/
-build/
-coverage/
-dist/
-node_modules/
-public/
-npm-shrinkwrap.json
-package-lock.json
 CHANGELOG.md
 LICENSE.md
+build/
+coverage/
+node_modules/
+npm-shrinkwrap.json
+package-lock.json
+public/

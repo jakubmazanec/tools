@@ -25,7 +25,7 @@
     "strict": true,
     "target": "es2022",
     "emitDeclarationOnly": true,
-    "outDir": "./dist",
+    "outDir": "./build",
     "rootDir": "./src"
   },
   "include": ["./src/**/*"],
