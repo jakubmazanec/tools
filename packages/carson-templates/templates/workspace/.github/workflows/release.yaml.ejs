@@ -334,6 +334,9 @@ for (let project of workspace.projects) {
       - name: Build packages
         run: npm run build
 
+      - name: Check for changesets
+        run: npx changeset status --since=origin/<%- getDevelopmentBranch(workspace) %>
+
       - name: Authenticate to npm registry
         run: |
           echo "//registry.npmjs.com/:_authToken=NPM_TOKEN" > .npmrc
