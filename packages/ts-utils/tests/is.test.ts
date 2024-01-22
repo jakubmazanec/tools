@@ -1,6 +1,6 @@
 import {describe, expect, test} from 'vitest';
 
-import {is} from '../src/main.js';
+import {is} from '../source/main.js';
 
 const isNull = (value: unknown) => value === null;
 const isString = (value: unknown) => typeof value === 'string';

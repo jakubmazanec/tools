@@ -1,6 +1,6 @@
 import {describe, expect, test} from 'vitest';
 
-import {rotate} from '../../src/ui/internals/rotate.js';
+import {rotate} from '../../source/ui/internals/rotate.js';
 
 describe('rotate', () => {
   test('works', () => {

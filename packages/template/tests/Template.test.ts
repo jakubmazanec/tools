@@ -2,7 +2,7 @@ import path from 'node:path';
 import {describe, expect, test} from 'vitest';
 import {z} from 'zod';
 
-import {Template} from '../src/Template.js';
+import {Template} from '../source/Template.js';
 import {TEST_TEMPLATES_DIRECTORY_PATH} from './constants.js';
 
 describe('Template', () => {

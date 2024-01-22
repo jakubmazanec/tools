@@ -1,7 +1,7 @@
 import path from 'node:path';
 import {describe, expect, test} from 'vitest';
 
-import {findExistingDirectory} from '../src/findExistingDirectory.js';
+import {findExistingDirectory} from '../source/findExistingDirectory.js';
 import {PROJECT_PATH} from './constants.js';
 
 describe('findExistingDirectory()', () => {

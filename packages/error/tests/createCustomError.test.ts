@@ -1,6 +1,6 @@
 import {describe, expect, test} from 'vitest';
 
-import {createCustomError} from '../src/main.js';
+import {createCustomError} from '../source/main.js';
 
 describe('createCustomError()', () => {
   test('creates custom error class', () => {

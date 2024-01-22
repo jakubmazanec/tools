@@ -1,7 +1,7 @@
 import path from 'node:path';
 import {describe, expect, test} from 'vitest';
 
-import {findDirectories} from '../src/findDirectories.js';
+import {findDirectories} from '../source/findDirectories.js';
 import {TEST_FILES_PATH} from './constants.js';
 
 describe('findDirectories()', () => {

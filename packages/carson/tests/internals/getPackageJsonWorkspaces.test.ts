@@ -1,6 +1,6 @@
 import {describe, expect, test} from 'vitest';
 
-import {getPackageJsonWorkspaces} from '../../src/workspace/internals.js';
+import {getPackageJsonWorkspaces} from '../../source/workspace/internals.js';
 
 describe('getPackageJsonWorkspaces()', () => {
   test.each([

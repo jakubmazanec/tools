@@ -1,6 +1,6 @@
 import {describe, expect, test} from 'vitest';
 
-import {expandArguments} from '../../src/internals.js';
+import {expandArguments} from '../../source/internals.js';
 
 describe('expandArguments()', () => {
   test.each([

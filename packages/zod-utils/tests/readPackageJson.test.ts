@@ -1,7 +1,7 @@
 import {describe, expect, test} from 'vitest';
 import {ZodError} from 'zod';
 
-import {readPackageJson} from '../src/main.js';
+import {readPackageJson} from '../source/main.js';
 
 describe('readPackageJson', () => {
   describe('when trying to read non-existent file', () => {

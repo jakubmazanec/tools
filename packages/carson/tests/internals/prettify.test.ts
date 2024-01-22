@@ -1,7 +1,7 @@
 import path from 'node:path';
 import {describe, expect, test} from 'vitest';
 
-import {prettify} from '../../src/template/internals/prettify.js';
+import {prettify} from '../../source/template/internals/prettify.js';
 import {TEST_FILES_PATH} from '../constants.js';
 
 describe('prettify()', () => {

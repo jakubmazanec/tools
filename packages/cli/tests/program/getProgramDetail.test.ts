@@ -1,6 +1,6 @@
 import {describe, expect, test} from 'vitest';
 
-import {getProgramDetail} from '../../src/program/getProgramDetail.js';
+import {getProgramDetail} from '../../source/program/getProgramDetail.js';
 
 describe('getProgramDetail', () => {
   test('works', () => {

@@ -1,8 +1,8 @@
 import path from 'node:path';
 import {describe, expect, test} from 'vitest';
 
-import {ensureEmptyDirectory} from '../src/ensureEmptyDirectory.js';
-import {isEmptyDirectory} from '../src/isEmptyDirectory.js';
+import {ensureEmptyDirectory} from '../source/ensureEmptyDirectory.js';
+import {isEmptyDirectory} from '../source/isEmptyDirectory.js';
 import {TEST_FILES_PATH} from './constants.js';
 
 describe('isEmptyDirectory()', () => {

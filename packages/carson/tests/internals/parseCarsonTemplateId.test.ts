@@ -1,6 +1,6 @@
 import {describe, expect, test} from 'vitest';
 
-import {parseCarsonTemplateId} from '../../src/template/internals/parseCarsonTemplateId.js';
+import {parseCarsonTemplateId} from '../../source/template/internals/parseCarsonTemplateId.js';
 
 describe('parseCarsonTemplateId()', () => {
   test.each([

@@ -1,9 +1,9 @@
 import path from 'node:path';
 import {describe, expect, test, vitest} from 'vitest';
 
-import {ProjectError} from '../src/workspace/ProjectError.js';
-import {WorkspaceError} from '../src/workspace/WorkspaceError.js';
-import {type WorkspaceOptionsProject} from '../src/workspace/WorkspaceOptionsProject.js';
+import {ProjectError} from '../source/workspace/ProjectError.js';
+import {WorkspaceError} from '../source/workspace/WorkspaceError.js';
+import {type WorkspaceOptionsProject} from '../source/workspace/WorkspaceOptionsProject.js';
 import {TEST_WORKSPACES_PATH} from './constants.js';
 
 // we need to mock `isRootPath` so it considers directory with test workspaces as the file system root
@@ -19,7 +19,7 @@ vitest.mock('@jakubmazanec/fs-utils', async (importOriginal) => {
 describe('Workspace', () => {
   describe('single-project', () => {
     test('correctly creates workspace with no project', async () => {
-      let {Workspace} = await import('../src/workspace.js');
+      let {Workspace} = await import('../source/workspace.js');
       let workspace = new Workspace({
         path: TEST_WORKSPACES_PATH,
         isMultiProject: false,
@@ -39,7 +39,7 @@ describe('Workspace', () => {
     });
 
     test('correctly creates workspace with one project with dependencies', async () => {
-      let {Workspace} = await import('../src/workspace.js');
+      let {Workspace} = await import('../source/workspace.js');
       let workspace = new Workspace({
         path: TEST_WORKSPACES_PATH,
         isMultiProject: false,
@@ -91,7 +91,7 @@ describe('Workspace', () => {
     });
 
     test("correctly throws when paths don't match", async () => {
-      let {Workspace} = await import('../src/workspace.js');
+      let {Workspace} = await import('../source/workspace.js');
 
       expect(
         () =>
@@ -106,7 +106,7 @@ describe('Workspace', () => {
 
   describe('multi-project', () => {
     test('correctly creates workspace with no projects', async () => {
-      let {Workspace} = await import('../src/workspace.js');
+      let {Workspace} = await import('../source/workspace.js');
       let workspace = new Workspace({
         path: TEST_WORKSPACES_PATH,
       });
@@ -121,7 +121,7 @@ describe('Workspace', () => {
     });
 
     test('correctly creates workspace with no projects but with root package.json', async () => {
-      let {Workspace} = await import('../src/workspace.js');
+      let {Workspace} = await import('../source/workspace.js');
       let workspace = new Workspace({
         path: TEST_WORKSPACES_PATH,
         packageJson: {
@@ -139,7 +139,7 @@ describe('Workspace', () => {
     });
 
     test('correctly creates workspace with one project with dependencies', async () => {
-      let {Workspace} = await import('../src/workspace.js');
+      let {Workspace} = await import('../source/workspace.js');
       let workspace = new Workspace({
         path: TEST_WORKSPACES_PATH,
         projects: [
@@ -605,7 +605,7 @@ describe('Workspace', () => {
         allDependencies,
         errors,
       }) => {
-        let {Workspace} = await import('../src/workspace.js');
+        let {Workspace} = await import('../source/workspace.js');
         let workspace = await Workspace.read(path.join(TEST_WORKSPACES_PATH, workspacePath));
 
         let projectsWithCorrectPath = projects.map((project: WorkspaceOptionsProject) => ({
@@ -629,7 +629,7 @@ describe('Workspace', () => {
     );
 
     test('correctly handles non-existent workspace', async () => {
-      let {Workspace} = await import('../src/workspace.js');
+      let {Workspace} = await import('../source/workspace.js');
 
       await expect(
         Workspace.read(path.join(TEST_WORKSPACES_PATH, 'this-directory-should-not-exist')),
@@ -643,7 +643,7 @@ describe('Workspace', () => {
 
   describe('.findAndRead()', () => {
     test('returns undefined when no workspace is found', async () => {
-      let {Workspace} = await import('../src/workspace.js');
+      let {Workspace} = await import('../source/workspace.js');
       let workspace = await Workspace.findAndRead(
         path.join(TEST_WORKSPACES_PATH, 'this-directory-should-not-exist'),
       );
@@ -652,7 +652,7 @@ describe('Workspace', () => {
     });
 
     test('correctly finds nearest single-project workspace', async () => {
-      let {Workspace} = await import('../src/workspace.js');
+      let {Workspace} = await import('../source/workspace.js');
       let workspace = await Workspace.findAndRead(
         path.join(TEST_WORKSPACES_PATH, 'single-project/with-source/source'),
       );
@@ -661,7 +661,7 @@ describe('Workspace', () => {
     });
 
     test('correctly finds nearest multi-project workspace', async () => {
-      let {Workspace} = await import('../src/workspace.js');
+      let {Workspace} = await import('../source/workspace.js');
       let workspace = await Workspace.findAndRead(
         path.join(TEST_WORKSPACES_PATH, 'multi-project/with-dependencies/packages/foo'),
       );
@@ -674,7 +674,7 @@ describe('Workspace', () => {
 
   describe('.getProject()', () => {
     test('returns correct project', async () => {
-      let {Workspace} = await import('../src/workspace.js');
+      let {Workspace} = await import('../source/workspace.js');
       let workspace = await Workspace.read(
         path.join(TEST_WORKSPACES_PATH, 'multi-project/with-dependencies'),
       );
@@ -683,7 +683,7 @@ describe('Workspace', () => {
     });
 
     test("returns undefined when project isn't found", async () => {
-      let {Workspace} = await import('../src/workspace.js');
+      let {Workspace} = await import('../source/workspace.js');
       let workspace = await Workspace.read(
         path.join(TEST_WORKSPACES_PATH, 'multi-project/with-dependencies'),
       );

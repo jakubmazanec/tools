@@ -1,6 +1,6 @@
 import {describe, expect, test} from 'vitest';
 
-import {assert, is} from '../src/main.js';
+import {assert, is} from '../source/main.js';
 
 const DEFAULT_ASSERTION_ERROR_MESSAGE = 'Wrong assertion encountered';
 const ASSERTION_ERROR_MESSAGE = 'Assertion failed!';

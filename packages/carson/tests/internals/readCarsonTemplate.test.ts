@@ -1,6 +1,6 @@
 import {describe, expect, test} from 'vitest';
 
-import {readCarsonTemplate} from '../../src/template/internals/readCarsonTemplate.js';
+import {readCarsonTemplate} from '../../source/template/internals/readCarsonTemplate.js';
 
 describe('readCarsonTemplate()', () => {
   test('iworks', async () => {

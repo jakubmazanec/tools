@@ -1,6 +1,6 @@
 import {describe, expect, test} from 'vitest';
 
-import {importCarsonTemplate} from '../../src/template/internals/importCarsonTemplate.js';
+import {importCarsonTemplate} from '../../source/template/internals/importCarsonTemplate.js';
 
 describe('importCarsonTemplate()', () => {
   test('works', async () => {

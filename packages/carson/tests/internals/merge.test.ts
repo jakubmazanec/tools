@@ -1,6 +1,6 @@
 import {describe, expect, test} from 'vitest';
 
-import {merge} from '../../src/template/internals.js';
+import {merge} from '../../source/template/internals.js';
 
 describe('merge()', () => {
   test.each([

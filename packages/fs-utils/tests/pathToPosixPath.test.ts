@@ -1,6 +1,6 @@
 import {describe, expect, test} from 'vitest';
 
-import {pathToPosixPath} from '../src/pathToPosixPath.js';
+import {pathToPosixPath} from '../source/pathToPosixPath.js';
 
 describe('pathToPosixPath()', () => {
   test.each([
