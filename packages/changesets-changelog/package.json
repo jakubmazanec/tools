@@ -14,10 +14,10 @@
   "exports": "./build/main.js",
   "files": [
     "build",
-    "src"
+    "source"
   ],
   "scripts": {
-    "build": "del-cli build tsconfig.tsbuildinfo && esbuild \"src/**/*\" --platform=node --target=node20.8 --format=cjs --outdir=build --sourcemap && tsc",
+    "build": "del-cli build tsconfig.tsbuildinfo && esbuild \"source/**/*\" --platform=node --target=node20.8 --format=cjs --outdir=build --sourcemap && tsc",
     "clean": "del-cli coverage build *.tsbuildinfo",
     "format": "prettier . --write --ignore-unknown",
     "lint": "eslint .",

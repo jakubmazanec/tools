@@ -26,9 +26,9 @@
     "target": "es2022",
     "emitDeclarationOnly": true,
     "outDir": "./build",
-    "rootDir": "./src"
+    "rootDir": "./source"
   },
-  "include": ["./src/**/*"],
+  "include": ["./source/**/*"],
   "references": [
     {
       "path": "../../packages/ts-utils"

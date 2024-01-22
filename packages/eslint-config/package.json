@@ -19,10 +19,10 @@
   },
   "files": [
     "build",
-    "src"
+    "source"
   ],
   "scripts": {
-    "build": "del-cli build tsconfig.tsbuildinfo && esbuild \"src/**/*\" --platform=node --target=node20.8 --format=cjs --outdir=build --sourcemap && tsc",
+    "build": "del-cli build tsconfig.tsbuildinfo && esbuild \"source/**/*\" --platform=node --target=node20.8 --format=cjs --outdir=build --sourcemap && tsc",
     "check-rules": "ts-node --files --project tools/check-rules/tsconfig.json tools/check-rules/index.ts",
     "clean": "del-cli coverage build *.tsbuildinfo",
     "format": "prettier . --write --ignore-unknown",

@@ -8,7 +8,7 @@
 
 module.exports = {
   plugin: 'typedoc-plugin-markdown',
-  entryPoints: ['./src/main.ts'],
+  entryPoints: ['./source/main.ts'],
   out: 'docs',
   readme: 'none',
   githubPages: false,

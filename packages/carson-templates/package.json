@@ -17,11 +17,11 @@
   },
   "files": [
     "build",
-    "src",
+    "source",
     "templates"
   ],
   "scripts": {
-    "build": "del-cli build tsconfig.tsbuildinfo && esbuild \"src/**/*\" --platform=node --target=node20.8 --outdir=build --sourcemap && tsc",
+    "build": "del-cli build tsconfig.tsbuildinfo && esbuild \"source/**/*\" --platform=node --target=node20.8 --outdir=build --sourcemap && tsc",
     "clean": "del-cli coverage build *.tsbuildinfo",
     "document": "del-cli docs && typedoc --options typedoc.config.cjs",
     "format": "prettier . --write --ignore-unknown",
