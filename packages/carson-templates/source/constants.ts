@@ -4,7 +4,7 @@ export const SOURCE_DIRECTORY = 'source';
 export const BUILD_TO_ESM_COMMAND = `esbuild "${SOURCE_DIRECTORY}/**/*" --platform=node --target=node20.8 --outdir=${BUILD_DIRECTORY} --sourcemap`;
 export const BUILD_TO_CJS_COMMAND = `esbuild "${SOURCE_DIRECTORY}/**/*" --platform=node --target=node20.8 --format=cjs --outdir=${BUILD_DIRECTORY} --sourcemap`;
 export const FORMAT_COMMAND = 'prettier . --write --ignore-unknown';
-export const TEST_COMMAND = 'vitest run --coverage';
+export const TEST_COMMAND = 'vitest run --coverage --passWithNoTests';
 
 export const CARSON_PACKAGE_NAME = '@jakubmazanec/carson';
 export const TEMPLATE_PACKAGE_NAME = '@jakubmazanec/carson-templates';
