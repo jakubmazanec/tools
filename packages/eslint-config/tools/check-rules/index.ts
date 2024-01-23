@@ -2,7 +2,6 @@ import a11yRulesConfig from '../../source/rules/a11y';
 import eslintRulesConfig from '../../source/rules/eslint';
 import eslintCommentsRulesConfig from '../../source/rules/eslint-comments';
 import importRulesConfig from '../../source/rules/import';
-import nextjsRulesConfig from '../../source/rules/nextjs';
 import nodeRulesConfig from '../../source/rules/node';
 import prettierRulesConfig from '../../source/rules/prettier';
 import promiseRulesConfig from '../../source/rules/promise';
@@ -29,7 +28,6 @@ let reactRules = Object.entries(reactRulesConfig!).map(([ruleName]) => ruleName)
 let testingLibraryRules = Object.entries(testingLibraryRulesConfig!).map(([ruleName]) => ruleName);
 let typescriptRules = Object.entries(typescriptRulesConfig!).map(([ruleName]) => ruleName);
 let unicornRules = Object.entries(unicornRulesConfig!).map(([ruleName]) => ruleName);
-let nextjsRules = Object.entries(nextjsRulesConfig!).map(([ruleName]) => ruleName);
 
 // eslint-disable-next-line @typescript-eslint/require-array-sort-compare -- in this case it doesn't matter
 let usedRules = [
@@ -47,7 +45,6 @@ let usedRules = [
   ...testingLibraryRules,
   ...typescriptRules,
   ...unicornRules,
-  ...nextjsRules,
 ].sort();
 
 let missingRules: string[] = [];

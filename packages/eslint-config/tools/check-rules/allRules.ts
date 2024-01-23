@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access -- needed */
 /* eslint-disable @typescript-eslint/no-unsafe-argument -- needed */
 /* eslint-disable @typescript-eslint/no-unnecessary-type-assertion -- false positive? */
-import * as eslintPluginNextjs from '@next/eslint-plugin-next';
 import * as eslintPluginStylistic from '@stylistic/eslint-plugin';
 import * as eslintPluginTypescript from '@typescript-eslint/eslint-plugin';
 import * as eslint from 'eslint/use-at-your-own-risk';
@@ -87,10 +86,6 @@ let unicornRules = (Object.entries(eslintPluginUnicorn.rules) as Array<[string, 
   .filter(([, rule]) => !rule.meta?.deprecated)
   .map(([ruleName]) => `unicorn/${ruleName}`);
 
-let nextjsRules = (Object.entries(eslintPluginNextjs.rules) as Array<[string, Rule]>)
-  .filter(([, rule]) => !rule.meta?.deprecated)
-  .map(([ruleName]) => `@next/next/${ruleName}`);
-
 export const allRules = [
   ...eslintRules,
   ...typescriptRules,
@@ -106,5 +101,4 @@ export const allRules = [
   ...reactHooksRules,
   ...testingLibraryRules,
   ...unicornRules,
-  ...nextjsRules,
 ];

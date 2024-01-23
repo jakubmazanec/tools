@@ -1,4 +1,3 @@
-declare module '@next/eslint-plugin-next';
 declare module '@stylistic/eslint-plugin';
 declare module 'eslint-plugin-eslint-comments';
 declare module 'eslint-plugin-import';
