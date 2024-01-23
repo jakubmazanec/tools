@@ -23,7 +23,7 @@
     "document": "del-cli docs && typedoc --options typedoc.config.cjs",
     "format": "prettier . --write --ignore-unknown",
     "lint": "eslint .",
-    "test": "del-cli coverage && vitest run --coverage",
+    "test": "del-cli coverage && vitest run --coverage --passWithNoTests",
     "typecheck": "tsc --project tsconfig.typecheck.json"
   },
   "dependencies": {

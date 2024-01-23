@@ -28,7 +28,7 @@
     "format": "prettier . --write --ignore-unknown",
     "lint": "eslint .",
     "start": "node --loader ts-node/esm/transpile-only --inspect src/run.ts",
-    "test": "del-cli coverage && vitest run --coverage",
+    "test": "del-cli coverage && vitest run --coverage --passWithNoTests",
     "typecheck": "tsc --project tsconfig.typecheck.json"
   },
   "dependencies": {

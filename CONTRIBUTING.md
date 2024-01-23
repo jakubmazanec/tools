@@ -1,6 +1,7 @@
 # Contributing
 
-Thank you for your interest in contributing to this project! Your help is greatly appreciated.
+Thank you for your interest in contributing to any of these projects! Your help is greatly
+appreciated.
 
 ## Reporting Bugs
 
