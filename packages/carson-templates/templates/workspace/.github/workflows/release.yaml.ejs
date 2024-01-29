@@ -16,7 +16,7 @@ on: [push, workflow_dispatch]
 
 jobs:
   release_main_branch:
-    name: Main branch release
+    name: Release
     if: ${{ github.ref_name == '<%- getMainBranch(workspace) %>' }}
     runs-on: ubuntu-latest
     timeout-minutes: 15
@@ -29,9 +29,9 @@ jobs:
         with:
           access_token: ${{ secrets.GITHUB_TOKEN }}
 
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
-          token: ${{secrets.PAT}}
+          token: ${{ secrets.PAT }}
           fetch-depth: 0
 
       - name: Configure git
@@ -39,7 +39,7 @@ jobs:
           git config user.email "bot@mazanec.dev"
           git config user.name "Bot"
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
           registry-url: 'https://registry.npmjs.org'
@@ -158,7 +158,7 @@ for (let project of workspace.projects) {
           git push -u origin <%- getDevelopmentBranch(workspace) %> --no-verify
 
   release_development_branch:
-    name: Development branch release
+    name: Release preview
     if: ${{ github.ref_name == '<%- getDevelopmentBranch(workspace) %>' }}
     runs-on: ubuntu-latest
     timeout-minutes: 15
@@ -171,7 +171,7 @@ for (let project of workspace.projects) {
         with:
           access_token: ${{ secrets.GITHUB_TOKEN }}
 
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           token: ${{ secrets.PAT }}
           fetch-depth: 0
@@ -181,7 +181,7 @@ for (let project of workspace.projects) {
           git config user.email "bot@mazanec.dev"
           git config user.name "Bot"
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
           registry-url: 'https://registry.npmjs.org'
@@ -241,7 +241,7 @@ for (let project of workspace.projects) {
 
       - name: Version packages
         run: |
-          npx changeset version --snapshot next --snapshot-prerelease-template "{tag}.{commit}"
+          npx changeset version --snapshot next.$(git rev-parse --short HEAD) --snapshot-prerelease-template "{tag}"
           git status
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
