@@ -12,7 +12,7 @@ on: [push, workflow_dispatch]
 
 jobs:
   release_main_branch:
-    name: Main branch release
+    name: Release
     if: ${{ github.ref_name == 'main' }}
     runs-on: ubuntu-latest
     timeout-minutes: 15
@@ -25,9 +25,9 @@ jobs:
         with:
           access_token: ${{ secrets.GITHUB_TOKEN }}
 
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
-          token: ${{secrets.PAT}}
+          token: ${{ secrets.PAT }}
           fetch-depth: 0
 
       - name: Configure git
@@ -35,7 +35,7 @@ jobs:
           git config user.email "bot@mazanec.dev"
           git config user.name "Bot"
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
           registry-url: 'https://registry.npmjs.org'
@@ -140,7 +140,7 @@ jobs:
           git push -u origin development --no-verify
 
   release_development_branch:
-    name: Development branch release
+    name: Release preview
     if: ${{ github.ref_name == 'development' }}
     runs-on: ubuntu-latest
     timeout-minutes: 15
@@ -153,7 +153,7 @@ jobs:
         with:
           access_token: ${{ secrets.GITHUB_TOKEN }}
 
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           token: ${{ secrets.PAT }}
           fetch-depth: 0
@@ -163,7 +163,7 @@ jobs:
           git config user.email "bot@mazanec.dev"
           git config user.name "Bot"
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
           registry-url: 'https://registry.npmjs.org'
@@ -223,7 +223,7 @@ jobs:
 
       - name: Version packages
         run: |
-          npx changeset version --snapshot next --snapshot-prerelease-template "{tag}.{commit}"
+          npx changeset version --snapshot next.$(git rev-parse --short HEAD) --snapshot-prerelease-template "{tag}"
           git status
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
