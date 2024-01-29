@@ -68,6 +68,34 @@ jobs:
 
           git config --unset core.filemode
 
+      - name: Build packages
+        if: "github.actor != 'renovate[bot]'"
+        run: npm run build
+
+      - name: Authenticate to npm registry
+        if: "github.actor != 'renovate[bot]'"
+        run: |
+          echo "//registry.npmjs.com/:_authToken=NPM_TOKEN" > .npmrc
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Version packages
+        if: "github.actor != 'renovate[bot]'"
+        run: |
+          npx changeset version --snapshot unstable --snapshot-prerelease-template "{tag}.{commit}"
+          git status
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish packages
+        if: "github.actor != 'renovate[bot]'"
+        run: |
+          npx changeset publish --tag unstable --no-git-tag
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_CONFIG_PROVENANCE: 'true' # must be string, not boolean
+
       - name: Check for changesets
         if: "github.actor != 'renovate[bot]'"
         run: npx changeset status --since=origin/development
