@@ -89,6 +89,13 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Commit changes
+        run: |
+          git add -A
+          git reset .npmrc
+          git status
+          git commit -m"Release [skip actions]"
+
       - name: Publish packages
         run: |
           npx changeset publish --no-git-tag
@@ -100,13 +107,9 @@ jobs:
       - name: Update lockfile
         run: |
           npm install
-
-      - name: Commit changes
-        run: |
-          git add -A
-          git reset .npmrc
+          git add package-lock.json
           git status
-          git commit -m"Release [skip actions]"
+          git commit --amend --no-edit
 
       - name: Add git tags
         run: |
