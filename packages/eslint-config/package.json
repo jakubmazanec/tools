@@ -13,7 +13,6 @@
   "type": "commonjs",
   "exports": {
     ".": "./build/main.js",
-    "./nextjs": "./build/presets/nextjs.js",
     "./nodejs": "./build/presets/nodejs.js",
     "./prettier": "./build/presets/prettier.js"
   },

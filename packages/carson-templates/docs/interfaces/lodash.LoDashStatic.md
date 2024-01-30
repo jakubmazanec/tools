@@ -19282,8 +19282,8 @@ var users = [
 // create custom iteratee shorthands
 _.iteratee = _.wrap(_.iteratee, function (callback, func) {
   var p = /^(\S+)\s*([<>])\s*(\S+)$/.exec(func);
-  return !p ?
-      callback(func)
+  return !p
+    ? callback(func)
     : function (object) {
         return p[2] == '>' ? object[p[1]] > p[3] : object[p[1]] < p[3];
       };

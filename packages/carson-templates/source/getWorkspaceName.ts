@@ -1,7 +1,7 @@
 import {type Workspace} from '@jakubmazanec/carson';
 import path from 'node:path';
 
-const GIT_REPO_REGEXP = /\/([^\/]+?)(\.git)?$/;
+const GIT_REPO_REGEXP = /\/([^/]+?)(\.git)?$/;
 
 export function getWorkspaceName(workspace: Workspace | Workspace<false>) {
   if (workspace.packageJson?.name) {
