@@ -20,7 +20,7 @@ let dependencies = [
 let developmentDependencies = getDependencies(dependencies, workspace);
 let packageJson = lodash.merge(
   {
-    name: workspace.packageJson.name ?? (workspace.repository?.url ? (workspace.repository?.url.match(/\/([^\/]+?)(\.git)?$/)[1] ?? '') : ''),
+    name: getWorkspaceName(workspace),
     private: true,
     scripts: {
       build: 'turbo run build --no-daemon',
