@@ -1,4 +1,3 @@
-/* eslint-disable no-await-in-loop -- needed */
 import {
   runCreateProject,
   runCreateWorkspace,
@@ -26,6 +25,7 @@ describe.each([
       '@jakubmazanec/carson-templates:projects/changesets-changelog',
       '@jakubmazanec/carson-templates:projects/eslint-config',
       '@jakubmazanec/carson-templates:projects/library',
+      '@jakubmazanec/carson-templates:projects/remix-app',
     ],
   },
 ])('Smoke tests $label', ({label, workspaceTemplateId, projectTemplateIds}) => {

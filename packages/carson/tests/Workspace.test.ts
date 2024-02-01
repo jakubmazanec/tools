@@ -8,10 +8,10 @@ import {TEST_WORKSPACES_PATH} from './constants.js';
 
 // we need to mock `isRootPath` so it considers directory with test workspaces as the file system root
 vitest.mock('@jakubmazanec/fs-utils', async (importOriginal) => {
-  const mod = await importOriginal<typeof import('@jakubmazanec/fs-utils')>();
+  const originalModule = await importOriginal<typeof import('@jakubmazanec/fs-utils')>();
 
   return {
-    ...mod,
+    ...originalModule,
     isRootPath: vitest.fn().mockImplementation((value) => value === TEST_WORKSPACES_PATH),
   };
 });
