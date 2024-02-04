@@ -33,7 +33,7 @@ line arguments.
 
 ### constructor
 
-• `Private` **new Program**(`«destructured»`)
+• **new Program**(`«destructured»`): [`Program`](Program.md)
 
 #### Parameters
 
@@ -41,21 +41,25 @@ line arguments.
 | :--------------- | :---------------------------------------------- |
 | `«destructured»` | [`ProgramOptions`](../README.md#programoptions) |
 
+#### Returns
+
+[`Program`](Program.md)
+
 #### Defined in
 
-[cli/src/program/Program.ts:56](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/cli/src/program/Program.ts#L56)
+[cli/source/program/Program.ts:56](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/cli/source/program/Program.ts#L56)
 
 ## Properties
 
 ### ErrorBoundaryFallbackComponent
 
-• **ErrorBoundaryFallbackComponent**: `ComponentType`<`FallbackProps`\>
+• **ErrorBoundaryFallbackComponent**: `ComponentType`\<`FallbackProps`\>
 
 Custom error boundary fallback component
 
 #### Defined in
 
-[cli/src/program/Program.ts:54](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/cli/src/program/Program.ts#L54)
+[cli/source/program/Program.ts:54](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/cli/source/program/Program.ts#L54)
 
 ---
 
@@ -67,20 +71,20 @@ Program executable name.
 
 #### Defined in
 
-[cli/src/program/Program.ts:38](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/cli/src/program/Program.ts#L38)
+[cli/source/program/Program.ts:38](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/cli/source/program/Program.ts#L38)
 
 ---
 
 ### commands
 
-• `Readonly` **commands**: [`Command`](Command.md)<`string`, `undefined` \| `ParametersConfig`,
+• `Readonly` **commands**: [`Command`](Command.md)\<`string`, `undefined` \| `ParametersConfig`,
 `undefined` \| `OptionsConfig`, `boolean`, `boolean`\>[] = `[]`
 
 Program commands
 
 #### Defined in
 
-[cli/src/program/Program.ts:41](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/cli/src/program/Program.ts#L41)
+[cli/source/program/Program.ts:41](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/cli/source/program/Program.ts#L41)
 
 ---
 
@@ -92,7 +96,7 @@ Program description.
 
 #### Defined in
 
-[cli/src/program/Program.ts:35](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/cli/src/program/Program.ts#L35)
+[cli/source/program/Program.ts:35](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/cli/source/program/Program.ts#L35)
 
 ---
 
@@ -104,7 +108,7 @@ More readable program name.
 
 #### Defined in
 
-[cli/src/program/Program.ts:26](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/cli/src/program/Program.ts#L26)
+[cli/source/program/Program.ts:26](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/cli/source/program/Program.ts#L26)
 
 ---
 
@@ -114,7 +118,7 @@ More readable program name.
 
 #### Defined in
 
-[cli/src/program/Program.ts:45](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/cli/src/program/Program.ts#L45)
+[cli/source/program/Program.ts:45](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/cli/source/program/Program.ts#L45)
 
 ---
 
@@ -126,7 +130,7 @@ Program latest version.
 
 #### Defined in
 
-[cli/src/program/Program.ts:32](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/cli/src/program/Program.ts#L32)
+[cli/source/program/Program.ts:32](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/cli/source/program/Program.ts#L32)
 
 ---
 
@@ -138,7 +142,7 @@ Program name.
 
 #### Defined in
 
-[cli/src/program/Program.ts:23](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/cli/src/program/Program.ts#L23)
+[cli/source/program/Program.ts:23](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/cli/source/program/Program.ts#L23)
 
 ---
 
@@ -148,7 +152,7 @@ Program name.
 
 #### Defined in
 
-[cli/src/program/Program.ts:47](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/cli/src/program/Program.ts#L47)
+[cli/source/program/Program.ts:47](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/cli/source/program/Program.ts#L47)
 
 ---
 
@@ -160,59 +164,59 @@ Program version.
 
 #### Defined in
 
-[cli/src/program/Program.ts:29](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/cli/src/program/Program.ts#L29)
+[cli/source/program/Program.ts:29](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/cli/source/program/Program.ts#L29)
 
 ## Methods
 
 ### addCommand
 
-▸ **addCommand**(`command`): [`Program`](Program.md)
+▸ **addCommand**(`command`): `this`
 
 Adds command to the program.
 
 #### Parameters
 
-| Name      | Type                                                        | Description     |
-| :-------- | :---------------------------------------------------------- | :-------------- |
-| `command` | [`Command`](Command.md)<`any`, `any`, `any`, `any`, `any`\> | Command to add. |
+| Name      | Type                                                         | Description     |
+| :-------- | :----------------------------------------------------------- | :-------------- |
+| `command` | [`Command`](Command.md)\<`any`, `any`, `any`, `any`, `any`\> | Command to add. |
 
 #### Returns
 
-[`Program`](Program.md)
+`this`
 
 Program instance.
 
 #### Defined in
 
-[cli/src/program/Program.ts:150](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/cli/src/program/Program.ts#L150)
+[cli/source/program/Program.ts:150](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/cli/source/program/Program.ts#L150)
 
 ---
 
 ### renderElement
 
-▸ **renderElement**(`element`): `Promise`<`void`\>
+▸ **renderElement**(`element`): `Promise`\<`void`\>
 
 Renders a React element using Ink and outputs to the configured streams.
 
 #### Parameters
 
-| Name      | Type                                                                | Description                  |
-| :-------- | :------------------------------------------------------------------ | :--------------------------- |
-| `element` | `ReactElement`<`any`, `string` \| `JSXElementConstructor`<`any`\>\> | The React element to render. |
+| Name      | Type                                                                  | Description                  |
+| :-------- | :-------------------------------------------------------------------- | :--------------------------- |
+| `element` | `ReactElement`\<`any`, `string` \| `JSXElementConstructor`\<`any`\>\> | The React element to render. |
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Defined in
 
-[cli/src/program/Program.ts:162](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/cli/src/program/Program.ts#L162)
+[cli/source/program/Program.ts:162](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/cli/source/program/Program.ts#L162)
 
 ---
 
 ### run
 
-▸ **run**(`argv`): `Promise`<`void`\>
+▸ **run**(`argv`): `Promise`\<`void`\>
 
 Runs the program.
 
@@ -224,17 +228,17 @@ Runs the program.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Defined in
 
-[cli/src/program/Program.ts:197](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/cli/src/program/Program.ts#L197)
+[cli/source/program/Program.ts:197](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/cli/source/program/Program.ts#L197)
 
 ---
 
 ### create
 
-▸ `Static` **create**(`«destructured»`): `Promise`<[`Program`](Program.md)\>
+▸ **create**(`«destructured»`): `Promise`\<[`Program`](Program.md)\>
 
 #### Parameters
 
@@ -244,8 +248,8 @@ Runs the program.
 
 #### Returns
 
-`Promise`<[`Program`](Program.md)\>
+`Promise`\<[`Program`](Program.md)\>
 
 #### Defined in
 
-[cli/src/program/Program.ts:96](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/cli/src/program/Program.ts#L96)
+[cli/source/program/Program.ts:96](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/cli/source/program/Program.ts#L96)

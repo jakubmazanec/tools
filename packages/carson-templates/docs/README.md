@@ -4,38 +4,259 @@
 
 ### Namespaces
 
-- [lodash](modules/lodash.md)
 - [semver](modules/semver.md)
+
+### Variables
+
+- [BUILD_DIRECTORY](README.md#build_directory)
+- [BUILD_TO_CJS_COMMAND](README.md#build_to_cjs_command)
+- [BUILD_TO_ESM_COMMAND](README.md#build_to_esm_command)
+- [CARSON_PACKAGE_NAME](README.md#carson_package_name)
+- [DEVELOPMENT_BRANCH_NAMES](README.md#development_branch_names)
+- [FORMAT_COMMAND](README.md#format_command)
+- [FORMAT_IGNORE_PATTERNS](README.md#format_ignore_patterns)
+- [LINT_IGNORE_PATTERNS](README.md#lint_ignore_patterns)
+- [MAIN_BRANCH_NAMES](README.md#main_branch_names)
+- [PRETTIER_OPTIONS](README.md#prettier_options)
+- [SOURCE_DIRECTORY](README.md#source_directory)
+- [TEMPLATE_PACKAGE_NAME](README.md#template_package_name)
+- [TEST_COMMAND](README.md#test_command)
+- [TSCONFIG_COMPILER_OPTIONS](README.md#tsconfig_compiler_options)
+- [TYPEDOC_CONFIG](README.md#typedoc_config)
 
 ### Functions
 
 - [getDependencies](README.md#getdependencies)
 - [getDevelopmentBranch](README.md#getdevelopmentbranch)
 - [getMainBranch](README.md#getmainbranch)
-- [getMajorVersion](README.md#getmajorversion)
 - [getReferences](README.md#getreferences)
+- [getWorkspaceName](README.md#getworkspacename)
 - [lodash](README.md#lodash)
+
+## Variables
+
+### BUILD_DIRECTORY
+
+• `Const` **BUILD_DIRECTORY**: `"build"`
+
+#### Defined in
+
+[packages/carson-templates/source/constants.ts:1](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson-templates/source/constants.ts#L1)
+
+---
+
+### BUILD_TO_CJS_COMMAND
+
+• `Const` **BUILD_TO_CJS_COMMAND**:
+`"esbuild \"source/**/*\" --platform=node --target=node20.8 --format=cjs --outdir=build --sourcemap"`
+
+#### Defined in
+
+[packages/carson-templates/source/constants.ts:5](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson-templates/source/constants.ts#L5)
+
+---
+
+### BUILD_TO_ESM_COMMAND
+
+• `Const` **BUILD_TO_ESM_COMMAND**:
+`"esbuild \"source/**/*\" --platform=node --target=node20.8 --outdir=build --sourcemap"`
+
+#### Defined in
+
+[packages/carson-templates/source/constants.ts:4](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson-templates/source/constants.ts#L4)
+
+---
+
+### CARSON_PACKAGE_NAME
+
+• `Const` **CARSON_PACKAGE_NAME**: `"@jakubmazanec/carson"`
+
+#### Defined in
+
+[packages/carson-templates/source/constants.ts:9](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson-templates/source/constants.ts#L9)
+
+---
+
+### DEVELOPMENT_BRANCH_NAMES
+
+• `Const` **DEVELOPMENT_BRANCH_NAMES**: `Set`\<`string`\>
+
+#### Defined in
+
+[packages/carson-templates/source/constants.ts:13](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson-templates/source/constants.ts#L13)
+
+---
+
+### FORMAT_COMMAND
+
+• `Const` **FORMAT_COMMAND**: `"prettier . --write --ignore-unknown"`
+
+#### Defined in
+
+[packages/carson-templates/source/constants.ts:6](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson-templates/source/constants.ts#L6)
+
+---
+
+### FORMAT_IGNORE_PATTERNS
+
+• `Const` **FORMAT_IGNORE_PATTERNS**: `string`[]
+
+#### Defined in
+
+[packages/carson-templates/source/constants.ts:29](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson-templates/source/constants.ts#L29)
+
+---
+
+### LINT_IGNORE_PATTERNS
+
+• `Const` **LINT_IGNORE_PATTERNS**: `string`[]
+
+#### Defined in
+
+[packages/carson-templates/source/constants.ts:15](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson-templates/source/constants.ts#L15)
+
+---
+
+### MAIN_BRANCH_NAMES
+
+• `Const` **MAIN_BRANCH_NAMES**: `Set`\<`string`\>
+
+#### Defined in
+
+[packages/carson-templates/source/constants.ts:12](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson-templates/source/constants.ts#L12)
+
+---
+
+### PRETTIER_OPTIONS
+
+• `Const` **PRETTIER_OPTIONS**: `Object`
+
+#### Type declaration
+
+| Name                         | Type                                                                            |
+| :--------------------------- | :------------------------------------------------------------------------------ |
+| `arrowParens`                | `string`                                                                        |
+| `bracketSameLine`            | `boolean`                                                                       |
+| `bracketSpacing`             | `boolean`                                                                       |
+| `embeddedLanguageFormatting` | `string`                                                                        |
+| `experimentalTernaries`      | `boolean`                                                                       |
+| `htmlWhitespaceSensitivity`  | `string`                                                                        |
+| `jsxSingleQuote`             | `boolean`                                                                       |
+| `overrides`                  | \{ `files`: `string`[] ; `options`: \{ `trailingComma`: `string` = 'none' } }[] |
+| `printWidth`                 | `number`                                                                        |
+| `proseWrap`                  | `string`                                                                        |
+| `quoteProps`                 | `string`                                                                        |
+| `requirePragma`              | `boolean`                                                                       |
+| `semi`                       | `boolean`                                                                       |
+| `singleQuote`                | `boolean`                                                                       |
+| `trailingComma`              | `string`                                                                        |
+
+#### Defined in
+
+[packages/carson-templates/source/constants.ts:61](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson-templates/source/constants.ts#L61)
+
+---
+
+### SOURCE_DIRECTORY
+
+• `Const` **SOURCE_DIRECTORY**: `"source"`
+
+#### Defined in
+
+[packages/carson-templates/source/constants.ts:2](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson-templates/source/constants.ts#L2)
+
+---
+
+### TEMPLATE_PACKAGE_NAME
+
+• `Const` **TEMPLATE_PACKAGE_NAME**: `"@jakubmazanec/carson-templates"`
+
+#### Defined in
+
+[packages/carson-templates/source/constants.ts:10](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson-templates/source/constants.ts#L10)
+
+---
+
+### TEST_COMMAND
+
+• `Const` **TEST_COMMAND**: `"vitest run --coverage --passWithNoTests"`
+
+#### Defined in
+
+[packages/carson-templates/source/constants.ts:7](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson-templates/source/constants.ts#L7)
+
+---
+
+### TSCONFIG_COMPILER_OPTIONS
+
+• `Const` **TSCONFIG_COMPILER_OPTIONS**: `Object`
+
+#### Type declaration
+
+| Name                               | Type       |
+| :--------------------------------- | :--------- |
+| `allowSyntheticDefaultImports`     | `boolean`  |
+| `composite`                        | `boolean`  |
+| `exactOptionalPropertyTypes`       | `boolean`  |
+| `forceConsistentCasingInFileNames` | `boolean`  |
+| `isolatedModules`                  | `boolean`  |
+| `jsx`                              | `string`   |
+| `lib`                              | `string`[] |
+| `module`                           | `string`   |
+| `moduleResolution`                 | `string`   |
+| `noEmitOnError`                    | `boolean`  |
+| `noImplicitOverride`               | `boolean`  |
+| `noImplicitReturns`                | `boolean`  |
+| `noUncheckedIndexedAccess`         | `boolean`  |
+| `skipLibCheck`                     | `boolean`  |
+| `strict`                           | `boolean`  |
+| `target`                           | `string`   |
+
+#### Defined in
+
+[packages/carson-templates/source/constants.ts:42](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson-templates/source/constants.ts#L42)
+
+---
+
+### TYPEDOC_CONFIG
+
+• `Const` **TYPEDOC_CONFIG**: `Object`
+
+#### Type declaration
+
+| Name              | Type       |
+| :---------------- | :--------- |
+| `entryPoints`     | `string`[] |
+| `githubPages`     | `boolean`  |
+| `hideBreadcrumbs` | `boolean`  |
+| `out`             | `string`   |
+| `plugin`          | `string`   |
+| `readme`          | `string`   |
+
+#### Defined in
+
+[packages/carson-templates/source/constants.ts:87](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson-templates/source/constants.ts#L87)
 
 ## Functions
 
 ### getDependencies
 
-▸ **getDependencies**(`dependencies`, `workspace`): `Record`<`string`, `string`\>
+▸ **getDependencies**(`dependencies`, `workspace`): `Record`\<`string`, `string`\>
 
 #### Parameters
 
-| Name           | Type                                          |
-| :------------- | :-------------------------------------------- |
-| `dependencies` | `string`[]                                    |
-| `workspace`    | `Workspace`<`true`\> \| `Workspace`<`false`\> |
+| Name           | Type                                            |
+| :------------- | :---------------------------------------------- |
+| `dependencies` | `string`[]                                      |
+| `workspace`    | `Workspace`\<`true`\> \| `Workspace`\<`false`\> |
 
 #### Returns
 
-`Record`<`string`, `string`\>
+`Record`\<`string`, `string`\>
 
 #### Defined in
 
-[packages/carson-templates/src/main.ts:90](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson-templates/src/main.ts#L90)
+[packages/carson-templates/source/getDependencies.ts:11](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson-templates/source/getDependencies.ts#L11)
 
 ---
 
@@ -45,9 +266,9 @@
 
 #### Parameters
 
-| Name        | Type                                          |
-| :---------- | :-------------------------------------------- |
-| `workspace` | `Workspace`<`true`\> \| `Workspace`<`false`\> |
+| Name        | Type                                            |
+| :---------- | :---------------------------------------------- |
+| `workspace` | `Workspace`\<`true`\> \| `Workspace`\<`false`\> |
 
 #### Returns
 
@@ -55,7 +276,7 @@
 
 #### Defined in
 
-[packages/carson-templates/src/main.ts:76](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson-templates/src/main.ts#L76)
+[packages/carson-templates/source/getDevelopmentBranch.ts:5](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson-templates/source/getDevelopmentBranch.ts#L5)
 
 ---
 
@@ -65,9 +286,9 @@
 
 #### Parameters
 
-| Name        | Type                                          |
-| :---------- | :-------------------------------------------- |
-| `workspace` | `Workspace`<`true`\> \| `Workspace`<`false`\> |
+| Name        | Type                                            |
+| :---------- | :---------------------------------------------- |
+| `workspace` | `Workspace`\<`true`\> \| `Workspace`\<`false`\> |
 
 #### Returns
 
@@ -75,57 +296,55 @@
 
 #### Defined in
 
-[packages/carson-templates/src/main.ts:66](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson-templates/src/main.ts#L66)
-
----
-
-### getMajorVersion
-
-▸ **getMajorVersion**(`version`): `number`
-
-#### Parameters
-
-| Name      | Type     |
-| :-------- | :------- |
-| `version` | `string` |
-
-#### Returns
-
-`number`
-
-#### Defined in
-
-[packages/carson-templates/src/main.ts:86](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson-templates/src/main.ts#L86)
+[packages/carson-templates/source/getMainBranch.ts:5](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson-templates/source/getMainBranch.ts#L5)
 
 ---
 
 ### getReferences
 
-▸ **getReferences**(`workspace`, `project`): { `path`: `string` }[]
+▸ **getReferences**(`workspace`, `project`): \{ `path`: `string` }[]
 
 #### Parameters
 
-| Name        | Type                                          |
-| :---------- | :-------------------------------------------- |
-| `workspace` | `Workspace`<`true`\> \| `Workspace`<`false`\> |
-| `project`   | `Project`<`true`\> \| `Project`<`false`\>     |
+| Name        | Type                                            |
+| :---------- | :---------------------------------------------- |
+| `workspace` | `Workspace`\<`true`\> \| `Workspace`\<`false`\> |
+| `project`   | `Project`\<`true`\> \| `Project`\<`false`\>     |
 
 #### Returns
 
-{ `path`: `string` }[]
+\{ `path`: `string` }[]
 
 #### Defined in
 
-[packages/carson-templates/src/main.ts:139](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson-templates/src/main.ts#L139)
+[packages/carson-templates/source/getReferences.ts:3](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson-templates/source/getReferences.ts#L3)
+
+---
+
+### getWorkspaceName
+
+▸ **getWorkspaceName**(`workspace`): `string`
+
+#### Parameters
+
+| Name        | Type                                            |
+| :---------- | :---------------------------------------------- |
+| `workspace` | `Workspace`\<`true`\> \| `Workspace`\<`false`\> |
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[packages/carson-templates/source/getWorkspaceName.ts:6](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson-templates/source/getWorkspaceName.ts#L6)
 
 ---
 
 ### lodash
 
-▸ **lodash**<`TrapAny`\>(`value`): [`Collection`](interfaces/lodash.Collection.md)<`any`\> &
-[`Function`](interfaces/lodash.Function.md)<`any`\> &
-[`Object`](interfaces/lodash.Object.md)<`any`\> &
-[`Primitive`](interfaces/lodash.Primitive.md)<`any`\> & [`String`](interfaces/lodash.String.md)
+▸ **lodash**\<`TrapAny`\>(`value`): `Collection`\<`any`\> & `Function`\<`any`\> & `Object`\<`any`\>
+& `Primitive`\<`any`\> & `String`
 
 Creates a lodash object which wraps value to enable implicit method chain sequences. Methods that
 operate on and return arrays, collections, and functions can be chained together. Methods that
@@ -202,16 +421,13 @@ trimEnd, trimStart, truncate, unescape, uniqueId, upperCase, upperFirst, value, 
 
 #### Returns
 
-[`Collection`](interfaces/lodash.Collection.md)<`any`\> &
-[`Function`](interfaces/lodash.Function.md)<`any`\> &
-[`Object`](interfaces/lodash.Object.md)<`any`\> &
-[`Primitive`](interfaces/lodash.Primitive.md)<`any`\> & [`String`](interfaces/lodash.String.md)
+`Collection`\<`any`\> & `Function`\<`any`\> & `Object`\<`any`\> & `Primitive`\<`any`\> & `String`
 
 #### Defined in
 
 node_modules/@types/lodash/common/common.d.ts:94
 
-▸ **lodash**<`T`\>(`value`): [`Primitive`](interfaces/lodash.Primitive.md)<`T`\>
+▸ **lodash**\<`T`\>(`value`): `Primitive`\<`T`\>
 
 #### Type parameters
 
@@ -227,13 +443,13 @@ node_modules/@types/lodash/common/common.d.ts:94
 
 #### Returns
 
-[`Primitive`](interfaces/lodash.Primitive.md)<`T`\>
+`Primitive`\<`T`\>
 
 #### Defined in
 
 node_modules/@types/lodash/common/common.d.ts:95
 
-▸ **lodash**(`value`): [`String`](interfaces/lodash.String.md)
+▸ **lodash**(`value`): `String`
 
 #### Parameters
 
@@ -243,13 +459,13 @@ node_modules/@types/lodash/common/common.d.ts:95
 
 #### Returns
 
-[`String`](interfaces/lodash.String.md)
+`String`
 
 #### Defined in
 
 node_modules/@types/lodash/common/common.d.ts:96
 
-▸ **lodash**<`T`\>(`value`): [`Function`](interfaces/lodash.Function.md)<`T`\>
+▸ **lodash**\<`T`\>(`value`): `Function`\<`T`\>
 
 #### Type parameters
 
@@ -265,13 +481,13 @@ node_modules/@types/lodash/common/common.d.ts:96
 
 #### Returns
 
-[`Function`](interfaces/lodash.Function.md)<`T`\>
+`Function`\<`T`\>
 
 #### Defined in
 
 node_modules/@types/lodash/common/common.d.ts:97
 
-▸ **lodash**<`T`\>(`value`): [`Collection`](interfaces/lodash.Collection.md)<`T`\>
+▸ **lodash**\<`T`\>(`value`): `Collection`\<`T`\>
 
 #### Type parameters
 
@@ -281,19 +497,19 @@ node_modules/@types/lodash/common/common.d.ts:97
 
 #### Parameters
 
-| Name    | Type                                                            |
-| :------ | :-------------------------------------------------------------- |
-| `value` | `undefined` \| `null` \| [`List`](modules/lodash.md#list)<`T`\> |
+| Name    | Type                                   |
+| :------ | :------------------------------------- |
+| `value` | `undefined` \| `null` \| `List`\<`T`\> |
 
 #### Returns
 
-[`Collection`](interfaces/lodash.Collection.md)<`T`\>
+`Collection`\<`T`\>
 
 #### Defined in
 
 node_modules/@types/lodash/common/common.d.ts:98
 
-▸ **lodash**<`T`\>(`value`): [`Object`](interfaces/lodash.Object.md)<`T`\>
+▸ **lodash**\<`T`\>(`value`): `Object`\<`T`\>
 
 #### Type parameters
 
@@ -309,13 +525,13 @@ node_modules/@types/lodash/common/common.d.ts:98
 
 #### Returns
 
-[`Object`](interfaces/lodash.Object.md)<`T`\>
+`Object`\<`T`\>
 
 #### Defined in
 
 node_modules/@types/lodash/common/common.d.ts:99
 
-▸ **lodash**<`T`\>(`value`): [`Primitive`](interfaces/lodash.Primitive.md)<`T`\>
+▸ **lodash**\<`T`\>(`value`): `Primitive`\<`T`\>
 
 #### Type parameters
 
@@ -331,7 +547,7 @@ node_modules/@types/lodash/common/common.d.ts:99
 
 #### Returns
 
-[`Primitive`](interfaces/lodash.Primitive.md)<`T`\>
+`Primitive`\<`T`\>
 
 #### Defined in
 

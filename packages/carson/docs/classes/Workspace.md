@@ -1,4 +1,4 @@
-# Class: Workspace<M\>
+# Class: Workspace\<M\>
 
 Workspace represent a directory, usually a git repository, that contains [Project](Project.md)
 instances.
@@ -50,7 +50,7 @@ instances.
 
 ### constructor
 
-• **new Workspace**<`M`\>(`options`)
+• **new Workspace**\<`M`\>(`options`): [`Workspace`](Workspace.md)\<`M`\>
 
 #### Type parameters
 
@@ -60,81 +60,85 @@ instances.
 
 #### Parameters
 
-| Name      | Type                                                      |
-| :-------- | :-------------------------------------------------------- |
-| `options` | [`WorkspaceOptions`](../README.md#workspaceoptions)<`M`\> |
+| Name      | Type                                                       |
+| :-------- | :--------------------------------------------------------- |
+| `options` | [`WorkspaceOptions`](../README.md#workspaceoptions)\<`M`\> |
+
+#### Returns
+
+[`Workspace`](Workspace.md)\<`M`\>
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:83](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/Workspace.ts#L83)
+[packages/carson/source/workspace/Workspace.ts:83](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/Workspace.ts#L83)
 
 ## Properties
 
 ### allDependencies
 
-• **allDependencies**: [`WorkspaceDependencies`](WorkspaceDependencies.md)<`M`\>
+• **allDependencies**: [`WorkspaceDependencies`](WorkspaceDependencies.md)\<`M`\>
 
 All dependencies of all projects and workspace dependencies.
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:75](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/Workspace.ts#L75)
+[packages/carson/source/workspace/Workspace.ts:75](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/Workspace.ts#L75)
 
 ---
 
 ### config
 
-• **config**: `objectOutputType`<{ `template`: `ZodOptional`<`ZodString`\> }, `ZodUnknown`,
+• **config**: `objectOutputType`\<\{ `template`: `ZodOptional`\<`ZodString`\> }, `ZodUnknown`,
 `"strip"`\>
 
 Workspace configuration; if it's not found, the default is an empty object.
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:60](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/Workspace.ts#L60)
+[packages/carson/source/workspace/Workspace.ts:60](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/Workspace.ts#L60)
 
 ---
 
 ### dependencies
 
-• **dependencies**: [`WorkspaceDependencies`](WorkspaceDependencies.md)<`M`\>
+• **dependencies**: [`WorkspaceDependencies`](WorkspaceDependencies.md)\<`M`\>
 
 Dependencies of all projects.
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:69](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/Workspace.ts#L69)
+[packages/carson/source/workspace/Workspace.ts:69](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/Workspace.ts#L69)
 
 ---
 
 ### dependencyVersions
 
-• **dependencyVersions**: `Record`<`string`, `string`[]\> = `{}`
+• **dependencyVersions**: `Record`\<`string`, `string`[]\> = `{}`
 
 Versions of each dependency.
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:78](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/Workspace.ts#L78)
+[packages/carson/source/workspace/Workspace.ts:78](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/Workspace.ts#L78)
 
 ---
 
 ### devDependencies
 
-• **devDependencies**: [`WorkspaceDependencies`](WorkspaceDependencies.md)<`M`\>
+• **devDependencies**: [`WorkspaceDependencies`](WorkspaceDependencies.md)\<`M`\>
 
 Development dependencies of all projects.
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:72](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/Workspace.ts#L72)
+[packages/carson/source/workspace/Workspace.ts:72](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/Workspace.ts#L72)
 
 ---
 
 ### errors
 
-• **errors**: `CustomErrorWithData`<`"UNKNOWN_ERROR"` \| `"INVALID_PACKAGE_JSON"` \|
-`"MISSING_CARSON_TEMPLATE_ID"` \| `"INVALID_WORKSPACE_CONFIG"` \| `"NO_SUCH_WORKSPACE_PATH"` \|
+• **errors**: `CustomErrorWithData`\<`"INVALID_PACKAGE_JSON"` \| `"MISSING_CARSON_TEMPLATE_ID"` \|
+`"UNKNOWN_ERROR"` \| `"INVALID_WORKSPACE_CONFIG"` \| `"NO_SUCH_WORKSPACE_PATH"` \|
 `"NO_WORKSPACE_FOUND"` \| `"PATH_MISMATCH"` \| `"WORKSPACE_PATH_NOT_EMPTY"` \|
 `"DUPLICATE_PROJECT_NAME"` \| `"DUPLICATE_PROJECT_PATH"` \| `"TOO_MANY_PROJECTS"`,
 `WorkspaceErrorData`\>[] = `[]`
@@ -143,7 +147,7 @@ Errors found during reading from the file system.
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:81](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/Workspace.ts#L81)
+[packages/carson/source/workspace/Workspace.ts:81](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/Workspace.ts#L81)
 
 ---
 
@@ -155,20 +159,20 @@ Does the workspace contain a multiple projects?
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:51](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/Workspace.ts#L51)
+[packages/carson/source/workspace/Workspace.ts:51](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/Workspace.ts#L51)
 
 ---
 
 ### packageJson
 
-• **packageJson**: [`WorkspacePackageJson`](../README.md#workspacepackagejson)<`M`\>
+• **packageJson**: [`WorkspacePackageJson`](../README.md#workspacepackagejson)\<`M`\>
 
 Parsed workspace `package.json` file (if the workspace contains multiple projects); if it's not
 found, the default is an empty object.
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:63](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/Workspace.ts#L63)
+[packages/carson/source/workspace/Workspace.ts:63](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/Workspace.ts#L63)
 
 ---
 
@@ -180,31 +184,31 @@ Workspace path.
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:48](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/Workspace.ts#L48)
+[packages/carson/source/workspace/Workspace.ts:48](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/Workspace.ts#L48)
 
 ---
 
 ### projectGlobs
 
-• **projectGlobs**: [`WorkspaceProjectGlobs`](../README.md#workspaceprojectglobs)<`M`\>
+• **projectGlobs**: [`WorkspaceProjectGlobs`](../README.md#workspaceprojectglobs)\<`M`\>
 
 Globs used to find projects.
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:54](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/Workspace.ts#L54)
+[packages/carson/source/workspace/Workspace.ts:54](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/Workspace.ts#L54)
 
 ---
 
 ### projects
 
-• **projects**: [`WorkspaceProjects`](../README.md#workspaceprojects)<`M`\>
+• **projects**: [`WorkspaceProjects`](../README.md#workspaceprojects)\<`M`\>
 
 Workspace projects.
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:57](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/Workspace.ts#L57)
+[packages/carson/source/workspace/Workspace.ts:57](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/Workspace.ts#L57)
 
 ---
 
@@ -216,53 +220,53 @@ Workspace git repository.
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:66](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/Workspace.ts#L66)
+[packages/carson/source/workspace/Workspace.ts:66](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/Workspace.ts#L66)
 
 ## Methods
 
 ### addProject
 
-▸ **addProject**(`newProject`): [`Workspace`](Workspace.md)<`M`\>
+▸ **addProject**(`newProject`): `this`
 
 #### Parameters
 
-| Name         | Type                          |
-| :----------- | :---------------------------- |
-| `newProject` | [`Project`](Project.md)<`M`\> |
+| Name         | Type                           |
+| :----------- | :----------------------------- |
+| `newProject` | [`Project`](Project.md)\<`M`\> |
 
 #### Returns
 
-[`Workspace`](Workspace.md)<`M`\>
+`this`
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:568](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/Workspace.ts#L568)
+[packages/carson/source/workspace/Workspace.ts:562](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/Workspace.ts#L562)
 
 ---
 
 ### addProjects
 
-▸ **addProjects**(`newProjects`): [`Workspace`](Workspace.md)<`M`\>
+▸ **addProjects**(`newProjects`): `this`
 
 #### Parameters
 
-| Name          | Type                            |
-| :------------ | :------------------------------ |
-| `newProjects` | [`Project`](Project.md)<`M`\>[] |
+| Name          | Type                             |
+| :------------ | :------------------------------- |
+| `newProjects` | [`Project`](Project.md)\<`M`\>[] |
 
 #### Returns
 
-[`Workspace`](Workspace.md)<`M`\>
+`this`
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:594](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/Workspace.ts#L594)
+[packages/carson/source/workspace/Workspace.ts:588](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/Workspace.ts#L588)
 
 ---
 
 ### createProject
 
-▸ **createProject**(`«destructured»`): `Promise`<[`Project`](Project.md)<`M`\>\>
+▸ **createProject**(`«destructured»`): `Promise`\<[`Project`](Project.md)\<`M`\>\>
 
 #### Parameters
 
@@ -272,65 +276,65 @@ Workspace git repository.
 
 #### Returns
 
-`Promise`<[`Project`](Project.md)<`M`\>\>
+`Promise`\<[`Project`](Project.md)\<`M`\>\>
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:529](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/Workspace.ts#L529)
+[packages/carson/source/workspace/Workspace.ts:523](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/Workspace.ts#L523)
 
 ---
 
 ### getProject
 
-▸ **getProject**(`projectName`): `undefined` \| [`Project`](Project.md)<`M`\>
+▸ **getProject**(`projectName`): `undefined` \| [`Project`](Project.md)\<`M`\>
 
 #### Parameters
 
-| Name          | Type                                      |
-| :------------ | :---------------------------------------- |
-| `projectName` | `string` \| [`Project`](Project.md)<`M`\> |
+| Name          | Type                                       |
+| :------------ | :----------------------------------------- |
+| `projectName` | `string` \| [`Project`](Project.md)\<`M`\> |
 
 #### Returns
 
-`undefined` \| [`Project`](Project.md)<`M`\>
+`undefined` \| [`Project`](Project.md)\<`M`\>
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:519](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/Workspace.ts#L519)
+[packages/carson/source/workspace/Workspace.ts:513](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/Workspace.ts#L513)
 
 ---
 
 ### read
 
-▸ **read**(): `Promise`<[`Workspace`](Workspace.md)<`M`\>\>
+▸ **read**(): `Promise`\<[`Workspace`](Workspace.md)\<`M`\>\>
 
 #### Returns
 
-`Promise`<[`Workspace`](Workspace.md)<`M`\>\>
+`Promise`\<[`Workspace`](Workspace.md)\<`M`\>\>
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:372](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/Workspace.ts#L372)
+[packages/carson/source/workspace/Workspace.ts:366](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/Workspace.ts#L366)
 
 ---
 
 ### readProjects
 
-▸ **readProjects**(): `Promise`<[`Project`](Project.md)<`M`\>[]\>
+▸ **readProjects**(): `Promise`\<[`Project`](Project.md)\<`M`\>[]\>
 
 #### Returns
 
-`Promise`<[`Project`](Project.md)<`M`\>[]\>
+`Promise`\<[`Project`](Project.md)\<`M`\>[]\>
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:623](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/Workspace.ts#L623)
+[packages/carson/source/workspace/Workspace.ts:617](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/Workspace.ts#L617)
 
 ---
 
 ### sortProjects
 
-▸ `Protected` **sortProjects**(): `void`
+▸ **sortProjects**(): `void`
 
 #### Returns
 
@@ -338,13 +342,13 @@ Workspace git repository.
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:655](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/Workspace.ts#L655)
+[packages/carson/source/workspace/Workspace.ts:649](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/Workspace.ts#L649)
 
 ---
 
 ### update
 
-▸ **update**(`«destructured»`): `Promise`<[`Workspace`](Workspace.md)<`M`\>\>
+▸ **update**(`«destructured»`): `Promise`\<[`Workspace`](Workspace.md)\<`M`\>\>
 
 #### Parameters
 
@@ -354,17 +358,17 @@ Workspace git repository.
 
 #### Returns
 
-`Promise`<[`Workspace`](Workspace.md)<`M`\>\>
+`Promise`\<[`Workspace`](Workspace.md)\<`M`\>\>
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:490](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/Workspace.ts#L490)
+[packages/carson/source/workspace/Workspace.ts:484](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/Workspace.ts#L484)
 
 ---
 
 ### updateDependencies
 
-▸ `Protected` **updateDependencies**(): `void`
+▸ **updateDependencies**(): `void`
 
 #### Returns
 
@@ -372,14 +376,14 @@ Workspace git repository.
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:659](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/Workspace.ts#L659)
+[packages/carson/source/workspace/Workspace.ts:653](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/Workspace.ts#L653)
 
 ---
 
 ### create
 
-▸ `Static` **create**(`options`): `Promise`<[`Workspace`](Workspace.md)<`true`\> \|
-[`Workspace`](Workspace.md)<`false`\>\>
+▸ **create**(`options`): `Promise`\<[`Workspace`](Workspace.md)\<`true`\> \|
+[`Workspace`](Workspace.md)\<`false`\>\>
 
 Creates new workspace within the file system.
 
@@ -391,19 +395,19 @@ Creates new workspace within the file system.
 
 #### Returns
 
-`Promise`<[`Workspace`](Workspace.md)<`true`\> \| [`Workspace`](Workspace.md)<`false`\>\>
+`Promise`\<[`Workspace`](Workspace.md)\<`true`\> \| [`Workspace`](Workspace.md)\<`false`\>\>
 
 The new workspace.
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:164](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/Workspace.ts#L164)
+[packages/carson/source/workspace/Workspace.ts:164](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/Workspace.ts#L164)
 
 ---
 
 ### find
 
-▸ `Static` **find**(`searchPath`): `Promise`<`undefined` \| `string`\>
+▸ **find**(`searchPath`): `Promise`\<`undefined` \| `string`\>
 
 Traverses file system up from the search path and tries to find a directory that is a root of a
 workspace.
@@ -416,23 +420,23 @@ workspace.
 
 #### Returns
 
-`Promise`<`undefined` \| `string`\>
+`Promise`\<`undefined` \| `string`\>
 
 Workspace path, if found.
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:288](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/Workspace.ts#L288)
+[packages/carson/source/workspace/Workspace.ts:288](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/Workspace.ts#L288)
 
 ---
 
 ### findAndRead
 
-▸ `Static` **findAndRead**<`O`\>(`searchPath`, `options?`): `Promise`<`O` extends `undefined` ?
-`undefined` \| [`Workspace`](Workspace.md)<`true`\> \| [`Workspace`](Workspace.md)<`false`\> :
-`NonNullable`<`O`\>[``"throwIfNotFound"``] extends `true` ? [`Workspace`](Workspace.md)<`true`\> \|
-[`Workspace`](Workspace.md)<`false`\> : `undefined` \| [`Workspace`](Workspace.md)<`true`\> \|
-[`Workspace`](Workspace.md)<`false`\>\>
+▸ **findAndRead**\<`O`\>(`searchPath`, `options?`): `Promise`\<`O` extends `undefined` ? `undefined`
+\| [`Workspace`](Workspace.md)\<`true`\> \| [`Workspace`](Workspace.md)\<`false`\> :
+`NonNullable`\<`O`\>[``"throwIfNotFound"``] extends `true` ? [`Workspace`](Workspace.md)\<`true`\>
+\| [`Workspace`](Workspace.md)\<`false`\> : `undefined` \| [`Workspace`](Workspace.md)\<`true`\> \|
+[`Workspace`](Workspace.md)\<`false`\>\>
 
 Traverses file system up from the search path and tries to find and read a workspace.
 
@@ -451,21 +455,21 @@ Traverses file system up from the search path and tries to find and read a works
 
 #### Returns
 
-`Promise`<`O` extends `undefined` ? `undefined` \| [`Workspace`](Workspace.md)<`true`\> \|
-[`Workspace`](Workspace.md)<`false`\> : `NonNullable`<`O`\>[``"throwIfNotFound"``] extends `true` ?
-[`Workspace`](Workspace.md)<`true`\> \| [`Workspace`](Workspace.md)<`false`\> : `undefined` \|
-[`Workspace`](Workspace.md)<`true`\> \| [`Workspace`](Workspace.md)<`false`\>\>
+`Promise`\<`O` extends `undefined` ? `undefined` \| [`Workspace`](Workspace.md)\<`true`\> \|
+[`Workspace`](Workspace.md)\<`false`\> : `NonNullable`\<`O`\>[``"throwIfNotFound"``] extends `true`
+? [`Workspace`](Workspace.md)\<`true`\> \| [`Workspace`](Workspace.md)\<`false`\> : `undefined` \|
+[`Workspace`](Workspace.md)\<`true`\> \| [`Workspace`](Workspace.md)\<`false`\>\>
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:334](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/Workspace.ts#L334)
+[packages/carson/source/workspace/Workspace.ts:334](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/Workspace.ts#L334)
 
 ---
 
 ### read
 
-▸ `Static` **read**(`workspacePath`): `Promise`<[`Workspace`](Workspace.md)<`true`\> \|
-[`Workspace`](Workspace.md)<`false`\>\>
+▸ **read**(`workspacePath`): `Promise`\<[`Workspace`](Workspace.md)\<`true`\> \|
+[`Workspace`](Workspace.md)\<`false`\>\>
 
 #### Parameters
 
@@ -475,8 +479,8 @@ Traverses file system up from the search path and tries to find and read a works
 
 #### Returns
 
-`Promise`<[`Workspace`](Workspace.md)<`true`\> \| [`Workspace`](Workspace.md)<`false`\>\>
+`Promise`\<[`Workspace`](Workspace.md)\<`true`\> \| [`Workspace`](Workspace.md)\<`false`\>\>
 
 #### Defined in
 
-[packages/carson/src/workspace/Workspace.ts:207](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/Workspace.ts#L207)
+[packages/carson/source/workspace/Workspace.ts:207](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/Workspace.ts#L207)

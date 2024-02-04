@@ -23,7 +23,7 @@
 
 ### CustomError
 
-Ƭ **CustomError**<`ErrorCode`\>: `Error` & { `code`: `ErrorCode` \| typeof
+Ƭ **CustomError**\<`ErrorCode`\>: `Error` & \{ `code`: `ErrorCode` \| typeof
 [`UNKNOWN_ERROR`](README.md#unknown_error) }
 
 Type representing custom error.
@@ -36,7 +36,7 @@ Type representing custom error.
 
 #### Defined in
 
-[types/CustomError.ts:6](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/error/src/types/CustomError.ts#L6)
+[types/CustomError.ts:6](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/error/source/types/CustomError.ts#L6)
 
 ---
 
@@ -56,13 +56,13 @@ Type representing options object used when instantianting class returned from
 
 #### Defined in
 
-[types/CustomErrorOptions.ts:4](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/error/src/types/CustomErrorOptions.ts#L4)
+[types/CustomErrorOptions.ts:4](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/error/source/types/CustomErrorOptions.ts#L4)
 
 ---
 
 ### CustomErrorWithData
 
-Ƭ **CustomErrorWithData**<`ErrorCode`, `ErrorData`\>: `Error` & { `code`: `ErrorCode` \| typeof
+Ƭ **CustomErrorWithData**\<`ErrorCode`, `ErrorData`\>: `Error` & \{ `code`: `ErrorCode` \| typeof
 [`UNKNOWN_ERROR`](README.md#unknown_error) ; `data?`: `ErrorData` }
 
 Type representing custom error that can have an arbitrary data attached.
@@ -76,13 +76,13 @@ Type representing custom error that can have an arbitrary data attached.
 
 #### Defined in
 
-[types/CustomErrorWithData.ts:6](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/error/src/types/CustomErrorWithData.ts#L6)
+[types/CustomErrorWithData.ts:6](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/error/source/types/CustomErrorWithData.ts#L6)
 
 ---
 
 ### CustomErrorWithDataOptions
 
-Ƭ **CustomErrorWithDataOptions**<`ErrorData`\>: `Object`
+Ƭ **CustomErrorWithDataOptions**\<`ErrorData`\>: `Object`
 
 Type representing options object used when instantianting class returned from
 [createCustomErrorWithData](README.md#createcustomerrorwithdata).
@@ -103,13 +103,13 @@ Type representing options object used when instantianting class returned from
 
 #### Defined in
 
-[types/CustomErrorWithDataOptions.ts:4](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/error/src/types/CustomErrorWithDataOptions.ts#L4)
+[types/CustomErrorWithDataOptions.ts:4](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/error/source/types/CustomErrorWithDataOptions.ts#L4)
 
 ---
 
 ### ErrorMessages
 
-Ƭ **ErrorMessages**<`ErrorCode`\>: `Record`<`ErrorCode`, `string`\>
+Ƭ **ErrorMessages**\<`ErrorCode`\>: `Record`\<`ErrorCode`, `string`\>
 
 Object type whose property keys are `ErrorCode` and whose property values are `string`.
 
@@ -121,7 +121,7 @@ Object type whose property keys are `ErrorCode` and whose property values are `s
 
 #### Defined in
 
-[types/ErrorMessages.ts:4](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/error/src/types/ErrorMessages.ts#L4)
+[types/ErrorMessages.ts:4](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/error/source/types/ErrorMessages.ts#L4)
 
 ## Variables
 
@@ -133,15 +133,15 @@ Code for an unknown error. You should never use nor encounter this error code.
 
 #### Defined in
 
-[constants.ts:6](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/error/src/constants.ts#L6)
+[constants.ts:6](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/error/source/constants.ts#L6)
 
 ## Functions
 
 ### createCustomError
 
-▸ **createCustomError**<`ErrorCode`\>(`errorName`, `errorMessages`): (`code`: `ErrorCode`,
+▸ **createCustomError**\<`ErrorCode`\>(`errorName`, `errorMessages`): (`code`: `ErrorCode`,
 `options?`: [`CustomErrorOptions`](README.md#customerroroptions)) =>
-[`CustomError`](README.md#customerror)<`ErrorCode` \| typeof
+[`CustomError`](README.md#customerror)\<`ErrorCode` \| typeof
 [`UNKNOWN_ERROR`](README.md#unknown_error)\>
 
 Function for creating custom error classes. Such custom error class properly subclasses built-in
@@ -155,10 +155,10 @@ Function for creating custom error classes. Such custom error class properly sub
 
 #### Parameters
 
-| Name            | Type                                                     | Description                                    |
-| :-------------- | :------------------------------------------------------- | :--------------------------------------------- |
-| `errorName`     | `string`                                                 | Error name.                                    |
-| `errorMessages` | [`ErrorMessages`](README.md#errormessages)<`ErrorCode`\> | Object containing all possible error messages. |
+| Name            | Type                                                      | Description                                    |
+| :-------------- | :-------------------------------------------------------- | :--------------------------------------------- |
+| `errorName`     | `string`                                                  | Error name.                                    |
+| `errorMessages` | [`ErrorMessages`](README.md#errormessages)\<`ErrorCode`\> | Object containing all possible error messages. |
 
 #### Returns
 
@@ -166,7 +166,8 @@ Function for creating custom error classes. Such custom error class properly sub
 
 Class that implements [CustomError](README.md#customerror).
 
-• (`code`, `options?`)
+• (`code`, `options?`): [`CustomError`](README.md#customerror)\<`ErrorCode` \| typeof
+[`UNKNOWN_ERROR`](README.md#unknown_error)\>
 
 ##### Parameters
 
@@ -175,19 +176,24 @@ Class that implements [CustomError](README.md#customerror).
 | `code`     | `ErrorCode`                                          |
 | `options?` | [`CustomErrorOptions`](README.md#customerroroptions) |
 
+##### Returns
+
+[`CustomError`](README.md#customerror)\<`ErrorCode` \| typeof
+[`UNKNOWN_ERROR`](README.md#unknown_error)\>
+
 #### Defined in
 
-[createCustomError.ts:13](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/error/src/createCustomError.ts#L13)
+[createCustomError.ts:13](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/error/source/createCustomError.ts#L13)
 
 ---
 
 ### createCustomErrorWithData
 
-▸ **createCustomErrorWithData**<`ErrorCode`, `ErrorData`\>(`errorName`, `errorMessages`,
+▸ **createCustomErrorWithData**\<`ErrorCode`, `ErrorData`\>(`errorName`, `errorMessages`,
 `errorData`): (`code`: `ErrorCode`, `options?`:
-[`CustomErrorWithDataOptions`](README.md#customerrorwithdataoptions)<`z.infer`<`ErrorData`\>\>) =>
-[`CustomErrorWithData`](README.md#customerrorwithdata)<`ErrorCode` \| typeof
-[`UNKNOWN_ERROR`](README.md#unknown_error), `z.infer`<`ErrorData`\>\>
+[`CustomErrorWithDataOptions`](README.md#customerrorwithdataoptions)\<`z.infer`\<`ErrorData`\>\>) =>
+[`CustomErrorWithData`](README.md#customerrorwithdata)\<`ErrorCode` \| typeof
+[`UNKNOWN_ERROR`](README.md#unknown_error), `z.infer`\<`ErrorData`\>\>
 
 Function for creating custom error classes. Such custom error class properly subclasses built-in
 `Error`, simplifies generating error messages via predefined error codes and allows attaching custom
@@ -202,11 +208,11 @@ data to the error instance.
 
 #### Parameters
 
-| Name            | Type                                                     | Description                                                                                                  |
-| :-------------- | :------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------- |
-| `errorName`     | `string`                                                 | Error name.                                                                                                  |
-| `errorMessages` | [`ErrorMessages`](README.md#errormessages)<`ErrorCode`\> | Object containing all possible error messages.                                                               |
-| `errorData`     | `ErrorData`                                              | Runtime representation of the `ErrorData` type parameter; can be either a class expression, or a Zod schema. |
+| Name            | Type                                                      | Description                                                                                                  |
+| :-------------- | :-------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------- |
+| `errorName`     | `string`                                                  | Error name.                                                                                                  |
+| `errorMessages` | [`ErrorMessages`](README.md#errormessages)\<`ErrorCode`\> | Object containing all possible error messages.                                                               |
+| `errorData`     | `ErrorData`                                               | Runtime representation of the `ErrorData` type parameter; can be either a class expression, or a Zod schema. |
 
 #### Returns
 
@@ -214,24 +220,30 @@ data to the error instance.
 
 Class that implements [CustomErrorWithData](README.md#customerrorwithdata).
 
-• (`code`, `options?`)
+• (`code`, `options?`): [`CustomErrorWithData`](README.md#customerrorwithdata)\<`ErrorCode` \|
+typeof [`UNKNOWN_ERROR`](README.md#unknown_error), `z.infer`\<`ErrorData`\>\>
 
 ##### Parameters
 
-| Name       | Type                                                                                           |
-| :--------- | :--------------------------------------------------------------------------------------------- |
-| `code`     | `ErrorCode`                                                                                    |
-| `options?` | [`CustomErrorWithDataOptions`](README.md#customerrorwithdataoptions)<`z.infer`<`ErrorData`\>\> |
+| Name       | Type                                                                                             |
+| :--------- | :----------------------------------------------------------------------------------------------- |
+| `code`     | `ErrorCode`                                                                                      |
+| `options?` | [`CustomErrorWithDataOptions`](README.md#customerrorwithdataoptions)\<`z.infer`\<`ErrorData`\>\> |
+
+##### Returns
+
+[`CustomErrorWithData`](README.md#customerrorwithdata)\<`ErrorCode` \| typeof
+[`UNKNOWN_ERROR`](README.md#unknown_error), `z.infer`\<`ErrorData`\>\>
 
 #### Defined in
 
-[createCustomErrorWithData.ts:21](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/error/src/createCustomErrorWithData.ts#L21)
+[createCustomErrorWithData.ts:21](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/error/source/createCustomErrorWithData.ts#L21)
 
-▸ **createCustomErrorWithData**<`ErrorCode`, `ErrorData`\>(`errorName`, `errorMessages`,
+▸ **createCustomErrorWithData**\<`ErrorCode`, `ErrorData`\>(`errorName`, `errorMessages`,
 `errorData`): (`code`: `ErrorCode`, `options?`:
-[`CustomErrorWithDataOptions`](README.md#customerrorwithdataoptions)<`InstanceType`<`ErrorData`\>\>)
-=> [`CustomErrorWithData`](README.md#customerrorwithdata)<`ErrorCode` \| typeof
-[`UNKNOWN_ERROR`](README.md#unknown_error), `InstanceType`<`ErrorData`\>\>
+[`CustomErrorWithDataOptions`](README.md#customerrorwithdataoptions)\<`InstanceType`\<`ErrorData`\>\>)
+=> [`CustomErrorWithData`](README.md#customerrorwithdata)\<`ErrorCode` \| typeof
+[`UNKNOWN_ERROR`](README.md#unknown_error), `InstanceType`\<`ErrorData`\>\>
 
 #### Type parameters
 
@@ -242,25 +254,31 @@ Class that implements [CustomErrorWithData](README.md#customerrorwithdata).
 
 #### Parameters
 
-| Name            | Type                                                     |
-| :-------------- | :------------------------------------------------------- |
-| `errorName`     | `string`                                                 |
-| `errorMessages` | [`ErrorMessages`](README.md#errormessages)<`ErrorCode`\> |
-| `errorData`     | `ErrorData`                                              |
+| Name            | Type                                                      |
+| :-------------- | :-------------------------------------------------------- |
+| `errorName`     | `string`                                                  |
+| `errorMessages` | [`ErrorMessages`](README.md#errormessages)\<`ErrorCode`\> |
+| `errorData`     | `ErrorData`                                               |
 
 #### Returns
 
 `fn`
 
-• (`code`, `options?`)
+• (`code`, `options?`): [`CustomErrorWithData`](README.md#customerrorwithdata)\<`ErrorCode` \|
+typeof [`UNKNOWN_ERROR`](README.md#unknown_error), `InstanceType`\<`ErrorData`\>\>
 
 ##### Parameters
 
-| Name       | Type                                                                                                |
-| :--------- | :-------------------------------------------------------------------------------------------------- |
-| `code`     | `ErrorCode`                                                                                         |
-| `options?` | [`CustomErrorWithDataOptions`](README.md#customerrorwithdataoptions)<`InstanceType`<`ErrorData`\>\> |
+| Name       | Type                                                                                                  |
+| :--------- | :---------------------------------------------------------------------------------------------------- |
+| `code`     | `ErrorCode`                                                                                           |
+| `options?` | [`CustomErrorWithDataOptions`](README.md#customerrorwithdataoptions)\<`InstanceType`\<`ErrorData`\>\> |
+
+##### Returns
+
+[`CustomErrorWithData`](README.md#customerrorwithdata)\<`ErrorCode` \| typeof
+[`UNKNOWN_ERROR`](README.md#unknown_error), `InstanceType`\<`ErrorData`\>\>
 
 #### Defined in
 
-[createCustomErrorWithData.ts:29](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/error/src/createCustomErrorWithData.ts#L29)
+[createCustomErrorWithData.ts:29](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/error/source/createCustomErrorWithData.ts#L29)

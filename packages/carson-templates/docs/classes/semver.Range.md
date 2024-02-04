@@ -29,7 +29,7 @@
 
 ### constructor
 
-• **new Range**(`range`, `optionsOrLoose?`)
+• **new Range**(`range`, `optionsOrLoose?`): [`Range`](semver.Range.md)
 
 #### Parameters
 
@@ -37,6 +37,10 @@
 | :---------------- | :------------------------------------------------------------------ |
 | `range`           | `string` \| [`Range`](semver.Range.md)                              |
 | `optionsOrLoose?` | `boolean` \| [`RangeOptions`](../interfaces/semver.RangeOptions.md) |
+
+#### Returns
+
+[`Range`](semver.Range.md)
 
 #### Defined in
 
@@ -96,7 +100,7 @@ node_modules/@types/semver/classes/range.d.ts:9
 
 ### set
 
-• **set**: readonly readonly Comparator[][]
+• **set**: readonly readonly [`Comparator`](semver.Comparator.md)[][]
 
 #### Defined in
 

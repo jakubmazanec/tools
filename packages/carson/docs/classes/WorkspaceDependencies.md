@@ -1,4 +1,4 @@
-# Class: WorkspaceDependencies<M\>
+# Class: WorkspaceDependencies\<M\>
 
 A collection of WorkspaceDependency | workspace dependencies that are installed in
 [a workspace](Workspace.md).
@@ -11,7 +11,7 @@ A collection of WorkspaceDependency | workspace dependencies that are installed 
 
 ## Hierarchy
 
-- `Array`<`WorkspaceDependency`\>
+- `Array`\<`WorkspaceDependency`\>
 
   ↳ **`WorkspaceDependencies`**
 
@@ -63,9 +63,13 @@ A collection of WorkspaceDependency | workspace dependencies that are installed 
 - [sort](WorkspaceDependencies.md#sort)
 - [splice](WorkspaceDependencies.md#splice)
 - [toLocaleString](WorkspaceDependencies.md#tolocalestring)
+- [toReversed](WorkspaceDependencies.md#toreversed)
+- [toSorted](WorkspaceDependencies.md#tosorted)
+- [toSpliced](WorkspaceDependencies.md#tospliced)
 - [toString](WorkspaceDependencies.md#tostring)
 - [unshift](WorkspaceDependencies.md#unshift)
 - [values](WorkspaceDependencies.md#values)
+- [with](WorkspaceDependencies.md#with)
 - [from](WorkspaceDependencies.md#from)
 - [fromWorkspace](WorkspaceDependencies.md#fromworkspace)
 - [isArray](WorkspaceDependencies.md#isarray)
@@ -75,7 +79,8 @@ A collection of WorkspaceDependency | workspace dependencies that are installed 
 
 ### constructor
 
-• **new WorkspaceDependencies**<`M`\>(`...args`)
+• **new WorkspaceDependencies**\<`M`\>(`...args`):
+[`WorkspaceDependencies`](WorkspaceDependencies.md)\<`M`\>
 
 #### Type parameters
 
@@ -85,17 +90,21 @@ A collection of WorkspaceDependency | workspace dependencies that are installed 
 
 #### Parameters
 
-| Name      | Type                                                          |
-| :-------- | :------------------------------------------------------------ |
-| `...args` | [...WorkspaceDependency[], [`Workspace`](Workspace.md)<`M`\>] |
+| Name      | Type                                                           |
+| :-------- | :------------------------------------------------------------- |
+| `...args` | [...WorkspaceDependency[], [`Workspace`](Workspace.md)\<`M`\>] |
+
+#### Returns
+
+[`WorkspaceDependencies`](WorkspaceDependencies.md)\<`M`\>
 
 #### Overrides
 
-Array&lt;WorkspaceDependency\&gt;.constructor
+Array\&lt;WorkspaceDependency\&gt;.constructor
 
 #### Defined in
 
-[packages/carson/src/workspace/WorkspaceDependencies.ts:19](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/WorkspaceDependencies.ts#L19)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:19](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/WorkspaceDependencies.ts#L19)
 
 ## Properties
 
@@ -108,45 +117,49 @@ statement.
 
 #### Type declaration
 
-| Name              | Type      | Description                                                                                                   |
-| :---------------- | :-------- | :------------------------------------------------------------------------------------------------------------ |
-| `[unscopables]?`  | `boolean` | Is an object whose properties have the value 'true' when they will be absent when used in a 'with' statement. |
-| `length?`         | `boolean` | Gets or sets the length of the array. This is a number one higher than the highest index in the array.        |
-| `[iterator]?`     | {}        | -                                                                                                             |
-| `at?`             | {}        | -                                                                                                             |
-| `concat?`         | {}        | -                                                                                                             |
-| `copyWithin?`     | {}        | -                                                                                                             |
-| `entries?`        | {}        | -                                                                                                             |
-| `every?`          | {}        | -                                                                                                             |
-| `fill?`           | {}        | -                                                                                                             |
-| `filter?`         | {}        | -                                                                                                             |
-| `find?`           | {}        | -                                                                                                             |
-| `findIndex?`      | {}        | -                                                                                                             |
-| `findLast?`       | {}        | -                                                                                                             |
-| `findLastIndex?`  | {}        | -                                                                                                             |
-| `flat?`           | {}        | -                                                                                                             |
-| `flatMap?`        | {}        | -                                                                                                             |
-| `forEach?`        | {}        | -                                                                                                             |
-| `includes?`       | {}        | -                                                                                                             |
-| `indexOf?`        | {}        | -                                                                                                             |
-| `join?`           | {}        | -                                                                                                             |
-| `keys?`           | {}        | -                                                                                                             |
-| `lastIndexOf?`    | {}        | -                                                                                                             |
-| `map?`            | {}        | -                                                                                                             |
-| `pop?`            | {}        | -                                                                                                             |
-| `push?`           | {}        | -                                                                                                             |
-| `reduce?`         | {}        | -                                                                                                             |
-| `reduceRight?`    | {}        | -                                                                                                             |
-| `reverse?`        | {}        | -                                                                                                             |
-| `shift?`          | {}        | -                                                                                                             |
-| `slice?`          | {}        | -                                                                                                             |
-| `some?`           | {}        | -                                                                                                             |
-| `sort?`           | {}        | -                                                                                                             |
-| `splice?`         | {}        | -                                                                                                             |
-| `toLocaleString?` | {}        | -                                                                                                             |
-| `toString?`       | {}        | -                                                                                                             |
-| `unshift?`        | {}        | -                                                                                                             |
-| `values?`         | {}        | -                                                                                                             |
+| Name              | Type                            | Description                                                                                                   |
+| :---------------- | :------------------------------ | :------------------------------------------------------------------------------------------------------------ |
+| `[unscopables]?`  | `boolean`                       | Is an object whose properties have the value 'true' when they will be absent when used in a 'with' statement. |
+| `length?`         | `boolean`                       | Gets or sets the length of the array. This is a number one higher than the highest index in the array.        |
+| `[iterator]?`     | \{ `valueOf`: () => `boolean` } | -                                                                                                             |
+| `at?`             | \{ `valueOf`: () => `boolean` } | -                                                                                                             |
+| `concat?`         | \{ `valueOf`: () => `boolean` } | -                                                                                                             |
+| `copyWithin?`     | \{ `valueOf`: () => `boolean` } | -                                                                                                             |
+| `entries?`        | \{ `valueOf`: () => `boolean` } | -                                                                                                             |
+| `every?`          | \{ `valueOf`: () => `boolean` } | -                                                                                                             |
+| `fill?`           | \{ `valueOf`: () => `boolean` } | -                                                                                                             |
+| `filter?`         | \{ `valueOf`: () => `boolean` } | -                                                                                                             |
+| `find?`           | \{ `valueOf`: () => `boolean` } | -                                                                                                             |
+| `findIndex?`      | \{ `valueOf`: () => `boolean` } | -                                                                                                             |
+| `findLast?`       | \{ `valueOf`: () => `boolean` } | -                                                                                                             |
+| `findLastIndex?`  | \{ `valueOf`: () => `boolean` } | -                                                                                                             |
+| `flat?`           | \{ `valueOf`: () => `boolean` } | -                                                                                                             |
+| `flatMap?`        | \{ `valueOf`: () => `boolean` } | -                                                                                                             |
+| `forEach?`        | \{ `valueOf`: () => `boolean` } | -                                                                                                             |
+| `includes?`       | \{ `valueOf`: () => `boolean` } | -                                                                                                             |
+| `indexOf?`        | \{ `valueOf`: () => `boolean` } | -                                                                                                             |
+| `join?`           | \{ `valueOf`: () => `boolean` } | -                                                                                                             |
+| `keys?`           | \{ `valueOf`: () => `boolean` } | -                                                                                                             |
+| `lastIndexOf?`    | \{ `valueOf`: () => `boolean` } | -                                                                                                             |
+| `map?`            | \{ `valueOf`: () => `boolean` } | -                                                                                                             |
+| `pop?`            | \{ `valueOf`: () => `boolean` } | -                                                                                                             |
+| `push?`           | \{ `valueOf`: () => `boolean` } | -                                                                                                             |
+| `reduce?`         | \{ `valueOf`: () => `boolean` } | -                                                                                                             |
+| `reduceRight?`    | \{ `valueOf`: () => `boolean` } | -                                                                                                             |
+| `reverse?`        | \{ `valueOf`: () => `boolean` } | -                                                                                                             |
+| `shift?`          | \{ `valueOf`: () => `boolean` } | -                                                                                                             |
+| `slice?`          | \{ `valueOf`: () => `boolean` } | -                                                                                                             |
+| `some?`           | \{ `valueOf`: () => `boolean` } | -                                                                                                             |
+| `sort?`           | \{ `valueOf`: () => `boolean` } | -                                                                                                             |
+| `splice?`         | \{ `valueOf`: () => `boolean` } | -                                                                                                             |
+| `toLocaleString?` | \{ `valueOf`: () => `boolean` } | -                                                                                                             |
+| `toReversed?`     | \{ `valueOf`: () => `boolean` } | -                                                                                                             |
+| `toSorted?`       | \{ `valueOf`: () => `boolean` } | -                                                                                                             |
+| `toSpliced?`      | \{ `valueOf`: () => `boolean` } | -                                                                                                             |
+| `toString?`       | \{ `valueOf`: () => `boolean` } | -                                                                                                             |
+| `unshift?`        | \{ `valueOf`: () => `boolean` } | -                                                                                                             |
+| `values?`         | \{ `valueOf`: () => `boolean` } | -                                                                                                             |
+| `with?`           | \{ `valueOf`: () => `boolean` } | -                                                                                                             |
 
 #### Inherited from
 
@@ -171,19 +184,19 @@ Array.length
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1318
+node_modules/typescript/lib/lib.es5.d.ts:1325
 
 ---
 
 ### workspace
 
-• **workspace**: [`Workspace`](Workspace.md)<`M`\>
+• **workspace**: [`Workspace`](Workspace.md)\<`M`\>
 
 The workspace the dependencies are installed in.
 
 #### Defined in
 
-[packages/carson/src/workspace/WorkspaceDependencies.ts:17](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/WorkspaceDependencies.ts#L17)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:17](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/WorkspaceDependencies.ts#L17)
 
 ---
 
@@ -203,13 +216,13 @@ node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts:316
 
 ### [iterator]
 
-▸ **[iterator]**(): `IterableIterator`<`WorkspaceDependency`\>
+▸ **[iterator]**(): `IterableIterator`\<`WorkspaceDependency`\>
 
 Iterator
 
 #### Returns
 
-`IterableIterator`<`WorkspaceDependency`\>
+`IterableIterator`\<`WorkspaceDependency`\>
 
 #### Inherited from
 
@@ -255,9 +268,9 @@ Combines two or more arrays. This method returns a new array without modifying a
 
 #### Parameters
 
-| Name       | Type                                    | Description                                                    |
-| :--------- | :-------------------------------------- | :------------------------------------------------------------- |
-| `...items` | `ConcatArray`<`WorkspaceDependency`\>[] | Additional arrays and/or items to add to the end of the array. |
+| Name       | Type                                     | Description                                                    |
+| :--------- | :--------------------------------------- | :------------------------------------------------------------- |
+| `...items` | `ConcatArray`\<`WorkspaceDependency`\>[] | Additional arrays and/or items to add to the end of the array. |
 
 #### Returns
 
@@ -269,7 +282,7 @@ Array.concat
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1342
+node_modules/typescript/lib/lib.es5.d.ts:1349
 
 ▸ **concat**(`...items`): `WorkspaceDependency`[]
 
@@ -277,9 +290,9 @@ Combines two or more arrays. This method returns a new array without modifying a
 
 #### Parameters
 
-| Name       | Type                                                               | Description                                                    |
-| :--------- | :----------------------------------------------------------------- | :------------------------------------------------------------- |
-| `...items` | (`WorkspaceDependency` \| `ConcatArray`<`WorkspaceDependency`\>)[] | Additional arrays and/or items to add to the end of the array. |
+| Name       | Type                                                                | Description                                                    |
+| :--------- | :------------------------------------------------------------------ | :------------------------------------------------------------- |
+| `...items` | (`WorkspaceDependency` \| `ConcatArray`\<`WorkspaceDependency`\>)[] | Additional arrays and/or items to add to the end of the array. |
 
 #### Returns
 
@@ -291,29 +304,28 @@ Array.concat
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1348
+node_modules/typescript/lib/lib.es5.d.ts:1355
 
 ---
 
 ### copyWithin
 
-▸ **copyWithin**(`target`, `start?`, `end?`):
-[`WorkspaceDependencies`](WorkspaceDependencies.md)<`M`\>
+▸ **copyWithin**(`target`, `start`, `end?`): `this`
 
 Returns the this object after copying a section of the array identified by start and end to the same
 array starting at position target
 
 #### Parameters
 
-| Name     | Type     | Description                                                                                                                             |
-| :------- | :------- | :-------------------------------------------------------------------------------------------------------------------------------------- |
-| `target` | `number` | If target is negative, it is treated as length+target where length is the length of the array.                                          |
-| `start?` | `number` | If start is negative, it is treated as length+start. If end is negative, it is treated as length+end. If start is omitted, `0` is used. |
-| `end?`   | `number` | If not specified, length of the this object is used as its default value.                                                               |
+| Name     | Type     | Description                                                                                           |
+| :------- | :------- | :---------------------------------------------------------------------------------------------------- |
+| `target` | `number` | If target is negative, it is treated as length+target where length is the length of the array.        |
+| `start`  | `number` | If start is negative, it is treated as length+start. If end is negative, it is treated as length+end. |
+| `end?`   | `number` | If not specified, length of the this object is used as its default value.                             |
 
 #### Returns
 
-[`WorkspaceDependencies`](WorkspaceDependencies.md)<`M`\>
+`this`
 
 #### Inherited from
 
@@ -327,13 +339,13 @@ node_modules/typescript/lib/lib.es2015.core.d.ts:62
 
 ### entries
 
-▸ **entries**(): `IterableIterator`<[`number`, `WorkspaceDependency`]\>
+▸ **entries**(): `IterableIterator`\<[`number`, `WorkspaceDependency`]\>
 
 Returns an iterable of key, value pairs for every entry in the array
 
 #### Returns
 
-`IterableIterator`<[`number`, `WorkspaceDependency`]\>
+`IterableIterator`\<[`number`, `WorkspaceDependency`]\>
 
 #### Inherited from
 
@@ -347,7 +359,7 @@ node_modules/typescript/lib/lib.es2015.iterable.d.ts:63
 
 ### every
 
-▸ **every**<`S`\>(`predicate`, `thisArg?`): this is S[]
+▸ **every**\<`S`\>(`predicate`, `thisArg?`): this is S[]
 
 Determines whether all the members of an array satisfy the specified test.
 
@@ -374,7 +386,7 @@ Array.every
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1425
+node_modules/typescript/lib/lib.es5.d.ts:1432
 
 ▸ **every**(`predicate`, `thisArg?`): `boolean`
 
@@ -397,13 +409,13 @@ Array.every
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1434
+node_modules/typescript/lib/lib.es5.d.ts:1441
 
 ---
 
 ### fill
 
-▸ **fill**(`value`, `start?`, `end?`): [`WorkspaceDependencies`](WorkspaceDependencies.md)<`M`\>
+▸ **fill**(`value`, `start?`, `end?`): `this`
 
 Changes all array elements from `start` to `end` index to a static `value` and returns the modified
 array
@@ -418,7 +430,7 @@ array
 
 #### Returns
 
-[`WorkspaceDependencies`](WorkspaceDependencies.md)<`M`\>
+`this`
 
 #### Inherited from
 
@@ -432,7 +444,7 @@ node_modules/typescript/lib/lib.es2015.core.d.ts:51
 
 ### filter
 
-▸ **filter**<`S`\>(`predicate`, `thisArg?`): `S`[]
+▸ **filter**\<`S`\>(`predicate`, `thisArg?`): `S`[]
 
 Returns the elements of an array that meet the condition specified in a callback function.
 
@@ -459,7 +471,7 @@ Array.filter
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1461
+node_modules/typescript/lib/lib.es5.d.ts:1468
 
 ▸ **filter**(`predicate`, `thisArg?`): `WorkspaceDependency`[]
 
@@ -482,13 +494,13 @@ Array.filter
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1467
+node_modules/typescript/lib/lib.es5.d.ts:1474
 
 ---
 
 ### find
 
-▸ **find**<`S`\>(`predicate`, `thisArg?`): `undefined` \| `S`
+▸ **find**\<`S`\>(`predicate`, `thisArg?`): `undefined` \| `S`
 
 Returns the value of the first element in the array where predicate is true, and undefined
 otherwise.
@@ -570,7 +582,7 @@ node_modules/typescript/lib/lib.es2015.core.d.ts:41
 
 ### findLast
 
-▸ **findLast**<`S`\>(`predicate`, `thisArg?`): `undefined` \| `S`
+▸ **findLast**\<`S`\>(`predicate`, `thisArg?`): `undefined` \| `S`
 
 Returns the value of the last element in the array where predicate is true, and undefined otherwise.
 
@@ -651,7 +663,7 @@ node_modules/typescript/lib/lib.es2023.array.d.ts:41
 
 ### flat
 
-▸ **flat**<`A`, `D`\>(`this`, `depth?`): `FlatArray`<`A`, `D`\>[]
+▸ **flat**\<`A`, `D`\>(`this`, `depth?`): `FlatArray`\<`A`, `D`\>[]
 
 Returns a new array with all sub-array elements concatenated into it recursively up to the specified
 depth.
@@ -672,7 +684,7 @@ depth.
 
 #### Returns
 
-`FlatArray`<`A`, `D`\>[]
+`FlatArray`\<`A`, `D`\>[]
 
 #### Inherited from
 
@@ -680,13 +692,13 @@ Array.flat
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es2019.array.d.ts:79
+node_modules/typescript/lib/lib.es2019.array.d.ts:75
 
 ---
 
 ### flatMap
 
-▸ **flatMap**<`U`, `This`\>(`callback`, `thisArg?`): `U`[]
+▸ **flatMap**\<`U`, `This`\>(`callback`, `thisArg?`): `U`[]
 
 Calls a defined callback function on each element of an array. Then, flattens the result into a new
 array. This is identical to a map followed by flat with depth 1.
@@ -715,7 +727,7 @@ Array.flatMap
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es2019.array.d.ts:68
+node_modules/typescript/lib/lib.es2019.array.d.ts:64
 
 ---
 
@@ -742,13 +754,13 @@ Array.forEach
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1449
+node_modules/typescript/lib/lib.es5.d.ts:1456
 
 ---
 
 ### getVersions
 
-▸ **getVersions**(`options?`): `Record`<`string`, `string`[]\>
+▸ **getVersions**(`options?`): `Record`\<`string`, `string`[]\>
 
 Creates map of all dependnecies and their installed version.
 
@@ -760,13 +772,13 @@ Creates map of all dependnecies and their installed version.
 
 #### Returns
 
-`Record`<`string`, `string`[]\>
+`Record`\<`string`, `string`[]\>
 
 Object whose keys are dependency names and values are sorted versions.
 
 #### Defined in
 
-[packages/carson/src/workspace/WorkspaceDependencies.ts:184](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/WorkspaceDependencies.ts#L184)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:187](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/WorkspaceDependencies.ts#L187)
 
 ---
 
@@ -820,7 +832,7 @@ Array.indexOf
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1410
+node_modules/typescript/lib/lib.es5.d.ts:1417
 
 ---
 
@@ -846,19 +858,19 @@ Array.join
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1353
+node_modules/typescript/lib/lib.es5.d.ts:1360
 
 ---
 
 ### keys
 
-▸ **keys**(): `IterableIterator`<`number`\>
+▸ **keys**(): `IterableIterator`\<`number`\>
 
 Returns an iterable of keys in the array
 
 #### Returns
 
-`IterableIterator`<`number`\>
+`IterableIterator`\<`number`\>
 
 #### Inherited from
 
@@ -894,13 +906,13 @@ Array.lastIndexOf
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1416
+node_modules/typescript/lib/lib.es5.d.ts:1423
 
 ---
 
 ### map
 
-▸ **map**<`U`\>(`callbackfn`, `thisArg?`): `U`[]
+▸ **map**\<`U`\>(`callbackfn`, `thisArg?`): `U`[]
 
 Calls a defined callback function on each element of an array, and returns an array that contains
 the results.
@@ -928,7 +940,7 @@ Array.map
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1455
+node_modules/typescript/lib/lib.es5.d.ts:1462
 
 ---
 
@@ -949,7 +961,7 @@ Array.pop
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1331
+node_modules/typescript/lib/lib.es5.d.ts:1338
 
 ---
 
@@ -977,7 +989,7 @@ Array.push
 
 #### Defined in
 
-[packages/carson/src/workspace/WorkspaceDependencies.ts:40](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/WorkspaceDependencies.ts#L40)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:40](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/WorkspaceDependencies.ts#L40)
 
 ---
 
@@ -1005,7 +1017,7 @@ Array.reduce
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1473
+node_modules/typescript/lib/lib.es5.d.ts:1480
 
 ▸ **reduce**(`callbackfn`, `initialValue`): `WorkspaceDependency`
 
@@ -1026,9 +1038,9 @@ Array.reduce
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1474
+node_modules/typescript/lib/lib.es5.d.ts:1481
 
-▸ **reduce**<`U`\>(`callbackfn`, `initialValue`): `U`
+▸ **reduce**\<`U`\>(`callbackfn`, `initialValue`): `U`
 
 Calls the specified callback function for all the elements in an array. The return value of the
 callback function is the accumulated result, and is provided as an argument in the next call to the
@@ -1057,7 +1069,7 @@ Array.reduce
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1480
+node_modules/typescript/lib/lib.es5.d.ts:1487
 
 ---
 
@@ -1085,7 +1097,7 @@ Array.reduceRight
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1486
+node_modules/typescript/lib/lib.es5.d.ts:1493
 
 ▸ **reduceRight**(`callbackfn`, `initialValue`): `WorkspaceDependency`
 
@@ -1106,9 +1118,9 @@ Array.reduceRight
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1487
+node_modules/typescript/lib/lib.es5.d.ts:1494
 
-▸ **reduceRight**<`U`\>(`callbackfn`, `initialValue`): `U`
+▸ **reduceRight**\<`U`\>(`callbackfn`, `initialValue`): `U`
 
 Calls the specified callback function for all the elements in an array, in descending order. The
 return value of the callback function is the accumulated result, and is provided as an argument in
@@ -1137,7 +1149,7 @@ Array.reduceRight
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1493
+node_modules/typescript/lib/lib.es5.d.ts:1500
 
 ---
 
@@ -1158,7 +1170,7 @@ Array.reverse
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1358
+node_modules/typescript/lib/lib.es5.d.ts:1365
 
 ---
 
@@ -1179,7 +1191,7 @@ Array.shift
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1363
+node_modules/typescript/lib/lib.es5.d.ts:1370
 
 ---
 
@@ -1208,7 +1220,7 @@ Array.slice
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1373
+node_modules/typescript/lib/lib.es5.d.ts:1380
 
 ---
 
@@ -1235,13 +1247,13 @@ Array.some
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1443
+node_modules/typescript/lib/lib.es5.d.ts:1450
 
 ---
 
 ### sort
 
-▸ **sort**(`compareFn?`): [`WorkspaceDependencies`](WorkspaceDependencies.md)<`M`\>
+▸ **sort**(`compareFn?`): `this`
 
 Sorts an array in place. This method mutates the array and returns a reference to the same array.
 
@@ -1253,7 +1265,7 @@ Sorts an array in place. This method mutates the array and returns a reference t
 
 #### Returns
 
-[`WorkspaceDependencies`](WorkspaceDependencies.md)<`M`\>
+`this`
 
 #### Inherited from
 
@@ -1261,7 +1273,7 @@ Array.sort
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1384
+node_modules/typescript/lib/lib.es5.d.ts:1391
 
 ---
 
@@ -1291,7 +1303,7 @@ Array.splice
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1391
+node_modules/typescript/lib/lib.es5.d.ts:1398
 
 ▸ **splice**(`start`, `deleteCount`, `...items`): `WorkspaceDependency`[]
 
@@ -1318,7 +1330,7 @@ Array.splice
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1399
+node_modules/typescript/lib/lib.es5.d.ts:1406
 
 ---
 
@@ -1339,7 +1351,109 @@ Array.toLocaleString
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1326
+node_modules/typescript/lib/lib.es5.d.ts:1333
+
+---
+
+### toReversed
+
+▸ **toReversed**(): `WorkspaceDependency`[]
+
+Returns a copy of an array with its elements reversed.
+
+#### Returns
+
+`WorkspaceDependency`[]
+
+#### Inherited from
+
+Array.toReversed
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es2023.array.d.ts:46
+
+---
+
+### toSorted
+
+▸ **toSorted**(`compareFn?`): `WorkspaceDependency`[]
+
+Returns a copy of an array with its elements sorted.
+
+#### Parameters
+
+| Name         | Type                                                                 | Description                                                                                                                                                                                                                                                                                                                                              |
+| :----------- | :------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `compareFn?` | (`a`: `WorkspaceDependency`, `b`: `WorkspaceDependency`) => `number` | Function used to determine the order of the elements. It is expected to return a negative value if the first argument is less than the second argument, zero if they're equal, and a positive value otherwise. If omitted, the elements are sorted in ascending, ASCII character order. `ts [11, 2, 22, 1].toSorted((a, b) => a - b) // [1, 2, 11, 22] ` |
+
+#### Returns
+
+`WorkspaceDependency`[]
+
+#### Inherited from
+
+Array.toSorted
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es2023.array.d.ts:57
+
+---
+
+### toSpliced
+
+▸ **toSpliced**(`start`, `deleteCount`, `...items`): `WorkspaceDependency`[]
+
+Copies an array and removes elements and, if necessary, inserts new elements in their place. Returns
+the copied array.
+
+#### Parameters
+
+| Name          | Type                    | Description                                                                 |
+| :------------ | :---------------------- | :-------------------------------------------------------------------------- |
+| `start`       | `number`                | The zero-based location in the array from which to start removing elements. |
+| `deleteCount` | `number`                | The number of elements to remove.                                           |
+| `...items`    | `WorkspaceDependency`[] | Elements to insert into the copied array in place of the deleted elements.  |
+
+#### Returns
+
+`WorkspaceDependency`[]
+
+The copied array.
+
+#### Inherited from
+
+Array.toSpliced
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es2023.array.d.ts:66
+
+▸ **toSpliced**(`start`, `deleteCount?`): `WorkspaceDependency`[]
+
+Copies an array and removes elements while returning the remaining elements.
+
+#### Parameters
+
+| Name           | Type     | Description                                                                 |
+| :------------- | :------- | :-------------------------------------------------------------------------- |
+| `start`        | `number` | The zero-based location in the array from which to start removing elements. |
+| `deleteCount?` | `number` | The number of elements to remove.                                           |
+
+#### Returns
+
+`WorkspaceDependency`[]
+
+A copy of the original array with the remaining elements.
+
+#### Inherited from
+
+Array.toSpliced
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es2023.array.d.ts:74
 
 ---
 
@@ -1359,7 +1473,7 @@ Array.toString
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1322
+node_modules/typescript/lib/lib.es5.d.ts:1329
 
 ---
 
@@ -1385,19 +1499,19 @@ Array.unshift
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1404
+node_modules/typescript/lib/lib.es5.d.ts:1411
 
 ---
 
 ### values
 
-▸ **values**(): `IterableIterator`<`WorkspaceDependency`\>
+▸ **values**(): `IterableIterator`\<`WorkspaceDependency`\>
 
 Returns an iterable of values in the array
 
 #### Returns
 
-`IterableIterator`<`WorkspaceDependency`\>
+`IterableIterator`\<`WorkspaceDependency`\>
 
 #### Inherited from
 
@@ -1409,9 +1523,39 @@ node_modules/typescript/lib/lib.es2015.iterable.d.ts:73
 
 ---
 
+### with
+
+▸ **with**(`index`, `value`): `WorkspaceDependency`[]
+
+Copies an array, then overwrites the value at the provided index with the given value. If the index
+is negative, then it replaces from the end of the array.
+
+#### Parameters
+
+| Name    | Type                  | Description                                                                                                |
+| :------ | :-------------------- | :--------------------------------------------------------------------------------------------------------- |
+| `index` | `number`              | The index of the value to overwrite. If the index is negative, then it replaces from the end of the array. |
+| `value` | `WorkspaceDependency` | The value to write into the copied array.                                                                  |
+
+#### Returns
+
+`WorkspaceDependency`[]
+
+The copied array with the updated value.
+
+#### Inherited from
+
+Array.with
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es2023.array.d.ts:85
+
+---
+
 ### from
 
-▸ `Static` **from**<`T`\>(`arrayLike`): `T`[]
+▸ **from**\<`T`\>(`arrayLike`): `T`[]
 
 Creates an array from an array-like object.
 
@@ -1423,9 +1567,9 @@ Creates an array from an array-like object.
 
 #### Parameters
 
-| Name        | Type              | Description                                  |
-| :---------- | :---------------- | :------------------------------------------- |
-| `arrayLike` | `ArrayLike`<`T`\> | An array-like object to convert to an array. |
+| Name        | Type               | Description                                  |
+| :---------- | :----------------- | :------------------------------------------- |
+| `arrayLike` | `ArrayLike`\<`T`\> | An array-like object to convert to an array. |
 
 #### Returns
 
@@ -1439,7 +1583,7 @@ Array.from
 
 node_modules/typescript/lib/lib.es2015.core.d.ts:70
 
-▸ `Static` **from**<`T`, `U`\>(`arrayLike`, `mapfn`, `thisArg?`): `U`[]
+▸ **from**\<`T`, `U`\>(`arrayLike`, `mapfn`, `thisArg?`): `U`[]
 
 Creates an array from an iterable object.
 
@@ -1454,7 +1598,7 @@ Creates an array from an iterable object.
 
 | Name        | Type                             | Description                                               |
 | :---------- | :------------------------------- | :-------------------------------------------------------- |
-| `arrayLike` | `ArrayLike`<`T`\>                | An array-like object to convert to an array.              |
+| `arrayLike` | `ArrayLike`\<`T`\>               | An array-like object to convert to an array.              |
 | `mapfn`     | (`v`: `T`, `k`: `number`) => `U` | A mapping function to call on every element of the array. |
 | `thisArg?`  | `any`                            | Value of 'this' used to invoke the mapfn.                 |
 
@@ -1470,7 +1614,7 @@ Array.from
 
 node_modules/typescript/lib/lib.es2015.core.d.ts:78
 
-▸ `Static` **from**<`T`\>(`iterable`): `T`[]
+▸ **from**\<`T`\>(`iterable`): `T`[]
 
 Creates an array from an iterable object.
 
@@ -1482,9 +1626,9 @@ Creates an array from an iterable object.
 
 #### Parameters
 
-| Name       | Type                                  | Description                                |
-| :--------- | :------------------------------------ | :----------------------------------------- |
-| `iterable` | `Iterable`<`T`\> \| `ArrayLike`<`T`\> | An iterable object to convert to an array. |
+| Name       | Type                                    | Description                                |
+| :--------- | :-------------------------------------- | :----------------------------------------- |
+| `iterable` | `Iterable`\<`T`\> \| `ArrayLike`\<`T`\> | An iterable object to convert to an array. |
 
 #### Returns
 
@@ -1498,7 +1642,7 @@ Array.from
 
 node_modules/typescript/lib/lib.es2015.iterable.d.ts:81
 
-▸ `Static` **from**<`T`, `U`\>(`iterable`, `mapfn`, `thisArg?`): `U`[]
+▸ **from**\<`T`, `U`\>(`iterable`, `mapfn`, `thisArg?`): `U`[]
 
 Creates an array from an iterable object.
 
@@ -1511,11 +1655,11 @@ Creates an array from an iterable object.
 
 #### Parameters
 
-| Name       | Type                                  | Description                                               |
-| :--------- | :------------------------------------ | :-------------------------------------------------------- |
-| `iterable` | `Iterable`<`T`\> \| `ArrayLike`<`T`\> | An iterable object to convert to an array.                |
-| `mapfn`    | (`v`: `T`, `k`: `number`) => `U`      | A mapping function to call on every element of the array. |
-| `thisArg?` | `any`                                 | Value of 'this' used to invoke the mapfn.                 |
+| Name       | Type                                    | Description                                               |
+| :--------- | :-------------------------------------- | :-------------------------------------------------------- |
+| `iterable` | `Iterable`\<`T`\> \| `ArrayLike`\<`T`\> | An iterable object to convert to an array.                |
+| `mapfn`    | (`v`: `T`, `k`: `number`) => `U`        | A mapping function to call on every element of the array. |
+| `thisArg?` | `any`                                   | Value of 'this' used to invoke the mapfn.                 |
 
 #### Returns
 
@@ -1533,8 +1677,8 @@ node_modules/typescript/lib/lib.es2015.iterable.d.ts:89
 
 ### fromWorkspace
 
-▸ `Static` **fromWorkspace**<`M`\>(`workspace`, `options?`):
-[`WorkspaceDependencies`](WorkspaceDependencies.md)<`M`\>
+▸ **fromWorkspace**\<`M`\>(`workspace`, `options?`):
+[`WorkspaceDependencies`](WorkspaceDependencies.md)\<`M`\>
 
 Creates new [WorkspaceDependencies](WorkspaceDependencies.md) instance from a
 [Workspace](Workspace.md) instance and its dependencies.
@@ -1549,24 +1693,24 @@ Creates new [WorkspaceDependencies](WorkspaceDependencies.md) instance from a
 
 | Name        | Type                                        | Description                                          |
 | :---------- | :------------------------------------------ | :--------------------------------------------------- |
-| `workspace` | [`Workspace`](Workspace.md)<`M`\>           | The workspace from which the dependnecies are taken. |
+| `workspace` | [`Workspace`](Workspace.md)\<`M`\>          | The workspace from which the dependnecies are taken. |
 | `options?`  | `WorkspaceDependenciesFromWorkspaceOptions` | Options.                                             |
 
 #### Returns
 
-[`WorkspaceDependencies`](WorkspaceDependencies.md)<`M`\>
+[`WorkspaceDependencies`](WorkspaceDependencies.md)\<`M`\>
 
 The new [WorkspaceDependencies](WorkspaceDependencies.md) instance.
 
 #### Defined in
 
-[packages/carson/src/workspace/WorkspaceDependencies.ts:83](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/WorkspaceDependencies.ts#L83)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:83](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/WorkspaceDependencies.ts#L83)
 
 ---
 
 ### isArray
 
-▸ `Static` **isArray**(`arg`): arg is any[]
+▸ **isArray**(`arg`): arg is any[]
 
 #### Parameters
 
@@ -1584,13 +1728,13 @@ Array.isArray
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1505
+node_modules/typescript/lib/lib.es5.d.ts:1512
 
 ---
 
 ### of
 
-▸ `Static` **of**<`T`\>(`...items`): `T`[]
+▸ **of**\<`T`\>(`...items`): `T`[]
 
 Returns a new array from a set of elements.
 

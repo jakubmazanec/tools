@@ -585,7 +585,7 @@ node_modules/@types/semver/functions/major.d.ts:7
 
 ### maxSatisfying
 
-▸ **maxSatisfying**<`T`\>(`versions`, `range`, `optionsOrLoose?`): `T` \| `null`
+▸ **maxSatisfying**\<`T`\>(`versions`, `range`, `optionsOrLoose?`): `T` \| `null`
 
 Return the highest version in the list that satisfies the range, or null if none of them do.
 
@@ -615,7 +615,7 @@ node_modules/@types/semver/ranges/max-satisfying.d.ts:8
 
 ### minSatisfying
 
-▸ **minSatisfying**<`T`\>(`versions`, `range`, `optionsOrLoose?`): `T` \| `null`
+▸ **minSatisfying**\<`T`\>(`versions`, `range`, `optionsOrLoose?`): `T` \| `null`
 
 Return the lowest version in the list that satisfies the range, or null if none of them do.
 
@@ -788,7 +788,7 @@ node_modules/@types/semver/functions/patch.d.ts:7
 
 ### prerelease
 
-▸ **prerelease**(`version`, `optionsOrLoose?`): `ReadonlyArray`<`string` \| `number`\> \| `null`
+▸ **prerelease**(`version`, `optionsOrLoose?`): `ReadonlyArray`\<`string` \| `number`\> \| `null`
 
 Returns an array of prerelease components, or null if none exist.
 
@@ -801,7 +801,7 @@ Returns an array of prerelease components, or null if none exist.
 
 #### Returns
 
-`ReadonlyArray`<`string` \| `number`\> \| `null`
+`ReadonlyArray`\<`string` \| `number`\> \| `null`
 
 #### Defined in
 
@@ -862,7 +862,7 @@ node_modules/@types/semver/internals/identifiers.d.ts:13
 
 ### rsort
 
-▸ **rsort**<`T`\>(`list`, `optionsOrLoose?`): `T`[]
+▸ **rsort**\<`T`\>(`list`, `optionsOrLoose?`): `T`[]
 
 Sorts an array of semver entries in descending order using `compareBuild()`.
 
@@ -944,7 +944,7 @@ node_modules/@types/semver/ranges/simplify.d.ts:12
 
 ### sort
 
-▸ **sort**<`T`\>(`list`, `optionsOrLoose?`): `T`[]
+▸ **sort**\<`T`\>(`list`, `optionsOrLoose?`): `T`[]
 
 Sorts an array of semver entries in ascending order using `compareBuild()`.
 

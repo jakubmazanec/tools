@@ -93,7 +93,7 @@
 
 #### Defined in
 
-[packages/carson/src/template/applyTemplateRenders.ts:22](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/template/applyTemplateRenders.ts#L22)
+[packages/carson/source/template/applyTemplateRenders.ts:22](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/template/applyTemplateRenders.ts#L22)
 
 ---
 
@@ -105,39 +105,39 @@ Carson template.
 
 #### Type declaration
 
-| Name     | Type                                                                                                                                                | Description                                            |
-| :------- | :-------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------- |
-| `config` | [`CarsonTemplateConfig`](README.md#carsontemplateconfig)                                                                                            | Carson template config.                                |
-| `files`  | `Template`<typeof [`templateAttributesSchema`](README.md#templateattributesschema), typeof [`templateDataSchema`](README.md#templatedataschema)\>[] | Carson template files, actually instances of Template. |
-| `name`   | `string`                                                                                                                                            | Carson template name.                                  |
+| Name     | Type                                                                                                                                                 | Description                                            |
+| :------- | :--------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------- |
+| `config` | [`CarsonTemplateConfig`](README.md#carsontemplateconfig)                                                                                             | Carson template config.                                |
+| `files`  | `Template`\<typeof [`templateAttributesSchema`](README.md#templateattributesschema), typeof [`templateDataSchema`](README.md#templatedataschema)\>[] | Carson template files, actually instances of Template. |
+| `name`   | `string`                                                                                                                                             | Carson template name.                                  |
 
 #### Defined in
 
-[packages/carson/src/template/CarsonTemplate.ts:10](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/template/CarsonTemplate.ts#L10)
+[packages/carson/source/template/CarsonTemplate.ts:10](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/template/CarsonTemplate.ts#L10)
 
 ---
 
 ### CarsonTemplateConfig
 
-Ƭ **CarsonTemplateConfig**: `z.infer`<typeof
+Ƭ **CarsonTemplateConfig**: `z.infer`\<typeof
 [`carsonTemplateConfigSchema`](README.md#carsontemplateconfigschema)\>
 
 Carson template config.
 
 #### Defined in
 
-[packages/carson/src/template/CarsonTemplateConfig.ts:15](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/template/CarsonTemplateConfig.ts#L15)
+[packages/carson/source/template/CarsonTemplateConfig.ts:15](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/template/CarsonTemplateConfig.ts#L15)
 
 ---
 
 ### CreateProjectInputResult
 
-Ƭ **CreateProjectInputResult**: `FormResult`<typeof
+Ƭ **CreateProjectInputResult**: `FormResult`\<typeof
 [`CreateProjectInput`](README.md#createprojectinput)\>
 
 #### Defined in
 
-[packages/carson/src/commands/create-project/CreateProjectInput.ts:37](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/commands/create-project/CreateProjectInput.ts#L37)
+[packages/carson/source/commands/create-project/CreateProjectInput.ts:37](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/commands/create-project/CreateProjectInput.ts#L37)
 
 ---
 
@@ -147,17 +147,17 @@ Carson template config.
 
 #### Type declaration
 
-| Name          | Type                                                                                 |
-| :------------ | :----------------------------------------------------------------------------------- |
-| `args`        | `CommandArguments`<typeof [`createProjectCommand`](README.md#createprojectcommand)\> |
-| `projectName` | `string`                                                                             |
-| `projectPath` | `string`                                                                             |
-| `templateId`  | `string`                                                                             |
-| `workspace`   | [`Workspace`](classes/Workspace.md) \| [`Workspace`](classes/Workspace.md)<`false`\> |
+| Name          | Type                                                                                  |
+| :------------ | :------------------------------------------------------------------------------------ |
+| `args`        | `CommandArguments`\<typeof [`createProjectCommand`](README.md#createprojectcommand)\> |
+| `projectName` | `string`                                                                              |
+| `projectPath` | `string`                                                                              |
+| `templateId`  | `string`                                                                              |
+| `workspace`   | [`Workspace`](classes/Workspace.md) \| [`Workspace`](classes/Workspace.md)\<`false`\> |
 
 #### Defined in
 
-[packages/carson/src/commands/create-project/runCreateProject.ts:7](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/commands/create-project/runCreateProject.ts#L7)
+[packages/carson/source/commands/create-project/runCreateProject.ts:7](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/commands/create-project/runCreateProject.ts#L7)
 
 ---
 
@@ -167,14 +167,14 @@ Carson template config.
 
 #### Type declaration
 
-| Name        | Type                                                                                 |
-| :---------- | :----------------------------------------------------------------------------------- |
-| `args`      | `CommandArguments`<typeof [`createProjectCommand`](README.md#createprojectcommand)\> |
-| `workspace` | [`Workspace`](classes/Workspace.md) \| [`Workspace`](classes/Workspace.md)<`false`\> |
+| Name        | Type                                                                                  |
+| :---------- | :------------------------------------------------------------------------------------ |
+| `args`      | `CommandArguments`\<typeof [`createProjectCommand`](README.md#createprojectcommand)\> |
+| `workspace` | [`Workspace`](classes/Workspace.md) \| [`Workspace`](classes/Workspace.md)\<`false`\> |
 
 #### Defined in
 
-[packages/carson/src/commands/create-project/CreateProject.tsx:15](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/commands/create-project/CreateProject.tsx#L15)
+[packages/carson/source/commands/create-project/CreateProject.tsx:15](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/commands/create-project/CreateProject.tsx#L15)
 
 ---
 
@@ -184,18 +184,18 @@ Carson template config.
 
 #### Defined in
 
-[packages/carson/src/commands/create-project/runCreateProject.ts:15](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/commands/create-project/runCreateProject.ts#L15)
+[packages/carson/source/commands/create-project/runCreateProject.ts:15](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/commands/create-project/runCreateProject.ts#L15)
 
 ---
 
 ### CreateWorkspaceInputResult
 
-Ƭ **CreateWorkspaceInputResult**: `FormResult`<typeof
+Ƭ **CreateWorkspaceInputResult**: `FormResult`\<typeof
 [`CreateWorkspaceInput`](README.md#createworkspaceinput)\>
 
 #### Defined in
 
-[packages/carson/src/commands/create-workspace/CreateWorkspaceInput.ts:21](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/commands/create-workspace/CreateWorkspaceInput.ts#L21)
+[packages/carson/source/commands/create-workspace/CreateWorkspaceInput.ts:21](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/commands/create-workspace/CreateWorkspaceInput.ts#L21)
 
 ---
 
@@ -205,15 +205,15 @@ Carson template config.
 
 #### Type declaration
 
-| Name            | Type                                                                                     |
-| :-------------- | :--------------------------------------------------------------------------------------- |
-| `args`          | `CommandArguments`<typeof [`createWorkspaceCommand`](README.md#createworkspacecommand)\> |
-| `templateId`    | `string`                                                                                 |
-| `workspacePath` | `string`                                                                                 |
+| Name            | Type                                                                                      |
+| :-------------- | :---------------------------------------------------------------------------------------- |
+| `args`          | `CommandArguments`\<typeof [`createWorkspaceCommand`](README.md#createworkspacecommand)\> |
+| `templateId`    | `string`                                                                                  |
+| `workspacePath` | `string`                                                                                  |
 
 #### Defined in
 
-[packages/carson/src/commands/create-workspace/runCreateWorkspace.ts:7](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/commands/create-workspace/runCreateWorkspace.ts#L7)
+[packages/carson/source/commands/create-workspace/runCreateWorkspace.ts:7](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/commands/create-workspace/runCreateWorkspace.ts#L7)
 
 ---
 
@@ -223,13 +223,13 @@ Carson template config.
 
 #### Type declaration
 
-| Name   | Type                                                                                     |
-| :----- | :--------------------------------------------------------------------------------------- |
-| `args` | `CommandArguments`<typeof [`createWorkspaceCommand`](README.md#createworkspacecommand)\> |
+| Name   | Type                                                                                      |
+| :----- | :---------------------------------------------------------------------------------------- |
+| `args` | `CommandArguments`\<typeof [`createWorkspaceCommand`](README.md#createworkspacecommand)\> |
 
 #### Defined in
 
-[packages/carson/src/commands/create-workspace/CreateWorkspace.tsx:12](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/commands/create-workspace/CreateWorkspace.tsx#L12)
+[packages/carson/source/commands/create-workspace/CreateWorkspace.tsx:12](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/commands/create-workspace/CreateWorkspace.tsx#L12)
 
 ---
 
@@ -239,25 +239,25 @@ Carson template config.
 
 #### Defined in
 
-[packages/carson/src/commands/create-workspace/runCreateWorkspace.ts:13](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/commands/create-workspace/runCreateWorkspace.ts#L13)
+[packages/carson/source/commands/create-workspace/runCreateWorkspace.ts:13](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/commands/create-workspace/runCreateWorkspace.ts#L13)
 
 ---
 
 ### ProjectConfig
 
-Ƭ **ProjectConfig**: `z.infer`<typeof [`projectConfigSchema`](README.md#projectconfigschema)\>
+Ƭ **ProjectConfig**: `z.infer`\<typeof [`projectConfigSchema`](README.md#projectconfigschema)\>
 
 A project configuration.
 
 #### Defined in
 
-[packages/carson/src/workspace/ProjectConfig.ts:12](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/ProjectConfig.ts#L12)
+[packages/carson/source/workspace/ProjectConfig.ts:12](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/ProjectConfig.ts#L12)
 
 ---
 
 ### ProjectCreateOptions
 
-Ƭ **ProjectCreateOptions**<`M`\>: `Object`
+Ƭ **ProjectCreateOptions**\<`M`\>: `Object`
 
 [Project.create](classes/Project.md#create) options parameter.
 
@@ -269,23 +269,23 @@ A project configuration.
 
 #### Type declaration
 
-| Name          | Type                                      |
-| :------------ | :---------------------------------------- |
-| `args`        | `Record`<`string`, `unknown`\>            |
-| `projectName` | `string`                                  |
-| `projectPath` | `string`                                  |
-| `templateId`  | `string`                                  |
-| `workspace`   | [`Workspace`](classes/Workspace.md)<`M`\> |
+| Name          | Type                                       |
+| :------------ | :----------------------------------------- |
+| `args`        | `Record`\<`string`, `unknown`\>            |
+| `projectName` | `string`                                   |
+| `projectPath` | `string`                                   |
+| `templateId`  | `string`                                   |
+| `workspace`   | [`Workspace`](classes/Workspace.md)\<`M`\> |
 
 #### Defined in
 
-[packages/carson/src/workspace/ProjectCreateOptions.ts:6](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/ProjectCreateOptions.ts#L6)
+[packages/carson/source/workspace/ProjectCreateOptions.ts:6](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/ProjectCreateOptions.ts#L6)
 
 ---
 
 ### ProjectOptions
 
-Ƭ **ProjectOptions**<`M`\>: `Object`
+Ƭ **ProjectOptions**\<`M`\>: `Object`
 
 [Project constructor](classes/Project.md#constructor) options parameter.
 
@@ -297,18 +297,18 @@ A project configuration.
 
 #### Type declaration
 
-| Name           | Type                                                               |
-| :------------- | :----------------------------------------------------------------- |
-| `config?`      | [`ProjectConfig`](README.md#projectconfig)                         |
-| `errors?`      | `InstanceType`<typeof [`ProjectError`](README.md#projecterror)\>[] |
-| `name?`        | `string`                                                           |
-| `packageJson?` | `PackageJson`                                                      |
-| `path`         | `string`                                                           |
-| `workspace`    | [`Workspace`](classes/Workspace.md)<`M`\>                          |
+| Name           | Type                                                                |
+| :------------- | :------------------------------------------------------------------ |
+| `config?`      | [`ProjectConfig`](README.md#projectconfig)                          |
+| `errors?`      | `InstanceType`\<typeof [`ProjectError`](README.md#projecterror)\>[] |
+| `name?`        | `string`                                                            |
+| `packageJson?` | `PackageJson`                                                       |
+| `path`         | `string`                                                            |
+| `workspace`    | [`Workspace`](classes/Workspace.md)\<`M`\>                          |
 
 #### Defined in
 
-[packages/carson/src/workspace/ProjectOptions.ts:10](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/ProjectOptions.ts#L10)
+[packages/carson/source/workspace/ProjectOptions.ts:10](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/ProjectOptions.ts#L10)
 
 ---
 
@@ -320,13 +320,13 @@ A project configuration.
 
 #### Type declaration
 
-| Name   | Type                           |
-| :----- | :----------------------------- |
-| `args` | `Record`<`string`, `unknown`\> |
+| Name   | Type                            |
+| :----- | :------------------------------ |
+| `args` | `Record`\<`string`, `unknown`\> |
 
 #### Defined in
 
-[packages/carson/src/workspace/ProjectUpdateOptions.ts:4](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/ProjectUpdateOptions.ts#L4)
+[packages/carson/source/workspace/ProjectUpdateOptions.ts:4](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/ProjectUpdateOptions.ts#L4)
 
 ---
 
@@ -343,7 +343,7 @@ A project configuration.
 
 #### Defined in
 
-[packages/carson/src/template/renderCarsonTemplate.ts:14](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/template/renderCarsonTemplate.ts#L14)
+[packages/carson/source/template/renderCarsonTemplate.ts:14](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/template/renderCarsonTemplate.ts#L14)
 
 ---
 
@@ -362,7 +362,7 @@ A project configuration.
 
 #### Defined in
 
-[packages/carson/src/workspace/saveProjectConfig.ts:11](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/saveProjectConfig.ts#L11)
+[packages/carson/source/workspace/saveProjectConfig.ts:11](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/saveProjectConfig.ts#L11)
 
 ---
 
@@ -381,42 +381,42 @@ A project configuration.
 
 #### Defined in
 
-[packages/carson/src/workspace/saveWorkspaceConfig.ts:11](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/saveWorkspaceConfig.ts#L11)
+[packages/carson/source/workspace/saveWorkspaceConfig.ts:11](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/saveWorkspaceConfig.ts#L11)
 
 ---
 
 ### TemplateAttributes
 
-Ƭ **TemplateAttributes**: `z.infer`<typeof
+Ƭ **TemplateAttributes**: `z.infer`\<typeof
 [`templateAttributesSchema`](README.md#templateattributesschema)\>
 
 #### Defined in
 
-[packages/carson/src/template/TemplateAttributes.ts:19](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/template/TemplateAttributes.ts#L19)
+[packages/carson/source/template/TemplateAttributes.ts:19](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/template/TemplateAttributes.ts#L19)
 
 ---
 
 ### TemplateData
 
-Ƭ **TemplateData**: `z.infer`<typeof [`templateDataSchema`](README.md#templatedataschema)\>
+Ƭ **TemplateData**: `z.infer`\<typeof [`templateDataSchema`](README.md#templatedataschema)\>
 
 #### Defined in
 
-[packages/carson/src/template/TemplateData.ts:15](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/template/TemplateData.ts#L15)
+[packages/carson/source/template/TemplateData.ts:15](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/template/TemplateData.ts#L15)
 
 ---
 
 ### TemplateRender
 
-Ƭ **TemplateRender**: `BaseTemplateRender`<typeof
+Ƭ **TemplateRender**: `BaseTemplateRender`\<typeof
 [`templateAttributesSchema`](README.md#templateattributesschema), typeof
-[`templateDataSchema`](README.md#templatedataschema)\> & { `template`: { `path`: `string` } }
+[`templateDataSchema`](README.md#templatedataschema)\> & \{ `template`: \{ `path`: `string` } }
 
 A result of rendering a Carson template file.
 
 #### Defined in
 
-[packages/carson/src/template/TemplateRender.ts:9](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/template/TemplateRender.ts#L9)
+[packages/carson/source/template/TemplateRender.ts:9](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/template/TemplateRender.ts#L9)
 
 ---
 
@@ -428,7 +428,7 @@ A [TemplateRender](README.md#templaterender) collection.
 
 #### Defined in
 
-[packages/carson/src/template/TemplateRenders.ts:6](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/template/TemplateRenders.ts#L6)
+[packages/carson/source/template/TemplateRenders.ts:6](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/template/TemplateRenders.ts#L6)
 
 ---
 
@@ -438,14 +438,14 @@ A [TemplateRender](README.md#templaterender) collection.
 
 #### Type declaration
 
-| Name        | Type                                                                                     |
-| :---------- | :--------------------------------------------------------------------------------------- |
-| `args`      | `CommandArguments`<typeof [`updateWorkspaceCommand`](README.md#updateworkspacecommand)\> |
-| `workspace` | [`Workspace`](classes/Workspace.md) \| [`Workspace`](classes/Workspace.md)<`false`\>     |
+| Name        | Type                                                                                      |
+| :---------- | :---------------------------------------------------------------------------------------- |
+| `args`      | `CommandArguments`\<typeof [`updateWorkspaceCommand`](README.md#updateworkspacecommand)\> |
+| `workspace` | [`Workspace`](classes/Workspace.md) \| [`Workspace`](classes/Workspace.md)\<`false`\>     |
 
 #### Defined in
 
-[packages/carson/src/commands/update-workspace/runUpdateWorkspace.ts:7](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/commands/update-workspace/runUpdateWorkspace.ts#L7)
+[packages/carson/source/commands/update-workspace/runUpdateWorkspace.ts:7](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/commands/update-workspace/runUpdateWorkspace.ts#L7)
 
 ---
 
@@ -455,7 +455,7 @@ A [TemplateRender](README.md#templaterender) collection.
 
 #### Defined in
 
-[packages/carson/src/commands/update-workspace/runUpdateWorkspace.ts:12](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/commands/update-workspace/runUpdateWorkspace.ts#L12)
+[packages/carson/source/commands/update-workspace/runUpdateWorkspace.ts:12](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/commands/update-workspace/runUpdateWorkspace.ts#L12)
 
 ---
 
@@ -465,26 +465,27 @@ A [TemplateRender](README.md#templaterender) collection.
 
 #### Type declaration
 
-| Name        | Type                                                                                     |
-| :---------- | :--------------------------------------------------------------------------------------- |
-| `args`      | `CommandArguments`<typeof [`updateWorkspaceCommand`](README.md#updateworkspacecommand)\> |
-| `workspace` | [`Workspace`](classes/Workspace.md) \| [`Workspace`](classes/Workspace.md)<`false`\>     |
+| Name        | Type                                                                                      |
+| :---------- | :---------------------------------------------------------------------------------------- |
+| `args`      | `CommandArguments`\<typeof [`updateWorkspaceCommand`](README.md#updateworkspacecommand)\> |
+| `workspace` | [`Workspace`](classes/Workspace.md) \| [`Workspace`](classes/Workspace.md)\<`false`\>     |
 
 #### Defined in
 
-[packages/carson/src/commands/update-workspace/UpdateWorkspace.tsx:10](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/commands/update-workspace/UpdateWorkspace.tsx#L10)
+[packages/carson/source/commands/update-workspace/UpdateWorkspace.tsx:10](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/commands/update-workspace/UpdateWorkspace.tsx#L10)
 
 ---
 
 ### WorkspaceConfig
 
-Ƭ **WorkspaceConfig**: `z.infer`<typeof [`workspaceConfigSchema`](README.md#workspaceconfigschema)\>
+Ƭ **WorkspaceConfig**: `z.infer`\<typeof
+[`workspaceConfigSchema`](README.md#workspaceconfigschema)\>
 
 A workspace configuration.
 
 #### Defined in
 
-[packages/carson/src/workspace/WorkspaceConfig.ts:12](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/WorkspaceConfig.ts#L12)
+[packages/carson/source/workspace/WorkspaceConfig.ts:12](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/WorkspaceConfig.ts#L12)
 
 ---
 
@@ -496,15 +497,15 @@ A workspace configuration.
 
 #### Type declaration
 
-| Name         | Type                           |
-| :----------- | :----------------------------- |
-| `args`       | `Record`<`string`, `unknown`\> |
-| `path`       | `string`                       |
-| `templateId` | `string`                       |
+| Name         | Type                            |
+| :----------- | :------------------------------ |
+| `args`       | `Record`\<`string`, `unknown`\> |
+| `path`       | `string`                        |
+| `templateId` | `string`                        |
 
 #### Defined in
 
-[packages/carson/src/workspace/WorkspaceCreateOptions.ts:4](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/WorkspaceCreateOptions.ts#L4)
+[packages/carson/source/workspace/WorkspaceCreateOptions.ts:4](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/WorkspaceCreateOptions.ts#L4)
 
 ---
 
@@ -516,16 +517,16 @@ A workspace configuration.
 
 #### Type declaration
 
-| Name          | Type                           |
-| :------------ | :----------------------------- |
-| `args`        | `Record`<`string`, `unknown`\> |
-| `projectName` | `string`                       |
-| `projectPath` | `string`                       |
-| `templateId`  | `string`                       |
+| Name          | Type                            |
+| :------------ | :------------------------------ |
+| `args`        | `Record`\<`string`, `unknown`\> |
+| `projectName` | `string`                        |
+| `projectPath` | `string`                        |
+| `templateId`  | `string`                        |
 
 #### Defined in
 
-[packages/carson/src/workspace/WorkspaceCreateProjectOptions.ts:4](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/WorkspaceCreateProjectOptions.ts#L4)
+[packages/carson/source/workspace/WorkspaceCreateProjectOptions.ts:4](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/WorkspaceCreateProjectOptions.ts#L4)
 
 ---
 
@@ -543,19 +544,19 @@ A workspace configuration.
 
 #### Defined in
 
-[packages/carson/src/workspace/WorkspaceFindAndReadOptions.ts:4](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/WorkspaceFindAndReadOptions.ts#L4)
+[packages/carson/source/workspace/WorkspaceFindAndReadOptions.ts:4](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/WorkspaceFindAndReadOptions.ts#L4)
 
 ---
 
 ### WorkspaceOptions
 
-Ƭ **WorkspaceOptions**<`M`\>: `M` extends `true` ? { `config?`:
-[`WorkspaceConfig`](README.md#workspaceconfig) ; `errors?`: `InstanceType`<typeof
+Ƭ **WorkspaceOptions**\<`M`\>: `M` extends `true` ? \{ `config?`:
+[`WorkspaceConfig`](README.md#workspaceconfig) ; `errors?`: `InstanceType`\<typeof
 [`WorkspaceError`](README.md#workspaceerror)\>[] ; `isMultiProject?`: `M` ; `packageJson?`:
 `PackageJson` ; `path`: `string` ; `projectGlobs?`: `string`[] ; `projects?`:
 [`WorkspaceOptionsProject`](README.md#workspaceoptionsproject)[] ; `repository?`:
-[`WorkspaceRepository`](README.md#workspacerepository) } : { `config?`:
-[`WorkspaceConfig`](README.md#workspaceconfig) ; `errors?`: `InstanceType`<typeof
+[`WorkspaceRepository`](README.md#workspacerepository) } : \{ `config?`:
+[`WorkspaceConfig`](README.md#workspaceconfig) ; `errors?`: `InstanceType`\<typeof
 [`WorkspaceError`](README.md#workspaceerror)\>[] ; `isMultiProject?`: `M` ; `path`: `string` ;
 `projects?`: [[`WorkspaceOptionsProject`](README.md#workspaceoptionsproject)] ; `repository?`:
 [`WorkspaceRepository`](README.md#workspacerepository) }
@@ -570,7 +571,7 @@ A workspace configuration.
 
 #### Defined in
 
-[packages/carson/src/workspace/WorkspaceOptions.ts:11](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/WorkspaceOptions.ts#L11)
+[packages/carson/source/workspace/WorkspaceOptions.ts:11](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/WorkspaceOptions.ts#L11)
 
 ---
 
@@ -590,13 +591,13 @@ Type alias for WorkspaceOptions.projects | WorkspaceOptions.projects property.
 
 #### Defined in
 
-[packages/carson/src/workspace/WorkspaceOptionsProject.ts:8](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/WorkspaceOptionsProject.ts#L8)
+[packages/carson/source/workspace/WorkspaceOptionsProject.ts:8](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/WorkspaceOptionsProject.ts#L8)
 
 ---
 
 ### WorkspacePackageJson
 
-Ƭ **WorkspacePackageJson**<`M`\>: `M` extends `true` ? `PackageJson` : `null`
+Ƭ **WorkspacePackageJson**\<`M`\>: `M` extends `true` ? `PackageJson` : `null`
 
 Type alias for [Workspace.packageJson](classes/Workspace.md#packagejson) property.
 
@@ -608,13 +609,13 @@ Type alias for [Workspace.packageJson](classes/Workspace.md#packagejson) propert
 
 #### Defined in
 
-[packages/carson/src/workspace/WorkspacePackageJson.ts:6](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/WorkspacePackageJson.ts#L6)
+[packages/carson/source/workspace/WorkspacePackageJson.ts:6](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/WorkspacePackageJson.ts#L6)
 
 ---
 
 ### WorkspaceProjectGlobs
 
-Ƭ **WorkspaceProjectGlobs**<`M`\>: `M` extends `true` ? `string`[] : `null`
+Ƭ **WorkspaceProjectGlobs**\<`M`\>: `M` extends `true` ? `string`[] : `null`
 
 Type alias for [Workspace.projectGlobs](classes/Workspace.md#projectglobs) property.
 
@@ -626,13 +627,13 @@ Type alias for [Workspace.projectGlobs](classes/Workspace.md#projectglobs) prope
 
 #### Defined in
 
-[packages/carson/src/workspace/WorkspaceProjectGlobs.ts:4](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/WorkspaceProjectGlobs.ts#L4)
+[packages/carson/source/workspace/WorkspaceProjectGlobs.ts:4](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/WorkspaceProjectGlobs.ts#L4)
 
 ---
 
 ### WorkspaceProjects
 
-Ƭ **WorkspaceProjects**<`M`\>: [`Project`](classes/Project.md)<`M`\>[]
+Ƭ **WorkspaceProjects**\<`M`\>: [`Project`](classes/Project.md)\<`M`\>[]
 
 Type alias for [Workspace.projects](classes/Workspace.md#projects) property.
 
@@ -644,7 +645,7 @@ Type alias for [Workspace.projects](classes/Workspace.md#projects) property.
 
 #### Defined in
 
-[packages/carson/src/workspace/WorkspaceProjects.ts:6](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/WorkspaceProjects.ts#L6)
+[packages/carson/source/workspace/WorkspaceProjects.ts:6](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/WorkspaceProjects.ts#L6)
 
 ---
 
@@ -663,7 +664,7 @@ A workspace repository.
 
 #### Defined in
 
-[packages/carson/src/workspace/WorkspaceRepository.ts:4](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/WorkspaceRepository.ts#L4)
+[packages/carson/source/workspace/WorkspaceRepository.ts:4](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/WorkspaceRepository.ts#L4)
 
 ---
 
@@ -675,13 +676,13 @@ A workspace repository.
 
 #### Type declaration
 
-| Name   | Type                           |
-| :----- | :----------------------------- |
-| `args` | `Record`<`string`, `unknown`\> |
+| Name   | Type                            |
+| :----- | :------------------------------ |
+| `args` | `Record`\<`string`, `unknown`\> |
 
 #### Defined in
 
-[packages/carson/src/workspace/WorkspaceUpdateOptions.ts:4](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/WorkspaceUpdateOptions.ts#L4)
+[packages/carson/source/workspace/WorkspaceUpdateOptions.ts:4](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/WorkspaceUpdateOptions.ts#L4)
 
 ## Variables
 
@@ -689,14 +690,19 @@ A workspace repository.
 
 • `Const` **CarsonTemplateError**: (`code`: `"INVALID_CARSON_TEMPLATE_ID"` \|
 `"CARSON_TEMPLATE_NOT_FOUND"` \| `"STRATEGY_UNSUPPORTED_EXTENSION"` \| `"STRATEGY_MISSING_FILE"`,
-`options?`: `CustomErrorWithDataOptions`<`CarsonTemplateErrorData`\>) =>
-`CustomErrorWithData`<`"INVALID_CARSON_TEMPLATE_ID"` \| `"CARSON_TEMPLATE_NOT_FOUND"` \|
+`options?`: `CustomErrorWithDataOptions`\<`CarsonTemplateErrorData`\>) =>
+`CustomErrorWithData`\<`"INVALID_CARSON_TEMPLATE_ID"` \| `"CARSON_TEMPLATE_NOT_FOUND"` \|
 `"STRATEGY_UNSUPPORTED_EXTENSION"` \| `"STRATEGY_MISSING_FILE"` \| `"UNKNOWN_ERROR"`,
 `CarsonTemplateErrorData`\>
 
+A subclass of `Error` that indicates a Carson template failure.
+
 #### Type declaration
 
-• **new CarsonTemplateError**(`code`, `options?`)
+• **new CarsonTemplateError**(`code`, `options?`):
+`CustomErrorWithData`\<`"INVALID_CARSON_TEMPLATE_ID"` \| `"CARSON_TEMPLATE_NOT_FOUND"` \|
+`"STRATEGY_UNSUPPORTED_EXTENSION"` \| `"STRATEGY_MISSING_FILE"` \| `"UNKNOWN_ERROR"`,
+`CarsonTemplateErrorData`\>
 
 A subclass of `Error` that indicates a Carson template failure.
 
@@ -705,11 +711,17 @@ A subclass of `Error` that indicates a Carson template failure.
 | Name       | Type                                                                                                                               |
 | :--------- | :--------------------------------------------------------------------------------------------------------------------------------- |
 | `code`     | `"INVALID_CARSON_TEMPLATE_ID"` \| `"CARSON_TEMPLATE_NOT_FOUND"` \| `"STRATEGY_UNSUPPORTED_EXTENSION"` \| `"STRATEGY_MISSING_FILE"` |
-| `options?` | `CustomErrorWithDataOptions`<`CarsonTemplateErrorData`\>                                                                           |
+| `options?` | `CustomErrorWithDataOptions`\<`CarsonTemplateErrorData`\>                                                                          |
+
+##### Returns
+
+`CustomErrorWithData`\<`"INVALID_CARSON_TEMPLATE_ID"` \| `"CARSON_TEMPLATE_NOT_FOUND"` \|
+`"STRATEGY_UNSUPPORTED_EXTENSION"` \| `"STRATEGY_MISSING_FILE"` \| `"UNKNOWN_ERROR"`,
+`CarsonTemplateErrorData`\>
 
 #### Defined in
 
-[packages/carson/src/template/CarsonTemplateError.ts:6](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/template/CarsonTemplateError.ts#L6)
+[packages/carson/source/template/CarsonTemplateError.ts:6](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/template/CarsonTemplateError.ts#L6)
 
 ---
 
@@ -717,14 +729,18 @@ A subclass of `Error` that indicates a Carson template failure.
 
 • `Const` **ProjectError**: (`code`: `"INVALID_PACKAGE_JSON"` \| `"INVALID_PROJECT_CONFIG"` \|
 `"NO_SUCH_PROJECT_PATH"` \| `"PROJECT_PATH_NOT_EMPTY"` \| `"MISSING_CARSON_TEMPLATE_ID"`,
-`options?`: `CustomErrorWithDataOptions`<`ProjectErrorData`\>) =>
-`CustomErrorWithData`<`"UNKNOWN_ERROR"` \| `"INVALID_PACKAGE_JSON"` \| `"INVALID_PROJECT_CONFIG"` \|
-`"NO_SUCH_PROJECT_PATH"` \| `"PROJECT_PATH_NOT_EMPTY"` \| `"MISSING_CARSON_TEMPLATE_ID"`,
-`ProjectErrorData`\>
+`options?`: `CustomErrorWithDataOptions`\<`ProjectErrorData`\>) =>
+`CustomErrorWithData`\<`"INVALID_PACKAGE_JSON"` \| `"INVALID_PROJECT_CONFIG"` \|
+`"NO_SUCH_PROJECT_PATH"` \| `"PROJECT_PATH_NOT_EMPTY"` \| `"MISSING_CARSON_TEMPLATE_ID"` \|
+`"UNKNOWN_ERROR"`, `ProjectErrorData`\>
+
+A subclass of `Error` that indicates a project failure.
 
 #### Type declaration
 
-• **new ProjectError**(`code`, `options?`)
+• **new ProjectError**(`code`, `options?`): `CustomErrorWithData`\<`"INVALID_PACKAGE_JSON"` \|
+`"INVALID_PROJECT_CONFIG"` \| `"NO_SUCH_PROJECT_PATH"` \| `"PROJECT_PATH_NOT_EMPTY"` \|
+`"MISSING_CARSON_TEMPLATE_ID"` \| `"UNKNOWN_ERROR"`, `ProjectErrorData`\>
 
 A subclass of `Error` that indicates a project failure.
 
@@ -733,11 +749,17 @@ A subclass of `Error` that indicates a project failure.
 | Name       | Type                                                                                                                                               |
 | :--------- | :------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `code`     | `"INVALID_PACKAGE_JSON"` \| `"INVALID_PROJECT_CONFIG"` \| `"NO_SUCH_PROJECT_PATH"` \| `"PROJECT_PATH_NOT_EMPTY"` \| `"MISSING_CARSON_TEMPLATE_ID"` |
-| `options?` | `CustomErrorWithDataOptions`<`ProjectErrorData`\>                                                                                                  |
+| `options?` | `CustomErrorWithDataOptions`\<`ProjectErrorData`\>                                                                                                 |
+
+##### Returns
+
+`CustomErrorWithData`\<`"INVALID_PACKAGE_JSON"` \| `"INVALID_PROJECT_CONFIG"` \|
+`"NO_SUCH_PROJECT_PATH"` \| `"PROJECT_PATH_NOT_EMPTY"` \| `"MISSING_CARSON_TEMPLATE_ID"` \|
+`"UNKNOWN_ERROR"`, `ProjectErrorData`\>
 
 #### Defined in
 
-[packages/carson/src/workspace/ProjectError.ts:7](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/ProjectError.ts#L7)
+[packages/carson/source/workspace/ProjectError.ts:7](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/ProjectError.ts#L7)
 
 ---
 
@@ -747,15 +769,22 @@ A subclass of `Error` that indicates a project failure.
 `"INVALID_WORKSPACE_CONFIG"` \| `"NO_SUCH_WORKSPACE_PATH"` \| `"NO_WORKSPACE_FOUND"` \|
 `"PATH_MISMATCH"` \| `"WORKSPACE_PATH_NOT_EMPTY"` \| `"DUPLICATE_PROJECT_NAME"` \|
 `"DUPLICATE_PROJECT_PATH"` \| `"TOO_MANY_PROJECTS"`, `options?`:
-`CustomErrorWithDataOptions`<`WorkspaceErrorData`\>) => `CustomErrorWithData`<`"UNKNOWN_ERROR"` \|
-`"INVALID_PACKAGE_JSON"` \| `"MISSING_CARSON_TEMPLATE_ID"` \| `"INVALID_WORKSPACE_CONFIG"` \|
-`"NO_SUCH_WORKSPACE_PATH"` \| `"NO_WORKSPACE_FOUND"` \| `"PATH_MISMATCH"` \|
-`"WORKSPACE_PATH_NOT_EMPTY"` \| `"DUPLICATE_PROJECT_NAME"` \| `"DUPLICATE_PROJECT_PATH"` \|
-`"TOO_MANY_PROJECTS"`, `WorkspaceErrorData`\>
+`CustomErrorWithDataOptions`\<`WorkspaceErrorData`\>) =>
+`CustomErrorWithData`\<`"INVALID_PACKAGE_JSON"` \| `"MISSING_CARSON_TEMPLATE_ID"` \|
+`"UNKNOWN_ERROR"` \| `"INVALID_WORKSPACE_CONFIG"` \| `"NO_SUCH_WORKSPACE_PATH"` \|
+`"NO_WORKSPACE_FOUND"` \| `"PATH_MISMATCH"` \| `"WORKSPACE_PATH_NOT_EMPTY"` \|
+`"DUPLICATE_PROJECT_NAME"` \| `"DUPLICATE_PROJECT_PATH"` \| `"TOO_MANY_PROJECTS"`,
+`WorkspaceErrorData`\>
+
+A subclass of `Error` that indicates a workspace failure.
 
 #### Type declaration
 
-• **new WorkspaceError**(`code`, `options?`)
+• **new WorkspaceError**(`code`, `options?`): `CustomErrorWithData`\<`"INVALID_PACKAGE_JSON"` \|
+`"MISSING_CARSON_TEMPLATE_ID"` \| `"UNKNOWN_ERROR"` \| `"INVALID_WORKSPACE_CONFIG"` \|
+`"NO_SUCH_WORKSPACE_PATH"` \| `"NO_WORKSPACE_FOUND"` \| `"PATH_MISMATCH"` \|
+`"WORKSPACE_PATH_NOT_EMPTY"` \| `"DUPLICATE_PROJECT_NAME"` \| `"DUPLICATE_PROJECT_PATH"` \|
+`"TOO_MANY_PROJECTS"`, `WorkspaceErrorData`\>
 
 A subclass of `Error` that indicates a workspace failure.
 
@@ -764,119 +793,132 @@ A subclass of `Error` that indicates a workspace failure.
 | Name       | Type                                                                                                                                                                                                                                                                                         |
 | :--------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `code`     | `"INVALID_PACKAGE_JSON"` \| `"MISSING_CARSON_TEMPLATE_ID"` \| `"INVALID_WORKSPACE_CONFIG"` \| `"NO_SUCH_WORKSPACE_PATH"` \| `"NO_WORKSPACE_FOUND"` \| `"PATH_MISMATCH"` \| `"WORKSPACE_PATH_NOT_EMPTY"` \| `"DUPLICATE_PROJECT_NAME"` \| `"DUPLICATE_PROJECT_PATH"` \| `"TOO_MANY_PROJECTS"` |
-| `options?` | `CustomErrorWithDataOptions`<`WorkspaceErrorData`\>                                                                                                                                                                                                                                          |
+| `options?` | `CustomErrorWithDataOptions`\<`WorkspaceErrorData`\>                                                                                                                                                                                                                                         |
+
+##### Returns
+
+`CustomErrorWithData`\<`"INVALID_PACKAGE_JSON"` \| `"MISSING_CARSON_TEMPLATE_ID"` \|
+`"UNKNOWN_ERROR"` \| `"INVALID_WORKSPACE_CONFIG"` \| `"NO_SUCH_WORKSPACE_PATH"` \|
+`"NO_WORKSPACE_FOUND"` \| `"PATH_MISMATCH"` \| `"WORKSPACE_PATH_NOT_EMPTY"` \|
+`"DUPLICATE_PROJECT_NAME"` \| `"DUPLICATE_PROJECT_PATH"` \| `"TOO_MANY_PROJECTS"`,
+`WorkspaceErrorData`\>
 
 #### Defined in
 
-[packages/carson/src/workspace/WorkspaceError.ts:7](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/WorkspaceError.ts#L7)
+[packages/carson/source/workspace/WorkspaceError.ts:7](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/WorkspaceError.ts#L7)
 
 ---
 
 ### carsonTemplateConfigSchema
 
-• `Const` **carsonTemplateConfigSchema**: `ZodObject`<{ `disallowMultiProjectWorkspace`:
-`ZodOptional`<`ZodBoolean`\> ; `disallowSingleProjectWorkspace`: `ZodOptional`<`ZodBoolean`\> },
-`"strict"`, `ZodTypeAny`, { `disallowMultiProjectWorkspace?`: `boolean` ;
-`disallowSingleProjectWorkspace?`: `boolean` }, { `disallowMultiProjectWorkspace?`: `boolean` ;
+• `Const` **carsonTemplateConfigSchema**: `ZodObject`\<\{ `disallowMultiProjectWorkspace`:
+`ZodOptional`\<`ZodBoolean`\> ; `disallowSingleProjectWorkspace`: `ZodOptional`\<`ZodBoolean`\> },
+`"strict"`, `ZodTypeAny`, \{ `disallowMultiProjectWorkspace?`: `boolean` ;
+`disallowSingleProjectWorkspace?`: `boolean` }, \{ `disallowMultiProjectWorkspace?`: `boolean` ;
 `disallowSingleProjectWorkspace?`: `boolean` }\>
 
 #### Defined in
 
-[packages/carson/src/template/CarsonTemplateConfig.ts:3](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/template/CarsonTemplateConfig.ts#L3)
+[packages/carson/source/template/CarsonTemplateConfig.ts:3](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/template/CarsonTemplateConfig.ts#L3)
 
 ---
 
 ### createProjectCommand
 
-• `Const` **createProjectCommand**: `Command`<`"create project"`, `undefined`, { `name`: { `type`:
-`"string"` = 'string' } ; `path`: { `type`: `"string"` = 'string' } ; `template`: { `type`:
-`"string"` = 'string' } }, `false`, `false`\>
+• `Const` **createProjectCommand**: `Command`\<`"create project"`, `undefined`, \{ `name`: \{
+`type`: `"string"` = 'string' } ; `path`: \{ `type`: `"string"` = 'string' } ; `template`: \{
+`type`: `"string"` = 'string' } }, `false`, `false`\>
 
 #### Defined in
 
-[packages/carson/src/commands/create-project/createProjectCommand.tsx:7](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/commands/create-project/createProjectCommand.tsx#L7)
+[packages/carson/source/commands/create-project/createProjectCommand.tsx:7](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/commands/create-project/createProjectCommand.tsx#L7)
 
 ---
 
 ### createWorkspaceCommand
 
-• `Const` **createWorkspaceCommand**: `Command`<`"create workspace"`, `undefined`, { `path`: {
-`type`: `"string"` = 'string' } ; `template`: { `type`: `"string"` = 'string' } }, `false`,
+• `Const` **createWorkspaceCommand**: `Command`\<`"create workspace"`, `undefined`, \{ `path`: \{
+`type`: `"string"` = 'string' } ; `template`: \{ `type`: `"string"` = 'string' } }, `false`,
 `false`\>
 
 #### Defined in
 
-[packages/carson/src/commands/create-workspace/createWorkspaceCommand.tsx:5](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/commands/create-workspace/createWorkspaceCommand.tsx#L5)
+[packages/carson/source/commands/create-workspace/createWorkspaceCommand.tsx:5](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/commands/create-workspace/createWorkspaceCommand.tsx#L5)
 
 ---
 
 ### projectConfigSchema
 
-• `Const` **projectConfigSchema**: `ZodObject`<{ `template`: `ZodOptional`<`ZodString`\> },
-`"strip"`, `ZodUnknown`, `objectOutputType`<{ `template`: `ZodOptional`<`ZodString`\> },
-`ZodUnknown`, `"strip"`\>, `objectInputType`<{ `template`: `ZodOptional`<`ZodString`\> },
+• `Const` **projectConfigSchema**: `ZodObject`\<\{ `template`: `ZodOptional`\<`ZodString`\> },
+`"strip"`, `ZodUnknown`, `objectOutputType`\<\{ `template`: `ZodOptional`\<`ZodString`\> },
+`ZodUnknown`, `"strip"`\>, `objectInputType`\<\{ `template`: `ZodOptional`\<`ZodString`\> },
 `ZodUnknown`, `"strip"`\>\>
 
 #### Defined in
 
-[packages/carson/src/workspace/ProjectConfig.ts:3](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/ProjectConfig.ts#L3)
+[packages/carson/source/workspace/ProjectConfig.ts:3](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/ProjectConfig.ts#L3)
 
 ---
 
 ### templateAttributesSchema
 
-• `Const` **templateAttributesSchema**: `ZodObject`<{ `strategy`:
-`ZodUnion`<[`ZodLiteral`<`"create"`\>, `ZodLiteral`<`"ensure"`\>, `ZodLiteral`<`"overwrite"`\>,
-`ZodLiteral`<`"merge"`\>, `ZodLiteral`<`"check"`\>, `ZodTuple`<[`ZodLiteral`<``"insert"``\>,
-`ZodString`], `null`\>]\> = strategyTemplateAttributeSchema }, `"strict"`, `ZodTypeAny`, {
-`strategy`: `Object` = strategyTemplateAttributeSchema }, { `strategy`: `Object` =
+• `Const` **templateAttributesSchema**: `ZodObject`\<\{ `strategy`:
+`ZodUnion`\<[`ZodLiteral`\<`"create"`\>, `ZodLiteral`\<`"ensure"`\>, `ZodLiteral`\<`"overwrite"`\>,
+`ZodLiteral`\<`"merge"`\>, `ZodLiteral`\<`"check"`\>, `ZodTuple`\<[`ZodLiteral`\<``"insert"``\>,
+`ZodString`], `null`\>]\> = strategyTemplateAttributeSchema }, `"strict"`, `ZodTypeAny`, \{
+`strategy`: `"create"` \| `"ensure"` \| `"overwrite"` \| `"merge"` \| `"check"` \| [``"insert"``,
+`string`] & `undefined` \| `"create"` \| `"ensure"` \| `"overwrite"` \| `"merge"` \| `"check"` \|
+[``"insert"``, `string`] = strategyTemplateAttributeSchema }, \{ `strategy`: `"create"` \|
+`"ensure"` \| `"overwrite"` \| `"merge"` \| `"check"` \| [``"insert"``, `string`] & `undefined` \|
+`"create"` \| `"ensure"` \| `"overwrite"` \| `"merge"` \| `"check"` \| [``"insert"``, `string`] =
 strategyTemplateAttributeSchema }\>
 
 #### Defined in
 
-[packages/carson/src/template/TemplateAttributes.ts:13](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/template/TemplateAttributes.ts#L13)
+[packages/carson/source/template/TemplateAttributes.ts:13](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/template/TemplateAttributes.ts#L13)
 
 ---
 
 ### templateDataSchema
 
-• `Const` **templateDataSchema**: `ZodObject`<{ `args`: `ZodOptional`<`ZodRecord`<`ZodString`,
-`ZodUnknown`\>\> ; `project`: `ZodOptional`<`ZodType`<[`Project`](classes/Project.md)<`boolean`\>,
-`ZodTypeDef`, [`Project`](classes/Project.md)<`boolean`\>\>\> ; `workspace`:
-`ZodOptional`<`ZodType`<[`Workspace`](classes/Workspace.md)<`boolean`\>, `ZodTypeDef`,
-[`Workspace`](classes/Workspace.md)<`boolean`\>\>\> }, `"strict"`, `ZodTypeAny`, { `args?`:
-`Record`<`string`, `unknown`\> ; `project?`: [`Project`](classes/Project.md)<`boolean`\> ;
-`workspace?`: [`Workspace`](classes/Workspace.md)<`boolean`\> }, { `args?`: `Record`<`string`,
-`unknown`\> ; `project?`: [`Project`](classes/Project.md)<`boolean`\> ; `workspace?`:
-[`Workspace`](classes/Workspace.md)<`boolean`\> }\>
+• `Const` **templateDataSchema**: `ZodObject`\<\{ `args`: `ZodOptional`\<`ZodRecord`\<`ZodString`,
+`ZodUnknown`\>\> ; `project`:
+`ZodOptional`\<`ZodType`\<[`Project`](classes/Project.md)\<`boolean`\>, `ZodTypeDef`,
+[`Project`](classes/Project.md)\<`boolean`\>\>\> ; `workspace`:
+`ZodOptional`\<`ZodType`\<[`Workspace`](classes/Workspace.md)\<`boolean`\>, `ZodTypeDef`,
+[`Workspace`](classes/Workspace.md)\<`boolean`\>\>\> }, `"strict"`, `ZodTypeAny`, \{ `args?`:
+`Record`\<`string`, `unknown`\> ; `project?`: [`Project`](classes/Project.md)\<`boolean`\> ;
+`workspace?`: [`Workspace`](classes/Workspace.md)\<`boolean`\> }, \{ `args?`: `Record`\<`string`,
+`unknown`\> ; `project?`: [`Project`](classes/Project.md)\<`boolean`\> ; `workspace?`:
+[`Workspace`](classes/Workspace.md)\<`boolean`\> }\>
 
 #### Defined in
 
-[packages/carson/src/template/TemplateData.ts:7](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/template/TemplateData.ts#L7)
+[packages/carson/source/template/TemplateData.ts:7](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/template/TemplateData.ts#L7)
 
 ---
 
 ### updateWorkspaceCommand
 
-• `Const` **updateWorkspaceCommand**: `Command`<`"update workspace"`, `undefined`, { `path`: {
+• `Const` **updateWorkspaceCommand**: `Command`\<`"update workspace"`, `undefined`, \{ `path`: \{
 `type`: `"string"` = 'string' } }, `false`, `false`\>
 
 #### Defined in
 
-[packages/carson/src/commands/update-workspace/updateWorkspaceCommand.tsx:7](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/commands/update-workspace/updateWorkspaceCommand.tsx#L7)
+[packages/carson/source/commands/update-workspace/updateWorkspaceCommand.tsx:7](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/commands/update-workspace/updateWorkspaceCommand.tsx#L7)
 
 ---
 
 ### workspaceConfigSchema
 
-• `Const` **workspaceConfigSchema**: `ZodObject`<{ `template`: `ZodOptional`<`ZodString`\> },
-`"strip"`, `ZodUnknown`, `objectOutputType`<{ `template`: `ZodOptional`<`ZodString`\> },
-`ZodUnknown`, `"strip"`\>, `objectInputType`<{ `template`: `ZodOptional`<`ZodString`\> },
+• `Const` **workspaceConfigSchema**: `ZodObject`\<\{ `template`: `ZodOptional`\<`ZodString`\> },
+`"strip"`, `ZodUnknown`, `objectOutputType`\<\{ `template`: `ZodOptional`\<`ZodString`\> },
+`ZodUnknown`, `"strip"`\>, `objectInputType`\<\{ `template`: `ZodOptional`\<`ZodString`\> },
 `ZodUnknown`, `"strip"`\>\>
 
 #### Defined in
 
-[packages/carson/src/workspace/WorkspaceConfig.ts:3](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/WorkspaceConfig.ts#L3)
+[packages/carson/source/workspace/WorkspaceConfig.ts:3](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/WorkspaceConfig.ts#L3)
 
 ## Functions
 
@@ -896,7 +938,7 @@ strategyTemplateAttributeSchema }\>
 
 #### Defined in
 
-[packages/carson/src/commands/create-project/CreateProject.tsx:20](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/commands/create-project/CreateProject.tsx#L20)
+[packages/carson/source/commands/create-project/CreateProject.tsx:20](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/commands/create-project/CreateProject.tsx#L20)
 
 ---
 
@@ -906,10 +948,10 @@ strategyTemplateAttributeSchema }\>
 
 #### Parameters
 
-| Name       | Type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| :--------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `props`    | `Props` & { `onChange?`: (`formResult`: `FormValues`<{ `rows`: { `projectName`: { `label`: `string` = 'What is the project name?'; `type`: `"text"` = 'text'; `validate`: (`value`: `string`) => `void` } ; `projectPath`: { `label`: `string` = 'What is the project location?'; `type`: `"select"` = 'select' } ; `templateId`: { `label`: `string` = 'What template do you want to use?'; `type`: `"text"` = 'text'; `validate`: (`value`: `string`) => `void` } } }\>) => `void` ; `onComplete`: (`formResult`: `FormValues`<{ `rows`: { `projectName`: { `label`: `string` = 'What is the project name?'; `type`: `"text"` = 'text'; `validate`: (`value`: `string`) => `void` } ; `projectPath`: { `label`: `string` = 'What is the project location?'; `type`: `"select"` = 'select' } ; `templateId`: { `label`: `string` = 'What template do you want to use?'; `type`: `"text"` = 'text'; `validate`: (`value`: `string`) => `void` } } }\>) => `void` ; `rows`: `FormPropsRows`<{ `rows`: { `projectName`: { `label`: `string` = 'What is the project name?'; `type`: `"text"` = 'text'; `validate`: (`value`: `string`) => `void` } ; `projectPath`: { `label`: `string` = 'What is the project location?'; `type`: `"select"` = 'select' } ; `templateId`: { `label`: `string` = 'What template do you want to use?'; `type`: `"text"` = 'text'; `validate`: (`value`: `string`) => `void` } } }\> ; `values`: `FormValues`<{ `rows`: { `projectName`: { `label`: `string` = 'What is the project name?'; `type`: `"text"` = 'text'; `validate`: (`value`: `string`) => `void` } ; `projectPath`: { `label`: `string` = 'What is the project location?'; `type`: `"select"` = 'select' } ; `templateId`: { `label`: `string` = 'What template do you want to use?'; `type`: `"text"` = 'text'; `validate`: (`value`: `string`) => `void` } } }\> } |
-| `context?` | `any`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| Name       | Type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| :--------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `props`    | `Props` & \{ `onChange?`: (`formResult`: `FormValues`\<\{ `rows`: \{ `projectName`: \{ `label`: `string` = 'What is the project name?'; `type`: `"text"` = 'text'; `validate`: (`value`: `string`) => `void` } ; `projectPath`: \{ `label`: `string` = 'What is the project location?'; `type`: `"select"` = 'select' } ; `templateId`: \{ `label`: `string` = 'What template do you want to use?'; `type`: `"text"` = 'text'; `validate`: (`value`: `string`) => `void` } } }\>) => `void` ; `onComplete`: (`formResult`: `FormValues`\<\{ `rows`: \{ `projectName`: \{ `label`: `string` = 'What is the project name?'; `type`: `"text"` = 'text'; `validate`: (`value`: `string`) => `void` } ; `projectPath`: \{ `label`: `string` = 'What is the project location?'; `type`: `"select"` = 'select' } ; `templateId`: \{ `label`: `string` = 'What template do you want to use?'; `type`: `"text"` = 'text'; `validate`: (`value`: `string`) => `void` } } }\>) => `void` ; `rows`: `FormPropsRows`\<\{ `rows`: \{ `projectName`: \{ `label`: `string` = 'What is the project name?'; `type`: `"text"` = 'text'; `validate`: (`value`: `string`) => `void` } ; `projectPath`: \{ `label`: `string` = 'What is the project location?'; `type`: `"select"` = 'select' } ; `templateId`: \{ `label`: `string` = 'What template do you want to use?'; `type`: `"text"` = 'text'; `validate`: (`value`: `string`) => `void` } } }\> ; `values`: `FormValues`\<\{ `rows`: \{ `projectName`: \{ `label`: `string` = 'What is the project name?'; `type`: `"text"` = 'text'; `validate`: (`value`: `string`) => `void` } ; `projectPath`: \{ `label`: `string` = 'What is the project location?'; `type`: `"select"` = 'select' } ; `templateId`: \{ `label`: `string` = 'What template do you want to use?'; `type`: `"text"` = 'text'; `validate`: (`value`: `string`) => `void` } } }\> } |
+| `context?` | `any`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 
 #### Returns
 
@@ -917,7 +959,7 @@ strategyTemplateAttributeSchema }\>
 
 #### Defined in
 
-node_modules/@types/react/index.d.ts:567
+[packages/carson/source/commands/create-project/CreateProjectInput.ts:6](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/commands/create-project/CreateProjectInput.ts#L6)
 
 ---
 
@@ -937,7 +979,7 @@ node_modules/@types/react/index.d.ts:567
 
 #### Defined in
 
-[packages/carson/src/commands/create-workspace/CreateWorkspace.tsx:16](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/commands/create-workspace/CreateWorkspace.tsx#L16)
+[packages/carson/source/commands/create-workspace/CreateWorkspace.tsx:16](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/commands/create-workspace/CreateWorkspace.tsx#L16)
 
 ---
 
@@ -947,10 +989,10 @@ node_modules/@types/react/index.d.ts:567
 
 #### Parameters
 
-| Name       | Type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| :--------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `props`    | `Props` & { `onChange?`: (`formResult`: `FormValues`<{ `rows`: { `templateId`: { `label`: `string` = 'Enter template ID:'; `type`: `"text"` = 'text'; `validate`: (`value`: `string`) => `void` } } }\>) => `void` ; `onComplete`: (`formResult`: `FormValues`<{ `rows`: { `templateId`: { `label`: `string` = 'Enter template ID:'; `type`: `"text"` = 'text'; `validate`: (`value`: `string`) => `void` } } }\>) => `void` ; `rows?`: `null` ; `values`: `FormValues`<{ `rows`: { `templateId`: { `label`: `string` = 'Enter template ID:'; `type`: `"text"` = 'text'; `validate`: (`value`: `string`) => `void` } } }\> } |
-| `context?` | `any`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| Name       | Type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| :--------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `props`    | `Props` & \{ `onChange?`: (`formResult`: `FormValues`\<\{ `rows`: \{ `templateId`: \{ `label`: `string` = 'Enter template ID:'; `type`: `"text"` = 'text'; `validate`: (`value`: `string`) => `void` } } }\>) => `void` ; `onComplete`: (`formResult`: `FormValues`\<\{ `rows`: \{ `templateId`: \{ `label`: `string` = 'Enter template ID:'; `type`: `"text"` = 'text'; `validate`: (`value`: `string`) => `void` } } }\>) => `void` ; `rows?`: `null` ; `values`: `FormValues`\<\{ `rows`: \{ `templateId`: \{ `label`: `string` = 'Enter template ID:'; `type`: `"text"` = 'text'; `validate`: (`value`: `string`) => `void` } } }\> } |
+| `context?` | `any`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 
 #### Returns
 
@@ -958,7 +1000,7 @@ node_modules/@types/react/index.d.ts:567
 
 #### Defined in
 
-node_modules/@types/react/index.d.ts:567
+[packages/carson/source/commands/create-workspace/CreateWorkspaceInput.ts:5](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/commands/create-workspace/CreateWorkspaceInput.ts#L5)
 
 ---
 
@@ -978,13 +1020,13 @@ node_modules/@types/react/index.d.ts:567
 
 #### Defined in
 
-[packages/carson/src/commands/update-workspace/UpdateWorkspace.tsx:15](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/commands/update-workspace/UpdateWorkspace.tsx#L15)
+[packages/carson/source/commands/update-workspace/UpdateWorkspace.tsx:15](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/commands/update-workspace/UpdateWorkspace.tsx#L15)
 
 ---
 
 ### applyTemplateRenders
 
-▸ **applyTemplateRenders**(`«destructured»`): `Promise`<`void`\>
+▸ **applyTemplateRenders**(`«destructured»`): `Promise`\<`void`\>
 
 Applies rendered Carson template to a specified path, i.e. creates and updates files based on the
 result of rendering each Carson template file.
@@ -997,17 +1039,17 @@ result of rendering each Carson template file.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Defined in
 
-[packages/carson/src/template/applyTemplateRenders.ts:32](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/template/applyTemplateRenders.ts#L32)
+[packages/carson/source/template/applyTemplateRenders.ts:32](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/template/applyTemplateRenders.ts#L32)
 
 ---
 
 ### renderCarsonTemplate
 
-▸ **renderCarsonTemplate**(`options`): `Promise`<[`TemplateRenders`](README.md#templaterenders)\>
+▸ **renderCarsonTemplate**(`options`): `Promise`\<[`TemplateRenders`](README.md#templaterenders)\>
 
 Renders a Carson template with provided template data.
 
@@ -1019,17 +1061,17 @@ Renders a Carson template with provided template data.
 
 #### Returns
 
-`Promise`<[`TemplateRenders`](README.md#templaterenders)\>
+`Promise`\<[`TemplateRenders`](README.md#templaterenders)\>
 
 #### Defined in
 
-[packages/carson/src/template/renderCarsonTemplate.ts:22](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/template/renderCarsonTemplate.ts#L22)
+[packages/carson/source/template/renderCarsonTemplate.ts:22](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/template/renderCarsonTemplate.ts#L22)
 
 ---
 
 ### runCreateProject
 
-▸ **runCreateProject**(`«destructured»`): `Observable`<`string`\>
+▸ **runCreateProject**(`«destructured»`): `Observable`\<`string`\>
 
 #### Parameters
 
@@ -1039,17 +1081,17 @@ Renders a Carson template with provided template data.
 
 #### Returns
 
-`Observable`<`string`\>
+`Observable`\<`string`\>
 
 #### Defined in
 
-[packages/carson/src/commands/create-project/runCreateProject.ts:17](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/commands/create-project/runCreateProject.ts#L17)
+[packages/carson/source/commands/create-project/runCreateProject.ts:17](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/commands/create-project/runCreateProject.ts#L17)
 
 ---
 
 ### runCreateWorkspace
 
-▸ **runCreateWorkspace**(`«destructured»`): `Observable`<`string`\>
+▸ **runCreateWorkspace**(`«destructured»`): `Observable`\<`string`\>
 
 #### Parameters
 
@@ -1059,17 +1101,17 @@ Renders a Carson template with provided template data.
 
 #### Returns
 
-`Observable`<`string`\>
+`Observable`\<`string`\>
 
 #### Defined in
 
-[packages/carson/src/commands/create-workspace/runCreateWorkspace.ts:15](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/commands/create-workspace/runCreateWorkspace.ts#L15)
+[packages/carson/source/commands/create-workspace/runCreateWorkspace.ts:15](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/commands/create-workspace/runCreateWorkspace.ts#L15)
 
 ---
 
 ### runUpdateWorkspace
 
-▸ **runUpdateWorkspace**(`«destructured»`): `Observable`<`string`\>
+▸ **runUpdateWorkspace**(`«destructured»`): `Observable`\<`string`\>
 
 #### Parameters
 
@@ -1079,17 +1121,17 @@ Renders a Carson template with provided template data.
 
 #### Returns
 
-`Observable`<`string`\>
+`Observable`\<`string`\>
 
 #### Defined in
 
-[packages/carson/src/commands/update-workspace/runUpdateWorkspace.ts:14](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/commands/update-workspace/runUpdateWorkspace.ts#L14)
+[packages/carson/source/commands/update-workspace/runUpdateWorkspace.ts:14](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/commands/update-workspace/runUpdateWorkspace.ts#L14)
 
 ---
 
 ### saveProjectConfig
 
-▸ **saveProjectConfig**(`options`): `Promise`<`void`\>
+▸ **saveProjectConfig**(`options`): `Promise`\<`void`\>
 
 Saves project configuration to the config file.
 
@@ -1101,17 +1143,17 @@ Saves project configuration to the config file.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Defined in
 
-[packages/carson/src/workspace/saveProjectConfig.ts:21](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/saveProjectConfig.ts#L21)
+[packages/carson/source/workspace/saveProjectConfig.ts:21](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/saveProjectConfig.ts#L21)
 
 ---
 
 ### saveWorkspaceConfig
 
-▸ **saveWorkspaceConfig**(`options`): `Promise`<`void`\>
+▸ **saveWorkspaceConfig**(`options`): `Promise`\<`void`\>
 
 Saves workspace configuration to the config file.
 
@@ -1123,8 +1165,8 @@ Saves workspace configuration to the config file.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Defined in
 
-[packages/carson/src/workspace/saveWorkspaceConfig.ts:21](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/carson/src/workspace/saveWorkspaceConfig.ts#L21)
+[packages/carson/source/workspace/saveWorkspaceConfig.ts:21](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/carson/source/workspace/saveWorkspaceConfig.ts#L21)

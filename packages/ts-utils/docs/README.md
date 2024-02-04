@@ -37,8 +37,8 @@
 
 ### AtLeastOneRequired
 
-Ƭ **AtLeastOneRequired**<`T`, `P`\>: { [K in P]-?: Partial<Pick<T, Exclude<P, K\>\>\> &
-Required<Pick<T, K\>\> }[`P`] & `Pick`<`T`, `Exclude`<keyof `T`, `P`\>\>
+Ƭ **AtLeastOneRequired**\<`T`, `P`\>: \{ [K in P]-?: Partial\<Pick\<T, Exclude\<P, K\>\>\> &
+Required\<Pick\<T, K\>\> }[`P`] & `Pick`\<`T`, `Exclude`\<keyof `T`, `P`\>\>
 
 Constructs new type from `T` so that at least one property from the set of properties `P` is
 required:
@@ -79,20 +79,20 @@ const fooOrBar4: FooOrBar = {
 
 #### Defined in
 
-[packages/ts-utils/src/types/AtLeastOneRequired.ts:34](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/ts-utils/src/types/AtLeastOneRequired.ts#L34)
+[packages/ts-utils/source/types/AtLeastOneRequired.ts:34](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/ts-utils/source/types/AtLeastOneRequired.ts#L34)
 
 ---
 
 ### DeepPartial
 
-Ƭ **DeepPartial**<`T`\>: `T` extends `Date` \| [`Primitive`](README.md#primitive) \| `RegExp` ? `T`
-: `T` extends `Map`<infer KeyType, infer ValueType\> ? `DeepPartialMap`<`KeyType`, `ValueType`\> :
-`T` extends `Set`<infer ItemType\> ? `DeepPartialSet`<`ItemType`\> : `T` extends `ReadonlyMap`<infer
-KeyType, infer ValueType\> ? `DeepPartialReadonlyMap`<`KeyType`, `ValueType`\> : `T` extends
-`ReadonlySet`<infer ItemType\> ? `DeepPartialReadonlySet`<`ItemType`\> : `T` extends (...`args`:
-`any`[]) => `unknown` ? `T` \| `undefined` : `T` extends `object` ? `T` extends infer I[] ? `I`[]
-extends `T` ? [`DeepPartial`](README.md#deeppartial)<`I` \| `undefined`\>[] :
-`DeepPartialObject`<`T`\> : `DeepPartialObject`<`T`\> : `unknown`
+Ƭ **DeepPartial**\<`T`\>: `T` extends `Date` \| [`Primitive`](README.md#primitive) \| `RegExp` ? `T`
+: `T` extends `Map`\<infer KeyType, infer ValueType\> ? `DeepPartialMap`\<`KeyType`, `ValueType`\> :
+`T` extends `Set`\<infer ItemType\> ? `DeepPartialSet`\<`ItemType`\> : `T` extends
+`ReadonlyMap`\<infer KeyType, infer ValueType\> ? `DeepPartialReadonlyMap`\<`KeyType`, `ValueType`\>
+: `T` extends `ReadonlySet`\<infer ItemType\> ? `DeepPartialReadonlySet`\<`ItemType`\> : `T` extends
+(...`args`: `any`[]) => `unknown` ? `T` \| `undefined` : `T` extends `object` ? `T` extends infer
+I[] ? `I`[] extends `T` ? [`DeepPartial`](README.md#deeppartial)\<`I` \| `undefined`\>[] :
+`DeepPartialObject`\<`T`\> : `DeepPartialObject`\<`T`\> : `unknown`
 
 Same as built-in `Partial`, but works recursively. Useful when 1) you have a config object to which
 you need to merge another object, which would be a deep partial of a default object, or 2) you need
@@ -132,16 +132,16 @@ settings = updateSettings({ minimap: { enabled: true } });
 
 #### Defined in
 
-[packages/ts-utils/src/types/DeepPartial.ts:36](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/ts-utils/src/types/DeepPartial.ts#L36)
+[packages/ts-utils/source/types/DeepPartial.ts:36](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/ts-utils/source/types/DeepPartial.ts#L36)
 
 ---
 
 ### DeepReadonly
 
-Ƭ **DeepReadonly**<`T`\>: `T` extends [`Primitive`](README.md#primitive) \| (...`args`: `any`[]) =>
-`unknown` ? `T` : `T` extends `ReadonlyMap`<infer K, infer V\> ? `DeepReadonlyMap`<`K`, `V`\> : `T`
-extends `ReadonlySet`<infer I\> ? `DeepReadonlySet`<`I`\> : `T` extends `object` ?
-`DeepReadonlyObject`<`T`\> : `unknown`
+Ƭ **DeepReadonly**\<`T`\>: `T` extends [`Primitive`](README.md#primitive) \| (...`args`: `any`[]) =>
+`unknown` ? `T` : `T` extends `ReadonlyMap`\<infer K, infer V\> ? `DeepReadonlyMap`\<`K`, `V`\> :
+`T` extends `ReadonlySet`\<infer I\> ? `DeepReadonlySet`\<`I`\> : `T` extends `object` ?
+`DeepReadonlyObject`\<`T`\> : `unknown`
 
 Same as built-in `Readonly`, but works recursively:
 
@@ -165,13 +165,13 @@ data.foo.push('bar'); // error TS2339: Property 'push' does not exist on type 'r
 
 #### Defined in
 
-[packages/ts-utils/src/types/DeepReadonly.ts:22](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/ts-utils/src/types/DeepReadonly.ts#L22)
+[packages/ts-utils/source/types/DeepReadonly.ts:22](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/ts-utils/source/types/DeepReadonly.ts#L22)
 
 ---
 
 ### If
 
-Ƭ **If**<`X`, `Y`, `T`, `F`\>: `X` extends `Y` ? `T` : `F`
+Ƭ **If**\<`X`, `Y`, `T`, `F`\>: `X` extends `Y` ? `T` : `F`
 
 `If<X, Y, T, F>` is shorthand for conditional type `X extends Y ? T : F`:
 
@@ -192,14 +192,14 @@ type NonNullable<T> = If<T, null | undefined, never, T>;
 
 #### Defined in
 
-[packages/ts-utils/src/types/If.ts:15](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/ts-utils/src/types/If.ts#L15)
+[packages/ts-utils/source/types/If.ts:15](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/ts-utils/source/types/If.ts#L15)
 
 ---
 
 ### IsEqual
 
-Ƭ **IsEqual**<`T`, `U`\>: <G\>() => `G` extends `T` ? `1` : `2` extends <G\>() => `G` extends `U` ?
-`1` : `2` ? `true` : `false`
+Ƭ **IsEqual**\<`T`, `U`\>: \<G\>() => `G` extends `T` ? `1` : `2` extends \<G\>() => `G` extends `U`
+? `1` : `2` ? `true` : `false`
 
 Allows you to test if two types are the same:
 
@@ -220,13 +220,13 @@ type Result = IsEqual<{foo: string}, {foo: string}> // `typeof Result` is `true`
 
 #### Defined in
 
-[packages/ts-utils/src/types/IsEqual.ts:15](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/ts-utils/src/types/IsEqual.ts#L15)
+[packages/ts-utils/source/types/IsEqual.ts:15](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/ts-utils/source/types/IsEqual.ts#L15)
 
 ---
 
 ### LiteralUnion
 
-Ƭ **LiteralUnion**<`L`, `T`\>: `L` \| `Record`<`never`, `never`\> & `T`
+Ƭ **LiteralUnion**\<`L`, `T`\>: `L` \| `Record`\<`never`, `never`\> & `T`
 
 Creates union type by combining primitve types and literal types while allowing auto-completion in
 IDEs. This type is a workaround for
@@ -253,13 +253,13 @@ const: animal: Animal = ''; // Auto-completion works: 'cat' and 'dog' is suggest
 
 #### Defined in
 
-[packages/ts-utils/src/types/LiteralUnion.ts:22](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/ts-utils/src/types/LiteralUnion.ts#L22)
+[packages/ts-utils/source/types/LiteralUnion.ts:22](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/ts-utils/source/types/LiteralUnion.ts#L22)
 
 ---
 
 ### NonArray
 
-Ƭ **NonArray**<`T`\>: `T` extends `any`[] ? `never` : `T`
+Ƭ **NonArray**\<`T`\>: `T` extends `any`[] ? `never` : `T`
 
 #### Type parameters
 
@@ -269,13 +269,13 @@ const: animal: Animal = ''; // Auto-completion works: 'cat' and 'dog' is suggest
 
 #### Defined in
 
-[packages/ts-utils/src/types/NonArray.ts:3](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/ts-utils/src/types/NonArray.ts#L3)
+[packages/ts-utils/source/types/NonArray.ts:3](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/ts-utils/source/types/NonArray.ts#L3)
 
 ---
 
 ### NonArrayLike
 
-Ƭ **NonArrayLike**<`T`\>: `T` extends `ArrayLike`<`any`\> ? `never` : `T`
+Ƭ **NonArrayLike**\<`T`\>: `T` extends `ArrayLike`\<`any`\> ? `never` : `T`
 
 #### Type parameters
 
@@ -285,14 +285,14 @@ const: animal: Animal = ''; // Auto-completion works: 'cat' and 'dog' is suggest
 
 #### Defined in
 
-[packages/ts-utils/src/types/NonArrayLike.ts:3](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/ts-utils/src/types/NonArrayLike.ts#L3)
+[packages/ts-utils/source/types/NonArrayLike.ts:3](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/ts-utils/source/types/NonArrayLike.ts#L3)
 
 ---
 
 ### OptionalKeys
 
-Ƭ **OptionalKeys**<`T`\>: `Exclude`<{ [K in keyof T]: T extends Record<K, T[K]\> ? never : K }[keyof
-`T`], `undefined`\>
+Ƭ **OptionalKeys**\<`T`\>: `Exclude`\<\{ [K in keyof T]: T extends Record\<K, T[K]\> ? never : K
+}[keyof `T`], `undefined`\>
 
 Extracts the optional keys of type `T`:
 
@@ -308,13 +308,13 @@ type Result = OptionalKeys<{ foo?: number; bar?: string; baz: boolean; }>; // `t
 
 #### Defined in
 
-[packages/ts-utils/src/types/OptionalKeys.ts:10](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/ts-utils/src/types/OptionalKeys.ts#L10)
+[packages/ts-utils/source/types/OptionalKeys.ts:10](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/ts-utils/source/types/OptionalKeys.ts#L10)
 
 ---
 
 ### Parameters
 
-Ƭ **Parameters**<`T`\>: `T` extends (...`args`: infer P) => `any` ? `P` : `never`
+Ƭ **Parameters**\<`T`\>: `T` extends (...`args`: infer P) => `any` ? `P` : `never`
 
 Constructs a tuple type from the types used in the parameters of a function type `T`. Similarly like
 built-in `Parameters` utility type, but works also on nullable and other types.
@@ -337,7 +337,7 @@ type Result = Parameters<typeof foo.get>; // `typeof Result` is `[id: number]`
 
 #### Defined in
 
-[packages/ts-utils/src/types/Parameters.ts:19](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/ts-utils/src/types/Parameters.ts#L19)
+[packages/ts-utils/source/types/Parameters.ts:19](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/ts-utils/source/types/Parameters.ts#L19)
 
 ---
 
@@ -349,14 +349,14 @@ Union of primitive types.
 
 #### Defined in
 
-[packages/ts-utils/src/types/Primitive.ts:4](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/ts-utils/src/types/Primitive.ts#L4)
+[packages/ts-utils/source/types/Primitive.ts:4](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/ts-utils/source/types/Primitive.ts#L4)
 
 ---
 
 ### RequiredKeys
 
-Ƭ **RequiredKeys**<`T`\>: `Exclude`<{ [K in keyof T]: T extends Record<K, T[K]\> ? K : never }[keyof
-`T`], `undefined`\>
+Ƭ **RequiredKeys**\<`T`\>: `Exclude`\<\{ [K in keyof T]: T extends Record\<K, T[K]\> ? K : never
+}[keyof `T`], `undefined`\>
 
 Extracts the non-optional keys of type `T`:
 
@@ -372,14 +372,14 @@ type Result = RequiredKeys<{ foo: number; bar: string; baz?: boolean; }>; // `ty
 
 #### Defined in
 
-[packages/ts-utils/src/types/RequiredKeys.ts:10](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/ts-utils/src/types/RequiredKeys.ts#L10)
+[packages/ts-utils/source/types/RequiredKeys.ts:10](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/ts-utils/source/types/RequiredKeys.ts#L10)
 
 ---
 
 ### ReturnType
 
-Ƭ **ReturnType**<`T`\>: `T` extends (...`args`: `any`[]) => infer R ? `R` extends
-`PromiseLike`<infer J\> ? `J` : `R` : `never`
+Ƭ **ReturnType**\<`T`\>: `T` extends (...`args`: `any`[]) => infer R ? `R` extends
+`PromiseLike`\<infer J\> ? `J` : `R` : `never`
 
 Constructs a type consisting of the return type of function `T`. Similarly like built-in
 `ReturnType` utility type, but works also on nullable and other types, and if you use it with async
@@ -403,13 +403,13 @@ type Result = ReturnType<typeof foo.get>; // `typeof Result` is `string`
 
 #### Defined in
 
-[packages/ts-utils/src/types/ReturnType.ts:20](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/ts-utils/src/types/ReturnType.ts#L20)
+[packages/ts-utils/source/types/ReturnType.ts:20](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/ts-utils/source/types/ReturnType.ts#L20)
 
 ---
 
 ### Simplify
 
-Ƭ **Simplify**<`T`\>: { [KeyType in keyof T]: T[KeyType] }
+Ƭ **Simplify**\<`T`\>: \{ [KeyType in keyof T]: T[KeyType] }
 
 Maps all keys of type `T` to a new object type. Useful for converting interfaces to types or showing
 better hints from the language server.
@@ -422,13 +422,13 @@ better hints from the language server.
 
 #### Defined in
 
-[packages/ts-utils/src/types/Simplify.ts:6](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/ts-utils/src/types/Simplify.ts#L6)
+[packages/ts-utils/source/types/Simplify.ts:6](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/ts-utils/source/types/Simplify.ts#L6)
 
 ---
 
 ### TupleToUnion
 
-Ƭ **TupleToUnion**<`T`\>: `T`[`number`]
+Ƭ **TupleToUnion**\<`T`\>: `T`[`number`]
 
 Converts tuple type to union type:
 
@@ -444,14 +444,15 @@ type Result = TupleToUnion<['foo', 'bar']>; // `typeof Result` is `"foo" | "bar"
 
 #### Defined in
 
-[packages/ts-utils/src/types/TupleToUnion.ts:10](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/ts-utils/src/types/TupleToUnion.ts#L10)
+[packages/ts-utils/source/types/TupleToUnion.ts:10](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/ts-utils/source/types/TupleToUnion.ts#L10)
 
 ---
 
 ### UnionToIntersection
 
-Ƭ **UnionToIntersection**<`U`\>: `boolean` extends `U` ? `UnionToIntersectionHelper`<`Exclude`<`U`,
-`boolean`\>\> & `boolean` : `UnionToIntersectionHelper`<`U`\>
+Ƭ **UnionToIntersection**\<`U`\>: `boolean` extends `U` ?
+`UnionToIntersectionHelper`\<`Exclude`\<`U`, `boolean`\>\> & `boolean` :
+`UnionToIntersectionHelper`\<`U`\>
 
 Converts union type to intersection type:
 
@@ -467,13 +468,13 @@ type Result = UnionToIntersection<{ foo: string } | { bar: string }>; // `typeof
 
 #### Defined in
 
-[packages/ts-utils/src/types/UnionToIntersection.ts:10](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/ts-utils/src/types/UnionToIntersection.ts#L10)
+[packages/ts-utils/source/types/UnionToIntersection.ts:10](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/ts-utils/source/types/UnionToIntersection.ts#L10)
 
 ---
 
 ### Writable
 
-Ƭ **Writable**<`T`\>: { -readonly [K in keyof T]: T[K] }
+Ƭ **Writable**\<`T`\>: \{ -readonly [K in keyof T]: T[K] }
 
 Create a new type that removes `readonly` from object types's keys. Inverse of Readonly<T>.
 
@@ -485,7 +486,7 @@ Create a new type that removes `readonly` from object types's keys. Inverse of R
 
 #### Defined in
 
-[packages/ts-utils/src/types/Writable.ts:4](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/ts-utils/src/types/Writable.ts#L4)
+[packages/ts-utils/source/types/Writable.ts:4](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/ts-utils/source/types/Writable.ts#L4)
 
 ## Functions
 
@@ -525,13 +526,13 @@ asserts condition
 
 #### Defined in
 
-[packages/ts-utils/src/utils/assert.ts:39](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/ts-utils/src/utils/assert.ts#L39)
+[packages/ts-utils/source/utils/assert.ts:39](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/ts-utils/source/utils/assert.ts#L39)
 
 ---
 
 ### is
 
-▸ **is**<`T`\>(`value`, `isMatched`): value is T
+▸ **is**\<`T`\>(`value`, `isMatched`): value is T
 
 A generic type guard. If `isMatched` is `true`, TypeScript assumes `value` is of type `T`. You can
 use it to narrow types:
@@ -575,13 +576,13 @@ Value of `isMatched`
 
 #### Defined in
 
-[packages/ts-utils/src/utils/is.ts:28](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/ts-utils/src/utils/is.ts#L28)
+[packages/ts-utils/source/utils/is.ts:28](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/ts-utils/source/utils/is.ts#L28)
 
 ---
 
 ### isNonNullable
 
-▸ **isNonNullable**<`T`\>(`value`): value is NonNullable<T\>
+▸ **isNonNullable**\<`T`\>(`value`): value is NonNullable\<T\>
 
 A type guard that checks whether variable is not `null` or `undefined`:
 
@@ -609,19 +610,19 @@ if (isNonNullable(foobar)) {
 
 #### Returns
 
-value is NonNullable<T\>
+value is NonNullable\<T\>
 
 `true` if `value` is non-nullable
 
 #### Defined in
 
-[packages/ts-utils/src/utils/isNonNullable.ts:18](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/ts-utils/src/utils/isNonNullable.ts#L18)
+[packages/ts-utils/source/utils/isNonNullable.ts:18](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/ts-utils/source/utils/isNonNullable.ts#L18)
 
 ---
 
 ### tuple
 
-▸ **tuple**<`T`\>(`...values`): `T`
+▸ **tuple**\<`T`\>(`...values`): `T`
 
 #### Type parameters
 
@@ -641,4 +642,4 @@ value is NonNullable<T\>
 
 #### Defined in
 
-[packages/ts-utils/src/utils/tuple.ts:4](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/ts-utils/src/utils/tuple.ts#L4)
+[packages/ts-utils/source/utils/tuple.ts:4](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/ts-utils/source/utils/tuple.ts#L4)

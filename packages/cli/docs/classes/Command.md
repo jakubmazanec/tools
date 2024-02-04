@@ -1,4 +1,4 @@
-# Class: Command<A, B, C, D, E\>
+# Class: Command\<A, B, C, D, E\>
 
 Command encapsulates piece of a CLI's logic and is executed when [Program](Program.md) instance
 parses that command from the command line arguments.
@@ -38,7 +38,8 @@ parses that command from the command line arguments.
 
 ### constructor
 
-• **new Command**<`A`, `B`, `C`, `D`, `E`\>(`name`, `action`, `options`)
+• **new Command**\<`A`, `B`, `C`, `D`, `E`\>(`name`, `action`, `options`):
+[`Command`](Command.md)\<`A`, `B`, `C`, `D`, `E`\>
 
 #### Type parameters
 
@@ -52,26 +53,30 @@ parses that command from the command line arguments.
 
 #### Parameters
 
-| Name      | Type                                                                                                 | Description                                                                                                               |
-| :-------- | :--------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------ |
-| `name`    | `A`                                                                                                  | Command name, ie. space-separated words consisting only of letters, numbers (but not at the start of the word) or dashes. |
-| `action`  | [`CommandAction`](../README.md#commandaction)<`A`, `B`, `C`, `D`, `E`\>                              | Function that runs when command is executed.                                                                              |
-| `options` | [`CommandOptions`](../README.md#commandoptions)<`NonNullable`<`B`\>, `NonNullable`<`C`\>, `D`, `E`\> | Additionl command options.                                                                                                |
+| Name      | Type                                                                                                    | Description                                                                                                               |
+| :-------- | :------------------------------------------------------------------------------------------------------ | :------------------------------------------------------------------------------------------------------------------------ |
+| `name`    | `A`                                                                                                     | Command name, ie. space-separated words consisting only of letters, numbers (but not at the start of the word) or dashes. |
+| `action`  | [`CommandAction`](../README.md#commandaction)\<`A`, `B`, `C`, `D`, `E`\>                                | Function that runs when command is executed.                                                                              |
+| `options` | [`CommandOptions`](../README.md#commandoptions)\<`NonNullable`\<`B`\>, `NonNullable`\<`C`\>, `D`, `E`\> | Additionl command options.                                                                                                |
+
+#### Returns
+
+[`Command`](Command.md)\<`A`, `B`, `C`, `D`, `E`\>
 
 #### Defined in
 
-[cli/src/program/Command.ts:36](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/cli/src/program/Command.ts#L36)
+[cli/source/program/Command.ts:36](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/cli/source/program/Command.ts#L36)
 
 ## Properties
 
 ### action
 
-• `Private` `Readonly` **action**: [`CommandAction`](../README.md#commandaction)<`A`, `B`, `C`, `D`,
-`E`\>
+• `Private` `Readonly` **action**: [`CommandAction`](../README.md#commandaction)\<`A`, `B`, `C`,
+`D`, `E`\>
 
 #### Defined in
 
-[cli/src/program/Command.ts:29](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/cli/src/program/Command.ts#L29)
+[cli/source/program/Command.ts:29](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/cli/source/program/Command.ts#L29)
 
 ---
 
@@ -81,7 +86,7 @@ parses that command from the command line arguments.
 
 #### Defined in
 
-[cli/src/program/Command.ts:27](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/cli/src/program/Command.ts#L27)
+[cli/source/program/Command.ts:27](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/cli/source/program/Command.ts#L27)
 
 ---
 
@@ -91,7 +96,7 @@ parses that command from the command line arguments.
 
 #### Defined in
 
-[cli/src/program/Command.ts:28](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/cli/src/program/Command.ts#L28)
+[cli/source/program/Command.ts:28](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/cli/source/program/Command.ts#L28)
 
 ---
 
@@ -101,7 +106,7 @@ parses that command from the command line arguments.
 
 #### Defined in
 
-[cli/src/program/Command.ts:24](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/cli/src/program/Command.ts#L24)
+[cli/source/program/Command.ts:24](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/cli/source/program/Command.ts#L24)
 
 ---
 
@@ -111,7 +116,7 @@ parses that command from the command line arguments.
 
 #### Defined in
 
-[cli/src/program/Command.ts:23](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/cli/src/program/Command.ts#L23)
+[cli/source/program/Command.ts:23](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/cli/source/program/Command.ts#L23)
 
 ---
 
@@ -121,7 +126,7 @@ parses that command from the command line arguments.
 
 #### Defined in
 
-[cli/src/program/Command.ts:26](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/cli/src/program/Command.ts#L26)
+[cli/source/program/Command.ts:26](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/cli/source/program/Command.ts#L26)
 
 ---
 
@@ -131,13 +136,13 @@ parses that command from the command line arguments.
 
 #### Defined in
 
-[cli/src/program/Command.ts:25](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/cli/src/program/Command.ts#L25)
+[cli/source/program/Command.ts:25](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/cli/source/program/Command.ts#L25)
 
 ## Methods
 
 ### parseArguments
 
-▸ **parseArguments**(`argv`): `Arguments`<{ `allowUnknownOptions`: `D` ; `allowUnknownParameters`:
+▸ **parseArguments**(`argv`): `Arguments`\<\{ `allowUnknownOptions`: `D` ; `allowUnknownParameters`:
 `E` ; `commands`: readonly [`A`] ; `options`: `C` ; `parameters`: `B` }\>
 
 Parses a list of command line arguments into an arguments object. Parser is pre-configured based on
@@ -151,32 +156,32 @@ this command.
 
 #### Returns
 
-`Arguments`<{ `allowUnknownOptions`: `D` ; `allowUnknownParameters`: `E` ; `commands`: readonly
+`Arguments`\<\{ `allowUnknownOptions`: `D` ; `allowUnknownParameters`: `E` ; `commands`: readonly
 [`A`] ; `options`: `C` ; `parameters`: `B` }\>
 
 #### Defined in
 
-[cli/src/program/Command.ts:82](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/cli/src/program/Command.ts#L82)
+[cli/source/program/Command.ts:82](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/cli/source/program/Command.ts#L82)
 
 ---
 
 ### run
 
-▸ **run**(`parsedArgs`, `program`): `Promise`<`void`\>
+▸ **run**(`parsedArgs`, `program`): `Promise`\<`void`\>
 
 Executes command action with provided parsed arguments and [Program](Program.md) instance.
 
 #### Parameters
 
-| Name         | Type                                                                                                                                           |
-| :----------- | :--------------------------------------------------------------------------------------------------------------------------------------------- |
-| `parsedArgs` | `Arguments`<{ `allowUnknownOptions`: `D` ; `allowUnknownParameters`: `E` ; `commands`: readonly [`A`] ; `options`: `C` ; `parameters`: `B` }\> |
-| `program`    | [`Program`](Program.md)                                                                                                                        |
+| Name         | Type                                                                                                                                             |
+| :----------- | :----------------------------------------------------------------------------------------------------------------------------------------------- |
+| `parsedArgs` | `Arguments`\<\{ `allowUnknownOptions`: `D` ; `allowUnknownParameters`: `E` ; `commands`: readonly [`A`] ; `options`: `C` ; `parameters`: `B` }\> |
+| `program`    | [`Program`](Program.md)                                                                                                                          |
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Defined in
 
-[cli/src/program/Command.ts:107](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/cli/src/program/Command.ts#L107)
+[cli/source/program/Command.ts:107](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/cli/source/program/Command.ts#L107)

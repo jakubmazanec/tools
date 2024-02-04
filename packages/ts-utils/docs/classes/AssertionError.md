@@ -31,7 +31,7 @@ A subclass of `Error` that indicates an assertion failure.
 
 ### constructor
 
-• **new AssertionError**(`message?`)
+• **new AssertionError**(`message?`): [`AssertionError`](AssertionError.md)
 
 #### Parameters
 
@@ -39,13 +39,17 @@ A subclass of `Error` that indicates an assertion failure.
 | :--------- | :------- | :----------------------------------------- |
 | `message?` | `string` | Message added to the default error message |
 
+#### Returns
+
+[`AssertionError`](AssertionError.md)
+
 #### Overrides
 
 Error.constructor
 
 #### Defined in
 
-[packages/ts-utils/src/utils/assert.ts:8](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/ts-utils/src/utils/assert.ts#L8)
+[packages/ts-utils/source/utils/assert.ts:8](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/ts-utils/source/utils/assert.ts#L8)
 
 ## Properties
 
@@ -73,7 +77,7 @@ Error.message
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1068
+node_modules/typescript/lib/lib.es5.d.ts:1076
 
 ---
 
@@ -87,7 +91,7 @@ Error.name
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1067
+node_modules/typescript/lib/lib.es5.d.ts:1075
 
 ---
 
@@ -101,13 +105,19 @@ Error.stack
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1069
+node_modules/typescript/lib/lib.es5.d.ts:1077
 
 ---
 
 ### prepareStackTrace
 
 ▪ `Static` `Optional` **prepareStackTrace**: (`err`: `Error`, `stackTraces`: `CallSite`[]) => `any`
+
+Optional override for formatting stack traces
+
+**`See`**
+
+https://v8.dev/docs/stack-trace-api#customizing-stack-traces
 
 #### Type declaration
 
@@ -136,7 +146,7 @@ Error.prepareStackTrace
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:11
+node_modules/@types/node/globals.d.ts:28
 
 ---
 
@@ -150,13 +160,13 @@ Error.stackTraceLimit
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:13
+node_modules/@types/node/globals.d.ts:30
 
 ## Methods
 
 ### captureStackTrace
 
-▸ `Static` **captureStackTrace**(`targetObject`, `constructorOpt?`): `void`
+▸ **captureStackTrace**(`targetObject`, `constructorOpt?`): `void`
 
 Create .stack property on a target object
 
@@ -177,4 +187,4 @@ Error.captureStackTrace
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:4
+node_modules/@types/node/globals.d.ts:21

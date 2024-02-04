@@ -34,7 +34,7 @@
 
 ### constructor
 
-• **new SemVer**(`version`, `optionsOrLoose?`)
+• **new SemVer**(`version`, `optionsOrLoose?`): [`SemVer`](semver.SemVer.md)
 
 #### Parameters
 
@@ -42,6 +42,10 @@
 | :---------------- | :------------------------------------------------------------------ |
 | `version`         | `string` \| [`SemVer`](semver.SemVer.md)                            |
 | `optionsOrLoose?` | `boolean` \| [`RangeOptions`](../interfaces/semver.RangeOptions.md) |
+
+#### Returns
+
+[`SemVer`](semver.SemVer.md)
 
 #### Defined in
 

@@ -26,7 +26,7 @@
 
 ### constructor
 
-• **new Comparator**(`comp`, `optionsOrLoose?`)
+• **new Comparator**(`comp`, `optionsOrLoose?`): [`Comparator`](semver.Comparator.md)
 
 #### Parameters
 
@@ -34,6 +34,10 @@
 | :---------------- | :-------------------------------------------------------- |
 | `comp`            | `string` \| [`Comparator`](semver.Comparator.md)          |
 | `optionsOrLoose?` | `boolean` \| [`Options`](../interfaces/semver.Options.md) |
+
+#### Returns
+
+[`Comparator`](semver.Comparator.md)
 
 #### Defined in
 

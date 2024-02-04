@@ -33,13 +33,13 @@
 
 #### Defined in
 
-[ensureEmptyDirectory.ts:9](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/fs-utils/src/ensureEmptyDirectory.ts#L9)
+[ensureEmptyDirectory.ts:9](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/fs-utils/source/ensureEmptyDirectory.ts#L9)
 
 ## Functions
 
 ### createTempDirectory
 
-▸ **createTempDirectory**(`prefix?`): `Promise`<`string`\>
+▸ **createTempDirectory**(`prefix?`): `Promise`\<`string`\>
 
 Creates a unique temporary directory in the operating system's default directory for temporary
 files. The name of the directory is random, but can be prefixed with a custom string.
@@ -52,19 +52,19 @@ files. The name of the directory is random, but can be prefixed with a custom st
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`\<`string`\>
 
 The new directory name.
 
 #### Defined in
 
-[createTempDirectory.ts:11](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/fs-utils/src/createTempDirectory.ts#L11)
+[createTempDirectory.ts:11](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/fs-utils/source/createTempDirectory.ts#L11)
 
 ---
 
 ### ensureEmptyDirectory
 
-▸ **ensureEmptyDirectory**(`targetPath`, `«destructured»?`): `Promise`<`void`\>
+▸ **ensureEmptyDirectory**(`targetPath`, `«destructured»?`): `Promise`\<`void`\>
 
 Ensures that a path is actually an empty directory. If the path doesn't exist, the directory is
 created; if the path exists but isn't an ampty directory, error is thrown.
@@ -78,17 +78,17 @@ created; if the path exists but isn't an ampty directory, error is thrown.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Defined in
 
-[ensureEmptyDirectory.ts:19](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/fs-utils/src/ensureEmptyDirectory.ts#L19)
+[ensureEmptyDirectory.ts:19](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/fs-utils/source/ensureEmptyDirectory.ts#L19)
 
 ---
 
 ### findDirectories
 
-▸ **findDirectories**(`searchPath`): `Promise`<`string`[]\>
+▸ **findDirectories**(`searchPath`): `Promise`\<`string`[]\>
 
 Finds all directories that are direct sub-directories of a path.
 
@@ -100,19 +100,19 @@ Finds all directories that are direct sub-directories of a path.
 
 #### Returns
 
-`Promise`<`string`[]\>
+`Promise`\<`string`[]\>
 
 The list of directory names.
 
 #### Defined in
 
-[findDirectories.ts:9](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/fs-utils/src/findDirectories.ts#L9)
+[findDirectories.ts:9](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/fs-utils/source/findDirectories.ts#L9)
 
 ---
 
 ### findExistingDirectory
 
-▸ **findExistingDirectory**(`searchPath`): `Promise`<`string`\>
+▸ **findExistingDirectory**(`searchPath`): `Promise`\<`string`\>
 
 Travels up the file system tree from a starting path and returns path of the first existing
 directory.
@@ -129,17 +129,17 @@ let result = findExistingDirectory('/foo/bar/baz'); // if there is no `bar` dire
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`\<`string`\>
 
 #### Defined in
 
-[findExistingDirectory.ts:15](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/fs-utils/src/findExistingDirectory.ts#L15)
+[findExistingDirectory.ts:15](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/fs-utils/source/findExistingDirectory.ts#L15)
 
 ---
 
 ### isDirectory
 
-▸ **isDirectory**(`path`): `Promise`<`boolean`\>
+▸ **isDirectory**(`path`): `Promise`\<`boolean`\>
 
 Checks if a path is a directory.
 
@@ -151,19 +151,19 @@ Checks if a path is a directory.
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 `true` if path is a directory, `false` otherwise.
 
 #### Defined in
 
-[isDirectory.ts:9](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/fs-utils/src/isDirectory.ts#L9)
+[isDirectory.ts:9](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/fs-utils/source/isDirectory.ts#L9)
 
 ---
 
 ### isEmptyDirectory
 
-▸ **isEmptyDirectory**(`path`): `Promise`<`boolean`\>
+▸ **isEmptyDirectory**(`path`): `Promise`\<`boolean`\>
 
 Checks if a path is an empty directory.
 
@@ -175,13 +175,13 @@ Checks if a path is an empty directory.
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 `true` if path is an empty directory, `false` otherwise.
 
 #### Defined in
 
-[isEmptyDirectory.ts:9](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/fs-utils/src/isEmptyDirectory.ts#L9)
+[isEmptyDirectory.ts:9](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/fs-utils/source/isEmptyDirectory.ts#L9)
 
 ---
 
@@ -205,7 +205,7 @@ Checks if a path is a file system root path.
 
 #### Defined in
 
-[isRootPath.ts:9](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/fs-utils/src/isRootPath.ts#L9)
+[isRootPath.ts:9](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/fs-utils/source/isRootPath.ts#L9)
 
 ---
 
@@ -229,4 +229,4 @@ The converted path.
 
 #### Defined in
 
-[pathToPosixPath.ts:9](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/fs-utils/src/pathToPosixPath.ts#L9)
+[pathToPosixPath.ts:9](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/fs-utils/source/pathToPosixPath.ts#L9)

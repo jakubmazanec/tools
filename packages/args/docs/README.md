@@ -43,7 +43,7 @@
 
 ### Arguments
 
-Ƭ **Arguments**<`T`\>: `Object`
+Ƭ **Arguments**\<`T`\>: `Object`
 
 Parsed arguments.
 
@@ -55,26 +55,26 @@ Parsed arguments.
 
 #### Type declaration
 
-| Name             | Type                                                                 | Description                       |
-| :--------------- | :------------------------------------------------------------------- | :-------------------------------- |
-| `command`        | [`ArgumentsCommand`](README.md#argumentscommand)<`T`\>               | Parsed command.                   |
-| `errors`         | `Error`[]                                                            | Parsing and validation rrors      |
-| `options`        | [`ArgumentsOptions`](README.md#argumentsoptions)<`T`\>               | Parsed options.                   |
-| `parameters`     | [`ArgumentsParameters`](README.md#argumentsparameters)<`T`\>         | Parsed parameters.                |
-| `rest`           | `string`[]                                                           | Arguments that appear after "--". |
-| `unknownOptions` | [`ArgumentsUnknownOptions`](README.md#argumentsunknownoptions)<`T`\> | Unconfigured options.             |
+| Name             | Type                                                                  | Description                       |
+| :--------------- | :-------------------------------------------------------------------- | :-------------------------------- |
+| `command`        | [`ArgumentsCommand`](README.md#argumentscommand)\<`T`\>               | Parsed command.                   |
+| `errors`         | `Error`[]                                                             | Parsing and validation rrors      |
+| `options`        | [`ArgumentsOptions`](README.md#argumentsoptions)\<`T`\>               | Parsed options.                   |
+| `parameters`     | [`ArgumentsParameters`](README.md#argumentsparameters)\<`T`\>         | Parsed parameters.                |
+| `rest`           | `string`[]                                                            | Arguments that appear after "--". |
+| `unknownOptions` | [`ArgumentsUnknownOptions`](README.md#argumentsunknownoptions)\<`T`\> | Unconfigured options.             |
 
 #### Defined in
 
-[args/src/Arguments.ts:10](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/args/src/Arguments.ts#L10)
+[args/source/Arguments.ts:10](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/args/source/Arguments.ts#L10)
 
 ---
 
 ### ArgumentsCommand
 
-Ƭ **ArgumentsCommand**<`O`\>: `Omit`<`O`, `"commands"`\> extends `O` ? `null` : `O`[``"commands"``]
-extends `undefined` ? `null` : `Lowercase`<`NonNullable`<`O`[``"commands"``]\>[`number`]\> \|
-`undefined`
+Ƭ **ArgumentsCommand**\<`O`\>: `Omit`\<`O`, `"commands"`\> extends `O` ? `null` :
+`O`[``"commands"``] extends `undefined` ? `null` :
+`Lowercase`\<`NonNullable`\<`O`[``"commands"``]\>[`number`]\> \| `undefined`
 
 Parsed command.
 
@@ -86,15 +86,15 @@ Parsed command.
 
 #### Defined in
 
-[args/src/ArgumentsCommand.ts:4](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/args/src/ArgumentsCommand.ts#L4)
+[args/source/ArgumentsCommand.ts:4](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/args/source/ArgumentsCommand.ts#L4)
 
 ---
 
 ### ArgumentsOptions
 
-Ƭ **ArgumentsOptions**<`O`\>: `Omit`<`O`, `"options"`\> extends `O` ? `null` : `O`[``"options"``]
+Ƭ **ArgumentsOptions**\<`O`\>: `Omit`\<`O`, `"options"`\> extends `O` ? `null` : `O`[``"options"``]
 extends `undefined` ? `null` :
-`OptionsConfigToArgumentsOptions`<`NonNullable`<`O`[``"options"``]\>\>
+`OptionsConfigToArgumentsOptions`\<`NonNullable`\<`O`[``"options"``]\>\>
 
 Parsed options.
 
@@ -106,17 +106,17 @@ Parsed options.
 
 #### Defined in
 
-[args/src/ArgumentsOptions.ts:85](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/args/src/ArgumentsOptions.ts#L85)
+[args/source/ArgumentsOptions.ts:79](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/args/source/ArgumentsOptions.ts#L79)
 
 ---
 
 ### ArgumentsParameters
 
-Ƭ **ArgumentsParameters**<`O`\>: `Omit`<`O`, `"parameters"`\> extends `O` ?
+Ƭ **ArgumentsParameters**\<`O`\>: `Omit`\<`O`, `"parameters"`\> extends `O` ?
 `O`[``"allowUnknownParameters"``] extends `true` ? [...string[]] : `null` : `O`[``"parameters"``]
 extends `undefined` ? `null` : `O`[``"allowUnknownParameters"``] extends `true` ?
-`ParametersConfigToVariadicArgumentsParameters`<`NonNullable`<`O`[``"parameters"``]\>\> :
-`ParametersConfigToArgumentsParameters`<`NonNullable`<`O`[``"parameters"``]\>\>
+`ParametersConfigToVariadicArgumentsParameters`\<`NonNullable`\<`O`[``"parameters"``]\>\> :
+`ParametersConfigToArgumentsParameters`\<`NonNullable`\<`O`[``"parameters"``]\>\>
 
 Parsed parameters.
 
@@ -128,14 +128,14 @@ Parsed parameters.
 
 #### Defined in
 
-[args/src/ArgumentsParameters.ts:150](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/args/src/ArgumentsParameters.ts#L150)
+[args/source/ArgumentsParameters.ts:141](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/args/source/ArgumentsParameters.ts#L141)
 
 ---
 
 ### ArgumentsUnknownOptions
 
-Ƭ **ArgumentsUnknownOptions**<`O`\>: `O`[``"allowUnknownOptions"``] extends `true` ?
-`Record`<`string`, `unknown`\> : `null`
+Ƭ **ArgumentsUnknownOptions**\<`O`\>: `O`[``"allowUnknownOptions"``] extends `true` ?
+`Record`\<`string`, `unknown`\> : `null`
 
 Unknown options. Unknown options are always parsed as strings.
 
@@ -147,7 +147,7 @@ Unknown options. Unknown options are always parsed as strings.
 
 #### Defined in
 
-[args/src/ArgumentsUnknownOptions.ts:4](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/args/src/ArgumentsUnknownOptions.ts#L4)
+[args/source/ArgumentsUnknownOptions.ts:4](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/args/source/ArgumentsUnknownOptions.ts#L4)
 
 ---
 
@@ -159,60 +159,60 @@ Unparsed arguments.
 
 #### Defined in
 
-[args/src/Argv.ts:2](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/args/src/Argv.ts#L2)
+[args/source/Argv.ts:2](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/args/source/Argv.ts#L2)
 
 ---
 
 ### BooleanOptionConfig
 
-Ƭ **BooleanOptionConfig**: { `count?`: `false` ; `defaultValue?`: `undefined` ; `description?`:
+Ƭ **BooleanOptionConfig**: \{ `count?`: `false` ; `defaultValue?`: `undefined` ; `description?`:
 `string` ; `multiple?`: `false` ; `required?`: `false` ; `shortName?`:
 [`ShortOptionName`](README.md#shortoptionname) ; `type`: `"boolean"` ; `validate?`: (`value`:
-`boolean`) => `void` } \| { `count?`: `false` ; `defaultValue`: `boolean` ; `description?`: `string`
-; `multiple?`: `false` ; `required?`: `false` ; `shortName?`:
+`boolean`) => `void` } \| \{ `count?`: `false` ; `defaultValue`: `boolean` ; `description?`:
+`string` ; `multiple?`: `false` ; `required?`: `false` ; `shortName?`:
 [`ShortOptionName`](README.md#shortoptionname) ; `type`: `"boolean"` ; `validate?`: (`value`:
-`boolean`) => `void` } \| { `count?`: `false` ; `defaultValue?`: `undefined` ; `description?`:
+`boolean`) => `void` } \| \{ `count?`: `false` ; `defaultValue?`: `undefined` ; `description?`:
 `string` ; `multiple?`: `false` ; `required`: `true` ; `shortName?`:
 [`ShortOptionName`](README.md#shortoptionname) ; `type`: `"boolean"` ; `validate?`: (`value`:
 `boolean`) => `void` }
 
 #### Defined in
 
-[args/src/OptionConfig.ts:5](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/args/src/OptionConfig.ts#L5)
+[args/source/OptionConfig.ts:5](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/args/source/OptionConfig.ts#L5)
 
 ---
 
 ### BooleanParameterConfig
 
-Ƭ **BooleanParameterConfig**: { `defaultValue?`: `undefined` ; `description?`: `string` ; `label?`:
+Ƭ **BooleanParameterConfig**: \{ `defaultValue?`: `undefined` ; `description?`: `string` ; `label?`:
 `string` ; `required?`: `false` ; `type`: `"boolean"` ; `validate?`: (`value`: `boolean`) => `void`
-} \| { `defaultValue`: `boolean` ; `description?`: `string` ; `label?`: `string` ; `required?`:
-`false` ; `type`: `"boolean"` ; `validate?`: (`value`: `boolean`) => `void` } \| { `defaultValue?`:
+} \| \{ `defaultValue`: `boolean` ; `description?`: `string` ; `label?`: `string` ; `required?`:
+`false` ; `type`: `"boolean"` ; `validate?`: (`value`: `boolean`) => `void` } \| \{ `defaultValue?`:
 `undefined` ; `description?`: `string` ; `label?`: `string` ; `required`: `true` ; `type`:
 `"boolean"` ; `validate?`: (`value`: `boolean`) => `void` }
 
 #### Defined in
 
-[args/src/ParameterConfig.ts:3](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/args/src/ParameterConfig.ts#L3)
+[args/source/ParameterConfig.ts:3](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/args/source/ParameterConfig.ts#L3)
 
 ---
 
 ### BooleansOptionConfig
 
-Ƭ **BooleansOptionConfig**: { `arity?`: `number` ; `count?`: `false` ; `defaultValue?`: `undefined`
+Ƭ **BooleansOptionConfig**: \{ `arity?`: `number` ; `count?`: `false` ; `defaultValue?`: `undefined`
 ; `description?`: `string` ; `multiple`: `true` ; `required?`: `false` ; `shortName?`:
 [`ShortOptionName`](README.md#shortoptionname) ; `type`: `"boolean"` ; `validate?`: (`value`:
-`boolean`[]) => `void` } \| { `arity?`: `number` ; `count?`: `false` ; `defaultValue`: readonly
+`boolean`[]) => `void` } \| \{ `arity?`: `number` ; `count?`: `false` ; `defaultValue`: readonly
 `boolean`[] ; `description?`: `string` ; `multiple`: `true` ; `required?`: `false` ; `shortName?`:
 [`ShortOptionName`](README.md#shortoptionname) ; `type`: `"boolean"` ; `validate?`: (`value`:
-`boolean`[]) => `void` } \| { `arity?`: `number` ; `count?`: `false` ; `defaultValue?`: `undefined`
+`boolean`[]) => `void` } \| \{ `arity?`: `number` ; `count?`: `false` ; `defaultValue?`: `undefined`
 ; `description?`: `string` ; `multiple`: `true` ; `required`: `true` ; `shortName?`:
 [`ShortOptionName`](README.md#shortoptionname) ; `type`: `"boolean"` ; `validate?`: (`value`:
 `boolean`[]) => `void` }
 
 #### Defined in
 
-[args/src/OptionConfig.ts:40](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/args/src/OptionConfig.ts#L40)
+[args/source/OptionConfig.ts:40](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/args/source/OptionConfig.ts#L40)
 
 ---
 
@@ -224,7 +224,7 @@ Parser's command configuration.
 
 #### Defined in
 
-[args/src/CommandConfig.ts:2](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/args/src/CommandConfig.ts#L2)
+[args/source/CommandConfig.ts:2](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/args/source/CommandConfig.ts#L2)
 
 ---
 
@@ -236,26 +236,26 @@ Parser's commands configuration.
 
 #### Defined in
 
-[args/src/CommandsConfig.ts:4](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/args/src/CommandsConfig.ts#L4)
+[args/source/CommandsConfig.ts:4](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/args/source/CommandsConfig.ts#L4)
 
 ---
 
 ### CountOptionConfig
 
-Ƭ **CountOptionConfig**: { `count`: `true` ; `defaultValue?`: `undefined` ; `description?`: `string`
-; `multiple?`: `false` ; `required?`: `false` ; `shortName?`:
+Ƭ **CountOptionConfig**: \{ `count`: `true` ; `defaultValue?`: `undefined` ; `description?`:
+`string` ; `multiple?`: `false` ; `required?`: `false` ; `shortName?`:
 [`ShortOptionName`](README.md#shortoptionname) ; `type`: `"number"` ; `validate?`: (`value`:
-`number`) => `void` } \| { `count`: `true` ; `defaultValue`: `number` ; `description?`: `string` ;
+`number`) => `void` } \| \{ `count`: `true` ; `defaultValue`: `number` ; `description?`: `string` ;
 `multiple?`: `false` ; `required?`: `false` ; `shortName?`:
 [`ShortOptionName`](README.md#shortoptionname) ; `type`: `"number"` ; `validate?`: (`value`:
-`number`) => `void` } \| { `count`: `true` ; `defaultValue?`: `undefined` ; `description?`: `string`
-; `multiple?`: `false` ; `required`: `true` ; `shortName?`:
+`number`) => `void` } \| \{ `count`: `true` ; `defaultValue?`: `undefined` ; `description?`:
+`string` ; `multiple?`: `false` ; `required`: `true` ; `shortName?`:
 [`ShortOptionName`](README.md#shortoptionname) ; `type`: `"number"` ; `validate?`: (`value`:
 `number`) => `void` }
 
 #### Defined in
 
-[args/src/OptionConfig.ts:157](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/args/src/OptionConfig.ts#L157)
+[args/source/OptionConfig.ts:157](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/args/source/OptionConfig.ts#L157)
 
 ---
 
@@ -267,62 +267,62 @@ Long option name.
 
 #### Defined in
 
-[args/src/LongOptionName.ts:2](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/args/src/LongOptionName.ts#L2)
+[args/source/LongOptionName.ts:2](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/args/source/LongOptionName.ts#L2)
 
 ---
 
 ### NumberOptionConfig
 
-Ƭ **NumberOptionConfig**: { `choices?`: readonly `number`[] ; `count?`: `false` ; `defaultValue?`:
+Ƭ **NumberOptionConfig**: \{ `choices?`: readonly `number`[] ; `count?`: `false` ; `defaultValue?`:
 `undefined` ; `description?`: `string` ; `multiple?`: `false` ; `required?`: `false` ; `shortName?`:
 [`ShortOptionName`](README.md#shortoptionname) ; `type`: `"number"` ; `validate?`: (`value`:
-`number`) => `void` } \| { `choices?`: readonly `number`[] ; `count?`: `false` ; `defaultValue`:
+`number`) => `void` } \| \{ `choices?`: readonly `number`[] ; `count?`: `false` ; `defaultValue`:
 `number` ; `description?`: `string` ; `multiple?`: `false` ; `required?`: `false` ; `shortName?`:
 [`ShortOptionName`](README.md#shortoptionname) ; `type`: `"number"` ; `validate?`: (`value`:
-`number`) => `void` } \| { `choices?`: readonly `number`[] ; `count?`: `false` ; `defaultValue?`:
+`number`) => `void` } \| \{ `choices?`: readonly `number`[] ; `count?`: `false` ; `defaultValue?`:
 `undefined` ; `description?`: `string` ; `multiple?`: `false` ; `required`: `true` ; `shortName?`:
 [`ShortOptionName`](README.md#shortoptionname) ; `type`: `"number"` ; `validate?`: (`value`:
 `number`) => `void` }
 
 #### Defined in
 
-[args/src/OptionConfig.ts:78](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/args/src/OptionConfig.ts#L78)
+[args/source/OptionConfig.ts:78](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/args/source/OptionConfig.ts#L78)
 
 ---
 
 ### NumberParameterConfig
 
-Ƭ **NumberParameterConfig**: { `choices?`: readonly `number`[] ; `defaultValue?`: `undefined` ;
+Ƭ **NumberParameterConfig**: \{ `choices?`: readonly `number`[] ; `defaultValue?`: `undefined` ;
 `description?`: `string` ; `label?`: `string` ; `required?`: `false` ; `type`: `"number"` ;
-`validate?`: (`value`: `number`) => `void` } \| { `choices?`: readonly `number`[] ; `defaultValue`:
+`validate?`: (`value`: `number`) => `void` } \| \{ `choices?`: readonly `number`[] ; `defaultValue`:
 `number` ; `description?`: `string` ; `label?`: `string` ; `required?`: `false` ; `type`: `"number"`
-; `validate?`: (`value`: `number`) => `void` } \| { `choices?`: readonly `number`[] ;
+; `validate?`: (`value`: `number`) => `void` } \| \{ `choices?`: readonly `number`[] ;
 `defaultValue?`: `undefined` ; `description?`: `string` ; `label?`: `string` ; `required`: `true` ;
 `type`: `"number"` ; `validate?`: (`value`: `number`) => `void` }
 
 #### Defined in
 
-[args/src/ParameterConfig.ts:32](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/args/src/ParameterConfig.ts#L32)
+[args/source/ParameterConfig.ts:32](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/args/source/ParameterConfig.ts#L32)
 
 ---
 
 ### NumbersOptionConfig
 
-Ƭ **NumbersOptionConfig**: { `arity?`: `number` ; `choices?`: readonly `number`[] ; `count?`:
+Ƭ **NumbersOptionConfig**: \{ `arity?`: `number` ; `choices?`: readonly `number`[] ; `count?`:
 `false` ; `defaultValue?`: `undefined` ; `description?`: `string` ; `multiple`: `true` ;
 `required?`: `false` ; `shortName?`: [`ShortOptionName`](README.md#shortoptionname) ; `type`:
-`"number"` ; `validate?`: (`value`: `number`[]) => `void` } \| { `arity?`: `number` ; `choices?`:
+`"number"` ; `validate?`: (`value`: `number`[]) => `void` } \| \{ `arity?`: `number` ; `choices?`:
 readonly `number`[] ; `count?`: `false` ; `defaultValue`: readonly `number`[] ; `description?`:
 `string` ; `multiple`: `true` ; `required?`: `false` ; `shortName?`:
 [`ShortOptionName`](README.md#shortoptionname) ; `type`: `"number"` ; `validate?`: (`value`:
-`number`[]) => `void` } \| { `arity?`: `number` ; `choices?`: readonly `number`[] ; `count?`:
+`number`[]) => `void` } \| \{ `arity?`: `number` ; `choices?`: readonly `number`[] ; `count?`:
 `false` ; `defaultValue?`: `undefined` ; `description?`: `string` ; `multiple`: `true` ; `required`:
 `true` ; `shortName?`: [`ShortOptionName`](README.md#shortoptionname) ; `type`: `"number"` ;
 `validate?`: (`value`: `number`[]) => `void` }
 
 #### Defined in
 
-[args/src/OptionConfig.ts:116](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/args/src/OptionConfig.ts#L116)
+[args/source/OptionConfig.ts:116](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/args/source/OptionConfig.ts#L116)
 
 ---
 
@@ -340,19 +340,19 @@ Parser's option configuration.
 
 #### Defined in
 
-[args/src/OptionConfig.ts:272](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/args/src/OptionConfig.ts#L272)
+[args/source/OptionConfig.ts:272](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/args/source/OptionConfig.ts#L272)
 
 ---
 
 ### OptionsConfig
 
-Ƭ **OptionsConfig**: `Record`<`string`, [`OptionConfig`](README.md#optionconfig)\>
+Ƭ **OptionsConfig**: `Record`\<`string`, [`OptionConfig`](README.md#optionconfig)\>
 
 Parser's options configuration.
 
 #### Defined in
 
-[args/src/OptionsConfig.ts:4](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/args/src/OptionsConfig.ts#L4)
+[args/source/OptionsConfig.ts:4](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/args/source/OptionsConfig.ts#L4)
 
 ---
 
@@ -366,7 +366,7 @@ Parser's parameter configuration.
 
 #### Defined in
 
-[args/src/ParameterConfig.ts:97](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/args/src/ParameterConfig.ts#L97)
+[args/source/ParameterConfig.ts:97](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/args/source/ParameterConfig.ts#L97)
 
 ---
 
@@ -391,7 +391,7 @@ Parser's parameters configuration.
 
 #### Defined in
 
-[args/src/ParametersConfig.ts:4](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/args/src/ParametersConfig.ts#L4)
+[args/source/ParametersConfig.ts:4](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/args/source/ParametersConfig.ts#L4)
 
 ---
 
@@ -413,7 +413,7 @@ Parser configuration specifies how the command line arguments should be parsed.
 
 #### Defined in
 
-[args/src/ParserConfig.ts:6](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/args/src/ParserConfig.ts#L6)
+[args/source/ParserConfig.ts:6](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/args/source/ParserConfig.ts#L6)
 
 ---
 
@@ -429,62 +429,62 @@ Short option name.
 
 #### Defined in
 
-[args/src/ShortOptionName.ts:2](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/args/src/ShortOptionName.ts#L2)
+[args/source/ShortOptionName.ts:2](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/args/source/ShortOptionName.ts#L2)
 
 ---
 
 ### StringOptionConfig
 
-Ƭ **StringOptionConfig**: { `choices?`: readonly `string`[] ; `count?`: `false` ; `defaultValue?`:
+Ƭ **StringOptionConfig**: \{ `choices?`: readonly `string`[] ; `count?`: `false` ; `defaultValue?`:
 `undefined` ; `description?`: `string` ; `multiple?`: `false` ; `required?`: `false` ; `shortName?`:
 [`ShortOptionName`](README.md#shortoptionname) ; `type`: `"string"` ; `validate?`: (`value`:
-`string`) => `void` } \| { `choices?`: readonly `string`[] ; `count?`: `false` ; `defaultValue`:
+`string`) => `void` } \| \{ `choices?`: readonly `string`[] ; `count?`: `false` ; `defaultValue`:
 `string` ; `description?`: `string` ; `multiple?`: `false` ; `required?`: `false` ; `shortName?`:
 [`ShortOptionName`](README.md#shortoptionname) ; `type`: `"string"` ; `validate?`: (`value`:
-`string`) => `void` } \| { `choices?`: readonly `string`[] ; `count?`: `false` ; `defaultValue?`:
+`string`) => `void` } \| \{ `choices?`: readonly `string`[] ; `count?`: `false` ; `defaultValue?`:
 `undefined` ; `description?`: `string` ; `multiple?`: `false` ; `required`: `true` ; `shortName?`:
 [`ShortOptionName`](README.md#shortoptionname) ; `type`: `"string"` ; `validate?`: (`value`:
 `string`) => `void` }
 
 #### Defined in
 
-[args/src/OptionConfig.ts:192](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/args/src/OptionConfig.ts#L192)
+[args/source/OptionConfig.ts:192](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/args/source/OptionConfig.ts#L192)
 
 ---
 
 ### StringParameterConfig
 
-Ƭ **StringParameterConfig**: { `choices?`: readonly `string`[] ; `defaultValue?`: `undefined` ;
+Ƭ **StringParameterConfig**: \{ `choices?`: readonly `string`[] ; `defaultValue?`: `undefined` ;
 `description?`: `string` ; `label?`: `string` ; `required?`: `false` ; `type`: `"string"` ;
-`validate?`: (`value`: `string`) => `void` } \| { `choices?`: readonly `string`[] ; `defaultValue`:
+`validate?`: (`value`: `string`) => `void` } \| \{ `choices?`: readonly `string`[] ; `defaultValue`:
 `string` ; `description?`: `string` ; `label?`: `string` ; `required?`: `false` ; `type`: `"string"`
-; `validate?`: (`value`: `string`) => `void` } \| { `choices?`: readonly `string`[] ;
+; `validate?`: (`value`: `string`) => `void` } \| \{ `choices?`: readonly `string`[] ;
 `defaultValue?`: `undefined` ; `description?`: `string` ; `label?`: `string` ; `required`: `true` ;
 `type`: `"string"` ; `validate?`: (`value`: `string`) => `void` }
 
 #### Defined in
 
-[args/src/ParameterConfig.ts:64](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/args/src/ParameterConfig.ts#L64)
+[args/source/ParameterConfig.ts:64](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/args/source/ParameterConfig.ts#L64)
 
 ---
 
 ### StringsOptionConfig
 
-Ƭ **StringsOptionConfig**: { `arity?`: `number` ; `choices?`: readonly `string`[] ; `count?`:
+Ƭ **StringsOptionConfig**: \{ `arity?`: `number` ; `choices?`: readonly `string`[] ; `count?`:
 `false` ; `defaultValue?`: `undefined` ; `description?`: `string` ; `multiple`: `true` ;
 `required?`: `false` ; `shortName?`: [`ShortOptionName`](README.md#shortoptionname) ; `type`:
-`"string"` ; `validate?`: (`value`: `string`[]) => `void` } \| { `arity?`: `number` ; `choices?`:
+`"string"` ; `validate?`: (`value`: `string`[]) => `void` } \| \{ `arity?`: `number` ; `choices?`:
 readonly `string`[] ; `count?`: `false` ; `defaultValue`: readonly `string`[] ; `description?`:
 `string` ; `multiple`: `true` ; `required?`: `false` ; `shortName?`:
 [`ShortOptionName`](README.md#shortoptionname) ; `type`: `"string"` ; `validate?`: (`value`:
-`string`[]) => `void` } \| { `arity?`: `number` ; `choices?`: readonly `string`[] ; `count?`:
+`string`[]) => `void` } \| \{ `arity?`: `number` ; `choices?`: readonly `string`[] ; `count?`:
 `false` ; `defaultValue?`: `undefined` ; `description?`: `string` ; `multiple`: `true` ; `required`:
 `true` ; `shortName?`: [`ShortOptionName`](README.md#shortoptionname) ; `type`: `"string"` ;
 `validate?`: (`value`: `string`[]) => `void` }
 
 #### Defined in
 
-[args/src/OptionConfig.ts:230](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/args/src/OptionConfig.ts#L230)
+[args/source/OptionConfig.ts:230](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/args/source/OptionConfig.ts#L230)
 
 ## Variables
 
@@ -492,12 +492,15 @@ readonly `string`[] ; `count?`: `false` ; `defaultValue`: readonly `string`[] ; 
 
 • `Const` **ParsingError**: (`code`: `"INVALID_PARAMETER"` \| `"UNKNOWN_PARAMETER"` \|
 `"INVALID_OPTION"` \| `"UNKNOWN_OPTION"`, `options?`: `CustomErrorOptions`) =>
-`CustomError`<`"INVALID_PARAMETER"` \| `"UNKNOWN_PARAMETER"` \| `"INVALID_OPTION"` \|
+`CustomError`\<`"INVALID_PARAMETER"` \| `"UNKNOWN_PARAMETER"` \| `"INVALID_OPTION"` \|
 `"UNKNOWN_OPTION"` \| `"UNKNOWN_ERROR"`\>
+
+A subclass of `Error` that indicates a parsing failure.
 
 #### Type declaration
 
-• **new ParsingError**(`code`, `options?`)
+• **new ParsingError**(`code`, `options?`): `CustomError`\<`"INVALID_PARAMETER"` \|
+`"UNKNOWN_PARAMETER"` \| `"INVALID_OPTION"` \| `"UNKNOWN_OPTION"` \| `"UNKNOWN_ERROR"`\>
 
 A subclass of `Error` that indicates a parsing failure.
 
@@ -508,9 +511,14 @@ A subclass of `Error` that indicates a parsing failure.
 | `code`     | `"INVALID_PARAMETER"` \| `"UNKNOWN_PARAMETER"` \| `"INVALID_OPTION"` \| `"UNKNOWN_OPTION"` |
 | `options?` | `CustomErrorOptions`                                                                       |
 
+##### Returns
+
+`CustomError`\<`"INVALID_PARAMETER"` \| `"UNKNOWN_PARAMETER"` \| `"INVALID_OPTION"` \|
+`"UNKNOWN_OPTION"` \| `"UNKNOWN_ERROR"`\>
+
 #### Defined in
 
-[args/src/ParsingError.ts:6](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/args/src/ParsingError.ts#L6)
+[args/source/ParsingError.ts:6](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/args/source/ParsingError.ts#L6)
 
 ---
 
@@ -519,14 +527,19 @@ A subclass of `Error` that indicates a parsing failure.
 • `Const` **ValidationError**: (`code`: `"INVALID_COMMAND"` \| `"MISSING_PARAMETER"` \|
 `"INVALID_PARAMETER_DEFAULT_AND_CHOICES"` \| `"INVALID_PARAMETER_ORDER"` \| `"MISSING_OPTION"` \|
 `"INVALID_OPTION_DEFAULT_AND_CHOICES"` \| `"INVALID_OPTION_NAME"` \| `"REPEATED_OPTION_NAME"` \|
-`"INVALID_OPTION_ARITY"`, `options?`: `CustomErrorOptions`) => `CustomError`<`"INVALID_COMMAND"` \|
+`"INVALID_OPTION_ARITY"`, `options?`: `CustomErrorOptions`) => `CustomError`\<`"INVALID_COMMAND"` \|
 `"MISSING_PARAMETER"` \| `"INVALID_PARAMETER_DEFAULT_AND_CHOICES"` \| `"INVALID_PARAMETER_ORDER"` \|
 `"MISSING_OPTION"` \| `"INVALID_OPTION_DEFAULT_AND_CHOICES"` \| `"INVALID_OPTION_NAME"` \|
 `"REPEATED_OPTION_NAME"` \| `"INVALID_OPTION_ARITY"` \| `"UNKNOWN_ERROR"`\>
 
+A subclass of `Error` that indicates a validation issue.
+
 #### Type declaration
 
-• **new ValidationError**(`code`, `options?`)
+• **new ValidationError**(`code`, `options?`): `CustomError`\<`"INVALID_COMMAND"` \|
+`"MISSING_PARAMETER"` \| `"INVALID_PARAMETER_DEFAULT_AND_CHOICES"` \| `"INVALID_PARAMETER_ORDER"` \|
+`"MISSING_OPTION"` \| `"INVALID_OPTION_DEFAULT_AND_CHOICES"` \| `"INVALID_OPTION_NAME"` \|
+`"REPEATED_OPTION_NAME"` \| `"INVALID_OPTION_ARITY"` \| `"UNKNOWN_ERROR"`\>
 
 A subclass of `Error` that indicates a validation issue.
 
@@ -537,15 +550,22 @@ A subclass of `Error` that indicates a validation issue.
 | `code`     | `"INVALID_COMMAND"` \| `"MISSING_PARAMETER"` \| `"INVALID_PARAMETER_DEFAULT_AND_CHOICES"` \| `"INVALID_PARAMETER_ORDER"` \| `"MISSING_OPTION"` \| `"INVALID_OPTION_DEFAULT_AND_CHOICES"` \| `"INVALID_OPTION_NAME"` \| `"REPEATED_OPTION_NAME"` \| `"INVALID_OPTION_ARITY"` |
 | `options?` | `CustomErrorOptions`                                                                                                                                                                                                                                                        |
 
+##### Returns
+
+`CustomError`\<`"INVALID_COMMAND"` \| `"MISSING_PARAMETER"` \|
+`"INVALID_PARAMETER_DEFAULT_AND_CHOICES"` \| `"INVALID_PARAMETER_ORDER"` \| `"MISSING_OPTION"` \|
+`"INVALID_OPTION_DEFAULT_AND_CHOICES"` \| `"INVALID_OPTION_NAME"` \| `"REPEATED_OPTION_NAME"` \|
+`"INVALID_OPTION_ARITY"` \| `"UNKNOWN_ERROR"`\>
+
 #### Defined in
 
-[args/src/ValidationError.ts:6](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/args/src/ValidationError.ts#L6)
+[args/source/ValidationError.ts:6](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/args/source/ValidationError.ts#L6)
 
 ## Functions
 
 ### parseArguments
 
-▸ **parseArguments**<`O`\>(`argv`, `parserConfig`): [`Arguments`](README.md#arguments)<`O`\>
+▸ **parseArguments**\<`O`\>(`argv`, `parserConfig`): [`Arguments`](README.md#arguments)\<`O`\>
 
 Parses a list of command line arguments into an arguments object. Based on provided parser config,
 raw arguments can be parsed as commands, options and parameters.
@@ -565,10 +585,10 @@ raw arguments can be parsed as commands, options and parameters.
 
 #### Returns
 
-[`Arguments`](README.md#arguments)<`O`\>
+[`Arguments`](README.md#arguments)\<`O`\>
 
 Parsed arguments.
 
 #### Defined in
 
-[args/src/parseArguments.ts:48](https://github.com/jakubmazanec/js-tools/blob/b43fa20/packages/args/src/parseArguments.ts#L48)
+[args/source/parseArguments.ts:48](https://github.com/jakubmazanec/js-tools/blob/015aead/packages/args/source/parseArguments.ts#L48)
