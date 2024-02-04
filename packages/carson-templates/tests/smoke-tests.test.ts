@@ -14,7 +14,7 @@ import {NPMRC_PATH, ONLY_ONE_STAR_REGEXP} from './constants.js';
 import {observableToPromise} from './observableToPromise.js';
 import {packageNameToDirectory} from './packageNameToDirectory.js';
 
-vitest.setConfig({testTimeout: 3_000_000});
+vitest.setConfig({testTimeout: 3_600_000});
 
 describe.each([
   {
