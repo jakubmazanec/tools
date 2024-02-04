@@ -12,21 +12,21 @@
   "sideEffects": false,
   "type": "module",
   "exports": {
-    ".": "./dist/main.js",
+    ".": "./build/main.js",
     "./package.json": "./package.json"
   },
   "files": [
-    "dist",
-    "src",
+    "build",
+    "source",
     "templates"
   ],
   "scripts": {
-    "build": "del-cli dist tsconfig.tsbuildinfo && swc src -d dist && tsc",
-    "clean": "del-cli coverage dist *.tsbuildinfo",
+    "build": "del-cli build tsconfig.tsbuildinfo && esbuild \"source/**/*\" --platform=node --target=node20.8 --outdir=build --sourcemap && tsc",
+    "clean": "del-cli coverage build *.tsbuildinfo",
     "document": "del-cli docs && typedoc --options typedoc.config.cjs",
-    "format": "prettier . --write --ignore-unknown --ignore-path ../../.prettierignore",
+    "format": "prettier . --write --ignore-unknown",
     "lint": "eslint .",
-    "test": "del-cli coverage && cross-env NODE_OPTIONS=--experimental-vm-modules jest --passWithNoTests",
+    "test": "del-cli coverage && vitest run --coverage --passWithNoTests",
     "typecheck": "tsc --project tsconfig.typecheck.json"
   },
   "dependencies": {
@@ -36,13 +36,23 @@
   "devDependencies": {
     "@jakubmazanec/carson": "^0.2.0",
     "@jakubmazanec/fs-utils": "^0.1.0",
-    "@jest/globals": "^29.5.0",
     "@types/fs-extra": "^9.0.13",
     "@types/lodash": "^4.14.195",
     "@types/node": "^20.8.5",
+    "@types/zen-observable": "^0.8.7",
+    "@vitest/coverage-v8": "^1.2.0",
+    "del-cli": "^5.0.0",
+    "esbuild": "^0.19.11",
+    "eslint": "^8.56.0",
     "execa": "^8.0.1",
     "fast-glob": "^3.2.11",
     "fs-extra": "^10.0.1",
+    "prettier": "^3.0.0",
+    "prettier-plugin-packagejson": "^2.4.3",
+    "typedoc": "^0.25.2",
+    "typedoc-plugin-markdown": "^3.15.1",
+    "typescript": "^5.1.3",
+    "vitest": "^1.2.0",
     "zen-observable": "^0.10.0"
   },
   "peerDependencies": {

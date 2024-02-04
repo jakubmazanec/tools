@@ -1,8 +1,9 @@
 import {render} from 'ink-testing-library';
+import {describe, expect, test} from 'vitest';
 
-import {Command} from '../../src/program/Command.js';
-import {Program} from '../../src/program/Program.js';
-import {Help} from '../../src/ui/Help.js';
+import {Command} from '../../source/program/Command.js';
+import {Program} from '../../source/program/Program.js';
+import {Help} from '../../source/ui/Help.js';
 
 describe('Help', () => {
   test('works', async () => {

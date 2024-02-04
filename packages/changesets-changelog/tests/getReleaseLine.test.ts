@@ -1,4 +1,6 @@
-import {getReleaseLine} from '../src/getReleaseLine';
+import {describe, expect, test, vitest} from 'vitest';
+
+import {getReleaseLine} from '../source/getReleaseLine';
 import {createGetReleaseLineArgs} from './utils/createGetReleaseLineArgs';
 
 function getMockGithubData() {
@@ -11,10 +13,10 @@ function getMockGithubData() {
 }
 
 // TODO: figure out how to refactor this
-// eslint-disable-next-line jest/require-hook -- needed
+// eslint-disable-next-line vitest/require-hook -- needed
 let mockGithubData = getMockGithubData();
 
-jest.mock('@changesets/get-github-info', () => {
+vitest.mock('@changesets/get-github-info', () => {
   let {user, pull, commit, repository} = getMockGithubData();
   let links = {
     user: `[@${user}](https://github.com/${user})`,

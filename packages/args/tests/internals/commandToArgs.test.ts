@@ -1,4 +1,6 @@
-import {commandToArguments} from '../../src/internals.js';
+import {describe, expect, test} from 'vitest';
+
+import {commandToArguments} from '../../source/internals.js';
 
 describe('commandToArgs()', () => {
   test.each([

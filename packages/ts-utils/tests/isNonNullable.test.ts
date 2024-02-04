@@ -1,4 +1,6 @@
-import {isNonNullable} from '../src/main.js';
+import {describe, expect, test} from 'vitest';
+
+import {isNonNullable} from '../source/main.js';
 
 describe('isNonNullable', () => {
   test.each([

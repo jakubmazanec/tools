@@ -1,4 +1,6 @@
-import {isRootPath} from '../src/isRootPath.js';
+import {describe, expect, test} from 'vitest';
+
+import {isRootPath} from '../source/isRootPath.js';
 
 describe('isRootPath()', () => {
   test.each([

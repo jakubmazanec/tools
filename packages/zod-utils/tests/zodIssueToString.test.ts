@@ -1,6 +1,7 @@
+import {describe, expect, test} from 'vitest';
 import * as z from 'zod';
 
-import {zodIssuesToStrings} from '../src/main.js';
+import {zodIssuesToStrings} from '../source/main.js';
 
 const stringSchema = z.string();
 const stringNumberUnionSchema = z.union([z.string(), z.number()]);
@@ -62,7 +63,7 @@ describe('zodIssuesToStrings', () => {
           (result as {error: z.ZodError}).error instanceof z.ZodError &&
           (result as {error: z.ZodError}).error.issues.length === expectedIssuesCount,
       ).toBeTruthy();
-      expect(zodIssuesToStrings((result as {error: z.ZodError}).error.issues)).toMatchObject(
+      expect(zodIssuesToStrings((result as {error: z.ZodError}).error.issues)).toEqual(
         expectedStrings,
       );
     },

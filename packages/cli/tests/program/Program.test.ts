@@ -1,11 +1,11 @@
-import {jest} from '@jest/globals';
+import {describe, expect, test, vitest} from 'vitest';
 
-import {Command} from '../../src/program/Command.js';
-import {Program} from '../../src/program/Program.js';
+import {Command} from '../../source/program/Command.js';
+import {Program} from '../../source/program/Program.js';
 
 describe('Program', () => {
   test('works', async () => {
-    let action = jest.fn(async () => {});
+    let action = vitest.fn(async () => {});
     let program = await Program.create({
       name: 'App',
       version: '1.0.0',

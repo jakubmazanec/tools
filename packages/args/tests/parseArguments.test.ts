@@ -1,9 +1,10 @@
 import {type IsEqual} from '@jakubmazanec/ts-utils';
+import {describe, expect, test} from 'vitest';
 
-import {parseArguments} from '../src/parseArguments.js';
-import {ParsingError} from '../src/ParsingError.js';
-import {ValidationError} from '../src/ValidationError.js';
-import {EMPTY_PARSED_ARGUMENTS, SPECIAL_CHARACTERS, NUMBER_STRING} from './constants.js';
+import {parseArguments} from '../source/parseArguments.js';
+import {ParsingError} from '../source/ParsingError.js';
+import {ValidationError} from '../source/ValidationError.js';
+import {EMPTY_PARSED_ARGUMENTS, NUMBER_STRING, SPECIAL_CHARACTERS} from './constants.js';
 
 describe('parseArgs()', () => {
   describe('correct typings', () => {
@@ -23,7 +24,7 @@ describe('parseArgs()', () => {
         }
       > = true;
 
-      expect(isTypeCorrect).toBe(true); // this test is only for typechecking
+      expect(isTypeCorrect).toBeTruthy(); // this test is only for typechecking
     });
 
     test('no errors (#2)', () => {
@@ -57,7 +58,7 @@ describe('parseArgs()', () => {
         }
       > = true;
 
-      expect(isTypeCorrect).toBe(true); // this test is only for typechecking
+      expect(isTypeCorrect).toBeTruthy(); // this test is only for typechecking
     });
 
     test('no errors (#3)', () => {
@@ -115,7 +116,7 @@ describe('parseArgs()', () => {
         }
       > = true;
 
-      expect(isTypeCorrect).toBe(true); // this test is only for typechecking
+      expect(isTypeCorrect).toBeTruthy(); // this test is only for typechecking
     });
 
     test('no errors (#4)', () => {
@@ -173,7 +174,7 @@ describe('parseArgs()', () => {
         }
       > = true;
 
-      expect(isTypeCorrect).toBe(true); // this test is only for typechecking
+      expect(isTypeCorrect).toBeTruthy(); // this test is only for typechecking
     });
 
     test('no errors (#5)', () => {
@@ -414,7 +415,7 @@ describe('parseArgs()', () => {
         }
       > = true;
 
-      expect(isTypeCorrect).toBe(true); // this test is only for typechecking
+      expect(isTypeCorrect).toBeTruthy(); // this test is only for typechecking
     });
 
     test('expected errors', () => {
@@ -468,10 +469,10 @@ describe('parseArgs()', () => {
         },
       });
 
-      expect(true).toBe(true); // this test is only for typechecking
+      expect(true).toBeTruthy(); // this test is only for typechecking
     });
 
-    it('runtime types correspond (#1)', () => {
+    test('runtime types correspond (#1)', () => {
       let result = parseArguments([], {
         parameters: [
           {
@@ -493,7 +494,7 @@ describe('parseArgs()', () => {
       expect(typeof result.parameters[0]).toBe('undefined');
     });
 
-    it('runtime types correspond (#2)', () => {
+    test('runtime types correspond (#2)', () => {
       let result = parseArguments(['foo', 'bar', 'baz'], {
         parameters: [
           {
@@ -518,7 +519,7 @@ describe('parseArgs()', () => {
       expect(typeof result.parameters[3]).toBe('undefined');
     });
 
-    it('runtime types correspond (#3)', () => {
+    test('runtime types correspond (#3)', () => {
       let result = parseArguments([], {
         parameters: [
           {

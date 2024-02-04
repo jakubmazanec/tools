@@ -1,6 +1,7 @@
+import {describe, expect, test} from 'vitest';
 import {z, ZodError} from 'zod';
 
-import {readFile} from '../src/main.js';
+import {readFile} from '../source/main.js';
 
 let fooSchema = z.object({
   foo: z.boolean(),

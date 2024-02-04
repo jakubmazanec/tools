@@ -1,4 +1,6 @@
-import {is, assert} from '../src/main.js';
+import {describe, expect, test} from 'vitest';
+
+import {assert, is} from '../source/main.js';
 
 const DEFAULT_ASSERTION_ERROR_MESSAGE = 'Wrong assertion encountered';
 const ASSERTION_ERROR_MESSAGE = 'Assertion failed!';
@@ -12,7 +14,7 @@ describe('assert', () => {
 
     results.push(value.toUpperCase());
 
-    expect(results).toMatchObject(['FOO']);
+    expect(results).toEqual(['FOO']);
   });
 
   test('throws', () => {

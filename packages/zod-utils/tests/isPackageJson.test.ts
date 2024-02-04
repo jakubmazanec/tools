@@ -1,4 +1,6 @@
-import {isPackageJson} from '../src/main.js';
+import {describe, expect, test} from 'vitest';
+
+import {isPackageJson} from '../source/main.js';
 
 describe('isPackageJson', () => {
   test.each([

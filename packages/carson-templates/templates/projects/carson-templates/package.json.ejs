@@ -3,6 +3,22 @@ to: 'package.json'
 strategy: merge
 ---
 <%
+let developmentDependencies = getDependencies(
+  [
+    '@types/node',
+    '@vitest/coverage-v8',
+    'del-cli',
+    'esbuild',
+    'eslint',
+    'prettier',
+    'prettier-plugin-packagejson',
+    'typedoc',
+    'typedoc-plugin-markdown',
+    'typescript',
+    'vitest',
+  ],
+  workspace,
+);
 let packageJson = {
   repository: {
     type: 'git',
@@ -10,22 +26,20 @@ let packageJson = {
   },
   type: 'module',
   exports: {
-    '.': './dist/main.js',
+    '.': `./${BUILD_DIRECTORY}/main.js`,
     './package.json': './package.json',
   },
-  files: ['dist', 'src', 'templates'],
+  files: [BUILD_DIRECTORY, SOURCE_DIRECTORY, 'templates'],
   scripts: {
-    build: 'del-cli dist tsconfig.tsbuildinfo && swc src -d dist && tsc',
-    clean: 'del-cli coverage dist *.tsbuildinfo',
+    build: `del-cli ${BUILD_DIRECTORY} tsconfig.tsbuildinfo && ${BUILD_TO_ESM_COMMAND} && tsc`,
+    clean: `del-cli coverage ${BUILD_DIRECTORY} *.tsbuildinfo`,
     document: 'del-cli docs && typedoc --options typedoc.config.cjs',
-    format: 'prettier . --write --ignore-unknown --ignore-path ../../.prettierignore',
+      format: FORMAT_COMMAND,
     lint: 'eslint .',
-    test: 'del-cli coverage && cross-env NODE_OPTIONS=--experimental-vm-modules jest --passWithNoTests',
+    test: `del-cli coverage && ${TEST_COMMAND}`,
     typecheck: 'tsc --project tsconfig.typecheck.json',
   },
-  devDependencies: {
-    '@jest/globals': '^29.5.0',
-  },
+  devDependencies: developmentDependencies,
   packageManager: 'npm@10.1.0',
   engines: {
     node: '^20.8.0',

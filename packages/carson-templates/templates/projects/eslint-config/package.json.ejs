@@ -3,31 +3,45 @@ to: 'package.json'
 strategy: merge
 ---
 <%
-let packageJson = {
-  repository: {
-    type: 'git',
-    directory: project.relativePath,
+let developmentDependencies = getDependencies(
+  [
+    '@types/node',
+    'del-cli',
+    'esbuild',
+    'eslint',
+    'prettier',
+    'prettier-plugin-packagejson',
+    'typescript',
+  ],
+  workspace,
+);
+let packageJson = lodash.merge(
+  {
+    repository: {
+      type: 'git',
+      directory: project.relativePath,
+    },
+    type: 'commonjs',
+    exports: {
+      '.': `./${BUILD_DIRECTORY}/main.js`,
+      './nodejs': `./${BUILD_DIRECTORY}/presets/nodejs.js`,
+      './prettier': `./${BUILD_DIRECTORY}/presets/prettier.js`,
+    },
+    files: [BUILD_DIRECTORY, SOURCE_DIRECTORY],
+    scripts: {
+      build: `del-cli ${BUILD_DIRECTORY} tsconfig.tsbuildinfo && ${BUILD_TO_CJS_COMMAND} && tsc`,
+      clean: `del-cli coverage ${BUILD_DIRECTORY} *.tsbuildinfo`,
+      format: FORMAT_COMMAND,
+      lint: 'eslint .',
+      typecheck: 'tsc --project tsconfig.typecheck.json',
+    },
+    devDependencies: developmentDependencies,
+    packageManager: 'npm@10.1.0',
+    engines: {
+      node: '^20.8.0',
+    },
   },
-  type: 'commonjs',
-  exports: {
-    '.': './dist/main.js',
-    './nextjs': './dist/presets/nextjs.js',
-    './nodejs': './dist/presets/nodejs.js',
-    './prettier': './dist/presets/prettier.js',
-  },
-  files: ['dist', 'src'],
-  scripts: {
-    build: 'del-cli dist tsconfig.tsbuildinfo && swc src -d dist && tsc',
-    clean: 'del-cli coverage dist *.tsbuildinfo',
-    format: 'prettier . --write --ignore-unknown --ignore-path ../../.prettierignore',
-    lint: 'eslint .',
-    test: 'del-cli coverage && jest --passWithNoTests',
-    typecheck: 'tsc --project tsconfig.typecheck.json',
-  },
-  packageManager: 'npm@10.1.0',
-  engines: {
-    node: '^20.8.0',
-  },
-};
+  project.config.overrides?.packageJson ?? {},
+);
 -%>
 <%- JSON.stringify(packageJson) %>

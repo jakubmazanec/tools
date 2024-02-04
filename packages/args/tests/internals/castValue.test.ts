@@ -1,4 +1,6 @@
-import {castValue} from '../../src/internals.js';
+import {describe, expect, test} from 'vitest';
+
+import {castValue} from '../../source/internals.js';
 
 describe('castValue()', () => {
   test.each([

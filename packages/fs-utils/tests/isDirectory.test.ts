@@ -1,7 +1,8 @@
 import path from 'node:path';
+import {describe, expect, test} from 'vitest';
 
+import {isDirectory} from '../source/isDirectory.js';
 import {PROJECT_PATH} from './constants.js';
-import {isDirectory} from '../src/isDirectory.js';
 
 describe('isDirectory()', () => {
   test.each([

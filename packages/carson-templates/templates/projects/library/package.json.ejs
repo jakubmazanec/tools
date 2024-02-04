@@ -3,9 +3,31 @@ to: 'package.json'
 strategy: merge
 ---
 <%
-let developmentDependencies = getDependencies([
-  '@jest/globals',
-], workspace);
+let files = [BUILD_DIRECTORY, SOURCE_DIRECTORY];
+
+if (project.packageJson.bin) {
+  files.push('bin');
+}
+
+files.sort();
+
+let developmentDependencies = getDependencies(
+  [
+    '@types/node',
+    '@vitest/coverage-v8',
+    'concurrently',
+    'del-cli',
+    'esbuild',
+    'eslint',
+    'prettier',
+    'prettier-plugin-packagejson',
+    'typedoc',
+    'typedoc-plugin-markdown',
+    'typescript',
+    'vitest',
+  ],
+  workspace,
+);
 let packageJson = lodash.merge(
   {
     repository: {
@@ -13,16 +35,16 @@ let packageJson = lodash.merge(
       directory: project.relativePath,
     },
     type: 'module',
-    exports: './dist/main.js',
-    files: ['dist', 'src'],
+    exports: `./${BUILD_DIRECTORY}/main.js`,
+    files,
     scripts: {
-      build: 'del-cli dist tsconfig.tsbuildinfo && swc src -d dist && tsc',
-      clean: 'del-cli coverage dist *.tsbuildinfo',
+      build: `del-cli ${BUILD_DIRECTORY} tsconfig.tsbuildinfo && ${BUILD_TO_ESM_COMMAND} && tsc`,
+      clean: `del-cli coverage ${BUILD_DIRECTORY} *.tsbuildinfo`,
+      develop: `concurrently "${BUILD_TO_ESM_COMMAND} --watch" "tsc --watch"`,
       document: 'del-cli docs && typedoc --options typedoc.config.cjs',
-      format:
-        'prettier . --write --ignore-unknown --ignore-path ../../.prettierignore',
+      format: FORMAT_COMMAND,
       lint: 'eslint .',
-      test: 'del-cli coverage && cross-env NODE_OPTIONS=--experimental-vm-modules jest --passWithNoTests',
+      test: `del-cli coverage && ${TEST_COMMAND}`,
       typecheck: 'tsc --project tsconfig.typecheck.json',
     },
     devDependencies: developmentDependencies,

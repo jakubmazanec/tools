@@ -1,4 +1,6 @@
-import {is} from '../src/main.js';
+import {describe, expect, test} from 'vitest';
+
+import {is} from '../source/main.js';
 
 const isNull = (value: unknown) => value === null;
 const isString = (value: unknown) => typeof value === 'string';
@@ -21,7 +23,7 @@ describe('is', () => {
       results.push(maybeNumber.toUpperCase());
     }
 
-    expect(results).toMatchObject(['FOO', 43]);
+    expect(results).toEqual(['FOO', 43]);
   });
 
   test.each([

@@ -1,7 +1,7 @@
-import {jest} from '@jest/globals';
 import {render} from 'ink-testing-library';
+import {describe, expect, test, vitest} from 'vitest';
 
-import {SelectInput} from '../../src/ui/form/SelectInput.js';
+import {SelectInput} from '../../source/ui/form/SelectInput.js';
 import {DOWN_ARROW, ENTER, ITEMS, UP_ARROW} from '../constants.js';
 import {sleep} from '../sleep.js';
 
@@ -123,7 +123,7 @@ describe('SelectInput', () => {
   });
 
   test('handles selecting', async () => {
-    let handleSelect = jest.fn();
+    let handleSelect = vitest.fn();
     let {stdin} = render(<SelectInput label="Test" items={ITEMS} onSelect={handleSelect} />);
 
     await sleep(100);
@@ -141,7 +141,7 @@ describe('SelectInput', () => {
   });
 
   test('handles highliting', async () => {
-    let handleHighlight = jest.fn();
+    let handleHighlight = vitest.fn();
     let {stdin} = render(<SelectInput label="Test" items={ITEMS} onHighlight={handleHighlight} />);
 
     await sleep(100);

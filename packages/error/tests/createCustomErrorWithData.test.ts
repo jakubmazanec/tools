@@ -1,6 +1,7 @@
+import {describe, expect, test} from 'vitest';
 import {z} from 'zod';
 
-import {createCustomErrorWithData} from '../src/main.js';
+import {createCustomErrorWithData} from '../source/main.js';
 
 describe('createCustomErrorWithData()', () => {
   test('creates custom error class with data property', () => {

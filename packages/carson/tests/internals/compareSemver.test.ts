@@ -1,4 +1,6 @@
-import {compareSemver} from '../../src/workspace/internals.js';
+import {describe, expect, test} from 'vitest';
+
+import {compareSemver} from '../../source/workspace/internals.js';
 
 describe('compareSemver()', () => {
   test.each([

@@ -23,10 +23,6 @@ npm install @jakubmazanec/eslint-config
 
 🚧 This section is under development. Please check back later for updates.
 
-## Documentation
-
-See [API reference](./docs) for auto-generated documentation.
-
 ## Contributing
 
 If you want to contribute, see [CONTRIBUTING](./CONTRIBUTING.md) for details.

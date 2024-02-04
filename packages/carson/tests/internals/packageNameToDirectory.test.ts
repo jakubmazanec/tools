@@ -1,4 +1,6 @@
-import {packageNameToDirectory} from '../../src/commands/internals.js';
+import {describe, expect, test} from 'vitest';
+
+import {packageNameToDirectory} from '../../source/commands/internals.js';
 
 describe('packageNameToDirectory()', () => {
   test.each([

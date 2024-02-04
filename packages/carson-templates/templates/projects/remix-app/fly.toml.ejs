@@ -1,0 +1,18 @@
+---
+to: 'fly.toml'
+if: <%- Boolean(project.config.deployment?.appName) %>
+strategy: overwrite
+---
+app = <%- JSON.stringify(project.config.deployment?.appName, null, 2) %>
+primary_region = "ams"
+
+[build]
+  dockerfile = "./Dockerfile"
+
+[http_service]
+  internal_port = 5000
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ["app"]

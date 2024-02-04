@@ -1,4 +1,6 @@
-import {merge, unmerge} from '../../src/template/internals.js';
+import {describe, expect, test} from 'vitest';
+
+import {merge, unmerge} from '../../source/template/internals.js';
 
 describe('unmerge()', () => {
   test.each([
