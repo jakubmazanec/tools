@@ -12,18 +12,25 @@ strategy: overwrite
 
 import {unstable_vitePlugin as remix} from '@remix-run/dev';
 import {installGlobals} from '@remix-run/node';
+import _ from 'lodash';
 import {defineConfig} from 'vitest/config';
 
 installGlobals();
 
 export default defineConfig(
-  lodash.merge(
+  _.merge(
     {
       server: {
         port: 5000,
         strictPort: true,
       },
-      plugins: [remix()],
+      plugins: [remix({
+        future: {
+          v3_fetcherPersist: true,
+          v3_relativeSplatPath: true,
+          v3_throwAbortReason: true,
+        },
+      })],
       test: {
         setupFiles: ['tests/setup.ts'],
       },
