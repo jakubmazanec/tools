@@ -37,7 +37,7 @@
     "@jakubmazanec/carson": "^0.2.0",
     "@jakubmazanec/fs-utils": "^0.1.0",
     "@types/fs-extra": "^9.0.13",
-    "@types/lodash": "^4.14.195",
+    "@types/lodash": "^4.14.202",
     "@types/node": "^20.8.5",
     "@types/zen-observable": "^0.8.7",
     "@vitest/coverage-v8": "^1.2.0",

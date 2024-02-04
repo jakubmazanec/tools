@@ -56,7 +56,7 @@
   },
   "devDependencies": {
     "@types/fs-extra": "^9.0.13",
-    "@types/lodash": "^4.14.195",
+    "@types/lodash": "^4.14.202",
     "@types/micromatch": "^4.0.2",
     "@types/node": "^20.8.5",
     "@types/react": "^18.2.52",
