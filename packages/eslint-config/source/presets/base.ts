@@ -111,8 +111,6 @@ const config: eslint.Linter.Config = {
       plugins: ['@typescript-eslint'],
       parser: '@typescript-eslint/parser',
       parserOptions: {
-        // project: 'tsconfig.typecheck.json',
-        // tsconfigRootDir: process.cwd(),
         EXPERIMENTAL_useProjectService: true,
       },
       settings: {
