@@ -1,6 +1,6 @@
 {
   "name": "@jakubmazanec/zod-utils",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "Collection of Zod schemas and utilities.",
   "repository": {
     "type": "git",
@@ -27,7 +27,7 @@
     "typecheck": "tsc --project tsconfig.typecheck.json"
   },
   "dependencies": {
-    "@jakubmazanec/ts-utils": "^2.1.0"
+    "@jakubmazanec/ts-utils": "^3.0.0"
   },
   "devDependencies": {
     "@types/node": "^20.8.5",

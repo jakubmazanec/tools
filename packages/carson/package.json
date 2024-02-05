@@ -1,6 +1,6 @@
 {
   "name": "@jakubmazanec/carson",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "Tool for managing workspace and project configuration.",
   "repository": {
     "type": "git",
@@ -32,13 +32,13 @@
     "typecheck": "tsc --project tsconfig.typecheck.json"
   },
   "dependencies": {
-    "@jakubmazanec/args": "^1.0.0",
-    "@jakubmazanec/cli": "^0.2.0",
-    "@jakubmazanec/error": "^2.0.0",
-    "@jakubmazanec/fs-utils": "^0.1.0",
-    "@jakubmazanec/template": "^1.0.0",
-    "@jakubmazanec/ts-utils": "^2.1.0",
-    "@jakubmazanec/zod-utils": "^1.0.0",
+    "@jakubmazanec/args": "^2.0.0",
+    "@jakubmazanec/cli": "^0.3.0",
+    "@jakubmazanec/error": "^3.0.0",
+    "@jakubmazanec/fs-utils": "^0.2.0",
+    "@jakubmazanec/template": "^2.0.0",
+    "@jakubmazanec/ts-utils": "^3.0.0",
+    "@jakubmazanec/zod-utils": "^2.0.0",
     "chalk": "^5.3.0",
     "fast-glob": "^3.3.2",
     "fflate": "^0.8.1",
