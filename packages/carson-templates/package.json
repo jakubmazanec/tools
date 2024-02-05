@@ -36,7 +36,7 @@
   "devDependencies": {
     "@jakubmazanec/carson": "^0.2.0",
     "@jakubmazanec/fs-utils": "^0.1.0",
-    "@types/fs-extra": "^9.0.13",
+    "@types/fs-extra": "^11.0.4",
     "@types/lodash": "^4.14.202",
     "@types/node": "^20.8.5",
     "@types/zen-observable": "^0.8.7",
@@ -46,7 +46,7 @@
     "eslint": "^8.56.0",
     "execa": "^8.0.1",
     "fast-glob": "^3.3.2",
-    "fs-extra": "^10.1.0",
+    "fs-extra": "^11.2.0",
     "prettier": "^3.2.5",
     "prettier-plugin-packagejson": "^2.4.10",
     "typedoc": "^0.25.7",
