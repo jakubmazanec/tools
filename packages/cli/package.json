@@ -36,7 +36,7 @@
     "latest-version": "^7.0.0",
     "lodash": "^4.17.21",
     "react-error-boundary": "^4.0.12",
-    "zod": "^3.14.4"
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@types/fs-extra": "^9.0.13",
