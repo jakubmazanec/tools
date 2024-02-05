@@ -62,7 +62,7 @@
     "@types/react": "^18.2.53",
     "@types/semver": "^7.5.6",
     "@types/zen-observable": "^0.8.7",
-    "@vitest/coverage-v8": "^1.2.0",
+    "@vitest/coverage-v8": "^1.2.2",
     "concurrently": "^8.0.0",
     "del-cli": "^5.1.0",
     "esbuild": "^0.19.11",
@@ -75,7 +75,7 @@
     "typedoc": "^0.25.2",
     "typedoc-plugin-markdown": "^3.15.1",
     "typescript": "^5.3.3",
-    "vitest": "^1.2.0"
+    "vitest": "^1.2.2"
   },
   "peerDependencies": {
     "ink": "4.x",

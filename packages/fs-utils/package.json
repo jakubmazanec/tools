@@ -32,7 +32,7 @@
   "devDependencies": {
     "@types/fs-extra": "^9.0.13",
     "@types/node": "^20.8.5",
-    "@vitest/coverage-v8": "^1.2.0",
+    "@vitest/coverage-v8": "^1.2.2",
     "concurrently": "^8.0.0",
     "del-cli": "^5.1.0",
     "esbuild": "^0.19.11",
@@ -42,7 +42,7 @@
     "typedoc": "^0.25.2",
     "typedoc-plugin-markdown": "^3.15.1",
     "typescript": "^5.3.3",
-    "vitest": "^1.2.0"
+    "vitest": "^1.2.2"
   },
   "packageManager": "npm@10.1.0",
   "engines": {
