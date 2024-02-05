@@ -64,7 +64,7 @@
     "@types/zen-observable": "^0.8.7",
     "@vitest/coverage-v8": "^1.2.0",
     "concurrently": "^8.0.0",
-    "del-cli": "^5.0.0",
+    "del-cli": "^5.1.0",
     "esbuild": "^0.19.11",
     "eslint": "^8.56.0",
     "ink": "^4.4.1",
