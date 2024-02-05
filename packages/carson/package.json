@@ -61,7 +61,7 @@
     "@types/node": "^20.8.5",
     "@types/react": "^18.2.52",
     "@types/semver": "^7.3.9",
-    "@types/zen-observable": "^0.8.3",
+    "@types/zen-observable": "^0.8.7",
     "@vitest/coverage-v8": "^1.2.0",
     "concurrently": "^8.0.0",
     "del-cli": "^5.0.0",
