@@ -27,7 +27,7 @@
     "concurrently": "^7.6.0",
     "del-cli": "^5.1.0",
     "patch-package": "^6.5.0",
-    "prettier": "^3.0.0",
+    "prettier": "^3.2.5",
     "prettier-plugin-packagejson": "^2.4.3",
     "turbo": "^1.12.2",
     "typescript": "^5.3.3"
