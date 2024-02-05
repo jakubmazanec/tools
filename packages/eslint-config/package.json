@@ -69,7 +69,7 @@
       "optional": true
     }
   },
-  "packageManager": "npm@10.4.0",
+  "packageManager": "npm@10.1.0",
   "engines": {
     "node": "^20.8.0"
   }
