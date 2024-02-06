@@ -59,7 +59,7 @@
     "@types/lodash": "^4.14.202",
     "@types/micromatch": "^4.0.6",
     "@types/node": "^20.8.5",
-    "@types/react": "^18.2.54",
+    "@types/react": "^18.2.55",
     "@types/semver": "^7.5.6",
     "@types/zen-observable": "^0.8.7",
     "@vitest/coverage-v8": "^1.2.2",
