@@ -29,5 +29,9 @@
     "rootDir": "./source"
   },
   "include": ["./source/**/*"],
-  "references": []
+  "references": [
+    {
+      "path": "../../packages/eslint-config"
+    }
+  ]
 }

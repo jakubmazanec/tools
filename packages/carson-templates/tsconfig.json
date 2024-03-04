@@ -34,6 +34,9 @@
       "path": "../../packages/carson"
     },
     {
+      "path": "../../packages/eslint-config"
+    },
+    {
       "path": "../../packages/fs-utils"
     }
   ]

@@ -37,6 +37,9 @@
       "path": "../../packages/error"
     },
     {
+      "path": "../../packages/eslint-config"
+    },
+    {
       "path": "../../packages/ts-utils"
     },
     {
