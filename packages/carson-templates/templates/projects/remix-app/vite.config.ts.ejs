@@ -10,7 +10,7 @@ strategy: overwrite
  * Run `npx carson update workspace` to regenerate.
  */
 
-import {unstable_vitePlugin as remix} from '@remix-run/dev';
+import {vitePlugin as remix} from '@remix-run/dev';
 import {installGlobals} from '@remix-run/node';
 import _ from 'lodash';
 import {defineConfig} from 'vitest/config';
@@ -24,7 +24,7 @@ export default defineConfig(
         port: 5000,
         strictPort: true,
       },
-      plugins: [remix({
+      plugins: [!process.env.VITEST && remix({
         future: {
           v3_fetcherPersist: true,
           v3_relativeSplatPath: true,
@@ -32,6 +32,7 @@ export default defineConfig(
         },
       })],
       test: {
+        environment: 'happy-dom',
         setupFiles: ['tests/setup.ts'],
       },
     },
