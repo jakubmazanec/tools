@@ -31,6 +31,9 @@
   "include": ["./source/**/*"],
   "references": [
     {
+      "path": "../../packages/eslint-config"
+    },
+    {
       "path": "../../packages/ts-utils"
     }
   ]

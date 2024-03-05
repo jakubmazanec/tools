@@ -8,7 +8,7 @@ const config: eslint.Linter.Config['rules'] = {
   'simple-import-sort/imports': [
     'error',
     {
-      groups: [['^@?\\w'], ['^'], ['^\\.']],
+      groups: [['^@?\\w'], ['^\\.'], ['^']],
     },
   ],
   'simple-import-sort/exports': 'error',

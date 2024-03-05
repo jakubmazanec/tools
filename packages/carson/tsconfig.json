@@ -40,6 +40,9 @@
       "path": "../../packages/error"
     },
     {
+      "path": "../../packages/eslint-config"
+    },
+    {
       "path": "../../packages/fs-utils"
     },
     {

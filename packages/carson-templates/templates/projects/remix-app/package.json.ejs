@@ -14,7 +14,10 @@ let dependencies = [
   'react-dom'
 ];
 let developmentDependencies = [
+  LINTER_CONFIG_PACKAGE_NAME,
   '@remix-run/dev',
+  '@testing-library/jest-dom',
+  '@testing-library/react',
   '@types/node',
   '@types/react',
   '@types/react-dom',
@@ -23,13 +26,14 @@ let developmentDependencies = [
   'cross-env',
   'del-cli',
   'eslint',
+  'happy-dom',
   'prettier',
   'prettier-plugin-packagejson',
   'prettier-plugin-tailwindcss',
   'tailwindcss',
+  'typescript',
   'vite',
   'vitest',
-  'typescript',
 ];
 
 let packageJson = lodash.merge(
@@ -43,10 +47,11 @@ let packageJson = lodash.merge(
     scripts: {
       build: 'del-cli build && remix vite:build',
       clean: 'del-cli coverage build *.tsbuildinfo',
-      develop: 'cross-env PORT=5000 remix vite:dev',
+      develop: 'remix vite:dev --port 5000',
       format: FORMAT_COMMAND,
+      lint: 'eslint .',
       start:
-        'cross-env NODE_ENV=production PORT=5000 remix-serve ./build/server/index.js --port 5000',
+        'cross-env NODE_ENV=production PORT=5000 remix-serve ./build/server/index.js',
       test: 'del-cli coverage && vitest run --coverage',
       typecheck: 'tsc --project tsconfig.typecheck.json',
     },
