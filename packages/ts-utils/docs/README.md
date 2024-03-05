@@ -79,7 +79,7 @@ const fooOrBar4: FooOrBar = {
 
 #### Defined in
 
-[packages/ts-utils/source/types/AtLeastOneRequired.ts:34](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/ts-utils/source/types/AtLeastOneRequired.ts#L34)
+[packages/ts-utils/source/types/AtLeastOneRequired.ts:34](https://github.com/jakubmazanec/js-tools/blob/9d3fb6e/packages/ts-utils/source/types/AtLeastOneRequired.ts#L34)
 
 ---
 
@@ -132,7 +132,7 @@ settings = updateSettings({ minimap: { enabled: true } });
 
 #### Defined in
 
-[packages/ts-utils/source/types/DeepPartial.ts:36](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/ts-utils/source/types/DeepPartial.ts#L36)
+[packages/ts-utils/source/types/DeepPartial.ts:36](https://github.com/jakubmazanec/js-tools/blob/9d3fb6e/packages/ts-utils/source/types/DeepPartial.ts#L36)
 
 ---
 
@@ -165,7 +165,7 @@ data.foo.push('bar'); // error TS2339: Property 'push' does not exist on type 'r
 
 #### Defined in
 
-[packages/ts-utils/source/types/DeepReadonly.ts:22](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/ts-utils/source/types/DeepReadonly.ts#L22)
+[packages/ts-utils/source/types/DeepReadonly.ts:22](https://github.com/jakubmazanec/js-tools/blob/9d3fb6e/packages/ts-utils/source/types/DeepReadonly.ts#L22)
 
 ---
 
@@ -192,7 +192,7 @@ type NonNullable<T> = If<T, null | undefined, never, T>;
 
 #### Defined in
 
-[packages/ts-utils/source/types/If.ts:15](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/ts-utils/source/types/If.ts#L15)
+[packages/ts-utils/source/types/If.ts:15](https://github.com/jakubmazanec/js-tools/blob/9d3fb6e/packages/ts-utils/source/types/If.ts#L15)
 
 ---
 
@@ -220,7 +220,7 @@ type Result = IsEqual<{foo: string}, {foo: string}> // `typeof Result` is `true`
 
 #### Defined in
 
-[packages/ts-utils/source/types/IsEqual.ts:15](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/ts-utils/source/types/IsEqual.ts#L15)
+[packages/ts-utils/source/types/IsEqual.ts:15](https://github.com/jakubmazanec/js-tools/blob/9d3fb6e/packages/ts-utils/source/types/IsEqual.ts#L15)
 
 ---
 
@@ -253,7 +253,7 @@ const: animal: Animal = ''; // Auto-completion works: 'cat' and 'dog' is suggest
 
 #### Defined in
 
-[packages/ts-utils/source/types/LiteralUnion.ts:22](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/ts-utils/source/types/LiteralUnion.ts#L22)
+[packages/ts-utils/source/types/LiteralUnion.ts:22](https://github.com/jakubmazanec/js-tools/blob/9d3fb6e/packages/ts-utils/source/types/LiteralUnion.ts#L22)
 
 ---
 
@@ -269,7 +269,7 @@ const: animal: Animal = ''; // Auto-completion works: 'cat' and 'dog' is suggest
 
 #### Defined in
 
-[packages/ts-utils/source/types/NonArray.ts:3](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/ts-utils/source/types/NonArray.ts#L3)
+[packages/ts-utils/source/types/NonArray.ts:3](https://github.com/jakubmazanec/js-tools/blob/9d3fb6e/packages/ts-utils/source/types/NonArray.ts#L3)
 
 ---
 
@@ -285,7 +285,7 @@ const: animal: Animal = ''; // Auto-completion works: 'cat' and 'dog' is suggest
 
 #### Defined in
 
-[packages/ts-utils/source/types/NonArrayLike.ts:3](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/ts-utils/source/types/NonArrayLike.ts#L3)
+[packages/ts-utils/source/types/NonArrayLike.ts:3](https://github.com/jakubmazanec/js-tools/blob/9d3fb6e/packages/ts-utils/source/types/NonArrayLike.ts#L3)
 
 ---
 
@@ -308,7 +308,7 @@ type Result = OptionalKeys<{ foo?: number; bar?: string; baz: boolean; }>; // `t
 
 #### Defined in
 
-[packages/ts-utils/source/types/OptionalKeys.ts:10](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/ts-utils/source/types/OptionalKeys.ts#L10)
+[packages/ts-utils/source/types/OptionalKeys.ts:10](https://github.com/jakubmazanec/js-tools/blob/9d3fb6e/packages/ts-utils/source/types/OptionalKeys.ts#L10)
 
 ---
 
@@ -337,7 +337,7 @@ type Result = Parameters<typeof foo.get>; // `typeof Result` is `[id: number]`
 
 #### Defined in
 
-[packages/ts-utils/source/types/Parameters.ts:19](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/ts-utils/source/types/Parameters.ts#L19)
+[packages/ts-utils/source/types/Parameters.ts:19](https://github.com/jakubmazanec/js-tools/blob/9d3fb6e/packages/ts-utils/source/types/Parameters.ts#L19)
 
 ---
 
@@ -349,7 +349,7 @@ Union of primitive types.
 
 #### Defined in
 
-[packages/ts-utils/source/types/Primitive.ts:4](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/ts-utils/source/types/Primitive.ts#L4)
+[packages/ts-utils/source/types/Primitive.ts:4](https://github.com/jakubmazanec/js-tools/blob/9d3fb6e/packages/ts-utils/source/types/Primitive.ts#L4)
 
 ---
 
@@ -372,7 +372,7 @@ type Result = RequiredKeys<{ foo: number; bar: string; baz?: boolean; }>; // `ty
 
 #### Defined in
 
-[packages/ts-utils/source/types/RequiredKeys.ts:10](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/ts-utils/source/types/RequiredKeys.ts#L10)
+[packages/ts-utils/source/types/RequiredKeys.ts:10](https://github.com/jakubmazanec/js-tools/blob/9d3fb6e/packages/ts-utils/source/types/RequiredKeys.ts#L10)
 
 ---
 
@@ -403,7 +403,7 @@ type Result = ReturnType<typeof foo.get>; // `typeof Result` is `string`
 
 #### Defined in
 
-[packages/ts-utils/source/types/ReturnType.ts:20](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/ts-utils/source/types/ReturnType.ts#L20)
+[packages/ts-utils/source/types/ReturnType.ts:20](https://github.com/jakubmazanec/js-tools/blob/9d3fb6e/packages/ts-utils/source/types/ReturnType.ts#L20)
 
 ---
 
@@ -422,7 +422,7 @@ better hints from the language server.
 
 #### Defined in
 
-[packages/ts-utils/source/types/Simplify.ts:6](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/ts-utils/source/types/Simplify.ts#L6)
+[packages/ts-utils/source/types/Simplify.ts:6](https://github.com/jakubmazanec/js-tools/blob/9d3fb6e/packages/ts-utils/source/types/Simplify.ts#L6)
 
 ---
 
@@ -444,7 +444,7 @@ type Result = TupleToUnion<['foo', 'bar']>; // `typeof Result` is `"foo" | "bar"
 
 #### Defined in
 
-[packages/ts-utils/source/types/TupleToUnion.ts:10](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/ts-utils/source/types/TupleToUnion.ts#L10)
+[packages/ts-utils/source/types/TupleToUnion.ts:10](https://github.com/jakubmazanec/js-tools/blob/9d3fb6e/packages/ts-utils/source/types/TupleToUnion.ts#L10)
 
 ---
 
@@ -468,7 +468,7 @@ type Result = UnionToIntersection<{ foo: string } | { bar: string }>; // `typeof
 
 #### Defined in
 
-[packages/ts-utils/source/types/UnionToIntersection.ts:10](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/ts-utils/source/types/UnionToIntersection.ts#L10)
+[packages/ts-utils/source/types/UnionToIntersection.ts:10](https://github.com/jakubmazanec/js-tools/blob/9d3fb6e/packages/ts-utils/source/types/UnionToIntersection.ts#L10)
 
 ---
 
@@ -486,7 +486,7 @@ Create a new type that removes `readonly` from object types's keys. Inverse of R
 
 #### Defined in
 
-[packages/ts-utils/source/types/Writable.ts:4](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/ts-utils/source/types/Writable.ts#L4)
+[packages/ts-utils/source/types/Writable.ts:4](https://github.com/jakubmazanec/js-tools/blob/9d3fb6e/packages/ts-utils/source/types/Writable.ts#L4)
 
 ## Functions
 
@@ -526,7 +526,7 @@ asserts condition
 
 #### Defined in
 
-[packages/ts-utils/source/utils/assert.ts:39](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/ts-utils/source/utils/assert.ts#L39)
+[packages/ts-utils/source/utils/assert.ts:39](https://github.com/jakubmazanec/js-tools/blob/9d3fb6e/packages/ts-utils/source/utils/assert.ts#L39)
 
 ---
 
@@ -576,7 +576,7 @@ Value of `isMatched`
 
 #### Defined in
 
-[packages/ts-utils/source/utils/is.ts:28](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/ts-utils/source/utils/is.ts#L28)
+[packages/ts-utils/source/utils/is.ts:28](https://github.com/jakubmazanec/js-tools/blob/9d3fb6e/packages/ts-utils/source/utils/is.ts#L28)
 
 ---
 
@@ -616,7 +616,7 @@ value is NonNullable\<T\>
 
 #### Defined in
 
-[packages/ts-utils/source/utils/isNonNullable.ts:18](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/ts-utils/source/utils/isNonNullable.ts#L18)
+[packages/ts-utils/source/utils/isNonNullable.ts:18](https://github.com/jakubmazanec/js-tools/blob/9d3fb6e/packages/ts-utils/source/utils/isNonNullable.ts#L18)
 
 ---
 
@@ -642,4 +642,4 @@ value is NonNullable\<T\>
 
 #### Defined in
 
-[packages/ts-utils/source/utils/tuple.ts:4](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/ts-utils/source/utils/tuple.ts#L4)
+[packages/ts-utils/source/utils/tuple.ts:4](https://github.com/jakubmazanec/js-tools/blob/9d3fb6e/packages/ts-utils/source/utils/tuple.ts#L4)
