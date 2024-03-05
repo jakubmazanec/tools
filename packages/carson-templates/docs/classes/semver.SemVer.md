@@ -145,7 +145,7 @@ node_modules/@types/semver/classes/semver.d.ts:15
 
 ### compare
 
-▸ **compare**(`other`): `0` \| `1` \| `-1`
+▸ **compare**(`other`): `-1` \| `0` \| `1`
 
 Compares two versions excluding build identifiers (the bit after `+` in the semantic version
 string).
@@ -158,7 +158,7 @@ string).
 
 #### Returns
 
-`0` \| `1` \| `-1`
+`-1` \| `0` \| `1`
 
 - `0` if `this` == `other`
 - `1` if `this` is greater
@@ -172,7 +172,7 @@ node_modules/@types/semver/classes/semver.d.ts:27
 
 ### compareBuild
 
-▸ **compareBuild**(`other`): `0` \| `1` \| `-1`
+▸ **compareBuild**(`other`): `-1` \| `0` \| `1`
 
 Compares the build identifier of two versions.
 
@@ -184,7 +184,7 @@ Compares the build identifier of two versions.
 
 #### Returns
 
-`0` \| `1` \| `-1`
+`-1` \| `0` \| `1`
 
 - `0` if `this` == `other`
 - `1` if `this` is greater
@@ -198,7 +198,7 @@ node_modules/@types/semver/classes/semver.d.ts:57
 
 ### compareMain
 
-▸ **compareMain**(`other`): `0` \| `1` \| `-1`
+▸ **compareMain**(`other`): `-1` \| `0` \| `1`
 
 Compares the release portion of two versions.
 
@@ -210,7 +210,7 @@ Compares the release portion of two versions.
 
 #### Returns
 
-`0` \| `1` \| `-1`
+`-1` \| `0` \| `1`
 
 - `0` if `this` == `other`
 - `1` if `this` is greater
@@ -224,7 +224,7 @@ node_modules/@types/semver/classes/semver.d.ts:37
 
 ### comparePre
 
-▸ **comparePre**(`other`): `0` \| `1` \| `-1`
+▸ **comparePre**(`other`): `-1` \| `0` \| `1`
 
 Compares the prerelease portion of two versions.
 
@@ -236,7 +236,7 @@ Compares the prerelease portion of two versions.
 
 #### Returns
 
-`0` \| `1` \| `-1`
+`-1` \| `0` \| `1`
 
 - `0` if `this` == `other`
 - `1` if `this` is greater

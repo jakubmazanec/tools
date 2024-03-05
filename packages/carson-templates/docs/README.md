@@ -4,6 +4,7 @@
 
 ### Namespaces
 
+- [lodash](modules/lodash.md)
 - [semver](modules/semver.md)
 
 ### Variables
@@ -42,7 +43,7 @@
 
 #### Defined in
 
-[packages/carson-templates/source/constants.ts:1](https://github.com/jakubmazanec/js-tools/blob/abaebfa/packages/carson-templates/source/constants.ts#L1)
+[packages/carson-templates/source/constants.ts:1](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/carson-templates/source/constants.ts#L1)
 
 ---
 
@@ -53,7 +54,7 @@
 
 #### Defined in
 
-[packages/carson-templates/source/constants.ts:5](https://github.com/jakubmazanec/js-tools/blob/abaebfa/packages/carson-templates/source/constants.ts#L5)
+[packages/carson-templates/source/constants.ts:5](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/carson-templates/source/constants.ts#L5)
 
 ---
 
@@ -64,7 +65,7 @@
 
 #### Defined in
 
-[packages/carson-templates/source/constants.ts:4](https://github.com/jakubmazanec/js-tools/blob/abaebfa/packages/carson-templates/source/constants.ts#L4)
+[packages/carson-templates/source/constants.ts:4](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/carson-templates/source/constants.ts#L4)
 
 ---
 
@@ -74,7 +75,7 @@
 
 #### Defined in
 
-[packages/carson-templates/source/constants.ts:9](https://github.com/jakubmazanec/js-tools/blob/abaebfa/packages/carson-templates/source/constants.ts#L9)
+[packages/carson-templates/source/constants.ts:9](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/carson-templates/source/constants.ts#L9)
 
 ---
 
@@ -84,7 +85,7 @@
 
 #### Defined in
 
-[packages/carson-templates/source/constants.ts:14](https://github.com/jakubmazanec/js-tools/blob/abaebfa/packages/carson-templates/source/constants.ts#L14)
+[packages/carson-templates/source/constants.ts:14](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/carson-templates/source/constants.ts#L14)
 
 ---
 
@@ -94,7 +95,7 @@
 
 #### Defined in
 
-[packages/carson-templates/source/constants.ts:6](https://github.com/jakubmazanec/js-tools/blob/abaebfa/packages/carson-templates/source/constants.ts#L6)
+[packages/carson-templates/source/constants.ts:6](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/carson-templates/source/constants.ts#L6)
 
 ---
 
@@ -104,7 +105,7 @@
 
 #### Defined in
 
-[packages/carson-templates/source/constants.ts:30](https://github.com/jakubmazanec/js-tools/blob/abaebfa/packages/carson-templates/source/constants.ts#L30)
+[packages/carson-templates/source/constants.ts:30](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/carson-templates/source/constants.ts#L30)
 
 ---
 
@@ -114,7 +115,7 @@
 
 #### Defined in
 
-[packages/carson-templates/source/constants.ts:11](https://github.com/jakubmazanec/js-tools/blob/abaebfa/packages/carson-templates/source/constants.ts#L11)
+[packages/carson-templates/source/constants.ts:11](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/carson-templates/source/constants.ts#L11)
 
 ---
 
@@ -124,7 +125,7 @@
 
 #### Defined in
 
-[packages/carson-templates/source/constants.ts:16](https://github.com/jakubmazanec/js-tools/blob/abaebfa/packages/carson-templates/source/constants.ts#L16)
+[packages/carson-templates/source/constants.ts:16](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/carson-templates/source/constants.ts#L16)
 
 ---
 
@@ -134,7 +135,7 @@
 
 #### Defined in
 
-[packages/carson-templates/source/constants.ts:13](https://github.com/jakubmazanec/js-tools/blob/abaebfa/packages/carson-templates/source/constants.ts#L13)
+[packages/carson-templates/source/constants.ts:13](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/carson-templates/source/constants.ts#L13)
 
 ---
 
@@ -164,7 +165,7 @@
 
 #### Defined in
 
-[packages/carson-templates/source/constants.ts:62](https://github.com/jakubmazanec/js-tools/blob/abaebfa/packages/carson-templates/source/constants.ts#L62)
+[packages/carson-templates/source/constants.ts:62](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/carson-templates/source/constants.ts#L62)
 
 ---
 
@@ -174,7 +175,7 @@
 
 #### Defined in
 
-[packages/carson-templates/source/constants.ts:2](https://github.com/jakubmazanec/js-tools/blob/abaebfa/packages/carson-templates/source/constants.ts#L2)
+[packages/carson-templates/source/constants.ts:2](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/carson-templates/source/constants.ts#L2)
 
 ---
 
@@ -184,7 +185,7 @@
 
 #### Defined in
 
-[packages/carson-templates/source/constants.ts:10](https://github.com/jakubmazanec/js-tools/blob/abaebfa/packages/carson-templates/source/constants.ts#L10)
+[packages/carson-templates/source/constants.ts:10](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/carson-templates/source/constants.ts#L10)
 
 ---
 
@@ -194,7 +195,7 @@
 
 #### Defined in
 
-[packages/carson-templates/source/constants.ts:7](https://github.com/jakubmazanec/js-tools/blob/abaebfa/packages/carson-templates/source/constants.ts#L7)
+[packages/carson-templates/source/constants.ts:7](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/carson-templates/source/constants.ts#L7)
 
 ---
 
@@ -225,7 +226,7 @@
 
 #### Defined in
 
-[packages/carson-templates/source/constants.ts:43](https://github.com/jakubmazanec/js-tools/blob/abaebfa/packages/carson-templates/source/constants.ts#L43)
+[packages/carson-templates/source/constants.ts:43](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/carson-templates/source/constants.ts#L43)
 
 ---
 
@@ -246,7 +247,7 @@
 
 #### Defined in
 
-[packages/carson-templates/source/constants.ts:88](https://github.com/jakubmazanec/js-tools/blob/abaebfa/packages/carson-templates/source/constants.ts#L88)
+[packages/carson-templates/source/constants.ts:88](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/carson-templates/source/constants.ts#L88)
 
 ## Functions
 
@@ -267,7 +268,7 @@
 
 #### Defined in
 
-[packages/carson-templates/source/getDependencies.ts:11](https://github.com/jakubmazanec/js-tools/blob/abaebfa/packages/carson-templates/source/getDependencies.ts#L11)
+[packages/carson-templates/source/getDependencies.ts:11](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/carson-templates/source/getDependencies.ts#L11)
 
 ---
 
@@ -287,7 +288,7 @@
 
 #### Defined in
 
-[packages/carson-templates/source/getDevelopmentBranch.ts:5](https://github.com/jakubmazanec/js-tools/blob/abaebfa/packages/carson-templates/source/getDevelopmentBranch.ts#L5)
+[packages/carson-templates/source/getDevelopmentBranch.ts:5](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/carson-templates/source/getDevelopmentBranch.ts#L5)
 
 ---
 
@@ -307,7 +308,7 @@
 
 #### Defined in
 
-[packages/carson-templates/source/getMainBranch.ts:5](https://github.com/jakubmazanec/js-tools/blob/abaebfa/packages/carson-templates/source/getMainBranch.ts#L5)
+[packages/carson-templates/source/getMainBranch.ts:5](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/carson-templates/source/getMainBranch.ts#L5)
 
 ---
 
@@ -328,7 +329,7 @@
 
 #### Defined in
 
-[packages/carson-templates/source/getReferences.ts:3](https://github.com/jakubmazanec/js-tools/blob/abaebfa/packages/carson-templates/source/getReferences.ts#L3)
+[packages/carson-templates/source/getReferences.ts:3](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/carson-templates/source/getReferences.ts#L3)
 
 ---
 
@@ -348,14 +349,16 @@
 
 #### Defined in
 
-[packages/carson-templates/source/getWorkspaceName.ts:6](https://github.com/jakubmazanec/js-tools/blob/abaebfa/packages/carson-templates/source/getWorkspaceName.ts#L6)
+[packages/carson-templates/source/getWorkspaceName.ts:6](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/carson-templates/source/getWorkspaceName.ts#L6)
 
 ---
 
 ### lodash
 
-▸ **lodash**\<`TrapAny`\>(`value`): `Collection`\<`any`\> & `Function`\<`any`\> & `Object`\<`any`\>
-& `Primitive`\<`any`\> & `String`
+▸ **lodash**\<`TrapAny`\>(`value`): [`Collection`](interfaces/lodash.Collection.md)\<`any`\> &
+[`Function`](interfaces/lodash.Function.md)\<`any`\> &
+[`Object`](interfaces/lodash.Object.md)\<`any`\> &
+[`Primitive`](interfaces/lodash.Primitive.md)\<`any`\> & [`String`](interfaces/lodash.String.md)
 
 Creates a lodash object which wraps value to enable implicit method chain sequences. Methods that
 operate on and return arrays, collections, and functions can be chained together. Methods that
@@ -432,13 +435,16 @@ trimEnd, trimStart, truncate, unescape, uniqueId, upperCase, upperFirst, value, 
 
 #### Returns
 
-`Collection`\<`any`\> & `Function`\<`any`\> & `Object`\<`any`\> & `Primitive`\<`any`\> & `String`
+[`Collection`](interfaces/lodash.Collection.md)\<`any`\> &
+[`Function`](interfaces/lodash.Function.md)\<`any`\> &
+[`Object`](interfaces/lodash.Object.md)\<`any`\> &
+[`Primitive`](interfaces/lodash.Primitive.md)\<`any`\> & [`String`](interfaces/lodash.String.md)
 
 #### Defined in
 
 node_modules/@types/lodash/common/common.d.ts:94
 
-▸ **lodash**\<`T`\>(`value`): `Primitive`\<`T`\>
+▸ **lodash**\<`T`\>(`value`): [`Primitive`](interfaces/lodash.Primitive.md)\<`T`\>
 
 #### Type parameters
 
@@ -454,13 +460,13 @@ node_modules/@types/lodash/common/common.d.ts:94
 
 #### Returns
 
-`Primitive`\<`T`\>
+[`Primitive`](interfaces/lodash.Primitive.md)\<`T`\>
 
 #### Defined in
 
 node_modules/@types/lodash/common/common.d.ts:95
 
-▸ **lodash**(`value`): `String`
+▸ **lodash**(`value`): [`String`](interfaces/lodash.String.md)
 
 #### Parameters
 
@@ -470,13 +476,13 @@ node_modules/@types/lodash/common/common.d.ts:95
 
 #### Returns
 
-`String`
+[`String`](interfaces/lodash.String.md)
 
 #### Defined in
 
 node_modules/@types/lodash/common/common.d.ts:96
 
-▸ **lodash**\<`T`\>(`value`): `Function`\<`T`\>
+▸ **lodash**\<`T`\>(`value`): [`Function`](interfaces/lodash.Function.md)\<`T`\>
 
 #### Type parameters
 
@@ -492,13 +498,13 @@ node_modules/@types/lodash/common/common.d.ts:96
 
 #### Returns
 
-`Function`\<`T`\>
+[`Function`](interfaces/lodash.Function.md)\<`T`\>
 
 #### Defined in
 
 node_modules/@types/lodash/common/common.d.ts:97
 
-▸ **lodash**\<`T`\>(`value`): `Collection`\<`T`\>
+▸ **lodash**\<`T`\>(`value`): [`Collection`](interfaces/lodash.Collection.md)\<`T`\>
 
 #### Type parameters
 
@@ -508,19 +514,19 @@ node_modules/@types/lodash/common/common.d.ts:97
 
 #### Parameters
 
-| Name    | Type                                   |
-| :------ | :------------------------------------- |
-| `value` | `undefined` \| `null` \| `List`\<`T`\> |
+| Name    | Type                                                             |
+| :------ | :--------------------------------------------------------------- |
+| `value` | `undefined` \| `null` \| [`List`](modules/lodash.md#list)\<`T`\> |
 
 #### Returns
 
-`Collection`\<`T`\>
+[`Collection`](interfaces/lodash.Collection.md)\<`T`\>
 
 #### Defined in
 
 node_modules/@types/lodash/common/common.d.ts:98
 
-▸ **lodash**\<`T`\>(`value`): `Object`\<`T`\>
+▸ **lodash**\<`T`\>(`value`): [`Object`](interfaces/lodash.Object.md)\<`T`\>
 
 #### Type parameters
 
@@ -536,13 +542,13 @@ node_modules/@types/lodash/common/common.d.ts:98
 
 #### Returns
 
-`Object`\<`T`\>
+[`Object`](interfaces/lodash.Object.md)\<`T`\>
 
 #### Defined in
 
 node_modules/@types/lodash/common/common.d.ts:99
 
-▸ **lodash**\<`T`\>(`value`): `Primitive`\<`T`\>
+▸ **lodash**\<`T`\>(`value`): [`Primitive`](interfaces/lodash.Primitive.md)\<`T`\>
 
 #### Type parameters
 
@@ -558,7 +564,7 @@ node_modules/@types/lodash/common/common.d.ts:99
 
 #### Returns
 
-`Primitive`\<`T`\>
+[`Primitive`](interfaces/lodash.Primitive.md)\<`T`\>
 
 #### Defined in
 

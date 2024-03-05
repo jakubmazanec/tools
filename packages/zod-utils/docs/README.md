@@ -39,7 +39,7 @@
 
 #### Defined in
 
-[packages/zod-utils/source/types/Json.ts:11](https://github.com/jakubmazanec/js-tools/blob/abaebfa/packages/zod-utils/source/types/Json.ts#L11)
+[packages/zod-utils/source/types/Json.ts:11](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/zod-utils/source/types/Json.ts#L11)
 
 ---
 
@@ -49,7 +49,7 @@
 
 #### Defined in
 
-[packages/zod-utils/source/types/PackageJson.ts:294](https://github.com/jakubmazanec/js-tools/blob/abaebfa/packages/zod-utils/source/types/PackageJson.ts#L294)
+[packages/zod-utils/source/types/PackageJson.ts:294](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/zod-utils/source/types/PackageJson.ts#L294)
 
 ---
 
@@ -59,7 +59,7 @@
 
 #### Defined in
 
-[packages/zod-utils/source/types/TsconfigJson.ts:346](https://github.com/jakubmazanec/js-tools/blob/abaebfa/packages/zod-utils/source/types/TsconfigJson.ts#L346)
+[packages/zod-utils/source/types/TsconfigJson.ts:346](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/zod-utils/source/types/TsconfigJson.ts#L346)
 
 ## Variables
 
@@ -69,7 +69,7 @@
 
 #### Defined in
 
-[packages/zod-utils/source/types/Json.ts:7](https://github.com/jakubmazanec/js-tools/blob/abaebfa/packages/zod-utils/source/types/Json.ts#L7)
+[packages/zod-utils/source/types/Json.ts:7](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/zod-utils/source/types/Json.ts#L7)
 
 ---
 
@@ -112,15 +112,12 @@ packageJsonBundledDependenciesSchema; `config`: `ZodOptional`\<`ZodRecord`\<`Zod
 `exports`: `ZodOptional`\<`ZodType`\<`PackageJsonExports`, `ZodTypeDef`, `PackageJsonExports`\>\> ;
 `files`: `ZodOptional`\<`ZodArray`\<`ZodString`, `"many"`\>\> ; `flat`:
 `ZodOptional`\<`ZodBoolean`\> ; `funding`:
-`ZodOptional`\<`ZodUnion`\<[`ZodArray`\<`ZodUnion`\<[`ZodObject`\<\{ `type`:
-`ZodOptional`\<`ZodUnion`\<[`ZodEnum`\<[``"corporation"``, ``"foundation"``, ``"github"``,
-``"individual"``, ``"opencollective"``, ``"patreon"``]\>, `ZodString`]\>\> ; `url`: `ZodString` },
-`"strict"`, `ZodTypeAny`, \{ `type?`: `string` ; `url`: `string` }, \{ `type?`: `string` ; `url`:
-`string` }\>, `ZodString`]\>, `"many"`\>, `ZodUnion`\<[`ZodObject`\<\{ `type`:
-`ZodOptional`\<`ZodUnion`\<[`ZodEnum`\<[``"corporation"``, ``"foundation"``, ``"github"``,
-``"individual"``, ``"opencollective"``, ``"patreon"``]\>, `ZodString`]\>\> ; `url`: `ZodString` },
-`"strict"`, `ZodTypeAny`, \{ `type?`: `string` ; `url`: `string` }, \{ `type?`: `string` ; `url`:
-`string` }\>, `ZodString`]\>]\>\> ; `homepage`: `ZodOptional`\<`ZodString`\> ; `keywords`:
+`ZodOptional`\<`ZodUnion`\<[`ZodArray`\<`ZodUnion`\<[`ZodObject`\<\{ `type`: `ZodOptional`\<...\> ;
+`url`: `ZodString` }, ``"strict"``, `ZodTypeAny`, \{ `type?`: ... \| ... ; `url`: `string` }, \{
+`type?`: ... \| ... ; `url`: `string` }\>, `ZodString`]\>, `"many"`\>, `ZodUnion`\<[`ZodObject`\<\{
+`type`: `ZodOptional`\<`ZodUnion`\<...\>\> ; `url`: `ZodString` }, ``"strict"``, `ZodTypeAny`, \{
+`type?`: `string` ; `url`: `string` }, \{ `type?`: `string` ; `url`: `string` }\>,
+`ZodString`]\>]\>\> ; `homepage`: `ZodOptional`\<`ZodString`\> ; `keywords`:
 `ZodOptional`\<`ZodArray`\<`ZodString`, `"many"`\>\> ; `license`: `ZodOptional`\<`ZodString`\> ;
 `main`: `ZodOptional`\<`ZodString`\> ; `maintainers`:
 `ZodOptional`\<`ZodArray`\<`ZodUnion`\<[`ZodObject`\<\{ `email`: `ZodOptional`\<`ZodString`\> ;
@@ -257,7 +254,7 @@ packageJsonBundledDependenciesSchema; `config?`: `Record`\<`string`, `unknown`\>
 
 #### Defined in
 
-[packages/zod-utils/source/types/PackageJson.ts:150](https://github.com/jakubmazanec/js-tools/blob/abaebfa/packages/zod-utils/source/types/PackageJson.ts#L150)
+[packages/zod-utils/source/types/PackageJson.ts:150](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/zod-utils/source/types/PackageJson.ts#L150)
 
 ---
 
@@ -316,8 +313,8 @@ packageJsonBundledDependenciesSchema; `config?`: `Record`\<`string`, `unknown`\>
 `ZodOptional`\<`ZodBoolean`\> ; `noUnusedParameters`: `ZodOptional`\<`ZodBoolean`\> ; `outDir`:
 `ZodOptional`\<`ZodString`\> ; `outFile`: `ZodOptional`\<`ZodString`\> ; `paths`:
 `ZodOptional`\<`ZodRecord`\<`ZodString`, `ZodArray`\<`ZodString`, `"many"`\>\>\> ; `plugins`:
-`ZodOptional`\<`ZodArray`\<`ZodIntersection`\<`ZodObject`\<\{ `name`: `ZodOptional`\<`ZodString`\>
-}, `"strict"`, `ZodTypeAny`, \{ `name?`: `string` }, \{ `name?`: `string` }\>,
+`ZodOptional`\<`ZodArray`\<`ZodIntersection`\<`ZodObject`\<\{ `name`: `ZodOptional`\<...\> },
+`"strict"`, `ZodTypeAny`, \{ `name?`: ... \| ... }, \{ `name?`: ... \| ... }\>,
 `ZodRecord`\<`ZodString`, `ZodUnknown`\>\>, `"many"`\>\> ; `preserveConstEnums`:
 `ZodOptional`\<`ZodBoolean`\> ; `preserveSymlinks`: `ZodOptional`\<`ZodBoolean`\> ;
 `preserveWatchOutput`: `ZodOptional`\<`ZodBoolean`\> ; `pretty`: `ZodOptional`\<`ZodBoolean`\> ;
@@ -666,7 +663,7 @@ packageJsonBundledDependenciesSchema; `config?`: `Record`\<`string`, `unknown`\>
 
 #### Defined in
 
-[packages/zod-utils/source/types/TsconfigJson.ts:333](https://github.com/jakubmazanec/js-tools/blob/abaebfa/packages/zod-utils/source/types/TsconfigJson.ts#L333)
+[packages/zod-utils/source/types/TsconfigJson.ts:333](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/zod-utils/source/types/TsconfigJson.ts#L333)
 
 ## Functions
 
@@ -693,7 +690,7 @@ value is TypeOf\<S\>
 
 #### Defined in
 
-[packages/zod-utils/source/utils/is.ts:3](https://github.com/jakubmazanec/js-tools/blob/abaebfa/packages/zod-utils/source/utils/is.ts#L3)
+[packages/zod-utils/source/utils/is.ts:3](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/zod-utils/source/utils/is.ts#L3)
 
 ---
 
@@ -713,7 +710,7 @@ value is Object
 
 #### Defined in
 
-[packages/zod-utils/source/utils/isPackageJson.ts:3](https://github.com/jakubmazanec/js-tools/blob/abaebfa/packages/zod-utils/source/utils/isPackageJson.ts#L3)
+[packages/zod-utils/source/utils/isPackageJson.ts:3](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/zod-utils/source/utils/isPackageJson.ts#L3)
 
 ---
 
@@ -733,7 +730,7 @@ value is Object
 
 #### Defined in
 
-[packages/zod-utils/source/utils/isTsconfigJson.ts:3](https://github.com/jakubmazanec/js-tools/blob/abaebfa/packages/zod-utils/source/utils/isTsconfigJson.ts#L3)
+[packages/zod-utils/source/utils/isTsconfigJson.ts:3](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/zod-utils/source/utils/isTsconfigJson.ts#L3)
 
 ---
 
@@ -767,7 +764,7 @@ value is Object
 
 #### Defined in
 
-[packages/zod-utils/source/utils/readFile.ts:11](https://github.com/jakubmazanec/js-tools/blob/abaebfa/packages/zod-utils/source/utils/readFile.ts#L11)
+[packages/zod-utils/source/utils/readFile.ts:11](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/zod-utils/source/utils/readFile.ts#L11)
 
 ---
 
@@ -801,7 +798,7 @@ value is Object
 
 #### Defined in
 
-[packages/zod-utils/source/utils/readJson.ts:12](https://github.com/jakubmazanec/js-tools/blob/abaebfa/packages/zod-utils/source/utils/readJson.ts#L12)
+[packages/zod-utils/source/utils/readJson.ts:12](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/zod-utils/source/utils/readJson.ts#L12)
 
 ---
 
@@ -834,7 +831,7 @@ value is Object
 
 #### Defined in
 
-[packages/zod-utils/source/utils/readPackageJson.ts:13](https://github.com/jakubmazanec/js-tools/blob/abaebfa/packages/zod-utils/source/utils/readPackageJson.ts#L13)
+[packages/zod-utils/source/utils/readPackageJson.ts:13](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/zod-utils/source/utils/readPackageJson.ts#L13)
 
 ---
 
@@ -854,4 +851,4 @@ value is Object
 
 #### Defined in
 
-[packages/zod-utils/source/utils/zodIssuesToString.ts:50](https://github.com/jakubmazanec/js-tools/blob/abaebfa/packages/zod-utils/source/utils/zodIssuesToString.ts#L50)
+[packages/zod-utils/source/utils/zodIssuesToString.ts:50](https://github.com/jakubmazanec/js-tools/blob/14a92ae/packages/zod-utils/source/utils/zodIssuesToString.ts#L50)
