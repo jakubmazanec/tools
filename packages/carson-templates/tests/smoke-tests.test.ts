@@ -162,11 +162,15 @@ describe.each([
     }
 
     // try building everything
+    vitest.stubEnv('VITEST', '');
+
     try {
       await execa('npm', ['run', 'build'], {cwd: workspacePath});
     } catch (error) {
       errors.push(error);
     }
+
+    vitest.unstubAllEnvs();
 
     await fs.emptyDir(workspacePath);
     await fs.rmdir(workspacePath);
