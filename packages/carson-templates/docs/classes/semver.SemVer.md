@@ -29,6 +29,7 @@
 - [format](semver.SemVer.md#format)
 - [inc](semver.SemVer.md#inc)
 - [inspect](semver.SemVer.md#inspect)
+- [toString](semver.SemVer.md#tostring)
 
 ## Constructors
 
@@ -294,3 +295,17 @@ node_modules/@types/semver/classes/semver.d.ts:59
 #### Defined in
 
 node_modules/@types/semver/classes/semver.d.ts:10
+
+---
+
+### toString
+
+▸ **toString**(): `string`
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+node_modules/@types/semver/classes/semver.d.ts:61

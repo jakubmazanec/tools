@@ -12,10 +12,21 @@
 
 ### Properties
 
+- [includePrerelease](semver.CoerceOptions.md#includeprerelease)
 - [loose](semver.CoerceOptions.md#loose)
 - [rtl](semver.CoerceOptions.md#rtl)
 
 ## Properties
+
+### includePrerelease
+
+• `Optional` **includePrerelease**: `boolean`
+
+#### Defined in
+
+node_modules/@types/semver/index.d.ts:114
+
+---
 
 ### loose
 
@@ -56,4 +67,4 @@ coerce('1.2.3.4', {rtl: true});
 
 #### Defined in
 
-node_modules/@types/semver/index.d.ts:125
+node_modules/@types/semver/index.d.ts:126
