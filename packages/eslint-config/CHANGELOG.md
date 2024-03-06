@@ -1,5 +1,27 @@
 # @jakubmazanec/eslint-config
 
+## 3.0.1
+
+### Patch Changes
+
+- [#115](https://github.com/jakubmazanec/js-tools/pull/115) [`abaebfa`](https://github.com/jakubmazanec/js-tools/commit/abaebfa7bf38639f85ad0466387499669cf8e803) ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes incorrect TypeScript parser config.
+
+- [#115](https://github.com/jakubmazanec/js-tools/pull/115) [`abaebfa`](https://github.com/jakubmazanec/js-tools/commit/abaebfa7bf38639f85ad0466387499669cf8e803) ([@jakubmazanec](https://github.com/jakubmazanec)) – Adds missing `.editorconfig` file.
+
+- [#101](https://github.com/jakubmazanec/js-tools/pull/101) [`6a4a076`](https://github.com/jakubmazanec/js-tools/commit/6a4a0764f2d699877fd1648b7d53567f696a1bb2) ([@renovate](https://github.com/apps/renovate)) – Dependency `@stylistic/eslint-plugin` updated to version `^1.6.0`.
+
+- [#120](https://github.com/jakubmazanec/js-tools/pull/120) [`c0313a2`](https://github.com/jakubmazanec/js-tools/commit/c0313a201053b456a2cef6e13441c03e40e2f8ae) ([@renovate](https://github.com/apps/renovate)) – Dependency `prettier-plugin-packagejson` updated to version `^2.4.12`.
+
+- [#105](https://github.com/jakubmazanec/js-tools/pull/105) [`75425bd`](https://github.com/jakubmazanec/js-tools/commit/75425bd97d29db63d96f770711a67687d85e8ba4) ([@renovate](https://github.com/apps/renovate)) – Dependency `eslint-plugin-unicorn` updated to version `^51.0.0`.
+
+- [#119](https://github.com/jakubmazanec/js-tools/pull/119) [`c853783`](https://github.com/jakubmazanec/js-tools/commit/c853783261283025a6ae94f06552fe6b471f180d) ([@renovate](https://github.com/apps/renovate)) – Dependency `esbuild` updated to version `^0.20.1`.
+
+- [#102](https://github.com/jakubmazanec/js-tools/pull/102) [`9ffc37c`](https://github.com/jakubmazanec/js-tools/commit/9ffc37cf91ff47a6a7e3694e19de9ddcef4e7953) ([@renovate](https://github.com/apps/renovate)) – Dependency `@typescript-eslint/parser` updated to version `^6.21.0`.
+
+- [#107](https://github.com/jakubmazanec/js-tools/pull/107) [`98f4c85`](https://github.com/jakubmazanec/js-tools/commit/98f4c85f945d10c106b03e01cfd5bedef494473d) ([@renovate](https://github.com/apps/renovate)) – Dependency `@typescript-eslint/eslint-plugin` updated to version `^6.21.0`.
+
+- [#115](https://github.com/jakubmazanec/js-tools/pull/115) [`abaebfa`](https://github.com/jakubmazanec/js-tools/commit/abaebfa7bf38639f85ad0466387499669cf8e803) ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes incorrect order of imports in `simple-import-sort/imports` rule.
+
 ## 3.0.0
 
 ### Major Changes

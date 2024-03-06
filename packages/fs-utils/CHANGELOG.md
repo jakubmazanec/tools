@@ -1,5 +1,21 @@
 # @jakubmazanec/fs-utils
 
+## 0.2.1
+
+### Patch Changes
+
+- [#115](https://github.com/jakubmazanec/js-tools/pull/115) [`abaebfa`](https://github.com/jakubmazanec/js-tools/commit/abaebfa7bf38639f85ad0466387499669cf8e803) ([@jakubmazanec](https://github.com/jakubmazanec)) – Adds missing `.editorconfig` file.
+
+- [#115](https://github.com/jakubmazanec/js-tools/pull/115) [`abaebfa`](https://github.com/jakubmazanec/js-tools/commit/abaebfa7bf38639f85ad0466387499669cf8e803) ([@jakubmazanec](https://github.com/jakubmazanec)) – Adds missing ESLint config development dependency.
+
+- [#122](https://github.com/jakubmazanec/js-tools/pull/122) [`6495b91`](https://github.com/jakubmazanec/js-tools/commit/6495b91cdb5bb40f4daadd53658009bca8576be8) ([@renovate](https://github.com/apps/renovate)) – Dependency `@vitest/coverage-v8` updated to version `^1.3.1`. Dependency `vitest` updated to version `^1.3.1`.
+
+- [#120](https://github.com/jakubmazanec/js-tools/pull/120) [`c0313a2`](https://github.com/jakubmazanec/js-tools/commit/c0313a201053b456a2cef6e13441c03e40e2f8ae) ([@renovate](https://github.com/apps/renovate)) – Dependency `prettier-plugin-packagejson` updated to version `^2.4.12`.
+
+- [#119](https://github.com/jakubmazanec/js-tools/pull/119) [`c853783`](https://github.com/jakubmazanec/js-tools/commit/c853783261283025a6ae94f06552fe6b471f180d) ([@renovate](https://github.com/apps/renovate)) – Dependency `esbuild` updated to version `^0.20.1`.
+
+- [#114](https://github.com/jakubmazanec/js-tools/pull/114) [`14a92ae`](https://github.com/jakubmazanec/js-tools/commit/14a92ae46c377e47c314d2ffae935255223571ab) ([@renovate](https://github.com/apps/renovate)) – Dependency `typedoc` updated to version `^0.25.10`.
+
 ## 0.2.0
 
 ### Minor Changes

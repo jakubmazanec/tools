@@ -1,5 +1,38 @@
 # @jakubmazanec/carson-templates
 
+## 2.0.1
+
+### Patch Changes
+
+- [#115](https://github.com/jakubmazanec/js-tools/pull/115) [`abaebfa`](https://github.com/jakubmazanec/js-tools/commit/abaebfa7bf38639f85ad0466387499669cf8e803) ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes various bugs in Vitest config in the `projects/remix-app` template.
+
+- [#115](https://github.com/jakubmazanec/js-tools/pull/115) [`abaebfa`](https://github.com/jakubmazanec/js-tools/commit/abaebfa7bf38639f85ad0466387499669cf8e803) ([@jakubmazanec](https://github.com/jakubmazanec)) – Adds missing `.editorconfig` file.
+
+- [#115](https://github.com/jakubmazanec/js-tools/pull/115) [`abaebfa`](https://github.com/jakubmazanec/js-tools/commit/abaebfa7bf38639f85ad0466387499669cf8e803) ([@jakubmazanec](https://github.com/jakubmazanec)) – Adds missing packages Vitest needs for React component testing to the `projects/remix-app` template.
+
+- [#115](https://github.com/jakubmazanec/js-tools/pull/115) [`abaebfa`](https://github.com/jakubmazanec/js-tools/commit/abaebfa7bf38639f85ad0466387499669cf8e803) ([@jakubmazanec](https://github.com/jakubmazanec)) – Adds missing ESLint config development dependency.
+
+- [#122](https://github.com/jakubmazanec/js-tools/pull/122) [`6495b91`](https://github.com/jakubmazanec/js-tools/commit/6495b91cdb5bb40f4daadd53658009bca8576be8) ([@renovate](https://github.com/apps/renovate)) – Dependency `@vitest/coverage-v8` updated to version `^1.3.1`. Dependency `vitest` updated to version `^1.3.1`.
+
+- [#120](https://github.com/jakubmazanec/js-tools/pull/120) [`c0313a2`](https://github.com/jakubmazanec/js-tools/commit/c0313a201053b456a2cef6e13441c03e40e2f8ae) ([@renovate](https://github.com/apps/renovate)) – Dependency `prettier-plugin-packagejson` updated to version `^2.4.12`.
+
+- [#103](https://github.com/jakubmazanec/js-tools/pull/103) [`3c1614b`](https://github.com/jakubmazanec/js-tools/commit/3c1614bb0796a89646061129496c4a40071093b6) ([@renovate](https://github.com/apps/renovate)) – Dependency `semver` updated to version `^7.6.0`.
+
+- [#119](https://github.com/jakubmazanec/js-tools/pull/119) [`c853783`](https://github.com/jakubmazanec/js-tools/commit/c853783261283025a6ae94f06552fe6b471f180d) ([@renovate](https://github.com/apps/renovate)) – Dependency `esbuild` updated to version `^0.20.1`.
+
+- [#114](https://github.com/jakubmazanec/js-tools/pull/114) [`14a92ae`](https://github.com/jakubmazanec/js-tools/commit/14a92ae46c377e47c314d2ffae935255223571ab) ([@renovate](https://github.com/apps/renovate)) – Dependency `typedoc` updated to version `^0.25.10`.
+
+- [#115](https://github.com/jakubmazanec/js-tools/pull/115) [`abaebfa`](https://github.com/jakubmazanec/js-tools/commit/abaebfa7bf38639f85ad0466387499669cf8e803) ([@jakubmazanec](https://github.com/jakubmazanec)) – Adds missing ESLint config development dependency to the project templates.
+
+- [#115](https://github.com/jakubmazanec/js-tools/pull/115) [`abaebfa`](https://github.com/jakubmazanec/js-tools/commit/abaebfa7bf38639f85ad0466387499669cf8e803) ([@jakubmazanec](https://github.com/jakubmazanec)) – Updates Remix config in the `projects/remix-app` template, since the Vite plugin is no longer
+  unstable.
+
+- [#115](https://github.com/jakubmazanec/js-tools/pull/115) [`abaebfa`](https://github.com/jakubmazanec/js-tools/commit/abaebfa7bf38639f85ad0466387499669cf8e803) ([@jakubmazanec](https://github.com/jakubmazanec)) – Adds missing linting task to the `projects/remix-app` template.
+
+- [#115](https://github.com/jakubmazanec/js-tools/pull/115) [`abaebfa`](https://github.com/jakubmazanec/js-tools/commit/abaebfa7bf38639f85ad0466387499669cf8e803) ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes incorrect port settings in the `projects/remix-app` template.
+
+- [#115](https://github.com/jakubmazanec/js-tools/pull/115) [`abaebfa`](https://github.com/jakubmazanec/js-tools/commit/abaebfa7bf38639f85ad0466387499669cf8e803) ([@jakubmazanec](https://github.com/jakubmazanec)) – Adds missing `.editorconfig` file template to all project templates.
+
 ## 2.0.0
 
 ### Major Changes
