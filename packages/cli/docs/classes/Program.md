@@ -47,7 +47,7 @@ line arguments.
 
 #### Defined in
 
-[cli/source/program/Program.ts:56](https://github.com/jakubmazanec/js-tools/blob/abe95ab/packages/cli/source/program/Program.ts#L56)
+[cli/source/program/Program.ts:56](https://github.com/jakubmazanec/js-tools/blob/c853783/packages/cli/source/program/Program.ts#L56)
 
 ## Properties
 
@@ -59,7 +59,7 @@ Custom error boundary fallback component
 
 #### Defined in
 
-[cli/source/program/Program.ts:54](https://github.com/jakubmazanec/js-tools/blob/abe95ab/packages/cli/source/program/Program.ts#L54)
+[cli/source/program/Program.ts:54](https://github.com/jakubmazanec/js-tools/blob/c853783/packages/cli/source/program/Program.ts#L54)
 
 ---
 
@@ -71,7 +71,7 @@ Program executable name.
 
 #### Defined in
 
-[cli/source/program/Program.ts:38](https://github.com/jakubmazanec/js-tools/blob/abe95ab/packages/cli/source/program/Program.ts#L38)
+[cli/source/program/Program.ts:38](https://github.com/jakubmazanec/js-tools/blob/c853783/packages/cli/source/program/Program.ts#L38)
 
 ---
 
@@ -84,7 +84,7 @@ Program commands
 
 #### Defined in
 
-[cli/source/program/Program.ts:41](https://github.com/jakubmazanec/js-tools/blob/abe95ab/packages/cli/source/program/Program.ts#L41)
+[cli/source/program/Program.ts:41](https://github.com/jakubmazanec/js-tools/blob/c853783/packages/cli/source/program/Program.ts#L41)
 
 ---
 
@@ -96,7 +96,7 @@ Program description.
 
 #### Defined in
 
-[cli/source/program/Program.ts:35](https://github.com/jakubmazanec/js-tools/blob/abe95ab/packages/cli/source/program/Program.ts#L35)
+[cli/source/program/Program.ts:35](https://github.com/jakubmazanec/js-tools/blob/c853783/packages/cli/source/program/Program.ts#L35)
 
 ---
 
@@ -108,7 +108,7 @@ More readable program name.
 
 #### Defined in
 
-[cli/source/program/Program.ts:26](https://github.com/jakubmazanec/js-tools/blob/abe95ab/packages/cli/source/program/Program.ts#L26)
+[cli/source/program/Program.ts:26](https://github.com/jakubmazanec/js-tools/blob/c853783/packages/cli/source/program/Program.ts#L26)
 
 ---
 
@@ -118,7 +118,7 @@ More readable program name.
 
 #### Defined in
 
-[cli/source/program/Program.ts:45](https://github.com/jakubmazanec/js-tools/blob/abe95ab/packages/cli/source/program/Program.ts#L45)
+[cli/source/program/Program.ts:45](https://github.com/jakubmazanec/js-tools/blob/c853783/packages/cli/source/program/Program.ts#L45)
 
 ---
 
@@ -130,7 +130,7 @@ Program latest version.
 
 #### Defined in
 
-[cli/source/program/Program.ts:32](https://github.com/jakubmazanec/js-tools/blob/abe95ab/packages/cli/source/program/Program.ts#L32)
+[cli/source/program/Program.ts:32](https://github.com/jakubmazanec/js-tools/blob/c853783/packages/cli/source/program/Program.ts#L32)
 
 ---
 
@@ -142,7 +142,7 @@ Program name.
 
 #### Defined in
 
-[cli/source/program/Program.ts:23](https://github.com/jakubmazanec/js-tools/blob/abe95ab/packages/cli/source/program/Program.ts#L23)
+[cli/source/program/Program.ts:23](https://github.com/jakubmazanec/js-tools/blob/c853783/packages/cli/source/program/Program.ts#L23)
 
 ---
 
@@ -152,7 +152,7 @@ Program name.
 
 #### Defined in
 
-[cli/source/program/Program.ts:47](https://github.com/jakubmazanec/js-tools/blob/abe95ab/packages/cli/source/program/Program.ts#L47)
+[cli/source/program/Program.ts:47](https://github.com/jakubmazanec/js-tools/blob/c853783/packages/cli/source/program/Program.ts#L47)
 
 ---
 
@@ -164,7 +164,7 @@ Program version.
 
 #### Defined in
 
-[cli/source/program/Program.ts:29](https://github.com/jakubmazanec/js-tools/blob/abe95ab/packages/cli/source/program/Program.ts#L29)
+[cli/source/program/Program.ts:29](https://github.com/jakubmazanec/js-tools/blob/c853783/packages/cli/source/program/Program.ts#L29)
 
 ## Methods
 
@@ -188,7 +188,7 @@ Program instance.
 
 #### Defined in
 
-[cli/source/program/Program.ts:150](https://github.com/jakubmazanec/js-tools/blob/abe95ab/packages/cli/source/program/Program.ts#L150)
+[cli/source/program/Program.ts:150](https://github.com/jakubmazanec/js-tools/blob/c853783/packages/cli/source/program/Program.ts#L150)
 
 ---
 
@@ -210,7 +210,7 @@ Renders a React element using Ink and outputs to the configured streams.
 
 #### Defined in
 
-[cli/source/program/Program.ts:162](https://github.com/jakubmazanec/js-tools/blob/abe95ab/packages/cli/source/program/Program.ts#L162)
+[cli/source/program/Program.ts:162](https://github.com/jakubmazanec/js-tools/blob/c853783/packages/cli/source/program/Program.ts#L162)
 
 ---
 
@@ -232,7 +232,7 @@ Runs the program.
 
 #### Defined in
 
-[cli/source/program/Program.ts:197](https://github.com/jakubmazanec/js-tools/blob/abe95ab/packages/cli/source/program/Program.ts#L197)
+[cli/source/program/Program.ts:197](https://github.com/jakubmazanec/js-tools/blob/c853783/packages/cli/source/program/Program.ts#L197)
 
 ---
 
@@ -252,4 +252,4 @@ Runs the program.
 
 #### Defined in
 
-[cli/source/program/Program.ts:96](https://github.com/jakubmazanec/js-tools/blob/abe95ab/packages/cli/source/program/Program.ts#L96)
+[cli/source/program/Program.ts:96](https://github.com/jakubmazanec/js-tools/blob/c853783/packages/cli/source/program/Program.ts#L96)
