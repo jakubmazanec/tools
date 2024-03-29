@@ -154,3 +154,5 @@ export function SelectInput({
     </Box>
   );
 }
+
+// partially based on https://github.com/vadimdemedes/ink-select-input/tree/309497ca641f55d8df0083ec2d07264f101358e4 (see https://github.com/vadimdemedes/ink-select-input/blob/309497ca641f55d8df0083ec2d07264f101358e4/license for license)

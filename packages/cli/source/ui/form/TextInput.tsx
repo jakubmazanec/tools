@@ -224,3 +224,5 @@ export function TextInput({
     </Box>
   );
 }
+
+// partially based on https://github.com/vadimdemedes/ink-text-input/tree/0787c505415f0d059801d80600e4ccb0651385f3 (see https://github.com/vadimdemedes/ink-text-input/blob/0787c505415f0d059801d80600e4ccb0651385f3/license for license)
