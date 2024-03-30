@@ -54,7 +54,7 @@ let packageJson = lodash.merge(
       lint: 'eslint .',
       start:
         'cross-env NODE_ENV=production PORT=5000 remix-serve ./build/server/index.js',
-      test: 'del-cli coverage && vitest run --coverage',
+      test: `del-cli coverage && ${TEST_COMMAND}`,
       typecheck: 'tsc --project tsconfig.typecheck.json',
     },
     dependencies: getDependencies(dependencies, workspace),
