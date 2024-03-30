@@ -44,7 +44,7 @@ export const DEPENDENCY_VERSIONS: Record<string, string> = {
   '@remix-run/node': '^2.0.0',
   '@remix-run/react': '^2.0.0',
   '@remix-run/serve': '^2.0.0',
-  '@testing-library/jest-dom': '^5.0.0',
+  '@testing-library/jest-dom': '^6.0.0',
   '@testing-library/react': '^14.0.0',
   '@types/lodash': '^4.0.0',
   '@types/node': '^20.0.0',
