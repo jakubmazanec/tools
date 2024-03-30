@@ -15,7 +15,7 @@
     "document": "turbo run document --no-daemon",
     "format": "turbo run format --no-daemon && prettier ./*.* --write --ignore-unknown",
     "lint": "turbo run lint --no-daemon",
-    "prepare": "patch-package && turbo run build --no-daemon --filter=@jakubmazanec/carson --filter=@jakubmazanec/carson-templates && carson update workspace",
+    "prepare": "patch-package && turbo run build --no-daemon --filter=@jakubmazanec/carson && turbo run build --no-daemon --filter=@jakubmazanec/carson-templates && carson update workspace",
     "reinstall": "npm run uninstall && npm install",
     "test": "turbo run test --no-daemon",
     "typecheck": "turbo run typecheck --no-daemon",
