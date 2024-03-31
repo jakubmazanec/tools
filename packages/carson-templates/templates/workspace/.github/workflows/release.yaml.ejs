@@ -122,20 +122,28 @@ jobs:
       - name: Push changes
         run: |
           git push --follow-tags
-
 <%
+if (workspace.projects.some((project) => project.config.deployment?.appName)) {
+-%>
+
+      - uses: superfly/flyctl-actions/setup-flyctl@master
+<%
+}
+
 for (let project of workspace.projects) {
   if (project.config.deployment?.appName) {
 -%>
-      - name: Deploy
+
+      - name: Deploy <%- project.name %>
         run:
           npm run deploy --workspace <%- project.name %>
         env:
-          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+          FLY_ACCESS_TOKEN: ${{ secrets.FLY_TOKEN }}
+          FLY_API_TOKEN: ${{ secrets.FLY_TOKEN }}
 <%
   }
 }
-%>
+-%>
 
       - name: Checkout main branch
         run: |
@@ -247,17 +255,25 @@ for (let project of workspace.projects) {
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_CONFIG_PROVENANCE: 'true' # must be string, not boolean
-
 <%
+if (workspace.projects.some((project) => project.config.deployment?.appName)) {
+-%>
+
+      - uses: superfly/flyctl-actions/setup-flyctl@master
+<%
+}
+
 for (let project of workspace.projects) {
   if (project.config.deployment?.appName) {
 -%>
-      - name: Deploy
+
+      - name: Deploy <%- project.name %>
         run:
-          npm run deploy --workspace <%- project.name %> -- --app <%- project.config.deployment?.appName %>-staging
+          npm run deploy --workspace <%- project.name %> -- --app <%- project.config.deployment?.appName %>-next
         env:
-          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+          FLY_ACCESS_TOKEN: ${{ secrets.FLY_TOKEN }}
+          FLY_API_TOKEN: ${{ secrets.FLY_TOKEN }}
 <%
   }
 }
-%>
+-%>
