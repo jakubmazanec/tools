@@ -1,5 +1,31 @@
 # @jakubmazanec/carson-templates
 
+## 2.1.0
+
+### Minor Changes
+
+- [#128](https://github.com/jakubmazanec/js-tools/pull/128) [`8426765`](https://github.com/jakubmazanec/js-tools/commit/8426765994c58362b4a05ae81c01ed6d6abe5f86) ([@jakubmazanec](https://github.com/jakubmazanec)) – Updates possible project paths in the `workspace` template so the projects can be located also in `apps` directory, not just `packages`.
+
+### Patch Changes
+
+- [#128](https://github.com/jakubmazanec/js-tools/pull/128) [`8426765`](https://github.com/jakubmazanec/js-tools/commit/8426765994c58362b4a05ae81c01ed6d6abe5f86) ([@jakubmazanec](https://github.com/jakubmazanec)) – Fix wrong `@testing-library/jest-dom` version used in the templates.
+
+- [#128](https://github.com/jakubmazanec/js-tools/pull/128) [`8426765`](https://github.com/jakubmazanec/js-tools/commit/8426765994c58362b4a05ae81c01ed6d6abe5f86) ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes incorrect command for the test task in the `projects/remix-app` template.
+
+- [#128](https://github.com/jakubmazanec/js-tools/pull/128) [`8426765`](https://github.com/jakubmazanec/js-tools/commit/8426765994c58362b4a05ae81c01ed6d6abe5f86) ([@jakubmazanec](https://github.com/jakubmazanec)) – Removes unnecessary `styfle/cancel-workflow-action` steps from GitHub workflow templates.
+
+- [#128](https://github.com/jakubmazanec/js-tools/pull/128) [`8426765`](https://github.com/jakubmazanec/js-tools/commit/8426765994c58362b4a05ae81c01ed6d6abe5f86) ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes `.gitignore` file template in the `workspace` template.
+
+- [#128](https://github.com/jakubmazanec/js-tools/pull/128) [`8426765`](https://github.com/jakubmazanec/js-tools/commit/8426765994c58362b4a05ae81c01ed6d6abe5f86) ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes handling of some specific packages in the `workspace` template (e.g. package with an ESLint
+  config or a changelog package) when their source is located in the same workspace.
+
+- [#128](https://github.com/jakubmazanec/js-tools/pull/128) [`8426765`](https://github.com/jakubmazanec/js-tools/commit/8426765994c58362b4a05ae81c01ed6d6abe5f86) ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes project deployments.
+
+- [#128](https://github.com/jakubmazanec/js-tools/pull/128) [`8426765`](https://github.com/jakubmazanec/js-tools/commit/8426765994c58362b4a05ae81c01ed6d6abe5f86) ([@jakubmazanec](https://github.com/jakubmazanec)) – Adds missing `lodash` and a changelog package dependencies to the `projects/remix-app` and
+  `workspace` template respectively.
+
+- [#128](https://github.com/jakubmazanec/js-tools/pull/128) [`8426765`](https://github.com/jakubmazanec/js-tools/commit/8426765994c58362b4a05ae81c01ed6d6abe5f86) ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes how the command for the build task is generated in the `workspace` package.
+
 ## 2.0.1
 
 ### Patch Changes
