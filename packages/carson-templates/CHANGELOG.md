@@ -1,5 +1,11 @@
 # @jakubmazanec/carson-templates
 
+## 2.1.1
+
+### Patch Changes
+
+- [#130](https://github.com/jakubmazanec/js-tools/pull/130) [`71dc301`](https://github.com/jakubmazanec/js-tools/commit/71dc301dbe16ba90d1a25317ff9f1bf59fafc3f1) ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes project deployments.
+
 ## 2.1.0
 
 ### Minor Changes
