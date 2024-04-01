@@ -250,4 +250,5 @@ web_modules/
 # Project specific files
 
 ## Build folders
+apps/**/build
 packages/**/build

@@ -4,6 +4,7 @@ import semver from 'semver';
 
 import {
   CARSON_PACKAGE_NAME,
+  CHANGELOG_PACKAGE_NAME,
   LINTER_CONFIG_PACKAGE_NAME,
   TEMPLATE_PACKAGE_NAME,
 } from './constants.js';
@@ -36,6 +37,7 @@ export const DEPENDENCY_VERSIONS: Record<string, string> = {
     isCarsonPackageVersionPrerelease ? carsonPackageVersion : `^${carsonPackageVersion}`,
   [TEMPLATE_PACKAGE_NAME]:
     isTemplatesPackageVersionPrerelease ? templatesPackageVersion : `^${templatesPackageVersion}`,
+  [CHANGELOG_PACKAGE_NAME]: '^2.0.0',
   [LINTER_CONFIG_PACKAGE_NAME]: '^3.0.0',
 
   '@changesets/cli': '^2.0.0',
@@ -44,7 +46,7 @@ export const DEPENDENCY_VERSIONS: Record<string, string> = {
   '@remix-run/node': '^2.0.0',
   '@remix-run/react': '^2.0.0',
   '@remix-run/serve': '^2.0.0',
-  '@testing-library/jest-dom': '^5.0.0',
+  '@testing-library/jest-dom': '^6.0.0',
   '@testing-library/react': '^14.0.0',
   '@types/lodash': '^4.0.0',
   '@types/node': '^20.0.0',

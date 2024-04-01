@@ -4,9 +4,10 @@ strategy: merge
 ---
 <%
 let dependencies = [
+  CARSON_PACKAGE_NAME,
+  CHANGELOG_PACKAGE_NAME,
+  TEMPLATE_PACKAGE_NAME,
   '@changesets/cli',
-  '@jakubmazanec/carson',
-  '@jakubmazanec/carson-templates',
   '@types/node',
   'del-cli',
   'patch-package',
@@ -44,9 +45,14 @@ let packageJson = lodash.merge(
   workspace.config.overrides?.packageJson ?? {},
 );
 
-if (workspace.projects.find((project) => project.name === '@jakubmazanec/carson')) {
+if (workspace.projects.find((project) => project.name === CARSON_PACKAGE_NAME)) {
   packageJson.scripts.prepare +=
-    ' && turbo run build --no-daemon --filter=@jakubmazanec/carson --filter=@jakubmazanec/carson-templates';
+    ` && turbo run build --no-daemon --filter=${CARSON_PACKAGE_NAME}`;
+}
+
+if (workspace.projects.find((project) => project.name === TEMPLATE_PACKAGE_NAME)) {
+  packageJson.scripts.prepare +=
+    ` && turbo run build --no-daemon --filter=${TEMPLATE_PACKAGE_NAME}`;
 }
 
 packageJson.scripts.prepare += ' && carson update workspace';
