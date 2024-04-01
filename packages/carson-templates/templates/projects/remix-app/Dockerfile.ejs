@@ -8,7 +8,6 @@ let lines = [];
 for (let project of workspace.projects) {
   if (project.config.deployment?.appName) {
     lines.push(`COPY --from=build /workspace/${project.relativePath}/build /workspace/${project.relativePath}/build`);
-    lines.push(`COPY --from=build /workspace/${project.relativePath}/node_modules /workspace/${project.relativePath}/node_modules`);
     lines.push(`COPY --from=build /workspace/${project.relativePath}/package.json /workspace/${project.relativePath}/package.json`);
   } else {
     if (project.packageJson.bin) {
@@ -16,7 +15,6 @@ for (let project of workspace.projects) {
     }
 
     lines.push(`COPY --from=build /workspace/${project.relativePath}/build /workspace/${project.relativePath}/build`);
-    lines.push(`COPY --from=build /workspace/${project.relativePath}/node_modules /workspace/${project.relativePath}/node_modules`);
     lines.push(`COPY --from=build /workspace/${project.relativePath}/package.json /workspace/${project.relativePath}/package.json`);
   }
 }
@@ -53,15 +51,15 @@ COPY --link . .
 # Build
 RUN npm run build
 
-# Remove development dependencies
-RUN npm prune --omit=dev
-
 # Final stage for app image
 FROM base
 
 # Copy files
-COPY --from=build /workspace/node_modules /workspace/node_modules
+COPY package-lock.json package.json /workspace/
 <%- lines.join('\n') %>
+
+# Install dependencies
+RUN npm ci --omit=dev --ignore-scripts
 
 # Start the server
 WORKDIR /workspace/apps/somewhere
