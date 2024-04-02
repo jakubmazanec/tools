@@ -101,13 +101,13 @@ const config: eslint.Linter.Config['rules'] = {
   'react/no-access-state-in-setstate': 'error', // reports when this.state is accessed within setState
   'react/no-adjacent-inline-elements': 'off', // prevent adjacent inline elements not separated by whitespace
   'react/no-array-index-key': 'error', // prevent usage of Array index in keys
-  'react/no-arrow-function-lifecycle': 'error', // lifecycle methods should be methods on the prototype, not class fields
+  'react/no-arrow-function-lifecycle': 'off', // lifecycle methods should be methods on the prototype, not class fields
   'react/no-children-prop': 'error', // prevent passing of children as props
   'react/no-danger': 'warn', // prevent usage of dangerous JSX props
   'react/no-danger-with-children': 'error', // report when a DOM element is using both children and dangerouslySetInnerHTML
   'react/no-deprecated': 'error', // prevent usage of deprecated methods, including component lifecycle methods
-  'react/no-did-mount-set-state': 'error', // prevent usage of setState in componentDidMount
-  'react/no-did-update-set-state': 'error', // prevent usage of setState in componentDidUpdate
+  'react/no-did-mount-set-state': 'off', // prevent usage of setState in componentDidMount
+  'react/no-did-update-set-state': 'off', // prevent usage of setState in componentDidUpdate
   'react/no-direct-mutation-state': 'error', // prevent direct mutation of this.state
   'react/no-find-dom-node': 'error', // prevent usage of findDOMNode
   'react/no-invalid-html-attribute': 'off', // forbid attribute with an invalid values
@@ -125,21 +125,21 @@ const config: eslint.Linter.Config['rules'] = {
   'react/no-unknown-property': 'warn', // prevent usage of unknown DOM property
   'react/no-unsafe': 'error', // prevent usage of unsafe lifecycle methods
   'react/no-unstable-nested-components': 'error', // prevent creating unstable components inside components
-  'react/no-unused-class-component-methods': 'error', // prevent declaring unused methods of component class
+  'react/no-unused-class-component-methods': 'off', // prevent declaring unused methods of component class
   'react/no-unused-prop-types': 'off', // prevent definitions of unused prop types
   'react/no-unused-state': 'error', // prevent definitions of unused state fields
-  'react/no-will-update-set-state': 'error', // prevent usage of setState in componentWillUpdate
-  'react/prefer-es6-class': 'error', // enforce ES5 or ES6 class for React Components
+  'react/no-will-update-set-state': 'off', // prevent usage of setState in componentWillUpdate
+  'react/prefer-es6-class': 'off', // enforce ES5 or ES6 class for React Components
   'react/prefer-exact-props': 'off', // prefer exact proptype definitions
   'react/prefer-read-only-props': 'off', // require read-only props
   'react/prefer-stateless-function': 'error', // enforce stateless React Components to be written as a pure function
   'react/react-in-jsx-scope': 'off', // prevent missing React when using JSX
   'react/require-default-props': 'off', // enforce a defaultProps definition for every prop that is not a required prop
   'react/require-optimization': 'off', // enforce React components to have a shouldComponentUpdate method
-  'react/require-render-return': 'error', // enforce ES5 or ES6 class for returning value in render function
+  'react/require-render-return': 'off', // enforce ES5 or ES6 class for returning value in render function
   'react/self-closing-comp': 'error', // prevent extra closing tags for components without children
   'react/sort-comp': [
-    'warn',
+    'off',
     {
       order: ['statics', 'properties', 'lifecycle', 'everything-else', 'handlers', 'renderers'],
       groups: {
@@ -168,7 +168,7 @@ const config: eslint.Linter.Config['rules'] = {
   ], // enforce component methods order
   'react/sort-default-props': 'off', // enforce defaultProps declarations alphabetical sorting
   'react/sort-prop-types': 'off', // enforce propTypes declarations alphabetical sorting
-  'react/state-in-constructor': ['warn', 'never'], // state initialization in an ES6 class component should be in a constructor
+  'react/state-in-constructor': ['off', 'never'], // state initialization in an ES6 class component should be in a constructor
   'react/static-property-placement': 'off', // defines where React component static properties should be positioned
   'react/style-prop-object': 'warn', // enforce style prop value is an object
   'react/void-dom-elements-no-children': 'error', // prevent passing of children to void DOM elements (e.g. <br />)

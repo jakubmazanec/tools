@@ -29,7 +29,6 @@ let testingLibraryRules = Object.entries(testingLibraryRulesConfig!).map(([ruleN
 let typescriptRules = Object.entries(typescriptRulesConfig!).map(([ruleName]) => ruleName);
 let unicornRules = Object.entries(unicornRulesConfig!).map(([ruleName]) => ruleName);
 
-// eslint-disable-next-line @typescript-eslint/require-array-sort-compare -- in this case it doesn't matter
 let usedRules = [
   ...a11yRules,
   ...eslintRules,
