@@ -1,5 +1,12 @@
 # @jakubmazanec/eslint-config
 
+## 3.1.0
+
+### Minor Changes
+
+- [#131](https://github.com/jakubmazanec/js-tools/pull/131) [`7db6b89`](https://github.com/jakubmazanec/js-tools/commit/7db6b896d4b0be35eb4001b1ed969374f5485c82) ([@jakubmazanec](https://github.com/jakubmazanec)) – Rules that check class components were turned off; only function components should be used, but
+  there currently isn't rule or plugin that enforces that without false positives.
+
 ## 3.0.1
 
 ### Patch Changes
