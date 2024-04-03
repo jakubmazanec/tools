@@ -1,0 +1,19 @@
+import {Canvas, Meta} from '@storybook/blocks';
+
+import * as ButtonStories from './Button.stories.tsx';
+
+<Meta of={ButtonStories} />
+
+# Button
+
+A button.
+
+<Canvas of={ButtonStories.Solid} />
+
+<Canvas of={ButtonStories.Outline} />
+
+<Canvas of={ButtonStories.Text} />
+
+## With icon
+
+<Canvas of={ButtonStories.WithIcon} />

@@ -1,0 +1,102 @@
+import {type Simplify} from '@jakubmazanec/ts-utils';
+
+import {type useButtonTheme} from '../components/Button.js';
+import {type useCardTheme} from '../components/Card.js';
+import {type useCheckboxTheme} from '../components/Checkbox.js';
+import {type useCheckboxFieldTheme} from '../components/CheckboxField.js';
+import {type useComboboxTheme} from '../components/Combobox.js';
+import {type useComboboxOptionTheme} from '../components/ComboboxOption.js';
+import {type useContainerTheme} from '../components/Container.js';
+import {type useDescriptionTheme} from '../components/Description.js';
+import {type useDialogTheme} from '../components/Dialog.js';
+import {type useDialogPanelTheme} from '../components/DialogPanel.js';
+import {type useDialogTitleTheme} from '../components/DialogTitle.js';
+import {type useErrorTheme} from '../components/Error.js';
+import {type useFieldTheme} from '../components/Field.js';
+import {type useFieldsetTheme} from '../components/Fieldset.js';
+import {type useFormTheme} from '../components/Form.js';
+import {type useIconTheme} from '../components/Icon.js';
+import {type useInputTheme} from '../components/Input.js';
+import {type useLabelTheme} from '../components/Label.js';
+import {type useLegendTheme} from '../components/Legend.js';
+import {type useListboxTheme} from '../components/Listbox.js';
+import {type useListboxOptionTheme} from '../components/ListboxOption.js';
+import {type useMenuTheme} from '../components/Menu.js';
+import {type useMenuButtonTheme} from '../components/MenuButton.js';
+import {type useMenuHeadingTheme} from '../components/MenuHeading.js';
+import {type useMenuItemTheme} from '../components/MenuItem.js';
+import {type useMenuItemsTheme} from '../components/MenuItems.js';
+import {type useMenuSectionTheme} from '../components/MenuSection.js';
+import {type useMenuSeparatorTheme} from '../components/MenuSeparator.js';
+import {type usePopoverTheme} from '../components/Popover.js';
+import {type usePopoverBackdropTheme} from '../components/PopoverBackdrop.js';
+import {type usePopoverButtonTheme} from '../components/PopoverButton.js';
+import {type usePopoverGroupTheme} from '../components/PopoverGroup.js';
+import {type usePopoverPanelTheme} from '../components/PopoverPanel.js';
+import {type useRadioTheme} from '../components/Radio.js';
+import {type useRadioFieldTheme} from '../components/RadioField.js';
+import {type useRadioGroupTheme} from '../components/RadioGroup.js';
+import {type useSpinnerTheme} from '../components/Spinner.js';
+import {type useTableTheme} from '../components/Table.js';
+import {type useTableBodyTheme} from '../components/TableBody.js';
+import {type useTableCaptionTheme} from '../components/TableCaption.js';
+import {type useTableCellTheme} from '../components/TableCell.js';
+import {type useTableFootTheme} from '../components/TableFoot.js';
+import {type useTableHeadTheme} from '../components/TableHead.js';
+import {type useTableHeaderTheme} from '../components/TableHeader.js';
+import {type useTableRowTheme} from '../components/TableRow.js';
+import {type useTextTheme} from '../components/Text.js';
+import {type useTextareaTheme} from '../components/Textarea.js';
+import {type ClassName, type ComponentTheme} from './internals.js';
+
+export type Theme = Simplify<
+  ComponentTheme<typeof useButtonTheme, {outputComponentName: true}> &
+    ComponentTheme<typeof useCardTheme, {outputComponentName: true}> &
+    ComponentTheme<typeof useCheckboxFieldTheme, {outputComponentName: true}> &
+    ComponentTheme<typeof useCheckboxTheme, {outputComponentName: true}> &
+    ComponentTheme<typeof useComboboxOptionTheme, {outputComponentName: true}> &
+    ComponentTheme<typeof useComboboxTheme, {outputComponentName: true}> &
+    ComponentTheme<typeof useContainerTheme, {outputComponentName: true}> &
+    ComponentTheme<typeof useDescriptionTheme, {outputComponentName: true}> &
+    ComponentTheme<typeof useDialogPanelTheme, {outputComponentName: true}> &
+    ComponentTheme<typeof useDialogTheme, {outputComponentName: true}> &
+    ComponentTheme<typeof useDialogTitleTheme, {outputComponentName: true}> &
+    ComponentTheme<typeof useErrorTheme, {outputComponentName: true}> &
+    ComponentTheme<typeof useFieldsetTheme, {outputComponentName: true}> &
+    ComponentTheme<typeof useFieldTheme, {outputComponentName: true}> &
+    ComponentTheme<typeof useFormTheme, {outputComponentName: true}> &
+    ComponentTheme<typeof useIconTheme, {outputComponentName: true}> &
+    ComponentTheme<typeof useInputTheme, {outputComponentName: true}> &
+    ComponentTheme<typeof useLabelTheme, {outputComponentName: true}> &
+    ComponentTheme<typeof useLegendTheme, {outputComponentName: true}> &
+    ComponentTheme<typeof useListboxOptionTheme, {outputComponentName: true}> &
+    ComponentTheme<typeof useListboxTheme, {outputComponentName: true}> &
+    ComponentTheme<typeof useMenuButtonTheme, {outputComponentName: true}> &
+    ComponentTheme<typeof useMenuHeadingTheme, {outputComponentName: true}> &
+    ComponentTheme<typeof useMenuItemsTheme, {outputComponentName: true}> &
+    ComponentTheme<typeof useMenuItemTheme, {outputComponentName: true}> &
+    ComponentTheme<typeof useMenuSectionTheme, {outputComponentName: true}> &
+    ComponentTheme<typeof useMenuSeparatorTheme, {outputComponentName: true}> &
+    ComponentTheme<typeof useMenuTheme, {outputComponentName: true}> &
+    ComponentTheme<typeof usePopoverBackdropTheme, {outputComponentName: true}> &
+    ComponentTheme<typeof usePopoverButtonTheme, {outputComponentName: true}> &
+    ComponentTheme<typeof usePopoverGroupTheme, {outputComponentName: true}> &
+    ComponentTheme<typeof usePopoverPanelTheme, {outputComponentName: true}> &
+    ComponentTheme<typeof usePopoverTheme, {outputComponentName: true}> &
+    ComponentTheme<typeof useRadioFieldTheme, {outputComponentName: true}> &
+    ComponentTheme<typeof useRadioGroupTheme, {outputComponentName: true}> &
+    ComponentTheme<typeof useRadioTheme, {outputComponentName: true}> &
+    ComponentTheme<typeof useSpinnerTheme, {outputComponentName: true}> &
+    ComponentTheme<typeof useTableBodyTheme, {outputComponentName: true}> &
+    ComponentTheme<typeof useTableCaptionTheme, {outputComponentName: true}> &
+    ComponentTheme<typeof useTableCellTheme, {outputComponentName: true}> &
+    ComponentTheme<typeof useTableFootTheme, {outputComponentName: true}> &
+    ComponentTheme<typeof useTableHeaderTheme, {outputComponentName: true}> &
+    ComponentTheme<typeof useTableHeadTheme, {outputComponentName: true}> &
+    ComponentTheme<typeof useTableRowTheme, {outputComponentName: true}> &
+    ComponentTheme<typeof useTableTheme, {outputComponentName: true}> &
+    ComponentTheme<typeof useTextareaTheme, {outputComponentName: true}> &
+    ComponentTheme<typeof useTextTheme, {outputComponentName: true}> & {
+      merge: (...rest: ClassName[]) => string;
+    }
+>;
