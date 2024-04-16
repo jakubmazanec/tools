@@ -25,6 +25,9 @@ export function runCreateWorkspace({workspacePath, templateId, args}: CreateWork
 
       observer.next('Updating the new workspace');
 
+      // if the workspace doesn't have config with a template ID, it's on purpose, but it's still needed for the next update, so we'll add it manually
+      workspace.config.template ??= templateId;
+
       await workspace.update({args});
     })()
       .then(() => {

@@ -2,10 +2,10 @@ import {z} from 'zod';
 
 export const carsonTemplateConfigSchema = z
   .object({
-    disallowMultiProjectWorkspace: z.boolean().optional(),
-    disallowSingleProjectWorkspace: z.boolean().optional(),
+    // disallowMultiProjectWorkspace: z.boolean().optional(),
+    // disallowSingleProjectWorkspace: z.boolean().optional(),
 
-    // TODO: add extends property to allow reuisng template files from another carson template
+    autoEject: z.boolean().optional(),
   })
   .strict();
 

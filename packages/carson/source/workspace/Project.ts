@@ -11,6 +11,7 @@ import {
   PROJECT_SNAPSHOT_FILENAME,
 } from '../constants.js';
 import {applyTemplateRenders} from '../template/applyTemplateRenders.js';
+import {readCarsonTemplate} from '../template/internals.js';
 import {renderCarsonTemplate} from '../template/renderCarsonTemplate.js';
 import {type ProjectConfig, projectConfigSchema} from './ProjectConfig.js';
 import {type ProjectCreateOptions} from './ProjectCreateOptions.js';
@@ -117,8 +118,9 @@ export class Project<M extends boolean = true> {
       }
     }
 
+    let template = await readCarsonTemplate(templateId);
     let templateRenders = await renderCarsonTemplate({
-      templateId,
+      template,
       templateData: {
         workspace,
         project,
@@ -129,11 +131,16 @@ export class Project<M extends boolean = true> {
     await applyTemplateRenders({
       templateRenders,
       targetPath: project.path,
-      snapshotPath: path.join(project.path, CARSON_CONFIG_DIRECTORY, PROJECT_SNAPSHOT_FILENAME),
+      snapshotPath:
+        template.config.autoEject || !workspace.config.template ?
+          undefined
+        : path.join(project.path, CARSON_CONFIG_DIRECTORY, PROJECT_SNAPSHOT_FILENAME),
       ignoreStrategies: ['check'],
     });
 
-    await saveProjectConfig({projectPath: project.path, projectConfig: {template: templateId}});
+    if (!template.config.autoEject && workspace.config.template) {
+      await saveProjectConfig({projectPath: project.path, projectConfig: {template: templateId}});
+    }
 
     await project.read();
 
@@ -242,8 +249,9 @@ export class Project<M extends boolean = true> {
       });
     }
 
+    let template = await readCarsonTemplate(this.config.template);
     let templateRenders = await renderCarsonTemplate({
-      templateId: this.config.template,
+      template,
       templateData: {
         workspace: this.workspace,
         project: this,
@@ -254,7 +262,10 @@ export class Project<M extends boolean = true> {
     await applyTemplateRenders({
       templateRenders,
       targetPath: this.path,
-      snapshotPath: path.join(this.path, CARSON_CONFIG_DIRECTORY, PROJECT_SNAPSHOT_FILENAME),
+      snapshotPath:
+        template.config.autoEject || !this.workspace.config.template ?
+          undefined
+        : path.join(this.path, CARSON_CONFIG_DIRECTORY, PROJECT_SNAPSHOT_FILENAME),
       ignoreStrategies: ['create'],
     });
 

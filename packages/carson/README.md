@@ -242,6 +242,20 @@ Creates new workspace.
 | --path     | Path where the workspace should be created. A relative path is appended to the current working directory. |
 | --template | ID of the Carson template used to create the workspace.                                                   |
 
+#### `eject [<options>]`
+
+> ⚠️ Upcoming feature!
+
+Ejects Carson from a workspace and all of its projects. That means all `.carson` directories (that
+contain Carson config and snapshot files) will be deleted.
+
+You can still add projects to the workspace that has had Carson ejected, but those projects also
+won't contain `.carson` folder.
+
+| Option | Description                                                                                        |
+| ------ | -------------------------------------------------------------------------------------------------- |
+| --path | Path where the workspace is located. A relative path is appended to the current working directory. |
+
 ### Carson templates
 
 Carson template is just a directory containing `*.ejs` files and `config.json` file. The purpose of
@@ -355,7 +369,9 @@ Global variables available during the rendering:
 
 #### Carson template config
 
-Currently, the config isn't used for anything yet.
+| Option    | Type     | Description                                                              |
+| --------- | -------- | ------------------------------------------------------------------------ |
+| autoEject | boolean? | If set to `true`, Carson automatically ejects after using this template. |
 
 ### Carson philosophy
 

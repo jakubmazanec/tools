@@ -2,17 +2,13 @@ import {pathToPosixPath} from '@jakubmazanec/fs-utils';
 import _ from 'lodash';
 import path from 'node:path';
 
-import {
-  importCarsonTemplate,
-  parseCarsonTemplateId,
-  readCarsonTemplate,
-  resolveModule,
-} from './internals.js';
+import {type CarsonTemplate} from './CarsonTemplate.js';
+import {importCarsonTemplate, parseCarsonTemplateId, resolveModule} from './internals.js';
 import {type TemplateData} from './TemplateData.js';
 import {type TemplateRenders} from './TemplateRenders.js';
 
 export type RenderCarsonTemplateOptions = {
-  templateId: string;
+  template: CarsonTemplate;
   templateData: TemplateData;
 };
 
@@ -22,13 +18,12 @@ export type RenderCarsonTemplateOptions = {
 export async function renderCarsonTemplate(
   options: RenderCarsonTemplateOptions,
 ): Promise<TemplateRenders> {
-  let [moduleId] = parseCarsonTemplateId(options.templateId);
+  let [moduleId] = parseCarsonTemplateId(options.template.id);
   let modulePath = await resolveModule(moduleId);
-  let template = await readCarsonTemplate(options.templateId);
-  let templateModule = await importCarsonTemplate(options.templateId);
+  let templateModule = await importCarsonTemplate(options.template.id);
   let templateRenders: TemplateRenders = [];
 
-  for (let file of template.files) {
+  for (let file of options.template.files) {
     templateRenders.push(
       ...(
         await file.render(
