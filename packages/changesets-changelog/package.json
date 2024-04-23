@@ -1,6 +1,6 @@
 {
   "name": "@jakubmazanec/changesets-changelog",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Changelog for projects using Changesets.",
   "repository": {
     "type": "git",
@@ -31,7 +31,7 @@
   "devDependencies": {
     "@changesets/parse": "^0.4.0",
     "@changesets/types": "^6.0.0",
-    "@jakubmazanec/eslint-config": "^3.0.0",
+    "@jakubmazanec/eslint-config": "^3.2.0",
     "@types/lodash": "^4.14.202",
     "@types/node": "^20.8.5",
     "@vitest/coverage-v8": "^1.3.1",

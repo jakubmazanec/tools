@@ -1,6 +1,6 @@
 {
   "name": "@jakubmazanec/template",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "TypeScript-first library for working with templates using EJS and Zod.",
   "repository": {
     "type": "git",
@@ -38,7 +38,7 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@jakubmazanec/eslint-config": "^3.0.0",
+    "@jakubmazanec/eslint-config": "^3.2.0",
     "@types/ejs": "^3.1.5",
     "@types/fs-extra": "^11.0.4",
     "@types/lodash": "^4.14.202",

@@ -1,6 +1,6 @@
 {
   "name": "@jakubmazanec/carson",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Tool for managing workspace and project configuration.",
   "repository": {
     "type": "git",
@@ -55,7 +55,7 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@jakubmazanec/eslint-config": "^3.0.0",
+    "@jakubmazanec/eslint-config": "^3.2.0",
     "@types/fs-extra": "^11.0.4",
     "@types/lodash": "^4.14.202",
     "@types/micromatch": "^4.0.6",

@@ -1,5 +1,11 @@
 # @jakubmazanec/eslint-config
 
+## 3.2.0
+
+### Minor Changes
+
+- [#133](https://github.com/jakubmazanec/js-tools/pull/133) [`cdb028c`](https://github.com/jakubmazanec/js-tools/commit/cdb028c85fdc4057023cd856e1afb957019a981d) ([@jakubmazanec](https://github.com/jakubmazanec)) – Adds support for Storybook, so its stories and config files are linted correctly.
+
 ## 3.1.0
 
 ### Minor Changes

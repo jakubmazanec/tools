@@ -1,6 +1,6 @@
 {
   "name": "@jakubmazanec/carson-templates",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "description": "Collection of Carson templates.",
   "repository": {
     "type": "git",
@@ -34,8 +34,8 @@
     "semver": "^7.6.0"
   },
   "devDependencies": {
-    "@jakubmazanec/carson": "^1.0.0",
-    "@jakubmazanec/eslint-config": "^3.0.0",
+    "@jakubmazanec/carson": "^1.1.0",
+    "@jakubmazanec/eslint-config": "^3.2.0",
     "@jakubmazanec/fs-utils": "^0.2.0",
     "@types/fs-extra": "^11.0.4",
     "@types/lodash": "^4.14.202",

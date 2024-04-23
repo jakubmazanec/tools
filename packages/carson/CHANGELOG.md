@@ -1,5 +1,15 @@
 # @jakubmazanec/carson
 
+## 1.1.0
+
+### Minor Changes
+
+- [#133](https://github.com/jakubmazanec/js-tools/pull/133) [`cdb028c`](https://github.com/jakubmazanec/js-tools/commit/cdb028c85fdc4057023cd856e1afb957019a981d) ([@jakubmazanec](https://github.com/jakubmazanec)) – Adds new Carson template config option `autoEject`. If set to `true`, Carson automatically ejects after using this template.
+
+### Patch Changes
+
+- [#133](https://github.com/jakubmazanec/js-tools/pull/133) [`cdb028c`](https://github.com/jakubmazanec/js-tools/commit/cdb028c85fdc4057023cd856e1afb957019a981d) ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes test coverage settings.
+
 ## 1.0.1
 
 ### Patch Changes

@@ -1,5 +1,25 @@
 # @jakubmazanec/carson-templates
 
+## 2.2.0
+
+### Minor Changes
+
+- [#133](https://github.com/jakubmazanec/js-tools/pull/133) [`cdb028c`](https://github.com/jakubmazanec/js-tools/commit/cdb028c85fdc4057023cd856e1afb957019a981d) ([@jakubmazanec](https://github.com/jakubmazanec)) – Adds a new template `projects/react-library`, with integrated React and Storybook support.
+
+### Patch Changes
+
+- [#133](https://github.com/jakubmazanec/js-tools/pull/133) [`cdb028c`](https://github.com/jakubmazanec/js-tools/commit/cdb028c85fdc4057023cd856e1afb957019a981d) ([@jakubmazanec](https://github.com/jakubmazanec)) – Removes invalid options from Carson template configs, which were not used for anything.
+
+- [#133](https://github.com/jakubmazanec/js-tools/pull/133) [`cdb028c`](https://github.com/jakubmazanec/js-tools/commit/cdb028c85fdc4057023cd856e1afb957019a981d) ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes missing warning notices in some generated files.
+
+- [#133](https://github.com/jakubmazanec/js-tools/pull/133) [`cdb028c`](https://github.com/jakubmazanec/js-tools/commit/cdb028c85fdc4057023cd856e1afb957019a981d) ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes Turborepo caching settings in the `workspace` template.
+
+- [#133](https://github.com/jakubmazanec/js-tools/pull/133) [`cdb028c`](https://github.com/jakubmazanec/js-tools/commit/cdb028c85fdc4057023cd856e1afb957019a981d) ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes hard-coded package names in the `workspace` template.
+
+- [#133](https://github.com/jakubmazanec/js-tools/pull/133) [`cdb028c`](https://github.com/jakubmazanec/js-tools/commit/cdb028c85fdc4057023cd856e1afb957019a981d) ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes test coverage settings.
+
+- [#133](https://github.com/jakubmazanec/js-tools/pull/133) [`cdb028c`](https://github.com/jakubmazanec/js-tools/commit/cdb028c85fdc4057023cd856e1afb957019a981d) ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes test coverage settings in `projects/carson-templates`, `projects/changesets-changelog`, `projects/library` and `projects/remix-app`.
+
 ## 2.1.1
 
 ### Patch Changes
