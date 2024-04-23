@@ -1,0 +1,13 @@
+---
+to: '.storybook/tailwindConfig.ts'
+strategy: ensure
+---
+import {type Config} from 'tailwindcss';
+
+export const tailwindConfig = {
+  content: ['./{.storybook,source,stories}/**/*.{js,jsx,ts,tsx}'],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+} satisfies Config;

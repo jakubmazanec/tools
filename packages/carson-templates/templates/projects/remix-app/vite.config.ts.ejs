@@ -34,6 +34,9 @@ export default defineConfig(
       test: {
         environment: 'happy-dom',
         setupFiles: ['tests/setup.ts'],
+        coverage: {
+          include: ['app/**'],
+        },
       },
     },
     <%- JSON.stringify(project.config.overrides?.viteConfig ?? {}, null, 2) %>,

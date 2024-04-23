@@ -1,0 +1,85 @@
+---
+to: 'package.json'
+strategy: merge
+---
+<%
+let files = [BUILD_DIRECTORY, SOURCE_DIRECTORY];
+
+if (project.packageJson.bin) {
+  files.push('bin');
+}
+
+files.sort();
+
+let dependencies = [
+  LINTER_CONFIG_PACKAGE_NAME,
+  '@chromatic-com/storybook',
+  '@storybook/addon-essentials',
+  '@storybook/addon-interactions',
+  '@storybook/addon-links',
+  '@storybook/blocks',
+  '@storybook/react',
+  '@storybook/react-vite',
+  '@storybook/test',
+  '@testing-library/jest-dom',
+  '@testing-library/react',
+  '@types/lodash',
+  '@types/node',
+  '@types/react',
+  '@types/react-dom',
+  '@vitest/coverage-v8',
+  'autoprefixer',
+  'concurrently',
+  'del-cli',
+  'esbuild',
+  'eslint',
+  'happy-dom',
+  'lodash',
+  'prettier',
+  'prettier-plugin-packagejson',
+  'prettier-plugin-tailwindcss',
+  'react',
+  'react-dom',
+  'storybook',
+  'tailwindcss',
+  'typedoc',
+  'typedoc-plugin-markdown',
+  'typescript',
+  'vitest',
+].filter((dependency) => {
+  return !Object.keys(project.packageJson.dependencies ?? {}).some((key) => key === dependency); // if a project package.json already contains dependency, we don't need to add it
+});
+let developmentDependencies = getDependencies(dependencies, workspace);
+let packageJson = lodash.merge(
+  {
+    repository: {
+      type: 'git',
+      directory: project.relativePath,
+    },
+    type: 'module',
+    exports: `./${BUILD_DIRECTORY}/main.js`,
+    files,
+    scripts: {
+      build: `del-cli ${BUILD_DIRECTORY} tsconfig.tsbuildinfo && ${BUILD_TO_ESM_COMMAND} && tsc && storybook build`,
+      clean: `del-cli coverage ${BUILD_DIRECTORY} *.tsbuildinfo`,
+      develop: `concurrently "${BUILD_TO_ESM_COMMAND} --watch" "tsc --watch" "storybook dev -p 6006 --no-open"`,
+      document: 'del-cli docs && typedoc --options typedoc.config.cjs',
+      format: FORMAT_COMMAND,
+      lint: 'eslint .',
+      test: `del-cli coverage && ${TEST_COMMAND}`,
+      typecheck: 'tsc --project tsconfig.typecheck.json',
+    },
+    devDependencies: developmentDependencies,
+    peerDependencies: {
+      react: '18.x',
+      'react-dom': '18.x',
+    },
+    packageManager: 'npm@10.1.0',
+    engines: {
+      node: '^20.8.0',
+    },
+  },
+  project.config.overrides?.packageJson ?? {},
+);
+-%>
+<%- JSON.stringify(packageJson) %>

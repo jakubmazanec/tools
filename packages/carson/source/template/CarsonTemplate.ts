@@ -12,6 +12,9 @@ export type CarsonTemplate = {
   id: string;
 
   /** Carson template name. */
+  id: string;
+
+  /** Carson template name. */
   name: string;
 
   /** Carson template config. */

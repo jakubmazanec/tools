@@ -20,6 +20,7 @@ import {type ProjectOptions} from './ProjectOptions.js';
 import {type ProjectUpdateOptions} from './ProjectUpdateOptions.js';
 import {saveProjectConfig} from './saveProjectConfig.js';
 import {type Workspace} from './Workspace.js';
+import {readCarsonTemplate} from '../template/internals.js';
 
 /**
  * Project represent a self-contained piece of software (e.g. a package, or an app) that is part of a {@link Workspace}. Currently only Node.js projects are supported.
