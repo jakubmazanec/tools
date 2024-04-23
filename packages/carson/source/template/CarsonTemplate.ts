@@ -8,6 +8,9 @@ import {type templateDataSchema} from './TemplateData.js';
  * Carson template.
  */
 export type CarsonTemplate = {
+  /** Carson template ID. */
+  id: string;
+
   /** Carson template name. */
   name: string;
 

@@ -36,7 +36,12 @@ const config: eslint.Linter.Config['rules'] = {
     {
       devDependencies: [
         `**/*.test.${JS_EXTENSIONS_GLOB_PART}`,
+        `**/*.tests.${JS_EXTENSIONS_GLOB_PART}`,
+        `**/*.story.${JS_EXTENSIONS_GLOB_PART}`,
+        `**/*.stories.${JS_EXTENSIONS_GLOB_PART}`,
+        `./.storybook/**/*.${JS_EXTENSIONS_GLOB_PART}`,
         `tests/**/*.${JS_EXTENSIONS_GLOB_PART}`,
+        `stories/**/*.${JS_EXTENSIONS_GLOB_PART}`,
         `tools/**/*.${JS_EXTENSIONS_GLOB_PART}`,
         `./*.${JS_EXTENSIONS_GLOB_PART}`,
       ],

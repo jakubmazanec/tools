@@ -27,6 +27,7 @@ export async function readCarsonTemplate(templateId: string): Promise<CarsonTemp
       dot: true,
     });
     let carsonTemplate: CarsonTemplate = {
+      id: templateId,
       name: templateName,
       config: templateConfig,
       files: [],

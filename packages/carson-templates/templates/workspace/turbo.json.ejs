@@ -46,13 +46,13 @@ let turboConfig = {
     '.eslintrc.cjs',
     '.prettierignore',
     'prettier.config.js',
-    'tsconfig.options.json',
+    'tsconfig.json',
     'tsconfig.typecheck.json',
   ],
 };
 
-if (workspace.projects.find((project) => project.name === '@jakubmazanec/eslint-config')) {
-  turboConfig.pipeline.lint.dependsOn = ['@jakubmazanec/eslint-config#build', '^build', 'codegen'];
+if (workspace.projects.find((project) => project.name === LINTER_CONFIG_PACKAGE_NAME)) {
+  turboConfig.pipeline.lint.dependsOn = [`${LINTER_CONFIG_PACKAGE_NAME}#build`, '^build', 'codegen'];
 }
 -%>
 <%- JSON.stringify(turboConfig, null, 2) %>

@@ -34,6 +34,9 @@ export function runCreateProject({
 
       observer.next('Updating the new project');
 
+      // if the project doesn't have config with a template ID, it's on purpose, but it's still needed for the next update, so we'll add it manually
+      project.config.template ??= templateId;
+
       await project.update({args});
     })()
       .then(() => {

@@ -22,7 +22,7 @@ import {type TemplateRenders} from './TemplateRenders.js';
 export type ApplyTemplateRendersOptions = {
   templateRenders: TemplateRenders;
   targetPath: string;
-  snapshotPath: string;
+  snapshotPath?: string | undefined;
   ignoreStrategies: string[];
 };
 
@@ -39,7 +39,7 @@ export async function applyTemplateRenders({
   await prettier.clearConfigCache();
 
   // first, we read the existing snapshots and use them to undo previous changes
-  if (await fs.pathExists(snapshotPath)) {
+  if (snapshotPath && (await fs.pathExists(snapshotPath))) {
     let templateRenderSnapshots = await loadTemplateRenderSnapshots(snapshotPath);
 
     for (let templateRenderSnapshot of templateRenderSnapshots) {
@@ -135,7 +135,9 @@ export async function applyTemplateRenders({
     }
   }
 
-  await fs.ensureDir(path.join(targetPath, CARSON_CONFIG_DIRECTORY));
+  if (snapshotPath) {
+    await fs.ensureDir(path.join(targetPath, CARSON_CONFIG_DIRECTORY));
 
-  await saveTemplateRenderSnapshots(templateRenders, snapshotPath);
+    await saveTemplateRenderSnapshots(templateRenders, snapshotPath);
+  }
 }

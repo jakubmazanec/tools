@@ -69,6 +69,7 @@
     "esbuild": "^0.20.1",
     "eslint": "^8.56.0",
     "ink": "^4.4.1",
+    "lodash": "^4.17.21",
     "prettier": "^3.2.5",
     "prettier-plugin-packagejson": "^2.4.12",
     "react": "^18.2.0",

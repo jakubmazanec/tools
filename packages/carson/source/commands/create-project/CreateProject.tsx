@@ -80,6 +80,25 @@ export function CreateProject({args, workspace}: CreateProjectProps) {
           value: projectPath,
           label: path.relative(workspace.path, projectPath).replace('\\', '/'),
         }));
+
+      if (!possiblePaths.length) {
+        possiblePaths = workspace.projectGlobs
+          .filter((projectGlob) => !ONLY_ONE_STAR_REGEXP.test(projectGlob))
+          .map((projectGlob) => path.join(workspace.path, projectGlob))
+          .map((projectPath) => ({
+            value: projectPath,
+            label: path.relative(workspace.path, projectPath).replace('\\', '/'),
+          }));
+      }
+
+      if (!possiblePaths.length) {
+        possiblePaths = [
+          {
+            value: workspace.path,
+            label: workspace.path,
+          },
+        ];
+      }
     } else {
       possiblePaths = [
         {

@@ -112,7 +112,7 @@ const config: eslint.Linter.Config = {
       parser: '@typescript-eslint/parser',
       parserOptions: {
         project: 'tsconfig.typecheck.json',
-        EXPERIMENTAL_useProjectService: true,
+        // EXPERIMENTAL_useProjectService: true, // TODO: when this is set to `true`, ESLint doesn't use correct `tsconfig.typecheck.json` for files that are directly in the projects folder (e.g. `vite.config.ts` complains that `strictNullcheck` is needed for some rules)
       },
       settings: {
         node: {
@@ -134,7 +134,11 @@ const config: eslint.Linter.Config = {
           {
             devDependencies: [
               `**/*.test.${JS_AND_TS_EXTENSIONS_GLOB_PART}`,
+              `**/*.tests.${JS_AND_TS_EXTENSIONS_GLOB_PART}`,
+              `**/*.stories.${JS_AND_TS_EXTENSIONS_GLOB_PART}`,
+              `./.storybook/**/*.${JS_AND_TS_EXTENSIONS_GLOB_PART}`,
               `tests/**/*.${JS_AND_TS_EXTENSIONS_GLOB_PART}`,
+              `stories/**/*.${JS_AND_TS_EXTENSIONS_GLOB_PART}`,
               `tools/**/*.${JS_AND_TS_EXTENSIONS_GLOB_PART}`,
               `./*.${JS_AND_TS_EXTENSIONS_GLOB_PART}`,
             ],

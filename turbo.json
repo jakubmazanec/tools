@@ -41,7 +41,7 @@
     ".eslintrc.cjs",
     ".prettierignore",
     "prettier.config.js",
-    "tsconfig.options.json",
+    "tsconfig.json",
     "tsconfig.typecheck.json"
   ]
 }
