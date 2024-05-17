@@ -3,7 +3,7 @@
   "pipeline": {
     "build": {
       "dependsOn": ["^build", "codegen"],
-      "outputs": ["build/**"]
+      "outputs": ["build/**", "app/**"]
     },
     "clean": {
       "cache": false
@@ -28,7 +28,7 @@
       "outputs": []
     },
     "test": {
-      "dependsOn": ["^build", "typecheck", "lint"],
+      "dependsOn": ["^build", "codegen", "typecheck", "lint"],
       "outputs": ["coverage/**"]
     },
     "typecheck": {
@@ -36,6 +36,7 @@
       "outputs": []
     }
   },
+  "globalEnv": [],
   "globalDependencies": [
     ".editorconfig",
     ".eslintrc.cjs",

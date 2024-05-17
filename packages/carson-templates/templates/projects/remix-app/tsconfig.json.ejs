@@ -13,11 +13,16 @@ let tsconfig = lodash.merge(
       resolveJsonModule: true,
       rootDir: '.',
     },
-    include: ['./env.d.ts', './*', './app/**/*'],
+    include: project.config.deployment?.dbInstance ? ['./app/**/*', './dbschema/**/*', './*'] : ['./app/**/*', './*'],
     references: getReferences(workspace, project),
   },
   project.config.overrides?.tsconfig ?? {},
 );
+
+// TODO: when EdgeDB client supports `exactOptionalPropertyTypes: true`, remove this line
+if (project.config.deployment?.dbInstance) {
+  tsconfig.compilerOptions.exactOptionalPropertyTypes = false;
+}
 -%>
 //
 // DO NOT EDIT!

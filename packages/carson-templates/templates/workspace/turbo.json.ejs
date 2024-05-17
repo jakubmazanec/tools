@@ -8,7 +8,7 @@ let turboConfig = {
   pipeline: {
     build: {
       dependsOn: ['^build', 'codegen'],
-      outputs: [`${BUILD_DIRECTORY}/**`],
+      outputs: [`${BUILD_DIRECTORY}/**`, 'app/**'],
     },
     clean: {
       cache: false,
@@ -33,7 +33,7 @@ let turboConfig = {
       outputs: [],
     },
     test: {
-      dependsOn: ['^build', 'typecheck', 'lint'],
+      dependsOn: ['^build', 'codegen', 'typecheck', 'lint'],
       outputs: ['coverage/**'],
     },
     typecheck: {
@@ -41,6 +41,7 @@ let turboConfig = {
       outputs: [],
     },
   },
+  globalEnv: workspace.projects.some((project) => project.config.deployment?.dbInstance) ? ['EDGEDB_INSTANCE', 'EDGEDB_BRANCH', 'EDGEDB_SECRET_KEY'] : [],
   globalDependencies: [
     '.editorconfig',
     '.eslintrc.cjs',
@@ -49,6 +50,7 @@ let turboConfig = {
     'tsconfig.json',
     'tsconfig.typecheck.json',
   ],
+
 };
 
 if (workspace.projects.find((project) => project.name === LINTER_CONFIG_PACKAGE_NAME)) {

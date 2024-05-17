@@ -1,0 +1,7 @@
+---
+to: 'edgedb.toml'
+if: <%- Boolean(project.config.deployment?.dbInstance) %>
+strategy: overwrite
+---
+[edgedb]
+server-version = "5.2"
