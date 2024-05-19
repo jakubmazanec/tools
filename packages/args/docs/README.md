@@ -66,7 +66,7 @@ Parsed arguments.
 
 #### Defined in
 
-[args/source/Arguments.ts:10](https://github.com/jakubmazanec/js-tools/blob/cdb028c/packages/args/source/Arguments.ts#L10)
+[args/source/Arguments.ts:10](https://github.com/jakubmazanec/js-tools/blob/4ba566f/packages/args/source/Arguments.ts#L10)
 
 ---
 
@@ -86,7 +86,7 @@ Parsed command.
 
 #### Defined in
 
-[args/source/ArgumentsCommand.ts:4](https://github.com/jakubmazanec/js-tools/blob/cdb028c/packages/args/source/ArgumentsCommand.ts#L4)
+[args/source/ArgumentsCommand.ts:4](https://github.com/jakubmazanec/js-tools/blob/4ba566f/packages/args/source/ArgumentsCommand.ts#L4)
 
 ---
 
@@ -106,7 +106,7 @@ Parsed options.
 
 #### Defined in
 
-[args/source/ArgumentsOptions.ts:79](https://github.com/jakubmazanec/js-tools/blob/cdb028c/packages/args/source/ArgumentsOptions.ts#L79)
+[args/source/ArgumentsOptions.ts:79](https://github.com/jakubmazanec/js-tools/blob/4ba566f/packages/args/source/ArgumentsOptions.ts#L79)
 
 ---
 
@@ -128,7 +128,7 @@ Parsed parameters.
 
 #### Defined in
 
-[args/source/ArgumentsParameters.ts:141](https://github.com/jakubmazanec/js-tools/blob/cdb028c/packages/args/source/ArgumentsParameters.ts#L141)
+[args/source/ArgumentsParameters.ts:141](https://github.com/jakubmazanec/js-tools/blob/4ba566f/packages/args/source/ArgumentsParameters.ts#L141)
 
 ---
 
@@ -147,7 +147,7 @@ Unknown options. Unknown options are always parsed as strings.
 
 #### Defined in
 
-[args/source/ArgumentsUnknownOptions.ts:4](https://github.com/jakubmazanec/js-tools/blob/cdb028c/packages/args/source/ArgumentsUnknownOptions.ts#L4)
+[args/source/ArgumentsUnknownOptions.ts:4](https://github.com/jakubmazanec/js-tools/blob/4ba566f/packages/args/source/ArgumentsUnknownOptions.ts#L4)
 
 ---
 
@@ -159,7 +159,7 @@ Unparsed arguments.
 
 #### Defined in
 
-[args/source/Argv.ts:2](https://github.com/jakubmazanec/js-tools/blob/cdb028c/packages/args/source/Argv.ts#L2)
+[args/source/Argv.ts:2](https://github.com/jakubmazanec/js-tools/blob/4ba566f/packages/args/source/Argv.ts#L2)
 
 ---
 
@@ -178,7 +178,7 @@ Unparsed arguments.
 
 #### Defined in
 
-[args/source/OptionConfig.ts:5](https://github.com/jakubmazanec/js-tools/blob/cdb028c/packages/args/source/OptionConfig.ts#L5)
+[args/source/OptionConfig.ts:5](https://github.com/jakubmazanec/js-tools/blob/4ba566f/packages/args/source/OptionConfig.ts#L5)
 
 ---
 
@@ -193,7 +193,7 @@ Unparsed arguments.
 
 #### Defined in
 
-[args/source/ParameterConfig.ts:3](https://github.com/jakubmazanec/js-tools/blob/cdb028c/packages/args/source/ParameterConfig.ts#L3)
+[args/source/ParameterConfig.ts:3](https://github.com/jakubmazanec/js-tools/blob/4ba566f/packages/args/source/ParameterConfig.ts#L3)
 
 ---
 
@@ -212,7 +212,7 @@ Unparsed arguments.
 
 #### Defined in
 
-[args/source/OptionConfig.ts:40](https://github.com/jakubmazanec/js-tools/blob/cdb028c/packages/args/source/OptionConfig.ts#L40)
+[args/source/OptionConfig.ts:40](https://github.com/jakubmazanec/js-tools/blob/4ba566f/packages/args/source/OptionConfig.ts#L40)
 
 ---
 
@@ -224,7 +224,7 @@ Parser's command configuration.
 
 #### Defined in
 
-[args/source/CommandConfig.ts:2](https://github.com/jakubmazanec/js-tools/blob/cdb028c/packages/args/source/CommandConfig.ts#L2)
+[args/source/CommandConfig.ts:2](https://github.com/jakubmazanec/js-tools/blob/4ba566f/packages/args/source/CommandConfig.ts#L2)
 
 ---
 
@@ -236,7 +236,7 @@ Parser's commands configuration.
 
 #### Defined in
 
-[args/source/CommandsConfig.ts:4](https://github.com/jakubmazanec/js-tools/blob/cdb028c/packages/args/source/CommandsConfig.ts#L4)
+[args/source/CommandsConfig.ts:4](https://github.com/jakubmazanec/js-tools/blob/4ba566f/packages/args/source/CommandsConfig.ts#L4)
 
 ---
 
@@ -255,7 +255,7 @@ Parser's commands configuration.
 
 #### Defined in
 
-[args/source/OptionConfig.ts:157](https://github.com/jakubmazanec/js-tools/blob/cdb028c/packages/args/source/OptionConfig.ts#L157)
+[args/source/OptionConfig.ts:157](https://github.com/jakubmazanec/js-tools/blob/4ba566f/packages/args/source/OptionConfig.ts#L157)
 
 ---
 
@@ -267,7 +267,7 @@ Long option name.
 
 #### Defined in
 
-[args/source/LongOptionName.ts:2](https://github.com/jakubmazanec/js-tools/blob/cdb028c/packages/args/source/LongOptionName.ts#L2)
+[args/source/LongOptionName.ts:2](https://github.com/jakubmazanec/js-tools/blob/4ba566f/packages/args/source/LongOptionName.ts#L2)
 
 ---
 
@@ -286,7 +286,7 @@ Long option name.
 
 #### Defined in
 
-[args/source/OptionConfig.ts:78](https://github.com/jakubmazanec/js-tools/blob/cdb028c/packages/args/source/OptionConfig.ts#L78)
+[args/source/OptionConfig.ts:78](https://github.com/jakubmazanec/js-tools/blob/4ba566f/packages/args/source/OptionConfig.ts#L78)
 
 ---
 
@@ -302,7 +302,7 @@ Long option name.
 
 #### Defined in
 
-[args/source/ParameterConfig.ts:32](https://github.com/jakubmazanec/js-tools/blob/cdb028c/packages/args/source/ParameterConfig.ts#L32)
+[args/source/ParameterConfig.ts:32](https://github.com/jakubmazanec/js-tools/blob/4ba566f/packages/args/source/ParameterConfig.ts#L32)
 
 ---
 
@@ -322,7 +322,7 @@ readonly `number`[] ; `count?`: `false` ; `defaultValue`: readonly `number`[] ; 
 
 #### Defined in
 
-[args/source/OptionConfig.ts:116](https://github.com/jakubmazanec/js-tools/blob/cdb028c/packages/args/source/OptionConfig.ts#L116)
+[args/source/OptionConfig.ts:116](https://github.com/jakubmazanec/js-tools/blob/4ba566f/packages/args/source/OptionConfig.ts#L116)
 
 ---
 
@@ -340,7 +340,7 @@ Parser's option configuration.
 
 #### Defined in
 
-[args/source/OptionConfig.ts:272](https://github.com/jakubmazanec/js-tools/blob/cdb028c/packages/args/source/OptionConfig.ts#L272)
+[args/source/OptionConfig.ts:272](https://github.com/jakubmazanec/js-tools/blob/4ba566f/packages/args/source/OptionConfig.ts#L272)
 
 ---
 
@@ -352,7 +352,7 @@ Parser's options configuration.
 
 #### Defined in
 
-[args/source/OptionsConfig.ts:4](https://github.com/jakubmazanec/js-tools/blob/cdb028c/packages/args/source/OptionsConfig.ts#L4)
+[args/source/OptionsConfig.ts:4](https://github.com/jakubmazanec/js-tools/blob/4ba566f/packages/args/source/OptionsConfig.ts#L4)
 
 ---
 
@@ -366,7 +366,7 @@ Parser's parameter configuration.
 
 #### Defined in
 
-[args/source/ParameterConfig.ts:97](https://github.com/jakubmazanec/js-tools/blob/cdb028c/packages/args/source/ParameterConfig.ts#L97)
+[args/source/ParameterConfig.ts:97](https://github.com/jakubmazanec/js-tools/blob/4ba566f/packages/args/source/ParameterConfig.ts#L97)
 
 ---
 
@@ -391,7 +391,7 @@ Parser's parameters configuration.
 
 #### Defined in
 
-[args/source/ParametersConfig.ts:4](https://github.com/jakubmazanec/js-tools/blob/cdb028c/packages/args/source/ParametersConfig.ts#L4)
+[args/source/ParametersConfig.ts:4](https://github.com/jakubmazanec/js-tools/blob/4ba566f/packages/args/source/ParametersConfig.ts#L4)
 
 ---
 
@@ -413,7 +413,7 @@ Parser configuration specifies how the command line arguments should be parsed.
 
 #### Defined in
 
-[args/source/ParserConfig.ts:6](https://github.com/jakubmazanec/js-tools/blob/cdb028c/packages/args/source/ParserConfig.ts#L6)
+[args/source/ParserConfig.ts:6](https://github.com/jakubmazanec/js-tools/blob/4ba566f/packages/args/source/ParserConfig.ts#L6)
 
 ---
 
@@ -429,7 +429,7 @@ Short option name.
 
 #### Defined in
 
-[args/source/ShortOptionName.ts:2](https://github.com/jakubmazanec/js-tools/blob/cdb028c/packages/args/source/ShortOptionName.ts#L2)
+[args/source/ShortOptionName.ts:2](https://github.com/jakubmazanec/js-tools/blob/4ba566f/packages/args/source/ShortOptionName.ts#L2)
 
 ---
 
@@ -448,7 +448,7 @@ Short option name.
 
 #### Defined in
 
-[args/source/OptionConfig.ts:192](https://github.com/jakubmazanec/js-tools/blob/cdb028c/packages/args/source/OptionConfig.ts#L192)
+[args/source/OptionConfig.ts:192](https://github.com/jakubmazanec/js-tools/blob/4ba566f/packages/args/source/OptionConfig.ts#L192)
 
 ---
 
@@ -464,7 +464,7 @@ Short option name.
 
 #### Defined in
 
-[args/source/ParameterConfig.ts:64](https://github.com/jakubmazanec/js-tools/blob/cdb028c/packages/args/source/ParameterConfig.ts#L64)
+[args/source/ParameterConfig.ts:64](https://github.com/jakubmazanec/js-tools/blob/4ba566f/packages/args/source/ParameterConfig.ts#L64)
 
 ---
 
@@ -484,7 +484,7 @@ readonly `string`[] ; `count?`: `false` ; `defaultValue`: readonly `string`[] ; 
 
 #### Defined in
 
-[args/source/OptionConfig.ts:230](https://github.com/jakubmazanec/js-tools/blob/cdb028c/packages/args/source/OptionConfig.ts#L230)
+[args/source/OptionConfig.ts:230](https://github.com/jakubmazanec/js-tools/blob/4ba566f/packages/args/source/OptionConfig.ts#L230)
 
 ## Variables
 
@@ -516,7 +516,7 @@ A subclass of `Error` that indicates a parsing failure.
 
 #### Defined in
 
-[args/source/ParsingError.ts:6](https://github.com/jakubmazanec/js-tools/blob/cdb028c/packages/args/source/ParsingError.ts#L6)
+[args/source/ParsingError.ts:6](https://github.com/jakubmazanec/js-tools/blob/4ba566f/packages/args/source/ParsingError.ts#L6)
 
 ---
 
@@ -555,7 +555,7 @@ A subclass of `Error` that indicates a validation issue.
 
 #### Defined in
 
-[args/source/ValidationError.ts:6](https://github.com/jakubmazanec/js-tools/blob/cdb028c/packages/args/source/ValidationError.ts#L6)
+[args/source/ValidationError.ts:6](https://github.com/jakubmazanec/js-tools/blob/4ba566f/packages/args/source/ValidationError.ts#L6)
 
 ## Functions
 
@@ -587,4 +587,4 @@ Parsed arguments.
 
 #### Defined in
 
-[args/source/parseArguments.ts:48](https://github.com/jakubmazanec/js-tools/blob/cdb028c/packages/args/source/parseArguments.ts#L48)
+[args/source/parseArguments.ts:48](https://github.com/jakubmazanec/js-tools/blob/4ba566f/packages/args/source/parseArguments.ts#L48)
