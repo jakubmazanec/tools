@@ -1,5 +1,13 @@
 # @jakubmazanec/carson-templates
 
+## 2.2.1
+
+### Patch Changes
+
+- [#136](https://github.com/jakubmazanec/js-tools/pull/136) [`4ba566f`](https://github.com/jakubmazanec/js-tools/commit/4ba566f84154f0a8d3a365513ac9776c860637f3) ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes Dockerfile in the `project/remix-app` template.
+
+- [#136](https://github.com/jakubmazanec/js-tools/pull/136) [`4ba566f`](https://github.com/jakubmazanec/js-tools/commit/4ba566f84154f0a8d3a365513ac9776c860637f3) ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes release GitHub workflow in the `workspace` template; after the release, changed Carson snapshots are also commited.
+
 ## 2.2.0
 
 ### Minor Changes
