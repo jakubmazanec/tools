@@ -3,19 +3,25 @@ to: 'Dockerfile'
 strategy: overwrite
 ---
 <%
-let lines = [];
+let installDependenciesLines = ['COPY --link package-lock.json package.json ./'];
+
+for (let project of workspace.projects) {
+  installDependenciesLines.push(`COPY --link ${project.relativePath}/package.json ${project.relativePath}/package.json`);
+}
+
+let copyFilesLines = ['COPY package-lock.json package.json /workspace/'];
 
 for (let project of workspace.projects) {
   if (project.config.deployment?.appName) {
-    lines.push(`COPY --from=build /workspace/${project.relativePath}/build /workspace/${project.relativePath}/build`);
-    lines.push(`COPY --from=build /workspace/${project.relativePath}/package.json /workspace/${project.relativePath}/package.json`);
+    copyFilesLines.push(`COPY --from=build /workspace/${project.relativePath}/build /workspace/${project.relativePath}/build`);
+    copyFilesLines.push(`COPY --from=build /workspace/${project.relativePath}/package.json /workspace/${project.relativePath}/package.json`);
   } else {
     if (project.packageJson.bin) {
-      lines.push(`COPY --from=build /workspace/${project.relativePath}/bin /workspace/${project.relativePath}/bin`);
+      copyFilesLines.push(`COPY --from=build /workspace/${project.relativePath}/bin /workspace/${project.relativePath}/bin`);
     }
 
-    lines.push(`COPY --from=build /workspace/${project.relativePath}/build /workspace/${project.relativePath}/build`);
-    lines.push(`COPY --from=build /workspace/${project.relativePath}/package.json /workspace/${project.relativePath}/package.json`);
+    copyFilesLines.push(`COPY --from=build /workspace/${project.relativePath}/build /workspace/${project.relativePath}/build`);
+    copyFilesLines.push(`COPY --from=build /workspace/${project.relativePath}/package.json /workspace/${project.relativePath}/package.json`);
   }
 }
 -%>
@@ -42,7 +48,7 @@ RUN apt-get update -qq && \
     apt-get install --no-install-recommends -y build-essential node-gyp pkg-config python-is-python3
 
 # Install dependencies
-COPY --link package-lock.json package.json ./
+<%- installDependenciesLines.join('\n') %>
 RUN npm ci --include=dev --ignore-scripts
 
 # Copy the workspace
@@ -55,8 +61,7 @@ RUN npm run build
 FROM base
 
 # Copy files
-COPY package-lock.json package.json /workspace/
-<%- lines.join('\n') %>
+<%- copyFilesLines.join('\n') %>
 
 # Install dependencies
 RUN npm ci --omit=dev --ignore-scripts

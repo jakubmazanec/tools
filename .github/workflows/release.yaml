@@ -111,6 +111,12 @@ jobs:
           git status
           git commit --amend --no-edit
 
+      - name: Update Carson
+        run: |
+          git add **/.carson/*.snapshot
+          git status
+          git commit --amend --no-edit
+
       - name: Add git tags
         run: |
           npx changeset tag
