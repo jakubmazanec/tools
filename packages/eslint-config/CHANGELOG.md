@@ -1,5 +1,11 @@
 # @jakubmazanec/eslint-config
 
+## 3.3.0
+
+### Minor Changes
+
+- [#137](https://github.com/jakubmazanec/js-tools/pull/137) [`8bc99aa`](https://github.com/jakubmazanec/js-tools/commit/8bc99aaf57fcafa4523285bbf375cc6f5d3ebf5b) ([@jakubmazanec](https://github.com/jakubmazanec)) – Adds support for EdgeDB, so files like generated client are linted correctly.
+
 ## 3.2.0
 
 ### Minor Changes
