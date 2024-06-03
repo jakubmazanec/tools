@@ -48,7 +48,7 @@
     "concurrently": "^8.2.2",
     "cross-env": "^7.0.3",
     "del-cli": "^5.1.0",
-    "esbuild": "^0.20.1",
+    "esbuild": "^0.21.4",
     "eslint": "^8.56.0",
     "ink": "^4.4.1",
     "ink-testing-library": "^3.0.0",
