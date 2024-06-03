@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "@jakubmazanec/error": "^3.0.0",
-    "ejs": "^3.1.9",
+    "ejs": "^3.1.10",
     "fs-extra": "^11.2.0",
     "gray-matter": "^4.0.3",
     "lodash.merge": "^4.6.2",
