@@ -14,4 +14,4 @@
 
 #### Defined in
 
-[packages/zod-utils/source/utils/readJson.ts:9](https://github.com/jakubmazanec/js-tools/blob/51d3aaaeed38631e34d7f0f0eda9b6da73912394/packages/zod-utils/source/utils/readJson.ts#L9)
+[packages/zod-utils/source/utils/readJson.ts:9](https://github.com/jakubmazanec/js-tools/blob/7d1843cc967006a93d6a5692873539c5380b3c15/packages/zod-utils/source/utils/readJson.ts#L9)
