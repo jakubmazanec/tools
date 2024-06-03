@@ -11,8 +11,8 @@
 
 ### author
 
-> **author**: `ZodOptional`\<`ZodUnion`\<[`ZodObject`\<`object`, `"strict"`, `ZodTypeAny`, `object`,
-> `object`\>, `ZodString`]\>\>
+> **author**: `ZodOptional`\<`ZodUnion`\<[`ZodObject`\<`object`, `"strict"`, `ZodTypeAny`,
+> `object`, `object`\>, `ZodString`]\>\>
 
 ### bin
 
@@ -25,18 +25,18 @@
 
 ### bugs
 
-> **bugs**: `ZodOptional`\<`ZodUnion`\<[`ZodObject`\<`object`, `"strict"`, `ZodTypeAny`, `object`,
-> `object`\>, `ZodString`]\>\>
+> **bugs**: `ZodOptional`\<`ZodUnion`\<[`ZodObject`\<`object`, `"strict"`, `ZodTypeAny`,
+> `object`, `object`\>, `ZodString`]\>\>
 
 ### bundleDependencies
 
-> **bundleDependencies**: `ZodOptional`\<`ZodUnion`\<[`ZodArray`\<`ZodString`, `"many"`\>,
-> `ZodBoolean`]\>\> = `packageJsonBundledDependenciesSchema`
+> **bundleDependencies**: `ZodOptional`\<`ZodUnion`\<[`ZodArray`\<`ZodString`,
+> `"many"`\>, `ZodBoolean`]\>\> = `packageJsonBundledDependenciesSchema`
 
 ### bundledDependencies
 
-> **bundledDependencies**: `ZodOptional`\<`ZodUnion`\<[`ZodArray`\<`ZodString`, `"many"`\>,
-> `ZodBoolean`]\>\> = `packageJsonBundledDependenciesSchema`
+> **bundledDependencies**: `ZodOptional`\<`ZodUnion`\<[`ZodArray`\<`ZodString`,
+> `"many"`\>, `ZodBoolean`]\>\> = `packageJsonBundledDependenciesSchema`
 
 ### config
 
@@ -44,15 +44,15 @@
 
 ### contributors
 
-> **contributors**: `ZodOptional`\<`ZodArray`\<`ZodUnion`\<[`ZodObject`\<`object`, `"strict"`,
-> `ZodTypeAny`, `object`, `object`\>, `ZodString`]\>, `"many"`\>\>
+> **contributors**: `ZodOptional`\<`ZodArray`\<`ZodUnion`\<[`ZodObject`\<`object`,
+> `"strict"`, `ZodTypeAny`, `object`, `object`\>, `ZodString`]\>, `"many"`\>\>
 
 ### cpu
 
 > **cpu**: `ZodOptional`\<`ZodArray`\<`ZodUnion`\<[`ZodEnum`\<[`"!arm"`, `"!arm64"`, `"!ia32"`,
-> `"!mips"`, `"!mipsel"`, `"!ppc"`, `"!ppc64"`, `"!s390"`, `"!s390x"`, `"!x32"`, `"!x64"`, `"arm"`,
-> `"arm64"`, `"ia32"`, `"mips"`, `"mipsel"`, `"ppc"`, `"ppc64"`, `"s390"`, `"s390x"`, `"x32"`,
-> `"x64"`]\>, `ZodString`]\>, `"many"`\>\>
+> `"!mips"`, `"!mipsel"`, `"!ppc"`, `"!ppc64"`, `"!s390"`, `"!s390x"`, `"!x32"`, `"!x64"`,
+> `"arm"`, `"arm64"`, `"ia32"`, `"mips"`, `"mipsel"`, `"ppc"`, `"ppc64"`, `"s390"`,
+> `"s390x"`, `"x32"`, `"x64"`]\>, `ZodString`]\>, `"many"`\>\>
 
 ### dependencies
 
@@ -96,9 +96,9 @@
 ### funding
 
 > **funding**: `ZodOptional`\<`ZodUnion`\<[`ZodArray`\<`ZodUnion`\<[`ZodObject`\<`object`,
-> `"strict"`, `ZodTypeAny`, `object`, `object`\>, `ZodString`]\>, `"many"`\>,
-> `ZodUnion`\<[`ZodObject`\<`object`, `"strict"`, `ZodTypeAny`, `object`, `object`\>,
-> `ZodString`]\>]\>\>
+> `"strict"`, `ZodTypeAny`, `object`, `object`\>, `ZodString`]\>, `"many"`\>, `ZodUnion`\<[`ZodObject`\<`object`,
+> `"strict"`,
+> `ZodTypeAny`, `object`, `object`\>, `ZodString`]\>]\>\>
 
 ### homepage
 
@@ -118,8 +118,8 @@
 
 ### maintainers
 
-> **maintainers**: `ZodOptional`\<`ZodArray`\<`ZodUnion`\<[`ZodObject`\<`object`, `"strict"`,
-> `ZodTypeAny`, `object`, `object`\>, `ZodString`]\>, `"many"`\>\>
+> **maintainers**: `ZodOptional`\<`ZodArray`\<`ZodUnion`\<[`ZodObject`\<`object`,
+> `"strict"`, `ZodTypeAny`, `object`, `object`\>, `ZodString`]\>, `"many"`\>\>
 
 ### man
 
@@ -146,8 +146,8 @@
 ### overrides
 
 > **overrides**: `ZodOptional`\<`ZodRecord`\<`ZodString`, `ZodUnion`\<[`ZodString`,
-> `ZodRecord`\<`ZodString`, `ZodUnion`\<[`ZodString`, `ZodRecord`\<`ZodString`,
-> `ZodUnknown`\>]\>\>]\>\>\>
+> `ZodRecord`\<`ZodString`, `ZodUnion`\<[`ZodString`,
+> `ZodRecord`\<`ZodString`, `ZodUnknown`\>]\>\>]\>\>\>
 
 ### packageManager
 
@@ -191,8 +191,8 @@
 
 ### sideEffects
 
-> **sideEffects**: `ZodOptional`\<`ZodUnion`\<[`ZodArray`\<`ZodString`, `"many"`\>,
-> `ZodBoolean`]\>\>
+> **sideEffects**: `ZodOptional`\<`ZodUnion`\<[`ZodArray`\<`ZodString`,
+> `"many"`\>, `ZodBoolean`]\>\>
 
 ### source
 
@@ -200,8 +200,7 @@
 
 ### type
 
-> **type**: `ZodOptional`\<`ZodUnion`\<[`ZodLiteral`\<`"commonjs"`\>,
-> `ZodLiteral`\<`"module"`\>]\>\>
+> **type**: `ZodOptional`\<`ZodUnion`\<[`ZodLiteral`\<`"commonjs"`\>, `ZodLiteral`\<`"module"`\>]\>\>
 
 ### types
 
@@ -217,9 +216,9 @@
 
 ### workspaces
 
-> **workspaces**: `ZodOptional`\<`ZodUnion`\<[`ZodArray`\<`ZodString`, `"many"`\>,
-> `ZodObject`\<`object`, `"strict"`, `ZodTypeAny`, `object`, `object`\>]\>\>
+> **workspaces**: `ZodOptional`\<`ZodUnion`\<[`ZodArray`\<`ZodString`,
+> `"many"`\>, `ZodObject`\<`object`, `"strict"`, `ZodTypeAny`, `object`, `object`\>]\>\>
 
 ## Source
 
-[packages/zod-utils/source/types/PackageJson.ts:150](https://github.com/jakubmazanec/js-tools/blob/d8fb2f4f9576baa170e480eea0b247af3afdcd86/packages/zod-utils/source/types/PackageJson.ts#L150)
+[packages/zod-utils/source/types/PackageJson.ts:150](https://github.com/jakubmazanec/js-tools/blob/9580d5f68de35b95719fd49b679b2d5576d49582/packages/zod-utils/source/types/PackageJson.ts#L150)

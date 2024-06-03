@@ -7646,8 +7646,7 @@ node_modules/@types/lodash/common/array.d.ts:1953
 
 #### zip(arrays2)
 
-> **zip**\<`T2`\>(`arrays2`): [`Collection`](Collection.md)\<[`undefined` \| `T`, `undefined` \|
-> `T2`]\>
+> **zip**\<`T2`\>(`arrays2`): [`Collection`](Collection.md)\<[`undefined` \| `T`, `undefined` \| `T2`]\>
 
 ##### Type parameters
 

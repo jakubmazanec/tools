@@ -25,9 +25,9 @@ Zod schema for [TemplateAttributes](../type-aliases/TemplateAttributes.md).
 
 ### variables
 
-> **variables**: `ZodOptional`\<`ZodUnion`\<[`ZodRecord`\<`ZodString`, `ZodUnknown`\>,
-> `ZodArray`\<`ZodRecord`\<`ZodString`, `ZodUnknown`\>, `"many"`\>]\>\>
+> **variables**: `ZodOptional`\<`ZodUnion`\<[`ZodRecord`\<`ZodString`,
+> `ZodUnknown`\>, `ZodArray`\<`ZodRecord`\<`ZodString`, `ZodUnknown`\>, `"many"`\>]\>\>
 
 ## Source
 
-[packages/template/source/TemplateAttributes.ts:8](https://github.com/jakubmazanec/js-tools/blob/d8fb2f4f9576baa170e480eea0b247af3afdcd86/packages/template/source/TemplateAttributes.ts#L8)
+[packages/template/source/TemplateAttributes.ts:8](https://github.com/jakubmazanec/js-tools/blob/9580d5f68de35b95719fd49b679b2d5576d49582/packages/template/source/TemplateAttributes.ts#L8)

@@ -32,7 +32,7 @@ Message added to the default error message
 
 #### Source
 
-[packages/ts-utils/source/utils/assert.ts:8](https://github.com/jakubmazanec/js-tools/blob/d8fb2f4f9576baa170e480eea0b247af3afdcd86/packages/ts-utils/source/utils/assert.ts#L8)
+[packages/ts-utils/source/utils/assert.ts:8](https://github.com/jakubmazanec/js-tools/blob/9580d5f68de35b95719fd49b679b2d5576d49582/packages/ts-utils/source/utils/assert.ts#L8)
 
 ## Properties
 

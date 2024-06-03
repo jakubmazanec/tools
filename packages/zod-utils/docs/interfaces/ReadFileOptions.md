@@ -20,7 +20,7 @@
 
 #### Source
 
-[packages/zod-utils/source/utils/readFile.ts:7](https://github.com/jakubmazanec/js-tools/blob/d8fb2f4f9576baa170e480eea0b247af3afdcd86/packages/zod-utils/source/utils/readFile.ts#L7)
+[packages/zod-utils/source/utils/readFile.ts:7](https://github.com/jakubmazanec/js-tools/blob/9580d5f68de35b95719fd49b679b2d5576d49582/packages/zod-utils/source/utils/readFile.ts#L7)
 
 ---
 
@@ -30,4 +30,4 @@
 
 #### Source
 
-[packages/zod-utils/source/utils/readFile.ts:8](https://github.com/jakubmazanec/js-tools/blob/d8fb2f4f9576baa170e480eea0b247af3afdcd86/packages/zod-utils/source/utils/readFile.ts#L8)
+[packages/zod-utils/source/utils/readFile.ts:8](https://github.com/jakubmazanec/js-tools/blob/9580d5f68de35b95719fd49b679b2d5576d49582/packages/zod-utils/source/utils/readFile.ts#L8)

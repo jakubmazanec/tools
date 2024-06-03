@@ -2946,8 +2946,8 @@ node_modules/@types/lodash/common/lang.d.ts:620
 
 This method is like `_.isEqual` except that it accepts `customizer` which is invoked to compare
 values. If `customizer` returns `undefined` comparisons are handled by the method instead. The
-`customizer` is invoked with up to seven arguments: (objValue, othValue [, index|key, object, other,
-stack]).
+`customizer` is invoked with up to seven arguments: (objValue, othValue [, index|key, object,
+other, stack]).
 
 #### Parameters
 
@@ -8538,8 +8538,8 @@ node_modules/@types/lodash/common/string.d.ts:112
 
 > **escapeRegExp**(`string`?): `string`
 
-Escapes the RegExp special characters "^", "$", "\", ".", "\*", "+", "?", "(", ")", "[", "]", "{",
-"}", and "|" in string.
+Escapes the RegExp special characters "^", "$", "\", ".", "\*", "+", "?", "(", ")", "[", "]", "{", "}",
+and "|" in string.
 
 #### Parameters
 
@@ -18672,8 +18672,8 @@ node_modules/@types/lodash/common/array.d.ts:1977
 
 #### zip(arrays1, arrays2, arrays3, arrays4)
 
-> **zip**\<`T1`, `T2`, `T3`, `T4`\>(`arrays1`, `arrays2`, `arrays3`, `arrays4`): [`undefined` \|
-> `T1`, `undefined` \| `T2`, `undefined` \| `T3`, `undefined` \| `T4`][]
+> **zip**\<`T1`, `T2`, `T3`, `T4`\>(`arrays1`, `arrays2`, `arrays3`, `arrays4`): [`undefined`
+> \| `T1`, `undefined` \| `T2`, `undefined` \| `T3`, `undefined` \| `T4`][]
 
 ##### Type parameters
 
@@ -18739,8 +18739,8 @@ node_modules/@types/lodash/common/array.d.ts:1981
 
 ##### Returns
 
-[`undefined` \| `T1`, `undefined` \| `T2`, `undefined` \| `T3`, `undefined` \| `T4`, `undefined` \|
-`T5`][]
+[`undefined` \| `T1`, `undefined` \| `T2`, `undefined` \| `T3`, `undefined` \| `T4`, `undefined`
+\| `T5`][]
 
 ##### See
 
