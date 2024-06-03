@@ -1,17 +1,15 @@
+[**@jakubmazanec/zod-utils**](../README.md) • **Docs**
+
+---
+
 # Interface: ReadJsonOptions
-
-## Table of contents
-
-### Properties
-
-- [throwOnZodError](ReadJsonOptions.md#throwonzoderror)
 
 ## Properties
 
-### throwOnZodError
+### throwOnZodError?
 
-• `Optional` **throwOnZodError**: `boolean`
+> `optional` **throwOnZodError**: `boolean`
 
-#### Defined in
+#### Source
 
-[packages/zod-utils/source/utils/readJson.ts:9](https://github.com/jakubmazanec/js-tools/blob/7d1843cc967006a93d6a5692873539c5380b3c15/packages/zod-utils/source/utils/readJson.ts#L9)
+[packages/zod-utils/source/utils/readJson.ts:9](https://github.com/jakubmazanec/js-tools/blob/d8fb2f4f9576baa170e480eea0b247af3afdcd86/packages/zod-utils/source/utils/readJson.ts#L9)

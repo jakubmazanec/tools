@@ -1,0 +1,25 @@
+[**@jakubmazanec/carson-templates**](../../../README.md) • **Docs**
+
+---
+
+# Function: rcompareIdentifiers()
+
+> **rcompareIdentifiers**(`a`, `b`): `1` \| `0` \| `-1`
+
+The reverse of compareIdentifiers.
+
+Sorts in descending order when passed to `Array.sort()`.
+
+## Parameters
+
+• **a**: `undefined` \| `null` \| `string`
+
+• **b**: `undefined` \| `null` \| `string`
+
+## Returns
+
+`1` \| `0` \| `-1`
+
+## Source
+
+node_modules/@types/semver/internals/identifiers.d.ts:13

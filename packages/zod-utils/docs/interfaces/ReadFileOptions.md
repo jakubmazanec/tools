@@ -1,42 +1,33 @@
-# Interface: ReadFileOptions
-
-## Table of contents
-
-### Properties
-
-- [parser](ReadFileOptions.md#parser)
-- [throwOnZodError](ReadFileOptions.md#throwonzoderror)
-
-## Properties
-
-### parser
-
-• `Optional` **parser**: (`rawString`: `string`) => `unknown`
-
-#### Type declaration
-
-▸ (`rawString`): `unknown`
-
-##### Parameters
-
-| Name        | Type     |
-| :---------- | :------- |
-| `rawString` | `string` |
-
-##### Returns
-
-`unknown`
-
-#### Defined in
-
-[packages/zod-utils/source/utils/readFile.ts:7](https://github.com/jakubmazanec/js-tools/blob/7d1843cc967006a93d6a5692873539c5380b3c15/packages/zod-utils/source/utils/readFile.ts#L7)
+[**@jakubmazanec/zod-utils**](../README.md) • **Docs**
 
 ---
 
-### throwOnZodError
+# Interface: ReadFileOptions
 
-• `Optional` **throwOnZodError**: `boolean`
+## Properties
 
-#### Defined in
+### parser()?
 
-[packages/zod-utils/source/utils/readFile.ts:8](https://github.com/jakubmazanec/js-tools/blob/7d1843cc967006a93d6a5692873539c5380b3c15/packages/zod-utils/source/utils/readFile.ts#L8)
+> `optional` **parser**: (`rawString`) => `unknown`
+
+#### Parameters
+
+• **rawString**: `string`
+
+#### Returns
+
+`unknown`
+
+#### Source
+
+[packages/zod-utils/source/utils/readFile.ts:7](https://github.com/jakubmazanec/js-tools/blob/d8fb2f4f9576baa170e480eea0b247af3afdcd86/packages/zod-utils/source/utils/readFile.ts#L7)
+
+---
+
+### throwOnZodError?
+
+> `optional` **throwOnZodError**: `boolean`
+
+#### Source
+
+[packages/zod-utils/source/utils/readFile.ts:8](https://github.com/jakubmazanec/js-tools/blob/d8fb2f4f9576baa170e480eea0b247af3afdcd86/packages/zod-utils/source/utils/readFile.ts#L8)

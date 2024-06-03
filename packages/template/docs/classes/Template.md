@@ -1,3 +1,7 @@
+[**@jakubmazanec/template**](../README.md) • **Docs**
+
+---
+
 # Class: Template\<A, D\>
 
 The `Template` object stores all information about a template and has methods for reading and
@@ -17,67 +21,38 @@ console.log(await template.render({value: 42})); // ->  [{attributes: {to: 'valu
 
 ## Type parameters
 
-| Name | Type                                                | Description                                                           |
-| :--- | :-------------------------------------------------- | :-------------------------------------------------------------------- |
-| `A`  | extends `AnyZodObject` \| `undefined` = `undefined` | A Zod schema type used to define the custom template attributes type. |
-| `D`  | extends `AnyZodObject` \| `undefined` = `undefined` | A Zod schema type used to define the template datatype.               |
+• **A** _extends_ `AnyZodObject` \| `undefined` = `undefined`
 
-## Table of contents
+A Zod schema type used to define the custom template attributes type.
 
-### Constructors
+• **D** _extends_ `AnyZodObject` \| `undefined` = `undefined`
 
-- [constructor](Template.md#constructor)
-
-### Properties
-
-- [attributes](Template.md#attributes)
-- [attributesSchema](Template.md#attributesschema)
-- [content](Template.md#content)
-- [dataSchema](Template.md#dataschema)
-- [fn](Template.md#fn)
-- [path](Template.md#path)
-
-### Methods
-
-- [render](Template.md#render)
-- [read](Template.md#read)
-- [readAndRender](Template.md#readandrender)
+A Zod schema type used to define the template datatype.
 
 ## Constructors
 
-### constructor
+### new Template()
 
-• **new Template**\<`A`, `D`\>(`«destructured»`): [`Template`](Template.md)\<`A`, `D`\>
-
-#### Type parameters
-
-| Name | Type                                                |
-| :--- | :-------------------------------------------------- |
-| `A`  | extends `undefined` \| `AnyZodObject` = `undefined` |
-| `D`  | extends `undefined` \| `AnyZodObject` = `undefined` |
+> **new Template**\<`A`, `D`\>(`__namedParameters`): [`Template`](Template.md)\<`A`, `D`\>
 
 #### Parameters
 
-| Name             | Type                                                          |
-| :--------------- | :------------------------------------------------------------ |
-| `«destructured»` | [`TemplateOptions`](../README.md#templateoptions)\<`A`, `D`\> |
+• **\_\_namedParameters**: [`TemplateOptions`](../type-aliases/TemplateOptions.md)\<`A`, `D`\>
 
 #### Returns
 
 [`Template`](Template.md)\<`A`, `D`\>
 
-#### Defined in
+#### Source
 
-[packages/template/source/Template.ts:116](https://github.com/jakubmazanec/js-tools/blob/7d1843cc967006a93d6a5692873539c5380b3c15/packages/template/source/Template.ts#L116)
+[packages/template/source/Template.ts:116](https://github.com/jakubmazanec/js-tools/blob/d8fb2f4f9576baa170e480eea0b247af3afdcd86/packages/template/source/Template.ts#L116)
 
 ## Properties
 
 ### attributes
 
-• `Readonly` **attributes**: `A` extends `undefined` ? \{ `extends?`: `string` ; `if?`: `string` ;
-`to`: `string` ; `variables?`: `Record`\<`string`, `unknown`\> \| `Record`\<`string`, `unknown`\>[]
-} : \{ `extends?`: `string` ; `if?`: `string` ; `to`: `string` ; `variables?`: `Record`\<`string`,
-`unknown`\> \| `Record`\<`string`, `unknown`\>[] } & `TypeOf`\<`NonNullable`\<`A`\>\>
+> `readonly` **attributes**: `A` _extends_ `undefined` ? `object` : `object` &
+> `TypeOf`\<`NonNullable`\<`A`\>\>
 
 Template attributes. These control how the template is rendered. Some attributes can be written in
 [EJS](https://ejs.co/) and are rendered before the template content is rendered. It is expected that
@@ -88,157 +63,166 @@ object that is merged with the data object before rendering. If attribute `varia
 objects, that leads to multiple renders, each with different variables object merged with the data.
 Each variable that is a string is also rendered.
 
-#### Defined in
+#### Source
 
-[packages/template/source/Template.ts:104](https://github.com/jakubmazanec/js-tools/blob/7d1843cc967006a93d6a5692873539c5380b3c15/packages/template/source/Template.ts#L104)
+[packages/template/source/Template.ts:104](https://github.com/jakubmazanec/js-tools/blob/d8fb2f4f9576baa170e480eea0b247af3afdcd86/packages/template/source/Template.ts#L104)
 
 ---
 
 ### attributesSchema
 
-• `Readonly` **attributesSchema**: `A` extends `AnyZodObject` ? `A`\<`A`\> : `null`
+> `readonly` **attributesSchema**: `A` _extends_ `AnyZodObject` ? `A`\<`A`\> : `null`
 
 Zod schema for custom template attributes.
 
-#### Defined in
+#### Source
 
-[packages/template/source/Template.ts:111](https://github.com/jakubmazanec/js-tools/blob/7d1843cc967006a93d6a5692873539c5380b3c15/packages/template/source/Template.ts#L111)
+[packages/template/source/Template.ts:111](https://github.com/jakubmazanec/js-tools/blob/d8fb2f4f9576baa170e480eea0b247af3afdcd86/packages/template/source/Template.ts#L111)
 
 ---
 
 ### content
 
-• `Readonly` **content**: `string`
+> `readonly` **content**: `string`
 
 Template content. Templates are written in [EJS](https://ejs.co/).
 
-#### Defined in
+#### Source
 
-[packages/template/source/Template.ts:101](https://github.com/jakubmazanec/js-tools/blob/7d1843cc967006a93d6a5692873539c5380b3c15/packages/template/source/Template.ts#L101)
+[packages/template/source/Template.ts:101](https://github.com/jakubmazanec/js-tools/blob/d8fb2f4f9576baa170e480eea0b247af3afdcd86/packages/template/source/Template.ts#L101)
 
 ---
 
 ### dataSchema
 
-• `Readonly` **dataSchema**: `D` extends `AnyZodObject` ? `D`\<`D`\> : `null`
+> `readonly` **dataSchema**: `D` _extends_ `AnyZodObject` ? `D`\<`D`\> : `null`
 
 Zod schema for template data.
 
-#### Defined in
+#### Source
 
-[packages/template/source/Template.ts:114](https://github.com/jakubmazanec/js-tools/blob/7d1843cc967006a93d6a5692873539c5380b3c15/packages/template/source/Template.ts#L114)
+[packages/template/source/Template.ts:114](https://github.com/jakubmazanec/js-tools/blob/d8fb2f4f9576baa170e480eea0b247af3afdcd86/packages/template/source/Template.ts#L114)
 
 ---
 
 ### fn
 
-• `Private` `Readonly` **fn**: [`TemplateFunction`](../README.md#templatefunction)
+> `private` `readonly` **fn**: [`TemplateFunction`](../type-aliases/TemplateFunction.md)
 
 Template function.
 
-#### Defined in
+#### Source
 
-[packages/template/source/Template.ts:108](https://github.com/jakubmazanec/js-tools/blob/7d1843cc967006a93d6a5692873539c5380b3c15/packages/template/source/Template.ts#L108)
+[packages/template/source/Template.ts:108](https://github.com/jakubmazanec/js-tools/blob/d8fb2f4f9576baa170e480eea0b247af3afdcd86/packages/template/source/Template.ts#L108)
 
 ---
 
-### path
+### path?
 
-• `Optional` **path**: `string`
+> `optional` **path**: `string`
 
 Template path.
 
-#### Defined in
+#### Source
 
-[packages/template/source/Template.ts:98](https://github.com/jakubmazanec/js-tools/blob/7d1843cc967006a93d6a5692873539c5380b3c15/packages/template/source/Template.ts#L98)
+[packages/template/source/Template.ts:98](https://github.com/jakubmazanec/js-tools/blob/d8fb2f4f9576baa170e480eea0b247af3afdcd86/packages/template/source/Template.ts#L98)
 
 ## Methods
 
-### render
+### render()
 
-▸ **render**(`data`, `options?`): `Promise`\<[`TemplateRenders`](../README.md#templaterenders)\<`A`,
-`D`\>\>
+> **render**(`data`, `options`?):
+> `Promise`\<[`TemplateRenders`](../type-aliases/TemplateRenders.md)\<`A`, `D`\>\>
 
 Renders the template using data.
 
 #### Parameters
 
-| Name       | Type                                                                | Description                           |
-| :--------- | :------------------------------------------------------------------ | :------------------------------------ |
-| `data`     | `D` extends `undefined` ? `null` : `TypeOf`\<`NonNullable`\<`D`\>\> | Data used for rendering the template. |
-| `options?` | [`TemplateRenderOptions`](../README.md#templaterenderoptions)       | Options object.                       |
+• **data**: `D` _extends_ `undefined` ? `null` : `TypeOf`\<`NonNullable`\<`D`\>\>
+
+Data used for rendering the template.
+
+• **options?**: [`TemplateRenderOptions`](../type-aliases/TemplateRenderOptions.md)
+
+Options object.
 
 #### Returns
 
-`Promise`\<[`TemplateRenders`](../README.md#templaterenders)\<`A`, `D`\>\>
+`Promise`\<[`TemplateRenders`](../type-aliases/TemplateRenders.md)\<`A`, `D`\>\>
 
 Template renders.
 
-#### Defined in
+#### Source
 
-[packages/template/source/Template.ts:232](https://github.com/jakubmazanec/js-tools/blob/7d1843cc967006a93d6a5692873539c5380b3c15/packages/template/source/Template.ts#L232)
+[packages/template/source/Template.ts:232](https://github.com/jakubmazanec/js-tools/blob/d8fb2f4f9576baa170e480eea0b247af3afdcd86/packages/template/source/Template.ts#L232)
 
 ---
 
-### read
+### read()
 
-▸ **read**\<`A`, `D`\>(`templatePath`, `options?`): `Promise`\<[`Template`](Template.md)\<`A`,
-`D`\>\>
+> `static` **read**\<`A`, `D`\>(`templatePath`, `options`?):
+> `Promise`\<[`Template`](Template.md)\<`A`, `D`\>\>
 
 Reads a template from a file.
 
 #### Type parameters
 
-| Name | Type                                                |
-| :--- | :-------------------------------------------------- |
-| `A`  | extends `undefined` \| `AnyZodObject` = `undefined` |
-| `D`  | extends `undefined` \| `AnyZodObject` = `undefined` |
+• **A** _extends_ `undefined` \| `AnyZodObject` = `undefined`
+
+• **D** _extends_ `undefined` \| `AnyZodObject` = `undefined`
 
 #### Parameters
 
-| Name           | Type                                                                  | Description                |
-| :------------- | :-------------------------------------------------------------------- | :------------------------- |
-| `templatePath` | `string`                                                              | Path to the template file. |
-| `options?`     | [`TemplateReadOptions`](../README.md#templatereadoptions)\<`A`, `D`\> | -                          |
+• **templatePath**: `string`
+
+Path to the template file.
+
+• **options?**: [`TemplateReadOptions`](../type-aliases/TemplateReadOptions.md)\<`A`, `D`\>
 
 #### Returns
 
 `Promise`\<[`Template`](Template.md)\<`A`, `D`\>\>
 
-#### Defined in
+#### Source
 
-[packages/template/source/Template.ts:149](https://github.com/jakubmazanec/js-tools/blob/7d1843cc967006a93d6a5692873539c5380b3c15/packages/template/source/Template.ts#L149)
+[packages/template/source/Template.ts:149](https://github.com/jakubmazanec/js-tools/blob/d8fb2f4f9576baa170e480eea0b247af3afdcd86/packages/template/source/Template.ts#L149)
 
 ---
 
-### readAndRender
+### readAndRender()
 
-▸ **readAndRender**\<`A`, `D`\>(`templatePath`, `data`, `options?`):
-`Promise`\<[`TemplateRenders`](../README.md#templaterenders)\<`A`, `D`\>\>
+> `static` **readAndRender**\<`A`, `D`\>(`templatePath`, `data`, `options`?):
+> `Promise`\<[`TemplateRenders`](../type-aliases/TemplateRenders.md)\<`A`, `D`\>\>
 
 Reads a template from a file and then renders it.
 
 #### Type parameters
 
-| Name | Type                                                |
-| :--- | :-------------------------------------------------- |
-| `A`  | extends `undefined` \| `AnyZodObject` = `undefined` |
-| `D`  | extends `undefined` \| `AnyZodObject` = `undefined` |
+• **A** _extends_ `undefined` \| `AnyZodObject` = `undefined`
+
+• **D** _extends_ `undefined` \| `AnyZodObject` = `undefined`
 
 #### Parameters
 
-| Name           | Type                                                                                    | Description                           |
-| :------------- | :-------------------------------------------------------------------------------------- | :------------------------------------ |
-| `templatePath` | `string`                                                                                | Path to the template file.            |
-| `data`         | `D` extends `undefined` ? `null` : `TypeOf`\<`NonNullable`\<`D`\>\>                     | Data used for rendering the template. |
-| `options?`     | [`TemplateReadAndRenderOptions`](../README.md#templatereadandrenderoptions)\<`A`, `D`\> | Options object.                       |
+• **templatePath**: `string`
+
+Path to the template file.
+
+• **data**: `D` _extends_ `undefined` ? `null` : `TypeOf`\<`NonNullable`\<`D`\>\>
+
+Data used for rendering the template.
+
+• **options?**:
+[`TemplateReadAndRenderOptions`](../type-aliases/TemplateReadAndRenderOptions.md)\<`A`, `D`\>
+
+Options object.
 
 #### Returns
 
-`Promise`\<[`TemplateRenders`](../README.md#templaterenders)\<`A`, `D`\>\>
+`Promise`\<[`TemplateRenders`](../type-aliases/TemplateRenders.md)\<`A`, `D`\>\>
 
 Template renders.
 
-#### Defined in
+#### Source
 
-[packages/template/source/Template.ts:206](https://github.com/jakubmazanec/js-tools/blob/7d1843cc967006a93d6a5692873539c5380b3c15/packages/template/source/Template.ts#L206)
+[packages/template/source/Template.ts:206](https://github.com/jakubmazanec/js-tools/blob/d8fb2f4f9576baa170e480eea0b247af3afdcd86/packages/template/source/Template.ts#L206)

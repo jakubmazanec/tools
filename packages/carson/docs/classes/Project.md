@@ -1,3 +1,7 @@
+[**@jakubmazanec/carson**](../README.md) • **Docs**
+
+---
+
 # Class: Project\<M\>
 
 Project represent a self-contained piece of software (e.g. a package, or an app) that is part of a
@@ -5,286 +9,541 @@ Project represent a self-contained piece of software (e.g. a package, or an app)
 
 ## Type parameters
 
-| Name | Type                       | Description                                                |
-| :--- | :------------------------- | :--------------------------------------------------------- |
-| `M`  | extends `boolean` = `true` | If true, the project belongs to a multi-project workspace. |
+• **M** _extends_ `boolean` = `true`
 
-## Table of contents
-
-### Constructors
-
-- [constructor](Project.md#constructor)
-
-### Properties
-
-- [config](Project.md#config)
-- [errors](Project.md#errors)
-- [name](Project.md#name)
-- [packageJson](Project.md#packagejson)
-- [path](Project.md#path)
-- [relativePath](Project.md#relativepath)
-- [workspace](Project.md#workspace)
-
-### Methods
-
-- [read](Project.md#read)
-- [update](Project.md#update)
-- [create](Project.md#create)
-- [read](Project.md#read-1)
+If true, the project belongs to a multi-project workspace.
 
 ## Constructors
 
-### constructor
+### new Project()
 
-• **new Project**\<`M`\>(`«destructured»`): [`Project`](Project.md)\<`M`\>
-
-#### Type parameters
-
-| Name | Type                       |
-| :--- | :------------------------- |
-| `M`  | extends `boolean` = `true` |
+> **new Project**\<`M`\>(`__namedParameters`): [`Project`](Project.md)\<`M`\>
 
 #### Parameters
 
-| Name             | Type                                                   |
-| :--------------- | :----------------------------------------------------- |
-| `«destructured»` | [`ProjectOptions`](../README.md#projectoptions)\<`M`\> |
+• **\_\_namedParameters**: [`ProjectOptions`](../type-aliases/ProjectOptions.md)\<`M`\>
 
 #### Returns
 
 [`Project`](Project.md)\<`M`\>
 
-#### Defined in
+#### Source
 
-[packages/carson/source/workspace/Project.ts:51](https://github.com/jakubmazanec/js-tools/blob/7d1843cc967006a93d6a5692873539c5380b3c15/packages/carson/source/workspace/Project.ts#L51)
+[packages/carson/source/workspace/Project.ts:51](https://github.com/jakubmazanec/js-tools/blob/d8fb2f4f9576baa170e480eea0b247af3afdcd86/packages/carson/source/workspace/Project.ts#L51)
 
 ## Properties
 
 ### config
 
-• **config**: `objectOutputType`\<\{ `template`: `ZodOptional`\<`ZodString`\> }, `ZodUnknown`,
-`"strip"`\>
+> **config**: `objectOutputType`\<`object`, `ZodUnknown`, `"strip"`\>
 
 Project configuration; if it's not found, the default is an empty object.
 
-#### Defined in
+#### Type declaration
 
-[packages/carson/source/workspace/Project.ts:40](https://github.com/jakubmazanec/js-tools/blob/7d1843cc967006a93d6a5692873539c5380b3c15/packages/carson/source/workspace/Project.ts#L40)
+##### template
+
+> **template**: `ZodOptional`\<`ZodString`\>
+
+#### Source
+
+[packages/carson/source/workspace/Project.ts:40](https://github.com/jakubmazanec/js-tools/blob/d8fb2f4f9576baa170e480eea0b247af3afdcd86/packages/carson/source/workspace/Project.ts#L40)
 
 ---
 
 ### errors
 
-• **errors**: `CustomErrorWithData`\<`"INVALID_PACKAGE_JSON"` \| `"INVALID_PROJECT_CONFIG"` \|
-`"NO_SUCH_PROJECT_PATH"` \| `"PROJECT_PATH_NOT_EMPTY"` \| `"MISSING_CARSON_TEMPLATE_ID"` \|
-`"UNKNOWN_ERROR"`, `ProjectErrorData`\>[] = `[]`
+> **errors**: `CustomErrorWithData`\<`"INVALID_PACKAGE_JSON"` \| `"INVALID_PROJECT_CONFIG"` \|
+> `"NO_SUCH_PROJECT_PATH"` \| `"PROJECT_PATH_NOT_EMPTY"` \| `"MISSING_CARSON_TEMPLATE_ID"` \|
+> `"UNKNOWN_ERROR"`, `ProjectErrorData`\>[] = `[]`
 
 Errors found during reading from the file system.
 
-#### Defined in
+#### Source
 
-[packages/carson/source/workspace/Project.ts:49](https://github.com/jakubmazanec/js-tools/blob/7d1843cc967006a93d6a5692873539c5380b3c15/packages/carson/source/workspace/Project.ts#L49)
+[packages/carson/source/workspace/Project.ts:49](https://github.com/jakubmazanec/js-tools/blob/d8fb2f4f9576baa170e480eea0b247af3afdcd86/packages/carson/source/workspace/Project.ts#L49)
 
 ---
 
-### name
+### name?
 
-• `Optional` **name**: `string`
+> `optional` **name**: `string`
 
 Project name.
 
-#### Defined in
+#### Source
 
-[packages/carson/source/workspace/Project.ts:31](https://github.com/jakubmazanec/js-tools/blob/7d1843cc967006a93d6a5692873539c5380b3c15/packages/carson/source/workspace/Project.ts#L31)
+[packages/carson/source/workspace/Project.ts:31](https://github.com/jakubmazanec/js-tools/blob/d8fb2f4f9576baa170e480eea0b247af3afdcd86/packages/carson/source/workspace/Project.ts#L31)
 
 ---
 
 ### packageJson
 
-• **packageJson**: `Object`
+> **packageJson**: `object`
 
 Parsed project `package.json` file; if it's not found, the default is an empty object.
 
-#### Type declaration
+#### author?
 
-| Name                    | Type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| :---------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `author?`               | `string` \| \{ `email?`: `string` ; `name`: `string` ; `url?`: `string` }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| `bin?`                  | `string` \| `Record`\<`string`, `string`\>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| `browser?`              | `string` \| `Record`\<`string`, `string` \| `false`\>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| `bugs?`                 | `string` \| \{ `email?`: `string` ; `url?`: `string` }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| `bundleDependencies?`   | `boolean` \| `string`[]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| `bundledDependencies?`  | `boolean` \| `string`[]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| `config?`               | `Record`\<`string`, `unknown`\>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| `contributors?`         | (`string` \| \{ `email?`: `string` ; `name`: `string` ; `url?`: `string` })[]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| `cpu?`                  | `string`[]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| `dependencies?`         | `Record`\<`string`, `string`\>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| `description?`          | `string`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| `devDependencies?`      | `Record`\<`string`, `string`\>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| `directories?`          | \{ `bin?`: `string` ; `doc?`: `string` ; `example?`: `string` ; `lib?`: `string` ; `man?`: `string` ; `v?`: `string` }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| `directories.bin?`      | `string`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| `directories.doc?`      | `string`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| `directories.example?`  | `string`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| `directories.lib?`      | `string`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| `directories.man?`      | `string`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| `directories.v?`        | `string`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| `engines?`              | \{ `node?`: `string` ; `npm?`: `string` } & `Record`\<`string`, `string`\>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| `esnext?`               | `string` \| `Record`\<`string`, `string`\>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| `exports?`              | `PackageJsonExports`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| `files?`                | `string`[]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| `flat?`                 | `boolean`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| `funding?`              | `string` \| \{ `type?`: `string` ; `url`: `string` } \| (`string` \| \{ `type?`: `string` ; `url`: `string` })[]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| `homepage?`             | `string`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| `keywords?`             | `string`[]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| `license?`              | `string`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| `main?`                 | `string`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| `maintainers?`          | (`string` \| \{ `email?`: `string` ; `name`: `string` ; `url?`: `string` })[]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| `man?`                  | `string` \| `string`[]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| `module?`               | `string`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| `name?`                 | `string`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| `optionalDependencies?` | `Record`\<`string`, `string`\>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| `os?`                   | `string`[]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| `overrides?`            | `Record`\<`string`, `string` \| `Record`\<`string`, `string` \| `Record`\<`string`, `unknown`\>\>\>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| `packageManager?`       | `string`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| `peerDependencies?`     | `Record`\<`string`, `string`\>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| `peerDependenciesMeta?` | `Record`\<`string`, \{ `optional`: `boolean` }\>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| `preferGlobal?`         | `boolean`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| `private?`              | `boolean`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| `publishConfig?`        | \{ `access?`: `"public"` \| `"restricted"` ; `registry?`: `string` ; `tag?`: `string` } & `Record`\<`string`, `unknown`\>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| `repository?`           | `string` \| \{ `directory?`: `string` ; `type`: `string` ; `url`: `string` }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| `resolutions?`          | `Record`\<`string`, `string`\>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| `scripts?`              | `Record`\<`string`, `string`\> & \{ `install?`: `string` ; `postinstall?`: `string` ; `postpack?`: `string` ; `postpublish?`: `string` ; `postrestart?`: `string` ; `poststart?`: `string` ; `poststop?`: `string` ; `posttest?`: `string` ; `postuninstall?`: `string` ; `postversion?`: `string` ; `preinstall?`: `string` ; `prepack?`: `string` ; `prepare?`: `string` ; `prepublish?`: `string` ; `prepublishOnly?`: `string` ; `prerestart?`: `string` ; `prestart?`: `string` ; `prestop?`: `string` ; `pretest?`: `string` ; `preuninstall?`: `string` ; `preversion?`: `string` ; `publish?`: `string` ; `restart?`: `string` ; `start?`: `string` ; `stop?`: `string` ; `test?`: `string` ; `uninstall?`: `string` ; `version?`: `string` } |
-| `sideEffects?`          | `boolean` \| `string`[]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| `source?`               | `string`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| `type?`                 | `"commonjs"` \| `"module"`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| `types?`                | `string`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| `typings?`              | `string`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| `version?`              | `string`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| `workspaces?`           | `string`[] \| \{ `nohoist?`: `string`[] ; `packages?`: `string`[] }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+> `optional` **author**: `string` \| `object`
 
-#### Defined in
+#### bin?
 
-[packages/carson/source/workspace/Project.ts:43](https://github.com/jakubmazanec/js-tools/blob/7d1843cc967006a93d6a5692873539c5380b3c15/packages/carson/source/workspace/Project.ts#L43)
+> `optional` **bin**: `string` \| `Record`\<`string`, `string`\>
+
+#### browser?
+
+> `optional` **browser**: `string` \| `Record`\<`string`, `string` \| `false`\>
+
+#### bugs?
+
+> `optional` **bugs**: `string` \| `object`
+
+#### bundleDependencies?
+
+> `optional` **bundleDependencies**: `boolean` \| `string`[]
+
+#### bundledDependencies?
+
+> `optional` **bundledDependencies**: `boolean` \| `string`[]
+
+#### config?
+
+> `optional` **config**: `Record`\<`string`, `unknown`\>
+
+#### contributors?
+
+> `optional` **contributors**: (`string` \| `object`)[]
+
+#### cpu?
+
+> `optional` **cpu**: `string`[]
+
+#### dependencies?
+
+> `optional` **dependencies**: `Record`\<`string`, `string`\>
+
+#### description?
+
+> `optional` **description**: `string`
+
+#### devDependencies?
+
+> `optional` **devDependencies**: `Record`\<`string`, `string`\>
+
+#### directories?
+
+> `optional` **directories**: `object`
+
+#### directories.bin?
+
+> `optional` **bin**: `string`
+
+#### directories.doc?
+
+> `optional` **doc**: `string`
+
+#### directories.example?
+
+> `optional` **example**: `string`
+
+#### directories.lib?
+
+> `optional` **lib**: `string`
+
+#### directories.man?
+
+> `optional` **man**: `string`
+
+#### directories.v?
+
+> `optional` **v**: `string`
+
+#### engines?
+
+> `optional` **engines**: `object` & `Record`\<`string`, `string`\>
+
+##### Type declaration
+
+###### node?
+
+> `optional` **node**: `string`
+
+###### npm?
+
+> `optional` **npm**: `string`
+
+#### esnext?
+
+> `optional` **esnext**: `string` \| `Record`\<`string`, `string`\>
+
+#### exports?
+
+> `optional` **exports**: `PackageJsonExports`
+
+#### files?
+
+> `optional` **files**: `string`[]
+
+#### flat?
+
+> `optional` **flat**: `boolean`
+
+#### funding?
+
+> `optional` **funding**: `string` \| `object` \| (`string` \| `object`)[]
+
+#### homepage?
+
+> `optional` **homepage**: `string`
+
+#### keywords?
+
+> `optional` **keywords**: `string`[]
+
+#### license?
+
+> `optional` **license**: `string`
+
+#### main?
+
+> `optional` **main**: `string`
+
+#### maintainers?
+
+> `optional` **maintainers**: (`string` \| `object`)[]
+
+#### man?
+
+> `optional` **man**: `string` \| `string`[]
+
+#### module?
+
+> `optional` **module**: `string`
+
+#### name?
+
+> `optional` **name**: `string`
+
+#### optionalDependencies?
+
+> `optional` **optionalDependencies**: `Record`\<`string`, `string`\>
+
+#### os?
+
+> `optional` **os**: `string`[]
+
+#### overrides?
+
+> `optional` **overrides**: `Record`\<`string`, `string` \| `Record`\<`string`, `string` \|
+> `Record`\<`string`, `unknown`\>\>\>
+
+#### packageManager?
+
+> `optional` **packageManager**: `string`
+
+#### peerDependencies?
+
+> `optional` **peerDependencies**: `Record`\<`string`, `string`\>
+
+#### peerDependenciesMeta?
+
+> `optional` **peerDependenciesMeta**: `Record`\<`string`, `object`\>
+
+#### preferGlobal?
+
+> `optional` **preferGlobal**: `boolean`
+
+#### private?
+
+> `optional` **private**: `boolean`
+
+#### publishConfig?
+
+> `optional` **publishConfig**: `object` & `Record`\<`string`, `unknown`\>
+
+##### Type declaration
+
+###### access?
+
+> `optional` **access**: `"public"` \| `"restricted"`
+
+###### registry?
+
+> `optional` **registry**: `string`
+
+###### tag?
+
+> `optional` **tag**: `string`
+
+#### repository?
+
+> `optional` **repository**: `string` \| `object`
+
+#### resolutions?
+
+> `optional` **resolutions**: `Record`\<`string`, `string`\>
+
+#### scripts?
+
+> `optional` **scripts**: `Record`\<`string`, `string`\> & `object`
+
+##### Type declaration
+
+###### install?
+
+> `optional` **install**: `string`
+
+###### postinstall?
+
+> `optional` **postinstall**: `string`
+
+###### postpack?
+
+> `optional` **postpack**: `string`
+
+###### postpublish?
+
+> `optional` **postpublish**: `string`
+
+###### postrestart?
+
+> `optional` **postrestart**: `string`
+
+###### poststart?
+
+> `optional` **poststart**: `string`
+
+###### poststop?
+
+> `optional` **poststop**: `string`
+
+###### posttest?
+
+> `optional` **posttest**: `string`
+
+###### postuninstall?
+
+> `optional` **postuninstall**: `string`
+
+###### postversion?
+
+> `optional` **postversion**: `string`
+
+###### preinstall?
+
+> `optional` **preinstall**: `string`
+
+###### prepack?
+
+> `optional` **prepack**: `string`
+
+###### prepare?
+
+> `optional` **prepare**: `string`
+
+###### prepublish?
+
+> `optional` **prepublish**: `string`
+
+###### prepublishOnly?
+
+> `optional` **prepublishOnly**: `string`
+
+###### prerestart?
+
+> `optional` **prerestart**: `string`
+
+###### prestart?
+
+> `optional` **prestart**: `string`
+
+###### prestop?
+
+> `optional` **prestop**: `string`
+
+###### pretest?
+
+> `optional` **pretest**: `string`
+
+###### preuninstall?
+
+> `optional` **preuninstall**: `string`
+
+###### preversion?
+
+> `optional` **preversion**: `string`
+
+###### publish?
+
+> `optional` **publish**: `string`
+
+###### restart?
+
+> `optional` **restart**: `string`
+
+###### start?
+
+> `optional` **start**: `string`
+
+###### stop?
+
+> `optional` **stop**: `string`
+
+###### test?
+
+> `optional` **test**: `string`
+
+###### uninstall?
+
+> `optional` **uninstall**: `string`
+
+###### version?
+
+> `optional` **version**: `string`
+
+#### sideEffects?
+
+> `optional` **sideEffects**: `boolean` \| `string`[]
+
+#### source?
+
+> `optional` **source**: `string`
+
+#### type?
+
+> `optional` **type**: `"commonjs"` \| `"module"`
+
+#### types?
+
+> `optional` **types**: `string`
+
+#### typings?
+
+> `optional` **typings**: `string`
+
+#### version?
+
+> `optional` **version**: `string`
+
+#### workspaces?
+
+> `optional` **workspaces**: `string`[] \| `object`
+
+#### Source
+
+[packages/carson/source/workspace/Project.ts:43](https://github.com/jakubmazanec/js-tools/blob/d8fb2f4f9576baa170e480eea0b247af3afdcd86/packages/carson/source/workspace/Project.ts#L43)
 
 ---
 
 ### path
 
-• **path**: `string`
+> **path**: `string`
 
 Project path.
 
-#### Defined in
+#### Source
 
-[packages/carson/source/workspace/Project.ts:34](https://github.com/jakubmazanec/js-tools/blob/7d1843cc967006a93d6a5692873539c5380b3c15/packages/carson/source/workspace/Project.ts#L34)
+[packages/carson/source/workspace/Project.ts:34](https://github.com/jakubmazanec/js-tools/blob/d8fb2f4f9576baa170e480eea0b247af3afdcd86/packages/carson/source/workspace/Project.ts#L34)
 
 ---
 
 ### relativePath
 
-• **relativePath**: `string`
+> **relativePath**: `string`
 
 Project path relative to workspace path.
 
-#### Defined in
+#### Source
 
-[packages/carson/source/workspace/Project.ts:37](https://github.com/jakubmazanec/js-tools/blob/7d1843cc967006a93d6a5692873539c5380b3c15/packages/carson/source/workspace/Project.ts#L37)
+[packages/carson/source/workspace/Project.ts:37](https://github.com/jakubmazanec/js-tools/blob/d8fb2f4f9576baa170e480eea0b247af3afdcd86/packages/carson/source/workspace/Project.ts#L37)
 
 ---
 
 ### workspace
 
-• **workspace**: [`Workspace`](Workspace.md)\<`M`\>
+> **workspace**: [`Workspace`](Workspace.md)\<`M`\>
 
 Parent [Workspace](Workspace.md) instance.
 
-#### Defined in
+#### Source
 
-[packages/carson/source/workspace/Project.ts:46](https://github.com/jakubmazanec/js-tools/blob/7d1843cc967006a93d6a5692873539c5380b3c15/packages/carson/source/workspace/Project.ts#L46)
+[packages/carson/source/workspace/Project.ts:46](https://github.com/jakubmazanec/js-tools/blob/d8fb2f4f9576baa170e480eea0b247af3afdcd86/packages/carson/source/workspace/Project.ts#L46)
 
 ## Methods
 
-### read
+### read()
 
-▸ **read**(): `Promise`\<[`Project`](Project.md)\<`M`\>\>
+> **read**(): `Promise`\<[`Project`](Project.md)\<`M`\>\>
 
 #### Returns
 
 `Promise`\<[`Project`](Project.md)\<`M`\>\>
 
-#### Defined in
+#### Source
 
-[packages/carson/source/workspace/Project.ts:164](https://github.com/jakubmazanec/js-tools/blob/7d1843cc967006a93d6a5692873539c5380b3c15/packages/carson/source/workspace/Project.ts#L164)
+[packages/carson/source/workspace/Project.ts:164](https://github.com/jakubmazanec/js-tools/blob/d8fb2f4f9576baa170e480eea0b247af3afdcd86/packages/carson/source/workspace/Project.ts#L164)
 
 ---
 
-### update
+### update()
 
-▸ **update**(`«destructured»`): `Promise`\<[`Project`](Project.md)\<`M`\>\>
+> **update**(`__namedParameters`): `Promise`\<[`Project`](Project.md)\<`M`\>\>
 
 #### Parameters
 
-| Name             | Type                                                        |
-| :--------------- | :---------------------------------------------------------- |
-| `«destructured»` | [`ProjectUpdateOptions`](../README.md#projectupdateoptions) |
+• **\_\_namedParameters**: [`ProjectUpdateOptions`](../type-aliases/ProjectUpdateOptions.md)
 
 #### Returns
 
 `Promise`\<[`Project`](Project.md)\<`M`\>\>
 
-#### Defined in
+#### Source
 
-[packages/carson/source/workspace/Project.ts:245](https://github.com/jakubmazanec/js-tools/blob/7d1843cc967006a93d6a5692873539c5380b3c15/packages/carson/source/workspace/Project.ts#L245)
+[packages/carson/source/workspace/Project.ts:245](https://github.com/jakubmazanec/js-tools/blob/d8fb2f4f9576baa170e480eea0b247af3afdcd86/packages/carson/source/workspace/Project.ts#L245)
 
 ---
 
-### create
+### create()
 
-▸ **create**\<`M`\>(`«destructured»`): `Promise`\<[`Project`](Project.md)\<`M`\>\>
+> `static` **create**\<`M`\>(`__namedParameters`): `Promise`\<[`Project`](Project.md)\<`M`\>\>
 
 #### Type parameters
 
-| Name | Type              |
-| :--- | :---------------- |
-| `M`  | extends `boolean` |
+• **M** _extends_ `boolean`
 
 #### Parameters
 
-| Name             | Type                                                               |
-| :--------------- | :----------------------------------------------------------------- |
-| `«destructured»` | [`ProjectCreateOptions`](../README.md#projectcreateoptions)\<`M`\> |
+• **\_\_namedParameters**: [`ProjectCreateOptions`](../type-aliases/ProjectCreateOptions.md)\<`M`\>
 
 #### Returns
 
 `Promise`\<[`Project`](Project.md)\<`M`\>\>
 
-#### Defined in
+#### Source
 
-[packages/carson/source/workspace/Project.ts:91](https://github.com/jakubmazanec/js-tools/blob/7d1843cc967006a93d6a5692873539c5380b3c15/packages/carson/source/workspace/Project.ts#L91)
+[packages/carson/source/workspace/Project.ts:91](https://github.com/jakubmazanec/js-tools/blob/d8fb2f4f9576baa170e480eea0b247af3afdcd86/packages/carson/source/workspace/Project.ts#L91)
 
 ---
 
-### read
+### read()
 
-▸ **read**\<`M`\>(`projectPath`, `workspace`): `Promise`\<[`Project`](Project.md)\<`M`\>\>
+> `static` **read**\<`M`\>(`projectPath`, `workspace`): `Promise`\<[`Project`](Project.md)\<`M`\>\>
 
 #### Type parameters
 
-| Name | Type              |
-| :--- | :---------------- |
-| `M`  | extends `boolean` |
+• **M** _extends_ `boolean`
 
 #### Parameters
 
-| Name          | Type                               |
-| :------------ | :--------------------------------- |
-| `projectPath` | `string`                           |
-| `workspace`   | [`Workspace`](Workspace.md)\<`M`\> |
+• **projectPath**: `string`
+
+• **workspace**: [`Workspace`](Workspace.md)\<`M`\>
 
 #### Returns
 
 `Promise`\<[`Project`](Project.md)\<`M`\>\>
 
-#### Defined in
+#### Source
 
-[packages/carson/source/workspace/Project.ts:150](https://github.com/jakubmazanec/js-tools/blob/7d1843cc967006a93d6a5692873539c5380b3c15/packages/carson/source/workspace/Project.ts#L150)
+[packages/carson/source/workspace/Project.ts:150](https://github.com/jakubmazanec/js-tools/blob/d8fb2f4f9576baa170e480eea0b247af3afdcd86/packages/carson/source/workspace/Project.ts#L150)

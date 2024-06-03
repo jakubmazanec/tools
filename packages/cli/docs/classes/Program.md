@@ -1,184 +1,160 @@
+[**@jakubmazanec/cli**](../README.md) • **Docs**
+
+---
+
 # Class: Program
 
 Program manages and executes [Command](Command.md) instances attached to it based on parsing command
 line arguments.
 
-## Table of contents
-
-### Constructors
-
-- [constructor](Program.md#constructor)
-
-### Properties
-
-- [ErrorBoundaryFallbackComponent](Program.md#errorboundaryfallbackcomponent)
-- [bin](Program.md#bin)
-- [commands](Program.md#commands)
-- [description](Program.md#description)
-- [displayName](Program.md#displayname)
-- [isRendering](Program.md#isrendering)
-- [latestVersion](Program.md#latestversion)
-- [name](Program.md#name)
-- [streams](Program.md#streams)
-- [version](Program.md#version)
-
-### Methods
-
-- [addCommand](Program.md#addcommand)
-- [renderElement](Program.md#renderelement)
-- [run](Program.md#run)
-- [create](Program.md#create)
-
 ## Constructors
 
-### constructor
+### new Program()
 
-• **new Program**(`«destructured»`): [`Program`](Program.md)
+> `private` **new Program**(`__namedParameters`): [`Program`](Program.md)
 
 #### Parameters
 
-| Name             | Type                                            |
-| :--------------- | :---------------------------------------------- |
-| `«destructured»` | [`ProgramOptions`](../README.md#programoptions) |
+• **\_\_namedParameters**: [`ProgramOptions`](../type-aliases/ProgramOptions.md)
 
 #### Returns
 
 [`Program`](Program.md)
 
-#### Defined in
+#### Source
 
-[cli/source/program/Program.ts:56](https://github.com/jakubmazanec/js-tools/blob/7d1843cc967006a93d6a5692873539c5380b3c15/packages/cli/source/program/Program.ts#L56)
+[cli/source/program/Program.ts:56](https://github.com/jakubmazanec/js-tools/blob/d8fb2f4f9576baa170e480eea0b247af3afdcd86/packages/cli/source/program/Program.ts#L56)
 
 ## Properties
 
 ### ErrorBoundaryFallbackComponent
 
-• **ErrorBoundaryFallbackComponent**: `ComponentType`\<`FallbackProps`\>
+> **ErrorBoundaryFallbackComponent**: `ComponentType`\<`FallbackProps`\>
 
 Custom error boundary fallback component
 
-#### Defined in
+#### Source
 
-[cli/source/program/Program.ts:54](https://github.com/jakubmazanec/js-tools/blob/7d1843cc967006a93d6a5692873539c5380b3c15/packages/cli/source/program/Program.ts#L54)
+[cli/source/program/Program.ts:54](https://github.com/jakubmazanec/js-tools/blob/d8fb2f4f9576baa170e480eea0b247af3afdcd86/packages/cli/source/program/Program.ts#L54)
 
 ---
 
-### bin
+### bin?
 
-• `Optional` `Readonly` **bin**: `string`
+> `optional` `readonly` **bin**: `string`
 
 Program executable name.
 
-#### Defined in
+#### Source
 
-[cli/source/program/Program.ts:38](https://github.com/jakubmazanec/js-tools/blob/7d1843cc967006a93d6a5692873539c5380b3c15/packages/cli/source/program/Program.ts#L38)
+[cli/source/program/Program.ts:38](https://github.com/jakubmazanec/js-tools/blob/d8fb2f4f9576baa170e480eea0b247af3afdcd86/packages/cli/source/program/Program.ts#L38)
 
 ---
 
 ### commands
 
-• `Readonly` **commands**: [`Command`](Command.md)\<`string`, `undefined` \| `ParametersConfig`,
-`undefined` \| `OptionsConfig`, `boolean`, `boolean`\>[] = `[]`
+> `readonly` **commands**: [`Command`](Command.md)\<`string`, `undefined` \| `ParametersConfig`,
+> `undefined` \| `OptionsConfig`, `boolean`, `boolean`\>[] = `[]`
 
 Program commands
 
-#### Defined in
+#### Source
 
-[cli/source/program/Program.ts:41](https://github.com/jakubmazanec/js-tools/blob/7d1843cc967006a93d6a5692873539c5380b3c15/packages/cli/source/program/Program.ts#L41)
+[cli/source/program/Program.ts:41](https://github.com/jakubmazanec/js-tools/blob/d8fb2f4f9576baa170e480eea0b247af3afdcd86/packages/cli/source/program/Program.ts#L41)
 
 ---
 
-### description
+### description?
 
-• `Optional` `Readonly` **description**: `string`
+> `optional` `readonly` **description**: `string`
 
 Program description.
 
-#### Defined in
+#### Source
 
-[cli/source/program/Program.ts:35](https://github.com/jakubmazanec/js-tools/blob/7d1843cc967006a93d6a5692873539c5380b3c15/packages/cli/source/program/Program.ts#L35)
+[cli/source/program/Program.ts:35](https://github.com/jakubmazanec/js-tools/blob/d8fb2f4f9576baa170e480eea0b247af3afdcd86/packages/cli/source/program/Program.ts#L35)
 
 ---
 
-### displayName
+### displayName?
 
-• `Optional` `Readonly` **displayName**: `string`
+> `optional` `readonly` **displayName**: `string`
 
 More readable program name.
 
-#### Defined in
+#### Source
 
-[cli/source/program/Program.ts:26](https://github.com/jakubmazanec/js-tools/blob/7d1843cc967006a93d6a5692873539c5380b3c15/packages/cli/source/program/Program.ts#L26)
+[cli/source/program/Program.ts:26](https://github.com/jakubmazanec/js-tools/blob/d8fb2f4f9576baa170e480eea0b247af3afdcd86/packages/cli/source/program/Program.ts#L26)
 
 ---
 
 ### isRendering
 
-• `Protected` **isRendering**: `boolean` = `false`
+> `protected` **isRendering**: `boolean` = `false`
 
-#### Defined in
+#### Source
 
-[cli/source/program/Program.ts:45](https://github.com/jakubmazanec/js-tools/blob/7d1843cc967006a93d6a5692873539c5380b3c15/packages/cli/source/program/Program.ts#L45)
+[cli/source/program/Program.ts:45](https://github.com/jakubmazanec/js-tools/blob/d8fb2f4f9576baa170e480eea0b247af3afdcd86/packages/cli/source/program/Program.ts#L45)
 
 ---
 
-### latestVersion
+### latestVersion?
 
-• `Optional` `Readonly` **latestVersion**: `string`
+> `optional` `readonly` **latestVersion**: `string`
 
 Program latest version.
 
-#### Defined in
+#### Source
 
-[cli/source/program/Program.ts:32](https://github.com/jakubmazanec/js-tools/blob/7d1843cc967006a93d6a5692873539c5380b3c15/packages/cli/source/program/Program.ts#L32)
+[cli/source/program/Program.ts:32](https://github.com/jakubmazanec/js-tools/blob/d8fb2f4f9576baa170e480eea0b247af3afdcd86/packages/cli/source/program/Program.ts#L32)
 
 ---
 
-### name
+### name?
 
-• `Optional` `Readonly` **name**: `string`
+> `optional` `readonly` **name**: `string`
 
 Program name.
 
-#### Defined in
+#### Source
 
-[cli/source/program/Program.ts:23](https://github.com/jakubmazanec/js-tools/blob/7d1843cc967006a93d6a5692873539c5380b3c15/packages/cli/source/program/Program.ts#L23)
+[cli/source/program/Program.ts:23](https://github.com/jakubmazanec/js-tools/blob/d8fb2f4f9576baa170e480eea0b247af3afdcd86/packages/cli/source/program/Program.ts#L23)
 
 ---
 
 ### streams
 
-• `Readonly` **streams**: [`ProgramStreams`](../README.md#programstreams)
+> `readonly` **streams**: [`ProgramStreams`](../type-aliases/ProgramStreams.md)
 
-#### Defined in
+#### Source
 
-[cli/source/program/Program.ts:47](https://github.com/jakubmazanec/js-tools/blob/7d1843cc967006a93d6a5692873539c5380b3c15/packages/cli/source/program/Program.ts#L47)
+[cli/source/program/Program.ts:47](https://github.com/jakubmazanec/js-tools/blob/d8fb2f4f9576baa170e480eea0b247af3afdcd86/packages/cli/source/program/Program.ts#L47)
 
 ---
 
-### version
+### version?
 
-• `Optional` `Readonly` **version**: `string`
+> `optional` `readonly` **version**: `string`
 
 Program version.
 
-#### Defined in
+#### Source
 
-[cli/source/program/Program.ts:29](https://github.com/jakubmazanec/js-tools/blob/7d1843cc967006a93d6a5692873539c5380b3c15/packages/cli/source/program/Program.ts#L29)
+[cli/source/program/Program.ts:29](https://github.com/jakubmazanec/js-tools/blob/d8fb2f4f9576baa170e480eea0b247af3afdcd86/packages/cli/source/program/Program.ts#L29)
 
 ## Methods
 
-### addCommand
+### addCommand()
 
-▸ **addCommand**(`command`): `this`
+> **addCommand**(`command`): `this`
 
 Adds command to the program.
 
 #### Parameters
 
-| Name      | Type                                                         | Description     |
-| :-------- | :----------------------------------------------------------- | :-------------- |
-| `command` | [`Command`](Command.md)\<`any`, `any`, `any`, `any`, `any`\> | Command to add. |
+• **command**: [`Command`](Command.md)\<`any`, `any`, `any`, `any`, `any`\>
+
+Command to add.
 
 #### Returns
 
@@ -186,70 +162,68 @@ Adds command to the program.
 
 Program instance.
 
-#### Defined in
+#### Source
 
-[cli/source/program/Program.ts:150](https://github.com/jakubmazanec/js-tools/blob/7d1843cc967006a93d6a5692873539c5380b3c15/packages/cli/source/program/Program.ts#L150)
+[cli/source/program/Program.ts:150](https://github.com/jakubmazanec/js-tools/blob/d8fb2f4f9576baa170e480eea0b247af3afdcd86/packages/cli/source/program/Program.ts#L150)
 
 ---
 
-### renderElement
+### renderElement()
 
-▸ **renderElement**(`element`): `Promise`\<`void`\>
+> **renderElement**(`element`): `Promise`\<`void`\>
 
 Renders a React element using Ink and outputs to the configured streams.
 
 #### Parameters
 
-| Name      | Type                                                                  | Description                  |
-| :-------- | :-------------------------------------------------------------------- | :--------------------------- |
-| `element` | `ReactElement`\<`any`, `string` \| `JSXElementConstructor`\<`any`\>\> | The React element to render. |
+• **element**: `ReactElement`\<`any`, `string` \| `JSXElementConstructor`\<`any`\>\>
+
+The React element to render.
 
 #### Returns
 
 `Promise`\<`void`\>
 
-#### Defined in
+#### Source
 
-[cli/source/program/Program.ts:162](https://github.com/jakubmazanec/js-tools/blob/7d1843cc967006a93d6a5692873539c5380b3c15/packages/cli/source/program/Program.ts#L162)
+[cli/source/program/Program.ts:162](https://github.com/jakubmazanec/js-tools/blob/d8fb2f4f9576baa170e480eea0b247af3afdcd86/packages/cli/source/program/Program.ts#L162)
 
 ---
 
-### run
+### run()
 
-▸ **run**(`argv`): `Promise`\<`void`\>
+> **run**(`argv`): `Promise`\<`void`\>
 
 Runs the program.
 
 #### Parameters
 
-| Name   | Type   | Description                      |
-| :----- | :----- | :------------------------------- |
-| `argv` | `Argv` | Unparsed command line arguments. |
+• **argv**: `Argv`
+
+Unparsed command line arguments.
 
 #### Returns
 
 `Promise`\<`void`\>
 
-#### Defined in
+#### Source
 
-[cli/source/program/Program.ts:197](https://github.com/jakubmazanec/js-tools/blob/7d1843cc967006a93d6a5692873539c5380b3c15/packages/cli/source/program/Program.ts#L197)
+[cli/source/program/Program.ts:197](https://github.com/jakubmazanec/js-tools/blob/d8fb2f4f9576baa170e480eea0b247af3afdcd86/packages/cli/source/program/Program.ts#L197)
 
 ---
 
-### create
+### create()
 
-▸ **create**(`«destructured»`): `Promise`\<[`Program`](Program.md)\>
+> `static` **create**(`__namedParameters`): `Promise`\<[`Program`](Program.md)\>
 
 #### Parameters
 
-| Name             | Type                                                        |
-| :--------------- | :---------------------------------------------------------- |
-| `«destructured»` | [`ProgramCreateOptions`](../README.md#programcreateoptions) |
+• **\_\_namedParameters**: [`ProgramCreateOptions`](../type-aliases/ProgramCreateOptions.md)
 
 #### Returns
 
 `Promise`\<[`Program`](Program.md)\>
 
-#### Defined in
+#### Source
 
-[cli/source/program/Program.ts:96](https://github.com/jakubmazanec/js-tools/blob/7d1843cc967006a93d6a5692873539c5380b3c15/packages/cli/source/program/Program.ts#L96)
+[cli/source/program/Program.ts:96](https://github.com/jakubmazanec/js-tools/blob/d8fb2f4f9576baa170e480eea0b247af3afdcd86/packages/cli/source/program/Program.ts#L96)

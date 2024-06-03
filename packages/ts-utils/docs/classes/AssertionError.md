@@ -1,43 +1,26 @@
+[**@jakubmazanec/ts-utils**](../README.md) • **Docs**
+
+---
+
 # Class: AssertionError
 
 A subclass of `Error` that indicates an assertion failure.
 
-## Hierarchy
+## Extends
 
 - `Error`
 
-  ↳ **`AssertionError`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](AssertionError.md#constructor)
-
-### Properties
-
-- [cause](AssertionError.md#cause)
-- [message](AssertionError.md#message)
-- [name](AssertionError.md#name)
-- [stack](AssertionError.md#stack)
-- [prepareStackTrace](AssertionError.md#preparestacktrace)
-- [stackTraceLimit](AssertionError.md#stacktracelimit)
-
-### Methods
-
-- [captureStackTrace](AssertionError.md#capturestacktrace)
-
 ## Constructors
 
-### constructor
+### new AssertionError()
 
-• **new AssertionError**(`message?`): [`AssertionError`](AssertionError.md)
+> **new AssertionError**(`message`?): [`AssertionError`](AssertionError.md)
 
 #### Parameters
 
-| Name       | Type     | Description                                |
-| :--------- | :------- | :----------------------------------------- |
-| `message?` | `string` | Message added to the default error message |
+• **message?**: `string`
+
+Message added to the default error message
 
 #### Returns
 
@@ -45,23 +28,23 @@ A subclass of `Error` that indicates an assertion failure.
 
 #### Overrides
 
-Error.constructor
+`Error.constructor`
 
-#### Defined in
+#### Source
 
-[packages/ts-utils/source/utils/assert.ts:8](https://github.com/jakubmazanec/js-tools/blob/7d1843cc967006a93d6a5692873539c5380b3c15/packages/ts-utils/source/utils/assert.ts#L8)
+[packages/ts-utils/source/utils/assert.ts:8](https://github.com/jakubmazanec/js-tools/blob/d8fb2f4f9576baa170e480eea0b247af3afdcd86/packages/ts-utils/source/utils/assert.ts#L8)
 
 ## Properties
 
-### cause
+### cause?
 
-• `Optional` **cause**: `unknown`
+> `optional` **cause**: `unknown`
 
 #### Inherited from
 
-Error.cause
+`Error.cause`
 
-#### Defined in
+#### Source
 
 node_modules/typescript/lib/lib.es2022.error.d.ts:24
 
@@ -69,13 +52,13 @@ node_modules/typescript/lib/lib.es2022.error.d.ts:24
 
 ### message
 
-• **message**: `string`
+> **message**: `string`
 
 #### Inherited from
 
-Error.message
+`Error.message`
 
-#### Defined in
+#### Source
 
 node_modules/typescript/lib/lib.es5.d.ts:1077
 
@@ -83,62 +66,57 @@ node_modules/typescript/lib/lib.es5.d.ts:1077
 
 ### name
 
-• **name**: `string`
+> **name**: `string`
 
 #### Inherited from
 
-Error.name
+`Error.name`
 
-#### Defined in
+#### Source
 
 node_modules/typescript/lib/lib.es5.d.ts:1076
 
 ---
 
-### stack
+### stack?
 
-• `Optional` **stack**: `string`
+> `optional` **stack**: `string`
 
 #### Inherited from
 
-Error.stack
+`Error.stack`
 
-#### Defined in
+#### Source
 
 node_modules/typescript/lib/lib.es5.d.ts:1078
 
 ---
 
-### prepareStackTrace
+### prepareStackTrace()?
 
-▪ `Static` `Optional` **prepareStackTrace**: (`err`: `Error`, `stackTraces`: `CallSite`[]) => `any`
+> `static` `optional` **prepareStackTrace**: (`err`, `stackTraces`) => `any`
 
 Optional override for formatting stack traces
 
-**`See`**
+#### See
 
 https://v8.dev/docs/stack-trace-api#customizing-stack-traces
 
-#### Type declaration
+#### Parameters
 
-▸ (`err`, `stackTraces`): `any`
+• **err**: `Error`
 
-##### Parameters
+• **stackTraces**: `CallSite`[]
 
-| Name          | Type         |
-| :------------ | :----------- |
-| `err`         | `Error`      |
-| `stackTraces` | `CallSite`[] |
-
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Error.prepareStackTrace
+`Error.prepareStackTrace`
 
-#### Defined in
+#### Source
 
 node_modules/@types/node/globals.d.ts:28
 
@@ -146,30 +124,29 @@ node_modules/@types/node/globals.d.ts:28
 
 ### stackTraceLimit
 
-▪ `Static` **stackTraceLimit**: `number`
+> `static` **stackTraceLimit**: `number`
 
 #### Inherited from
 
-Error.stackTraceLimit
+`Error.stackTraceLimit`
 
-#### Defined in
+#### Source
 
 node_modules/@types/node/globals.d.ts:30
 
 ## Methods
 
-### captureStackTrace
+### captureStackTrace()
 
-▸ **captureStackTrace**(`targetObject`, `constructorOpt?`): `void`
+> `static` **captureStackTrace**(`targetObject`, `constructorOpt`?): `void`
 
 Create .stack property on a target object
 
 #### Parameters
 
-| Name              | Type       |
-| :---------------- | :--------- |
-| `targetObject`    | `object`   |
-| `constructorOpt?` | `Function` |
+• **targetObject**: `object`
+
+• **constructorOpt?**: `Function`
 
 #### Returns
 
@@ -177,8 +154,8 @@ Create .stack property on a target object
 
 #### Inherited from
 
-Error.captureStackTrace
+`Error.captureStackTrace`
 
-#### Defined in
+#### Source
 
 node_modules/@types/node/globals.d.ts:21
