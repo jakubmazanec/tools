@@ -49,7 +49,7 @@ Error.constructor
 
 #### Defined in
 
-[packages/ts-utils/source/utils/assert.ts:8](https://github.com/jakubmazanec/js-tools/blob/82da961e3b4406bfbcad38887892e5d63d6bedff/packages/ts-utils/source/utils/assert.ts#L8)
+[packages/ts-utils/source/utils/assert.ts:8](https://github.com/jakubmazanec/js-tools/blob/72449a9aec9e912cdd5d5eb73053ac9e1a876641/packages/ts-utils/source/utils/assert.ts#L8)
 
 ## Properties
 
@@ -77,7 +77,7 @@ Error.message
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1076
+node_modules/typescript/lib/lib.es5.d.ts:1077
 
 ---
 
@@ -91,7 +91,7 @@ Error.name
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1075
+node_modules/typescript/lib/lib.es5.d.ts:1076
 
 ---
 
@@ -105,7 +105,7 @@ Error.stack
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1077
+node_modules/typescript/lib/lib.es5.d.ts:1078
 
 ---
 

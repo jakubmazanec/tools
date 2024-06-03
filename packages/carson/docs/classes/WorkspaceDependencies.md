@@ -104,7 +104,7 @@ Array\&lt;WorkspaceDependency\&gt;.constructor
 
 #### Defined in
 
-[packages/carson/source/workspace/WorkspaceDependencies.ts:19](https://github.com/jakubmazanec/js-tools/blob/82da961e3b4406bfbcad38887892e5d63d6bedff/packages/carson/source/workspace/WorkspaceDependencies.ts#L19)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:19](https://github.com/jakubmazanec/js-tools/blob/72449a9aec9e912cdd5d5eb73053ac9e1a876641/packages/carson/source/workspace/WorkspaceDependencies.ts#L19)
 
 ## Properties
 
@@ -184,7 +184,7 @@ Array.length
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1325
+node_modules/typescript/lib/lib.es5.d.ts:1326
 
 ---
 
@@ -196,7 +196,7 @@ The workspace the dependencies are installed in.
 
 #### Defined in
 
-[packages/carson/source/workspace/WorkspaceDependencies.ts:17](https://github.com/jakubmazanec/js-tools/blob/82da961e3b4406bfbcad38887892e5d63d6bedff/packages/carson/source/workspace/WorkspaceDependencies.ts#L17)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:17](https://github.com/jakubmazanec/js-tools/blob/72449a9aec9e912cdd5d5eb73053ac9e1a876641/packages/carson/source/workspace/WorkspaceDependencies.ts#L17)
 
 ---
 
@@ -282,7 +282,7 @@ Array.concat
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1349
+node_modules/typescript/lib/lib.es5.d.ts:1350
 
 ▸ **concat**(`...items`): `WorkspaceDependency`[]
 
@@ -304,7 +304,7 @@ Array.concat
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1355
+node_modules/typescript/lib/lib.es5.d.ts:1356
 
 ---
 
@@ -386,7 +386,7 @@ Array.every
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1432
+node_modules/typescript/lib/lib.es5.d.ts:1433
 
 ▸ **every**(`predicate`, `thisArg?`): `boolean`
 
@@ -409,7 +409,7 @@ Array.every
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1441
+node_modules/typescript/lib/lib.es5.d.ts:1442
 
 ---
 
@@ -471,7 +471,7 @@ Array.filter
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1468
+node_modules/typescript/lib/lib.es5.d.ts:1469
 
 ▸ **filter**(`predicate`, `thisArg?`): `WorkspaceDependency`[]
 
@@ -494,7 +494,7 @@ Array.filter
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1474
+node_modules/typescript/lib/lib.es5.d.ts:1475
 
 ---
 
@@ -754,7 +754,7 @@ Array.forEach
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1456
+node_modules/typescript/lib/lib.es5.d.ts:1457
 
 ---
 
@@ -778,7 +778,7 @@ Object whose keys are dependency names and values are sorted versions.
 
 #### Defined in
 
-[packages/carson/source/workspace/WorkspaceDependencies.ts:187](https://github.com/jakubmazanec/js-tools/blob/82da961e3b4406bfbcad38887892e5d63d6bedff/packages/carson/source/workspace/WorkspaceDependencies.ts#L187)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:187](https://github.com/jakubmazanec/js-tools/blob/72449a9aec9e912cdd5d5eb73053ac9e1a876641/packages/carson/source/workspace/WorkspaceDependencies.ts#L187)
 
 ---
 
@@ -832,7 +832,7 @@ Array.indexOf
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1417
+node_modules/typescript/lib/lib.es5.d.ts:1418
 
 ---
 
@@ -858,7 +858,7 @@ Array.join
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1360
+node_modules/typescript/lib/lib.es5.d.ts:1361
 
 ---
 
@@ -906,7 +906,7 @@ Array.lastIndexOf
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1423
+node_modules/typescript/lib/lib.es5.d.ts:1424
 
 ---
 
@@ -940,7 +940,7 @@ Array.map
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1462
+node_modules/typescript/lib/lib.es5.d.ts:1463
 
 ---
 
@@ -961,7 +961,7 @@ Array.pop
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1338
+node_modules/typescript/lib/lib.es5.d.ts:1339
 
 ---
 
@@ -989,7 +989,7 @@ Array.push
 
 #### Defined in
 
-[packages/carson/source/workspace/WorkspaceDependencies.ts:40](https://github.com/jakubmazanec/js-tools/blob/82da961e3b4406bfbcad38887892e5d63d6bedff/packages/carson/source/workspace/WorkspaceDependencies.ts#L40)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:40](https://github.com/jakubmazanec/js-tools/blob/72449a9aec9e912cdd5d5eb73053ac9e1a876641/packages/carson/source/workspace/WorkspaceDependencies.ts#L40)
 
 ---
 
@@ -1017,7 +1017,7 @@ Array.reduce
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1480
+node_modules/typescript/lib/lib.es5.d.ts:1481
 
 ▸ **reduce**(`callbackfn`, `initialValue`): `WorkspaceDependency`
 
@@ -1038,7 +1038,7 @@ Array.reduce
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1481
+node_modules/typescript/lib/lib.es5.d.ts:1482
 
 ▸ **reduce**\<`U`\>(`callbackfn`, `initialValue`): `U`
 
@@ -1069,7 +1069,7 @@ Array.reduce
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1487
+node_modules/typescript/lib/lib.es5.d.ts:1488
 
 ---
 
@@ -1097,7 +1097,7 @@ Array.reduceRight
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1493
+node_modules/typescript/lib/lib.es5.d.ts:1494
 
 ▸ **reduceRight**(`callbackfn`, `initialValue`): `WorkspaceDependency`
 
@@ -1118,7 +1118,7 @@ Array.reduceRight
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1494
+node_modules/typescript/lib/lib.es5.d.ts:1495
 
 ▸ **reduceRight**\<`U`\>(`callbackfn`, `initialValue`): `U`
 
@@ -1149,7 +1149,7 @@ Array.reduceRight
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1500
+node_modules/typescript/lib/lib.es5.d.ts:1501
 
 ---
 
@@ -1170,7 +1170,7 @@ Array.reverse
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1365
+node_modules/typescript/lib/lib.es5.d.ts:1366
 
 ---
 
@@ -1191,7 +1191,7 @@ Array.shift
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1370
+node_modules/typescript/lib/lib.es5.d.ts:1371
 
 ---
 
@@ -1220,7 +1220,7 @@ Array.slice
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1380
+node_modules/typescript/lib/lib.es5.d.ts:1381
 
 ---
 
@@ -1247,7 +1247,7 @@ Array.some
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1450
+node_modules/typescript/lib/lib.es5.d.ts:1451
 
 ---
 
@@ -1273,7 +1273,7 @@ Array.sort
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1391
+node_modules/typescript/lib/lib.es5.d.ts:1392
 
 ---
 
@@ -1303,7 +1303,7 @@ Array.splice
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1398
+node_modules/typescript/lib/lib.es5.d.ts:1399
 
 ▸ **splice**(`start`, `deleteCount`, `...items`): `WorkspaceDependency`[]
 
@@ -1330,7 +1330,7 @@ Array.splice
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1406
+node_modules/typescript/lib/lib.es5.d.ts:1407
 
 ---
 
@@ -1351,7 +1351,7 @@ Array.toLocaleString
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1333
+node_modules/typescript/lib/lib.es5.d.ts:1334
 
 ---
 
@@ -1473,7 +1473,7 @@ Array.toString
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1329
+node_modules/typescript/lib/lib.es5.d.ts:1330
 
 ---
 
@@ -1499,7 +1499,7 @@ Array.unshift
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1411
+node_modules/typescript/lib/lib.es5.d.ts:1412
 
 ---
 
@@ -1704,7 +1704,7 @@ The new [WorkspaceDependencies](WorkspaceDependencies.md) instance.
 
 #### Defined in
 
-[packages/carson/source/workspace/WorkspaceDependencies.ts:83](https://github.com/jakubmazanec/js-tools/blob/82da961e3b4406bfbcad38887892e5d63d6bedff/packages/carson/source/workspace/WorkspaceDependencies.ts#L83)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:83](https://github.com/jakubmazanec/js-tools/blob/72449a9aec9e912cdd5d5eb73053ac9e1a876641/packages/carson/source/workspace/WorkspaceDependencies.ts#L83)
 
 ---
 
@@ -1728,7 +1728,7 @@ Array.isArray
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1512
+node_modules/typescript/lib/lib.es5.d.ts:1513
 
 ---
 
