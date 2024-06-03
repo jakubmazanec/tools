@@ -44,7 +44,7 @@
 
 #### Defined in
 
-[packages/carson-templates/source/constants.ts:1](https://github.com/jakubmazanec/js-tools/blob/9df49e8/packages/carson-templates/source/constants.ts#L1)
+[packages/carson-templates/source/constants.ts:1](https://github.com/jakubmazanec/js-tools/blob/0cfa1b5/packages/carson-templates/source/constants.ts#L1)
 
 ---
 
@@ -55,7 +55,7 @@
 
 #### Defined in
 
-[packages/carson-templates/source/constants.ts:5](https://github.com/jakubmazanec/js-tools/blob/9df49e8/packages/carson-templates/source/constants.ts#L5)
+[packages/carson-templates/source/constants.ts:5](https://github.com/jakubmazanec/js-tools/blob/0cfa1b5/packages/carson-templates/source/constants.ts#L5)
 
 ---
 
@@ -66,7 +66,7 @@
 
 #### Defined in
 
-[packages/carson-templates/source/constants.ts:4](https://github.com/jakubmazanec/js-tools/blob/9df49e8/packages/carson-templates/source/constants.ts#L4)
+[packages/carson-templates/source/constants.ts:4](https://github.com/jakubmazanec/js-tools/blob/0cfa1b5/packages/carson-templates/source/constants.ts#L4)
 
 ---
 
@@ -76,7 +76,7 @@
 
 #### Defined in
 
-[packages/carson-templates/source/constants.ts:9](https://github.com/jakubmazanec/js-tools/blob/9df49e8/packages/carson-templates/source/constants.ts#L9)
+[packages/carson-templates/source/constants.ts:9](https://github.com/jakubmazanec/js-tools/blob/0cfa1b5/packages/carson-templates/source/constants.ts#L9)
 
 ---
 
@@ -86,7 +86,7 @@
 
 #### Defined in
 
-[packages/carson-templates/source/constants.ts:12](https://github.com/jakubmazanec/js-tools/blob/9df49e8/packages/carson-templates/source/constants.ts#L12)
+[packages/carson-templates/source/constants.ts:12](https://github.com/jakubmazanec/js-tools/blob/0cfa1b5/packages/carson-templates/source/constants.ts#L12)
 
 ---
 
@@ -96,7 +96,7 @@
 
 #### Defined in
 
-[packages/carson-templates/source/constants.ts:15](https://github.com/jakubmazanec/js-tools/blob/9df49e8/packages/carson-templates/source/constants.ts#L15)
+[packages/carson-templates/source/constants.ts:15](https://github.com/jakubmazanec/js-tools/blob/0cfa1b5/packages/carson-templates/source/constants.ts#L15)
 
 ---
 
@@ -106,7 +106,7 @@
 
 #### Defined in
 
-[packages/carson-templates/source/constants.ts:6](https://github.com/jakubmazanec/js-tools/blob/9df49e8/packages/carson-templates/source/constants.ts#L6)
+[packages/carson-templates/source/constants.ts:6](https://github.com/jakubmazanec/js-tools/blob/0cfa1b5/packages/carson-templates/source/constants.ts#L6)
 
 ---
 
@@ -116,7 +116,7 @@
 
 #### Defined in
 
-[packages/carson-templates/source/constants.ts:31](https://github.com/jakubmazanec/js-tools/blob/9df49e8/packages/carson-templates/source/constants.ts#L31)
+[packages/carson-templates/source/constants.ts:31](https://github.com/jakubmazanec/js-tools/blob/0cfa1b5/packages/carson-templates/source/constants.ts#L31)
 
 ---
 
@@ -126,7 +126,7 @@
 
 #### Defined in
 
-[packages/carson-templates/source/constants.ts:11](https://github.com/jakubmazanec/js-tools/blob/9df49e8/packages/carson-templates/source/constants.ts#L11)
+[packages/carson-templates/source/constants.ts:11](https://github.com/jakubmazanec/js-tools/blob/0cfa1b5/packages/carson-templates/source/constants.ts#L11)
 
 ---
 
@@ -136,7 +136,7 @@
 
 #### Defined in
 
-[packages/carson-templates/source/constants.ts:17](https://github.com/jakubmazanec/js-tools/blob/9df49e8/packages/carson-templates/source/constants.ts#L17)
+[packages/carson-templates/source/constants.ts:17](https://github.com/jakubmazanec/js-tools/blob/0cfa1b5/packages/carson-templates/source/constants.ts#L17)
 
 ---
 
@@ -146,7 +146,7 @@
 
 #### Defined in
 
-[packages/carson-templates/source/constants.ts:14](https://github.com/jakubmazanec/js-tools/blob/9df49e8/packages/carson-templates/source/constants.ts#L14)
+[packages/carson-templates/source/constants.ts:14](https://github.com/jakubmazanec/js-tools/blob/0cfa1b5/packages/carson-templates/source/constants.ts#L14)
 
 ---
 
@@ -176,7 +176,7 @@
 
 #### Defined in
 
-[packages/carson-templates/source/constants.ts:63](https://github.com/jakubmazanec/js-tools/blob/9df49e8/packages/carson-templates/source/constants.ts#L63)
+[packages/carson-templates/source/constants.ts:63](https://github.com/jakubmazanec/js-tools/blob/0cfa1b5/packages/carson-templates/source/constants.ts#L63)
 
 ---
 
@@ -186,7 +186,7 @@
 
 #### Defined in
 
-[packages/carson-templates/source/constants.ts:2](https://github.com/jakubmazanec/js-tools/blob/9df49e8/packages/carson-templates/source/constants.ts#L2)
+[packages/carson-templates/source/constants.ts:2](https://github.com/jakubmazanec/js-tools/blob/0cfa1b5/packages/carson-templates/source/constants.ts#L2)
 
 ---
 
@@ -196,7 +196,7 @@
 
 #### Defined in
 
-[packages/carson-templates/source/constants.ts:10](https://github.com/jakubmazanec/js-tools/blob/9df49e8/packages/carson-templates/source/constants.ts#L10)
+[packages/carson-templates/source/constants.ts:10](https://github.com/jakubmazanec/js-tools/blob/0cfa1b5/packages/carson-templates/source/constants.ts#L10)
 
 ---
 
@@ -206,7 +206,7 @@
 
 #### Defined in
 
-[packages/carson-templates/source/constants.ts:7](https://github.com/jakubmazanec/js-tools/blob/9df49e8/packages/carson-templates/source/constants.ts#L7)
+[packages/carson-templates/source/constants.ts:7](https://github.com/jakubmazanec/js-tools/blob/0cfa1b5/packages/carson-templates/source/constants.ts#L7)
 
 ---
 
@@ -237,7 +237,7 @@
 
 #### Defined in
 
-[packages/carson-templates/source/constants.ts:44](https://github.com/jakubmazanec/js-tools/blob/9df49e8/packages/carson-templates/source/constants.ts#L44)
+[packages/carson-templates/source/constants.ts:44](https://github.com/jakubmazanec/js-tools/blob/0cfa1b5/packages/carson-templates/source/constants.ts#L44)
 
 ---
 
@@ -258,7 +258,7 @@
 
 #### Defined in
 
-[packages/carson-templates/source/constants.ts:89](https://github.com/jakubmazanec/js-tools/blob/9df49e8/packages/carson-templates/source/constants.ts#L89)
+[packages/carson-templates/source/constants.ts:89](https://github.com/jakubmazanec/js-tools/blob/0cfa1b5/packages/carson-templates/source/constants.ts#L89)
 
 ## Functions
 
@@ -279,7 +279,7 @@
 
 #### Defined in
 
-[packages/carson-templates/source/getDependencies.ts:11](https://github.com/jakubmazanec/js-tools/blob/9df49e8/packages/carson-templates/source/getDependencies.ts#L11)
+[packages/carson-templates/source/getDependencies.ts:11](https://github.com/jakubmazanec/js-tools/blob/0cfa1b5/packages/carson-templates/source/getDependencies.ts#L11)
 
 ---
 
@@ -299,7 +299,7 @@
 
 #### Defined in
 
-[packages/carson-templates/source/getDevelopmentBranch.ts:5](https://github.com/jakubmazanec/js-tools/blob/9df49e8/packages/carson-templates/source/getDevelopmentBranch.ts#L5)
+[packages/carson-templates/source/getDevelopmentBranch.ts:5](https://github.com/jakubmazanec/js-tools/blob/0cfa1b5/packages/carson-templates/source/getDevelopmentBranch.ts#L5)
 
 ---
 
@@ -319,7 +319,7 @@
 
 #### Defined in
 
-[packages/carson-templates/source/getMainBranch.ts:5](https://github.com/jakubmazanec/js-tools/blob/9df49e8/packages/carson-templates/source/getMainBranch.ts#L5)
+[packages/carson-templates/source/getMainBranch.ts:5](https://github.com/jakubmazanec/js-tools/blob/0cfa1b5/packages/carson-templates/source/getMainBranch.ts#L5)
 
 ---
 
@@ -340,7 +340,7 @@
 
 #### Defined in
 
-[packages/carson-templates/source/getReferences.ts:3](https://github.com/jakubmazanec/js-tools/blob/9df49e8/packages/carson-templates/source/getReferences.ts#L3)
+[packages/carson-templates/source/getReferences.ts:3](https://github.com/jakubmazanec/js-tools/blob/0cfa1b5/packages/carson-templates/source/getReferences.ts#L3)
 
 ---
 
@@ -360,7 +360,7 @@
 
 #### Defined in
 
-[packages/carson-templates/source/getWorkspaceName.ts:6](https://github.com/jakubmazanec/js-tools/blob/9df49e8/packages/carson-templates/source/getWorkspaceName.ts#L6)
+[packages/carson-templates/source/getWorkspaceName.ts:6](https://github.com/jakubmazanec/js-tools/blob/0cfa1b5/packages/carson-templates/source/getWorkspaceName.ts#L6)
 
 ---
 
