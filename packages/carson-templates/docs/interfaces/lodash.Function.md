@@ -904,7 +904,7 @@ node_modules/@types/lodash/common/function.d.ts:337
 ### debounce
 
 ▸ **debounce**(`wait`, `options`): `T` extends (...`args`: `any`[]) => `any` ?
-[`Function`](lodash.Function.md)\<[`DebouncedFuncLeading`](lodash.DebouncedFuncLeading.md)\<`T`\>\>
+[`Function`](lodash.Function.md)\<[`DebouncedFuncLeading`](lodash.DebouncedFuncLeading.md)\<`T`\<`T`\>\>\>
 : `never`
 
 #### Parameters
@@ -917,7 +917,7 @@ node_modules/@types/lodash/common/function.d.ts:337
 #### Returns
 
 `T` extends (...`args`: `any`[]) => `any` ?
-[`Function`](lodash.Function.md)\<[`DebouncedFuncLeading`](lodash.DebouncedFuncLeading.md)\<`T`\>\>
+[`Function`](lodash.Function.md)\<[`DebouncedFuncLeading`](lodash.DebouncedFuncLeading.md)\<`T`\<`T`\>\>\>
 : `never`
 
 **`See`**
@@ -929,7 +929,8 @@ node_modules/@types/lodash/common/function.d.ts:337
 node_modules/@types/lodash/common/function.d.ts:432
 
 ▸ **debounce**(`wait?`, `options?`): `T` extends (...`args`: `any`[]) => `any` ?
-[`Function`](lodash.Function.md)\<[`DebouncedFunc`](lodash.DebouncedFunc.md)\<`T`\>\> : `never`
+[`Function`](lodash.Function.md)\<[`DebouncedFunc`](lodash.DebouncedFunc.md)\<`T`\<`T`\>\>\> :
+`never`
 
 #### Parameters
 
@@ -941,7 +942,8 @@ node_modules/@types/lodash/common/function.d.ts:432
 #### Returns
 
 `T` extends (...`args`: `any`[]) => `any` ?
-[`Function`](lodash.Function.md)\<[`DebouncedFunc`](lodash.DebouncedFunc.md)\<`T`\>\> : `never`
+[`Function`](lodash.Function.md)\<[`DebouncedFunc`](lodash.DebouncedFunc.md)\<`T`\<`T`\>\>\> :
+`never`
 
 #### Defined in
 
@@ -4436,12 +4438,12 @@ node_modules/@types/lodash/common/function.d.ts:773
 
 node_modules/@types/lodash/common/function.d.ts:780
 
-▸ **partial**(): [`Function`](lodash.Function.md)\<`T` extends (...`ts`: `any`[]) => `any` ? `T` :
-`any`\>
+▸ **partial**(): [`Function`](lodash.Function.md)\<`T` extends (...`ts`: `any`[]) => `any` ?
+`T`\<`T`\> : `any`\>
 
 #### Returns
 
-[`Function`](lodash.Function.md)\<`T` extends (...`ts`: `any`[]) => `any` ? `T` : `any`\>
+[`Function`](lodash.Function.md)\<`T` extends (...`ts`: `any`[]) => `any` ? `T`\<`T`\> : `any`\>
 
 **`See`**
 
@@ -5182,11 +5184,11 @@ node_modules/@types/lodash/common/function.d.ts:1100
 node_modules/@types/lodash/common/function.d.ts:1107
 
 ▸ **partialRight**(): [`Function`](lodash.Function.md)\<`T` extends (...`ts`: `any`[]) => `any` ?
-`T` : `any`\>
+`T`\<`T`\> : `any`\>
 
 #### Returns
 
-[`Function`](lodash.Function.md)\<`T` extends (...`ts`: `any`[]) => `any` ? `T` : `any`\>
+[`Function`](lodash.Function.md)\<`T` extends (...`ts`: `any`[]) => `any` ? `T`\<`T`\> : `any`\>
 
 **`See`**
 
@@ -6154,7 +6156,8 @@ node_modules/@types/lodash/common/string.d.ts:520
 ### throttle
 
 ▸ **throttle**(`wait?`, `options?`): `T` extends (...`args`: `any`[]) => `any` ?
-[`Function`](lodash.Function.md)\<[`DebouncedFunc`](lodash.DebouncedFunc.md)\<`T`\>\> : `never`
+[`Function`](lodash.Function.md)\<[`DebouncedFunc`](lodash.DebouncedFunc.md)\<`T`\<`T`\>\>\> :
+`never`
 
 #### Parameters
 
@@ -6166,7 +6169,8 @@ node_modules/@types/lodash/common/string.d.ts:520
 #### Returns
 
 `T` extends (...`args`: `any`[]) => `any` ?
-[`Function`](lodash.Function.md)\<[`DebouncedFunc`](lodash.DebouncedFunc.md)\<`T`\>\> : `never`
+[`Function`](lodash.Function.md)\<[`DebouncedFunc`](lodash.DebouncedFunc.md)\<`T`\<`T`\>\>\> :
+`never`
 
 **`See`**
 

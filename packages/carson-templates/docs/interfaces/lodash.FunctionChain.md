@@ -916,7 +916,7 @@ node_modules/@types/lodash/common/function.d.ts:349
 ### debounce
 
 ▸ **debounce**(`wait`, `options`): `T` extends (...`args`: `any`[]) => `any` ?
-[`FunctionChain`](lodash.FunctionChain.md)\<[`DebouncedFuncLeading`](lodash.DebouncedFuncLeading.md)\<`T`\>\>
+[`FunctionChain`](lodash.FunctionChain.md)\<[`DebouncedFuncLeading`](lodash.DebouncedFuncLeading.md)\<`T`\<`T`\>\>\>
 : `never`
 
 #### Parameters
@@ -929,7 +929,7 @@ node_modules/@types/lodash/common/function.d.ts:349
 #### Returns
 
 `T` extends (...`args`: `any`[]) => `any` ?
-[`FunctionChain`](lodash.FunctionChain.md)\<[`DebouncedFuncLeading`](lodash.DebouncedFuncLeading.md)\<`T`\>\>
+[`FunctionChain`](lodash.FunctionChain.md)\<[`DebouncedFuncLeading`](lodash.DebouncedFuncLeading.md)\<`T`\<`T`\>\>\>
 : `never`
 
 **`See`**
@@ -941,8 +941,8 @@ node_modules/@types/lodash/common/function.d.ts:349
 node_modules/@types/lodash/common/function.d.ts:445
 
 ▸ **debounce**(`wait?`, `options?`): `T` extends (...`args`: `any`[]) => `any` ?
-[`FunctionChain`](lodash.FunctionChain.md)\<[`DebouncedFunc`](lodash.DebouncedFunc.md)\<`T`\>\> :
-`never`
+[`FunctionChain`](lodash.FunctionChain.md)\<[`DebouncedFunc`](lodash.DebouncedFunc.md)\<`T`\<`T`\>\>\>
+: `never`
 
 #### Parameters
 
@@ -954,8 +954,8 @@ node_modules/@types/lodash/common/function.d.ts:445
 #### Returns
 
 `T` extends (...`args`: `any`[]) => `any` ?
-[`FunctionChain`](lodash.FunctionChain.md)\<[`DebouncedFunc`](lodash.DebouncedFunc.md)\<`T`\>\> :
-`never`
+[`FunctionChain`](lodash.FunctionChain.md)\<[`DebouncedFunc`](lodash.DebouncedFunc.md)\<`T`\<`T`\>\>\>
+: `never`
 
 #### Defined in
 
@@ -4477,11 +4477,12 @@ node_modules/@types/lodash/common/function.d.ts:889
 node_modules/@types/lodash/common/function.d.ts:896
 
 ▸ **partial**(): [`FunctionChain`](lodash.FunctionChain.md)\<`T` extends (...`ts`: `any`[]) => `any`
-? `T` : `any`\>
+? `T`\<`T`\> : `any`\>
 
 #### Returns
 
-[`FunctionChain`](lodash.FunctionChain.md)\<`T` extends (...`ts`: `any`[]) => `any` ? `T` : `any`\>
+[`FunctionChain`](lodash.FunctionChain.md)\<`T` extends (...`ts`: `any`[]) => `any` ? `T`\<`T`\> :
+`any`\>
 
 **`See`**
 
@@ -5253,11 +5254,12 @@ node_modules/@types/lodash/common/function.d.ts:1263
 node_modules/@types/lodash/common/function.d.ts:1270
 
 ▸ **partialRight**(): [`FunctionChain`](lodash.FunctionChain.md)\<`T` extends (...`ts`: `any`[]) =>
-`any` ? `T` : `any`\>
+`any` ? `T`\<`T`\> : `any`\>
 
 #### Returns
 
-[`FunctionChain`](lodash.FunctionChain.md)\<`T` extends (...`ts`: `any`[]) => `any` ? `T` : `any`\>
+[`FunctionChain`](lodash.FunctionChain.md)\<`T` extends (...`ts`: `any`[]) => `any` ? `T`\<`T`\> :
+`any`\>
 
 **`See`**
 
@@ -6206,8 +6208,8 @@ node_modules/@types/lodash/common/string.d.ts:526
 ### throttle
 
 ▸ **throttle**(`wait?`, `options?`): `T` extends (...`args`: `any`[]) => `any` ?
-[`FunctionChain`](lodash.FunctionChain.md)\<[`DebouncedFunc`](lodash.DebouncedFunc.md)\<`T`\>\> :
-`never`
+[`FunctionChain`](lodash.FunctionChain.md)\<[`DebouncedFunc`](lodash.DebouncedFunc.md)\<`T`\<`T`\>\>\>
+: `never`
 
 #### Parameters
 
@@ -6219,8 +6221,8 @@ node_modules/@types/lodash/common/string.d.ts:526
 #### Returns
 
 `T` extends (...`args`: `any`[]) => `any` ?
-[`FunctionChain`](lodash.FunctionChain.md)\<[`DebouncedFunc`](lodash.DebouncedFunc.md)\<`T`\>\> :
-`never`
+[`FunctionChain`](lodash.FunctionChain.md)\<[`DebouncedFunc`](lodash.DebouncedFunc.md)\<`T`\<`T`\>\>\>
+: `never`
 
 **`See`**
 

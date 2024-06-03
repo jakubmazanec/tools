@@ -6247,9 +6247,11 @@ extends `T` ? [`NumericDictionary`](lodash.NumericDictionary.md)\<`S`\> :
 node_modules/@types/lodash/common/object.d.ts:2159
 
 ▸ **pickBy**(`predicate?`): [`ObjectChain`](lodash.ObjectChain.md)\<`T` extends
-[`Dictionary`](lodash.Dictionary.md)\<`unknown`\> ? [`Dictionary`](lodash.Dictionary.md)\<`T`[keyof
-`T`]\> : `T` extends [`NumericDictionary`](lodash.NumericDictionary.md)\<`unknown`\> ?
-[`NumericDictionary`](lodash.NumericDictionary.md)\<`T`[keyof `T`]\> : `Partial`\<`T`\>\>
+[`Dictionary`](lodash.Dictionary.md)\<`unknown`\> ?
+[`Dictionary`](lodash.Dictionary.md)\<`T`\<`T`\>[keyof `T`\<`T`\>]\> : `T` extends
+[`NumericDictionary`](lodash.NumericDictionary.md)\<`unknown`\> ?
+[`NumericDictionary`](lodash.NumericDictionary.md)\<`T`\<`T`\>[keyof `T`\<`T`\>]\> :
+`Partial`\<`T`\>\>
 
 #### Parameters
 
@@ -6260,9 +6262,11 @@ node_modules/@types/lodash/common/object.d.ts:2159
 #### Returns
 
 [`ObjectChain`](lodash.ObjectChain.md)\<`T` extends
-[`Dictionary`](lodash.Dictionary.md)\<`unknown`\> ? [`Dictionary`](lodash.Dictionary.md)\<`T`[keyof
-`T`]\> : `T` extends [`NumericDictionary`](lodash.NumericDictionary.md)\<`unknown`\> ?
-[`NumericDictionary`](lodash.NumericDictionary.md)\<`T`[keyof `T`]\> : `Partial`\<`T`\>\>
+[`Dictionary`](lodash.Dictionary.md)\<`unknown`\> ?
+[`Dictionary`](lodash.Dictionary.md)\<`T`\<`T`\>[keyof `T`\<`T`\>]\> : `T` extends
+[`NumericDictionary`](lodash.NumericDictionary.md)\<`unknown`\> ?
+[`NumericDictionary`](lodash.NumericDictionary.md)\<`T`\<`T`\>[keyof `T`\<`T`\>]\> :
+`Partial`\<`T`\>\>
 
 **`See`**
 
