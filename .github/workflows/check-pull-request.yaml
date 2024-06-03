@@ -58,7 +58,7 @@ jobs:
 
           git config --unset core.filemode
 
-      - name: Run tests
+      - name: Test
         run: npm test
 
       - name: Check for changes

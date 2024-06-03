@@ -9,7 +9,17 @@ let lines = [];
 for (let project of workspace.projects) {
   if (project.config.deployment?.appName) {
     lines.push(`!${project.relativePath}/app/**`);
+
+    if (project.config.deployment?.dbInstance) {
+      lines.push(`!${project.relativePath}/dbschema/**`);
+    }
+
     lines.push(`!${project.relativePath}/public/**`);
+
+    if (project.config.deployment?.dbInstance) {
+      lines.push(`!${project.relativePath}/edgedb.toml`);
+    }
+
     lines.push(`!${project.relativePath}/env.d.ts`);
     lines.push(`!${project.relativePath}/package.json`);
     lines.push(`!${project.relativePath}/postcss.config.cjs`);
