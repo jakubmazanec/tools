@@ -34,4 +34,4 @@ Primitive type
 
 ## Source
 
-[packages/ts-utils/source/types/LiteralUnion.ts:22](https://github.com/jakubmazanec/js-tools/blob/9580d5f68de35b95719fd49b679b2d5576d49582/packages/ts-utils/source/types/LiteralUnion.ts#L22)
+[packages/ts-utils/source/types/LiteralUnion.ts:22](https://github.com/jakubmazanec/js-tools/blob/7be96c9bc335915647cfe729050b17fe2580309a/packages/ts-utils/source/types/LiteralUnion.ts#L22)

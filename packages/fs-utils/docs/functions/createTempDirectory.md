@@ -23,4 +23,4 @@ The new directory name.
 
 ## Source
 
-[createTempDirectory.ts:11](https://github.com/jakubmazanec/js-tools/blob/9580d5f68de35b95719fd49b679b2d5576d49582/packages/fs-utils/source/createTempDirectory.ts#L11)
+[createTempDirectory.ts:11](https://github.com/jakubmazanec/js-tools/blob/7be96c9bc335915647cfe729050b17fe2580309a/packages/fs-utils/source/createTempDirectory.ts#L11)

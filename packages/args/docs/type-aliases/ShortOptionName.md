@@ -14,4 +14,4 @@ Short option name.
 
 ## Source
 
-[args/source/ShortOptionName.ts:2](https://github.com/jakubmazanec/js-tools/blob/9580d5f68de35b95719fd49b679b2d5576d49582/packages/args/source/ShortOptionName.ts#L2)
+[args/source/ShortOptionName.ts:2](https://github.com/jakubmazanec/js-tools/blob/7be96c9bc335915647cfe729050b17fe2580309a/packages/args/source/ShortOptionName.ts#L2)
