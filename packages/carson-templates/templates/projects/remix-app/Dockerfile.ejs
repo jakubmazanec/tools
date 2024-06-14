@@ -43,6 +43,13 @@ WORKDIR /workspace
 # Set up env variables
 ENV NODE_ENV=production
 <%
+if (project.config.deployment?.appName) {
+-%>
+ARG VITE_APP_URL
+ENV VITE_APP_URL=$VITE_APP_URL
+<%
+}
+
 if (project.config.deployment?.dbInstance) {
 -%>
 ARG EDGEDB_INSTANCE

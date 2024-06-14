@@ -41,7 +41,7 @@ let turboConfig = {
       outputs: [],
     },
   },
-  globalEnv: workspace.projects.some((project) => project.config.deployment?.dbInstance) ? ['EDGEDB_INSTANCE', 'EDGEDB_BRANCH', 'EDGEDB_SECRET_KEY'] : [],
+  globalEnv: [],
   globalDependencies: [
     '.editorconfig',
     '.eslintrc.cjs',
@@ -50,8 +50,15 @@ let turboConfig = {
     'tsconfig.json',
     'tsconfig.typecheck.json',
   ],
-
 };
+
+if (workspace.projects.some((project) => project.config.deployment?.appName)) {
+  turboConfig.globalEnv.push('VITE_APP_URL');
+}
+
+if (workspace.projects.some((project) => project.config.deployment?.dbInstance)) {
+  turboConfig.globalEnv.push('EDGEDB_INSTANCE', 'EDGEDB_BRANCH', 'EDGEDB_SECRET_KEY');
+}
 
 if (workspace.projects.find((project) => project.name === LINTER_CONFIG_PACKAGE_NAME)) {
   turboConfig.pipeline.lint.dependsOn = [`${LINTER_CONFIG_PACKAGE_NAME}#build`, '^build', 'codegen'];
