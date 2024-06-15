@@ -31,6 +31,7 @@
 
 ## Functions
 
+- [getAppUrl](functions/getAppUrl.md)
 - [getDependencies](functions/getDependencies.md)
 - [getDevelopmentBranch](functions/getDevelopmentBranch.md)
 - [getMainBranch](functions/getMainBranch.md)

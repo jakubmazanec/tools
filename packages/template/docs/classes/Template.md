@@ -45,7 +45,7 @@ A Zod schema type used to define the template datatype.
 
 #### Source
 
-[packages/template/source/Template.ts:116](https://github.com/jakubmazanec/js-tools/blob/7be96c9bc335915647cfe729050b17fe2580309a/packages/template/source/Template.ts#L116)
+[packages/template/source/Template.ts:116](https://github.com/jakubmazanec/js-tools/blob/51bfc5b913a7a7ef21d8d702a0d87d72983e112a/packages/template/source/Template.ts#L116)
 
 ## Properties
 
@@ -65,7 +65,7 @@ Each variable that is a string is also rendered.
 
 #### Source
 
-[packages/template/source/Template.ts:104](https://github.com/jakubmazanec/js-tools/blob/7be96c9bc335915647cfe729050b17fe2580309a/packages/template/source/Template.ts#L104)
+[packages/template/source/Template.ts:104](https://github.com/jakubmazanec/js-tools/blob/51bfc5b913a7a7ef21d8d702a0d87d72983e112a/packages/template/source/Template.ts#L104)
 
 ---
 
@@ -77,7 +77,7 @@ Zod schema for custom template attributes.
 
 #### Source
 
-[packages/template/source/Template.ts:111](https://github.com/jakubmazanec/js-tools/blob/7be96c9bc335915647cfe729050b17fe2580309a/packages/template/source/Template.ts#L111)
+[packages/template/source/Template.ts:111](https://github.com/jakubmazanec/js-tools/blob/51bfc5b913a7a7ef21d8d702a0d87d72983e112a/packages/template/source/Template.ts#L111)
 
 ---
 
@@ -89,7 +89,7 @@ Template content. Templates are written in [EJS](https://ejs.co/).
 
 #### Source
 
-[packages/template/source/Template.ts:101](https://github.com/jakubmazanec/js-tools/blob/7be96c9bc335915647cfe729050b17fe2580309a/packages/template/source/Template.ts#L101)
+[packages/template/source/Template.ts:101](https://github.com/jakubmazanec/js-tools/blob/51bfc5b913a7a7ef21d8d702a0d87d72983e112a/packages/template/source/Template.ts#L101)
 
 ---
 
@@ -101,7 +101,7 @@ Zod schema for template data.
 
 #### Source
 
-[packages/template/source/Template.ts:114](https://github.com/jakubmazanec/js-tools/blob/7be96c9bc335915647cfe729050b17fe2580309a/packages/template/source/Template.ts#L114)
+[packages/template/source/Template.ts:114](https://github.com/jakubmazanec/js-tools/blob/51bfc5b913a7a7ef21d8d702a0d87d72983e112a/packages/template/source/Template.ts#L114)
 
 ---
 
@@ -113,7 +113,7 @@ Template function.
 
 #### Source
 
-[packages/template/source/Template.ts:108](https://github.com/jakubmazanec/js-tools/blob/7be96c9bc335915647cfe729050b17fe2580309a/packages/template/source/Template.ts#L108)
+[packages/template/source/Template.ts:108](https://github.com/jakubmazanec/js-tools/blob/51bfc5b913a7a7ef21d8d702a0d87d72983e112a/packages/template/source/Template.ts#L108)
 
 ---
 
@@ -125,7 +125,7 @@ Template path.
 
 #### Source
 
-[packages/template/source/Template.ts:98](https://github.com/jakubmazanec/js-tools/blob/7be96c9bc335915647cfe729050b17fe2580309a/packages/template/source/Template.ts#L98)
+[packages/template/source/Template.ts:98](https://github.com/jakubmazanec/js-tools/blob/51bfc5b913a7a7ef21d8d702a0d87d72983e112a/packages/template/source/Template.ts#L98)
 
 ## Methods
 
@@ -154,7 +154,7 @@ Template renders.
 
 #### Source
 
-[packages/template/source/Template.ts:232](https://github.com/jakubmazanec/js-tools/blob/7be96c9bc335915647cfe729050b17fe2580309a/packages/template/source/Template.ts#L232)
+[packages/template/source/Template.ts:232](https://github.com/jakubmazanec/js-tools/blob/51bfc5b913a7a7ef21d8d702a0d87d72983e112a/packages/template/source/Template.ts#L232)
 
 ---
 
@@ -185,7 +185,7 @@ Path to the template file.
 
 #### Source
 
-[packages/template/source/Template.ts:149](https://github.com/jakubmazanec/js-tools/blob/7be96c9bc335915647cfe729050b17fe2580309a/packages/template/source/Template.ts#L149)
+[packages/template/source/Template.ts:149](https://github.com/jakubmazanec/js-tools/blob/51bfc5b913a7a7ef21d8d702a0d87d72983e112a/packages/template/source/Template.ts#L149)
 
 ---
 
@@ -225,4 +225,4 @@ Template renders.
 
 #### Source
 
-[packages/template/source/Template.ts:206](https://github.com/jakubmazanec/js-tools/blob/7be96c9bc335915647cfe729050b17fe2580309a/packages/template/source/Template.ts#L206)
+[packages/template/source/Template.ts:206](https://github.com/jakubmazanec/js-tools/blob/51bfc5b913a7a7ef21d8d702a0d87d72983e112a/packages/template/source/Template.ts#L206)

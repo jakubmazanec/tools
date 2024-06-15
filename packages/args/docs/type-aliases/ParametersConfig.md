@@ -20,4 +20,4 @@ Parser's parameters configuration.
 
 ## Source
 
-[args/source/ParametersConfig.ts:4](https://github.com/jakubmazanec/js-tools/blob/7be96c9bc335915647cfe729050b17fe2580309a/packages/args/source/ParametersConfig.ts#L4)
+[args/source/ParametersConfig.ts:4](https://github.com/jakubmazanec/js-tools/blob/51bfc5b913a7a7ef21d8d702a0d87d72983e112a/packages/args/source/ParametersConfig.ts#L4)

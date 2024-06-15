@@ -25,4 +25,4 @@ Search path.
 
 ## Source
 
-[findExistingDirectory.ts:15](https://github.com/jakubmazanec/js-tools/blob/7be96c9bc335915647cfe729050b17fe2580309a/packages/fs-utils/source/findExistingDirectory.ts#L15)
+[findExistingDirectory.ts:15](https://github.com/jakubmazanec/js-tools/blob/51bfc5b913a7a7ef21d8d702a0d87d72983e112a/packages/fs-utils/source/findExistingDirectory.ts#L15)

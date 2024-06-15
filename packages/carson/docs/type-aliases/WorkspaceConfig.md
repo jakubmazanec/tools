@@ -11,4 +11,4 @@ A workspace configuration.
 
 ## Source
 
-[packages/carson/source/workspace/WorkspaceConfig.ts:12](https://github.com/jakubmazanec/js-tools/blob/7be96c9bc335915647cfe729050b17fe2580309a/packages/carson/source/workspace/WorkspaceConfig.ts#L12)
+[packages/carson/source/workspace/WorkspaceConfig.ts:12](https://github.com/jakubmazanec/js-tools/blob/51bfc5b913a7a7ef21d8d702a0d87d72983e112a/packages/carson/source/workspace/WorkspaceConfig.ts#L12)
