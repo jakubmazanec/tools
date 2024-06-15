@@ -1,5 +1,16 @@
 # @jakubmazanec/carson-templates
 
+## 2.4.0
+
+### Minor Changes
+
+- [#153](https://github.com/jakubmazanec/js-tools/pull/153)
+  [`51bfc5b`](https://github.com/jakubmazanec/js-tools/commit/51bfc5b913a7a7ef21d8d702a0d87d72983e112a)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Updates `projects/remix-app` and `workspace`
+  templates to support specifying an app URL (available to the apps as `VITE_APP_URL` env variable
+  during builds), using new project config option `deployment.appUrl` for production URL; URLs for
+  non-production environments are generated using the `deployment.appName` project config option.
+
 ## 2.3.0
 
 ### Minor Changes
