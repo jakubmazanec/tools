@@ -20,4 +20,4 @@ Checks if a path is a file system root path.
 
 ## Source
 
-[isRootPath.ts:9](https://github.com/jakubmazanec/js-tools/blob/51bfc5b913a7a7ef21d8d702a0d87d72983e112a/packages/fs-utils/source/isRootPath.ts#L9)
+[isRootPath.ts:9](https://github.com/jakubmazanec/js-tools/blob/45932621a19c677851f8bf60e4a28d217617972b/packages/fs-utils/source/isRootPath.ts#L9)

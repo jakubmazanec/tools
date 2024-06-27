@@ -16,4 +16,4 @@ Parsed command.
 
 ## Source
 
-[args/source/ArgumentsCommand.ts:4](https://github.com/jakubmazanec/js-tools/blob/51bfc5b913a7a7ef21d8d702a0d87d72983e112a/packages/args/source/ArgumentsCommand.ts#L4)
+[args/source/ArgumentsCommand.ts:4](https://github.com/jakubmazanec/js-tools/blob/45932621a19c677851f8bf60e4a28d217617972b/packages/args/source/ArgumentsCommand.ts#L4)

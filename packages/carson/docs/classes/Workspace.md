@@ -29,7 +29,7 @@ If true, the workspace is multi-project workspace (so-called "monorepo").
 
 #### Source
 
-[packages/carson/source/workspace/Workspace.ts:84](https://github.com/jakubmazanec/js-tools/blob/51bfc5b913a7a7ef21d8d702a0d87d72983e112a/packages/carson/source/workspace/Workspace.ts#L84)
+[packages/carson/source/workspace/Workspace.ts:85](https://github.com/jakubmazanec/js-tools/blob/45932621a19c677851f8bf60e4a28d217617972b/packages/carson/source/workspace/Workspace.ts#L85)
 
 ## Properties
 
@@ -41,7 +41,7 @@ All dependencies of all projects and workspace dependencies.
 
 #### Source
 
-[packages/carson/source/workspace/Workspace.ts:76](https://github.com/jakubmazanec/js-tools/blob/51bfc5b913a7a7ef21d8d702a0d87d72983e112a/packages/carson/source/workspace/Workspace.ts#L76)
+[packages/carson/source/workspace/Workspace.ts:77](https://github.com/jakubmazanec/js-tools/blob/45932621a19c677851f8bf60e4a28d217617972b/packages/carson/source/workspace/Workspace.ts#L77)
 
 ---
 
@@ -53,13 +53,17 @@ Workspace configuration; if it's not found, the default is an empty object.
 
 #### Type declaration
 
+##### projects
+
+> **projects**: `ZodOptional`\<`ZodArray`\<`ZodString`, `"many"`\>\>
+
 ##### template
 
 > **template**: `ZodOptional`\<`ZodString`\>
 
 #### Source
 
-[packages/carson/source/workspace/Workspace.ts:61](https://github.com/jakubmazanec/js-tools/blob/51bfc5b913a7a7ef21d8d702a0d87d72983e112a/packages/carson/source/workspace/Workspace.ts#L61)
+[packages/carson/source/workspace/Workspace.ts:62](https://github.com/jakubmazanec/js-tools/blob/45932621a19c677851f8bf60e4a28d217617972b/packages/carson/source/workspace/Workspace.ts#L62)
 
 ---
 
@@ -71,7 +75,7 @@ Dependencies of all projects.
 
 #### Source
 
-[packages/carson/source/workspace/Workspace.ts:70](https://github.com/jakubmazanec/js-tools/blob/51bfc5b913a7a7ef21d8d702a0d87d72983e112a/packages/carson/source/workspace/Workspace.ts#L70)
+[packages/carson/source/workspace/Workspace.ts:71](https://github.com/jakubmazanec/js-tools/blob/45932621a19c677851f8bf60e4a28d217617972b/packages/carson/source/workspace/Workspace.ts#L71)
 
 ---
 
@@ -83,7 +87,7 @@ Versions of each dependency.
 
 #### Source
 
-[packages/carson/source/workspace/Workspace.ts:79](https://github.com/jakubmazanec/js-tools/blob/51bfc5b913a7a7ef21d8d702a0d87d72983e112a/packages/carson/source/workspace/Workspace.ts#L79)
+[packages/carson/source/workspace/Workspace.ts:80](https://github.com/jakubmazanec/js-tools/blob/45932621a19c677851f8bf60e4a28d217617972b/packages/carson/source/workspace/Workspace.ts#L80)
 
 ---
 
@@ -95,7 +99,7 @@ Development dependencies of all projects.
 
 #### Source
 
-[packages/carson/source/workspace/Workspace.ts:73](https://github.com/jakubmazanec/js-tools/blob/51bfc5b913a7a7ef21d8d702a0d87d72983e112a/packages/carson/source/workspace/Workspace.ts#L73)
+[packages/carson/source/workspace/Workspace.ts:74](https://github.com/jakubmazanec/js-tools/blob/45932621a19c677851f8bf60e4a28d217617972b/packages/carson/source/workspace/Workspace.ts#L74)
 
 ---
 
@@ -104,14 +108,14 @@ Development dependencies of all projects.
 > **errors**: `CustomErrorWithData`\<`"INVALID_PACKAGE_JSON"` \| `"MISSING_CARSON_TEMPLATE_ID"` \|
 > `"UNKNOWN_ERROR"` \| `"INVALID_WORKSPACE_CONFIG"` \| `"NO_SUCH_WORKSPACE_PATH"` \|
 > `"NO_WORKSPACE_FOUND"` \| `"PATH_MISMATCH"` \| `"WORKSPACE_PATH_NOT_EMPTY"` \|
-> `"DUPLICATE_PROJECT_NAME"` \| `"DUPLICATE_PROJECT_PATH"` \| `"TOO_MANY_PROJECTS"`,
-> `WorkspaceErrorData`\>[] = `[]`
+> `"DUPLICATE_PROJECT_NAME"` \| `"DUPLICATE_PROJECT_PATH"` \| `"TOO_MANY_PROJECTS"` \|
+> `"PROJECT_GLOBS_MISMATCH"`, `WorkspaceErrorData`\>[] = `[]`
 
 Errors found during reading from the file system.
 
 #### Source
 
-[packages/carson/source/workspace/Workspace.ts:82](https://github.com/jakubmazanec/js-tools/blob/51bfc5b913a7a7ef21d8d702a0d87d72983e112a/packages/carson/source/workspace/Workspace.ts#L82)
+[packages/carson/source/workspace/Workspace.ts:83](https://github.com/jakubmazanec/js-tools/blob/45932621a19c677851f8bf60e4a28d217617972b/packages/carson/source/workspace/Workspace.ts#L83)
 
 ---
 
@@ -123,7 +127,7 @@ Does the workspace contain a multiple projects?
 
 #### Source
 
-[packages/carson/source/workspace/Workspace.ts:52](https://github.com/jakubmazanec/js-tools/blob/51bfc5b913a7a7ef21d8d702a0d87d72983e112a/packages/carson/source/workspace/Workspace.ts#L52)
+[packages/carson/source/workspace/Workspace.ts:53](https://github.com/jakubmazanec/js-tools/blob/45932621a19c677851f8bf60e4a28d217617972b/packages/carson/source/workspace/Workspace.ts#L53)
 
 ---
 
@@ -136,7 +140,7 @@ found, the default is an empty object.
 
 #### Source
 
-[packages/carson/source/workspace/Workspace.ts:64](https://github.com/jakubmazanec/js-tools/blob/51bfc5b913a7a7ef21d8d702a0d87d72983e112a/packages/carson/source/workspace/Workspace.ts#L64)
+[packages/carson/source/workspace/Workspace.ts:65](https://github.com/jakubmazanec/js-tools/blob/45932621a19c677851f8bf60e4a28d217617972b/packages/carson/source/workspace/Workspace.ts#L65)
 
 ---
 
@@ -148,7 +152,7 @@ Workspace path.
 
 #### Source
 
-[packages/carson/source/workspace/Workspace.ts:49](https://github.com/jakubmazanec/js-tools/blob/51bfc5b913a7a7ef21d8d702a0d87d72983e112a/packages/carson/source/workspace/Workspace.ts#L49)
+[packages/carson/source/workspace/Workspace.ts:50](https://github.com/jakubmazanec/js-tools/blob/45932621a19c677851f8bf60e4a28d217617972b/packages/carson/source/workspace/Workspace.ts#L50)
 
 ---
 
@@ -160,7 +164,7 @@ Globs used to find projects.
 
 #### Source
 
-[packages/carson/source/workspace/Workspace.ts:55](https://github.com/jakubmazanec/js-tools/blob/51bfc5b913a7a7ef21d8d702a0d87d72983e112a/packages/carson/source/workspace/Workspace.ts#L55)
+[packages/carson/source/workspace/Workspace.ts:56](https://github.com/jakubmazanec/js-tools/blob/45932621a19c677851f8bf60e4a28d217617972b/packages/carson/source/workspace/Workspace.ts#L56)
 
 ---
 
@@ -172,7 +176,7 @@ Workspace projects.
 
 #### Source
 
-[packages/carson/source/workspace/Workspace.ts:58](https://github.com/jakubmazanec/js-tools/blob/51bfc5b913a7a7ef21d8d702a0d87d72983e112a/packages/carson/source/workspace/Workspace.ts#L58)
+[packages/carson/source/workspace/Workspace.ts:59](https://github.com/jakubmazanec/js-tools/blob/45932621a19c677851f8bf60e4a28d217617972b/packages/carson/source/workspace/Workspace.ts#L59)
 
 ---
 
@@ -184,7 +188,7 @@ Workspace git repository.
 
 #### Source
 
-[packages/carson/source/workspace/Workspace.ts:67](https://github.com/jakubmazanec/js-tools/blob/51bfc5b913a7a7ef21d8d702a0d87d72983e112a/packages/carson/source/workspace/Workspace.ts#L67)
+[packages/carson/source/workspace/Workspace.ts:68](https://github.com/jakubmazanec/js-tools/blob/45932621a19c677851f8bf60e4a28d217617972b/packages/carson/source/workspace/Workspace.ts#L68)
 
 ## Methods
 
@@ -202,7 +206,7 @@ Workspace git repository.
 
 #### Source
 
-[packages/carson/source/workspace/Workspace.ts:573](https://github.com/jakubmazanec/js-tools/blob/51bfc5b913a7a7ef21d8d702a0d87d72983e112a/packages/carson/source/workspace/Workspace.ts#L573)
+[packages/carson/source/workspace/Workspace.ts:646](https://github.com/jakubmazanec/js-tools/blob/45932621a19c677851f8bf60e4a28d217617972b/packages/carson/source/workspace/Workspace.ts#L646)
 
 ---
 
@@ -220,7 +224,7 @@ Workspace git repository.
 
 #### Source
 
-[packages/carson/source/workspace/Workspace.ts:599](https://github.com/jakubmazanec/js-tools/blob/51bfc5b913a7a7ef21d8d702a0d87d72983e112a/packages/carson/source/workspace/Workspace.ts#L599)
+[packages/carson/source/workspace/Workspace.ts:672](https://github.com/jakubmazanec/js-tools/blob/45932621a19c677851f8bf60e4a28d217617972b/packages/carson/source/workspace/Workspace.ts#L672)
 
 ---
 
@@ -239,7 +243,7 @@ Workspace git repository.
 
 #### Source
 
-[packages/carson/source/workspace/Workspace.ts:534](https://github.com/jakubmazanec/js-tools/blob/51bfc5b913a7a7ef21d8d702a0d87d72983e112a/packages/carson/source/workspace/Workspace.ts#L534)
+[packages/carson/source/workspace/Workspace.ts:607](https://github.com/jakubmazanec/js-tools/blob/45932621a19c677851f8bf60e4a28d217617972b/packages/carson/source/workspace/Workspace.ts#L607)
 
 ---
 
@@ -257,7 +261,7 @@ Workspace git repository.
 
 #### Source
 
-[packages/carson/source/workspace/Workspace.ts:524](https://github.com/jakubmazanec/js-tools/blob/51bfc5b913a7a7ef21d8d702a0d87d72983e112a/packages/carson/source/workspace/Workspace.ts#L524)
+[packages/carson/source/workspace/Workspace.ts:597](https://github.com/jakubmazanec/js-tools/blob/45932621a19c677851f8bf60e4a28d217617972b/packages/carson/source/workspace/Workspace.ts#L597)
 
 ---
 
@@ -271,7 +275,7 @@ Workspace git repository.
 
 #### Source
 
-[packages/carson/source/workspace/Workspace.ts:373](https://github.com/jakubmazanec/js-tools/blob/51bfc5b913a7a7ef21d8d702a0d87d72983e112a/packages/carson/source/workspace/Workspace.ts#L373)
+[packages/carson/source/workspace/Workspace.ts:430](https://github.com/jakubmazanec/js-tools/blob/45932621a19c677851f8bf60e4a28d217617972b/packages/carson/source/workspace/Workspace.ts#L430)
 
 ---
 
@@ -285,7 +289,7 @@ Workspace git repository.
 
 #### Source
 
-[packages/carson/source/workspace/Workspace.ts:628](https://github.com/jakubmazanec/js-tools/blob/51bfc5b913a7a7ef21d8d702a0d87d72983e112a/packages/carson/source/workspace/Workspace.ts#L628)
+[packages/carson/source/workspace/Workspace.ts:701](https://github.com/jakubmazanec/js-tools/blob/45932621a19c677851f8bf60e4a28d217617972b/packages/carson/source/workspace/Workspace.ts#L701)
 
 ---
 
@@ -299,7 +303,7 @@ Workspace git repository.
 
 #### Source
 
-[packages/carson/source/workspace/Workspace.ts:660](https://github.com/jakubmazanec/js-tools/blob/51bfc5b913a7a7ef21d8d702a0d87d72983e112a/packages/carson/source/workspace/Workspace.ts#L660)
+[packages/carson/source/workspace/Workspace.ts:733](https://github.com/jakubmazanec/js-tools/blob/45932621a19c677851f8bf60e4a28d217617972b/packages/carson/source/workspace/Workspace.ts#L733)
 
 ---
 
@@ -317,7 +321,7 @@ Workspace git repository.
 
 #### Source
 
-[packages/carson/source/workspace/Workspace.ts:491](https://github.com/jakubmazanec/js-tools/blob/51bfc5b913a7a7ef21d8d702a0d87d72983e112a/packages/carson/source/workspace/Workspace.ts#L491)
+[packages/carson/source/workspace/Workspace.ts:564](https://github.com/jakubmazanec/js-tools/blob/45932621a19c677851f8bf60e4a28d217617972b/packages/carson/source/workspace/Workspace.ts#L564)
 
 ---
 
@@ -331,7 +335,7 @@ Workspace git repository.
 
 #### Source
 
-[packages/carson/source/workspace/Workspace.ts:664](https://github.com/jakubmazanec/js-tools/blob/51bfc5b913a7a7ef21d8d702a0d87d72983e112a/packages/carson/source/workspace/Workspace.ts#L664)
+[packages/carson/source/workspace/Workspace.ts:737](https://github.com/jakubmazanec/js-tools/blob/45932621a19c677851f8bf60e4a28d217617972b/packages/carson/source/workspace/Workspace.ts#L737)
 
 ---
 
@@ -356,7 +360,7 @@ The new workspace.
 
 #### Source
 
-[packages/carson/source/workspace/Workspace.ts:165](https://github.com/jakubmazanec/js-tools/blob/51bfc5b913a7a7ef21d8d702a0d87d72983e112a/packages/carson/source/workspace/Workspace.ts#L165)
+[packages/carson/source/workspace/Workspace.ts:166](https://github.com/jakubmazanec/js-tools/blob/45932621a19c677851f8bf60e4a28d217617972b/packages/carson/source/workspace/Workspace.ts#L166)
 
 ---
 
@@ -381,7 +385,7 @@ Workspace path, if found.
 
 #### Source
 
-[packages/carson/source/workspace/Workspace.ts:295](https://github.com/jakubmazanec/js-tools/blob/51bfc5b913a7a7ef21d8d702a0d87d72983e112a/packages/carson/source/workspace/Workspace.ts#L295)
+[packages/carson/source/workspace/Workspace.ts:332](https://github.com/jakubmazanec/js-tools/blob/45932621a19c677851f8bf60e4a28d217617972b/packages/carson/source/workspace/Workspace.ts#L332)
 
 ---
 
@@ -415,7 +419,7 @@ Traverses file system up from the search path and tries to find and read a works
 
 #### Source
 
-[packages/carson/source/workspace/Workspace.ts:341](https://github.com/jakubmazanec/js-tools/blob/51bfc5b913a7a7ef21d8d702a0d87d72983e112a/packages/carson/source/workspace/Workspace.ts#L341)
+[packages/carson/source/workspace/Workspace.ts:398](https://github.com/jakubmazanec/js-tools/blob/45932621a19c677851f8bf60e4a28d217617972b/packages/carson/source/workspace/Workspace.ts#L398)
 
 ---
 
@@ -434,4 +438,4 @@ Traverses file system up from the search path and tries to find and read a works
 
 #### Source
 
-[packages/carson/source/workspace/Workspace.ts:214](https://github.com/jakubmazanec/js-tools/blob/51bfc5b913a7a7ef21d8d702a0d87d72983e112a/packages/carson/source/workspace/Workspace.ts#L214)
+[packages/carson/source/workspace/Workspace.ts:215](https://github.com/jakubmazanec/js-tools/blob/45932621a19c677851f8bf60e4a28d217617972b/packages/carson/source/workspace/Workspace.ts#L215)

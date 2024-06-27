@@ -18,4 +18,4 @@ A component that renders help information.
 
 ## Source
 
-[cli/source/ui/Help.tsx:20](https://github.com/jakubmazanec/js-tools/blob/51bfc5b913a7a7ef21d8d702a0d87d72983e112a/packages/cli/source/ui/Help.tsx#L20)
+[cli/source/ui/Help.tsx:20](https://github.com/jakubmazanec/js-tools/blob/45932621a19c677851f8bf60e4a28d217617972b/packages/cli/source/ui/Help.tsx#L20)

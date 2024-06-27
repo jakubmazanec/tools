@@ -10,4 +10,4 @@ Form row configuration.
 
 ## Source
 
-[cli/source/ui/form/FormRowConfig.ts:4](https://github.com/jakubmazanec/js-tools/blob/51bfc5b913a7a7ef21d8d702a0d87d72983e112a/packages/cli/source/ui/form/FormRowConfig.ts#L4)
+[cli/source/ui/form/FormRowConfig.ts:4](https://github.com/jakubmazanec/js-tools/blob/45932621a19c677851f8bf60e4a28d217617972b/packages/cli/source/ui/form/FormRowConfig.ts#L4)

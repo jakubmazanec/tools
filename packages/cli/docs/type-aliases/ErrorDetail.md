@@ -36,4 +36,4 @@ Detailed error information.
 
 ## Source
 
-[cli/source/ui/ErrorDetail.ts:4](https://github.com/jakubmazanec/js-tools/blob/51bfc5b913a7a7ef21d8d702a0d87d72983e112a/packages/cli/source/ui/ErrorDetail.ts#L4)
+[cli/source/ui/ErrorDetail.ts:4](https://github.com/jakubmazanec/js-tools/blob/45932621a19c677851f8bf60e4a28d217617972b/packages/cli/source/ui/ErrorDetail.ts#L4)

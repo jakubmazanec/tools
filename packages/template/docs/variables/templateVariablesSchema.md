@@ -11,4 +11,4 @@ Zod schema for [TemplateAttributesVariables](../type-aliases/TemplateAttributesV
 
 ## Source
 
-[packages/template/source/TemplateVariables.ts:6](https://github.com/jakubmazanec/js-tools/blob/51bfc5b913a7a7ef21d8d702a0d87d72983e112a/packages/template/source/TemplateVariables.ts#L6)
+[packages/template/source/TemplateVariables.ts:6](https://github.com/jakubmazanec/js-tools/blob/45932621a19c677851f8bf60e4a28d217617972b/packages/template/source/TemplateVariables.ts#L6)
