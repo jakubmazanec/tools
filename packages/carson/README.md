@@ -201,9 +201,10 @@ configuration.
 
 #### `workspace.json`
 
-| Option   | Type   | Description        |
-| -------- | ------ | ------------------ |
-| template | string | Carson template ID |
+| Option   | Type     | Description                                                                                                                                                           |
+| -------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| template | string   | Carson template ID                                                                                                                                                    |
+| projects | string[] | Array of globs used to find projects in the workspace; alternative to [`package.json#workspaces`](https://docs.npmjs.com/cli/configuring-npm/package-json#workspaces) |
 
 #### `project.json`
 
