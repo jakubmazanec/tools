@@ -19,6 +19,8 @@ export const WorkspaceError = createCustomErrorWithData(
     DUPLICATE_PROJECT_NAME: 'Workspace already contains project with name "{0}"',
     DUPLICATE_PROJECT_PATH: 'Workspace already contains project with path "{0}"',
     TOO_MANY_PROJECTS: "Workspace can't contain more projects.",
+    PROJECT_GLOBS_MISMATCH:
+      'Workspace has mismatched project globs in package.json and workspace.json.',
   },
   class WorkspaceErrorData {
     path?: string;

@@ -593,6 +593,46 @@ describe('Workspace', () => {
         ],
         errors: [],
       },
+      {
+        workspacePath: 'multi-project/with-no-root-package-json',
+        isMultiProject: true,
+        projectGlobs: ['./packages/*'],
+        projects: [
+          {
+            name: '@jakubmazanec/bar',
+            path: 'packages/bar',
+            relativePath: 'packages/bar',
+            config: {
+              template: '@jakubmazanec/qux:project',
+            },
+            packageJson: {
+              name: '@jakubmazanec/bar',
+              version: '1.0.0',
+            },
+            errors: [],
+          },
+          {
+            name: '@jakubmazanec/foo',
+            path: 'packages/foo',
+            relativePath: 'packages/foo',
+            config: {
+              template: '@jakubmazanec/qux:project',
+            },
+            packageJson: {
+              name: '@jakubmazanec/foo',
+              version: '1.0.0',
+            },
+            errors: [],
+          },
+        ],
+        config: {
+          template: '@jakubmazanec/qux:workspace',
+          projects: ['./packages/*'],
+        },
+        packageJson: {},
+        allDependencies: [],
+        errors: [],
+      },
     ])(
       'correctly handles workspace "$workspacePath"',
       async ({
@@ -669,6 +709,18 @@ describe('Workspace', () => {
       expect(workspace?.path).toBe(
         path.join(TEST_WORKSPACES_PATH, 'multi-project/with-dependencies'),
       );
+    });
+
+    test('correctly finds nearest multi-project workspace with no root package.json', async () => {
+      let {Workspace} = await import('../source/workspace.js');
+      let workspace = await Workspace.findAndRead(
+        path.join(TEST_WORKSPACES_PATH, 'multi-project/with-no-root-package-json/packages/foo'),
+      );
+
+      expect(workspace?.path).toBe(
+        path.join(TEST_WORKSPACES_PATH, 'multi-project/with-no-root-package-json'),
+      );
+      expect(workspace?.projectGlobs).toEqual(['./packages/*']);
     });
   });
 

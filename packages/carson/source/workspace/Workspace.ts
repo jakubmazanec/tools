@@ -3,6 +3,7 @@ import {jsonSchema, type PackageJson, packageJsonSchema, readFile} from '@jakubm
 import glob from 'fast-glob';
 import fs from 'fs-extra';
 import json5 from 'json5';
+import _ from 'lodash';
 import path from 'node:path';
 import {z} from 'zod';
 
@@ -256,8 +257,44 @@ export class Workspace<M extends boolean = true> {
       }
     }
 
-    // add projects
-    let projectGlobs = getPackageJsonWorkspaces(rootPackageJson);
+    // load workspace config
+    let workspaceConfigPath = path.join(
+      resolvedWorkspacePath,
+      CARSON_CONFIG_DIRECTORY,
+      WORKSPACE_CONFIG_FILENAME,
+    );
+    let doesWorkspaceConfigExist = await fs.pathExists(workspaceConfigPath);
+    let workspaceConfig: WorkspaceConfig | z.ZodError;
+
+    if (doesWorkspaceConfigExist) {
+      workspaceConfig = await readFile(workspaceConfigPath, workspaceConfigSchema, {
+        parser: (rawString: string) => json5.parse<unknown>(rawString),
+      });
+    } else {
+      workspaceConfig = {};
+    }
+
+    if (workspaceConfig instanceof z.ZodError) {
+      workspaceConfig = {};
+    }
+
+    // how to find projects
+    let packageJsonProjectGlobs = getPackageJsonWorkspaces(rootPackageJson);
+    let workspaceConfigProjectGlobs = workspaceConfig.projects;
+
+    if (
+      packageJsonProjectGlobs?.length &&
+      workspaceConfigProjectGlobs?.length &&
+      !_.isEqual(packageJsonProjectGlobs, workspaceConfigProjectGlobs)
+    ) {
+      throw new WorkspaceError('PROJECT_GLOBS_MISMATCH', {
+        data: {
+          path: resolvedWorkspacePath,
+        },
+      });
+    }
+
+    let projectGlobs = packageJsonProjectGlobs ?? workspaceConfigProjectGlobs;
 
     // we're dealing with single-project workspace
     if (!projectGlobs) {
@@ -272,7 +309,7 @@ export class Workspace<M extends boolean = true> {
       return workspace;
     }
 
-    // assemble workspace options
+    // we're dealing with multi-project workspace
     let workspace = new this({
       path: resolvedWorkspacePath,
       isMultiProject: true,
@@ -302,15 +339,35 @@ export class Workspace<M extends boolean = true> {
       !(isRootPath(currentPath) || (singlePackageWorkspacePath && multiPackageWorkspacePath))
     ) {
       if (await containsWorkspace(currentPath)) {
-        const packageJsonPath = path.join(currentPath, PACKAGE_JSON_FILENAME);
+        let packageJsonPath = path.join(currentPath, PACKAGE_JSON_FILENAME);
+        let workspaceConfigPath = path.join(
+          currentPath,
+          CARSON_CONFIG_DIRECTORY,
+          WORKSPACE_CONFIG_FILENAME,
+        );
 
         if (await fs.pathExists(packageJsonPath)) {
-          const packageJson = await readFile(packageJsonPath, jsonSchema, {
+          let packageJson = await readFile(packageJsonPath, jsonSchema, {
             parser: (rawString: string) => json5.parse<unknown>(rawString),
           });
 
           if (!(packageJson instanceof Error)) {
-            const projectGlobs = getPackageJsonWorkspaces(packageJson);
+            let projectGlobs = getPackageJsonWorkspaces(packageJson);
+
+            if (projectGlobs?.length) {
+              multiPackageWorkspacePath ??= currentPath;
+            } else {
+              singlePackageWorkspacePath ??= currentPath;
+            }
+          }
+        }
+        if (await fs.pathExists(workspaceConfigPath)) {
+          let workspaceConfig = await readFile(workspaceConfigPath, workspaceConfigSchema, {
+            parser: (rawString: string) => json5.parse<unknown>(rawString),
+          });
+
+          if (!(workspaceConfig instanceof z.ZodError)) {
+            let projectGlobs = workspaceConfig.projects;
 
             if (projectGlobs?.length) {
               multiPackageWorkspacePath ??= currentPath;
@@ -445,7 +502,23 @@ export class Workspace<M extends boolean = true> {
         rootPackageJson = {};
       }
 
-      let projectGlobs = getPackageJsonWorkspaces(rootPackageJson);
+      // how to find projects
+      let packageJsonProjectGlobs = getPackageJsonWorkspaces(rootPackageJson);
+      let workspaceConfigProjectGlobs = workspaceConfig.projects;
+
+      if (
+        packageJsonProjectGlobs &&
+        workspaceConfigProjectGlobs &&
+        !_.isEqual(packageJsonProjectGlobs, workspaceConfigProjectGlobs)
+      ) {
+        throw new WorkspaceError('PROJECT_GLOBS_MISMATCH', {
+          data: {
+            path: this.path,
+          },
+        });
+      }
+
+      let projectGlobs = packageJsonProjectGlobs ?? workspaceConfigProjectGlobs;
 
       this.projectGlobs = (projectGlobs ?? []) as WorkspaceProjectGlobs<M>;
       this.packageJson = rootPackageJson as WorkspacePackageJson<M>;

@@ -1,0 +1,4 @@
+{
+  "template": "@jakubmazanec/qux:workspace",
+  "projects": ["./packages/*"]
+}
