@@ -192,6 +192,13 @@ export class Workspace<M extends boolean = true> {
       },
     });
 
+    if (!template.config.autoEject) {
+      await saveWorkspaceConfig({
+        workspacePath: workspace.path,
+        workspaceConfig: {template: templateId},
+      });
+    }
+
     await applyTemplateRenders({
       templateRenders,
       targetPath: workspace.path,
@@ -201,13 +208,6 @@ export class Workspace<M extends boolean = true> {
         : path.join(workspace.path, CARSON_CONFIG_DIRECTORY, WORKSPACE_SNAPSHOT_FILENAME),
       ignoreStrategies: ['check'],
     });
-
-    if (!template.config.autoEject) {
-      await saveWorkspaceConfig({
-        workspacePath: workspace.path,
-        workspaceConfig: {template: templateId},
-      });
-    }
 
     return Workspace.read(workspace.path);
   }

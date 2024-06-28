@@ -128,6 +128,10 @@ export class Project<M extends boolean = true> {
       },
     });
 
+    if (!template.config.autoEject && workspace.config.template) {
+      await saveProjectConfig({projectPath: project.path, projectConfig: {template: templateId}});
+    }
+
     await applyTemplateRenders({
       templateRenders,
       targetPath: project.path,
@@ -137,10 +141,6 @@ export class Project<M extends boolean = true> {
         : path.join(project.path, CARSON_CONFIG_DIRECTORY, PROJECT_SNAPSHOT_FILENAME),
       ignoreStrategies: ['check'],
     });
-
-    if (!template.config.autoEject && workspace.config.template) {
-      await saveProjectConfig({projectPath: project.path, projectConfig: {template: templateId}});
-    }
 
     await project.read();
 
