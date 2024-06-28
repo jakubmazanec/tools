@@ -8,4 +8,4 @@
 
 ## Source
 
-[args/source/ParameterConfig.ts:64](https://github.com/jakubmazanec/js-tools/blob/45932621a19c677851f8bf60e4a28d217617972b/packages/args/source/ParameterConfig.ts#L64)
+[args/source/ParameterConfig.ts:64](https://github.com/jakubmazanec/js-tools/blob/4653f1571319b3537b5a901a19e171562b7727e5/packages/args/source/ParameterConfig.ts#L64)
