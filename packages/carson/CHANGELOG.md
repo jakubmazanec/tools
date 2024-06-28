@@ -1,5 +1,24 @@
 # @jakubmazanec/carson
 
+## 1.2.0
+
+### Minor Changes
+
+- [#154](https://github.com/jakubmazanec/js-tools/pull/154)
+  [`4593262`](https://github.com/jakubmazanec/js-tools/commit/45932621a19c677851f8bf60e4a28d217617972b)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Project globs can now be specified not only
+  using
+  [`package.json#workspaces`](https://docs.npmjs.com/cli/configuring-npm/package-json#workspaces)
+  field, but also setting `projectGlobs` in the `workspace.json` config file.
+
+### Patch Changes
+
+- [#155](https://github.com/jakubmazanec/js-tools/pull/155)
+  [`4653f15`](https://github.com/jakubmazanec/js-tools/commit/4653f1571319b3537b5a901a19e171562b7727e5)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes order of writing files when creating
+  workspaces and projects; Carson configs are now created first, and a Carson template can then use
+  "merge" strategy on these files.
+
 ## 1.1.1
 
 ### Patch Changes
