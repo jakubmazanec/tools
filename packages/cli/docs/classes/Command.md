@@ -48,7 +48,7 @@ Additionl command options.
 
 #### Source
 
-[cli/source/program/Command.ts:36](https://github.com/jakubmazanec/js-tools/blob/4653f1571319b3537b5a901a19e171562b7727e5/packages/cli/source/program/Command.ts#L36)
+[cli/source/program/Command.ts:36](https://github.com/jakubmazanec/js-tools/blob/0a7ca643260718f11723fa4df4f144d2d5a8a885/packages/cli/source/program/Command.ts#L36)
 
 ## Properties
 
@@ -59,7 +59,7 @@ Additionl command options.
 
 #### Source
 
-[cli/source/program/Command.ts:29](https://github.com/jakubmazanec/js-tools/blob/4653f1571319b3537b5a901a19e171562b7727e5/packages/cli/source/program/Command.ts#L29)
+[cli/source/program/Command.ts:29](https://github.com/jakubmazanec/js-tools/blob/0a7ca643260718f11723fa4df4f144d2d5a8a885/packages/cli/source/program/Command.ts#L29)
 
 ---
 
@@ -69,7 +69,7 @@ Additionl command options.
 
 #### Source
 
-[cli/source/program/Command.ts:27](https://github.com/jakubmazanec/js-tools/blob/4653f1571319b3537b5a901a19e171562b7727e5/packages/cli/source/program/Command.ts#L27)
+[cli/source/program/Command.ts:27](https://github.com/jakubmazanec/js-tools/blob/0a7ca643260718f11723fa4df4f144d2d5a8a885/packages/cli/source/program/Command.ts#L27)
 
 ---
 
@@ -79,7 +79,7 @@ Additionl command options.
 
 #### Source
 
-[cli/source/program/Command.ts:28](https://github.com/jakubmazanec/js-tools/blob/4653f1571319b3537b5a901a19e171562b7727e5/packages/cli/source/program/Command.ts#L28)
+[cli/source/program/Command.ts:28](https://github.com/jakubmazanec/js-tools/blob/0a7ca643260718f11723fa4df4f144d2d5a8a885/packages/cli/source/program/Command.ts#L28)
 
 ---
 
@@ -89,7 +89,7 @@ Additionl command options.
 
 #### Source
 
-[cli/source/program/Command.ts:24](https://github.com/jakubmazanec/js-tools/blob/4653f1571319b3537b5a901a19e171562b7727e5/packages/cli/source/program/Command.ts#L24)
+[cli/source/program/Command.ts:24](https://github.com/jakubmazanec/js-tools/blob/0a7ca643260718f11723fa4df4f144d2d5a8a885/packages/cli/source/program/Command.ts#L24)
 
 ---
 
@@ -99,7 +99,7 @@ Additionl command options.
 
 #### Source
 
-[cli/source/program/Command.ts:23](https://github.com/jakubmazanec/js-tools/blob/4653f1571319b3537b5a901a19e171562b7727e5/packages/cli/source/program/Command.ts#L23)
+[cli/source/program/Command.ts:23](https://github.com/jakubmazanec/js-tools/blob/0a7ca643260718f11723fa4df4f144d2d5a8a885/packages/cli/source/program/Command.ts#L23)
 
 ---
 
@@ -109,7 +109,7 @@ Additionl command options.
 
 #### Source
 
-[cli/source/program/Command.ts:26](https://github.com/jakubmazanec/js-tools/blob/4653f1571319b3537b5a901a19e171562b7727e5/packages/cli/source/program/Command.ts#L26)
+[cli/source/program/Command.ts:26](https://github.com/jakubmazanec/js-tools/blob/0a7ca643260718f11723fa4df4f144d2d5a8a885/packages/cli/source/program/Command.ts#L26)
 
 ---
 
@@ -119,7 +119,7 @@ Additionl command options.
 
 #### Source
 
-[cli/source/program/Command.ts:25](https://github.com/jakubmazanec/js-tools/blob/4653f1571319b3537b5a901a19e171562b7727e5/packages/cli/source/program/Command.ts#L25)
+[cli/source/program/Command.ts:25](https://github.com/jakubmazanec/js-tools/blob/0a7ca643260718f11723fa4df4f144d2d5a8a885/packages/cli/source/program/Command.ts#L25)
 
 ## Methods
 
@@ -160,7 +160,7 @@ this command.
 
 #### Source
 
-[cli/source/program/Command.ts:82](https://github.com/jakubmazanec/js-tools/blob/4653f1571319b3537b5a901a19e171562b7727e5/packages/cli/source/program/Command.ts#L82)
+[cli/source/program/Command.ts:82](https://github.com/jakubmazanec/js-tools/blob/0a7ca643260718f11723fa4df4f144d2d5a8a885/packages/cli/source/program/Command.ts#L82)
 
 ---
 
@@ -182,4 +182,4 @@ Executes command action with provided parsed arguments and [Program](Program.md)
 
 #### Source
 
-[cli/source/program/Command.ts:107](https://github.com/jakubmazanec/js-tools/blob/4653f1571319b3537b5a901a19e171562b7727e5/packages/cli/source/program/Command.ts#L107)
+[cli/source/program/Command.ts:107](https://github.com/jakubmazanec/js-tools/blob/0a7ca643260718f11723fa4df4f144d2d5a8a885/packages/cli/source/program/Command.ts#L107)

@@ -28,4 +28,4 @@ Detailed program information.
 
 ## Source
 
-[cli/source/program/ProgramDetail.ts:4](https://github.com/jakubmazanec/js-tools/blob/4653f1571319b3537b5a901a19e171562b7727e5/packages/cli/source/program/ProgramDetail.ts#L4)
+[cli/source/program/ProgramDetail.ts:4](https://github.com/jakubmazanec/js-tools/blob/0a7ca643260718f11723fa4df4f144d2d5a8a885/packages/cli/source/program/ProgramDetail.ts#L4)
