@@ -101,7 +101,7 @@ for (let project of workspace.projects) {
           npm run test -- --filter=<%- project.name %>
         env:
           EDGEDB_INSTANCE: <%- project.config.deployment.dbInstance %>
-          EDGEDB_BRANCH: ${{ github.head_ref }}
+          EDGEDB_BRANCH: <%- workspace.packageJson.name %>-${{ github.head_ref }}
           EDGEDB_SECRET_KEY: ${{ secrets.<%- lodash.snakeCase(project.config.deployment.dbInstance).toUpperCase() %>_EDGEDB_TOKEN }}
 <%
   }

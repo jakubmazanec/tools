@@ -1,17 +1,16 @@
 ---
-to: 'tsconfig.typecheck.json'
+to: '.storybook/tsconfig.json'
 strategy: overwrite
 ---
 <%
 let tsconfig = {
-  extends: './tsconfig.json',
   compilerOptions: {
+    ...TSCONFIG_COMPILER_OPTIONS,
     composite: false,
-    emitDeclarationOnly: false,
     noEmit: true,
-    rootDir: '.',
   },
-  include: ['./.storybook/**/*', `./${SOURCE_DIRECTORY}/**/*`, './stories/**/*', './tests/**/*', './tools/**/*', './*'],
+  include: ['./**/*'],
+  references: [{path: '..'}],
 };
 -%>
 //
