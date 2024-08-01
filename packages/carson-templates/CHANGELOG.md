@@ -1,5 +1,36 @@
 # @jakubmazanec/carson-templates
 
+## 2.5.0
+
+### Minor Changes
+
+- [#156](https://github.com/jakubmazanec/js-tools/pull/156)
+  [`0a7ca64`](https://github.com/jakubmazanec/js-tools/commit/0a7ca643260718f11723fa4df4f144d2d5a8a885)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Allow specifying custom Tailwind config in
+  the `projects/remix-app` template.
+
+- [#156](https://github.com/jakubmazanec/js-tools/pull/156)
+  [`0a7ca64`](https://github.com/jakubmazanec/js-tools/commit/0a7ca643260718f11723fa4df4f144d2d5a8a885)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Adds support for deploying projects with
+  Storybook to Chromatic to the `workspace` template.
+
+### Patch Changes
+
+- [#156](https://github.com/jakubmazanec/js-tools/pull/156)
+  [`0a7ca64`](https://github.com/jakubmazanec/js-tools/commit/0a7ca643260718f11723fa4df4f144d2d5a8a885)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes dependencies and TypeScript, Storybook
+  and Tailwind configs in the `projects/react-library` template.
+
+- [#156](https://github.com/jakubmazanec/js-tools/pull/156)
+  [`0a7ca64`](https://github.com/jakubmazanec/js-tools/commit/0a7ca643260718f11723fa4df4f144d2d5a8a885)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes missing Storybook build output in the
+  `.gitignore` file in the `workspace` template.
+
+- [#156](https://github.com/jakubmazanec/js-tools/pull/156)
+  [`0a7ca64`](https://github.com/jakubmazanec/js-tools/commit/0a7ca643260718f11723fa4df4f144d2d5a8a885)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes how are EdgeDB branch names generated
+  to align it with the official GitHub integration.
+
 ## 2.4.0
 
 ### Minor Changes
