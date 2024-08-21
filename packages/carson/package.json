@@ -4,7 +4,7 @@
   "description": "Tool for managing workspace and project configuration.",
   "repository": {
     "type": "git",
-    "url": "git@github.com:jakubmazanec/js-tools.git",
+    "url": "git@github.com:jakubmazanec/tools.git",
     "directory": "packages/carson"
   },
   "license": "AGPL-3.0-only",

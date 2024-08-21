@@ -4,7 +4,7 @@
   "description": "ESLint config for TypeScript projects.",
   "repository": {
     "type": "git",
-    "url": "git@github.com:jakubmazanec/js-tools.git",
+    "url": "git@github.com:jakubmazanec/tools.git",
     "directory": "packages/eslint-config"
   },
   "license": "MIT",

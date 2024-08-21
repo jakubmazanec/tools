@@ -4,7 +4,7 @@
   "description": "Collection of TypeScript types and utilities.",
   "repository": {
     "type": "git",
-    "url": "git@github.com:jakubmazanec/js-tools.git",
+    "url": "git@github.com:jakubmazanec/tools.git",
     "directory": "packages/ts-utils"
   },
   "license": "LGPL-3.0-only",

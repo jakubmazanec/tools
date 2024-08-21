@@ -4,7 +4,7 @@
   "description": "Changelog for projects using Changesets.",
   "repository": {
     "type": "git",
-    "url": "git@github.com:jakubmazanec/js-tools.git",
+    "url": "git@github.com:jakubmazanec/tools.git",
     "directory": "packages/changesets-changelog"
   },
   "license": "MIT",
