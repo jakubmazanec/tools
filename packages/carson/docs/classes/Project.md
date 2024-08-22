@@ -29,7 +29,7 @@ If true, the project belongs to a multi-project workspace.
 
 #### Source
 
-[packages/carson/source/workspace/Project.ts:51](https://github.com/jakubmazanec/js-tools/blob/0a7ca643260718f11723fa4df4f144d2d5a8a885/packages/carson/source/workspace/Project.ts#L51)
+[packages/carson/source/workspace/Project.ts:51](https://github.com/jakubmazanec/tools/blob/2f8bfe433bf76006231c1e3b5197238029672b8c/packages/carson/source/workspace/Project.ts#L51)
 
 ## Properties
 
@@ -47,7 +47,7 @@ Project configuration; if it's not found, the default is an empty object.
 
 #### Source
 
-[packages/carson/source/workspace/Project.ts:40](https://github.com/jakubmazanec/js-tools/blob/0a7ca643260718f11723fa4df4f144d2d5a8a885/packages/carson/source/workspace/Project.ts#L40)
+[packages/carson/source/workspace/Project.ts:40](https://github.com/jakubmazanec/tools/blob/2f8bfe433bf76006231c1e3b5197238029672b8c/packages/carson/source/workspace/Project.ts#L40)
 
 ---
 
@@ -61,7 +61,7 @@ Errors found during reading from the file system.
 
 #### Source
 
-[packages/carson/source/workspace/Project.ts:49](https://github.com/jakubmazanec/js-tools/blob/0a7ca643260718f11723fa4df4f144d2d5a8a885/packages/carson/source/workspace/Project.ts#L49)
+[packages/carson/source/workspace/Project.ts:49](https://github.com/jakubmazanec/tools/blob/2f8bfe433bf76006231c1e3b5197238029672b8c/packages/carson/source/workspace/Project.ts#L49)
 
 ---
 
@@ -73,7 +73,7 @@ Project name.
 
 #### Source
 
-[packages/carson/source/workspace/Project.ts:31](https://github.com/jakubmazanec/js-tools/blob/0a7ca643260718f11723fa4df4f144d2d5a8a885/packages/carson/source/workspace/Project.ts#L31)
+[packages/carson/source/workspace/Project.ts:31](https://github.com/jakubmazanec/tools/blob/2f8bfe433bf76006231c1e3b5197238029672b8c/packages/carson/source/workspace/Project.ts#L31)
 
 ---
 
@@ -432,7 +432,7 @@ Parsed project `package.json` file; if it's not found, the default is an empty o
 
 #### Source
 
-[packages/carson/source/workspace/Project.ts:43](https://github.com/jakubmazanec/js-tools/blob/0a7ca643260718f11723fa4df4f144d2d5a8a885/packages/carson/source/workspace/Project.ts#L43)
+[packages/carson/source/workspace/Project.ts:43](https://github.com/jakubmazanec/tools/blob/2f8bfe433bf76006231c1e3b5197238029672b8c/packages/carson/source/workspace/Project.ts#L43)
 
 ---
 
@@ -444,7 +444,7 @@ Project path.
 
 #### Source
 
-[packages/carson/source/workspace/Project.ts:34](https://github.com/jakubmazanec/js-tools/blob/0a7ca643260718f11723fa4df4f144d2d5a8a885/packages/carson/source/workspace/Project.ts#L34)
+[packages/carson/source/workspace/Project.ts:34](https://github.com/jakubmazanec/tools/blob/2f8bfe433bf76006231c1e3b5197238029672b8c/packages/carson/source/workspace/Project.ts#L34)
 
 ---
 
@@ -456,7 +456,7 @@ Project path relative to workspace path.
 
 #### Source
 
-[packages/carson/source/workspace/Project.ts:37](https://github.com/jakubmazanec/js-tools/blob/0a7ca643260718f11723fa4df4f144d2d5a8a885/packages/carson/source/workspace/Project.ts#L37)
+[packages/carson/source/workspace/Project.ts:37](https://github.com/jakubmazanec/tools/blob/2f8bfe433bf76006231c1e3b5197238029672b8c/packages/carson/source/workspace/Project.ts#L37)
 
 ---
 
@@ -468,7 +468,7 @@ Parent [Workspace](Workspace.md) instance.
 
 #### Source
 
-[packages/carson/source/workspace/Project.ts:46](https://github.com/jakubmazanec/js-tools/blob/0a7ca643260718f11723fa4df4f144d2d5a8a885/packages/carson/source/workspace/Project.ts#L46)
+[packages/carson/source/workspace/Project.ts:46](https://github.com/jakubmazanec/tools/blob/2f8bfe433bf76006231c1e3b5197238029672b8c/packages/carson/source/workspace/Project.ts#L46)
 
 ## Methods
 
@@ -482,7 +482,7 @@ Parent [Workspace](Workspace.md) instance.
 
 #### Source
 
-[packages/carson/source/workspace/Project.ts:164](https://github.com/jakubmazanec/js-tools/blob/0a7ca643260718f11723fa4df4f144d2d5a8a885/packages/carson/source/workspace/Project.ts#L164)
+[packages/carson/source/workspace/Project.ts:164](https://github.com/jakubmazanec/tools/blob/2f8bfe433bf76006231c1e3b5197238029672b8c/packages/carson/source/workspace/Project.ts#L164)
 
 ---
 
@@ -500,7 +500,7 @@ Parent [Workspace](Workspace.md) instance.
 
 #### Source
 
-[packages/carson/source/workspace/Project.ts:245](https://github.com/jakubmazanec/js-tools/blob/0a7ca643260718f11723fa4df4f144d2d5a8a885/packages/carson/source/workspace/Project.ts#L245)
+[packages/carson/source/workspace/Project.ts:245](https://github.com/jakubmazanec/tools/blob/2f8bfe433bf76006231c1e3b5197238029672b8c/packages/carson/source/workspace/Project.ts#L245)
 
 ---
 
@@ -522,7 +522,7 @@ Parent [Workspace](Workspace.md) instance.
 
 #### Source
 
-[packages/carson/source/workspace/Project.ts:91](https://github.com/jakubmazanec/js-tools/blob/0a7ca643260718f11723fa4df4f144d2d5a8a885/packages/carson/source/workspace/Project.ts#L91)
+[packages/carson/source/workspace/Project.ts:91](https://github.com/jakubmazanec/tools/blob/2f8bfe433bf76006231c1e3b5197238029672b8c/packages/carson/source/workspace/Project.ts#L91)
 
 ---
 
@@ -546,4 +546,4 @@ Parent [Workspace](Workspace.md) instance.
 
 #### Source
 
-[packages/carson/source/workspace/Project.ts:150](https://github.com/jakubmazanec/js-tools/blob/0a7ca643260718f11723fa4df4f144d2d5a8a885/packages/carson/source/workspace/Project.ts#L150)
+[packages/carson/source/workspace/Project.ts:150](https://github.com/jakubmazanec/tools/blob/2f8bfe433bf76006231c1e3b5197238029672b8c/packages/carson/source/workspace/Project.ts#L150)

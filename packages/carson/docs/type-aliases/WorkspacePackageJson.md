@@ -14,4 +14,4 @@ Type alias for [Workspace.packageJson](../classes/Workspace.md#packagejson) prop
 
 ## Source
 
-[packages/carson/source/workspace/WorkspacePackageJson.ts:6](https://github.com/jakubmazanec/js-tools/blob/0a7ca643260718f11723fa4df4f144d2d5a8a885/packages/carson/source/workspace/WorkspacePackageJson.ts#L6)
+[packages/carson/source/workspace/WorkspacePackageJson.ts:6](https://github.com/jakubmazanec/tools/blob/2f8bfe433bf76006231c1e3b5197238029672b8c/packages/carson/source/workspace/WorkspacePackageJson.ts#L6)
