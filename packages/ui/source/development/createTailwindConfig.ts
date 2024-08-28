@@ -115,10 +115,14 @@ export function createTailwindConfig({
   let resolvedContent = [];
 
   for (let contentPath of content ?? []) {
-    if (contentPath.startsWith('.') || contentPath.startsWith('/')) {
-      resolvedContent.push(contentPath);
-    } else {
-      resolvedContent.push(`${resolveModule(contentPath)}/**`);
+    try {
+      if (contentPath.startsWith('.') || contentPath.startsWith('/')) {
+        resolvedContent.push(contentPath);
+      } else {
+        resolvedContent.push(`${resolveModule(contentPath)}/**`);
+      }
+    } catch {
+      // no-op, because we're catching error caused by `createRequire` not being a function in a browser environment
     }
   }
 
