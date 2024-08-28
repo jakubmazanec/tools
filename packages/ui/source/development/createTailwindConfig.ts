@@ -1,16 +1,8 @@
 import {type Config as TailwindConfig} from 'tailwindcss';
-// TODO: fix this when Tailwind CSS v4 is released
-// @ts-expect-error -- Tailwind CSS v3 is missing `exports` field in the package.json file, and it won't be added
-import tailwindPlugin from 'tailwindcss/plugin';
-import type TailwindPlugin from 'tailwindcss/plugin.d.ts';
 
 import {DEFAULT_STOP, type DEFAULT_STOPS} from './internals/constants.js';
 import {createPalette} from './internals/createPalette.js';
 import {resolveModule} from './internals/resolveModule.js';
-
-const PREFIX = 'ui';
-
-let plugin = tailwindPlugin as typeof TailwindPlugin;
 
 let defaultCreateTailwindConfigOptions = {
   content: ['./{.storybook,app,source,stories,tests}/**/*.{js,jsx,ts,tsx,mdx}', '@jakubmazanec/ui'],
@@ -182,35 +174,5 @@ export function createTailwindConfig({
     future: {
       hoverOnlyWhenSupported: true,
     },
-    plugins: [
-      plugin(({addVariant}) => {
-        for (let state of [
-          'open',
-          'checked',
-          'selected',
-          'active',
-          'disabled',
-          'selected-option',
-        ]) {
-          addVariant(`${PREFIX}-${state}`, [
-            `&[data-headlessui-state~="${state}"]`,
-            `:where([data-headlessui-state~="${state}"]) &`,
-          ]);
-
-          addVariant(`${PREFIX}-not-${state}`, [
-            `&[data-headlessui-state]:not([data-headlessui-state~="${state}"])`,
-            `:where([data-headlessui-state]:not([data-headlessui-state~="${state}"])) &:not([data-headlessui-state])`,
-          ]);
-        }
-
-        addVariant(`${PREFIX}-focus-visible`, ':where([data-headlessui-focus-visible]) &:focus');
-        addVariant(
-          `${PREFIX}-not-focus-visible`,
-          '&:focus:where(:not([data-headlessui-focus-visible] &))',
-        );
-      }),
-    ],
   };
 }
-
-// plugins based on https://github.com/tailwindlabs/headlessui/tree/626a253dcf09589e2a2fbbfd0c279120153394cc/packages/@headlessui-tailwindcss (see https://github.com/tailwindlabs/headlessui/blob/626a253dcf09589e2a2fbbfd0c279120153394cc/packages/%40headlessui-tailwindcss/LICENSE for license)
