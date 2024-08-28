@@ -96,7 +96,7 @@ describe('createComponentTheme', () => {
     });
     let componentTheme = {
       classNames: {
-        root: 'text-black p-4',
+        root: 'text-black p-4 rounded-2',
         icon: 'absolute',
       },
       variants: {
@@ -134,7 +134,7 @@ describe('createComponentTheme', () => {
             icon: 'opacity-100',
           },
           false: {
-            root: 'opacity-50',
+            root: 'opacity-50 rounded-1',
             icon: 'opacity-50',
           },
         },
@@ -179,42 +179,42 @@ describe('createComponentTheme', () => {
       [
         {type: 'solid'} as const,
         [
-          'p-4 bg-primary-50 text-white h-6 opacity-100',
+          'p-4 rounded-2 bg-primary-50 text-white h-6 opacity-100',
           'absolute bg-white text-primary-50 top-2 opacity-100',
         ],
       ],
       [
         {size: 'medium'} as const,
         [
-          'p-4 bg-primary-50 text-white h-6 opacity-100',
+          'p-4 rounded-2 bg-primary-50 text-white h-6 opacity-100',
           'absolute bg-white text-primary-50 top-2 opacity-100',
         ],
       ],
       [
         {enabled: true} as const,
         [
-          'p-4 bg-primary-50 text-white h-6 opacity-100',
+          'p-4 rounded-2 bg-primary-50 text-white h-6 opacity-100',
           'absolute bg-white text-primary-50 top-2 opacity-100',
         ],
       ],
       [
         {enabled: false} as const,
         [
-          'p-4 bg-primary-50 text-white h-6 opacity-40',
+          'p-4 bg-primary-50 text-white h-6 rounded-1 opacity-40',
           'absolute bg-white text-primary-50 top-2 opacity-40',
         ],
       ],
       [
         {type: 'solid', size: 'medium', enabled: false} as const,
         [
-          'p-4 bg-primary-50 text-white h-6 opacity-40',
+          'p-4 bg-primary-50 text-white h-6 rounded-1 opacity-40',
           'absolute bg-white text-primary-50 top-2 opacity-40',
         ],
       ],
       [
         {type: 'solid', size: 'small', enabled: false} as const,
         [
-          'bg-primary-50 text-white opacity-50 h-4 p-2',
+          'bg-primary-50 text-white opacity-50 rounded-1 h-4 p-2',
           'absolute bg-white text-primary-50 opacity-50 top-4',
         ],
       ],

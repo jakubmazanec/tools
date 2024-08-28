@@ -1,8 +1,8 @@
-import {twMerge} from 'tailwind-merge';
-
+import {createTailwindConfig, createTailwindMerge} from '../../development.js';
 import {type ClassName} from './ClassName.js';
 
-// TODO: is the merging done correctly? write some tests
+let merge = createTailwindMerge(createTailwindConfig());
+
 export function cx(...inputs: ClassName[]) {
-  return twMerge(...inputs);
+  return merge(...inputs);
 }

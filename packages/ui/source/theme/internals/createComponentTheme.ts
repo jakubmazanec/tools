@@ -8,6 +8,7 @@ import {type ComponentThemeDefinitionElements} from './ComponentThemeDefinitionE
 import {type ComponentThemeDefinitionVariants} from './ComponentThemeDefinitionVariants.js';
 import {type ComponentThemeProps} from './ComponentThemeProps.js';
 import {createUseComponentThemeReturn} from './createUseComponentThemeReturn.js';
+import {cx as baseCx} from './cx.js';
 import {themeContext} from './themeContext.js';
 import {type UseComponentTheme} from './UseComponentTheme.js';
 
@@ -17,6 +18,7 @@ export function createComponentTheme<
 >(themeName: N, themeDefinition?: NonNullable<D>): UseComponentTheme<N, D> {
   let useComponentTheme = (themeProps?: ComponentThemeProps<D>) => {
     let theme = useContext(themeContext);
+    let cx = theme?.merge ?? baseCx;
 
     if (!theme) {
       throw new Error('No theme was found!');
@@ -41,6 +43,7 @@ export function createComponentTheme<
         componentTheme as
           | ComponentTheme<{variants: ComponentThemeDefinitionVariants}>
           | ComponentTheme<undefined>,
+        cx,
         themeProps,
       );
     }
@@ -52,6 +55,7 @@ export function createComponentTheme<
         componentTheme as
           | ComponentTheme<{variants: ComponentThemeDefinitionVariants}>
           | ComponentTheme<undefined>,
+        cx,
         themeProps,
         element,
       );

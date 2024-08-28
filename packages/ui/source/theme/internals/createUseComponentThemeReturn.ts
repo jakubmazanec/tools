@@ -5,7 +5,6 @@ import {type ComponentTheme} from './ComponentTheme.js';
 import {type ComponentThemeDefinitionElements} from './ComponentThemeDefinitionElements.js';
 import {type ComponentThemeDefinitionVariants} from './ComponentThemeDefinitionVariants.js';
 import {type ComponentThemeProps} from './ComponentThemeProps.js';
-import {cx} from './cx.js';
 import {pickPropertyIfExists} from './pickPropertyIfExists.js';
 
 export function createUseComponentThemeReturn(
@@ -17,6 +16,7 @@ export function createUseComponentThemeReturn(
     | ComponentTheme<{elements: ComponentThemeDefinitionElements}>
     | ComponentTheme<{variants: ComponentThemeDefinitionVariants}>
     | ComponentTheme<undefined>,
+  cx: (...inputs: ClassName[]) => string,
   themeProps?:
     | ComponentThemeProps<{variants: ComponentThemeDefinitionVariants}>
     | ComponentThemeProps<undefined>,
