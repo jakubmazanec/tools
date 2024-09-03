@@ -1,11 +1,12 @@
+// eslint-disable-next-line react/jsx-filename-extension
 import {type Meta, type StoryObj} from '@storybook/react';
 
 import {createColumnHelper, DataTable} from '../source/main.js';
 
 const meta = {
   title: 'Components/DataTable',
-  component: DataTable,
-} satisfies Meta<typeof DataTable>;
+  component: DataTable<Person>,
+} satisfies Meta<typeof DataTable<Person>>;
 
 export default meta;
 
@@ -22,11 +23,42 @@ let columnHelper = createColumnHelper<Person>();
 export const Example = {
   args: {
     columns: [
-      columnHelper.accessor('firstName', {header: 'First name'}),
+      columnHelper.accessor('firstName', {header: 'First name', size: 150}),
       columnHelper.accessor('lastName', {header: 'Last name'}),
       columnHelper.accessor('age', {header: 'Age'}),
       columnHelper.accessor('visits', {header: 'Visits'}),
       columnHelper.accessor('progress', {header: 'Progress'}),
+      // {
+      //   accessorKey: 'firstName',
+      //   cell: (info) => info.getValue(),
+      //   id: 'firstName',
+      //   size: 150,
+      // },
+      // {
+      //   accessorFn: (row) => row.lastName,
+      //   cell: (info) => info.getValue(),
+      //   header: () => <span>Last Name</span>,
+      //   id: 'lastName',
+      //   size: 150,
+      // },
+      // {
+      //   accessorKey: 'age',
+      //   header: () => 'Age',
+      //   id: 'age',
+      //   size: 120,
+      // },
+      // {
+      //   accessorKey: 'visits',
+      //   header: () => <span>Visits</span>,
+      //   id: 'visits',
+      //   size: 120,
+      // },
+      // {
+      //   accessorKey: 'progress',
+      //   header: 'Profile Progress',
+      //   id: 'progress',
+      //   size: 180,
+      // },
     ],
     data: [
       {
