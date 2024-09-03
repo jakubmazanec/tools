@@ -1,4 +1,4 @@
-import {useCallback, useRef, useState} from 'react';
+import {useCallback, useState} from 'react';
 import {z} from 'zod';
 
 import {
@@ -61,8 +61,6 @@ export function Example() {
   let insertTask = useCallback(() => {
     form.insert({name: fields.tasks.name});
   }, [fields.tasks.name, form]);
-
-  let ref = useRef<HTMLDivElement>(null);
 
   return (
     <Form form={form}>

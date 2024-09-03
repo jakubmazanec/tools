@@ -55,9 +55,7 @@ let DraggableTableHeader = ({header}: {header: Header<any, unknown>}) => {
 
   return (
     <TableHeader ref={setNodeRef} colSpan={header.colSpan} style={style}>
-      <Button variant="text" size="small" {...attributes} {...listeners}>
-        <Icon name="Bars3" size="small" />
-      </Button>
+      <Icon name="Bars3" size="small" className="text-gray-300" {...attributes} {...listeners} />
       {header.isPlaceholder ? null : (
         flexRender(header.column.columnDef.header, header.getContext())
       )}
