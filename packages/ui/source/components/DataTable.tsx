@@ -25,7 +25,7 @@ import {
   type RowData,
   useReactTable,
 } from '@tanstack/react-table';
-import React, {type CSSProperties, useCallback} from 'react';
+import React, {type CSSProperties, useCallback, useId} from 'react';
 
 import {Icon} from './Icon.js';
 import {Table} from './Table.js';
@@ -64,22 +64,24 @@ let DraggableTableHeader = ({header}: {header: Header<any, unknown>}) => {
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
 let DragAlongCell = ({cell}: {cell: Cell<any, unknown>}) => {
-  let {isDragging, setNodeRef, transform} = useSortable({
-    id: cell.column.id,
-  });
-  let style: CSSProperties = {
-    position: 'relative',
-    transform: CSS.Translate.toString(transform),
-    transition: 'width transform 0.2s ease-in-out',
-    width: cell.column.getSize(),
-    zIndex: isDragging ? 1 : 0,
-  };
+  // let {isDragging, setNodeRef, transform} = useSortable({
+  //   id: cell.column.id,
+  // });
+  // let style: CSSProperties = {
+  //   position: 'relative',
+  //   transform: CSS.Translate.toString(transform),
+  //   transition: 'width transform 0.2s ease-in-out',
+  //   width: cell.column.getSize(),
+  //   zIndex: isDragging ? 1 : 0,
+  // };
 
-  return (
-    <TableCell ref={setNodeRef} style={style}>
-      {flexRender(cell.column.columnDef.cell, cell.getContext())}
-    </TableCell>
-  );
+  return <TableCell>{flexRender(cell.column.columnDef.cell, cell.getContext())}</TableCell>;
+
+  // return (
+  //   <TableCell ref={setNodeRef} style={style}>
+  //     {flexRender(cell.column.columnDef.cell, cell.getContext())}
+  //   </TableCell>
+  // );
 };
 
 export type DataTableProps<D, C> = {
@@ -132,9 +134,11 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
     useSensor(TouchSensor, {}),
     useSensor(KeyboardSensor, {}),
   );
+  let id = useId();
 
   return (
     <DndContext
+      id={id}
       collisionDetection={closestCenter}
       modifiers={[restrictToHorizontalAxis]}
       sensors={sensors}
@@ -156,13 +160,7 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
           {table.getRowModel().rows.map((row) => (
             <TableRow key={row.id}>
               {row.getVisibleCells().map((cell) => (
-                <SortableContext
-                  key={cell.id}
-                  items={columnOrder}
-                  strategy={horizontalListSortingStrategy}
-                >
-                  <DragAlongCell key={cell.id} cell={cell} />
-                </SortableContext>
+                <DragAlongCell key={cell.id} cell={cell} />
               ))}
             </TableRow>
           ))}

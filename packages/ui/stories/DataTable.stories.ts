@@ -47,7 +47,7 @@ export const Example = {
         },
       }),
       columnHelper.accessor('createdAt', {
-        header: 'Tasted at',
+        header: 'Created at',
         cell: ({cell}) => {
           let value = cell.getValue();
 
