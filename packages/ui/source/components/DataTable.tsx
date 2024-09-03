@@ -18,16 +18,15 @@ import {
 import {CSS} from '@dnd-kit/utilities';
 import {
   type Cell,
+  type ColumnDef,
   flexRender,
   getCoreRowModel,
   type Header,
   type RowData,
-  type TableOptions,
   useReactTable,
 } from '@tanstack/react-table';
 import React, {type CSSProperties, useCallback} from 'react';
 
-import {Button} from './Button.js';
 import {Icon} from './Icon.js';
 import {Table} from './Table.js';
 import {TableBody} from './TableBody.js';
@@ -69,7 +68,6 @@ let DragAlongCell = ({cell}: {cell: Cell<any, unknown>}) => {
     id: cell.column.id,
   });
   let style: CSSProperties = {
-    // opacity: isDragging ? 0.8 : 1,
     position: 'relative',
     transform: CSS.Translate.toString(transform),
     transition: 'width transform 0.2s ease-in-out',
@@ -84,12 +82,15 @@ let DragAlongCell = ({cell}: {cell: Cell<any, unknown>}) => {
   );
 };
 
-export type DataTableProps<D> = {
+export type DataTableProps<D, C> = {
   data: D[];
-  columns: TableOptions<D>['columns'];
+  columns: C;
 };
 
-export function DataTable<D extends RowData>({data, columns}: DataTableProps<D>) {
+export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
+  data,
+  columns,
+}: DataTableProps<D, C>) {
   let [columnOrder, setColumnOrder] = React.useState<string[]>(
     columns.map((column) => {
       if (column.id) {

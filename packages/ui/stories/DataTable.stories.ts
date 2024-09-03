@@ -4,8 +4,10 @@ import {createColumnHelper, DataTable, formatDateTime, formatNumber} from '../so
 
 const meta = {
   title: 'Components/DataTable',
-  component: DataTable<Person>,
-} satisfies Meta<typeof DataTable<Person>>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
+  component: DataTable<Person, any>,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
+} satisfies Meta<typeof DataTable<Person, any>>;
 
 export default meta;
 
