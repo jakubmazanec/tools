@@ -91,7 +91,7 @@ export function Example() {
       <Field field={fields.reminder}>
         <Label>Reminder</Label>
         <Listbox showFilter items={REMINDER.map((value) => ({label: value, value}))} />
-        <Error as="span" ref={ref} />
+        <Error />
       </Field>
 
       {tasksFields.map((taskField, index) => {
