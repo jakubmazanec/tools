@@ -29,7 +29,7 @@ export const Example = {
       columnHelper.accessor('firstName', {header: 'First name', size: 150}),
       columnHelper.accessor('lastName', {header: 'Last name'}),
       columnHelper.accessor('age', {header: 'Age'}),
-      columnHelper.accessor('visits', {header: 'Visits'}),
+      columnHelper.accessor('visits', {header: 'Visits', sortUndefined: 'last'}),
       columnHelper.accessor('progress', {
         header: 'Progress',
         cell: ({cell}) => {

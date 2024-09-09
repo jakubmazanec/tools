@@ -17,16 +17,18 @@ import {
 } from '@dnd-kit/sortable';
 import {CSS} from '@dnd-kit/utilities';
 import {
-  type Cell,
   type ColumnDef,
   flexRender,
   getCoreRowModel,
+  getSortedRowModel,
   type Header,
   type RowData,
+  type SortingState,
   useReactTable,
 } from '@tanstack/react-table';
 import React, {type CSSProperties, useCallback, useId} from 'react';
 
+import {Button} from './Button.js';
 import {Icon} from './Icon.js';
 import {Table} from './Table.js';
 import {TableBody} from './TableBody.js';
@@ -37,13 +39,12 @@ import {TableHeader} from './TableHeader.js';
 import {TableRow} from './TableRow.js';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
-let DraggableTableHeader = ({header}: {header: Header<any, unknown>}) => {
+function DraggableTableHeader({header}: {header: Header<any, unknown>}) {
   let {attributes, isDragging, listeners, setNodeRef, transform} = useSortable({
     id: header.column.id,
   });
 
   let style: CSSProperties = {
-    // opacity: isDragging ? 0.8 : 1,
     position: 'relative',
     transform: CSS.Translate.toString(transform),
     transition: 'width transform 0.2s ease-in-out',
@@ -52,37 +53,60 @@ let DraggableTableHeader = ({header}: {header: Header<any, unknown>}) => {
     zIndex: isDragging ? 1 : 0,
   };
 
+  let isSorted = header.column.getIsSorted();
+
+  let contentElement = null;
+
+  if (!header.isPlaceholder) {
+    contentElement = flexRender(header.column.columnDef.header, header.getContext());
+  }
+
+  let sortElement = null;
+
+  if (!header.isPlaceholder && isSorted === false) {
+    sortElement = <Icon name="ArrowsUpDown" size="small" className="text-gray-200 select-none" />;
+  }
+
+  if (!header.isPlaceholder && isSorted === 'asc') {
+    sortElement = <Icon name="ArrowUp" size="small" className="text-gray-950 select-none" />;
+  }
+
+  if (!header.isPlaceholder && isSorted === 'desc') {
+    sortElement = <Icon name="ArrowDown" size="small" className="text-gray-950 select-none" />;
+  }
+
   return (
     <TableHeader ref={setNodeRef} colSpan={header.colSpan} style={style}>
-      <Icon name="Bars3" size="small" className="text-gray-300" {...attributes} {...listeners} />
-      {header.isPlaceholder ? null : (
-        flexRender(header.column.columnDef.header, header.getContext())
-      )}
+      <Button
+        variant="text"
+        size="small"
+        className="inline-flex"
+        title={
+          header.column.getCanSort() ?
+            header.column.getNextSortingOrder() === 'asc' ?
+              'Sort ascending'
+            : header.column.getNextSortingOrder() === 'desc' ?
+              'Sort descending'
+            : 'Clear sort'
+          : undefined
+        }
+        onClick={header.column.getToggleSortingHandler()}
+      >
+        {sortElement}
+        {contentElement}
+        {header.column.getCanSort() ?
+          <Icon
+            name="Bars3"
+            size="small"
+            className="text-gray-300 cursor-move select-none"
+            {...attributes}
+            {...listeners}
+          />
+        : null}
+      </Button>
     </TableHeader>
   );
-};
-
-// eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
-let DragAlongCell = ({cell}: {cell: Cell<any, unknown>}) => {
-  // let {isDragging, setNodeRef, transform} = useSortable({
-  //   id: cell.column.id,
-  // });
-  // let style: CSSProperties = {
-  //   position: 'relative',
-  //   transform: CSS.Translate.toString(transform),
-  //   transition: 'width transform 0.2s ease-in-out',
-  //   width: cell.column.getSize(),
-  //   zIndex: isDragging ? 1 : 0,
-  // };
-
-  return <TableCell>{flexRender(cell.column.columnDef.cell, cell.getContext())}</TableCell>;
-
-  // return (
-  //   <TableCell ref={setNodeRef} style={style}>
-  //     {flexRender(cell.column.columnDef.cell, cell.getContext())}
-  //   </TableCell>
-  // );
-};
+}
 
 export type DataTableProps<D, C> = {
   data: D[];
@@ -110,14 +134,18 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
       return '';
     }),
   );
+  let [sorting, setSorting] = React.useState<SortingState>([]);
   let table = useReactTable<D>({
     data,
     columns,
     getCoreRowModel: getCoreRowModel(),
+    getSortedRowModel: getSortedRowModel(),
     state: {
       columnOrder,
+      sorting,
     },
     onColumnOrderChange: setColumnOrder,
+    onSortingChange: setSorting,
   });
   let handleDragEnd = useCallback(({active, over}: DragEndEvent) => {
     if (over && active.id !== over.id) {
@@ -160,7 +188,9 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
           {table.getRowModel().rows.map((row) => (
             <TableRow key={row.id}>
               {row.getVisibleCells().map((cell) => (
-                <DragAlongCell key={cell.id} cell={cell} />
+                <TableCell key={cell.id}>
+                  {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                </TableCell>
               ))}
             </TableRow>
           ))}

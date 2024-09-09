@@ -13,9 +13,7 @@ import {
 } from '../theme/internals.js';
 import {forwardRef} from './internals.js';
 
-export const useTableHeaderTheme = createComponentTheme('TableHeader', {
-  elements: ['root', 'content'],
-});
+export const useTableHeaderTheme = createComponentTheme('TableHeader');
 
 const TABLE_HEADER_ELEMENT = 'th';
 
@@ -35,18 +33,15 @@ export const TableHeader = forwardRef(
     let theme = useTableHeaderTheme();
     let props = {
       ref,
-      className: theme.root(null, className),
+      className: theme(null, className),
       'data-component': 'table-header',
       ...rest,
     };
 
-    return createElement(Component, props, <span className={theme.content()}>{children}</span>);
+    return createElement(Component, props, children);
   },
 );
 
 export const tableHeaderTheme: ComponentTheme<typeof useTableHeaderTheme> = {
-  classNames: {
-    root: 'p-1 text-sm font-medium z-20 font-sans tabular-nums whitespace-nowrap',
-    content: 'flex gap-x-2 items-center',
-  },
+  className: 'p-1 text-sm font-medium z-20 font-sans tabular-nums whitespace-nowrap',
 };
