@@ -1,3 +1,5 @@
+// TODO: fix somehow
+/* eslint-disable complexity -- TODO */
 import {
   closestCenter,
   DndContext,
@@ -28,17 +30,15 @@ import {
   type Table as TanstackTable,
   useReactTable,
 } from '@tanstack/react-table';
-import {type CSSProperties, Fragment, useCallback, useId, useState, useMemo} from 'react';
+import {type CSSProperties, useCallback, useId, useState} from 'react';
 
 import {Button} from './Button.js';
 import {Checkbox} from './Checkbox.js';
 import {CheckboxField} from './CheckboxField.js';
 import {Field} from './Field.js';
-import {Fieldset} from './Fieldset.js';
 import {Form} from './Form.js';
 import {Icon} from './Icon.js';
 import {Label} from './Label.js';
-import {Legend} from './Legend.js';
 import {Popover} from './Popover.js';
 import {PopoverButton} from './PopoverButton.js';
 import {PopoverPanel} from './PopoverPanel.js';
@@ -69,17 +69,39 @@ function getCommonPinningStyles(column: Column<any>): CSSProperties {
   };
 }
 
-type DraggableTableHeaderProps = {
+type DataTableHeaderProps = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   header: Header<any, any>;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   table: TanstackTable<any>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
+  sort: DataTableProps<any, any>['sort'];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
+  onSort: DataTableProps<any, any>['onSort'];
 };
 
-function DraggableTableHeader({header, table}: DraggableTableHeaderProps) {
+function DataTableHeader({header, table, sort, onSort}: DataTableHeaderProps) {
   let {attributes, isDragging, listeners, setNodeRef, transform} = useSortable({
     id: header.column.id,
   });
+
+  let handleSortClick = useCallback(() => {
+    if (onSort) {
+      if (sort === false || sort === undefined) {
+        onSort({
+          column: header.column.id,
+          direction: 'ascending',
+        });
+      } else if (sort.direction === 'ascending') {
+        onSort({
+          column: header.column.id,
+          direction: 'descending',
+        });
+      } else {
+        onSort(false);
+      }
+    }
+  }, [sort, onSort, header.column.id]);
 
   let style: CSSProperties = {
     transform: CSS.Translate.toString(transform),
@@ -99,16 +121,46 @@ function DraggableTableHeader({header, table}: DraggableTableHeaderProps) {
 
   let sortElement = null;
 
-  if (!header.isPlaceholder && isSorted === false) {
-    sortElement = <Icon name="ArrowsUpDown" size="small" className="text-gray-200 select-none" />;
+  if (onSort) {
+    if (sort === false || sort === undefined) {
+      sortElement = <Icon name="ArrowsUpDown" size="small" className="text-gray-200 select-none" />;
+    } else if (sort.direction === 'ascending' && sort.column === header.column.id) {
+      sortElement = <Icon name="ArrowUp" size="small" className="text-gray-950 select-none" />;
+    } else if (sort.direction === 'descending' && sort.column === header.column.id) {
+      sortElement = <Icon name="ArrowDown" size="small" className="text-gray-950 select-none" />;
+    }
+  } else {
+    if (!header.isPlaceholder && isSorted === false) {
+      sortElement = <Icon name="ArrowsUpDown" size="small" className="text-gray-200 select-none" />;
+    }
+
+    if (!header.isPlaceholder && isSorted === 'asc') {
+      sortElement = <Icon name="ArrowUp" size="small" className="text-gray-950 select-none" />;
+    }
+
+    if (!header.isPlaceholder && isSorted === 'desc') {
+      sortElement = <Icon name="ArrowDown" size="small" className="text-gray-950 select-none" />;
+    }
   }
 
-  if (!header.isPlaceholder && isSorted === 'asc') {
-    sortElement = <Icon name="ArrowUp" size="small" className="text-gray-950 select-none" />;
-  }
+  let title: string | undefined;
 
-  if (!header.isPlaceholder && isSorted === 'desc') {
-    sortElement = <Icon name="ArrowDown" size="small" className="text-gray-950 select-none" />;
+  if (onSort) {
+    if (sort === false || sort === undefined) {
+      title = 'Sort ascending';
+    } else if (sort.direction === 'ascending' && sort.column === header.column.id) {
+      title = 'Sort descending';
+    } else if (sort.direction === 'descending' && sort.column === header.column.id) {
+      title = 'Clear sort';
+    }
+  } else if (header.column.getCanSort()) {
+    if (header.column.getNextSortingOrder() === 'asc') {
+      title = 'Sort ascending';
+    } else if (header.column.getNextSortingOrder() === 'desc') {
+      title = 'Sort descending';
+    } else {
+      title = 'Clear sort';
+    }
   }
 
   return (
@@ -131,28 +183,11 @@ function DraggableTableHeader({header, table}: DraggableTableHeaderProps) {
           variant="text"
           size="small"
           className="inline-flex mr-auto"
-          title={
-            header.column.getCanSort() ?
-              header.column.getNextSortingOrder() === 'asc' ?
-                'Sort ascending'
-              : header.column.getNextSortingOrder() === 'desc' ?
-                'Sort descending'
-              : 'Clear sort'
-            : undefined
-          }
-          onClick={header.column.getToggleSortingHandler()}
+          title={title}
+          onClick={onSort ? handleSortClick : header.column.getToggleSortingHandler()}
         >
           {sortElement}
           {contentElement}
-          {/*header.column.getCanSort() ?
-            <Icon
-              name="Bars3"
-              size="small"
-              className="text-gray-300 cursor-move select-none"
-              {...attributes}
-              {...listeners}
-            />
-          : null*/}
         </Button>
         <Popover>
           <PopoverButton>
@@ -258,24 +293,19 @@ function DraggableTableHeader({header, table}: DraggableTableHeaderProps) {
   );
 }
 
-export type DataTableSort = {
-  column: string;
-  direction: 'ascending' | 'descending';
-} | null;
-
-export type DataTableProps<D, C> =
+export type DataTableSort =
+  | false
   | {
-      data: D[];
-      columns: C;
-      sort: DataTableSort;
-      onSort: (sort: DataTableSort) => void;
-    }
-  | {
-      data: D[];
-      columns: C;
-      sort?: never;
-      onSort?: never;
+      column: string;
+      direction: 'ascending' | 'descending';
     };
+
+export type DataTableProps<D, C> = {
+  data: D[];
+  columns: C;
+  sort?: DataTableSort | undefined;
+  onSort?: ((sort: DataTableSort) => void) | undefined;
+};
 
 export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
   data,
@@ -283,10 +313,6 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
   sort,
   onSort,
 }: DataTableProps<D, C>) {
-  console.log('DataTable...');
-  console.log('onSort', onSort);
-  console.log('sort', sort);
-
   let [columnVisibility, setColumnVisibility] = useState({});
   let [columnOrder, setColumnOrder] = useState<string[]>(
     columns.map((column) => {
@@ -308,66 +334,6 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
   let [columnPinning, setColumnPinning] = useState({});
   let [sorting, setSorting] = useState<SortingState>([]);
 
-  function dataTableSortToSortingState(sort: DataTableSort): SortingState {
-    if (sort === null) {
-      return [];
-    }
-
-    return [
-      {
-        id: sort.column,
-        desc: sort.direction === 'descending',
-      },
-    ];
-  }
-
-  function sortingStateToDataTableSort(sortingState: SortingState): DataTableSort {
-    if (!sortingState.length) {
-      return null;
-    }
-
-    return {
-      column: sortingState[0]!.id,
-      direction: sortingState[0]!.desc ? 'descending' : 'ascending',
-    };
-  }
-
-  let onSortingChange = useCallback(
-    (sortingState: SortingState | ((oldSortingState: SortingState) => SortingState)) => {
-      console.log('onSortingChange...');
-      console.log('onSort', onSort);
-      console.log('sort', sort);
-      if (onSort) {
-        // sorting is controlled
-        if (typeof sortingState !== 'function') {
-          onSort(sortingStateToDataTableSort(sortingState));
-
-          return;
-        }
-
-        onSort(sortingStateToDataTableSort(sortingState(dataTableSortToSortingState(sort))));
-      } else {
-        // sorting is uncontrolled, ie. uses local state
-        if (typeof sortingState !== 'function') {
-          setSorting(sortingState);
-
-          return;
-        }
-
-        setSorting(sortingState);
-      }
-    },
-    [onSort, sort],
-  );
-
-  let memoizedSorting = useMemo(() => {
-    if (onSort) {
-      return dataTableSortToSortingState(sort);
-    }
-
-    return sorting;
-  }, [onSort, sort, sorting]);
-
   let table = useReactTable<D>({
     data,
     columns,
@@ -377,12 +343,13 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
       columnVisibility,
       columnOrder,
       columnPinning,
-      sorting: memoizedSorting,
+      // sorting: memoizedSorting,
+      sorting: onSort ? undefined : sorting,
     },
     onColumnVisibilityChange: setColumnVisibility,
     onColumnOrderChange: setColumnOrder,
     onColumnPinningChange: setColumnPinning,
-    onSortingChange,
+    onSortingChange: onSort ? undefined : setSorting,
     columnResizeMode: 'onChange',
   });
   let handleDragEnd = useCallback(({active, over}: DragEndEvent) => {
@@ -420,7 +387,13 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
             <TableRow key={headerGroup.id}>
               <SortableContext items={columnOrder} strategy={horizontalListSortingStrategy}>
                 {headerGroup.headers.map((header) => (
-                  <DraggableTableHeader key={header.id} header={header} table={table} />
+                  <DataTableHeader
+                    key={header.id}
+                    header={header}
+                    table={table}
+                    sort={sort}
+                    onSort={onSort}
+                  />
                 ))}
               </SortableContext>
             </TableRow>

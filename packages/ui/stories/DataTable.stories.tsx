@@ -1,14 +1,7 @@
 import {useArgs} from '@storybook/preview-api';
 import {type Meta, type StoryObj} from '@storybook/react';
 
-import {
-  createColumnHelper,
-  DataTable,
-  DataTableSort,
-  formatDateTime,
-  formatNumber,
-} from '../source/main.js';
-import {useState} from 'react';
+import {createColumnHelper, DataTable, formatDateTime, formatNumber} from '../source/main.js';
 
 const meta = {
   title: 'Components/DataTable',
@@ -1011,25 +1004,19 @@ export const ControlledExample = {
       },
     ],
     onSort: () => {},
-    sort: {column: 'firstName', direction: 'ascending'},
+    sort: false,
   },
   // eslint-disable-next-line func-name-matching -- needed so `Render` is treated as a React component and `useArgs` doesn't trigger hooks-realated linting rules
   render: function Render(args) {
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- needed
     let [{sort}, updateArgs] = useArgs<typeof args>();
-
-    console.log('Render...');
-    console.log('sort', sort);
 
     return (
       <DataTable
         {...args}
         onSort={(newSort) => {
-          console.log('newSort', newSort);
-
           updateArgs({sort: newSort});
         }}
-        sort={sort!}
+        sort={sort}
       />
     );
   },
