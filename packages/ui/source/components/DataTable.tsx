@@ -17,6 +17,7 @@ import {
 } from '@dnd-kit/sortable';
 import {CSS} from '@dnd-kit/utilities';
 import {
+  type Column,
   type ColumnDef,
   flexRender,
   getCoreRowModel,
@@ -24,12 +25,23 @@ import {
   type Header,
   type RowData,
   type SortingState,
+  type Table as TanstackTable,
   useReactTable,
 } from '@tanstack/react-table';
-import React, {type CSSProperties, useCallback, useId} from 'react';
+import {type CSSProperties, Fragment, useCallback, useId, useState, useMemo} from 'react';
 
 import {Button} from './Button.js';
+import {Checkbox} from './Checkbox.js';
+import {CheckboxField} from './CheckboxField.js';
+import {Field} from './Field.js';
+import {Fieldset} from './Fieldset.js';
+import {Form} from './Form.js';
 import {Icon} from './Icon.js';
+import {Label} from './Label.js';
+import {Legend} from './Legend.js';
+import {Popover} from './Popover.js';
+import {PopoverButton} from './PopoverButton.js';
+import {PopoverPanel} from './PopoverPanel.js';
 import {Table} from './Table.js';
 import {TableBody} from './TableBody.js';
 import {TableCell} from './TableCell.js';
@@ -38,19 +50,43 @@ import {TableHead} from './TableHead.js';
 import {TableHeader} from './TableHeader.js';
 import {TableRow} from './TableRow.js';
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
-function DraggableTableHeader({header}: {header: Header<any, unknown>}) {
+function getCommonPinningStyles(column: Column<any>): CSSProperties {
+  let isPinned = column.getIsPinned();
+  let isLastLeftPinnedColumn = isPinned === 'left' && column.getIsLastColumn('left');
+  let isFirstRightPinnedColumn = isPinned === 'right' && column.getIsFirstColumn('right');
+
+  return {
+    boxShadow:
+      isLastLeftPinnedColumn ? '-4px 0 4px -4px gray inset'
+      : isFirstRightPinnedColumn ? '4px 0 4px -4px gray inset'
+      : undefined,
+    left: isPinned === 'left' ? `${column.getStart('left')}px` : undefined,
+    right: isPinned === 'right' ? `${column.getAfter('right')}px` : undefined,
+    opacity: isPinned ? 0.95 : 1,
+    position: isPinned ? 'sticky' : 'relative',
+    width: column.getSize(),
+    zIndex: isPinned ? 1 : 0,
+  };
+}
+
+type DraggableTableHeaderProps = {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
+  header: Header<any, any>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
+  table: TanstackTable<any>;
+};
+
+function DraggableTableHeader({header, table}: DraggableTableHeaderProps) {
   let {attributes, isDragging, listeners, setNodeRef, transform} = useSortable({
     id: header.column.id,
   });
 
   let style: CSSProperties = {
-    position: 'relative',
     transform: CSS.Translate.toString(transform),
     transition: 'width transform 0.2s ease-in-out',
-    whiteSpace: 'nowrap',
-    width: header.column.getSize(),
     zIndex: isDragging ? 1 : 0,
+    ...getCommonPinningStyles(header.column),
+    width: header.getSize(),
   };
 
   let isSorted = header.column.getIsSorted();
@@ -77,47 +113,182 @@ function DraggableTableHeader({header}: {header: Header<any, unknown>}) {
 
   return (
     <TableHeader ref={setNodeRef} colSpan={header.colSpan} style={style}>
-      <Button
-        variant="text"
-        size="small"
-        className="inline-flex"
-        title={
-          header.column.getCanSort() ?
-            header.column.getNextSortingOrder() === 'asc' ?
-              'Sort ascending'
-            : header.column.getNextSortingOrder() === 'desc' ?
-              'Sort descending'
-            : 'Clear sort'
-          : undefined
-        }
-        onClick={header.column.getToggleSortingHandler()}
-      >
-        {sortElement}
-        {contentElement}
+      <span className="flex justify-between items-center gap-x-1">
         {header.column.getCanSort() ?
-          <Icon
-            name="Bars3"
+          <Button
+            variant="text"
             size="small"
-            className="text-gray-300 cursor-move select-none"
+            aria-label="Resize"
+            className="cursor-move select-none"
             {...attributes}
             {...listeners}
-          />
+          >
+            <Icon size="small" name="Bars3" />
+          </Button>
         : null}
-      </Button>
+
+        <Button
+          variant="text"
+          size="small"
+          className="inline-flex mr-auto"
+          title={
+            header.column.getCanSort() ?
+              header.column.getNextSortingOrder() === 'asc' ?
+                'Sort ascending'
+              : header.column.getNextSortingOrder() === 'desc' ?
+                'Sort descending'
+              : 'Clear sort'
+            : undefined
+          }
+          onClick={header.column.getToggleSortingHandler()}
+        >
+          {sortElement}
+          {contentElement}
+          {/*header.column.getCanSort() ?
+            <Icon
+              name="Bars3"
+              size="small"
+              className="text-gray-300 cursor-move select-none"
+              {...attributes}
+              {...listeners}
+            />
+          : null*/}
+        </Button>
+        <Popover>
+          <PopoverButton>
+            <Button variant="text" size="small" aria-label="Settings">
+              <Icon size="small" name="Cog6Tooth" />
+            </Button>
+          </PopoverButton>
+          <PopoverPanel anchor="top start" className="flex flex-col gap-y-2">
+            <Form>
+              <div className="flex flex-col gap-y-2">
+                <p className="text-sm">Pin column</p>
+
+                <Field>
+                  <div className="flex gap-x-2">
+                    {header.column.getIsPinned() === 'left' ? null : (
+                      <Button
+                        variant="text"
+                        size="small"
+                        aria-label="Pin to left"
+                        onClick={() => {
+                          header.column.pin('left');
+                        }}
+                      >
+                        <Icon size="small" name="ArrowLeftEndOnRectangle" />
+                      </Button>
+                    )}
+                    {header.column.getIsPinned() ?
+                      <Button
+                        variant="text"
+                        size="small"
+                        aria-label="Unpin"
+                        onClick={() => {
+                          header.column.pin(false);
+                        }}
+                      >
+                        <Icon size="small" name="XMark" />
+                      </Button>
+                    : null}
+                    {header.column.getIsPinned() === 'right' ? null : (
+                      <Button
+                        variant="text"
+                        size="small"
+                        aria-label="Pin to right"
+                        onClick={() => {
+                          header.column.pin('right');
+                        }}
+                      >
+                        <Icon size="small" name="ArrowRightEndOnRectangle" />
+                      </Button>
+                    )}
+                  </div>
+                </Field>
+              </div>
+
+              <div className="flex flex-col gap-y-2">
+                <p className="text-sm">Visible columns</p>
+
+                {/*<Checkbox
+                    checked={table.getIsAllColumnsVisible()}
+                    onChange={table.getToggleAllColumnsVisibilityHandler()}
+                  />
+                  <Label>All columns</Label>*/}
+                {table.getAllLeafColumns().map((column) => (
+                  <CheckboxField key={column.id}>
+                    <Checkbox
+                      checked={column.getIsVisible()}
+                      disabled={table.getFlatHeaders().length <= 1 && column.getIsVisible()}
+                      onChange={(checked) => {
+                        if (!checked && table.getFlatHeaders().length >= 2) {
+                          column.toggleVisibility(checked);
+                        } else if (checked) {
+                          column.toggleVisibility(checked);
+                        }
+                      }}
+                    />
+                    <Label>
+                      {flexRender(column.columnDef.header, {
+                        table,
+                        column,
+                        // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/consistent-type-assertions -- needed
+                        header: {column} as Header<any, any>,
+                      })}
+                    </Label>
+                  </CheckboxField>
+                ))}
+              </div>
+            </Form>
+          </PopoverPanel>
+        </Popover>
+        <Button
+          variant="text"
+          size="small"
+          aria-label="Resize"
+          className="cursor-col-resize select-none"
+          onDoubleClick={() => header.column.resetSize()}
+          onMouseDown={header.getResizeHandler()}
+          onTouchStart={header.getResizeHandler()}
+        >
+          <Icon size="small" name="ArrowsRightLeft" />
+        </Button>
+      </span>
     </TableHeader>
   );
 }
 
-export type DataTableProps<D, C> = {
-  data: D[];
-  columns: C;
-};
+export type DataTableSort = {
+  column: string;
+  direction: 'ascending' | 'descending';
+} | null;
+
+export type DataTableProps<D, C> =
+  | {
+      data: D[];
+      columns: C;
+      sort: DataTableSort;
+      onSort: (sort: DataTableSort) => void;
+    }
+  | {
+      data: D[];
+      columns: C;
+      sort?: never;
+      onSort?: never;
+    };
 
 export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
   data,
   columns,
+  sort,
+  onSort,
 }: DataTableProps<D, C>) {
-  let [columnOrder, setColumnOrder] = React.useState<string[]>(
+  console.log('DataTable...');
+  console.log('onSort', onSort);
+  console.log('sort', sort);
+
+  let [columnVisibility, setColumnVisibility] = useState({});
+  let [columnOrder, setColumnOrder] = useState<string[]>(
     columns.map((column) => {
       if (column.id) {
         return column.id;
@@ -134,18 +305,85 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
       return '';
     }),
   );
-  let [sorting, setSorting] = React.useState<SortingState>([]);
+  let [columnPinning, setColumnPinning] = useState({});
+  let [sorting, setSorting] = useState<SortingState>([]);
+
+  function dataTableSortToSortingState(sort: DataTableSort): SortingState {
+    if (sort === null) {
+      return [];
+    }
+
+    return [
+      {
+        id: sort.column,
+        desc: sort.direction === 'descending',
+      },
+    ];
+  }
+
+  function sortingStateToDataTableSort(sortingState: SortingState): DataTableSort {
+    if (!sortingState.length) {
+      return null;
+    }
+
+    return {
+      column: sortingState[0]!.id,
+      direction: sortingState[0]!.desc ? 'descending' : 'ascending',
+    };
+  }
+
+  let onSortingChange = useCallback(
+    (sortingState: SortingState | ((oldSortingState: SortingState) => SortingState)) => {
+      console.log('onSortingChange...');
+      console.log('onSort', onSort);
+      console.log('sort', sort);
+      if (onSort) {
+        // sorting is controlled
+        if (typeof sortingState !== 'function') {
+          onSort(sortingStateToDataTableSort(sortingState));
+
+          return;
+        }
+
+        onSort(sortingStateToDataTableSort(sortingState(dataTableSortToSortingState(sort))));
+      } else {
+        // sorting is uncontrolled, ie. uses local state
+        if (typeof sortingState !== 'function') {
+          setSorting(sortingState);
+
+          return;
+        }
+
+        setSorting(sortingState);
+      }
+    },
+    [onSort, sort],
+  );
+
+  let memoizedSorting = useMemo(() => {
+    if (onSort) {
+      return dataTableSortToSortingState(sort);
+    }
+
+    return sorting;
+  }, [onSort, sort, sorting]);
+
   let table = useReactTable<D>({
     data,
     columns,
     getCoreRowModel: getCoreRowModel(),
     getSortedRowModel: getSortedRowModel(),
     state: {
+      columnVisibility,
       columnOrder,
-      sorting,
+      columnPinning,
+      sorting: memoizedSorting,
     },
+    onColumnVisibilityChange: setColumnVisibility,
     onColumnOrderChange: setColumnOrder,
-    onSortingChange: setSorting,
+    onColumnPinningChange: setColumnPinning,
+    onSortingChange,
+    columnResizeMode: 'onChange',
   });
   let handleDragEnd = useCallback(({active, over}: DragEndEvent) => {
     if (over && active.id !== over.id) {
@@ -172,13 +410,17 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
       sensors={sensors}
       onDragEnd={handleDragEnd}
     >
-      <Table>
+      <Table
+        style={{
+          width: table.getCenterTotalSize(),
+        }}
+      >
         <TableHead>
           {table.getHeaderGroups().map((headerGroup) => (
             <TableRow key={headerGroup.id}>
               <SortableContext items={columnOrder} strategy={horizontalListSortingStrategy}>
                 {headerGroup.headers.map((header) => (
-                  <DraggableTableHeader key={header.id} header={header} />
+                  <DraggableTableHeader key={header.id} header={header} table={table} />
                 ))}
               </SortableContext>
             </TableRow>
@@ -188,7 +430,7 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
           {table.getRowModel().rows.map((row) => (
             <TableRow key={row.id}>
               {row.getVisibleCells().map((cell) => (
-                <TableCell key={cell.id}>
+                <TableCell key={cell.id} style={{...getCommonPinningStyles(cell.column)}}>
                   {flexRender(cell.column.columnDef.cell, cell.getContext())}
                 </TableCell>
               ))}

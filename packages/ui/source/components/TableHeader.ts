@@ -43,5 +43,5 @@ export const TableHeader = forwardRef(
 );
 
 export const tableHeaderTheme: ComponentTheme<typeof useTableHeaderTheme> = {
-  className: 'p-1 text-sm font-medium z-20 font-sans tabular-nums whitespace-nowrap',
+  className: 'relative p-1 text-sm font-medium z-20 font-sans tabular-nums whitespace-nowrap',
 };

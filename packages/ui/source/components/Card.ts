@@ -17,13 +17,12 @@ export const useCardTheme = createComponentTheme('Card');
 
 const CARD_ELEMENT = 'div';
 
-export type CardProps<T extends ElementType> = PropsWithChildren<
-  ComponentProps<typeof useCardTheme> &
-    ComponentPropsWithoutRef<T> & {
-      as?: T | undefined;
-      className?: string;
-    }
->;
+export type CardProps<T extends ElementType> = ComponentProps<typeof useCardTheme> &
+  ComponentPropsWithoutRef<T> &
+  PropsWithChildren<{
+    as?: T | undefined;
+    className?: string;
+  }>;
 
 export const Card = forwardRef(
   <T extends ElementType = typeof CARD_ELEMENT>(

@@ -24,7 +24,7 @@ export const useCheckboxTheme = createComponentTheme('Checkbox', {
 const CHECKBOX_ELEMENT = 'span';
 
 export type CheckboxProps<T extends ElementType> = ComponentProps<typeof useCheckboxTheme> &
-  ComponentPropsWithoutRef<T> & {
+  Omit<ComponentPropsWithoutRef<T>, 'onChange'> & {
     as?: T | undefined;
     checked?: boolean | undefined;
     indeterminate?: boolean | undefined;
@@ -90,6 +90,7 @@ export const Checkbox = forwardRef(
       indeterminate,
       autoFocus,
       className: theme.root('relative', className),
+      'data-component': 'checkbox',
       onChange: handleChange,
       ...rest,
     };
@@ -106,14 +107,14 @@ export const Checkbox = forwardRef(
 
 export const checkboxTheme: ComponentTheme<typeof useCheckboxTheme> = {
   classNames: {
-    root: 'group/checkbox inline-block size-5',
+    root: 'group/checkbox inline-block size-5 cursor-pointer',
     icon: 'flex justify-content justify-item size-5 *:rounded-2 *:bg-white *:border-2 *:border-gray-100 *:hover:border-gray-200 *:shadow-inner *:transition-colors *:text-transparent *:hover:text-gray-100 group-data-[checked]/checkbox:*:bg-gray-950 group-data-[checked]/checkbox:*:border-gray-950 group-data-[checked]/checkbox:*:text-white',
   },
   variants: {
     disabled: {
       true: {
-        root: 'border-gray-100 text-gray-200 cursor-not-allowed',
-        icon: 'opacity-0',
+        root: 'cursor-not-allowed',
+        icon: '*:hover:text-transparent *:border-gray-50 *:hover:border-gray-50 group-data-[checked]/checkbox:*:bg-gray-100 group-data-[checked]/checkbox:*:border-gray-100 group-data-[checked]/checkbox:*:text-white',
       },
       false: {
         root: '',

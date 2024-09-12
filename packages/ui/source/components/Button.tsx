@@ -19,7 +19,7 @@ import {Spinner} from './Spinner.js';
 
 export const useButtonTheme = createComponentTheme('Button', {
   variants: {
-    variant: ['solid', 'outline', 'text'],
+    variant: ['solid', 'outline', 'text', 'invisible'],
     size: ['small', 'medium', 'large'],
     disabled: [true, false],
   },
@@ -105,6 +105,7 @@ export const buttonTheme: ComponentTheme<typeof useButtonTheme> = {
       solid: 'bg-gray-900 text-white hover:bg-gray-800',
       outline: 'border-2 border-gray-100 hover:border-gray-200',
       text: 'border-2 border-transparent hover:border-gray-200',
+      invisible: '',
     },
     size: {
       small: 'text-sm leading-6 px-2.5 h-8 gap-x-2 min-w-8',

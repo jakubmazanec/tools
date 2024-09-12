@@ -61,5 +61,5 @@ export const PopoverPanel = forwardRef(
 
 export const popoverPanelTheme: ComponentTheme<typeof usePopoverPanelTheme> = {
   className:
-    'rounded-2 bg-white border-2 p-2 border-gray-100 [--anchor-gap:theme(spacing.1)] [--anchor-padding:theme(spacing.2)] [scrollbar-width:thin]',
+    'rounded-2 bg-white border-2 p-4 border-gray-100 z-10 [--anchor-gap:theme(spacing.1)] [--anchor-padding:theme(spacing.2)] [scrollbar-width:thin]',
 };

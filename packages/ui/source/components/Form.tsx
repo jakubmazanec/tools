@@ -24,7 +24,7 @@ export type FormProps<T extends ElementType> = PropsWithChildren<
       as?: T | undefined;
       className?: string;
       // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
-      form: FormMetadata<any, any>;
+      form?: FormMetadata<any, any> | undefined;
     }
 >;
 
@@ -34,23 +34,36 @@ export const Form = forwardRef(
     ref: Ref<HTMLElement>,
   ) => {
     let theme = useFormTheme();
+
+    if (form) {
+      let props = {
+        ref,
+        id: form.id,
+        method: 'post',
+        className: theme(null, className),
+        onSubmit: form.onSubmit,
+        'data-component': 'form',
+        ...rest,
+      };
+
+      return (
+        <formIdContext.Provider value={form.id}>
+          <FormProvider context={form.context}>
+            {createElement(Component, props, children)}
+          </FormProvider>
+        </formIdContext.Provider>
+      );
+    }
+
     let props = {
       ref,
-      id: form.id,
       method: 'post',
       className: theme(null, className),
-      onSubmit: form.onSubmit,
       'data-component': 'form',
       ...rest,
     };
 
-    return (
-      <formIdContext.Provider value={form.id}>
-        <FormProvider context={form.context}>
-          {createElement(Component, props, children)}
-        </FormProvider>
-      </formIdContext.Provider>
-    );
+    return createElement(Component, props, children);
   },
 );
 
