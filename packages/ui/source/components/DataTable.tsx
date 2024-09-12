@@ -50,6 +50,7 @@ import {TableHead} from './TableHead.js';
 import {TableHeader} from './TableHeader.js';
 import {TableRow} from './TableRow.js';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
 function getCommonPinningStyles(column: Column<any>): CSSProperties {
   let isPinned = column.getIsPinned();
   let isLastLeftPinnedColumn = isPinned === 'left' && column.getIsLastColumn('left');
