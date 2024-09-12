@@ -88,17 +88,17 @@ function DataTableHeader({header, table, sort, onSort}: DataTableHeaderProps) {
 
   let handleSortClick = useCallback(() => {
     if (onSort) {
-      if (sort === false || sort === undefined) {
+      if (sort === false || sort === undefined || sort.column !== header.column.id) {
         onSort({
           column: header.column.id,
           direction: 'ascending',
         });
-      } else if (sort.direction === 'ascending') {
+      } else if (sort.column === header.column.id && sort.direction === 'ascending') {
         onSort({
           column: header.column.id,
           direction: 'descending',
         });
-      } else {
+      } else if (sort.column === header.column.id && sort.direction === 'descending') {
         onSort(false);
       }
     }
@@ -123,7 +123,7 @@ function DataTableHeader({header, table, sort, onSort}: DataTableHeaderProps) {
   let sortElement = null;
 
   if (onSort) {
-    if (sort === false || sort === undefined) {
+    if (sort === false || sort === undefined || sort.column !== header.column.id) {
       sortElement = <Icon name="ArrowsUpDown" size="small" className="text-gray-200 select-none" />;
     } else if (sort.direction === 'ascending' && sort.column === header.column.id) {
       sortElement = <Icon name="ArrowUp" size="small" className="text-gray-950 select-none" />;
@@ -344,7 +344,6 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
       columnVisibility,
       columnOrder,
       columnPinning,
-      // sorting: memoizedSorting,
       sorting: onSort ? undefined : sorting,
     },
     onColumnVisibilityChange: setColumnVisibility,
