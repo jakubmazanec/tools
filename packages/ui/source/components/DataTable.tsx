@@ -33,6 +33,7 @@ import {
   useReactTable,
 } from '@tanstack/react-table';
 import {type ChangeEvent, type CSSProperties, useCallback, useId, useState} from 'react';
+import {z} from 'zod';
 
 import {Button} from './Button.js';
 import {Checkbox} from './Checkbox.js';
@@ -57,7 +58,7 @@ import {TableHeader} from './TableHeader.js';
 import {TableRow} from './TableRow.js';
 
 const MAX_PAGE_BUTTONS_COUNT = 10;
-const PAGE_SIZES = [10, 20, 30, 40, 50, 100] as const;
+const PAGE_SIZES = [10, 25, 50, 75, 100] as const;
 const DEFAULT_PAGE_SIZE = 50;
 
 type PageSize = (typeof PAGE_SIZES)[number];
@@ -353,19 +354,30 @@ function DataTableHeader({
   );
 }
 
-export type DataTablePagination = {
+export const dataTablePaginationSchema = z.object({
   /** Page number, starts with 1. */
-  page: number;
-  pageSize: PageSize;
-  pageCount: number;
-};
+  page: z.number(),
+  pageSize: z.union([
+    z.literal(PAGE_SIZES[0]),
+    z.literal(PAGE_SIZES[1]),
+    z.literal(PAGE_SIZES[2]),
+    z.literal(PAGE_SIZES[3]),
+    z.literal(PAGE_SIZES[4]),
+  ]),
+  pageCount: z.number(),
+});
 
-export type DataTableSort =
-  | false
-  | {
-      column: string;
-      direction: 'ascending' | 'descending';
-    };
+export type DataTablePagination = z.infer<typeof dataTablePaginationSchema>;
+
+export const dataTableSortingSchema = z.union([
+  z.literal(false),
+  z.object({
+    column: z.string(),
+    direction: z.enum(['ascending', 'descending']),
+  }),
+]);
+
+export type DataTableSorting = z.infer<typeof dataTableSortingSchema>;
 
 export type DataTableProps<D, C> = {
   data: D[];
@@ -376,8 +388,8 @@ export type DataTableProps<D, C> = {
         pagination: Pick<DataTablePagination, 'page'> | Pick<DataTablePagination, 'pageSize'>,
       ) => void)
     | undefined;
-  sorting?: DataTableSort | undefined;
-  onSorting?: ((sorting: DataTableSort) => void) | undefined;
+  sorting?: DataTableSorting | undefined;
+  onSorting?: ((sorting: DataTableSorting) => void) | undefined;
 };
 
 export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
