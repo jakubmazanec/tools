@@ -40,8 +40,8 @@ export const useListboxTheme = createComponentTheme('Listbox', {
 
 const LISTBOX_ELEMENT = Fragment;
 
-export type ListboxItem<T> = {
-  value: T;
+export type ListboxItem<V> = {
+  value: V;
   label: string;
 };
 

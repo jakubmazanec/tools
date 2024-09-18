@@ -46,7 +46,7 @@ import {type useTableHeaderTheme} from '../components/TableHeader.js';
 import {type useTableRowTheme} from '../components/TableRow.js';
 import {type useTextTheme} from '../components/Text.js';
 import {type useTextareaTheme} from '../components/Textarea.js';
-import {ClassName, type ComponentTheme} from './internals.js';
+import {type ClassName, type ComponentTheme} from './internals.js';
 
 export type Theme = Simplify<
   ComponentTheme<typeof useButtonTheme, {outputComponentName: true}> &
@@ -95,6 +95,6 @@ export type Theme = Simplify<
     ComponentTheme<typeof useTableTheme, {outputComponentName: true}> &
     ComponentTheme<typeof useTextareaTheme, {outputComponentName: true}> &
     ComponentTheme<typeof useTextTheme, {outputComponentName: true}> & {
-      merge?: (...rest: ClassName[]) => string;
+      merge: (...rest: ClassName[]) => string;
     }
 >;

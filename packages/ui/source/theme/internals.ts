@@ -11,7 +11,6 @@ export * from './internals/ComponentThemeVariants.js';
 export * from './internals/ComponentWithTheme.js';
 export * from './internals/createComponentTheme.js';
 export * from './internals/createUseComponentThemeReturn.js';
-export * from './internals/cx.js';
 export * from './internals/pickPropertyIfExists.js';
 export * from './internals/themeContext.js';
 export * from './internals/UseComponentTheme.js';

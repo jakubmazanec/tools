@@ -47,6 +47,7 @@ import {
   textTheme,
 } from '../components.js';
 import {type Theme} from './Theme.js';
+import {createTailwindConfig, createTailwindMerge} from '../development.js';
 
 export const defaultTheme: Theme = {
   Button: buttonTheme,
@@ -95,4 +96,5 @@ export const defaultTheme: Theme = {
   TableRow: tableRowTheme,
   Text: textTheme,
   Textarea: textareaTheme,
+  merge: createTailwindMerge(createTailwindConfig()),
 };

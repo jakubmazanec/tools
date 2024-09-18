@@ -23,22 +23,28 @@ import {
   type ColumnDef,
   flexRender,
   getCoreRowModel,
+  getPaginationRowModel,
   getSortedRowModel,
   type Header,
+  type PaginationState,
   type RowData,
   type SortingState,
   type Table as TanstackTable,
   useReactTable,
 } from '@tanstack/react-table';
-import {type CSSProperties, useCallback, useId, useState} from 'react';
+import {type ChangeEvent, type CSSProperties, useCallback, useId, useState} from 'react';
 
 import {Button} from './Button.js';
 import {Checkbox} from './Checkbox.js';
 import {CheckboxField} from './CheckboxField.js';
+import {DataTablePageButton} from './data-table/DataTablePageButton.js';
 import {Field} from './Field.js';
 import {Form} from './Form.js';
 import {Icon} from './Icon.js';
+import {Input} from './Input.js';
 import {Label} from './Label.js';
+import {Listbox} from './Listbox.js';
+import {ListboxOption} from './ListboxOption.js';
 import {Popover} from './Popover.js';
 import {PopoverButton} from './PopoverButton.js';
 import {PopoverPanel} from './PopoverPanel.js';
@@ -50,24 +56,39 @@ import {TableHead} from './TableHead.js';
 import {TableHeader} from './TableHeader.js';
 import {TableRow} from './TableRow.js';
 
+const MAX_PAGE_BUTTONS_COUNT = 10;
+const PAGE_SIZES = [10, 20, 30, 40, 50, 100] as const;
+const DEFAULT_PAGE_SIZE = 50;
+
+type PageSize = (typeof PAGE_SIZES)[number];
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
 function getCommonPinningStyles(column: Column<any>): CSSProperties {
+  let isPinned = column.getIsPinned();
+
+  return {
+    left: isPinned === 'left' ? `${column.getStart('left')}px` : undefined,
+    right: isPinned === 'right' ? `${column.getAfter('right')}px` : undefined,
+    width: column.getSize(),
+  };
+}
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
+function getCommonPinningClasses(column: Column<any>): string {
   let isPinned = column.getIsPinned();
   let isLastLeftPinnedColumn = isPinned === 'left' && column.getIsLastColumn('left');
   let isFirstRightPinnedColumn = isPinned === 'right' && column.getIsFirstColumn('right');
 
-  return {
-    boxShadow:
-      isLastLeftPinnedColumn ? '-4px 0 4px -4px gray inset'
-      : isFirstRightPinnedColumn ? '4px 0 4px -4px gray inset'
-      : undefined,
-    left: isPinned === 'left' ? `${column.getStart('left')}px` : undefined,
-    right: isPinned === 'right' ? `${column.getAfter('right')}px` : undefined,
-    opacity: isPinned ? 0.95 : 1,
-    position: isPinned ? 'sticky' : 'relative',
-    width: column.getSize(),
-    zIndex: isPinned ? 1 : 0,
-  };
+  let borderClassName =
+    isLastLeftPinnedColumn ? 'border-r-2 border-gray-100'
+    : isFirstRightPinnedColumn ? 'border-l-2 border-gray-100'
+    : undefined;
+  let opacityClassName = isPinned ? 'opacity-90' : 'opacity-100';
+  let positionClassName = isPinned ? 'sticky' : 'relative';
+  let zIndexClassName = isPinned ? 'z-10' : 'z-0';
+  let bgClassName = isPinned ? 'bg-white' : 'bg-transparent';
+
+  return `${bgClassName} ${borderClassName} ${opacityClassName} ${positionClassName} ${zIndexClassName}`;
 }
 
 type DataTableHeaderProps = {
@@ -76,40 +97,55 @@ type DataTableHeaderProps = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   table: TanstackTable<any>;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
-  sort: DataTableProps<any, any>['sort'];
+  sorting: DataTableProps<any, any>['sorting'];
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
-  onSort: DataTableProps<any, any>['onSort'];
+  onSorting: DataTableProps<any, any>['onSorting'];
 };
 
-function DataTableHeader({header, table, sort, onSort}: DataTableHeaderProps) {
+function DataTableHeader({
+  header,
+  table,
+  sorting: controlledSorting,
+  onSorting,
+}: DataTableHeaderProps) {
   let {attributes, isDragging, listeners, setNodeRef, transform} = useSortable({
     id: header.column.id,
   });
 
   let handleSortClick = useCallback(() => {
-    if (onSort) {
-      if (sort === false || sort === undefined || sort.column !== header.column.id) {
-        onSort({
+    if (onSorting) {
+      if (
+        controlledSorting === false ||
+        controlledSorting === undefined ||
+        controlledSorting.column !== header.column.id
+      ) {
+        onSorting({
           column: header.column.id,
           direction: 'ascending',
         });
-      } else if (sort.column === header.column.id && sort.direction === 'ascending') {
-        onSort({
+      } else if (
+        controlledSorting.column === header.column.id &&
+        controlledSorting.direction === 'ascending'
+      ) {
+        onSorting({
           column: header.column.id,
           direction: 'descending',
         });
-      } else if (sort.column === header.column.id && sort.direction === 'descending') {
-        onSort(false);
+      } else if (
+        controlledSorting.column === header.column.id &&
+        controlledSorting.direction === 'descending'
+      ) {
+        onSorting(false);
       }
     }
-  }, [sort, onSort, header.column.id]);
+  }, [controlledSorting, onSorting, header.column.id]);
 
   let style: CSSProperties = {
     transform: CSS.Translate.toString(transform),
     transition: 'width transform 0.2s ease-in-out',
-    zIndex: isDragging ? 1 : 0,
+    zIndex: isDragging ? 20 : undefined,
     ...getCommonPinningStyles(header.column),
-    width: header.getSize(),
+    // width: header.getSize(),
   };
 
   let isSorted = header.column.getIsSorted();
@@ -122,12 +158,22 @@ function DataTableHeader({header, table, sort, onSort}: DataTableHeaderProps) {
 
   let sortElement = null;
 
-  if (onSort) {
-    if (sort === false || sort === undefined || sort.column !== header.column.id) {
+  if (onSorting) {
+    if (
+      controlledSorting === false ||
+      controlledSorting === undefined ||
+      controlledSorting.column !== header.column.id
+    ) {
       sortElement = <Icon name="ArrowsUpDown" size="small" className="text-gray-200 select-none" />;
-    } else if (sort.direction === 'ascending' && sort.column === header.column.id) {
+    } else if (
+      controlledSorting.direction === 'ascending' &&
+      controlledSorting.column === header.column.id
+    ) {
       sortElement = <Icon name="ArrowUp" size="small" className="text-gray-950 select-none" />;
-    } else if (sort.direction === 'descending' && sort.column === header.column.id) {
+    } else if (
+      controlledSorting.direction === 'descending' &&
+      controlledSorting.column === header.column.id
+    ) {
       sortElement = <Icon name="ArrowDown" size="small" className="text-gray-950 select-none" />;
     }
   } else {
@@ -146,12 +192,18 @@ function DataTableHeader({header, table, sort, onSort}: DataTableHeaderProps) {
 
   let title: string | undefined;
 
-  if (onSort) {
-    if (sort === false || sort === undefined) {
+  if (onSorting) {
+    if (controlledSorting === false || controlledSorting === undefined) {
       title = 'Sort ascending';
-    } else if (sort.direction === 'ascending' && sort.column === header.column.id) {
+    } else if (
+      controlledSorting.direction === 'ascending' &&
+      controlledSorting.column === header.column.id
+    ) {
       title = 'Sort descending';
-    } else if (sort.direction === 'descending' && sort.column === header.column.id) {
+    } else if (
+      controlledSorting.direction === 'descending' &&
+      controlledSorting.column === header.column.id
+    ) {
       title = 'Clear sort';
     }
   } else if (header.column.getCanSort()) {
@@ -165,7 +217,12 @@ function DataTableHeader({header, table, sort, onSort}: DataTableHeaderProps) {
   }
 
   return (
-    <TableHeader ref={setNodeRef} colSpan={header.colSpan} style={style}>
+    <TableHeader
+      ref={setNodeRef}
+      colSpan={header.colSpan}
+      className={getCommonPinningClasses(header.column)}
+      style={style}
+    >
       <span className="flex justify-between items-center gap-x-1">
         {header.column.getCanSort() ?
           <Button
@@ -185,7 +242,7 @@ function DataTableHeader({header, table, sort, onSort}: DataTableHeaderProps) {
           size="small"
           className="inline-flex mr-auto"
           title={title}
-          onClick={onSort ? handleSortClick : header.column.getToggleSortingHandler()}
+          onClick={onSorting ? handleSortClick : header.column.getToggleSortingHandler()}
         >
           {sortElement}
           {contentElement}
@@ -196,52 +253,54 @@ function DataTableHeader({header, table, sort, onSort}: DataTableHeaderProps) {
               <Icon size="small" name="Cog6Tooth" />
             </Button>
           </PopoverButton>
-          <PopoverPanel anchor="top start" className="flex flex-col gap-y-2">
+          <PopoverPanel anchor="top end" className="flex flex-col gap-y-2">
             <Form>
-              <div className="flex flex-col gap-y-2">
-                <p className="text-sm">Pin column</p>
+              {header.column.getCanPin() ?
+                <div className="flex flex-col gap-y-2">
+                  <p className="text-sm">Pin column</p>
 
-                <Field>
-                  <div className="flex gap-x-2">
-                    {header.column.getIsPinned() === 'left' ? null : (
-                      <Button
-                        variant="text"
-                        size="small"
-                        aria-label="Pin to left"
-                        onClick={() => {
-                          header.column.pin('left');
-                        }}
-                      >
-                        <Icon size="small" name="ArrowLeftEndOnRectangle" />
-                      </Button>
-                    )}
-                    {header.column.getIsPinned() ?
-                      <Button
-                        variant="text"
-                        size="small"
-                        aria-label="Unpin"
-                        onClick={() => {
-                          header.column.pin(false);
-                        }}
-                      >
-                        <Icon size="small" name="XMark" />
-                      </Button>
-                    : null}
-                    {header.column.getIsPinned() === 'right' ? null : (
-                      <Button
-                        variant="text"
-                        size="small"
-                        aria-label="Pin to right"
-                        onClick={() => {
-                          header.column.pin('right');
-                        }}
-                      >
-                        <Icon size="small" name="ArrowRightEndOnRectangle" />
-                      </Button>
-                    )}
-                  </div>
-                </Field>
-              </div>
+                  <Field>
+                    <div className="flex gap-x-2">
+                      {header.column.getIsPinned() === 'left' ? null : (
+                        <Button
+                          variant="text"
+                          size="small"
+                          aria-label="Pin to left"
+                          onClick={() => {
+                            header.column.pin('left');
+                          }}
+                        >
+                          <Icon size="small" name="ArrowLeftEndOnRectangle" />
+                        </Button>
+                      )}
+                      {header.column.getIsPinned() ?
+                        <Button
+                          variant="text"
+                          size="small"
+                          aria-label="Unpin"
+                          onClick={() => {
+                            header.column.pin(false);
+                          }}
+                        >
+                          <Icon size="small" name="XMark" />
+                        </Button>
+                      : null}
+                      {header.column.getIsPinned() === 'right' ? null : (
+                        <Button
+                          variant="text"
+                          size="small"
+                          aria-label="Pin to right"
+                          onClick={() => {
+                            header.column.pin('right');
+                          }}
+                        >
+                          <Icon size="small" name="ArrowRightEndOnRectangle" />
+                        </Button>
+                      )}
+                    </div>
+                  </Field>
+                </div>
+              : null}
 
               <div className="flex flex-col gap-y-2">
                 <p className="text-sm">Visible columns</p>
@@ -294,6 +353,13 @@ function DataTableHeader({header, table, sort, onSort}: DataTableHeaderProps) {
   );
 }
 
+export type DataTablePagination = {
+  /** Page number, starts with 1. */
+  page: number;
+  pageSize: PageSize;
+  pageCount: number;
+};
+
 export type DataTableSort =
   | false
   | {
@@ -304,16 +370,28 @@ export type DataTableSort =
 export type DataTableProps<D, C> = {
   data: D[];
   columns: C;
-  sort?: DataTableSort | undefined;
-  onSort?: ((sort: DataTableSort) => void) | undefined;
+  pagination?: DataTablePagination | undefined;
+  onPagination?:
+    | ((
+        pagination: Pick<DataTablePagination, 'page'> | Pick<DataTablePagination, 'pageSize'>,
+      ) => void)
+    | undefined;
+  sorting?: DataTableSort | undefined;
+  onSorting?: ((sorting: DataTableSort) => void) | undefined;
 };
 
 export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
   data,
   columns,
-  sort,
-  onSort,
+  pagination: controlledPagination,
+  onPagination,
+  sorting: controlledSorting,
+  onSorting,
 }: DataTableProps<D, C>) {
+  let [pagination, setPagination] = useState<PaginationState>({
+    pageIndex: 0,
+    pageSize: DEFAULT_PAGE_SIZE,
+  });
   let [columnVisibility, setColumnVisibility] = useState({});
   let [columnOrder, setColumnOrder] = useState<string[]>(
     columns.map((column) => {
@@ -340,16 +418,19 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
     columns,
     getCoreRowModel: getCoreRowModel(),
     getSortedRowModel: getSortedRowModel(),
+    getPaginationRowModel: onPagination ? undefined : getPaginationRowModel(),
     state: {
+      pagination: onPagination ? undefined : pagination,
       columnVisibility,
       columnOrder,
       columnPinning,
-      sorting: onSort ? undefined : sorting,
+      sorting: onSorting ? undefined : sorting,
     },
+    onPaginationChange: onPagination ? undefined : setPagination,
     onColumnVisibilityChange: setColumnVisibility,
     onColumnOrderChange: setColumnOrder,
     onColumnPinningChange: setColumnPinning,
-    onSortingChange: onSort ? undefined : setSorting,
+    onSortingChange: onSorting ? undefined : setSorting,
     columnResizeMode: 'onChange',
   });
   let handleDragEnd = useCallback(({active, over}: DragEndEvent) => {
@@ -362,12 +443,110 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
       });
     }
   }, []);
+
   let sensors = useSensors(
     useSensor(MouseSensor, {}),
     useSensor(TouchSensor, {}),
     useSensor(KeyboardSensor, {}),
   );
+
+  let page =
+    onPagination && controlledPagination ?
+      controlledPagination.page
+    : table.getState().pagination.pageIndex + 1;
+  let pageSize =
+    onPagination && controlledPagination ?
+      controlledPagination.pageSize
+    : table.getState().pagination.pageSize;
+  let pageCount =
+    onPagination && controlledPagination ? controlledPagination.pageCount : table.getPageCount();
+  let isFirstPage = page === 1;
+  let isLastPage = page >= pageCount;
+
+  let handlePageClick = useCallback(
+    (page: number) => {
+      if (onPagination && controlledPagination) {
+        onPagination({
+          page: Math.max(1, Math.min(page, pageCount)),
+        });
+      } else {
+        table.setPageIndex(Math.max(0, Math.min(page - 1, pageCount)));
+      }
+    },
+    [controlledPagination, onPagination, pageCount, table],
+  );
+
+  let handleFirstPageClick = useCallback(() => {
+    if (onPagination && controlledPagination) {
+      onPagination({
+        page: 1,
+      });
+    } else {
+      table.firstPage();
+    }
+  }, [controlledPagination, onPagination, table]);
+
+  let handleLastPageClick = useCallback(() => {
+    if (onPagination && controlledPagination) {
+      onPagination({
+        page: pageCount,
+      });
+    } else {
+      table.lastPage();
+    }
+  }, [controlledPagination, onPagination, pageCount, table]);
+
+  let handlePreviousPageClick = useCallback(() => {
+    if (onPagination && controlledPagination) {
+      onPagination({
+        page: Math.max(1, Math.min(page - 1, pageCount)),
+      });
+    } else {
+      table.previousPage();
+    }
+  }, [controlledPagination, onPagination, page, pageCount, table]);
+
+  let handleNextPageClick = useCallback(() => {
+    if (onPagination && controlledPagination) {
+      onPagination({
+        page: Math.max(1, Math.min(page + 1, pageCount)),
+      });
+    } else {
+      table.nextPage();
+    }
+  }, [controlledPagination, onPagination, page, pageCount, table]);
+
+  let handlePageChange = useCallback(
+    (event: ChangeEvent<HTMLInputElement>) => {
+      let pageIndex = event.target.value ? Number(event.target.value) - 1 : 0;
+
+      if (onPagination && controlledPagination) {
+        onPagination({
+          page: Math.max(1, Math.min(pageIndex + 1, pageCount)),
+        });
+      } else {
+        table.setPageIndex(pageIndex);
+      }
+    },
+    [controlledPagination, onPagination, pageCount, table],
+  );
+
+  let handlePageSizeChange = useCallback(
+    (pageSize: string) => {
+      if (onPagination && controlledPagination) {
+        onPagination({
+          pageSize: Number(pageSize) as PageSize,
+        });
+      } else {
+        table.setPageSize(Number(pageSize));
+      }
+    },
+    [controlledPagination, onPagination, table],
+  );
+
   let id = useId();
+
+  console.log('DataTable', controlledPagination, page, pageCount, pageSize);
 
   return (
     <DndContext
@@ -391,8 +570,8 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
                     key={header.id}
                     header={header}
                     table={table}
-                    sort={sort}
-                    onSort={onSort}
+                    sorting={controlledSorting}
+                    onSorting={onSorting}
                   />
                 ))}
               </SortableContext>
@@ -403,7 +582,11 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
           {table.getRowModel().rows.map((row) => (
             <TableRow key={row.id}>
               {row.getVisibleCells().map((cell) => (
-                <TableCell key={cell.id} style={{...getCommonPinningStyles(cell.column)}}>
+                <TableCell
+                  key={cell.id}
+                  className={getCommonPinningClasses(cell.column)}
+                  style={{...getCommonPinningStyles(cell.column)}}
+                >
                   {flexRender(cell.column.columnDef.cell, cell.getContext())}
                 </TableCell>
               ))}
@@ -424,6 +607,84 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
           ))}
         </TableFoot>
       </Table>
+      <div className="flex items-center gap-x-4 text-sm justify-center">
+        <span className="flex items-center gap-x-2">
+          <Button
+            variant="outline"
+            aria-label="First page"
+            disabled={isFirstPage}
+            onClick={handleFirstPageClick}
+          >
+            <Icon name="ChevronDoubleLeft" />
+          </Button>
+          <Button
+            variant="outline"
+            aria-label="Previous page"
+            disabled={isFirstPage}
+            onClick={handlePreviousPageClick}
+          >
+            <Icon name="ChevronLeft" />
+          </Button>
+
+          {pageCount <= MAX_PAGE_BUTTONS_COUNT ?
+            Array.from({length: pageCount}).map((_, index) => (
+              <DataTablePageButton
+                // eslint-disable-next-line react/no-array-index-key -- needed, there is no other value
+                key={index}
+                page={index + 1}
+                isSelected={page === index + 1}
+                onClick={handlePageClick}
+              />
+            ))
+          : null}
+
+          <Button
+            variant="outline"
+            aria-label="Next page"
+            disabled={isLastPage}
+            onClick={handleNextPageClick}
+          >
+            <Icon name="ChevronRight" />
+          </Button>
+          <Button
+            variant="outline"
+            aria-label="Last page"
+            disabled={isLastPage}
+            onClick={handleLastPageClick}
+          >
+            <Icon name="ChevronDoubleRight" />
+          </Button>
+        </span>
+        {pageCount > MAX_PAGE_BUTTONS_COUNT ?
+          <span className="flex items-center gap-1">
+            Page {table.getState().pagination.pageIndex + 1} of{' '}
+            {table.getPageCount().toLocaleString()}
+          </span>
+        : null}
+        {pageCount > MAX_PAGE_BUTTONS_COUNT ?
+          <span className="flex items-center gap-1">
+            Go to page:
+            <Input
+              type="text"
+              pattern="[0-9]*"
+              defaultValue={table.getState().pagination.pageIndex + 1}
+              className="w-12"
+              onChange={handlePageChange}
+            />
+          </span>
+        : null}
+        <Listbox
+          value={String(pageSize)}
+          className="w-auto min-w-min"
+          onChange={handlePageSizeChange}
+        >
+          {PAGE_SIZES.map((pageSize) => (
+            <ListboxOption key={pageSize} value={String(pageSize)}>
+              Show {pageSize}
+            </ListboxOption>
+          ))}
+        </Listbox>
+      </div>
     </DndContext>
   );
 }

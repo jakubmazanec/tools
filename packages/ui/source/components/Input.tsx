@@ -81,7 +81,7 @@ export const Input = forwardRef(
       ref: inputRef,
       disabled,
       name: field?.name ?? fieldName ?? name,
-      className: theme.input(null, className),
+      className: theme.input(),
       size: 1, // so the input default width without styling is small
       ...rest,
     };
