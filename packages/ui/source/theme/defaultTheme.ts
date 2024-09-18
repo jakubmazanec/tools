@@ -46,8 +46,8 @@ import {
   textareaTheme,
   textTheme,
 } from '../components.js';
-import {type Theme} from './Theme.js';
 import {createTailwindConfig, createTailwindMerge} from '../development.js';
+import {type Theme} from './Theme.js';
 
 export const defaultTheme: Theme = {
   Button: buttonTheme,

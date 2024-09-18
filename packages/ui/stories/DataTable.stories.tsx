@@ -1,13 +1,7 @@
 import {useArgs} from '@storybook/preview-api';
 import {type Meta, type StoryObj} from '@storybook/react';
 
-import {
-  createColumnHelper,
-  DataTable,
-  DataTableProps,
-  formatDateTime,
-  formatNumber,
-} from '../source/main.js';
+import {createColumnHelper, DataTable, formatDateTime, formatNumber} from '../source/main.js';
 
 const meta = {
   title: 'Components/DataTable',
