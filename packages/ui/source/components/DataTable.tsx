@@ -546,8 +546,6 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
 
   let id = useId();
 
-  console.log('DataTable', controlledPagination, page, pageCount, pageSize);
-
   return (
     <DndContext
       id={id}

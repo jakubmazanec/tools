@@ -582,8 +582,6 @@ export const ControlledExample = {
         // eslint-disable-next-line react/jsx-no-bind -- TODO
         onPagination={(newPagination) => {
           if (pagination) {
-            console.log('newPagination', newPagination);
-
             let resolvedPagination = {...pagination, ...newPagination};
 
             updateArgs({

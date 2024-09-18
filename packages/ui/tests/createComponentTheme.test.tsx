@@ -1,7 +1,7 @@
 import {cleanup, render} from '@testing-library/react';
 import {afterEach, describe, expect, test} from 'vitest';
 
-import {type Theme, ThemeProvider} from '../source/main.js';
+import {defaultTheme, type Theme, ThemeProvider} from '../source/main.js';
 import {type ComponentProps, createComponentTheme} from '../source/theme/internals.js';
 
 describe('createComponentTheme', () => {
@@ -75,7 +75,9 @@ describe('createComponentTheme', () => {
     ])('%o', (options, expected) => {
       test(`returns ${expected}`, () => {
         let {getByTestId} = render(
-          <ThemeProvider theme={{Button: componentTheme} as unknown as Theme}>
+          <ThemeProvider
+            theme={{Button: componentTheme, merge: defaultTheme.merge} as unknown as Theme}
+          >
             <App {...options} />
           </ThemeProvider>,
         );
@@ -221,7 +223,9 @@ describe('createComponentTheme', () => {
     ])('%o', (options, [root, icon]) => {
       test(`returns ${root} and ${icon}`, () => {
         let {getByTestId} = render(
-          <ThemeProvider theme={{Button: componentTheme} as unknown as Theme}>
+          <ThemeProvider
+            theme={{Button: componentTheme, merge: defaultTheme.merge} as unknown as Theme}
+          >
             <App {...options} />
           </ThemeProvider>,
         );
