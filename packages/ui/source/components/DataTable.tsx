@@ -667,8 +667,7 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
         </span>
         {pageCount > MAX_PAGE_BUTTONS_COUNT ?
           <span className="flex items-center gap-1">
-            Page {table.getState().pagination.pageIndex + 1} of{' '}
-            {table.getPageCount().toLocaleString()}
+            Page {page} of {pageCount}
           </span>
         : null}
         {pageCount > MAX_PAGE_BUTTONS_COUNT ?
@@ -677,7 +676,7 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
             <Input
               type="text"
               pattern="[0-9]*"
-              defaultValue={table.getState().pagination.pageIndex + 1}
+              defaultValue={page}
               className="w-12"
               onChange={handlePageChange}
             />
