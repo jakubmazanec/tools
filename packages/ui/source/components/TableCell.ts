@@ -43,5 +43,5 @@ export const TableCell = forwardRef(
 );
 
 export const tableCellTheme: ComponentTheme<typeof useTableCellTheme> = {
-  className: 'p-2 text-sm font-sans tabular-nums whitespace-nowrap text-right',
+  className: 'p-2 text-sm font-sans tabular-nums text-right truncate',
 };

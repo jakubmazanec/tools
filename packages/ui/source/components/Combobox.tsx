@@ -110,9 +110,9 @@ export const Combobox = forwardRef(
     let [query, setQuery] = useState('');
 
     let handleChange = useCallback(
-      (selectedValue: ComboboxItem<V> | null) => {
+      (selectedValue: V | null) => {
         if (selectedValue) {
-          onChange?.(selectedValue.value as V & V[]);
+          onChange?.(selectedValue as V & V[]);
         }
 
         if (selectedValue === null) {
@@ -186,7 +186,7 @@ export const Combobox = forwardRef(
       as,
       ref,
       name: field?.name ?? fieldName ?? name,
-      value,
+      value: value ?? null,
       defaultValue,
       multiple,
       disabled,

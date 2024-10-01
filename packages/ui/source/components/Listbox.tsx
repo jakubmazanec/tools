@@ -178,7 +178,7 @@ export const Listbox = forwardRef(
       as,
       ref,
       name: field?.name ?? fieldName ?? name,
-      value,
+      value: value ?? null,
       defaultValue,
       multiple,
       disabled,

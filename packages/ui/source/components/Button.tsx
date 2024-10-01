@@ -102,15 +102,15 @@ export const buttonTheme: ComponentTheme<typeof useButtonTheme> = {
     'rounded-2 flex items-center justify-center text-nowrap font-sans font-medium text-sm transition-colors',
   variants: {
     variant: {
-      solid: 'bg-gray-900 text-white hover:bg-gray-800',
-      outline: 'border-2 border-gray-100 hover:border-gray-200',
-      text: 'border-2 border-transparent hover:border-gray-200',
-      invisible: '',
+      solid: 'text-white bg-gray-900 hover:bg-gray-800',
+      outline: 'text-gray-950 border-2 border-gray-100 hover:border-gray-200',
+      text: 'text-gray-950 border-2 border-transparent hover:border-gray-200',
+      invisible: 'cursor-default text-gray-600',
     },
     size: {
-      small: 'text-sm leading-6 px-2.5 h-8 gap-x-2 min-w-8',
-      medium: 'leading-6 px-2.5 h-9 gap-x-2 min-w-9',
-      large: 'text-lg leading-6 px-3 h-10 gap-x-2 min-w-10',
+      small: 'text-sm leading-6 px-2.5 h-8 min-w-8 gap-x-2',
+      medium: 'leading-6 px-2.5 h-9 min-w-9 gap-x-2',
+      large: 'text-lg leading-6 px-3 h-10 min-w-10 gap-x-2',
     },
     disabled: {
       true: '',
@@ -134,19 +134,39 @@ export const buttonTheme: ComponentTheme<typeof useButtonTheme> = {
       className: 'px-3.5',
     },
     {
+      variant: 'invisible',
+      size: 'small',
+      className: 'text-xs px-2 h-5 min-w-5',
+    },
+    {
+      variant: 'invisible',
+      size: 'medium',
+      className: 'px-2 h-6 min-w-6',
+    },
+    {
+      variant: 'invisible',
+      size: 'large',
+      className: 'px-2 h-7 min-w-7',
+    },
+    {
       variant: 'solid',
       disabled: true,
-      className: 'bg-gray-200 text-white hover:bg-gray-200',
+      className: 'text-white bg-gray-200 hover:bg-gray-200',
     },
     {
       variant: 'outline',
       disabled: true,
-      className: 'hover:border-gray-100 text-gray-200',
+      className: 'text-gray-200 hover:border-gray-100',
     },
     {
       variant: 'text',
       disabled: true,
-      className: 'hover:border-transparent text-gray-200',
+      className: 'text-gray-200 hover:border-transparent',
+    },
+    {
+      variant: 'invisible',
+      disabled: true,
+      className: 'text-gray-200 ',
     },
   ],
 };

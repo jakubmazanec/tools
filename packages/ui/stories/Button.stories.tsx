@@ -33,6 +33,29 @@ export const Text = {
   },
 } satisfies StoryObj<typeof meta>;
 
+export const Invisible = {
+  args: {
+    variant: 'invisible',
+    children: 'Invisible',
+  },
+} satisfies StoryObj<typeof meta>;
+
+export const SmallInvisible = {
+  args: {
+    variant: 'invisible',
+    size: 'small',
+    children: 'Invisible',
+  },
+} satisfies StoryObj<typeof meta>;
+
+export const LargeInvisible = {
+  args: {
+    variant: 'invisible',
+    size: 'large',
+    children: 'Invisible',
+  },
+} satisfies StoryObj<typeof meta>;
+
 export const Small = {
   args: {
     variant: 'solid',
@@ -87,6 +110,21 @@ export const OutlineWithIcon = {
   },
 } satisfies StoryObj<typeof meta>;
 
+export const InvisibleWithIcon = {
+  args: {
+    variant: 'invisible',
+    children: [<Icon key="0" name="CloudArrowUp" size="medium" />, 'Icon!'],
+  },
+} satisfies StoryObj<typeof meta>;
+
+export const SmallInvisibleWithIcon = {
+  args: {
+    variant: 'invisible',
+    size: 'small',
+    children: [<Icon key="0" name="CloudArrowUp" size="medium" />, 'Icon!'],
+  },
+} satisfies StoryObj<typeof meta>;
+
 export const WithOnlyIcon = {
   args: {
     children: [<Icon key="0" name="CloudArrowUp" size="large" />],
@@ -97,6 +135,29 @@ export const OutlineWithOnlyIcon = {
   args: {
     variant: 'outline',
     children: [<Icon key="0" name="CloudArrowUp" size="large" />],
+  },
+} satisfies StoryObj<typeof meta>;
+
+export const InvisibleWithOnlyIcon = {
+  args: {
+    variant: 'invisible',
+    children: [<Icon key="0" name="CloudArrowUp" size="small" />],
+  },
+} satisfies StoryObj<typeof meta>;
+
+export const SmallInvisibleWithOnlyIcon = {
+  args: {
+    variant: 'invisible',
+    size: 'small',
+    children: [<Icon key="0" name="CloudArrowUp" size="small" />],
+  },
+} satisfies StoryObj<typeof meta>;
+
+export const LargeInvisibleWithOnlyIcon = {
+  args: {
+    variant: 'invisible',
+    size: 'large',
+    children: [<Icon key="0" name="CloudArrowUp" size="medium" />],
   },
 } satisfies StoryObj<typeof meta>;
 
