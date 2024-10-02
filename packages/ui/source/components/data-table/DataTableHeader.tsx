@@ -3,7 +3,15 @@
 import {useSortable} from '@dnd-kit/sortable';
 import {CSS} from '@dnd-kit/utilities';
 import {type Column, flexRender, type Header, type Table} from '@tanstack/react-table';
-import {type ChangeEvent, type CSSProperties, useCallback, useMemo} from 'react';
+import {
+  type ChangeEvent,
+  type CSSProperties,
+  useCallback,
+  useDeferredValue,
+  useEffect,
+  useMemo,
+  useState,
+} from 'react';
 
 import {Button} from '../Button.js';
 import {Checkbox} from '../Checkbox.js';
@@ -186,7 +194,7 @@ export function DataTableHeader({
                 <Icon size="small" name="Cog6Tooth" />
               </Button>
             </PopoverButton>
-            <PopoverPanel anchor="top end" className="flex flex-col gap-y-2">
+            <PopoverPanel anchor="right start" className="flex flex-col gap-y-2">
               <Form>
                 {header.column.getCanPin() ?
                   <div className="flex flex-col gap-y-2">
@@ -321,15 +329,26 @@ function addFilter(
   let newFilters: DataTableProps<any, any>['filters'] = [];
 
   if (filters) {
+    let wasUpdated = false;
+
     for (let filter of filters) {
       if (filter.column === column) {
         newFilters.push({
           column,
           filter: newFilter as string | [number, number],
         });
+
+        wasUpdated = true;
       } else {
         newFilters.push(filter);
       }
+    }
+
+    if (!wasUpdated) {
+      newFilters.push({
+        column,
+        filter: newFilter as string | [number, number],
+      });
     }
   } else {
     newFilters.push({
@@ -384,11 +403,47 @@ function DataTableHeaderFilter({
 
   let filter =
     onFiltering ?
-      controlledFilters ? controlledFilters.find((filter) => filter.column === column.id)!.filter
+      controlledFilters ? controlledFilters.find((filter) => filter.column === column.id)?.filter
       : undefined
     : column.getFilterValue();
 
+  let currentMin =
+    filterVariant === 'range' ?
+      (filter as [number?, number?] | undefined)?.[0] ?? undefined
+    : undefined;
+  let currentMax =
+    filterVariant === 'range' ?
+      (filter as [number?, number?] | undefined)?.[1] ?? undefined
+    : undefined;
+
+  let [min, setMin] = useState(currentMin);
+  let [max, setMax] = useState(currentMax);
+
+  const deferredMin = useDeferredValue(min);
+  const deferredMax = useDeferredValue(max);
+
+  useEffect(() => {
+    if (currentMin === deferredMin && currentMax === deferredMax) {
+      return;
+    }
+
+    if (!deferredMin && !deferredMax) {
+      if (onFiltering) {
+        onFiltering(removeFilter(controlledFilters, column.id));
+      } else {
+        column.setFilterValue(undefined);
+      }
+    } else if (onFiltering) {
+      onFiltering(addFilter(controlledFilters, column.id, [deferredMin, deferredMax]));
+    } else {
+      column.setFilterValue([deferredMin, deferredMax]);
+    }
+  }, [deferredMin, deferredMax, column, onFiltering, controlledFilters, currentMin, currentMax]);
+
   let handleResetClick = useCallback(() => {
+    setMin(undefined);
+    setMax(undefined);
+
     if (onFiltering) {
       onFiltering(removeFilter(controlledFilters, column.id));
     } else {
@@ -396,43 +451,39 @@ function DataTableHeaderFilter({
     }
   }, [column, controlledFilters, onFiltering]);
 
-  let handleMinRangeChange = useCallback(
-    (event: ChangeEvent<HTMLInputElement>) => {
-      if (onFiltering) {
-        onFiltering(
-          addFilter(controlledFilters, column.id, [
-            event.target.value,
-            (filter as [number, number] | undefined)?.[1],
-          ]),
-        );
-      } else {
-        column.setFilterValue((old: [number, number] | undefined) => [
-          event.target.value,
-          old?.[1],
-        ]);
-      }
-    },
-    [column, controlledFilters, filter, onFiltering],
-  );
+  let handleMinRangeChange = useCallback((event: ChangeEvent<HTMLInputElement>) => {
+    setMin(event.target.value ? Number(event.target.value) : undefined);
+    // if (onFiltering) {
+    //   onFiltering(
+    //     addFilter(controlledFilters, column.id, [
+    //       event.target.value,
+    //       (filter as [number, number] | undefined)?.[1],
+    //     ]),
+    //   );
+    // } else {
+    //   column.setFilterValue((old: [number, number] | undefined) => [
+    //     event.target.value,
+    //     old?.[1],
+    //   ]);
+    // }
+  }, []);
 
-  let handleMaxRangeChange = useCallback(
-    (event: ChangeEvent<HTMLInputElement>) => {
-      if (onFiltering) {
-        onFiltering(
-          addFilter(controlledFilters, column.id, [
-            (filter as [number, number] | undefined)?.[0],
-            event.target.value,
-          ]),
-        );
-      } else {
-        column.setFilterValue((old: [number, number] | undefined) => [
-          old?.[0],
-          event.target.value,
-        ]);
-      }
-    },
-    [column, controlledFilters, filter, onFiltering],
-  );
+  let handleMaxRangeChange = useCallback((event: ChangeEvent<HTMLInputElement>) => {
+    setMax(event.target.value ? Number(event.target.value) : undefined);
+    // if (onFiltering) {
+    //   onFiltering(
+    //     addFilter(controlledFilters, column.id, [
+    //       (filter as [number, number] | undefined)?.[0],
+    //       event.target.value,
+    //     ]),
+    //   );
+    // } else {
+    //   column.setFilterValue((old: [number, number] | undefined) => [
+    //     old?.[0],
+    //     event.target.value,
+    //   ]);
+    // }
+  }, []);
 
   let handleSelectChange = useCallback(
     (value: string) => {
@@ -472,7 +523,8 @@ function DataTableHeaderFilter({
             type="number"
             min={Number(column.getFacetedMinMaxValues()?.[0] ?? '')}
             max={Number(column.getFacetedMinMaxValues()?.[1] ?? '')}
-            value={(filter as [number?, number?] | undefined)?.[0] ?? ''}
+            // value={(filter as [number?, number?] | undefined)?.[0] ?? ''}
+            value={min ?? ''}
             placeholder={`Min ${
               column.getFacetedMinMaxValues()?.[0] === undefined ?
                 ''
@@ -484,7 +536,8 @@ function DataTableHeaderFilter({
             type="number"
             min={Number(column.getFacetedMinMaxValues()?.[0] ?? '')}
             max={Number(column.getFacetedMinMaxValues()?.[1] ?? '')}
-            value={(filter as [number?, number?] | undefined)?.[1] ?? ''}
+            // value={(filter as [number?, number?] | undefined)?.[1] ?? ''}
+            value={max ?? ''}
             placeholder={`Max ${
               column.getFacetedMinMaxValues()?.[1] ?
                 `(${column.getFacetedMinMaxValues()?.[1]})`
@@ -505,7 +558,10 @@ function DataTableHeaderFilter({
       <div className="flex gap-x-2">
         <Listbox
           value={filter as string}
-          items={(sortedUniqueValues as string[]).map((value: string) => ({value, label: value}))}
+          items={(sortedUniqueValues as string[]).map((value: string) => ({
+            value,
+            label: `${value as unknown}`,
+          }))}
           onChange={handleSelectChange}
         />
         <Button variant="outline" aria-label="Cancel" onClick={handleResetClick}>
@@ -520,7 +576,10 @@ function DataTableHeaderFilter({
       <Combobox
         customValue
         value={(filter ?? '') as string}
-        items={(sortedUniqueValues as string[]).map((value: string) => ({value, label: value}))}
+        items={(sortedUniqueValues as string[]).map((value: string) => ({
+          value,
+          label: `${value as unknown}`,
+        }))}
         onChange={handleTextChange}
       />
       <Button variant="outline" aria-label="Cancel" onClick={handleResetClick}>

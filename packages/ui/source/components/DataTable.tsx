@@ -90,7 +90,7 @@ export const dataTableFiltersSchema = z.union([
   z
     .object({
       column: z.string(),
-      filter: z.union([z.string(), z.tuple([z.number(), z.number()])]),
+      filter: z.union([z.string(), z.number(), z.boolean(), z.tuple([z.number(), z.number()])]),
     })
     .array(),
 ]);
@@ -147,8 +147,6 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
   let [columnPinning, setColumnPinning] = useState({});
   let [sorting, setSorting] = useState<SortingState>([]);
   let [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
-
-  console.log('columnFilters', columnFilters);
 
   let table = useReactTable<D>({
     data,

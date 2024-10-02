@@ -156,7 +156,7 @@ export const Combobox = forwardRef(
     let filteredItems =
       query ?
         items?.filter((item) =>
-          item.label
+          `${item.label as number | string}`
             .toLowerCase()
             .replace(/\s+/g, '')
             .includes(query.toLowerCase().replace(/\s+/g, '')),

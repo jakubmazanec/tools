@@ -191,7 +191,6 @@ export const ControlledExample = {
         // TODO: fix this
         // eslint-disable-next-line react/jsx-no-bind -- TODO
         onFiltering={(newFilters) => {
-          console.log('onFiltering...', 'newFilters', newFilters);
           updateArgs({filters: newFilters});
         }}
       />
