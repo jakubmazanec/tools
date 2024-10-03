@@ -90,7 +90,12 @@ export const dataTableFiltersSchema = z.union([
   z
     .object({
       column: z.string(),
-      filter: z.union([z.string(), z.number(), z.boolean(), z.tuple([z.number(), z.number()])]),
+      filter: z.union([
+        z.string(),
+        z.number(),
+        z.boolean(),
+        z.tuple([z.number().nullable().optional(), z.number().nullable().optional()]),
+      ]),
     })
     .array(),
 ]);
@@ -155,6 +160,9 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
     getSortedRowModel: getSortedRowModel(),
     getPaginationRowModel: onPagination ? undefined : getPaginationRowModel(),
     getFilteredRowModel: getFilteredRowModel(),
+    // getFacetedRowModel: onPagination ? undefined : getFacetedRowModel(),
+    // getFacetedUniqueValues: onPagination ? undefined : getFacetedUniqueValues(),
+    // getFacetedMinMaxValues: onPagination ? undefined : getFacetedMinMaxValues(),
     getFacetedRowModel: getFacetedRowModel(),
     getFacetedUniqueValues: getFacetedUniqueValues(),
     getFacetedMinMaxValues: getFacetedMinMaxValues(),
