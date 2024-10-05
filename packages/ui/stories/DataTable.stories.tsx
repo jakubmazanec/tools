@@ -1,5 +1,6 @@
 import {useArgs} from '@storybook/preview-api';
 import {type Meta, type StoryObj} from '@storybook/react';
+import _ from 'lodash';
 
 import {createColumnHelper, DataTable, formatDateTime, formatNumber} from '../source/main.js';
 import {data, type Person} from './data.js';
@@ -158,6 +159,43 @@ export const ControlledExample = {
     onSorting: () => {},
     filters: false,
     onFiltering: () => {},
+    faceting: {
+      firstName: {
+        min: _.min(data.map((value) => value.firstName)),
+        max: _.max(data.map((value) => value.firstName)),
+        values: _.uniq(data.map((value) => value.firstName)),
+      },
+      lastName: {
+        min: _.min(data.map((value) => value.lastName)),
+        max: _.max(data.map((value) => value.lastName)),
+        values: _.uniq(data.map((value) => value.lastName)),
+      },
+      age: {
+        min: _.min(data.map((value) => value.age)),
+        max: _.max(data.map((value) => value.age)),
+        values: _.uniq(data.map((value) => value.age)),
+      },
+      visits: {
+        min: _.min(data.map((value) => value.visits)),
+        max: _.max(data.map((value) => value.visits)),
+        values: _.uniq(data.map((value) => value.visits)),
+      },
+      visitedAt: {
+        min: _.min(data.map((value) => value.visitedAt)),
+        max: _.max(data.map((value) => value.visitedAt)),
+        values: _.uniq(data.map((value) => value.visitedAt)),
+      },
+      status: {
+        min: _.min(data.map((value) => value.status)),
+        max: _.max(data.map((value) => value.status)),
+        values: _.uniq(data.map((value) => value.status)),
+      },
+      progress: {
+        min: _.min(data.map((value) => value.progress)),
+        max: _.max(data.map((value) => value.progress)),
+        values: _.uniq(data.map((value) => value.progress)),
+      },
+    },
   },
   // eslint-disable-next-line func-name-matching -- needed so `Render` is treated as a React component and `useArgs` doesn't trigger hooks-realated linting rules
   render: function Render(args) {

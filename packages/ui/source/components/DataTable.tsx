@@ -102,6 +102,17 @@ export const dataTableFiltersSchema = z.union([
 
 export type DataTableFilters = z.infer<typeof dataTableFiltersSchema>;
 
+export const dataTableFacetingSchema = z.record(
+  z.string(),
+  z.object({
+    values: z.unknown().array().optional(),
+    min: z.unknown().optional(),
+    max: z.unknown().optional(),
+  }),
+);
+
+export type DataTableFaceting = z.infer<typeof dataTableFacetingSchema>;
+
 export type DataTableProps<D, C> = {
   data: D[];
   columns: C;
@@ -115,6 +126,7 @@ export type DataTableProps<D, C> = {
   onSorting?: ((sorting: DataTableSorting) => void) | undefined;
   filters?: DataTableFilters | undefined;
   onFiltering?: ((filters: DataTableFilters) => void) | undefined;
+  faceting?: DataTableFaceting | undefined;
 };
 
 export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
@@ -126,6 +138,7 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
   onSorting,
   filters: controlledFilters,
   onFiltering,
+  faceting,
 }: DataTableProps<D, C>) {
   let [pagination, setPagination] = useState<PaginationState>({
     pageIndex: 0,
@@ -304,6 +317,7 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
   let id = useId();
 
   console.log('DataTable...', 'controlledFilters', controlledFilters);
+  console.log('faceting', faceting);
 
   return (
     <DndContext
@@ -332,6 +346,7 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
                     onSorting={onSorting}
                     filters={controlledFilters}
                     onFiltering={onFiltering}
+                    faceting={faceting}
                   />
                 ))}
               </SortableContext>

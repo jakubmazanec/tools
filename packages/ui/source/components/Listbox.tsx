@@ -361,7 +361,7 @@ export const listboxTheme: ComponentTheme<typeof useListboxTheme> = {
     label: 'flex gap-x-2',
     icon: 'text-gray-500 size-5 top-1.5 right-1.5 cursor-pointer',
     options:
-      'flex flex-col gap-y-1 shadow p-1 z-10 rounded-2 border-2 border-gray-100 hover:border-gray-200 bg-white text-left w-[var(--button-width)] [--anchor-gap:theme(spacing.1)] [--anchor-padding:theme(spacing.2)] [scrollbar-width:thin] empty:invisible transition-colors',
+      'flex flex-col gap-y-1 shadow p-1 z-30 rounded-2 border-2 border-gray-100 hover:border-gray-200 bg-white text-left w-[var(--button-width)] [--anchor-gap:theme(spacing.1)] [--anchor-padding:theme(spacing.2)] [scrollbar-width:thin] empty:invisible transition-colors',
     filter: '[&>[data-component=input]]:rounded',
   },
   variants: {

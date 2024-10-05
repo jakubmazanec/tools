@@ -263,7 +263,7 @@ export const comboboxTheme: ComponentTheme<typeof useComboboxTheme> = {
       'flex w-full items-center rounded-2 border-2 border-gray-100 hover:border-gray-200 bg-white px-2.5 h-9 pr-9 gap-x-2 transition-colors shadow-inner font-sans text-sm',
     icon: 'text-gray-500 size-5 top-2 right-2 cursor-pointer',
     options:
-      'flex flex-col gap-y-1 shadow p-1 z-10 rounded-2 border-2 border-gray-100 hover:border-gray-200 bg-white text-left w-[var(--input-width)] [--anchor-gap:theme(spacing.1)] [--anchor-padding:theme(spacing.2)] [scrollbar-width:thin] empty:invisible transition-colors',
+      'flex flex-col gap-y-1 shadow p-1 z-30 rounded-2 border-2 border-gray-100 hover:border-gray-200 bg-white text-left w-[var(--input-width)] [--anchor-gap:theme(spacing.1)] [--anchor-padding:theme(spacing.2)] [scrollbar-width:thin] empty:invisible transition-colors',
   },
   variants: {
     disabled: {

@@ -44,6 +44,8 @@ type DataTableHeaderProps = {
   filters: DataTableProps<any, any>['filters'];
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   onFiltering: DataTableProps<any, any>['onFiltering'];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
+  faceting: DataTableProps<any, any>['faceting'];
 };
 
 export function DataTableHeader({
@@ -53,6 +55,7 @@ export function DataTableHeader({
   onSorting,
   filters: controlledFilters,
   onFiltering,
+  faceting,
 }: DataTableHeaderProps) {
   let {attributes, isDragging, listeners, setNodeRef, transform} = useSortable({
     id: header.column.id,
@@ -249,6 +252,7 @@ export function DataTableHeader({
                         column={header.column}
                         filters={controlledFilters}
                         onFiltering={onFiltering}
+                        faceting={faceting}
                       />
                     </Field>
                   </div>
@@ -392,12 +396,15 @@ type DataTableHeaderFilterProps = {
   filters: DataTableProps<any, any>['filters'];
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   onFiltering: DataTableProps<any, any>['onFiltering'];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
+  faceting: DataTableProps<any, any>['faceting'];
 };
 
 function DataTableHeaderFilter({
   column,
   filters: controlledFilters,
   onFiltering,
+  faceting,
 }: DataTableHeaderFilterProps) {
   let {filterVariant} = column.columnDef.meta ?? {};
 
@@ -419,8 +426,8 @@ function DataTableHeaderFilter({
   let [min, setMin] = useState(currentMin);
   let [max, setMax] = useState(currentMax);
 
-  const deferredMin = useDeferredValue(min);
-  const deferredMax = useDeferredValue(max);
+  let deferredMin = useDeferredValue(min);
+  let deferredMax = useDeferredValue(max);
 
   useEffect(() => {
     if (currentMin === deferredMin && currentMax === deferredMax) {
@@ -507,13 +514,26 @@ function DataTableHeaderFilter({
     [column, controlledFilters, onFiltering],
   );
 
-  let sortedUniqueValues = useMemo(() => {
+  let facetingValues = useMemo(() => {
+    if (onFiltering) {
+      return faceting?.[column.id]?.values ?? [];
+    }
+
     if (filterVariant === 'range') {
       return [];
     }
 
     return [...column.getFacetedUniqueValues().keys()].sort().slice(0, 5000) as unknown[];
-  }, [column, filterVariant]);
+  }, [column, faceting, filterVariant, onFiltering]);
+
+  let facetingMin =
+    onFiltering ?
+      faceting?.[column.id]?.min ?? null
+    : Number(column.getFacetedMinMaxValues()?.[0] ?? null);
+  let facetingMax =
+    onFiltering ?
+      faceting?.[column.id]?.max ?? null
+    : Number(column.getFacetedMinMaxValues()?.[1] ?? null);
 
   if (filterVariant === 'range') {
     return (
@@ -521,28 +541,20 @@ function DataTableHeaderFilter({
         <div className="flex space-x-2">
           <Input
             type="number"
-            min={Number(column.getFacetedMinMaxValues()?.[0] ?? '')}
-            max={Number(column.getFacetedMinMaxValues()?.[1] ?? '')}
+            min={String(facetingMin ?? '')}
+            max={String(facetingMax ?? '')}
             // value={(filter as [number?, number?] | undefined)?.[0] ?? ''}
             value={min ?? ''}
-            placeholder={`Min ${
-              column.getFacetedMinMaxValues()?.[0] === undefined ?
-                ''
-              : `(${column.getFacetedMinMaxValues()?.[0]})`
-            }`}
+            placeholder={`Min ${facetingMin === null ? '' : `(${facetingMin})`}`}
             onChange={handleMinRangeChange}
           />
           <Input
             type="number"
-            min={Number(column.getFacetedMinMaxValues()?.[0] ?? '')}
-            max={Number(column.getFacetedMinMaxValues()?.[1] ?? '')}
+            min={String(facetingMin ?? '')}
+            max={String(facetingMax ?? '')}
             // value={(filter as [number?, number?] | undefined)?.[1] ?? ''}
             value={max ?? ''}
-            placeholder={`Max ${
-              column.getFacetedMinMaxValues()?.[1] ?
-                `(${column.getFacetedMinMaxValues()?.[1]})`
-              : ''
-            }`}
+            placeholder={`Max ${facetingMax === null ? '' : `(${facetingMax})`}`}
             onChange={handleMaxRangeChange}
           />
           <Button variant="outline" aria-label="Cancel" onClick={handleResetClick}>
@@ -558,7 +570,7 @@ function DataTableHeaderFilter({
       <div className="flex gap-x-2">
         <Listbox
           value={filter as string}
-          items={(sortedUniqueValues as string[]).map((value: string) => ({
+          items={(facetingValues as string[]).map((value: string) => ({
             value,
             label: `${value as unknown}`,
           }))}
@@ -576,7 +588,7 @@ function DataTableHeaderFilter({
       <Combobox
         customValue
         value={(filter ?? '') as string}
-        items={(sortedUniqueValues as string[]).map((value: string) => ({
+        items={(facetingValues as string[]).map((value: string) => ({
           value,
           label: `${value as unknown}`,
         }))}
