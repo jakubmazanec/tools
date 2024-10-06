@@ -535,6 +535,8 @@ function DataTableHeaderFilter({
       faceting?.[column.id]?.max ?? null
     : Number(column.getFacetedMinMaxValues()?.[1] ?? null);
 
+  console.log('DataTableHeaderFilter...', column.id, facetingMin, facetingMax, facetingValues);
+
   if (filterVariant === 'range') {
     return (
       <div>

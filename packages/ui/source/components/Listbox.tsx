@@ -188,6 +188,8 @@ export const Listbox = forwardRef(
       ...rest,
     };
 
+    console.log('Listbox...', 'items', items);
+
     return (
       <HeadlessListbox {...props}>
         <HeadlessListboxButton
