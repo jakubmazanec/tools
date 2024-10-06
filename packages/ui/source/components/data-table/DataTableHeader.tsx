@@ -505,10 +505,16 @@ function DataTableHeaderFilter({
 
   let handleTextChange = useCallback(
     (value: string | undefined) => {
-      if (onFiltering) {
-        onFiltering(addFilter(controlledFilters, column.id, value));
+      if (value) {
+        if (onFiltering) {
+          onFiltering(addFilter(controlledFilters, column.id, value));
+        } else {
+          column.setFilterValue(value);
+        }
+      } else if (onFiltering) {
+        onFiltering(removeFilter(controlledFilters, column.id));
       } else {
-        column.setFilterValue(value);
+        column.setFilterValue(undefined);
       }
     },
     [column, controlledFilters, onFiltering],
