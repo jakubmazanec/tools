@@ -21,8 +21,19 @@ let columnHelper = createColumnHelper<Person>();
 export const Example = {
   args: {
     columns: [
-      columnHelper.accessor('firstName', {header: 'First name', size: 150}),
-      columnHelper.accessor('lastName', {header: 'Last name'}),
+      columnHelper.accessor('firstName', {
+        header: 'First name',
+        size: 150,
+        meta: {
+          filterVariant: 'text',
+        },
+      }),
+      columnHelper.accessor('lastName', {
+        header: 'Last name',
+        meta: {
+          filterVariant: 'text',
+        },
+      }),
       columnHelper.accessor('age', {
         header: 'Age',
         size: 100,
@@ -88,8 +99,19 @@ export const Example = {
 export const ControlledExample = {
   args: {
     columns: [
-      columnHelper.accessor('firstName', {header: 'First name', size: 150}),
-      columnHelper.accessor('lastName', {header: 'Last name'}),
+      columnHelper.accessor('firstName', {
+        header: 'First name',
+        size: 150,
+        meta: {
+          filterVariant: 'text',
+        },
+      }),
+      columnHelper.accessor('lastName', {
+        header: 'Last name',
+        meta: {
+          filterVariant: 'text',
+        },
+      }),
       columnHelper.accessor('age', {
         header: 'Age',
         size: 100,
