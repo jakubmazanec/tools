@@ -1,3 +1,5 @@
+// TODO: fix somehow
+/* eslint-disable complexity -- TODO */
 import {
   closestCenter,
   DndContext,
@@ -32,11 +34,13 @@ import {z} from 'zod';
 import {Button} from './Button.js';
 import {DataTableHeader} from './data-table/DataTableHeader.js';
 import {DataTablePageButton} from './data-table/DataTablePageButton.js';
+import {DataTableSearch as DataTableSearchComponent} from './data-table/DataTableSearch.js';
 import {
   DEFAULT_PAGE_SIZE,
   MAX_PAGE_BUTTONS_COUNT,
   PAGE_SIZES,
 } from './data-table/internals/constants.js';
+import {fuzzyFilter} from './data-table/internals/fuzzyFilter.js';
 import {getCommonPinningClasses} from './data-table/internals/getCommonPinningClasses.js';
 import {getCommonPinningStyles} from './data-table/internals/getCommonPinningStyles.js';
 import {Icon} from './Icon.js';
@@ -113,6 +117,10 @@ export const dataTableFacetingSchema = z.record(
 
 export type DataTableFaceting = z.infer<typeof dataTableFacetingSchema>;
 
+export const dataTableSearchSchema = z.string().nullable();
+
+export type DataTableSearch = z.infer<typeof dataTableSearchSchema>;
+
 export type DataTableProps<D, C> = {
   data: D[];
   columns: C;
@@ -127,6 +135,8 @@ export type DataTableProps<D, C> = {
   filters?: DataTableFilters | undefined;
   onFiltering?: ((filters: DataTableFilters) => void) | undefined;
   faceting?: DataTableFaceting | undefined;
+  search?: DataTableSearch | undefined;
+  onSearch?: ((search: DataTableSearch) => void) | undefined;
 };
 
 export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
@@ -139,6 +149,8 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
   filters: controlledFilters,
   onFiltering,
   faceting,
+  search: controlledSearch,
+  onSearch,
 }: DataTableProps<D, C>) {
   let [pagination, setPagination] = useState<PaginationState>({
     pageIndex: 0,
@@ -165,6 +177,7 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
   let [columnPinning, setColumnPinning] = useState({});
   let [sorting, setSorting] = useState<SortingState>([]);
   let [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
+  let [search, setSearch] = useState('');
 
   let table = useReactTable<D>({
     data,
@@ -173,12 +186,9 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
     getSortedRowModel: getSortedRowModel(),
     getPaginationRowModel: onPagination ? undefined : getPaginationRowModel(),
     getFilteredRowModel: getFilteredRowModel(),
-    // getFacetedRowModel: onPagination ? undefined : getFacetedRowModel(),
-    // getFacetedUniqueValues: onPagination ? undefined : getFacetedUniqueValues(),
-    // getFacetedMinMaxValues: onPagination ? undefined : getFacetedMinMaxValues(),
-    getFacetedRowModel: getFacetedRowModel(),
-    getFacetedUniqueValues: getFacetedUniqueValues(),
-    getFacetedMinMaxValues: getFacetedMinMaxValues(),
+    getFacetedRowModel: onFiltering ? undefined : getFacetedRowModel(),
+    getFacetedUniqueValues: onFiltering ? undefined : getFacetedUniqueValues(),
+    getFacetedMinMaxValues: onFiltering ? undefined : getFacetedMinMaxValues(),
     state: {
       pagination: onPagination ? undefined : pagination,
       columnVisibility,
@@ -186,6 +196,7 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
       columnPinning,
       sorting: onSorting ? undefined : sorting,
       columnFilters: onFiltering ? undefined : columnFilters,
+      globalFilter: onSearch ? undefined : search,
     },
     onPaginationChange: onPagination ? undefined : setPagination,
     onColumnVisibilityChange: setColumnVisibility,
@@ -193,7 +204,9 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
     onColumnPinningChange: setColumnPinning,
     onSortingChange: onSorting ? undefined : setSorting,
     onColumnFiltersChange: onFiltering ? undefined : setColumnFilters,
+    onGlobalFilterChange: onSearch ? undefined : setSearch,
     columnResizeMode: 'onChange',
+    globalFilterFn: fuzzyFilter,
   });
   let handleDragEnd = useCallback(({active, over}: DragEndEvent) => {
     if (over && active.id !== over.id) {
@@ -234,13 +247,13 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
   let isLastPage = page >= pageCount;
 
   let handlePageClick = useCallback(
-    (page: number) => {
+    (newPage: number) => {
       if (onPagination && controlledPagination) {
         onPagination({
-          page: Math.max(1, Math.min(page, pageCount)),
+          page: Math.max(1, Math.min(newPage, pageCount)),
         });
       } else {
-        table.setPageIndex(Math.max(0, Math.min(page - 1, pageCount)));
+        table.setPageIndex(Math.max(0, Math.min(newPage - 1, pageCount)));
       }
     },
     [controlledPagination, onPagination, pageCount, table],
@@ -316,7 +329,7 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
 
   let id = useId();
 
-  console.log('DataTable...', 'controlledFilters', controlledFilters);
+  console.log('DataTable...', 'controlledSearch', controlledSearch);
   console.log('faceting', faceting);
 
   return (
@@ -327,6 +340,7 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
       sensors={sensors}
       onDragEnd={handleDragEnd}
     >
+      <DataTableSearchComponent table={table} search={controlledSearch} onSearch={onSearch} />
       <Table
         style={{
           width: table.getCenterTotalSize(),
@@ -343,10 +357,10 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
                     header={header}
                     table={table}
                     sorting={controlledSorting}
-                    onSorting={onSorting}
                     filters={controlledFilters}
-                    onFiltering={onFiltering}
                     faceting={faceting}
+                    onSorting={onSorting}
+                    onFiltering={onFiltering}
                   />
                 ))}
               </SortableContext>

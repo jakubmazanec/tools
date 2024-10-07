@@ -10,7 +10,6 @@ import {Checkbox} from '../Checkbox.js';
 import {CheckboxField} from '../CheckboxField.js';
 import {type DataTableProps} from '../DataTable.js';
 import {Field} from '../Field.js';
-import {Form} from '../Form.js';
 import {Icon} from '../Icon.js';
 import {Label} from '../Label.js';
 import {Popover} from '../Popover.js';
@@ -158,6 +157,18 @@ export function DataTableHeader({
     }
   }
 
+  let handlePinLeftClick = useCallback(() => {
+    header.column.pin('left');
+  }, [header.column]);
+
+  let handlePinRightClick = useCallback(() => {
+    header.column.pin('right');
+  }, [header.column]);
+
+  let handleUnpinClick = useCallback(() => {
+    header.column.pin(false);
+  }, [header.column]);
+
   return (
     <TableHeader
       ref={setNodeRef}
@@ -188,7 +199,7 @@ export function DataTableHeader({
               </Button>
             </PopoverButton>
             <PopoverPanel anchor="right start" className="flex flex-col gap-y-2">
-              <Form>
+              <div className="flex flex-col gap-y-6">
                 {header.column.getCanPin() ?
                   <div className="flex flex-col gap-y-2">
                     <p className="text-sm">Pin column</p>
@@ -199,21 +210,13 @@ export function DataTableHeader({
                           <Button
                             variant="outline"
                             aria-label="Pin to left"
-                            onClick={() => {
-                              header.column.pin('left');
-                            }}
+                            onClick={handlePinLeftClick}
                           >
                             <Icon size="large" name="ArrowLeftEndOnRectangle" />
                           </Button>
                         )}
                         {header.column.getIsPinned() ?
-                          <Button
-                            variant="outline"
-                            aria-label="Unpin"
-                            onClick={() => {
-                              header.column.pin(false);
-                            }}
-                          >
+                          <Button variant="outline" aria-label="Unpin" onClick={handleUnpinClick}>
                             <Icon size="large" name="XMark" />
                           </Button>
                         : null}
@@ -221,9 +224,7 @@ export function DataTableHeader({
                           <Button
                             variant="outline"
                             aria-label="Pin to right"
-                            onClick={() => {
-                              header.column.pin('right');
-                            }}
+                            onClick={handlePinRightClick}
                           >
                             <Icon size="large" name="ArrowRightEndOnRectangle" />
                           </Button>
@@ -241,8 +242,8 @@ export function DataTableHeader({
                       <DataTableHeaderFilter
                         column={header.column}
                         filters={controlledFilters}
-                        onFiltering={onFiltering}
                         faceting={faceting}
+                        onFiltering={onFiltering}
                       />
                     </Field>
                   </div>
@@ -255,7 +256,7 @@ export function DataTableHeader({
                     <DataTableHeaderColumnCheckbox key={column.id} column={column} table={table} />
                   ))}
                 </div>
-              </Form>
+              </div>
             </PopoverPanel>
           </Popover>
           <Button

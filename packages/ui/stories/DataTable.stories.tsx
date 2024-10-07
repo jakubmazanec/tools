@@ -181,6 +181,8 @@ export const ControlledExample = {
     onSorting: () => {},
     filters: false,
     onFiltering: () => {},
+    search: null,
+    onSearch: () => {},
     faceting: {
       firstName: {
         min: _.min(data.map((value) => value.firstName)),
@@ -221,7 +223,7 @@ export const ControlledExample = {
   },
   // eslint-disable-next-line func-name-matching -- needed so `Render` is treated as a React component and `useArgs` doesn't trigger hooks-realated linting rules
   render: function Render(args) {
-    let [{pagination, sorting, filters}, updateArgs] = useArgs<typeof args>();
+    let [{pagination, sorting, filters, search}, updateArgs] = useArgs<typeof args>();
 
     return (
       <DataTable
@@ -252,6 +254,12 @@ export const ControlledExample = {
         // eslint-disable-next-line react/jsx-no-bind -- TODO
         onFiltering={(newFilters) => {
           updateArgs({filters: newFilters});
+        }}
+        search={search}
+        // TODO: fix this
+        // eslint-disable-next-line react/jsx-no-bind -- TODO
+        onSearch={(newSearch) => {
+          updateArgs({search: newSearch});
         }}
       />
     );
