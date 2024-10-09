@@ -5,20 +5,20 @@ import {CSS} from '@dnd-kit/utilities';
 import {type Column, flexRender, type Header, type Table} from '@tanstack/react-table';
 import {type CSSProperties, useCallback} from 'react';
 
-import {Button} from '../Button.js';
-import {Checkbox} from '../Checkbox.js';
-import {CheckboxField} from '../CheckboxField.js';
+import {Button} from '../../Button.js';
+import {Checkbox} from '../../Checkbox.js';
+import {CheckboxField} from '../../CheckboxField.js';
+import {Field} from '../../Field.js';
+import {Icon} from '../../Icon.js';
+import {Label} from '../../Label.js';
+import {Popover} from '../../Popover.js';
+import {PopoverButton} from '../../PopoverButton.js';
+import {PopoverPanel} from '../../PopoverPanel.js';
+import {TableHeader} from '../../TableHeader.js';
 import {type DataTableProps} from '../DataTable.js';
-import {Field} from '../Field.js';
-import {Icon} from '../Icon.js';
-import {Label} from '../Label.js';
-import {Popover} from '../Popover.js';
-import {PopoverButton} from '../PopoverButton.js';
-import {PopoverPanel} from '../PopoverPanel.js';
-import {TableHeader} from '../TableHeader.js';
 import {DataTableHeaderFilter} from './DataTableHeaderFilter.js';
-import {getCommonPinningClasses} from './internals/getCommonPinningClasses.js';
-import {getCommonPinningStyles} from './internals/getCommonPinningStyles.js';
+import {getCommonPinningClasses} from './getCommonPinningClasses.js';
+import {getCommonPinningStyles} from './getCommonPinningStyles.js';
 
 type DataTableHeaderProps = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed

@@ -4,7 +4,7 @@ export * from './components/Checkbox.js';
 export * from './components/CheckboxField.js';
 export * from './components/Combobox.js';
 export * from './components/ComboboxOption.js';
-export * from './components/DataTable.js';
+export * from './components/data-table/DataTable.js';
 export * from './components/Description.js';
 export * from './components/Dialog.js';
 export * from './components/DialogPanel.js';

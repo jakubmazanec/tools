@@ -1,6 +1,6 @@
 import {useCallback} from 'react';
 
-import {Button} from '../Button.js';
+import {Button} from '../../Button.js';
 
 export type DataTablePageButtonProps = {
   page: number;

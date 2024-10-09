@@ -3,12 +3,12 @@
 import {type Column} from '@tanstack/react-table';
 import {type ChangeEvent, useCallback, useDeferredValue, useEffect, useMemo, useState} from 'react';
 
-import {Button} from '../Button.js';
-import {Combobox} from '../Combobox.js';
+import {Button} from '../../Button.js';
+import {Combobox} from '../../Combobox.js';
+import {Icon} from '../../Icon.js';
+import {Input} from '../../Input.js';
+import {Listbox} from '../../Listbox.js';
 import {type DataTableProps} from '../DataTable.js';
-import {Icon} from '../Icon.js';
-import {Input} from '../Input.js';
-import {Listbox} from '../Listbox.js';
 
 function addFilter(
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed

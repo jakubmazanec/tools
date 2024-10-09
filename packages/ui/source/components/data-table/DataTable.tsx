@@ -31,20 +31,23 @@ import {
 import {useCallback, useId, useState} from 'react';
 import {z} from 'zod';
 
-import {DataTableHeader} from './data-table/DataTableHeader.js';
-import {DataTableSearch as DataTableSearchComponent} from './data-table/DataTableSearch.js';
-import {DEFAULT_PAGE_SIZE, PAGE_SIZES} from './data-table/internals/constants.js';
-import {fuzzyFilter} from './data-table/internals/fuzzyFilter.js';
-import {getCommonPinningClasses} from './data-table/internals/getCommonPinningClasses.js';
-import {getCommonPinningStyles} from './data-table/internals/getCommonPinningStyles.js';
-import {Table} from './Table.js';
-import {TableBody} from './TableBody.js';
-import {TableCell} from './TableCell.js';
-import {TableFoot} from './TableFoot.js';
-import {TableHead} from './TableHead.js';
-import {TableHeader} from './TableHeader.js';
-import {TableRow} from './TableRow.js';
-import {DataTablePagination} from './DataTablePagination.js';
+import {Table} from '../Table.js';
+import {TableBody} from '../TableBody.js';
+import {TableCell} from '../TableCell.js';
+import {TableFoot} from '../TableFoot.js';
+import {TableHead} from '../TableHead.js';
+import {TableHeader} from '../TableHeader.js';
+import {TableRow} from '../TableRow.js';
+import {
+  DataTableHeader,
+  DataTablePagination,
+  DataTableSearch as DataTableSearchComponent,
+  DEFAULT_PAGE_SIZE,
+  fuzzyFilter,
+  getCommonPinningClasses,
+  getCommonPinningStyles,
+  PAGE_SIZES,
+} from './internals.js';
 
 declare module '@tanstack/react-table' {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars -- false positive
@@ -224,6 +227,17 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
 
   let id = useId();
 
+  let page =
+    onPagination && controlledPagination ?
+      controlledPagination.page
+    : table.getState().pagination.pageIndex + 1;
+  let pageSize =
+    onPagination && controlledPagination ?
+      controlledPagination.pageSize
+    : table.getState().pagination.pageSize;
+  let pageCount =
+    onPagination && controlledPagination ? controlledPagination.pageCount : table.getPageCount();
+
   return (
     <DndContext
       id={id}
@@ -290,7 +304,9 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
       </Table>
       <DataTablePagination
         table={table}
-        pagination={controlledPagination}
+        page={page}
+        pageSize={pageSize}
+        pageCount={pageCount}
         onPagination={onPagination}
       />
     </DndContext>

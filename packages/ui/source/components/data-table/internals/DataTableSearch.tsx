@@ -1,11 +1,11 @@
 import {type Table} from '@tanstack/react-table';
 import {type ChangeEvent, type FormEvent, useCallback, useState} from 'react';
 
-import {Button} from '../Button.js';
+import {Button} from '../../Button.js';
+import {Form} from '../../Form.js';
+import {Icon} from '../../Icon.js';
+import {Input} from '../../Input.js';
 import {type DataTableProps} from '../DataTable.js';
-import {Form} from '../Form.js';
-import {Icon} from '../Icon.js';
-import {Input} from '../Input.js';
 
 export type DataTableSearchProps = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
