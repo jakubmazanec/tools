@@ -66,8 +66,6 @@ export function DataTableSearch({table, search: controlledSearch, onSearch}: Dat
     }
   }, [onSearch, table]);
 
-  console.log('???', controlledSearch, onSearch);
-
   return (
     <Form className="flex-row gap-x-2" onSubmit={handleSearchSubmit}>
       <Input value={search} onChange={handleSearchChange} />
