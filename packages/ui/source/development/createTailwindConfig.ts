@@ -8,6 +8,7 @@ let defaultCreateTailwindConfigOptions = {
   content: ['./{.storybook,app,source,stories,tests}/**/*.{js,jsx,ts,tsx,mdx}', '@jakubmazanec/ui'],
   colors: {
     gray: '#6c6e79',
+    neutral: '#6c6e79',
     red: '#d1002f',
     orange: {
       hex: '#c33909',

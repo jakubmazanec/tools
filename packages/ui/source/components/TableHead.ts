@@ -43,5 +43,5 @@ export const TableHead = forwardRef(
 );
 
 export const tableHeadTheme: ComponentTheme<typeof useTableHeadTheme> = {
-  className: 'font-sans border-b-2 border-gray-100',
+  className: 'font-sans border-b-2 border-neutral-100',
 };

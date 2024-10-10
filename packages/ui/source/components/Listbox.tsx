@@ -357,20 +357,20 @@ export const Listbox = forwardRef(
 
 export const listboxTheme: ComponentTheme<typeof useListboxTheme> = {
   classNames: {
-    root: 'flex w-full min-w-32 items-center rounded-2 border-2 border-gray-100 hover:border-gray-200 bg-white px-2.5 h-9 pr-9 gap-x-2 transition-colors shadow-inner font-sans text-sm',
+    root: 'flex w-full min-w-32 items-center rounded-2 border-2 border-neutral-100 hover:border-neutral-200 bg-white px-2.5 h-9 pr-9 gap-x-2 transition-colors shadow-inner font-sans text-sm',
     label: 'flex gap-x-2',
-    icon: 'text-gray-500 size-5 top-1.5 right-1.5 cursor-pointer',
+    icon: 'text-neutral-500 size-5 top-1.5 right-1.5 cursor-pointer',
     options:
-      'flex flex-col gap-y-1 shadow p-1 z-30 rounded-2 border-2 border-gray-100 hover:border-gray-200 bg-white text-left w-[var(--button-width)] [--anchor-gap:theme(spacing.1)] [--anchor-padding:theme(spacing.2)] [scrollbar-width:thin] empty:invisible transition-colors',
+      'flex flex-col gap-y-1 shadow p-1 z-30 rounded-2 border-2 border-neutral-100 hover:border-neutral-200 bg-white text-left w-[var(--button-width)] [--anchor-gap:theme(spacing.1)] [--anchor-padding:theme(spacing.2)] [scrollbar-width:thin] empty:invisible transition-colors',
     filter: '[&>[data-component=input]]:rounded',
   },
   variants: {
     disabled: {
       true: {
-        root: 'border-gray-100 text-gray-200 cursor-not-allowed',
+        root: 'border-neutral-100 text-neutral-200 cursor-not-allowed',
         label: '',
-        icon: 'text-gray-200',
-        options: 'border-gray-100',
+        icon: 'text-neutral-200',
+        options: 'border-neutral-100',
         filter: '',
       },
       false: {

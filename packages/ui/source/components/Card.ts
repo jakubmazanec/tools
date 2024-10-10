@@ -42,5 +42,5 @@ export const Card = forwardRef(
 );
 
 export const cardTheme: ComponentTheme<typeof useCardTheme> = {
-  className: 'rounded-2 border border-gray-100 p-4',
+  className: 'rounded-2 border border-neutral-100 p-4',
 };

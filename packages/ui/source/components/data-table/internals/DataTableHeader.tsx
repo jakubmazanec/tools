@@ -105,29 +105,33 @@ export function DataTableHeader({
       controlledSorting === undefined ||
       controlledSorting.column !== header.column.id
     ) {
-      sortElement = <Icon name="ArrowsUpDown" size="small" className="text-gray-200 select-none" />;
+      sortElement = (
+        <Icon name="ArrowsUpDown" size="small" className="text-neutral-200 select-none" />
+      );
     } else if (
       controlledSorting.direction === 'ascending' &&
       controlledSorting.column === header.column.id
     ) {
-      sortElement = <Icon name="ArrowUp" size="small" className="text-gray-950 select-none" />;
+      sortElement = <Icon name="ArrowUp" size="small" className="text-neutral-950 select-none" />;
     } else if (
       controlledSorting.direction === 'descending' &&
       controlledSorting.column === header.column.id
     ) {
-      sortElement = <Icon name="ArrowDown" size="small" className="text-gray-950 select-none" />;
+      sortElement = <Icon name="ArrowDown" size="small" className="text-neutral-950 select-none" />;
     }
   } else {
     if (!header.isPlaceholder && isSorted === false) {
-      sortElement = <Icon name="ArrowsUpDown" size="small" className="text-gray-200 select-none" />;
+      sortElement = (
+        <Icon name="ArrowsUpDown" size="small" className="text-neutral-200 select-none" />
+      );
     }
 
     if (!header.isPlaceholder && isSorted === 'asc') {
-      sortElement = <Icon name="ArrowUp" size="small" className="text-gray-950 select-none" />;
+      sortElement = <Icon name="ArrowUp" size="small" className="text-neutral-950 select-none" />;
     }
 
     if (!header.isPlaceholder && isSorted === 'desc') {
-      sortElement = <Icon name="ArrowDown" size="small" className="text-gray-950 select-none" />;
+      sortElement = <Icon name="ArrowDown" size="small" className="text-neutral-950 select-none" />;
     }
   }
 

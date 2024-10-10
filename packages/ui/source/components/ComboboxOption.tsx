@@ -77,14 +77,14 @@ export const ComboboxOption = forwardRef(
 
 export const comboboxOptionTheme: ComponentTheme<typeof useComboboxOptionTheme> = {
   classNames: {
-    root: 'relative group/option p-1 pr-6 rounded-1 hover:bg-gray-50 data-[active]:bg-gray-50 text-sm transition-colors',
-    icon: 'hidden group-data-[selected]/option:block right-1 top-1 text-gray-500',
+    root: 'relative group/option p-1 pr-6 rounded-1 hover:bg-neutral-50 data-[active]:bg-neutral-50 text-sm transition-colors',
+    icon: 'hidden group-data-[selected]/option:block right-1 top-1 text-neutral-500',
   },
   variants: {
     disabled: {
       true: {
-        root: 'text-gray-200 cursor-not-allowed',
-        icon: 'text-gray-200',
+        root: 'text-neutral-200 cursor-not-allowed',
+        icon: 'text-neutral-200',
       },
       false: {
         root: '',

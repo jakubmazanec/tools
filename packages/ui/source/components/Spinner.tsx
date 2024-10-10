@@ -44,7 +44,7 @@ export const Spinner = memo(({size = 'medium', className, ...rest}: SpinnerProps
 
 export const spinnerTheme: ComponentTheme<typeof useSpinnerTheme> = {
   classNames: {
-    root: 'inline-flex items-center justify-center fill-gray-900 text-gray-200 data-[icon]:-mx-1',
+    root: 'inline-flex items-center justify-center fill-neutral-900 text-neutral-200 data-[icon]:-mx-1',
     icon: 'animate-spin',
   },
   variants: {

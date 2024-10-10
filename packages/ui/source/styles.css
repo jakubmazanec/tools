@@ -16,10 +16,10 @@
 
 @layer base {
   html {
-    @apply font-sans text-gray-950;
+    @apply font-sans text-neutral-950;
   }
 
   * {
-    scrollbar-color: theme(colors.gray.200) theme(colors.transparent);
+    scrollbar-color: theme(colors.neutral.200) theme(colors.transparent);
   }
 }

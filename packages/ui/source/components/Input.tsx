@@ -131,16 +131,16 @@ export const Input = forwardRef(
 
 export const inputTheme: ComponentTheme<typeof useInputTheme> = {
   classNames: {
-    root: 'group flex w-full items-center rounded-2 border-2 border-gray-100 hover:border-gray-200 px-2.5 h-9 bg-white shadow-inner transition-colors',
+    root: 'group flex w-full items-center rounded-2 border-2 border-neutral-100 hover:border-neutral-200 px-2.5 h-9 bg-white shadow-inner transition-colors',
     input:
       'p-0 focus-visible:outline-none w-full group-data-[icon]:pl-6 group-data-[clear-button]:pr-4 bg-transparent font-sans text-sm',
-    icon: 'size-6 left-[0.3125rem] top-[0.3125rem] text-gray-300',
-    clearButton: 'text-gray-500 size-5 right-2 cursor-pointer',
+    icon: 'size-6 left-[0.3125rem] top-[0.3125rem] text-neutral-300',
+    clearButton: 'text-neutral-500 size-5 right-2 cursor-pointer',
   },
   variants: {
     disabled: {
       true: {
-        root: 'border-gray-100 text-gray-200 cursor-not-allowed',
+        root: 'border-neutral-100 text-neutral-200 cursor-not-allowed',
         input: '',
         icon: '',
         clearButton: '',

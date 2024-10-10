@@ -102,10 +102,10 @@ export const buttonTheme: ComponentTheme<typeof useButtonTheme> = {
     'rounded-2 flex items-center justify-center text-nowrap font-sans font-medium text-sm transition-colors',
   variants: {
     variant: {
-      solid: 'text-white bg-gray-900 hover:bg-gray-800',
-      outline: 'text-gray-950 border-2 border-gray-100 hover:border-gray-200',
-      text: 'text-gray-950 border-2 border-transparent hover:border-gray-200',
-      invisible: 'cursor-default text-gray-600',
+      solid: 'text-white bg-neutral-900 hover:bg-neutral-800',
+      outline: 'text-neutral-950 border-2 border-neutral-100 hover:border-neutral-200',
+      text: 'text-neutral-950 border-2 border-transparent hover:border-neutral-200',
+      invisible: 'cursor-default text-neutral-600',
     },
     size: {
       small: 'text-sm leading-6 px-2.5 h-8 min-w-8 gap-x-2',
@@ -151,22 +151,22 @@ export const buttonTheme: ComponentTheme<typeof useButtonTheme> = {
     {
       variant: 'solid',
       disabled: true,
-      className: 'text-white bg-gray-200 hover:bg-gray-200',
+      className: 'text-white bg-neutral-200 hover:bg-neutral-200',
     },
     {
       variant: 'outline',
       disabled: true,
-      className: 'text-gray-200 hover:border-gray-100',
+      className: 'text-neutral-200 hover:border-neutral-100',
     },
     {
       variant: 'text',
       disabled: true,
-      className: 'text-gray-200 hover:border-transparent',
+      className: 'text-neutral-200 hover:border-transparent',
     },
     {
       variant: 'invisible',
       disabled: true,
-      className: 'text-gray-200 ',
+      className: 'text-neutral-200 ',
     },
   ],
 };

@@ -71,12 +71,12 @@ export const Radio = forwardRef(
 export const radioTheme: ComponentTheme<typeof useRadioTheme> = {
   classNames: {
     root: 'group/radio inline-block size-5',
-    icon: 'flex justify-content justify-item size-5 *:rounded-full *:bg-white *:border-2 *:border-gray-100 *:hover:border-gray-200 *:shadow-inner *:transition-colors *:text-transparent *:hover:text-gray-100 group-data-[checked]/radio:*:bg-gray-950 group-data-[checked]/radio:*:border-gray-950 group-data-[checked]/radio:*:text-white',
+    icon: 'flex justify-content justify-item size-5 *:rounded-full *:bg-white *:border-2 *:border-neutral-100 *:hover:border-neutral-200 *:shadow-inner *:transition-colors *:text-transparent *:hover:text-neutral-100 group-data-[checked]/radio:*:bg-neutral-950 group-data-[checked]/radio:*:border-neutral-950 group-data-[checked]/radio:*:text-white',
   },
   variants: {
     disabled: {
       true: {
-        root: 'border-gray-100 text-gray-200 cursor-not-allowed',
+        root: 'border-neutral-100 text-neutral-200 cursor-not-allowed',
         icon: 'opacity-0',
       },
       false: {

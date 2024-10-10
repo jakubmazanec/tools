@@ -43,5 +43,5 @@ export const TableRow = forwardRef(
 );
 
 export const tableRowTheme: ComponentTheme<typeof useTableRowTheme> = {
-  className: 'font-sans odd:bg-white even:bg-gray-25',
+  className: 'font-sans odd:bg-white even:bg-neutral-25',
 };

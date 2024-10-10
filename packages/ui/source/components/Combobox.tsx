@@ -260,18 +260,18 @@ export const comboboxTheme: ComponentTheme<typeof useComboboxTheme> = {
   classNames: {
     root: 'w-full min-w-32',
     input:
-      'flex w-full items-center rounded-2 border-2 border-gray-100 hover:border-gray-200 bg-white px-2.5 h-9 pr-9 gap-x-2 transition-colors shadow-inner font-sans text-sm',
-    icon: 'text-gray-500 size-5 top-2 right-2 cursor-pointer',
+      'flex w-full items-center rounded-2 border-2 border-neutral-100 hover:border-neutral-200 bg-white px-2.5 h-9 pr-9 gap-x-2 transition-colors shadow-inner font-sans text-sm',
+    icon: 'text-neutral-500 size-5 top-2 right-2 cursor-pointer',
     options:
-      'flex flex-col gap-y-1 shadow p-1 z-30 rounded-2 border-2 border-gray-100 hover:border-gray-200 bg-white text-left w-[var(--input-width)] [--anchor-gap:theme(spacing.1)] [--anchor-padding:theme(spacing.2)] [scrollbar-width:thin] empty:invisible transition-colors',
+      'flex flex-col gap-y-1 shadow p-1 z-30 rounded-2 border-2 border-neutral-100 hover:border-neutral-200 bg-white text-left w-[var(--input-width)] [--anchor-gap:theme(spacing.1)] [--anchor-padding:theme(spacing.2)] [scrollbar-width:thin] empty:invisible transition-colors',
   },
   variants: {
     disabled: {
       true: {
-        root: 'border-gray-100 text-gray-200 cursor-not-allowed',
+        root: 'border-neutral-100 text-neutral-200 cursor-not-allowed',
         input: '',
-        icon: 'text-gray-200',
-        options: 'border-gray-100',
+        icon: 'text-neutral-200',
+        options: 'border-neutral-100',
       },
       false: {
         root: '',
