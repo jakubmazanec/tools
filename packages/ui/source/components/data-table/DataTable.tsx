@@ -1,5 +1,3 @@
-// TODO: fix somehow
-/* eslint-disable complexity -- TODO */
 import {
   closestCenter,
   DndContext,
@@ -40,7 +38,7 @@ import {TableHeader} from '../TableHeader.js';
 import {TableRow} from '../TableRow.js';
 import {
   DataTableHeader,
-  DataTablePagination,
+  DataTablePagination as DataTablePaginationComponent,
   DataTableSearch as DataTableSearchComponent,
   DEFAULT_PAGE_SIZE,
   fuzzyFilter,
@@ -302,7 +300,7 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
           ))}
         </TableFoot>
       </Table>
-      <DataTablePagination
+      <DataTablePaginationComponent
         table={table}
         page={page}
         pageSize={pageSize}

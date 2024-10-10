@@ -1,10 +1,11 @@
 // TODO: fix somehow
 /* eslint-disable complexity -- TODO */
 import {type Column} from '@tanstack/react-table';
-import {type ChangeEvent, useCallback, useDeferredValue, useEffect, useMemo, useState} from 'react';
+import {type ChangeEvent, type FormEvent, useCallback, useMemo, useState} from 'react';
 
 import {Button} from '../../Button.js';
 import {Combobox} from '../../Combobox.js';
+import {Form} from '../../Form.js';
 import {Icon} from '../../Icon.js';
 import {Input} from '../../Input.js';
 import {Listbox} from '../../Listbox.js';
@@ -116,26 +117,26 @@ export function DataTableHeaderFilter({
   let [min, setMin] = useState(currentMin);
   let [max, setMax] = useState(currentMax);
 
-  let deferredMin = useDeferredValue(min);
-  let deferredMax = useDeferredValue(max);
-
-  useEffect(() => {
-    if (currentMin === deferredMin && currentMax === deferredMax) {
-      return;
+  let facetingValues = useMemo(() => {
+    if (onFiltering) {
+      return faceting?.[column.id]?.values ?? [];
     }
 
-    if (!deferredMin && !deferredMax) {
-      if (onFiltering) {
-        onFiltering(removeFilter(controlledFilters, column.id));
-      } else {
-        column.setFilterValue(undefined);
-      }
-    } else if (onFiltering) {
-      onFiltering(addFilter(controlledFilters, column.id, [deferredMin, deferredMax]));
-    } else {
-      column.setFilterValue([deferredMin, deferredMax]);
+    if (filterVariant === 'range') {
+      return [];
     }
-  }, [deferredMin, deferredMax, column, onFiltering, controlledFilters, currentMin, currentMax]);
+
+    return [...column.getFacetedUniqueValues().keys()].sort().slice(0, 5000) as unknown[];
+  }, [column, faceting, filterVariant, onFiltering]);
+
+  let facetingMin =
+    onFiltering ?
+      faceting?.[column.id]?.min ?? null
+    : Number(column.getFacetedMinMaxValues()?.[0] ?? null);
+  let facetingMax =
+    onFiltering ?
+      faceting?.[column.id]?.max ?? null
+    : Number(column.getFacetedMinMaxValues()?.[1] ?? null);
 
   let handleResetClick = useCallback(() => {
     setFilter(undefined);
@@ -151,36 +152,10 @@ export function DataTableHeaderFilter({
 
   let handleMinRangeChange = useCallback((event: ChangeEvent<HTMLInputElement>) => {
     setMin(event.target.value ? Number(event.target.value) : undefined);
-    // if (onFiltering) {
-    //   onFiltering(
-    //     addFilter(controlledFilters, column.id, [
-    //       event.target.value,
-    //       (filter as [number, number] | undefined)?.[1],
-    //     ]),
-    //   );
-    // } else {
-    //   column.setFilterValue((old: [number, number] | undefined) => [
-    //     event.target.value,
-    //     old?.[1],
-    //   ]);
-    // }
   }, []);
 
   let handleMaxRangeChange = useCallback((event: ChangeEvent<HTMLInputElement>) => {
     setMax(event.target.value ? Number(event.target.value) : undefined);
-    // if (onFiltering) {
-    //   onFiltering(
-    //     addFilter(controlledFilters, column.id, [
-    //       (filter as [number, number] | undefined)?.[0],
-    //       event.target.value,
-    //     ]),
-    //   );
-    // } else {
-    //   column.setFilterValue((old: [number, number] | undefined) => [
-    //     old?.[0],
-    //     event.target.value,
-    //   ]);
-    // }
   }, []);
 
   let handleSelectChange = useCallback(
@@ -220,42 +195,92 @@ export function DataTableHeaderFilter({
   }, []);
 
   let handleFilterClick = useCallback(() => {
-    if (filter) {
-      if (onFiltering) {
-        onFiltering(addFilter(controlledFilters, column.id, filter));
-      } else {
-        column.setFilterValue(filter);
-      }
-    } else if (onFiltering) {
-      onFiltering(removeFilter(controlledFilters, column.id));
-    } else {
-      column.setFilterValue(undefined);
-    }
-  }, [column, controlledFilters, filter, onFiltering]);
-
-  let facetingValues = useMemo(() => {
-    if (onFiltering) {
-      return faceting?.[column.id]?.values ?? [];
-    }
-
     if (filterVariant === 'range') {
-      return [];
+      if (!min && !max) {
+        if (onFiltering) {
+          onFiltering(removeFilter(controlledFilters, column.id));
+        } else {
+          column.setFilterValue(undefined);
+        }
+      } else if (onFiltering) {
+        onFiltering(addFilter(controlledFilters, column.id, [min, max]));
+      } else {
+        column.setFilterValue([min, max]);
+      }
     }
 
-    return [...column.getFacetedUniqueValues().keys()].sort().slice(0, 5000) as unknown[];
-  }, [column, faceting, filterVariant, onFiltering]);
+    if ((filterVariant === 'text' && !facetingValues.length) || !filterVariant) {
+      if (filter) {
+        if (onFiltering) {
+          onFiltering(addFilter(controlledFilters, column.id, filter));
+        } else {
+          column.setFilterValue(filter);
+        }
+      } else if (onFiltering) {
+        onFiltering(removeFilter(controlledFilters, column.id));
+      } else {
+        column.setFilterValue(undefined);
+      }
+    }
+  }, [
+    column,
+    controlledFilters,
+    facetingValues.length,
+    filter,
+    filterVariant,
+    max,
+    min,
+    onFiltering,
+  ]);
 
-  let facetingMin =
-    onFiltering ?
-      faceting?.[column.id]?.min ?? null
-    : Number(column.getFacetedMinMaxValues()?.[0] ?? null);
-  let facetingMax =
-    onFiltering ?
-      faceting?.[column.id]?.max ?? null
-    : Number(column.getFacetedMinMaxValues()?.[1] ?? null);
+  let handleFilterSubmit = useCallback(
+    (event: FormEvent<HTMLFormElement>) => {
+      event.preventDefault();
+
+      if (filterVariant === 'range') {
+        if (!min && !max) {
+          if (onFiltering) {
+            onFiltering(removeFilter(controlledFilters, column.id));
+          } else {
+            column.setFilterValue(undefined);
+          }
+        } else if (onFiltering) {
+          onFiltering(addFilter(controlledFilters, column.id, [min, max]));
+        } else {
+          column.setFilterValue([min, max]);
+        }
+      }
+
+      if ((filterVariant === 'text' && !facetingValues.length) || !filterVariant) {
+        if (filter) {
+          if (onFiltering) {
+            onFiltering(addFilter(controlledFilters, column.id, filter));
+          } else {
+            column.setFilterValue(filter);
+          }
+        } else if (onFiltering) {
+          onFiltering(removeFilter(controlledFilters, column.id));
+        } else {
+          column.setFilterValue(undefined);
+        }
+      }
+    },
+    [
+      column,
+      controlledFilters,
+      facetingValues.length,
+      filter,
+      filterVariant,
+      max,
+      min,
+      onFiltering,
+    ],
+  );
+
+  let filterElement = null;
 
   if (filterVariant === 'range') {
-    return (
+    filterElement = (
       <div>
         <div className="flex space-x-2">
           <Input
@@ -276,16 +301,17 @@ export function DataTableHeaderFilter({
             placeholder={`Max ${facetingMax === null ? '' : `(${facetingMax})`}`}
             onChange={handleMaxRangeChange}
           />
+          <Button submit variant="outline" aria-label="Filter" onClick={handleFilterClick}>
+            <Icon size="large" name="Funnel" />
+          </Button>
           <Button variant="outline" aria-label="Cancel" onClick={handleResetClick}>
             <Icon size="large" name="XMark" />
           </Button>
         </div>
       </div>
     );
-  }
-
-  if (filterVariant === 'select' && facetingValues.length) {
-    return (
+  } else if (filterVariant === 'select' && facetingValues.length) {
+    filterElement = (
       <div className="flex gap-x-2">
         <Listbox
           value={currentFilter as string}
@@ -300,10 +326,8 @@ export function DataTableHeaderFilter({
         </Button>
       </div>
     );
-  }
-
-  if (filterVariant === 'text' && facetingValues.length) {
-    return (
+  } else if (filterVariant === 'text' && facetingValues.length) {
+    filterElement = (
       <div className="flex gap-x-2">
         <Combobox
           customValue
@@ -319,17 +343,19 @@ export function DataTableHeaderFilter({
         </Button>
       </div>
     );
+  } else if ((filterVariant === 'text' && !facetingValues.length) || !filterVariant) {
+    filterElement = (
+      <div className="flex gap-x-2">
+        <Input value={filter ?? ''} onChange={handleFilterChange} />
+        <Button variant="outline" aria-label="Filter" onClick={handleFilterClick}>
+          <Icon size="large" name="Funnel" />
+        </Button>
+        <Button variant="outline" aria-label="Cancel" onClick={handleResetClick}>
+          <Icon size="large" name="XMark" />
+        </Button>
+      </div>
+    );
   }
 
-  return (
-    <div className="flex gap-x-2">
-      <Input value={filter ?? ''} onChange={handleFilterChange} />
-      <Button variant="outline" aria-label="Filter" onClick={handleFilterClick}>
-        <Icon size="large" name="Funnel" />
-      </Button>
-      <Button variant="outline" aria-label="Cancel" onClick={handleResetClick}>
-        <Icon size="large" name="XMark" />
-      </Button>
-    </div>
-  );
+  return <Form onSubmit={handleFilterSubmit}>{filterElement}</Form>;
 }
