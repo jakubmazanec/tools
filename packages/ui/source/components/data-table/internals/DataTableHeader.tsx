@@ -1,5 +1,3 @@
-// TODO: fix somehow
-/* eslint-disable complexity -- TODO */
 import {useSortable} from '@dnd-kit/sortable';
 import {CSS} from '@dnd-kit/utilities';
 import {type Column, flexRender, type Header, type Table} from '@tanstack/react-table';
@@ -15,72 +13,88 @@ import {Popover} from '../../Popover.js';
 import {PopoverButton} from '../../PopoverButton.js';
 import {PopoverPanel} from '../../PopoverPanel.js';
 import {TableHeader} from '../../TableHeader.js';
-import {type DataTableProps} from '../DataTable.js';
+import {type DataTableProps, type DataTableSorting} from '../DataTable.js';
 import {DataTableHeaderFilter} from './DataTableHeaderFilter.js';
 import {getCommonPinningClasses} from './getCommonPinningClasses.js';
 import {getCommonPinningStyles} from './getCommonPinningStyles.js';
 
+function normalizeSorting(
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
+  header: Header<any, any>,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
+  controlledSorting?: DataTableProps<any, any>['sorting'],
+): DataTableSorting {
+  if (controlledSorting === undefined) {
+    let column = header.column.id;
+    let isSorted = header.column.getIsSorted();
+
+    if (!isSorted) {
+      return null;
+    }
+
+    return {
+      column,
+      direction: isSorted === 'asc' ? 'ascending' : 'descending',
+    };
+  }
+
+  let column = header.column.id;
+
+  if (!controlledSorting) {
+    return null;
+  }
+
+  if (controlledSorting.column !== column) {
+    return null;
+  }
+
+  return {
+    column,
+    direction: controlledSorting.direction,
+  };
+}
+
 type DataTableHeaderProps = {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
+  table: Table<any>;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   header: Header<any, any>;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
-  table: Table<any>;
+  clientSorting: DataTableProps<any, any>['clientSorting'];
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   sorting: DataTableProps<any, any>['sorting'];
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   onSorting: DataTableProps<any, any>['onSorting'];
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
+  clientFilters: DataTableProps<any, any>['clientFilters'];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   filters: DataTableProps<any, any>['filters'];
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   onFiltering: DataTableProps<any, any>['onFiltering'];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
+  clientFaceting: DataTableProps<any, any>['clientFaceting'];
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   faceting: DataTableProps<any, any>['faceting'];
 };
 
 export function DataTableHeader({
-  header,
   table,
+  header,
+  clientSorting,
   sorting: controlledSorting,
   onSorting,
+  clientFilters,
   filters: controlledFilters,
   onFiltering,
+  clientFaceting,
   faceting,
 }: DataTableHeaderProps) {
   let {attributes, isDragging, listeners, setNodeRef, transform} = useSortable({
     id: header.column.id,
   });
 
-  let handleSortClick = useCallback(() => {
-    if (onSorting) {
-      if (
-        controlledSorting === false ||
-        controlledSorting === undefined ||
-        controlledSorting.column !== header.column.id
-      ) {
-        onSorting({
-          column: header.column.id,
-          direction: 'ascending',
-        });
-      } else if (
-        controlledSorting.column === header.column.id &&
-        controlledSorting.direction === 'ascending'
-      ) {
-        onSorting({
-          column: header.column.id,
-          direction: 'descending',
-        });
-      } else if (
-        controlledSorting.column === header.column.id &&
-        controlledSorting.direction === 'descending'
-      ) {
-        onSorting(false);
-      }
-    }
-  }, [controlledSorting, onSorting, header.column.id]);
-
-  let handleWidthReset = useCallback(() => {
-    header.column.resetSize();
-  }, [header.column]);
+  let sorting =
+    clientSorting ? normalizeSorting(header) : normalizeSorting(header, controlledSorting);
 
   let style: CSSProperties = {
     transform: CSS.Translate.toString(transform),
@@ -88,8 +102,6 @@ export function DataTableHeader({
     zIndex: isDragging ? 20 : undefined,
     ...getCommonPinningStyles(header.column),
   };
-
-  let isSorted = header.column.getIsSorted();
 
   let contentElement = null;
 
@@ -99,67 +111,62 @@ export function DataTableHeader({
 
   let sortElement = null;
 
-  if (onSorting) {
-    if (
-      controlledSorting === false ||
-      controlledSorting === undefined ||
-      controlledSorting.column !== header.column.id
-    ) {
-      sortElement = (
-        <Icon name="ArrowsUpDown" size="small" className="text-neutral-200 select-none" />
-      );
-    } else if (
-      controlledSorting.direction === 'ascending' &&
-      controlledSorting.column === header.column.id
-    ) {
-      sortElement = <Icon name="ArrowUp" size="small" className="text-neutral-950 select-none" />;
-    } else if (
-      controlledSorting.direction === 'descending' &&
-      controlledSorting.column === header.column.id
-    ) {
-      sortElement = <Icon name="ArrowDown" size="small" className="text-neutral-950 select-none" />;
-    }
+  if (!sorting) {
+    sortElement = (
+      <Icon name="ArrowsUpDown" size="small" className="text-neutral-200 select-none" />
+    );
+  } else if (sorting.direction === 'ascending') {
+    sortElement = <Icon name="ArrowUp" size="small" className="text-neutral-950 select-none" />;
   } else {
-    if (!header.isPlaceholder && isSorted === false) {
-      sortElement = (
-        <Icon name="ArrowsUpDown" size="small" className="text-neutral-200 select-none" />
-      );
-    }
-
-    if (!header.isPlaceholder && isSorted === 'asc') {
-      sortElement = <Icon name="ArrowUp" size="small" className="text-neutral-950 select-none" />;
-    }
-
-    if (!header.isPlaceholder && isSorted === 'desc') {
-      sortElement = <Icon name="ArrowDown" size="small" className="text-neutral-950 select-none" />;
-    }
+    sortElement = <Icon name="ArrowDown" size="small" className="text-neutral-950 select-none" />;
   }
 
   let title: string | undefined;
 
-  if (onSorting) {
-    if (controlledSorting === false || controlledSorting === undefined) {
-      title = 'Sort ascending';
-    } else if (
-      controlledSorting.direction === 'ascending' &&
-      controlledSorting.column === header.column.id
-    ) {
-      title = 'Sort descending';
-    } else if (
-      controlledSorting.direction === 'descending' &&
-      controlledSorting.column === header.column.id
-    ) {
-      title = 'Clear sort';
-    }
-  } else if (header.column.getCanSort()) {
-    if (header.column.getNextSortingOrder() === 'asc') {
-      title = 'Sort ascending';
-    } else if (header.column.getNextSortingOrder() === 'desc') {
-      title = 'Sort descending';
-    } else {
-      title = 'Clear sort';
-    }
+  if (!sorting) {
+    title = 'Sort ascending';
+  } else if (sorting.direction === 'ascending') {
+    title = 'Sort descending';
+  } else {
+    title = 'Clear sort';
   }
+
+  let handleSortClick = useCallback(() => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
+    let newSorting: DataTableProps<any, any>['sorting'] = null;
+
+    if (!sorting) {
+      newSorting = {
+        column: header.column.id,
+        direction: 'ascending',
+      };
+    } else if (sorting.direction === 'ascending') {
+      newSorting = {
+        column: header.column.id,
+        direction: 'descending',
+      };
+    } else {
+      newSorting = null;
+    }
+
+    if (clientSorting) {
+      if (!sorting) {
+        header.column.toggleSorting(false);
+      } else if (sorting.direction === 'ascending') {
+        header.column.toggleSorting(true);
+      } else {
+        header.column.clearSorting();
+      }
+    }
+
+    if (onSorting) {
+      onSorting(newSorting);
+    }
+  }, [sorting, clientSorting, onSorting, header.column]);
+
+  let handleWidthReset = useCallback(() => {
+    header.column.resetSize();
+  }, [header.column]);
 
   let handlePinLeftClick = useCallback(() => {
     header.column.pin('left');
@@ -188,7 +195,7 @@ export function DataTableHeader({
               size="small"
               className="inline-flex mr-auto cursor-move"
               title={title}
-              onClick={onSorting ? handleSortClick : header.column.getToggleSortingHandler()}
+              onClick={handleSortClick}
               {...attributes}
               {...listeners}
             >
@@ -244,8 +251,11 @@ export function DataTableHeader({
 
                     <Field>
                       <DataTableHeaderFilter
+                        table={table}
                         column={header.column}
+                        clientFilters={clientFilters}
                         filters={controlledFilters}
+                        clientFaceting={clientFaceting}
                         faceting={faceting}
                         onFiltering={onFiltering}
                       />

@@ -1,6 +1,6 @@
 // TODO: fix somehow
 /* eslint-disable complexity -- TODO */
-import {type Column} from '@tanstack/react-table';
+import {type Column, Table} from '@tanstack/react-table';
 import {type ChangeEvent, type FormEvent, useCallback, useMemo, useState} from 'react';
 
 import {Button} from '../../Button.js';
@@ -10,6 +10,66 @@ import {Icon} from '../../Icon.js';
 import {Input} from '../../Input.js';
 import {Listbox} from '../../Listbox.js';
 import {type DataTableProps} from '../DataTable.js';
+
+function normalizeFilters(
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
+  table: Table<any>,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
+  column: Column<any>,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
+  controlledFilters?: DataTableProps<any, any>['filters'],
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
+): DataTableProps<any, any>['filters'] {
+  if (controlledFilters === undefined) {
+    let filters = table.getState().columnFilters;
+
+    if (!filters.length) {
+      return null;
+    }
+
+    return filters.map((filter) => ({column: filter.id, filter: filter.value as string}));
+  }
+
+  if (!controlledFilters) {
+    return null;
+  }
+
+  if (!controlledFilters.length) {
+    return null;
+  }
+
+  return controlledFilters;
+}
+
+function normalizeFilter(
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
+  column: Column<any>,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
+  controlledFilters?: DataTableProps<any, any>['filters'],
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
+): NonNullable<DataTableProps<any, any>['filters']>[number]['filter'] | null {
+  if (controlledFilters === undefined) {
+    let filter = column.getFilterValue();
+
+    if (!filter) {
+      return null;
+    }
+
+    return filter as string;
+  }
+
+  if (!controlledFilters) {
+    return null;
+  }
+
+  let filter = controlledFilters.find((filter) => filter.column === column.id);
+
+  if (!filter) {
+    return null;
+  }
+
+  return filter.filter;
+}
 
 function addFilter(
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
@@ -67,11 +127,11 @@ function removeFilter(
       }
     }
   } else {
-    return false;
+    return null;
   }
 
   if (!newFilters.length) {
-    return false;
+    return null;
   }
 
   return newFilters;
@@ -79,28 +139,38 @@ function removeFilter(
 
 type DataTableHeaderFilterProps = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
+  table: Table<any>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   column: Column<any>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
+  clientFilters: DataTableProps<any, any>['clientFilters'];
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   filters: DataTableProps<any, any>['filters'];
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   onFiltering: DataTableProps<any, any>['onFiltering'];
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
+  clientFaceting: DataTableProps<any, any>['clientFaceting'];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   faceting: DataTableProps<any, any>['faceting'];
 };
 
 export function DataTableHeaderFilter({
+  table,
   column,
+  clientFilters,
   filters: controlledFilters,
   onFiltering,
+  clientFaceting,
   faceting,
 }: DataTableHeaderFilterProps) {
   let {filterVariant} = column.columnDef.meta ?? {};
 
+  let currentFilters =
+    clientFilters ?
+      normalizeFilters(table, column)
+    : normalizeFilters(table, column, controlledFilters);
   let currentFilter =
-    onFiltering ?
-      controlledFilters ? controlledFilters.find((filter) => filter.column === column.id)?.filter
-      : undefined
-    : column.getFilterValue();
+    clientFilters ? normalizeFilter(column) : normalizeFilter(column, controlledFilters);
 
   let currentMin =
     filterVariant === 'range' ?
@@ -118,7 +188,7 @@ export function DataTableHeaderFilter({
   let [max, setMax] = useState(currentMax);
 
   let facetingValues = useMemo(() => {
-    if (onFiltering) {
+    if (!clientFaceting) {
       return faceting?.[column.id]?.values ?? [];
     }
 
@@ -127,28 +197,16 @@ export function DataTableHeaderFilter({
     }
 
     return [...column.getFacetedUniqueValues().keys()].sort().slice(0, 5000) as unknown[];
-  }, [column, faceting, filterVariant, onFiltering]);
+  }, [clientFaceting, column, faceting, filterVariant]);
 
   let facetingMin =
-    onFiltering ?
-      faceting?.[column.id]?.min ?? null
-    : Number(column.getFacetedMinMaxValues()?.[0] ?? null);
+    clientFaceting ?
+      Number(column.getFacetedMinMaxValues()?.[0] ?? null)
+    : faceting?.[column.id]?.min ?? null;
   let facetingMax =
-    onFiltering ?
-      faceting?.[column.id]?.max ?? null
-    : Number(column.getFacetedMinMaxValues()?.[1] ?? null);
-
-  let handleResetClick = useCallback(() => {
-    setFilter(undefined);
-    setMin(undefined);
-    setMax(undefined);
-
-    if (onFiltering) {
-      onFiltering(removeFilter(controlledFilters, column.id));
-    } else {
-      column.setFilterValue(undefined);
-    }
-  }, [column, controlledFilters, onFiltering]);
+    clientFaceting ?
+      Number(column.getFacetedMinMaxValues()?.[1] ?? null)
+    : faceting?.[column.id]?.max ?? null;
 
   let handleMinRangeChange = useCallback((event: ChangeEvent<HTMLInputElement>) => {
     setMin(event.target.value ? Number(event.target.value) : undefined);
@@ -158,32 +216,40 @@ export function DataTableHeaderFilter({
     setMax(event.target.value ? Number(event.target.value) : undefined);
   }, []);
 
-  let handleSelectChange = useCallback(
+  let handleSelectFilterChange = useCallback(
     (value: string) => {
-      if (onFiltering) {
-        onFiltering(addFilter(controlledFilters, column.id, value));
-      } else {
+      if (clientFilters) {
         column.setFilterValue(value);
       }
-    },
-    [column, controlledFilters, onFiltering],
-  );
 
-  let handleTextChange = useCallback(
-    (value: string | undefined) => {
-      if (value) {
-        if (onFiltering) {
-          onFiltering(addFilter(controlledFilters, column.id, value));
-        } else {
-          column.setFilterValue(value);
-        }
-      } else if (onFiltering) {
-        onFiltering(removeFilter(controlledFilters, column.id));
-      } else {
-        column.setFilterValue(undefined);
+      if (onFiltering) {
+        onFiltering(addFilter(currentFilters, column.id, value));
       }
     },
-    [column, controlledFilters, onFiltering],
+    [clientFilters, column, currentFilters, onFiltering],
+  );
+
+  let handleTextFilterChange = useCallback(
+    (value: string | undefined) => {
+      if (value) {
+        if (clientFilters) {
+          column.setFilterValue(value);
+        }
+
+        if (onFiltering) {
+          onFiltering(addFilter(currentFilters, column.id, value));
+        }
+      } else {
+        if (clientFilters) {
+          column.setFilterValue(undefined);
+        }
+
+        if (onFiltering) {
+          onFiltering(removeFilter(currentFilters, column.id));
+        }
+      }
+    },
+    [clientFilters, column, currentFilters, onFiltering],
   );
 
   let handleFilterChange = useCallback((event: ChangeEvent<HTMLInputElement>) => {
@@ -197,34 +263,47 @@ export function DataTableHeaderFilter({
   let handleFilterClick = useCallback(() => {
     if (filterVariant === 'range') {
       if (!min && !max) {
-        if (onFiltering) {
-          onFiltering(removeFilter(controlledFilters, column.id));
-        } else {
+        if (clientFilters) {
           column.setFilterValue(undefined);
         }
-      } else if (onFiltering) {
-        onFiltering(addFilter(controlledFilters, column.id, [min, max]));
+
+        if (onFiltering) {
+          onFiltering(removeFilter(currentFilters, column.id));
+        }
       } else {
-        column.setFilterValue([min, max]);
+        if (clientFilters) {
+          column.setFilterValue([min, max]);
+        }
+
+        if (onFiltering) {
+          onFiltering(addFilter(currentFilters, column.id, [min, max]));
+        }
       }
     }
 
     if ((filterVariant === 'text' && !facetingValues.length) || !filterVariant) {
       if (filter) {
-        if (onFiltering) {
-          onFiltering(addFilter(controlledFilters, column.id, filter));
-        } else {
+        if (clientFilters) {
           column.setFilterValue(filter);
         }
-      } else if (onFiltering) {
-        onFiltering(removeFilter(controlledFilters, column.id));
+
+        if (onFiltering) {
+          onFiltering(addFilter(currentFilters, column.id, filter));
+        }
       } else {
-        column.setFilterValue(undefined);
+        if (clientFilters) {
+          column.setFilterValue(undefined);
+        }
+
+        if (onFiltering) {
+          onFiltering(removeFilter(currentFilters, column.id));
+        }
       }
     }
   }, [
+    clientFilters,
     column,
-    controlledFilters,
+    currentFilters,
     facetingValues.length,
     filter,
     filterVariant,
@@ -239,35 +318,48 @@ export function DataTableHeaderFilter({
 
       if (filterVariant === 'range') {
         if (!min && !max) {
-          if (onFiltering) {
-            onFiltering(removeFilter(controlledFilters, column.id));
-          } else {
+          if (clientFilters) {
             column.setFilterValue(undefined);
           }
-        } else if (onFiltering) {
-          onFiltering(addFilter(controlledFilters, column.id, [min, max]));
+
+          if (onFiltering) {
+            onFiltering(removeFilter(currentFilters, column.id));
+          }
         } else {
-          column.setFilterValue([min, max]);
+          if (clientFilters) {
+            column.setFilterValue([min, max]);
+          }
+
+          if (onFiltering) {
+            onFiltering(addFilter(currentFilters, column.id, [min, max]));
+          }
         }
       }
 
       if ((filterVariant === 'text' && !facetingValues.length) || !filterVariant) {
         if (filter) {
-          if (onFiltering) {
-            onFiltering(addFilter(controlledFilters, column.id, filter));
-          } else {
+          if (clientFilters) {
             column.setFilterValue(filter);
           }
-        } else if (onFiltering) {
-          onFiltering(removeFilter(controlledFilters, column.id));
+
+          if (onFiltering) {
+            onFiltering(addFilter(currentFilters, column.id, filter));
+          }
         } else {
-          column.setFilterValue(undefined);
+          if (clientFilters) {
+            column.setFilterValue(undefined);
+          }
+
+          if (onFiltering) {
+            onFiltering(removeFilter(currentFilters, column.id));
+          }
         }
       }
     },
     [
+      clientFilters,
       column,
-      controlledFilters,
+      currentFilters,
       facetingValues.length,
       filter,
       filterVariant,
@@ -276,6 +368,20 @@ export function DataTableHeaderFilter({
       onFiltering,
     ],
   );
+
+  let handleResetClick = useCallback(() => {
+    setFilter(undefined);
+    setMin(undefined);
+    setMax(undefined);
+
+    if (clientFilters) {
+      column.setFilterValue(undefined);
+    }
+
+    if (onFiltering) {
+      onFiltering(removeFilter(currentFilters, column.id));
+    }
+  }, [clientFilters, column, currentFilters, onFiltering]);
 
   let filterElement = null;
 
@@ -287,7 +393,6 @@ export function DataTableHeaderFilter({
             type="number"
             min={String(facetingMin ?? '')}
             max={String(facetingMax ?? '')}
-            // value={(filter as [number?, number?] | undefined)?.[0] ?? ''}
             value={min ?? ''}
             placeholder={`Min ${facetingMin === null ? '' : `(${facetingMin})`}`}
             onChange={handleMinRangeChange}
@@ -296,7 +401,6 @@ export function DataTableHeaderFilter({
             type="number"
             min={String(facetingMin ?? '')}
             max={String(facetingMax ?? '')}
-            // value={(filter as [number?, number?] | undefined)?.[1] ?? ''}
             value={max ?? ''}
             placeholder={`Max ${facetingMax === null ? '' : `(${facetingMax})`}`}
             onChange={handleMaxRangeChange}
@@ -319,7 +423,7 @@ export function DataTableHeaderFilter({
             value,
             label: `${value as unknown}`,
           }))}
-          onChange={handleSelectChange}
+          onChange={handleSelectFilterChange}
         />
         <Button variant="outline" aria-label="Cancel" onClick={handleResetClick}>
           <Icon size="large" name="XMark" />
@@ -336,7 +440,7 @@ export function DataTableHeaderFilter({
             value,
             label: `${value as unknown}`,
           }))}
-          onChange={handleTextChange}
+          onChange={handleTextFilterChange}
         />
         <Button variant="outline" aria-label="Cancel" onClick={handleResetClick}>
           <Icon size="large" name="XMark" />

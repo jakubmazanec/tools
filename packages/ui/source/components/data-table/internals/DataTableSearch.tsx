@@ -11,13 +11,25 @@ export type DataTableSearchProps = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   table: Table<any>;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
+  clientSearch: DataTableProps<any, any>['clientSearch'];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   search: DataTableProps<any, any>['search'];
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   onSearch: DataTableProps<any, any>['onSearch'];
 };
 
-export function DataTableSearch({table, search: controlledSearch, onSearch}: DataTableSearchProps) {
-  let [search, setSearch] = useState(controlledSearch ?? '');
+export function DataTableSearch({
+  table,
+  clientSearch,
+  search: controlledSearch,
+  onSearch,
+}: DataTableSearchProps) {
+  let currentSearch =
+    clientSearch ?
+      (table.getState().globalFilter as string | undefined) ?? null
+    : controlledSearch ?? null;
+
+  let [search, setSearch] = useState(currentSearch ?? '');
 
   let handleSearchChange = useCallback((event: ChangeEvent<HTMLInputElement>) => {
     setSearch(event.target.value);
@@ -25,46 +37,60 @@ export function DataTableSearch({table, search: controlledSearch, onSearch}: Dat
 
   let handleSearchClick = useCallback(() => {
     if (search) {
-      if (onSearch) {
-        onSearch(search);
-      } else {
+      if (clientSearch) {
         table.setGlobalFilter(search);
       }
-    } else if (onSearch) {
-      onSearch(null);
+
+      if (onSearch) {
+        onSearch(search);
+      }
     } else {
-      table.setGlobalFilter(undefined);
+      if (clientSearch) {
+        table.setGlobalFilter(undefined);
+      }
+
+      if (onSearch) {
+        onSearch(null);
+      }
     }
-  }, [onSearch, search, table]);
+  }, [clientSearch, onSearch, search, table]);
 
   let handleSearchSubmit = useCallback(
     (event: FormEvent<HTMLFormElement>) => {
       event.preventDefault();
 
       if (search) {
-        if (onSearch) {
-          onSearch(search);
-        } else {
+        if (clientSearch) {
           table.setGlobalFilter(search);
         }
-      } else if (onSearch) {
-        onSearch(null);
+
+        if (onSearch) {
+          onSearch(search);
+        }
       } else {
-        table.setGlobalFilter(undefined);
+        if (clientSearch) {
+          table.setGlobalFilter(undefined);
+        }
+
+        if (onSearch) {
+          onSearch(null);
+        }
       }
     },
-    [onSearch, search, table],
+    [clientSearch, onSearch, search, table],
   );
 
   let handleResetClick = useCallback(() => {
     setSearch('');
 
-    if (onSearch) {
-      onSearch(null);
-    } else {
+    if (clientSearch) {
       table.setGlobalFilter(undefined);
     }
-  }, [onSearch, table]);
+
+    if (onSearch) {
+      onSearch(null);
+    }
+  }, [clientSearch, onSearch, table]);
 
   return (
     <Form className="flex-row gap-x-2" onSubmit={handleSearchSubmit}>

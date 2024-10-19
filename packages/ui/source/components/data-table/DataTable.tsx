@@ -1,3 +1,5 @@
+// TODO: fix
+/* eslint-disable complexity -- TODO */
 import {
   closestCenter,
   DndContext,
@@ -13,6 +15,8 @@ import {arrayMove, horizontalListSortingStrategy, SortableContext} from '@dnd-ki
 import {
   type ColumnDef,
   type ColumnFiltersState,
+  type ColumnOrderState,
+  type ColumnPinningState,
   flexRender,
   getCoreRowModel,
   getFacetedMinMaxValues,
@@ -24,7 +28,9 @@ import {
   type PaginationState,
   type RowData,
   type SortingState,
+  type Updater,
   useReactTable,
+  type VisibilityState,
 } from '@tanstack/react-table';
 import {useCallback, useId, useState} from 'react';
 import {z} from 'zod';
@@ -54,6 +60,20 @@ declare module '@tanstack/react-table' {
   }
 }
 
+function fromPinningState(pinning: ColumnPinningState) {
+  let result: DataTablePinning = {};
+
+  for (let left of pinning.left ?? []) {
+    result[left] = 'left';
+  }
+
+  for (let right of pinning.right ?? []) {
+    result[right] = 'right';
+  }
+
+  return result;
+}
+
 export const dataTablePaginationSchema = z.object({
   /** Page number, starts with 1. */
   page: z.number(),
@@ -69,8 +89,20 @@ export const dataTablePaginationSchema = z.object({
 
 export type DataTablePagination = z.infer<typeof dataTablePaginationSchema>;
 
+export const dataTableVisibilitySchema = z.record(z.string(), z.boolean());
+
+export type DataTableVisibility = z.infer<typeof dataTableVisibilitySchema>;
+
+export const dataTableOrderSchema = z.string().array();
+
+export type DataTableOrder = z.infer<typeof dataTableOrderSchema>;
+
+export const dataTablePinningSchema = z.record(z.string(), z.enum(['left', 'right']));
+
+export type DataTablePinning = z.infer<typeof dataTablePinningSchema>;
+
 export const dataTableSortingSchema = z.union([
-  z.literal(false),
+  z.null(),
   z.object({
     column: z.string(),
     direction: z.enum(['ascending', 'descending']),
@@ -80,7 +112,7 @@ export const dataTableSortingSchema = z.union([
 export type DataTableSorting = z.infer<typeof dataTableSortingSchema>;
 
 export const dataTableFiltersSchema = z.union([
-  z.literal(false),
+  z.null(),
   z
     .object({
       column: z.string(),
@@ -114,100 +146,204 @@ export type DataTableSearch = z.infer<typeof dataTableSearchSchema>;
 export type DataTableProps<D, C> = {
   data: D[];
   columns: C;
+  clientPagination?: boolean | undefined;
   pagination?: DataTablePagination | undefined;
   onPagination?:
     | ((
         pagination: Pick<DataTablePagination, 'page'> | Pick<DataTablePagination, 'pageSize'>,
       ) => void)
     | undefined;
+  visibility?: DataTableVisibility;
+  onVisibilityChange?: ((visibility: DataTableVisibility) => void) | undefined;
+  order?: DataTableOrder;
+  onOrderChange?: ((order: DataTableOrder) => void) | undefined;
+  pinning?: DataTablePinning;
+  onPinningChange?: ((pinning: DataTablePinning) => void) | undefined;
+  clientSorting?: boolean | undefined;
   sorting?: DataTableSorting | undefined;
   onSorting?: ((sorting: DataTableSorting) => void) | undefined;
+  clientFilters?: boolean | undefined;
   filters?: DataTableFilters | undefined;
   onFiltering?: ((filters: DataTableFilters) => void) | undefined;
+  clientFaceting?: boolean | undefined;
   faceting?: DataTableFaceting | undefined;
+  clientSearch?: boolean | undefined;
   search?: DataTableSearch | undefined;
   onSearch?: ((search: DataTableSearch) => void) | undefined;
 };
 
+// TODO: 1) rename types and props and event handlers and local variables and all the stuff to be more consistent; 2) put each component or function or type to separate file; 3) fix styling of buttons in column headers (e.g. when resizing, button icons change size -> make it that they're instead hidden/cut off, etc.0; 4) fix rendering cell values (e.g. add title attribute, etc.)
+
 export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
   data,
   columns,
+  clientPagination = false,
   pagination: controlledPagination,
   onPagination,
+  clientSorting = false,
   sorting: controlledSorting,
   onSorting,
+  visibility,
+  onVisibilityChange,
+  order,
+  onOrderChange,
+  pinning,
+  onPinningChange,
+  clientFilters = false,
   filters: controlledFilters,
   onFiltering,
+  clientFaceting = false,
   faceting,
+  clientSearch = false,
   search: controlledSearch,
   onSearch,
 }: DataTableProps<D, C>) {
-  let [pagination, setPagination] = useState<PaginationState>({
-    pageIndex: 0,
-    pageSize: DEFAULT_PAGE_SIZE,
-  });
-  let [columnVisibility, setColumnVisibility] = useState({});
-  let [columnOrder, setColumnOrder] = useState<string[]>(
-    columns.map((column) => {
-      if (column.id) {
-        return column.id;
+  let [pagination, setPagination] = useState<PaginationState>(
+    controlledPagination ?
+      {
+        pageIndex: Math.max(0, controlledPagination.page - 1),
+        pageSize: controlledPagination.pageSize,
       }
-
-      if ('accessorKey' in column) {
-        return String(column.accessorKey);
-      }
-
-      if (typeof column.header === 'string') {
-        return String(column.header);
-      }
-
-      return '';
-    }),
+    : {
+        pageIndex: 0,
+        pageSize: DEFAULT_PAGE_SIZE,
+      },
   );
-  let [columnPinning, setColumnPinning] = useState({});
+  let [columnVisibility, setColumnVisibility] = useState(visibility ?? {});
+  let [columnOrder, setColumnOrder] = useState<string[]>(
+    order ?
+      [
+        ...order,
+        ...columns
+          .map((column, index) => {
+            if (column.id) {
+              return column.id;
+            }
+
+            if ('accessorKey' in column) {
+              return String(column.accessorKey);
+            }
+
+            if (typeof column.header === 'string') {
+              return String(column.header);
+            }
+
+            return String(index);
+          })
+          .filter((value) => !order.includes(value)),
+      ]
+    : columns.map((column, index) => {
+        if (column.id) {
+          return column.id;
+        }
+
+        if ('accessorKey' in column) {
+          return String(column.accessorKey);
+        }
+
+        if (typeof column.header === 'string') {
+          return String(column.header);
+        }
+
+        return String(index);
+      }),
+  );
+  let [columnPinning, setColumnPinning] = useState<ColumnPinningState>(
+    pinning ?
+      {
+        left: Object.entries(pinning)
+          .filter(([column, pinning]) => pinning === 'left')
+          .map(([column]) => column),
+        right: Object.entries(pinning)
+          .filter(([column, pinning]) => pinning === 'right')
+          .map(([column]) => column),
+      }
+    : {left: [], right: []},
+  );
   let [sorting, setSorting] = useState<SortingState>([]);
   let [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
   let [search, setSearch] = useState('');
+
+  let handleColumnVisibilityChange = useCallback(
+    (columnVisibilityState: Updater<VisibilityState>) => {
+      setColumnVisibility(columnVisibilityState);
+
+      if (typeof columnVisibilityState === 'function') {
+        onVisibilityChange?.(columnVisibilityState(columnVisibility));
+      } else {
+        onVisibilityChange?.(columnVisibilityState);
+      }
+    },
+    [columnVisibility, onVisibilityChange],
+  );
+  let handleColumnOrderChange = useCallback(
+    (columnOrderState: Updater<ColumnOrderState>) => {
+      setColumnOrder(columnOrderState);
+
+      if (typeof columnOrderState === 'function') {
+        onOrderChange?.(columnOrderState(columnOrder));
+      } else {
+        onOrderChange?.(columnOrderState);
+      }
+    },
+    [columnOrder, onOrderChange],
+  );
+  let handleColumnPinningChange = useCallback(
+    (columnPinningState: Updater<ColumnPinningState>) => {
+      setColumnPinning(columnPinningState);
+
+      if (typeof columnPinningState === 'function') {
+        onPinningChange?.(fromPinningState(columnPinningState(columnPinning)));
+      } else {
+        onPinningChange?.(fromPinningState(columnPinningState));
+      }
+    },
+    [columnPinning, onPinningChange],
+  );
 
   let table = useReactTable<D>({
     data,
     columns,
     getCoreRowModel: getCoreRowModel(),
     getSortedRowModel: getSortedRowModel(),
-    getPaginationRowModel: onPagination ? undefined : getPaginationRowModel(),
+    getPaginationRowModel: clientPagination ? getPaginationRowModel() : undefined,
     getFilteredRowModel: getFilteredRowModel(),
-    getFacetedRowModel: onFiltering ? undefined : getFacetedRowModel(),
-    getFacetedUniqueValues: onFiltering ? undefined : getFacetedUniqueValues(),
-    getFacetedMinMaxValues: onFiltering ? undefined : getFacetedMinMaxValues(),
+    getFacetedRowModel: clientFaceting ? getFacetedRowModel() : undefined,
+    getFacetedUniqueValues: clientFaceting ? getFacetedUniqueValues() : undefined,
+    getFacetedMinMaxValues: clientFaceting ? getFacetedMinMaxValues() : undefined,
     state: {
-      pagination: onPagination ? undefined : pagination,
+      pagination: clientPagination ? pagination : undefined,
       columnVisibility,
       columnOrder,
       columnPinning,
-      sorting: onSorting ? undefined : sorting,
-      columnFilters: onFiltering ? undefined : columnFilters,
-      globalFilter: onSearch ? undefined : search,
+      sorting: clientSorting ? sorting : undefined,
+      columnFilters: clientFilters ? columnFilters : undefined,
+      globalFilter: clientSearch ? search : undefined,
     },
-    onPaginationChange: onPagination ? undefined : setPagination,
-    onColumnVisibilityChange: setColumnVisibility,
-    onColumnOrderChange: setColumnOrder,
-    onColumnPinningChange: setColumnPinning,
-    onSortingChange: onSorting ? undefined : setSorting,
-    onColumnFiltersChange: onFiltering ? undefined : setColumnFilters,
-    onGlobalFilterChange: onSearch ? undefined : setSearch,
+    onPaginationChange: clientPagination ? setPagination : undefined,
+    onColumnVisibilityChange: handleColumnVisibilityChange,
+    onColumnOrderChange: handleColumnOrderChange,
+    onColumnPinningChange: handleColumnPinningChange,
+    onSortingChange: clientSorting ? setSorting : undefined,
+    onColumnFiltersChange: clientFilters ? setColumnFilters : undefined,
+    onGlobalFilterChange: clientSearch ? setSearch : undefined,
     columnResizeMode: 'onChange',
     globalFilterFn: fuzzyFilter,
   });
-  let handleDragEnd = useCallback(({active, over}: DragEndEvent) => {
-    if (over && active.id !== over.id) {
-      setColumnOrder((previousColumnOrder) => {
-        let oldIndex = previousColumnOrder.indexOf(active.id as string);
-        let newIndex = previousColumnOrder.indexOf(over.id as string);
 
-        return arrayMove(previousColumnOrder, oldIndex, newIndex);
-      });
-    }
-  }, []);
+  let handleDragEnd = useCallback(
+    ({active, over}: DragEndEvent) => {
+      if (over && active.id !== over.id) {
+        table.setColumnOrder((previousColumnOrder) => {
+          let oldIndex = previousColumnOrder.indexOf(active.id as string);
+          let newIndex = previousColumnOrder.indexOf(over.id as string);
+
+          return arrayMove(previousColumnOrder, oldIndex, newIndex);
+        });
+      }
+    },
+    [table],
+  );
 
   let sensors = useSensors(
     useSensor(MouseSensor, {
@@ -226,15 +362,12 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
   let id = useId();
 
   let page =
-    onPagination && controlledPagination ?
-      controlledPagination.page
-    : table.getState().pagination.pageIndex + 1;
+    clientPagination ? table.getState().pagination.pageIndex + 1 : controlledPagination?.page ?? 1;
   let pageSize =
-    onPagination && controlledPagination ?
-      controlledPagination.pageSize
-    : table.getState().pagination.pageSize;
-  let pageCount =
-    onPagination && controlledPagination ? controlledPagination.pageCount : table.getPageCount();
+    clientPagination ?
+      table.getState().pagination.pageSize
+    : controlledPagination?.pageSize ?? DEFAULT_PAGE_SIZE;
+  let pageCount = clientPagination ? table.getPageCount() : controlledPagination?.pageCount ?? 1;
 
   return (
     <DndContext
@@ -244,7 +377,12 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
       sensors={sensors}
       onDragEnd={handleDragEnd}
     >
-      <DataTableSearchComponent table={table} search={controlledSearch} onSearch={onSearch} />
+      <DataTableSearchComponent
+        table={table}
+        clientSearch={clientSearch}
+        search={controlledSearch}
+        onSearch={onSearch}
+      />
       <Table
         style={{
           width: table.getCenterTotalSize(),
@@ -258,10 +396,13 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
                 {headerGroup.headers.map((header) => (
                   <DataTableHeader
                     key={header.id}
-                    header={header}
                     table={table}
+                    header={header}
+                    clientSorting={clientSorting}
                     sorting={controlledSorting}
+                    clientFilters={clientFilters}
                     filters={controlledFilters}
+                    clientFaceting={clientFaceting}
                     faceting={faceting}
                     onSorting={onSorting}
                     onFiltering={onFiltering}
@@ -280,7 +421,12 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
                   className={getCommonPinningClasses(cell.column)}
                   style={{...getCommonPinningStyles(cell.column)}}
                 >
-                  {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                  {
+                    flexRender(
+                      cell.column.columnDef.cell,
+                      cell.getContext(),
+                    ) /* TODO: add title attribute for truncated data */
+                  }
                 </TableCell>
               ))}
             </TableRow>
@@ -305,6 +451,7 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
         page={page}
         pageSize={pageSize}
         pageCount={pageCount}
+        clientPagination={clientPagination}
         onPagination={onPagination}
       />
     </DndContext>

@@ -68,6 +68,19 @@ export const Example = {
       columnHelper.accessor('status', {
         header: 'Status',
         size: 200,
+        cell: ({cell}) => {
+          let value = cell.getValue();
+
+          if (value === 'in-progress') {
+            return 'In progress';
+          }
+
+          if (value === 'not-started') {
+            return 'Not started';
+          }
+
+          return 'Done';
+        },
         meta: {
           filterVariant: 'select',
         },
@@ -93,6 +106,40 @@ export const Example = {
       }),
     ],
     data,
+    clientPagination: true,
+    clientSorting: true,
+    clientFilters: true,
+    clientFaceting: true,
+    clientSearch: true,
+    visibility: {
+      age: false,
+    },
+    order: ['lastName', 'firstName'],
+    pinning: {
+      lastName: 'left',
+      firstName: 'left',
+    },
+    onPagination: (...args) => {
+      console.log('onPagination...', ...args);
+    },
+    onVisibilityChange: (...args) => {
+      console.log('onVisibilityChange...', ...args);
+    },
+    onOrderChange: (...args) => {
+      console.log('onOrderChange...', ...args);
+    },
+    onPinningChange: (...args) => {
+      console.log('onPinningChange...', ...args);
+    },
+    onSorting: (...args) => {
+      console.log('onSorting...', ...args);
+    },
+    onFiltering: (...args) => {
+      console.log('onFiltering...', ...args);
+    },
+    onSearch: (...args) => {
+      console.log('onSearch...', ...args);
+    },
   },
 } satisfies StoryObj<typeof meta>;
 
@@ -146,6 +193,19 @@ export const ControlledExample = {
       columnHelper.accessor('status', {
         header: 'Status',
         size: 200,
+        cell: ({cell}) => {
+          let value = cell.getValue();
+
+          if (value === 'in-progress') {
+            return 'In progress';
+          }
+
+          if (value === 'not-started') {
+            return 'Not started';
+          }
+
+          return 'Done';
+        },
         meta: {
           filterVariant: 'select',
         },
@@ -177,9 +237,9 @@ export const ControlledExample = {
       pageSize: DEFAULT_PAGE_SIZE,
     },
     onPagination: () => {},
-    sorting: false,
+    sorting: null,
     onSorting: () => {},
-    filters: false,
+    filters: null,
     onFiltering: () => {},
     search: null,
     onSearch: () => {},
@@ -232,6 +292,8 @@ export const ControlledExample = {
         // TODO: fix this
         // eslint-disable-next-line react/jsx-no-bind -- TODO
         onPagination={(newPagination) => {
+          console.log('onPagination...', newPagination);
+
           if (pagination) {
             let resolvedPagination = {...pagination, ...newPagination};
 
@@ -247,18 +309,21 @@ export const ControlledExample = {
         // TODO: fix this
         // eslint-disable-next-line react/jsx-no-bind -- TODO
         onSorting={(newSorting) => {
+          console.log('onSorting...', newSorting);
           updateArgs({sorting: newSorting});
         }}
         filters={filters}
         // TODO: fix this
         // eslint-disable-next-line react/jsx-no-bind -- TODO
         onFiltering={(newFilters) => {
+          console.log('onFiltering...', newFilters);
           updateArgs({filters: newFilters});
         }}
         search={search}
         // TODO: fix this
         // eslint-disable-next-line react/jsx-no-bind -- TODO
         onSearch={(newSearch) => {
+          console.log('onSearch...', newSearch);
           updateArgs({search: newSearch});
         }}
       />

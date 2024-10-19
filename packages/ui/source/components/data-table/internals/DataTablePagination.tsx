@@ -19,93 +19,116 @@ export type DataTablePaginationProps = {
   pageSize: number;
   pageCount: number;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
+  clientPagination: DataTableProps<any, any>['clientPagination'];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   onPagination: DataTableProps<any, any>['onPagination'];
 };
 
 export const DataTablePagination = memo(
-  ({table, page, pageSize, pageCount, onPagination}: DataTablePaginationProps) => {
+  ({
+    table,
+    page,
+    pageSize,
+    pageCount,
+    clientPagination,
+    onPagination,
+  }: DataTablePaginationProps) => {
     let isFirstPage = page === 1;
     let isLastPage = page >= pageCount;
 
     let handlePageClick = useCallback(
       (newPage: number) => {
+        if (clientPagination) {
+          table.setPageIndex(Math.max(0, Math.min(newPage - 1, pageCount)));
+        }
+
         if (onPagination) {
           onPagination({
             page: Math.max(1, Math.min(newPage, pageCount)),
           });
-        } else {
-          table.setPageIndex(Math.max(0, Math.min(newPage - 1, pageCount)));
         }
       },
-      [onPagination, pageCount, table],
+      [clientPagination, onPagination, pageCount, table],
     );
 
     let handleFirstPageClick = useCallback(() => {
+      if (clientPagination) {
+        table.firstPage();
+      }
+
       if (onPagination) {
         onPagination({
           page: 1,
         });
-      } else {
-        table.firstPage();
       }
-    }, [onPagination, table]);
+    }, [clientPagination, onPagination, table]);
 
     let handleLastPageClick = useCallback(() => {
+      if (clientPagination) {
+        table.lastPage();
+      }
+
       if (onPagination) {
         onPagination({
           page: pageCount,
         });
-      } else {
-        table.lastPage();
       }
-    }, [onPagination, pageCount, table]);
+    }, [clientPagination, onPagination, pageCount, table]);
 
     let handlePreviousPageClick = useCallback(() => {
+      if (clientPagination) {
+        table.previousPage();
+      }
+
       if (onPagination) {
         onPagination({
           page: Math.max(1, Math.min(page - 1, pageCount)),
         });
-      } else {
-        table.previousPage();
       }
-    }, [onPagination, page, pageCount, table]);
+    }, [clientPagination, onPagination, page, pageCount, table]);
 
     let handleNextPageClick = useCallback(() => {
+      if (clientPagination) {
+        table.nextPage();
+      }
+
       if (onPagination) {
         onPagination({
           page: Math.max(1, Math.min(page + 1, pageCount)),
         });
-      } else {
-        table.nextPage();
       }
-    }, [onPagination, page, pageCount, table]);
+    }, [clientPagination, onPagination, page, pageCount, table]);
 
     let handlePageChange = useCallback(
       (event: ChangeEvent<HTMLInputElement>) => {
         let pageIndex = event.target.value ? Number(event.target.value) - 1 : 0;
 
+        if (clientPagination) {
+          table.setPageIndex(pageIndex);
+        }
+
         if (onPagination) {
           onPagination({
             page: Math.max(1, Math.min(pageIndex + 1, pageCount)),
           });
-        } else {
-          table.setPageIndex(pageIndex);
         }
       },
-      [onPagination, pageCount, table],
+      [clientPagination, onPagination, pageCount, table],
     );
 
     let handlePageSizeChange = useCallback(
       (pageSize: string) => {
+        if (clientPagination) {
+          table.setPageSize(Number(pageSize));
+        }
+
         if (onPagination) {
           onPagination({
             pageSize: Number(pageSize) as PageSize,
           });
-        } else {
-          table.setPageSize(Number(pageSize));
         }
       },
-      [onPagination, table],
+      [clientPagination, onPagination, table],
     );
 
     return (
