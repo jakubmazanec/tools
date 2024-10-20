@@ -1,0 +1,24 @@
+{
+  "template": "@jakubmazanec/carson-templates:projects/react-library",
+  "overrides": {
+    "packageJson": {
+      "exports": {
+        ".": "./build/main.js",
+        "./development": "./build/development.js",
+        "./styles": "./build/styles.css"
+      }
+    },
+    "tsconfig": {
+      "compilerOptions": {
+        "exactOptionalPropertyTypes": false
+      }
+    },
+    "storybookConfig": {
+      "stories": [
+        "../stories/Introduction.mdx",
+        "../stories/**/*.mdx",
+        "../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)"
+      ]
+    }
+  }
+}
