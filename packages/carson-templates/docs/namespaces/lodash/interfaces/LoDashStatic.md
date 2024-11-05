@@ -84,7 +84,7 @@ trimEnd, trimStart, truncate, unescape, uniqueId, upperCase, upperFirst, value, 
 
 ## Source
 
-node_modules/@types/lodash/common/common.d.ts:94
+node_modules/@types/lodash/common/common.d.ts:95
 
 > **LoDashStatic**\<`T`\>(`value`): [`Primitive`](Primitive.md)\<`T`\>
 
@@ -102,7 +102,7 @@ node_modules/@types/lodash/common/common.d.ts:94
 
 ## Source
 
-node_modules/@types/lodash/common/common.d.ts:95
+node_modules/@types/lodash/common/common.d.ts:96
 
 > **LoDashStatic**(`value`): [`String`](String.md)
 
@@ -116,7 +116,7 @@ node_modules/@types/lodash/common/common.d.ts:95
 
 ## Source
 
-node_modules/@types/lodash/common/common.d.ts:96
+node_modules/@types/lodash/common/common.d.ts:97
 
 > **LoDashStatic**\<`T`\>(`value`): [`Function`](Function.md)\<`T`\>
 
@@ -134,7 +134,7 @@ node_modules/@types/lodash/common/common.d.ts:96
 
 ## Source
 
-node_modules/@types/lodash/common/common.d.ts:97
+node_modules/@types/lodash/common/common.d.ts:98
 
 > **LoDashStatic**\<`T`\>(`value`): [`Collection`](Collection.md)\<`T`\>
 
@@ -152,7 +152,7 @@ node_modules/@types/lodash/common/common.d.ts:97
 
 ## Source
 
-node_modules/@types/lodash/common/common.d.ts:98
+node_modules/@types/lodash/common/common.d.ts:99
 
 > **LoDashStatic**\<`T`\>(`value`): [`Object`](Object.md)\<`T`\>
 
@@ -170,7 +170,7 @@ node_modules/@types/lodash/common/common.d.ts:98
 
 ## Source
 
-node_modules/@types/lodash/common/common.d.ts:99
+node_modules/@types/lodash/common/common.d.ts:100
 
 > **LoDashStatic**\<`T`\>(`value`): [`Primitive`](Primitive.md)\<`T`\>
 
@@ -188,7 +188,7 @@ node_modules/@types/lodash/common/common.d.ts:99
 
 ## Source
 
-node_modules/@types/lodash/common/common.d.ts:100
+node_modules/@types/lodash/common/common.d.ts:101
 
 ## Array
 
@@ -2666,7 +2666,7 @@ _.map(['6', '8', '10'], _.unary(parseInt));
 
 #### Source
 
-node_modules/@types/lodash/common/function.d.ts:1408
+node_modules/@types/lodash/common/function.d.ts:1417
 
 ## Lang
 
@@ -4030,7 +4030,7 @@ _.assign({a: 1}, new Foo(), new Bar());
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:32
+node_modules/@types/lodash/common/object.d.ts:33
 
 #### assign(object, source1, source2)
 
@@ -4063,7 +4063,7 @@ node_modules/@types/lodash/common/object.d.ts:32
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:36
+node_modules/@types/lodash/common/object.d.ts:37
 
 #### assign(object, source1, source2, source3)
 
@@ -4100,7 +4100,7 @@ node_modules/@types/lodash/common/object.d.ts:36
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:40
+node_modules/@types/lodash/common/object.d.ts:41
 
 #### assign(object, source1, source2, source3, source4)
 
@@ -4141,7 +4141,7 @@ node_modules/@types/lodash/common/object.d.ts:40
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:44
+node_modules/@types/lodash/common/object.d.ts:45
 
 #### assign(object)
 
@@ -4165,7 +4165,7 @@ node_modules/@types/lodash/common/object.d.ts:44
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:48
+node_modules/@types/lodash/common/object.d.ts:49
 
 #### assign(object, otherArgs)
 
@@ -4187,7 +4187,7 @@ node_modules/@types/lodash/common/object.d.ts:48
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:52
+node_modules/@types/lodash/common/object.d.ts:53
 
 ---
 
@@ -4245,7 +4245,7 @@ _.assignIn({a: 1}, new Foo(), new Bar());
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:134
+node_modules/@types/lodash/common/object.d.ts:135
 
 #### assignIn(object, source1, source2)
 
@@ -4278,7 +4278,7 @@ node_modules/@types/lodash/common/object.d.ts:134
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:138
+node_modules/@types/lodash/common/object.d.ts:139
 
 #### assignIn(object, source1, source2, source3)
 
@@ -4315,7 +4315,7 @@ node_modules/@types/lodash/common/object.d.ts:138
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:142
+node_modules/@types/lodash/common/object.d.ts:143
 
 #### assignIn(object, source1, source2, source3, source4)
 
@@ -4356,7 +4356,7 @@ node_modules/@types/lodash/common/object.d.ts:142
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:146
+node_modules/@types/lodash/common/object.d.ts:147
 
 #### assignIn(object)
 
@@ -4380,7 +4380,7 @@ node_modules/@types/lodash/common/object.d.ts:146
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:150
+node_modules/@types/lodash/common/object.d.ts:151
 
 #### assignIn(object, otherArgs)
 
@@ -4406,7 +4406,7 @@ node_modules/@types/lodash/common/object.d.ts:150
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:154
+node_modules/@types/lodash/common/object.d.ts:155
 
 ---
 
@@ -4465,7 +4465,7 @@ defaults({a: 1}, {b: 2}, {a: 3});
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:235
+node_modules/@types/lodash/common/object.d.ts:236
 
 #### assignInWith(object, source1, source2, customizer)
 
@@ -4500,7 +4500,7 @@ node_modules/@types/lodash/common/object.d.ts:235
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:239
+node_modules/@types/lodash/common/object.d.ts:240
 
 #### assignInWith(object, source1, source2, source3, customizer)
 
@@ -4539,7 +4539,7 @@ node_modules/@types/lodash/common/object.d.ts:239
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:243
+node_modules/@types/lodash/common/object.d.ts:244
 
 #### assignInWith(object, source1, source2, source3, source4, customizer)
 
@@ -4583,7 +4583,7 @@ node_modules/@types/lodash/common/object.d.ts:243
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:247
+node_modules/@types/lodash/common/object.d.ts:248
 
 #### assignInWith(object)
 
@@ -4607,7 +4607,7 @@ node_modules/@types/lodash/common/object.d.ts:247
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:251
+node_modules/@types/lodash/common/object.d.ts:252
 
 #### assignInWith(object, otherArgs)
 
@@ -4633,7 +4633,7 @@ node_modules/@types/lodash/common/object.d.ts:251
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:255
+node_modules/@types/lodash/common/object.d.ts:256
 
 ---
 
@@ -4688,7 +4688,7 @@ defaults({a: 1}, {b: 2}, {a: 3});
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:334
+node_modules/@types/lodash/common/object.d.ts:335
 
 #### assignWith(object, source1, source2, customizer)
 
@@ -4723,7 +4723,7 @@ node_modules/@types/lodash/common/object.d.ts:334
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:338
+node_modules/@types/lodash/common/object.d.ts:339
 
 #### assignWith(object, source1, source2, source3, customizer)
 
@@ -4762,7 +4762,7 @@ node_modules/@types/lodash/common/object.d.ts:338
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:342
+node_modules/@types/lodash/common/object.d.ts:343
 
 #### assignWith(object, source1, source2, source3, source4, customizer)
 
@@ -4806,7 +4806,7 @@ node_modules/@types/lodash/common/object.d.ts:342
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:346
+node_modules/@types/lodash/common/object.d.ts:347
 
 #### assignWith(object)
 
@@ -4830,7 +4830,7 @@ node_modules/@types/lodash/common/object.d.ts:346
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:350
+node_modules/@types/lodash/common/object.d.ts:351
 
 #### assignWith(object, otherArgs)
 
@@ -4856,7 +4856,7 @@ node_modules/@types/lodash/common/object.d.ts:350
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:354
+node_modules/@types/lodash/common/object.d.ts:355
 
 ---
 
@@ -4894,7 +4894,7 @@ _.functions(new Foo());
 
 #### Source
 
-node_modules/@types/lodash/common/object.d.ts:974
+node_modules/@types/lodash/common/object.d.ts:975
 
 ---
 
@@ -4937,37 +4937,42 @@ _.functionsIn(new Foo());
 
 #### Source
 
-node_modules/@types/lodash/common/object.d.ts:1008
+node_modules/@types/lodash/common/object.d.ts:1009
 
 ---
 
 ### has()
 
-> **has**\<`T`\>(`object`, `path`): `boolean`
+#### has(object, path)
+
+> **has**\<`T`, `K`\>(`object`, `path`):
+> `object is T & { [P in PropertyName]: P extends keyof T ? T[P<P>] : Record<string, unknown> extends T ? T[keyof T] : unknown } & Object`
 
 Checks if `path` is a direct property of `object`.
 
-#### Type parameters
+##### Type parameters
 
 • **T**
 
-#### Parameters
+• **K** _extends_ [`PropertyName`](../type-aliases/PropertyName.md)
+
+##### Parameters
 
 • **object**: `T`
 
 The object to query.
 
-• **path**: [`PropertyPath`](../type-aliases/PropertyPath.md)
+• **path**: `K`
 
 The path to check.
 
-#### Returns
+##### Returns
 
-`boolean`
+`object is T & { [P in PropertyName]: P extends keyof T ? T[P<P>] : Record<string, unknown> extends T ? T[keyof T] : unknown } & Object`
 
 Returns `true` if `path` exists, else `false`.
 
-#### Example
+##### Example
 
 ```ts
 var object = {a: {b: {c: 3}}};
@@ -4986,9 +4991,31 @@ _.has(other, 'a');
 // => false
 ```
 
-#### Source
+##### Source
 
-node_modules/@types/lodash/common/object.d.ts:1330
+node_modules/@types/lodash/common/object.d.ts:1331
+
+#### has(object, path)
+
+> **has**\<`T`\>(`object`, `path`): `boolean`
+
+##### Type parameters
+
+• **T**
+
+##### Parameters
+
+• **object**: `T`
+
+• **path**: [`PropertyPath`](../type-aliases/PropertyPath.md)
+
+##### Returns
+
+`boolean`
+
+##### Source
+
+node_modules/@types/lodash/common/object.d.ts:1332
 
 ---
 
@@ -5038,7 +5065,7 @@ _.hasIn(object, 'b');
 
 #### Source
 
-node_modules/@types/lodash/common/object.d.ts:1368
+node_modules/@types/lodash/common/object.d.ts:1370
 
 ---
 
@@ -5093,7 +5120,7 @@ _.merge(users, ages);
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:1775
+node_modules/@types/lodash/common/object.d.ts:1777
 
 #### merge(object, source1, source2)
 
@@ -5126,7 +5153,7 @@ node_modules/@types/lodash/common/object.d.ts:1775
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:1779
+node_modules/@types/lodash/common/object.d.ts:1781
 
 #### merge(object, source1, source2, source3)
 
@@ -5163,7 +5190,7 @@ node_modules/@types/lodash/common/object.d.ts:1779
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:1783
+node_modules/@types/lodash/common/object.d.ts:1785
 
 #### merge(object, source1, source2, source3, source4)
 
@@ -5204,7 +5231,7 @@ node_modules/@types/lodash/common/object.d.ts:1783
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:1787
+node_modules/@types/lodash/common/object.d.ts:1789
 
 #### merge(object, otherArgs)
 
@@ -5226,7 +5253,7 @@ node_modules/@types/lodash/common/object.d.ts:1787
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:1791
+node_modules/@types/lodash/common/object.d.ts:1793
 
 ---
 
@@ -5290,7 +5317,7 @@ _.mergeWith(object, other, customizer);
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:1874
+node_modules/@types/lodash/common/object.d.ts:1876
 
 #### mergeWith(object, source1, source2, customizer)
 
@@ -5325,7 +5352,7 @@ node_modules/@types/lodash/common/object.d.ts:1874
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:1878
+node_modules/@types/lodash/common/object.d.ts:1880
 
 #### mergeWith(object, source1, source2, source3, customizer)
 
@@ -5364,7 +5391,7 @@ node_modules/@types/lodash/common/object.d.ts:1878
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:1882
+node_modules/@types/lodash/common/object.d.ts:1884
 
 #### mergeWith(object, source1, source2, source3, source4, customizer)
 
@@ -5408,7 +5435,7 @@ node_modules/@types/lodash/common/object.d.ts:1882
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:1886
+node_modules/@types/lodash/common/object.d.ts:1888
 
 #### mergeWith(object, otherArgs)
 
@@ -5430,7 +5457,7 @@ node_modules/@types/lodash/common/object.d.ts:1886
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:1890
+node_modules/@types/lodash/common/object.d.ts:1892
 
 ---
 
@@ -5477,7 +5504,7 @@ _.omit(object, ['a', 'c']);
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:1953
+node_modules/@types/lodash/common/object.d.ts:1955
 
 #### omit(object, paths)
 
@@ -5505,7 +5532,7 @@ node_modules/@types/lodash/common/object.d.ts:1953
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:1960
+node_modules/@types/lodash/common/object.d.ts:1962
 
 #### omit(object, paths)
 
@@ -5532,7 +5559,7 @@ node_modules/@types/lodash/common/object.d.ts:1960
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:1964
+node_modules/@types/lodash/common/object.d.ts:1966
 
 ---
 
@@ -5576,7 +5603,7 @@ _.omitBy(object, _.isNumber);
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:2015
+node_modules/@types/lodash/common/object.d.ts:2017
 
 #### omitBy(object, predicate)
 
@@ -5602,7 +5629,7 @@ node_modules/@types/lodash/common/object.d.ts:2015
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:2019
+node_modules/@types/lodash/common/object.d.ts:2021
 
 #### omitBy(object, predicate)
 
@@ -5628,7 +5655,7 @@ node_modules/@types/lodash/common/object.d.ts:2019
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:2023
+node_modules/@types/lodash/common/object.d.ts:2025
 
 ---
 
@@ -5673,7 +5700,7 @@ _.pick(object, ['a', 'c']);
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:2065
+node_modules/@types/lodash/common/object.d.ts:2067
 
 #### pick(object, props)
 
@@ -5700,7 +5727,7 @@ node_modules/@types/lodash/common/object.d.ts:2065
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:2069
+node_modules/@types/lodash/common/object.d.ts:2071
 
 ---
 
@@ -5747,7 +5774,7 @@ _.pickBy(object, _.isNumber);
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:2107
+node_modules/@types/lodash/common/object.d.ts:2109
 
 #### pickBy(object, predicate)
 
@@ -5776,7 +5803,7 @@ node_modules/@types/lodash/common/object.d.ts:2107
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:2111
+node_modules/@types/lodash/common/object.d.ts:2113
 
 #### pickBy(object, predicate)
 
@@ -5802,7 +5829,7 @@ node_modules/@types/lodash/common/object.d.ts:2111
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:2115
+node_modules/@types/lodash/common/object.d.ts:2117
 
 #### pickBy(object, predicate)
 
@@ -5828,7 +5855,7 @@ node_modules/@types/lodash/common/object.d.ts:2115
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:2119
+node_modules/@types/lodash/common/object.d.ts:2121
 
 #### pickBy(object, predicate)
 
@@ -5854,7 +5881,7 @@ node_modules/@types/lodash/common/object.d.ts:2119
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:2123
+node_modules/@types/lodash/common/object.d.ts:2125
 
 ---
 
@@ -5913,7 +5940,7 @@ _.updateWith(object, '[0][1]', _.constant('a'), Object);
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:2464
+node_modules/@types/lodash/common/object.d.ts:2466
 
 #### updateWith(object, path, updater, customizer)
 
@@ -5945,7 +5972,7 @@ node_modules/@types/lodash/common/object.d.ts:2464
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:2468
+node_modules/@types/lodash/common/object.d.ts:2470
 
 ## Other
 
@@ -5957,7 +5984,7 @@ The semantic version number.
 
 #### Source
 
-node_modules/@types/lodash/common/common.d.ts:104
+node_modules/@types/lodash/common/common.d.ts:105
 
 ---
 
@@ -6406,7 +6433,7 @@ Arguments to be partially applied.
 
 #### Source
 
-node_modules/@types/lodash/common/function.d.ts:913
+node_modules/@types/lodash/common/function.d.ts:912
 
 ---
 
@@ -6419,7 +6446,7 @@ Change the following template settings to use alternative delimiters.
 
 #### Source
 
-node_modules/@types/lodash/common/common.d.ts:109
+node_modules/@types/lodash/common/common.d.ts:110
 
 ---
 
@@ -6552,7 +6579,7 @@ Returns the new array of picked elements.
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:417
+node_modules/@types/lodash/common/object.d.ts:418
 
 #### at(object, props)
 
@@ -6578,7 +6605,7 @@ node_modules/@types/lodash/common/object.d.ts:417
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:421
+node_modules/@types/lodash/common/object.d.ts:422
 
 ---
 
@@ -7441,7 +7468,7 @@ Returns the new object.
 
 #### Source
 
-node_modules/@types/lodash/common/object.d.ts:456
+node_modules/@types/lodash/common/object.d.ts:457
 
 ---
 
@@ -7640,7 +7667,7 @@ The destination object.
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:482
+node_modules/@types/lodash/common/object.d.ts:483
 
 #### defaults(object, source1, source2)
 
@@ -7673,7 +7700,7 @@ node_modules/@types/lodash/common/object.d.ts:482
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:486
+node_modules/@types/lodash/common/object.d.ts:487
 
 #### defaults(object, source1, source2, source3)
 
@@ -7710,7 +7737,7 @@ node_modules/@types/lodash/common/object.d.ts:486
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:490
+node_modules/@types/lodash/common/object.d.ts:491
 
 #### defaults(object, source1, source2, source3, source4)
 
@@ -7752,7 +7779,7 @@ node_modules/@types/lodash/common/object.d.ts:490
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:494
+node_modules/@types/lodash/common/object.d.ts:495
 
 #### defaults(object)
 
@@ -7776,7 +7803,7 @@ node_modules/@types/lodash/common/object.d.ts:494
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:498
+node_modules/@types/lodash/common/object.d.ts:499
 
 #### defaults(object, sources)
 
@@ -7798,7 +7825,7 @@ node_modules/@types/lodash/common/object.d.ts:498
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:502
+node_modules/@types/lodash/common/object.d.ts:503
 
 ---
 
@@ -7826,7 +7853,7 @@ Returns object.
 
 #### Source
 
-node_modules/@types/lodash/common/object.d.ts:563
+node_modules/@types/lodash/common/object.d.ts:564
 
 ---
 
@@ -8424,7 +8451,7 @@ node_modules/@types/lodash/common/string.d.ts:79
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:581
+node_modules/@types/lodash/common/object.d.ts:582
 
 #### entries(object)
 
@@ -8444,7 +8471,7 @@ node_modules/@types/lodash/common/object.d.ts:581
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:585
+node_modules/@types/lodash/common/object.d.ts:586
 
 ---
 
@@ -8473,7 +8500,7 @@ node_modules/@types/lodash/common/object.d.ts:585
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:615
+node_modules/@types/lodash/common/object.d.ts:616
 
 #### entriesIn(object)
 
@@ -8493,7 +8520,7 @@ node_modules/@types/lodash/common/object.d.ts:615
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:619
+node_modules/@types/lodash/common/object.d.ts:620
 
 ---
 
@@ -8650,7 +8677,7 @@ node_modules/@types/lodash/common/collection.d.ts:170
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:649
+node_modules/@types/lodash/common/object.d.ts:650
 
 #### extend(object, source1, source2)
 
@@ -8683,7 +8710,7 @@ node_modules/@types/lodash/common/object.d.ts:649
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:653
+node_modules/@types/lodash/common/object.d.ts:654
 
 #### extend(object, source1, source2, source3)
 
@@ -8720,7 +8747,7 @@ node_modules/@types/lodash/common/object.d.ts:653
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:657
+node_modules/@types/lodash/common/object.d.ts:658
 
 #### extend(object, source1, source2, source3, source4)
 
@@ -8761,7 +8788,7 @@ node_modules/@types/lodash/common/object.d.ts:657
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:661
+node_modules/@types/lodash/common/object.d.ts:662
 
 #### extend(object)
 
@@ -8785,7 +8812,7 @@ node_modules/@types/lodash/common/object.d.ts:661
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:665
+node_modules/@types/lodash/common/object.d.ts:666
 
 #### extend(object, otherArgs)
 
@@ -8811,7 +8838,7 @@ node_modules/@types/lodash/common/object.d.ts:665
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:669
+node_modules/@types/lodash/common/object.d.ts:670
 
 ---
 
@@ -8845,7 +8872,7 @@ node_modules/@types/lodash/common/object.d.ts:669
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:727
+node_modules/@types/lodash/common/object.d.ts:728
 
 #### extendWith(object, source1, source2, customizer)
 
@@ -8880,7 +8907,7 @@ node_modules/@types/lodash/common/object.d.ts:727
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:731
+node_modules/@types/lodash/common/object.d.ts:732
 
 #### extendWith(object, source1, source2, source3, customizer)
 
@@ -8919,7 +8946,7 @@ node_modules/@types/lodash/common/object.d.ts:731
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:735
+node_modules/@types/lodash/common/object.d.ts:736
 
 #### extendWith(object, source1, source2, source3, source4, customizer)
 
@@ -8963,7 +8990,7 @@ node_modules/@types/lodash/common/object.d.ts:735
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:739
+node_modules/@types/lodash/common/object.d.ts:740
 
 #### extendWith(object)
 
@@ -8987,7 +9014,7 @@ node_modules/@types/lodash/common/object.d.ts:739
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:743
+node_modules/@types/lodash/common/object.d.ts:744
 
 #### extendWith(object, otherArgs)
 
@@ -9013,7 +9040,7 @@ node_modules/@types/lodash/common/object.d.ts:743
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:747
+node_modules/@types/lodash/common/object.d.ts:748
 
 ---
 
@@ -9478,7 +9505,7 @@ Returns the key of the matched element, else undefined.
 
 #### Source
 
-node_modules/@types/lodash/common/object.d.ts:810
+node_modules/@types/lodash/common/object.d.ts:811
 
 ---
 
@@ -9676,7 +9703,7 @@ Returns the key of the matched element, else undefined.
 
 #### Source
 
-node_modules/@types/lodash/common/object.d.ts:832
+node_modules/@types/lodash/common/object.d.ts:833
 
 ---
 
@@ -11136,7 +11163,7 @@ Returns object.
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:856
+node_modules/@types/lodash/common/object.d.ts:857
 
 #### forIn(object, iteratee)
 
@@ -11162,7 +11189,7 @@ node_modules/@types/lodash/common/object.d.ts:856
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:860
+node_modules/@types/lodash/common/object.d.ts:861
 
 ---
 
@@ -11197,7 +11224,7 @@ Returns object.
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:882
+node_modules/@types/lodash/common/object.d.ts:883
 
 #### forInRight(object, iteratee)
 
@@ -11223,7 +11250,7 @@ node_modules/@types/lodash/common/object.d.ts:882
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:886
+node_modules/@types/lodash/common/object.d.ts:887
 
 ---
 
@@ -11259,7 +11286,7 @@ Returns object.
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:910
+node_modules/@types/lodash/common/object.d.ts:911
 
 #### forOwn(object, iteratee)
 
@@ -11285,7 +11312,7 @@ node_modules/@types/lodash/common/object.d.ts:910
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:914
+node_modules/@types/lodash/common/object.d.ts:915
 
 ---
 
@@ -11320,7 +11347,7 @@ Returns object.
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:936
+node_modules/@types/lodash/common/object.d.ts:937
 
 #### forOwnRight(object, iteratee)
 
@@ -11346,7 +11373,7 @@ node_modules/@types/lodash/common/object.d.ts:936
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:940
+node_modules/@types/lodash/common/object.d.ts:941
 
 ---
 
@@ -11383,7 +11410,7 @@ Returns the resolved value.
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:1069
+node_modules/@types/lodash/common/object.d.ts:1070
 
 #### get(object, path)
 
@@ -11411,7 +11438,7 @@ node_modules/@types/lodash/common/object.d.ts:1069
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:1073
+node_modules/@types/lodash/common/object.d.ts:1074
 
 #### get(object, path, defaultValue)
 
@@ -11444,7 +11471,7 @@ node_modules/@types/lodash/common/object.d.ts:1073
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:1077
+node_modules/@types/lodash/common/object.d.ts:1078
 
 #### get(object, path)
 
@@ -11474,7 +11501,7 @@ node_modules/@types/lodash/common/object.d.ts:1077
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:1081
+node_modules/@types/lodash/common/object.d.ts:1082
 
 #### get(object, path)
 
@@ -11505,7 +11532,7 @@ node_modules/@types/lodash/common/object.d.ts:1081
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:1085
+node_modules/@types/lodash/common/object.d.ts:1086
 
 #### get(object, path, defaultValue)
 
@@ -11540,7 +11567,7 @@ node_modules/@types/lodash/common/object.d.ts:1085
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:1089
+node_modules/@types/lodash/common/object.d.ts:1090
 
 #### get(object, path)
 
@@ -11573,7 +11600,7 @@ node_modules/@types/lodash/common/object.d.ts:1089
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:1093
+node_modules/@types/lodash/common/object.d.ts:1094
 
 #### get(object, path)
 
@@ -11606,7 +11633,7 @@ node_modules/@types/lodash/common/object.d.ts:1093
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:1097
+node_modules/@types/lodash/common/object.d.ts:1098
 
 #### get(object, path, defaultValue)
 
@@ -11643,7 +11670,7 @@ node_modules/@types/lodash/common/object.d.ts:1097
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:1101
+node_modules/@types/lodash/common/object.d.ts:1102
 
 #### get(object, path)
 
@@ -11678,7 +11705,7 @@ node_modules/@types/lodash/common/object.d.ts:1101
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:1105
+node_modules/@types/lodash/common/object.d.ts:1106
 
 #### get(object, path)
 
@@ -11713,7 +11740,7 @@ node_modules/@types/lodash/common/object.d.ts:1105
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:1109
+node_modules/@types/lodash/common/object.d.ts:1110
 
 #### get(object, path, defaultValue)
 
@@ -11753,7 +11780,7 @@ node_modules/@types/lodash/common/object.d.ts:1109
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:1113
+node_modules/@types/lodash/common/object.d.ts:1114
 
 #### get(object, path)
 
@@ -11779,7 +11806,7 @@ node_modules/@types/lodash/common/object.d.ts:1113
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:1117
+node_modules/@types/lodash/common/object.d.ts:1118
 
 #### get(object, path)
 
@@ -11805,7 +11832,7 @@ node_modules/@types/lodash/common/object.d.ts:1117
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:1121
+node_modules/@types/lodash/common/object.d.ts:1122
 
 #### get(object, path, defaultValue)
 
@@ -11835,7 +11862,7 @@ node_modules/@types/lodash/common/object.d.ts:1121
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:1125
+node_modules/@types/lodash/common/object.d.ts:1126
 
 #### get(object, path, defaultValue)
 
@@ -11863,7 +11890,7 @@ node_modules/@types/lodash/common/object.d.ts:1125
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:1129
+node_modules/@types/lodash/common/object.d.ts:1130
 
 #### get(object, path)
 
@@ -11885,7 +11912,7 @@ node_modules/@types/lodash/common/object.d.ts:1129
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:1133
+node_modules/@types/lodash/common/object.d.ts:1134
 
 #### get(data, path)
 
@@ -11915,7 +11942,7 @@ node_modules/@types/lodash/common/object.d.ts:1133
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:1137
+node_modules/@types/lodash/common/object.d.ts:1138
 
 #### get(data, path, defaultValue)
 
@@ -11950,7 +11977,7 @@ node_modules/@types/lodash/common/object.d.ts:1137
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:1141
+node_modules/@types/lodash/common/object.d.ts:1142
 
 #### get(object, path, defaultValue)
 
@@ -11974,7 +12001,7 @@ node_modules/@types/lodash/common/object.d.ts:1141
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:1145
+node_modules/@types/lodash/common/object.d.ts:1146
 
 ---
 
@@ -12324,7 +12351,7 @@ Returns the new inverted object.
 
 #### Source
 
-node_modules/@types/lodash/common/object.d.ts:1391
+node_modules/@types/lodash/common/object.d.ts:1393
 
 ---
 
@@ -12362,7 +12389,7 @@ Returns the new inverted object.
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:1415
+node_modules/@types/lodash/common/object.d.ts:1417
 
 #### invertBy(object, interatee)
 
@@ -12388,7 +12415,7 @@ node_modules/@types/lodash/common/object.d.ts:1415
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:1419
+node_modules/@types/lodash/common/object.d.ts:1421
 
 ---
 
@@ -12418,7 +12445,7 @@ The arguments to invoke the method with.
 
 #### Source
 
-node_modules/@types/lodash/common/object.d.ts:1470
+node_modules/@types/lodash/common/object.d.ts:1472
 
 ---
 
@@ -13355,7 +13382,7 @@ Returns the array of property names.
 
 #### Source
 
-node_modules/@types/lodash/common/object.d.ts:1493
+node_modules/@types/lodash/common/object.d.ts:1495
 
 ---
 
@@ -13381,7 +13408,7 @@ An array of property names.
 
 #### Source
 
-node_modules/@types/lodash/common/object.d.ts:1516
+node_modules/@types/lodash/common/object.d.ts:1518
 
 ---
 
@@ -13792,7 +13819,7 @@ Returns the new mapped object.
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:1539
+node_modules/@types/lodash/common/object.d.ts:1541
 
 #### mapKeys(object, iteratee)
 
@@ -13818,7 +13845,7 @@ node_modules/@types/lodash/common/object.d.ts:1539
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:1543
+node_modules/@types/lodash/common/object.d.ts:1545
 
 ---
 
@@ -13851,7 +13878,7 @@ Returns the new mapped object.
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:1579
+node_modules/@types/lodash/common/object.d.ts:1581
 
 #### mapValues(obj, callback)
 
@@ -13880,7 +13907,7 @@ node_modules/@types/lodash/common/object.d.ts:1579
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:1583
+node_modules/@types/lodash/common/object.d.ts:1585
 
 #### mapValues(obj, iteratee)
 
@@ -13907,7 +13934,7 @@ node_modules/@types/lodash/common/object.d.ts:1583
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:1587
+node_modules/@types/lodash/common/object.d.ts:1589
 
 #### mapValues(obj, iteratee)
 
@@ -13933,7 +13960,7 @@ node_modules/@types/lodash/common/object.d.ts:1587
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:1591
+node_modules/@types/lodash/common/object.d.ts:1593
 
 #### mapValues(obj, iteratee)
 
@@ -13962,7 +13989,7 @@ node_modules/@types/lodash/common/object.d.ts:1591
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:1595
+node_modules/@types/lodash/common/object.d.ts:1597
 
 #### mapValues(obj, iteratee)
 
@@ -13989,7 +14016,7 @@ node_modules/@types/lodash/common/object.d.ts:1595
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:1599
+node_modules/@types/lodash/common/object.d.ts:1601
 
 #### mapValues(obj, iteratee)
 
@@ -14015,7 +14042,7 @@ node_modules/@types/lodash/common/object.d.ts:1599
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:1603
+node_modules/@types/lodash/common/object.d.ts:1605
 
 #### mapValues(obj)
 
@@ -14035,7 +14062,7 @@ node_modules/@types/lodash/common/object.d.ts:1603
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:1607
+node_modules/@types/lodash/common/object.d.ts:1609
 
 #### mapValues(obj)
 
@@ -14060,7 +14087,7 @@ node_modules/@types/lodash/common/object.d.ts:1607
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:1611
+node_modules/@types/lodash/common/object.d.ts:1613
 
 #### mapValues(obj)
 
@@ -14084,7 +14111,7 @@ node_modules/@types/lodash/common/object.d.ts:1611
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:1615
+node_modules/@types/lodash/common/object.d.ts:1617
 
 #### mapValues(obj)
 
@@ -14108,7 +14135,7 @@ node_modules/@types/lodash/common/object.d.ts:1615
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:1619
+node_modules/@types/lodash/common/object.d.ts:1621
 
 ---
 
@@ -15451,7 +15478,7 @@ Returns the new function.
 
 #### Source
 
-node_modules/@types/lodash/common/function.d.ts:1285
+node_modules/@types/lodash/common/function.d.ts:1284
 
 ---
 
@@ -16058,7 +16085,7 @@ Returns the new function.
 
 #### Source
 
-node_modules/@types/lodash/common/function.d.ts:1310
+node_modules/@types/lodash/common/function.d.ts:1309
 
 ---
 
@@ -16095,7 +16122,7 @@ Returns the resolved value.
 
 #### Source
 
-node_modules/@types/lodash/common/object.d.ts:2175
+node_modules/@types/lodash/common/object.d.ts:2177
 
 ---
 
@@ -16327,7 +16354,7 @@ Returns object.
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:2200
+node_modules/@types/lodash/common/object.d.ts:2202
 
 #### set(object, path, value)
 
@@ -16355,7 +16382,7 @@ node_modules/@types/lodash/common/object.d.ts:2200
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:2204
+node_modules/@types/lodash/common/object.d.ts:2206
 
 ---
 
@@ -16399,7 +16426,7 @@ Returns object.
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:2239
+node_modules/@types/lodash/common/object.d.ts:2241
 
 #### setWith(object, path, value, customizer)
 
@@ -16431,7 +16458,7 @@ node_modules/@types/lodash/common/object.d.ts:2239
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:2243
+node_modules/@types/lodash/common/object.d.ts:2245
 
 ---
 
@@ -16734,7 +16761,7 @@ Returns the new function.
 
 #### Source
 
-node_modules/@types/lodash/common/function.d.ts:1334
+node_modules/@types/lodash/common/function.d.ts:1333
 
 ---
 
@@ -17155,7 +17182,10 @@ node_modules/@types/lodash/common/string.d.ts:514
 
 ### throttle()
 
-> **throttle**\<`T`\>(`func`, `wait`?, `options`?): [`DebouncedFunc`](DebouncedFunc.md)\<`T`\>
+#### throttle(func, wait, options)
+
+> **throttle**\<`T`\>(`func`, `wait`?, `options`?):
+> [`DebouncedFuncLeading`](DebouncedFuncLeading.md)\<`T`\>
 
 Creates a throttled function that only invokes func at most once per every wait milliseconds. The
 throttled function comes with a cancel method to cancel delayed invocations and a flush method to
@@ -17166,11 +17196,11 @@ the result of the last func call.
 Note: If leading and trailing options are true, func is invoked on the trailing edge of the timeout
 only if the the throttled function is invoked more than once during the wait timeout.
 
-#### Type parameters
+##### Type parameters
 
 • **T** _extends_ (...`args`) => `any`
 
-#### Parameters
+##### Parameters
 
 • **func**: `T`
 
@@ -17180,19 +17210,43 @@ The function to throttle.
 
 The number of milliseconds to throttle invocations to.
 
-• **options?**: [`ThrottleSettings`](ThrottleSettings.md)
+• **options?**: [`ThrottleSettingsLeading`](../type-aliases/ThrottleSettingsLeading.md)
 
 The options object.
 
-#### Returns
+##### Returns
 
-[`DebouncedFunc`](DebouncedFunc.md)\<`T`\>
+[`DebouncedFuncLeading`](DebouncedFuncLeading.md)\<`T`\>
 
 Returns the new throttled function.
 
-#### Source
+##### Source
 
 node_modules/@types/lodash/common/function.d.ts:1375
+
+#### throttle(func, wait, options)
+
+> **throttle**\<`T`\>(`func`, `wait`?, `options`?): [`DebouncedFunc`](DebouncedFunc.md)\<`T`\>
+
+##### Type parameters
+
+• **T** _extends_ (...`args`) => `any`
+
+##### Parameters
+
+• **func**: `T`
+
+• **wait?**: `number`
+
+• **options?**: [`ThrottleSettings`](ThrottleSettings.md)
+
+##### Returns
+
+[`DebouncedFunc`](DebouncedFunc.md)\<`T`\>
+
+##### Source
+
+node_modules/@types/lodash/common/function.d.ts:1376
 
 ---
 
@@ -17407,7 +17461,7 @@ Returns the new array of key-value pairs.
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:2272
+node_modules/@types/lodash/common/object.d.ts:2274
 
 #### toPairs(object)
 
@@ -17427,7 +17481,7 @@ node_modules/@types/lodash/common/object.d.ts:2272
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:2276
+node_modules/@types/lodash/common/object.d.ts:2278
 
 ---
 
@@ -17458,7 +17512,7 @@ Returns the new array of key-value pairs.
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:2297
+node_modules/@types/lodash/common/object.d.ts:2299
 
 #### toPairsIn(object)
 
@@ -17478,7 +17532,7 @@ node_modules/@types/lodash/common/object.d.ts:2297
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:2301
+node_modules/@types/lodash/common/object.d.ts:2303
 
 ---
 
@@ -17572,7 +17626,7 @@ Returns the accumulated value.
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:2327
+node_modules/@types/lodash/common/object.d.ts:2329
 
 #### transform(object, iteratee, accumulator)
 
@@ -17603,7 +17657,7 @@ node_modules/@types/lodash/common/object.d.ts:2327
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:2331
+node_modules/@types/lodash/common/object.d.ts:2333
 
 #### transform(object, iteratee, accumulator)
 
@@ -17635,7 +17689,7 @@ keyof `T`, `TResult`\>
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:2335
+node_modules/@types/lodash/common/object.d.ts:2337
 
 #### transform(object)
 
@@ -17655,7 +17709,7 @@ node_modules/@types/lodash/common/object.d.ts:2335
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:2339
+node_modules/@types/lodash/common/object.d.ts:2341
 
 #### transform(object)
 
@@ -17675,7 +17729,7 @@ node_modules/@types/lodash/common/object.d.ts:2339
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:2343
+node_modules/@types/lodash/common/object.d.ts:2345
 
 ---
 
@@ -18138,7 +18192,7 @@ Returns true if the property is deleted, else false.
 
 #### Source
 
-node_modules/@types/lodash/common/object.d.ts:2403
+node_modules/@types/lodash/common/object.d.ts:2405
 
 ---
 
@@ -18264,7 +18318,7 @@ Returns object.
 
 #### Source
 
-node_modules/@types/lodash/common/object.d.ts:2427
+node_modules/@types/lodash/common/object.d.ts:2429
 
 ---
 
@@ -18343,7 +18397,7 @@ Returns an array of property values.
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:2497
+node_modules/@types/lodash/common/object.d.ts:2499
 
 #### values(object)
 
@@ -18367,7 +18421,7 @@ node_modules/@types/lodash/common/object.d.ts:2497
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:2501
+node_modules/@types/lodash/common/object.d.ts:2503
 
 #### values(object)
 
@@ -18387,7 +18441,7 @@ node_modules/@types/lodash/common/object.d.ts:2501
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:2505
+node_modules/@types/lodash/common/object.d.ts:2507
 
 ---
 
@@ -18418,7 +18472,7 @@ Returns the array of property values.
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:2544
+node_modules/@types/lodash/common/object.d.ts:2546
 
 #### valuesIn(object)
 
@@ -18442,7 +18496,7 @@ node_modules/@types/lodash/common/object.d.ts:2544
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:2548
+node_modules/@types/lodash/common/object.d.ts:2550
 
 ---
 
@@ -18574,7 +18628,7 @@ Returns the new function.
 
 #### Source
 
-node_modules/@types/lodash/common/function.d.ts:1432
+node_modules/@types/lodash/common/function.d.ts:1441
 
 ---
 

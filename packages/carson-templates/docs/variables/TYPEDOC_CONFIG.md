@@ -34,4 +34,4 @@
 
 ## Source
 
-[packages/carson-templates/source/constants.ts:89](https://github.com/jakubmazanec/tools/blob/2f8bfe433bf76006231c1e3b5197238029672b8c/packages/carson-templates/source/constants.ts#L89)
+[packages/carson-templates/source/constants.ts:89](https://github.com/jakubmazanec/tools/blob/bb20df5276ddb119762948adc2cda520aef09f0f/packages/carson-templates/source/constants.ts#L89)

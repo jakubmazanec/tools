@@ -946,7 +946,7 @@ node_modules/@types/lodash/common/string.d.ts:91
 
 #### Source
 
-node_modules/@types/lodash/common/object.d.ts:609
+node_modules/@types/lodash/common/object.d.ts:610
 
 ---
 
@@ -968,7 +968,7 @@ node_modules/@types/lodash/common/object.d.ts:609
 
 #### Source
 
-node_modules/@types/lodash/common/object.d.ts:643
+node_modules/@types/lodash/common/object.d.ts:644
 
 ---
 
@@ -1064,7 +1064,7 @@ node_modules/@types/lodash/common/string.d.ts:147
 
 #### Source
 
-node_modules/@types/lodash/common/object.d.ts:822
+node_modules/@types/lodash/common/object.d.ts:823
 
 ---
 
@@ -1090,7 +1090,7 @@ node_modules/@types/lodash/common/object.d.ts:822
 
 #### Source
 
-node_modules/@types/lodash/common/object.d.ts:844
+node_modules/@types/lodash/common/object.d.ts:845
 
 ---
 
@@ -1673,7 +1673,7 @@ node_modules/@types/lodash/common/util.d.ts:367
 
 #### Source
 
-node_modules/@types/lodash/common/object.d.ts:872
+node_modules/@types/lodash/common/object.d.ts:873
 
 ---
 
@@ -1699,7 +1699,7 @@ node_modules/@types/lodash/common/object.d.ts:872
 
 #### Source
 
-node_modules/@types/lodash/common/object.d.ts:898
+node_modules/@types/lodash/common/object.d.ts:899
 
 ---
 
@@ -1725,7 +1725,7 @@ node_modules/@types/lodash/common/object.d.ts:898
 
 #### Source
 
-node_modules/@types/lodash/common/object.d.ts:926
+node_modules/@types/lodash/common/object.d.ts:927
 
 ---
 
@@ -1751,7 +1751,7 @@ node_modules/@types/lodash/common/object.d.ts:926
 
 #### Source
 
-node_modules/@types/lodash/common/object.d.ts:952
+node_modules/@types/lodash/common/object.d.ts:953
 
 ---
 
@@ -1773,7 +1773,7 @@ node_modules/@types/lodash/common/object.d.ts:952
 
 #### Source
 
-node_modules/@types/lodash/common/object.d.ts:986
+node_modules/@types/lodash/common/object.d.ts:987
 
 ---
 
@@ -1795,7 +1795,7 @@ node_modules/@types/lodash/common/object.d.ts:986
 
 #### Source
 
-node_modules/@types/lodash/common/object.d.ts:1020
+node_modules/@types/lodash/common/object.d.ts:1021
 
 ---
 
@@ -1873,7 +1873,7 @@ node_modules/@types/lodash/common/lang.d.ts:312
 
 #### Source
 
-node_modules/@types/lodash/common/object.d.ts:1342
+node_modules/@types/lodash/common/object.d.ts:1344
 
 ---
 
@@ -1899,7 +1899,7 @@ node_modules/@types/lodash/common/object.d.ts:1342
 
 #### Source
 
-node_modules/@types/lodash/common/object.d.ts:1380
+node_modules/@types/lodash/common/object.d.ts:1382
 
 ---
 
@@ -1971,7 +1971,7 @@ node_modules/@types/lodash/common/number.d.ts:83
 
 #### Source
 
-node_modules/@types/lodash/common/object.d.ts:1403
+node_modules/@types/lodash/common/object.d.ts:1405
 
 ---
 
@@ -1999,7 +1999,7 @@ node_modules/@types/lodash/common/object.d.ts:1403
 
 #### Source
 
-node_modules/@types/lodash/common/object.d.ts:1482
+node_modules/@types/lodash/common/object.d.ts:1484
 
 ---
 
@@ -2956,7 +2956,7 @@ node_modules/@types/lodash/common/string.d.ts:169
 
 #### Source
 
-node_modules/@types/lodash/common/object.d.ts:1505
+node_modules/@types/lodash/common/object.d.ts:1507
 
 ---
 
@@ -2978,7 +2978,7 @@ node_modules/@types/lodash/common/object.d.ts:1505
 
 #### Source
 
-node_modules/@types/lodash/common/object.d.ts:1528
+node_modules/@types/lodash/common/object.d.ts:1530
 
 ---
 
@@ -3726,7 +3726,7 @@ node_modules/@types/lodash/common/string.d.ts:314
 
 ##### Source
 
-node_modules/@types/lodash/common/function.d.ts:793
+node_modules/@types/lodash/common/function.d.ts:792
 
 #### partial(plc1, plc2, arg3)
 
@@ -3762,7 +3762,7 @@ node_modules/@types/lodash/common/function.d.ts:793
 
 ##### Source
 
-node_modules/@types/lodash/common/function.d.ts:802
+node_modules/@types/lodash/common/function.d.ts:801
 
 #### partial(arg1, plc2, arg3)
 
@@ -3800,7 +3800,7 @@ node_modules/@types/lodash/common/function.d.ts:802
 
 ##### Source
 
-node_modules/@types/lodash/common/function.d.ts:810
+node_modules/@types/lodash/common/function.d.ts:809
 
 #### partial(plc1, arg2, arg3)
 
@@ -3838,7 +3838,7 @@ node_modules/@types/lodash/common/function.d.ts:810
 
 ##### Source
 
-node_modules/@types/lodash/common/function.d.ts:818
+node_modules/@types/lodash/common/function.d.ts:817
 
 #### partial(plc1, plc2, arg3)
 
@@ -3870,7 +3870,7 @@ node_modules/@types/lodash/common/function.d.ts:818
 
 ##### Source
 
-node_modules/@types/lodash/common/function.d.ts:826
+node_modules/@types/lodash/common/function.d.ts:825
 
 #### partial(arg1, plc2, plc3, arg4)
 
@@ -3907,7 +3907,7 @@ node_modules/@types/lodash/common/function.d.ts:826
 
 ##### Source
 
-node_modules/@types/lodash/common/function.d.ts:833
+node_modules/@types/lodash/common/function.d.ts:832
 
 #### partial(plc1, arg2, plc3, arg4)
 
@@ -3944,7 +3944,7 @@ node_modules/@types/lodash/common/function.d.ts:833
 
 ##### Source
 
-node_modules/@types/lodash/common/function.d.ts:840
+node_modules/@types/lodash/common/function.d.ts:839
 
 #### partial(arg1, arg2, plc3, arg4)
 
@@ -3983,7 +3983,7 @@ node_modules/@types/lodash/common/function.d.ts:840
 
 ##### Source
 
-node_modules/@types/lodash/common/function.d.ts:847
+node_modules/@types/lodash/common/function.d.ts:846
 
 #### partial(plc1, plc2, arg3, arg4)
 
@@ -4020,7 +4020,7 @@ node_modules/@types/lodash/common/function.d.ts:847
 
 ##### Source
 
-node_modules/@types/lodash/common/function.d.ts:854
+node_modules/@types/lodash/common/function.d.ts:853
 
 #### partial(arg1, plc2, arg3, arg4)
 
@@ -4059,7 +4059,7 @@ node_modules/@types/lodash/common/function.d.ts:854
 
 ##### Source
 
-node_modules/@types/lodash/common/function.d.ts:861
+node_modules/@types/lodash/common/function.d.ts:860
 
 #### partial(plc1, arg2, arg3, arg4)
 
@@ -4098,7 +4098,7 @@ node_modules/@types/lodash/common/function.d.ts:861
 
 ##### Source
 
-node_modules/@types/lodash/common/function.d.ts:868
+node_modules/@types/lodash/common/function.d.ts:867
 
 #### partial(arg1, arg2, arg3, arg4)
 
@@ -4137,7 +4137,7 @@ node_modules/@types/lodash/common/function.d.ts:868
 
 ##### Source
 
-node_modules/@types/lodash/common/function.d.ts:875
+node_modules/@types/lodash/common/function.d.ts:874
 
 #### partial(arg1, arg2, arg3)
 
@@ -4171,7 +4171,7 @@ node_modules/@types/lodash/common/function.d.ts:875
 
 ##### Source
 
-node_modules/@types/lodash/common/function.d.ts:882
+node_modules/@types/lodash/common/function.d.ts:881
 
 #### partial(arg1, arg2)
 
@@ -4201,7 +4201,7 @@ node_modules/@types/lodash/common/function.d.ts:882
 
 ##### Source
 
-node_modules/@types/lodash/common/function.d.ts:889
+node_modules/@types/lodash/common/function.d.ts:888
 
 #### partial(arg1)
 
@@ -4227,7 +4227,7 @@ node_modules/@types/lodash/common/function.d.ts:889
 
 ##### Source
 
-node_modules/@types/lodash/common/function.d.ts:896
+node_modules/@types/lodash/common/function.d.ts:895
 
 #### partial()
 
@@ -4244,7 +4244,7 @@ node_modules/@types/lodash/common/function.d.ts:896
 
 ##### Source
 
-node_modules/@types/lodash/common/function.d.ts:903
+node_modules/@types/lodash/common/function.d.ts:902
 
 ---
 
@@ -4278,7 +4278,7 @@ node_modules/@types/lodash/common/function.d.ts:903
 
 ##### Source
 
-node_modules/@types/lodash/common/function.d.ts:1117
+node_modules/@types/lodash/common/function.d.ts:1116
 
 #### partialRight(arg2)
 
@@ -4306,7 +4306,7 @@ node_modules/@types/lodash/common/function.d.ts:1117
 
 ##### Source
 
-node_modules/@types/lodash/common/function.d.ts:1124
+node_modules/@types/lodash/common/function.d.ts:1123
 
 #### partialRight(arg1, plc2, plc3)
 
@@ -4338,7 +4338,7 @@ node_modules/@types/lodash/common/function.d.ts:1124
 
 ##### Source
 
-node_modules/@types/lodash/common/function.d.ts:1130
+node_modules/@types/lodash/common/function.d.ts:1129
 
 #### partialRight(arg2, plc3)
 
@@ -4368,7 +4368,7 @@ node_modules/@types/lodash/common/function.d.ts:1130
 
 ##### Source
 
-node_modules/@types/lodash/common/function.d.ts:1137
+node_modules/@types/lodash/common/function.d.ts:1136
 
 #### partialRight(arg1, arg2, plc3)
 
@@ -4402,7 +4402,7 @@ node_modules/@types/lodash/common/function.d.ts:1137
 
 ##### Source
 
-node_modules/@types/lodash/common/function.d.ts:1144
+node_modules/@types/lodash/common/function.d.ts:1143
 
 #### partialRight(arg3)
 
@@ -4430,7 +4430,7 @@ node_modules/@types/lodash/common/function.d.ts:1144
 
 ##### Source
 
-node_modules/@types/lodash/common/function.d.ts:1151
+node_modules/@types/lodash/common/function.d.ts:1150
 
 #### partialRight(arg1, plc2, arg3)
 
@@ -4464,7 +4464,7 @@ node_modules/@types/lodash/common/function.d.ts:1151
 
 ##### Source
 
-node_modules/@types/lodash/common/function.d.ts:1158
+node_modules/@types/lodash/common/function.d.ts:1157
 
 #### partialRight(arg2, arg3)
 
@@ -4496,7 +4496,7 @@ node_modules/@types/lodash/common/function.d.ts:1158
 
 ##### Source
 
-node_modules/@types/lodash/common/function.d.ts:1165
+node_modules/@types/lodash/common/function.d.ts:1164
 
 #### partialRight(arg1, plc2, plc3, plc4)
 
@@ -4530,7 +4530,7 @@ node_modules/@types/lodash/common/function.d.ts:1165
 
 ##### Source
 
-node_modules/@types/lodash/common/function.d.ts:1172
+node_modules/@types/lodash/common/function.d.ts:1171
 
 #### partialRight(arg2, plc3, plc4)
 
@@ -4562,7 +4562,7 @@ node_modules/@types/lodash/common/function.d.ts:1172
 
 ##### Source
 
-node_modules/@types/lodash/common/function.d.ts:1179
+node_modules/@types/lodash/common/function.d.ts:1178
 
 #### partialRight(arg1, arg2, plc3, plc4)
 
@@ -4599,7 +4599,7 @@ node_modules/@types/lodash/common/function.d.ts:1179
 
 ##### Source
 
-node_modules/@types/lodash/common/function.d.ts:1186
+node_modules/@types/lodash/common/function.d.ts:1185
 
 #### partialRight(arg3, plc4)
 
@@ -4629,7 +4629,7 @@ node_modules/@types/lodash/common/function.d.ts:1186
 
 ##### Source
 
-node_modules/@types/lodash/common/function.d.ts:1193
+node_modules/@types/lodash/common/function.d.ts:1192
 
 #### partialRight(arg1, plc2, arg3, plc4)
 
@@ -4666,7 +4666,7 @@ node_modules/@types/lodash/common/function.d.ts:1193
 
 ##### Source
 
-node_modules/@types/lodash/common/function.d.ts:1200
+node_modules/@types/lodash/common/function.d.ts:1199
 
 #### partialRight(arg2, arg3, plc4)
 
@@ -4700,7 +4700,7 @@ node_modules/@types/lodash/common/function.d.ts:1200
 
 ##### Source
 
-node_modules/@types/lodash/common/function.d.ts:1207
+node_modules/@types/lodash/common/function.d.ts:1206
 
 #### partialRight(arg1, arg2, arg3, plc4)
 
@@ -4739,7 +4739,7 @@ node_modules/@types/lodash/common/function.d.ts:1207
 
 ##### Source
 
-node_modules/@types/lodash/common/function.d.ts:1214
+node_modules/@types/lodash/common/function.d.ts:1213
 
 #### partialRight(arg4)
 
@@ -4767,7 +4767,7 @@ node_modules/@types/lodash/common/function.d.ts:1214
 
 ##### Source
 
-node_modules/@types/lodash/common/function.d.ts:1221
+node_modules/@types/lodash/common/function.d.ts:1220
 
 #### partialRight(arg1, plc2, plc3, arg4)
 
@@ -4804,7 +4804,7 @@ node_modules/@types/lodash/common/function.d.ts:1221
 
 ##### Source
 
-node_modules/@types/lodash/common/function.d.ts:1228
+node_modules/@types/lodash/common/function.d.ts:1227
 
 #### partialRight(arg2, plc3, arg4)
 
@@ -4838,7 +4838,7 @@ node_modules/@types/lodash/common/function.d.ts:1228
 
 ##### Source
 
-node_modules/@types/lodash/common/function.d.ts:1235
+node_modules/@types/lodash/common/function.d.ts:1234
 
 #### partialRight(arg1, arg2, plc3, arg4)
 
@@ -4877,7 +4877,7 @@ node_modules/@types/lodash/common/function.d.ts:1235
 
 ##### Source
 
-node_modules/@types/lodash/common/function.d.ts:1242
+node_modules/@types/lodash/common/function.d.ts:1241
 
 #### partialRight(arg3, arg4)
 
@@ -4909,7 +4909,7 @@ node_modules/@types/lodash/common/function.d.ts:1242
 
 ##### Source
 
-node_modules/@types/lodash/common/function.d.ts:1249
+node_modules/@types/lodash/common/function.d.ts:1248
 
 #### partialRight(arg1, plc2, arg3, arg4)
 
@@ -4948,7 +4948,7 @@ node_modules/@types/lodash/common/function.d.ts:1249
 
 ##### Source
 
-node_modules/@types/lodash/common/function.d.ts:1256
+node_modules/@types/lodash/common/function.d.ts:1255
 
 #### partialRight(arg2, arg3, arg4)
 
@@ -4985,7 +4985,7 @@ node_modules/@types/lodash/common/function.d.ts:1256
 
 ##### Source
 
-node_modules/@types/lodash/common/function.d.ts:1263
+node_modules/@types/lodash/common/function.d.ts:1262
 
 #### partialRight(ts)
 
@@ -5010,7 +5010,7 @@ node_modules/@types/lodash/common/function.d.ts:1263
 
 ##### Source
 
-node_modules/@types/lodash/common/function.d.ts:1270
+node_modules/@types/lodash/common/function.d.ts:1269
 
 #### partialRight()
 
@@ -5027,7 +5027,7 @@ node_modules/@types/lodash/common/function.d.ts:1270
 
 ##### Source
 
-node_modules/@types/lodash/common/function.d.ts:1274
+node_modules/@types/lodash/common/function.d.ts:1273
 
 ---
 
@@ -5235,7 +5235,7 @@ node_modules/@types/lodash/common/util.d.ts:950
 
 #### Source
 
-node_modules/@types/lodash/common/function.d.ts:1297
+node_modules/@types/lodash/common/function.d.ts:1296
 
 ---
 
@@ -5337,7 +5337,7 @@ node_modules/@types/lodash/common/string.d.ts:373
 
 #### Source
 
-node_modules/@types/lodash/common/function.d.ts:1322
+node_modules/@types/lodash/common/function.d.ts:1321
 
 ---
 
@@ -5370,7 +5370,7 @@ node_modules/@types/lodash/common/function.d.ts:1322
 
 #### Source
 
-node_modules/@types/lodash/common/object.d.ts:2187
+node_modules/@types/lodash/common/object.d.ts:2189
 
 ---
 
@@ -5448,7 +5448,7 @@ node_modules/@types/lodash/common/math.d.ts:312
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:2220
+node_modules/@types/lodash/common/object.d.ts:2222
 
 #### set(path, value)
 
@@ -5478,7 +5478,7 @@ node_modules/@types/lodash/common/object.d.ts:2220
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:2224
+node_modules/@types/lodash/common/object.d.ts:2226
 
 ---
 
@@ -5510,7 +5510,7 @@ node_modules/@types/lodash/common/object.d.ts:2224
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:2259
+node_modules/@types/lodash/common/object.d.ts:2261
 
 #### setWith(path, value, customizer)
 
@@ -5543,7 +5543,7 @@ node_modules/@types/lodash/common/object.d.ts:2259
 
 ##### Source
 
-node_modules/@types/lodash/common/object.d.ts:2263
+node_modules/@types/lodash/common/object.d.ts:2265
 
 ---
 
@@ -5637,7 +5637,7 @@ node_modules/@types/lodash/common/string.d.ts:425
 
 #### Source
 
-node_modules/@types/lodash/common/function.d.ts:1346
+node_modules/@types/lodash/common/function.d.ts:1345
 
 ---
 
@@ -5948,27 +5948,51 @@ node_modules/@types/lodash/common/string.d.ts:526
 
 ### throttle()
 
+#### throttle(wait, options)
+
+> **throttle**(`wait`?, `options`?): `T` _extends_ (...`args`) => `any` ?
+> [`FunctionChain`](FunctionChain.md)\<[`DebouncedFuncLeading`](DebouncedFuncLeading.md)\<`T`\<`T`\>\>\>
+> : `never`
+
+##### Parameters
+
+• **wait?**: `number`
+
+• **options?**: [`ThrottleSettingsLeading`](../type-aliases/ThrottleSettingsLeading.md)
+
+##### Returns
+
+`T` _extends_ (...`args`) => `any` ?
+[`FunctionChain`](FunctionChain.md)\<[`DebouncedFuncLeading`](DebouncedFuncLeading.md)\<`T`\<`T`\>\>\>
+: `never`
+
+##### See
+
+\_.throttle
+
+##### Source
+
+node_modules/@types/lodash/common/function.d.ts:1395
+
+#### throttle(wait, options)
+
 > **throttle**(`wait`?, `options`?): `T` _extends_ (...`args`) => `any` ?
 > [`FunctionChain`](FunctionChain.md)\<[`DebouncedFunc`](DebouncedFunc.md)\<`T`\<`T`\>\>\> : `never`
 
-#### Parameters
+##### Parameters
 
 • **wait?**: `number`
 
 • **options?**: [`ThrottleSettings`](ThrottleSettings.md)
 
-#### Returns
+##### Returns
 
 `T` _extends_ (...`args`) => `any` ?
 [`FunctionChain`](FunctionChain.md)\<[`DebouncedFunc`](DebouncedFunc.md)\<`T`\<`T`\>\>\> : `never`
 
-#### See
+##### Source
 
-\_.throttle
-
-#### Source
-
-node_modules/@types/lodash/common/function.d.ts:1390
+node_modules/@types/lodash/common/function.d.ts:1399
 
 ---
 
@@ -6208,7 +6232,7 @@ node_modules/@types/lodash/common/lang.d.ts:1616
 
 #### Source
 
-node_modules/@types/lodash/common/object.d.ts:2288
+node_modules/@types/lodash/common/object.d.ts:2290
 
 ---
 
@@ -6234,7 +6258,7 @@ node_modules/@types/lodash/common/object.d.ts:2288
 
 #### Source
 
-node_modules/@types/lodash/common/object.d.ts:2313
+node_modules/@types/lodash/common/object.d.ts:2315
 
 ---
 
@@ -6444,7 +6468,7 @@ node_modules/@types/lodash/common/string.d.ts:689
 
 #### Source
 
-node_modules/@types/lodash/common/function.d.ts:1420
+node_modules/@types/lodash/common/function.d.ts:1429
 
 ---
 
@@ -6514,7 +6538,7 @@ node_modules/@types/lodash/common/util.d.ts:1168
 
 #### Source
 
-node_modules/@types/lodash/common/object.d.ts:2415
+node_modules/@types/lodash/common/object.d.ts:2417
 
 ---
 
@@ -6542,7 +6566,7 @@ node_modules/@types/lodash/common/object.d.ts:2415
 
 #### Source
 
-node_modules/@types/lodash/common/object.d.ts:2439
+node_modules/@types/lodash/common/object.d.ts:2441
 
 ---
 
@@ -6689,4 +6713,4 @@ node_modules/@types/lodash/common/string.d.ts:786
 
 #### Source
 
-node_modules/@types/lodash/common/function.d.ts:1444
+node_modules/@types/lodash/common/function.d.ts:1453

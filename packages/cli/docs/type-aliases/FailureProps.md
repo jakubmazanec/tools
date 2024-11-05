@@ -26,4 +26,4 @@ Information about the failure state. Overrides information retireved from `error
 
 ## Source
 
-[cli/source/ui/Failure.tsx:12](https://github.com/jakubmazanec/tools/blob/2f8bfe433bf76006231c1e3b5197238029672b8c/packages/cli/source/ui/Failure.tsx#L12)
+[cli/source/ui/Failure.tsx:12](https://github.com/jakubmazanec/tools/blob/bb20df5276ddb119762948adc2cda520aef09f0f/packages/cli/source/ui/Failure.tsx#L12)

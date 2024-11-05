@@ -134,6 +134,7 @@
 - [ReplaceFunction](type-aliases/ReplaceFunction.md)
 - [SetWithCustomizer](type-aliases/SetWithCustomizer.md)
 - [StringIterator](type-aliases/StringIterator.md)
+- [ThrottleSettingsLeading](type-aliases/ThrottleSettingsLeading.md)
 - [Truthy](type-aliases/Truthy.md)
 - [ValueIteratee](type-aliases/ValueIteratee.md)
 - [ValueIterateeCustom](type-aliases/ValueIterateeCustom.md)

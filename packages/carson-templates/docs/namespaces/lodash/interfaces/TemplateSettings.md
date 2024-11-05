@@ -21,7 +21,7 @@ The "escape" delimiter.
 
 #### Source
 
-node_modules/@types/lodash/common/common.d.ts:119
+node_modules/@types/lodash/common/common.d.ts:120
 
 ---
 
@@ -33,7 +33,7 @@ The "evaluate" delimiter.
 
 #### Source
 
-node_modules/@types/lodash/common/common.d.ts:123
+node_modules/@types/lodash/common/common.d.ts:124
 
 ---
 
@@ -45,7 +45,7 @@ An object to import into the template as local variables.
 
 #### Source
 
-node_modules/@types/lodash/common/common.d.ts:127
+node_modules/@types/lodash/common/common.d.ts:128
 
 ---
 
@@ -57,7 +57,7 @@ The "interpolate" delimiter.
 
 #### Source
 
-node_modules/@types/lodash/common/common.d.ts:131
+node_modules/@types/lodash/common/common.d.ts:132
 
 ---
 
@@ -69,4 +69,4 @@ Used to reference the data object in the template text.
 
 #### Source
 
-node_modules/@types/lodash/common/common.d.ts:135
+node_modules/@types/lodash/common/common.d.ts:136

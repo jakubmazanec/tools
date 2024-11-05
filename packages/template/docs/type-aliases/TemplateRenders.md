@@ -14,4 +14,4 @@
 
 ## Source
 
-[packages/template/source/TemplateRenders.ts:5](https://github.com/jakubmazanec/tools/blob/2f8bfe433bf76006231c1e3b5197238029672b8c/packages/template/source/TemplateRenders.ts#L5)
+[packages/template/source/TemplateRenders.ts:5](https://github.com/jakubmazanec/tools/blob/bb20df5276ddb119762948adc2cda520aef09f0f/packages/template/source/TemplateRenders.ts#L5)

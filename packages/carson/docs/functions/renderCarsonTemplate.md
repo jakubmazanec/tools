@@ -19,4 +19,4 @@ Renders a Carson template with provided template data.
 
 ## Source
 
-[packages/carson/source/template/renderCarsonTemplate.ts:18](https://github.com/jakubmazanec/tools/blob/2f8bfe433bf76006231c1e3b5197238029672b8c/packages/carson/source/template/renderCarsonTemplate.ts#L18)
+[packages/carson/source/template/renderCarsonTemplate.ts:18](https://github.com/jakubmazanec/tools/blob/bb20df5276ddb119762948adc2cda520aef09f0f/packages/carson/source/template/renderCarsonTemplate.ts#L18)

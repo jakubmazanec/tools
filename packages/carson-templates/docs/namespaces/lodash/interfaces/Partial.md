@@ -283,39 +283,6 @@ node_modules/@types/lodash/common/function.d.ts:656
 
 node_modules/@types/lodash/common/function.d.ts:657
 
-> **Partial**\<`T1`, `T2`, `T3`, `T4`, `R`\>(`func`, `arg1`, `arg2`, `arg3`):
-> [`Function1`](../type-aliases/Function1.md)\<`T4`, `R`\>
-
-## Type parameters
-
-• **T1**
-
-• **T2**
-
-• **T3**
-
-• **T4**
-
-• **R**
-
-## Parameters
-
-• **func**: [`Function4`](../type-aliases/Function4.md)\<`T1`, `T2`, `T3`, `T4`, `R`\>
-
-• **arg1**: `T1`
-
-• **arg2**: `T2`
-
-• **arg3**: `T3`
-
-## Returns
-
-[`Function1`](../type-aliases/Function1.md)\<`T4`, `R`\>
-
-## Source
-
-node_modules/@types/lodash/common/function.d.ts:658
-
 > **Partial**\<`T1`, `T2`, `T3`, `T4`, `R`\>(`func`, `plc1`, `plc2`, `plc3`, `arg4`):
 > [`Function3`](../type-aliases/Function3.md)\<`T1`, `T2`, `T3`, `R`\>
 
@@ -349,7 +316,7 @@ node_modules/@types/lodash/common/function.d.ts:658
 
 ## Source
 
-node_modules/@types/lodash/common/function.d.ts:659
+node_modules/@types/lodash/common/function.d.ts:658
 
 > **Partial**\<`T1`, `T2`, `T3`, `T4`, `R`\>(`func`, `arg1`, `plc2`, `plc3`, `arg4`):
 > [`Function2`](../type-aliases/Function2.md)\<`T2`, `T3`, `R`\>
@@ -384,7 +351,7 @@ node_modules/@types/lodash/common/function.d.ts:659
 
 ## Source
 
-node_modules/@types/lodash/common/function.d.ts:660
+node_modules/@types/lodash/common/function.d.ts:659
 
 > **Partial**\<`T1`, `T2`, `T3`, `T4`, `R`\>(`func`, `plc1`, `arg2`, `plc3`, `arg4`):
 > [`Function2`](../type-aliases/Function2.md)\<`T1`, `T3`, `R`\>
@@ -419,7 +386,7 @@ node_modules/@types/lodash/common/function.d.ts:660
 
 ## Source
 
-node_modules/@types/lodash/common/function.d.ts:661
+node_modules/@types/lodash/common/function.d.ts:660
 
 > **Partial**\<`T1`, `T2`, `T3`, `T4`, `R`\>(`func`, `arg1`, `arg2`, `plc3`, `arg4`):
 > [`Function1`](../type-aliases/Function1.md)\<`T3`, `R`\>
@@ -454,7 +421,7 @@ node_modules/@types/lodash/common/function.d.ts:661
 
 ## Source
 
-node_modules/@types/lodash/common/function.d.ts:662
+node_modules/@types/lodash/common/function.d.ts:661
 
 > **Partial**\<`T1`, `T2`, `T3`, `T4`, `R`\>(`func`, `plc1`, `plc2`, `arg3`, `arg4`):
 > [`Function2`](../type-aliases/Function2.md)\<`T1`, `T2`, `R`\>
@@ -489,7 +456,7 @@ node_modules/@types/lodash/common/function.d.ts:662
 
 ## Source
 
-node_modules/@types/lodash/common/function.d.ts:663
+node_modules/@types/lodash/common/function.d.ts:662
 
 > **Partial**\<`T1`, `T2`, `T3`, `T4`, `R`\>(`func`, `arg1`, `plc2`, `arg3`, `arg4`):
 > [`Function1`](../type-aliases/Function1.md)\<`T2`, `R`\>
@@ -524,7 +491,7 @@ node_modules/@types/lodash/common/function.d.ts:663
 
 ## Source
 
-node_modules/@types/lodash/common/function.d.ts:664
+node_modules/@types/lodash/common/function.d.ts:663
 
 > **Partial**\<`T1`, `T2`, `T3`, `T4`, `R`\>(`func`, `plc1`, `arg2`, `arg3`, `arg4`):
 > [`Function1`](../type-aliases/Function1.md)\<`T1`, `R`\>
@@ -559,7 +526,7 @@ node_modules/@types/lodash/common/function.d.ts:664
 
 ## Source
 
-node_modules/@types/lodash/common/function.d.ts:665
+node_modules/@types/lodash/common/function.d.ts:664
 
 > **Partial**\<`TS`, `R`\>(`func`): (...`ts`) => `R`
 
@@ -587,7 +554,7 @@ node_modules/@types/lodash/common/function.d.ts:665
 
 ## Source
 
-node_modules/@types/lodash/common/function.d.ts:666
+node_modules/@types/lodash/common/function.d.ts:665
 
 > **Partial**\<`TS`, `T1`, `R`\>(`func`, `arg1`): (...`ts`) => `R`
 
@@ -619,7 +586,7 @@ node_modules/@types/lodash/common/function.d.ts:666
 
 ## Source
 
-node_modules/@types/lodash/common/function.d.ts:667
+node_modules/@types/lodash/common/function.d.ts:666
 
 > **Partial**\<`TS`, `T1`, `T2`, `R`\>(`func`, `t1`, `t2`): (...`ts`) => `R`
 
@@ -655,7 +622,7 @@ node_modules/@types/lodash/common/function.d.ts:667
 
 ## Source
 
-node_modules/@types/lodash/common/function.d.ts:668
+node_modules/@types/lodash/common/function.d.ts:667
 
 > **Partial**\<`TS`, `T1`, `T2`, `T3`, `R`\>(`func`, `t1`, `t2`, `t3`): (...`ts`) => `R`
 
@@ -695,7 +662,7 @@ node_modules/@types/lodash/common/function.d.ts:668
 
 ## Source
 
-node_modules/@types/lodash/common/function.d.ts:669
+node_modules/@types/lodash/common/function.d.ts:668
 
 > **Partial**\<`TS`, `T1`, `T2`, `T3`, `T4`, `R`\>(`func`, `t1`, `t2`, `t3`, `t4`): (...`ts`) => `R`
 
@@ -739,7 +706,7 @@ node_modules/@types/lodash/common/function.d.ts:669
 
 ## Source
 
-node_modules/@types/lodash/common/function.d.ts:670
+node_modules/@types/lodash/common/function.d.ts:669
 
 ## Properties
 
@@ -749,4 +716,4 @@ node_modules/@types/lodash/common/function.d.ts:670
 
 #### Source
 
-node_modules/@types/lodash/common/function.d.ts:671
+node_modules/@types/lodash/common/function.d.ts:670

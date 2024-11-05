@@ -20,4 +20,4 @@ Options.
 
 ## Source
 
-[packages/carson/source/workspace/saveWorkspaceConfig.ts:21](https://github.com/jakubmazanec/tools/blob/2f8bfe433bf76006231c1e3b5197238029672b8c/packages/carson/source/workspace/saveWorkspaceConfig.ts#L21)
+[packages/carson/source/workspace/saveWorkspaceConfig.ts:21](https://github.com/jakubmazanec/tools/blob/bb20df5276ddb119762948adc2cda520aef09f0f/packages/carson/source/workspace/saveWorkspaceConfig.ts#L21)

@@ -14,4 +14,4 @@ Common interface between Arrays and jQuery objects
 
 ## Source
 
-node_modules/@types/lodash/common/common.d.ts:246
+node_modules/@types/lodash/common/common.d.ts:247

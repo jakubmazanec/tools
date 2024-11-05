@@ -24,4 +24,4 @@
 
 ## Source
 
-node_modules/@types/lodash/common/object.d.ts:2226
+node_modules/@types/lodash/common/object.d.ts:2228

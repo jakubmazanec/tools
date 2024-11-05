@@ -20,7 +20,7 @@ Removes all key-value entries from the map.
 
 #### Source
 
-node_modules/@types/lodash/common/common.d.ts:169
+node_modules/@types/lodash/common/common.d.ts:170
 
 ## Methods
 
@@ -44,7 +44,7 @@ Returns `true` if the entry was removed successfully, else `false`.
 
 #### Source
 
-node_modules/@types/lodash/common/common.d.ts:146
+node_modules/@types/lodash/common/common.d.ts:147
 
 ---
 
@@ -68,7 +68,7 @@ Returns the cached value.
 
 #### Source
 
-node_modules/@types/lodash/common/common.d.ts:152
+node_modules/@types/lodash/common/common.d.ts:153
 
 ---
 
@@ -92,7 +92,7 @@ Returns `true` if an entry for `key` exists, else `false`.
 
 #### Source
 
-node_modules/@types/lodash/common/common.d.ts:158
+node_modules/@types/lodash/common/common.d.ts:159
 
 ---
 
@@ -120,4 +120,4 @@ Returns the cache object.
 
 #### Source
 
-node_modules/@types/lodash/common/common.d.ts:165
+node_modules/@types/lodash/common/common.d.ts:166

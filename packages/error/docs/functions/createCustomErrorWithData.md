@@ -56,7 +56,7 @@ Class that implements [CustomErrorWithData](../type-aliases/CustomErrorWithData.
 
 ### Source
 
-[createCustomErrorWithData.ts:21](https://github.com/jakubmazanec/tools/blob/2f8bfe433bf76006231c1e3b5197238029672b8c/packages/error/source/createCustomErrorWithData.ts#L21)
+[createCustomErrorWithData.ts:21](https://github.com/jakubmazanec/tools/blob/bb20df5276ddb119762948adc2cda520aef09f0f/packages/error/source/createCustomErrorWithData.ts#L21)
 
 ## createCustomErrorWithData(errorName, errorMessages, errorData)
 
@@ -97,4 +97,4 @@ Class that implements [CustomErrorWithData](../type-aliases/CustomErrorWithData.
 
 ### Source
 
-[createCustomErrorWithData.ts:29](https://github.com/jakubmazanec/tools/blob/2f8bfe433bf76006231c1e3b5197238029672b8c/packages/error/source/createCustomErrorWithData.ts#L29)
+[createCustomErrorWithData.ts:29](https://github.com/jakubmazanec/tools/blob/bb20df5276ddb119762948adc2cda520aef09f0f/packages/error/source/createCustomErrorWithData.ts#L29)
