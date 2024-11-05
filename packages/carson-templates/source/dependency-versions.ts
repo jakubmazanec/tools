@@ -86,4 +86,7 @@ export const DEPENDENCY_VERSIONS: Record<string, string> = {
   typescript: '^5.0.0',
   vite: '^5.0.0',
   vitest: '^1.0.0',
+
+  node: '^22.11.0',
+  npm: '^10.9.0',
 };

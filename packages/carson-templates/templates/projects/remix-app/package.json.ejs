@@ -58,9 +58,9 @@ let packageJson = lodash.merge(
     },
     dependencies: getDependencies(dependencies, workspace),
     devDependencies: getDependencies(developmentDependencies, workspace),
-    packageManager: 'npm@10.1.0',
+    packageManager: `npm@${semver.minVersion(DEPENDENCY_VERSIONS.npm)}`,
     engines: {
-      node: '^20.8.0',
+      node: DEPENDENCY_VERSIONS.node,
     },
   },
   project.config.overrides?.packageJson ?? {},

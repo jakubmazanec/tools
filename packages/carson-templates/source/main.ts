@@ -1,4 +1,5 @@
 export * from './constants.js';
+export * from './dependency-versions.js';
 export * from './getAppUrl.js';
 export * from './getDependencies.js';
 export * from './getDevelopmentBranch.js';
