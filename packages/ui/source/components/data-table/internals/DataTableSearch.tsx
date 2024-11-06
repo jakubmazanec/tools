@@ -27,8 +27,8 @@ export function DataTableSearch({
 }: DataTableSearchProps) {
   let currentSearch =
     clientSearch ?
-      (table.getState().globalFilter as string | undefined) ?? null
-    : controlledSearch ?? null;
+      ((table.getState().globalFilter as string | undefined) ?? null)
+    : (controlledSearch ?? null);
 
   let [search, setSearch] = useState(currentSearch ?? '');
 
