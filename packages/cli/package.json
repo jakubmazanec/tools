@@ -45,7 +45,7 @@
     "@types/node": "^22.9.0",
     "@types/react": "^18.2.63",
     "@vitest/coverage-v8": "^2.1.4",
-    "concurrently": "^8.2.2",
+    "concurrently": "^9.1.0",
     "cross-env": "^7.0.3",
     "del-cli": "^5.1.0",
     "esbuild": "^0.21.4",
