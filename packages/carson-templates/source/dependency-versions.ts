@@ -62,7 +62,7 @@ export const DEPENDENCY_VERSIONS: Record<string, string> = {
   '@types/node': '^20.0.0',
   '@types/react': '^18.0.0',
   '@types/react-dom': '^18.0.0',
-  '@vitest/coverage-v8': '^1.0.0',
+  '@vitest/coverage-v8': '^2.0.0',
   autoprefixer: '^10.0.0',
   concurrently: '^8.0.0',
   'cross-env': '^7.0.0',
@@ -85,7 +85,7 @@ export const DEPENDENCY_VERSIONS: Record<string, string> = {
   'typedoc-plugin-markdown': '^3.0.0',
   typescript: '^5.0.0',
   vite: '^5.0.0',
-  vitest: '^1.0.0',
+  vitest: '^2.0.0',
 
   node: '^22.11.0',
   npm: '^10.9.0',
