@@ -43,9 +43,9 @@ let packageJson = {
     typecheck: 'tsc --project tsconfig.typecheck.json',
   },
   devDependencies: developmentDependencies,
-  packageManager: 'npm@10.1.0',
+  packageManager: `npm@${semver.minVersion(DEPENDENCY_VERSIONS.npm)}`,
   engines: {
-    node: '^20.8.0',
+    node: DEPENDENCY_VERSIONS.node,
   },
 };
 -%>
