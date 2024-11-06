@@ -66,7 +66,7 @@ export const DEPENDENCY_VERSIONS: Record<string, string> = {
   autoprefixer: '^10.0.0',
   concurrently: '^9.0.0',
   'cross-env': '^7.0.0',
-  'del-cli': '^5.0.0',
+  'del-cli': '^6.0.0',
   esbuild: '^0.19.0',
   eslint: '^8.0.0',
   'happy-dom': '^15.0.0',
