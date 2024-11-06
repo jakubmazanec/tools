@@ -1,0 +1,17 @@
+[**@jakubmazanec/cli**](../README.md) • **Docs**
+
+---
+
+# Type Alias: FormValues\<C\>
+
+> **FormValues**\<`C`\>: `{ [P in keyof C["rows"]]: FormValue<C["rows"][P]> }`
+
+Form values.
+
+## Type Parameters
+
+• **C** _extends_ [`FormConfig`](FormConfig.md)
+
+## Defined in
+
+[cli/source/ui/form/FormValues.ts:7](https://github.com/jakubmazanec/tools/blob/1c4f0471e4ca7ee64c14124101a8ac795175e9bf/packages/cli/source/ui/form/FormValues.ts#L7)
