@@ -1,11 +1,12 @@
 import {type Meta, type StoryObj} from '@storybook/react';
+import {type ElementType} from 'react';
 
-import {Card} from '../source/main.js';
+import {Card, type CardProps} from '../source/main.js';
 
 const meta = {
   title: 'Components/Card',
   component: Card,
-} satisfies Meta<typeof Card>;
+} satisfies Meta<CardProps<ElementType>>;
 
 export default meta;
 

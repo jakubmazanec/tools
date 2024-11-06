@@ -1,6 +1,7 @@
 import {type Meta, type StoryObj} from '@storybook/react';
+import {type ElementType} from 'react';
 
-import {Button, Icon, Spinner} from '../source/main.js';
+import {Button, type ButtonProps, Icon, Spinner} from '../source/main.js';
 
 const meta = {
   title: 'Components/Button',
@@ -8,7 +9,7 @@ const meta = {
   parameters: {
     layout: 'centered',
   },
-} satisfies Meta<typeof Button>;
+} satisfies Meta<ButtonProps<ElementType>>;
 
 export default meta;
 
