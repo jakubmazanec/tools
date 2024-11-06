@@ -28,4 +28,4 @@ Detailed program information.
 
 ## Defined in
 
-[cli/source/program/ProgramDetail.ts:4](https://github.com/jakubmazanec/tools/blob/1c4f0471e4ca7ee64c14124101a8ac795175e9bf/packages/cli/source/program/ProgramDetail.ts#L4)
+[cli/source/program/ProgramDetail.ts:4](https://github.com/jakubmazanec/tools/blob/4ad59c6b8eb7868ab1902d25f4c1aae28b28a6e4/packages/cli/source/program/ProgramDetail.ts#L4)

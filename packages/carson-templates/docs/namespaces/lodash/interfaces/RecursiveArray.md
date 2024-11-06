@@ -220,13 +220,13 @@ node_modules/typescript/lib/lib.es5.d.ts:1326
 
 ### \[iterator\]()
 
-> **\[iterator\]**(): `IterableIterator`\<[`RecursiveArray`](RecursiveArray.md)\<`T`\> \| `T`\>
+> **\[iterator\]**(): `ArrayIterator`\<[`RecursiveArray`](RecursiveArray.md)\<`T`\> \| `T`\>
 
 Iterator
 
 #### Returns
 
-`IterableIterator`\<[`RecursiveArray`](RecursiveArray.md)\<`T`\> \| `T`\>
+`ArrayIterator`\<[`RecursiveArray`](RecursiveArray.md)\<`T`\> \| `T`\>
 
 #### Inherited from
 
@@ -234,7 +234,7 @@ Iterator
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es2015.iterable.d.ts:58
+node_modules/typescript/lib/lib.es2015.iterable.d.ts:78
 
 ---
 
@@ -355,14 +355,13 @@ node_modules/typescript/lib/lib.es2015.core.d.ts:62
 
 ### entries()
 
-> **entries**(): `IterableIterator`\<[`number`, [`RecursiveArray`](RecursiveArray.md)\<`T`\> \|
-> `T`]\>
+> **entries**(): `ArrayIterator`\<[`number`, [`RecursiveArray`](RecursiveArray.md)\<`T`\> \| `T`]\>
 
 Returns an iterable of key, value pairs for every entry in the array
 
 #### Returns
 
-`IterableIterator`\<[`number`, [`RecursiveArray`](RecursiveArray.md)\<`T`\> \| `T`]\>
+`ArrayIterator`\<[`number`, [`RecursiveArray`](RecursiveArray.md)\<`T`\> \| `T`]\>
 
 #### Inherited from
 
@@ -370,7 +369,7 @@ Returns an iterable of key, value pairs for every entry in the array
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es2015.iterable.d.ts:63
+node_modules/typescript/lib/lib.es2015.iterable.d.ts:83
 
 ---
 
@@ -934,13 +933,13 @@ node_modules/typescript/lib/lib.es5.d.ts:1361
 
 ### keys()
 
-> **keys**(): `IterableIterator`\<`number`\>
+> **keys**(): `ArrayIterator`\<`number`\>
 
 Returns an iterable of keys in the array
 
 #### Returns
 
-`IterableIterator`\<`number`\>
+`ArrayIterator`\<`number`\>
 
 #### Inherited from
 
@@ -948,7 +947,7 @@ Returns an iterable of keys in the array
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es2015.iterable.d.ts:68
+node_modules/typescript/lib/lib.es2015.iterable.d.ts:88
 
 ---
 
@@ -1460,22 +1459,46 @@ node_modules/typescript/lib/lib.es5.d.ts:1407
 
 ### toLocaleString()
 
+#### toLocaleString()
+
 > **toLocaleString**(): `string`
 
 Returns a string representation of an array. The elements are converted to string using their
 toLocaleString methods.
 
-#### Returns
+##### Returns
 
 `string`
 
-#### Inherited from
+##### Inherited from
 
 `Array.toLocaleString`
 
-#### Defined in
+##### Defined in
 
 node_modules/typescript/lib/lib.es5.d.ts:1334
+
+#### toLocaleString(locales, options)
+
+> **toLocaleString**(`locales`, `options`?): `string`
+
+##### Parameters
+
+• **locales**: `string` \| `string`[]
+
+• **options?**: `NumberFormatOptions` & `DateTimeFormatOptions`
+
+##### Returns
+
+`string`
+
+##### Inherited from
+
+`Array.toLocaleString`
+
+##### Defined in
+
+node_modules/typescript/lib/lib.es2015.core.d.ts:64
 
 ---
 
@@ -1649,13 +1672,13 @@ node_modules/typescript/lib/lib.es5.d.ts:1412
 
 ### values()
 
-> **values**(): `IterableIterator`\<[`RecursiveArray`](RecursiveArray.md)\<`T`\> \| `T`\>
+> **values**(): `ArrayIterator`\<[`RecursiveArray`](RecursiveArray.md)\<`T`\> \| `T`\>
 
 Returns an iterable of values in the array
 
 #### Returns
 
-`IterableIterator`\<[`RecursiveArray`](RecursiveArray.md)\<`T`\> \| `T`\>
+`ArrayIterator`\<[`RecursiveArray`](RecursiveArray.md)\<`T`\> \| `T`\>
 
 #### Inherited from
 
@@ -1663,7 +1686,7 @@ Returns an iterable of values in the array
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es2015.iterable.d.ts:73
+node_modules/typescript/lib/lib.es2015.iterable.d.ts:93
 
 ---
 

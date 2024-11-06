@@ -8,4 +8,4 @@
 
 ## Defined in
 
-[packages/carson-templates/source/constants.ts:14](https://github.com/jakubmazanec/tools/blob/1c4f0471e4ca7ee64c14124101a8ac795175e9bf/packages/carson-templates/source/constants.ts#L14)
+[packages/carson-templates/source/constants.ts:14](https://github.com/jakubmazanec/tools/blob/4ad59c6b8eb7868ab1902d25f4c1aae28b28a6e4/packages/carson-templates/source/constants.ts#L14)

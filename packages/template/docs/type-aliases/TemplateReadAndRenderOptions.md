@@ -40,4 +40,4 @@ Prettier options.
 
 ## Defined in
 
-[packages/template/source/Template.ts:50](https://github.com/jakubmazanec/tools/blob/1c4f0471e4ca7ee64c14124101a8ac795175e9bf/packages/template/source/Template.ts#L50)
+[packages/template/source/Template.ts:50](https://github.com/jakubmazanec/tools/blob/4ad59c6b8eb7868ab1902d25f4c1aae28b28a6e4/packages/template/source/Template.ts#L50)

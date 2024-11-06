@@ -36,7 +36,7 @@ A collection of WorkspaceDependency | workspace dependencies that are installed 
 
 #### Defined in
 
-[packages/carson/source/workspace/WorkspaceDependencies.ts:19](https://github.com/jakubmazanec/tools/blob/1c4f0471e4ca7ee64c14124101a8ac795175e9bf/packages/carson/source/workspace/WorkspaceDependencies.ts#L19)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:19](https://github.com/jakubmazanec/tools/blob/4ad59c6b8eb7868ab1902d25f4c1aae28b28a6e4/packages/carson/source/workspace/WorkspaceDependencies.ts#L19)
 
 ## Properties
 
@@ -252,7 +252,7 @@ The workspace the dependencies are installed in.
 
 #### Defined in
 
-[packages/carson/source/workspace/WorkspaceDependencies.ts:17](https://github.com/jakubmazanec/tools/blob/1c4f0471e4ca7ee64c14124101a8ac795175e9bf/packages/carson/source/workspace/WorkspaceDependencies.ts#L17)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:17](https://github.com/jakubmazanec/tools/blob/4ad59c6b8eb7868ab1902d25f4c1aae28b28a6e4/packages/carson/source/workspace/WorkspaceDependencies.ts#L17)
 
 ---
 
@@ -272,13 +272,13 @@ node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts:316
 
 ### \[iterator\]()
 
-> **\[iterator\]**(): `IterableIterator`\<`WorkspaceDependency`\>
+> **\[iterator\]**(): `ArrayIterator`\<`WorkspaceDependency`\>
 
 Iterator
 
 #### Returns
 
-`IterableIterator`\<`WorkspaceDependency`\>
+`ArrayIterator`\<`WorkspaceDependency`\>
 
 #### Inherited from
 
@@ -286,7 +286,7 @@ Iterator
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es2015.iterable.d.ts:58
+node_modules/typescript/lib/lib.es2015.iterable.d.ts:78
 
 ---
 
@@ -406,13 +406,13 @@ node_modules/typescript/lib/lib.es2015.core.d.ts:62
 
 ### entries()
 
-> **entries**(): `IterableIterator`\<[`number`, `WorkspaceDependency`]\>
+> **entries**(): `ArrayIterator`\<[`number`, `WorkspaceDependency`]\>
 
 Returns an iterable of key, value pairs for every entry in the array
 
 #### Returns
 
-`IterableIterator`\<[`number`, `WorkspaceDependency`]\>
+`ArrayIterator`\<[`number`, `WorkspaceDependency`]\>
 
 #### Inherited from
 
@@ -420,7 +420,7 @@ Returns an iterable of key, value pairs for every entry in the array
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es2015.iterable.d.ts:63
+node_modules/typescript/lib/lib.es2015.iterable.d.ts:83
 
 ---
 
@@ -913,7 +913,7 @@ Object whose keys are dependency names and values are sorted versions.
 
 #### Defined in
 
-[packages/carson/source/workspace/WorkspaceDependencies.ts:187](https://github.com/jakubmazanec/tools/blob/1c4f0471e4ca7ee64c14124101a8ac795175e9bf/packages/carson/source/workspace/WorkspaceDependencies.ts#L187)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:187](https://github.com/jakubmazanec/tools/blob/4ad59c6b8eb7868ab1902d25f4c1aae28b28a6e4/packages/carson/source/workspace/WorkspaceDependencies.ts#L187)
 
 ---
 
@@ -1006,13 +1006,13 @@ node_modules/typescript/lib/lib.es5.d.ts:1361
 
 ### keys()
 
-> **keys**(): `IterableIterator`\<`number`\>
+> **keys**(): `ArrayIterator`\<`number`\>
 
 Returns an iterable of keys in the array
 
 #### Returns
 
-`IterableIterator`\<`number`\>
+`ArrayIterator`\<`number`\>
 
 #### Inherited from
 
@@ -1020,7 +1020,7 @@ Returns an iterable of keys in the array
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es2015.iterable.d.ts:68
+node_modules/typescript/lib/lib.es2015.iterable.d.ts:88
 
 ---
 
@@ -1138,7 +1138,7 @@ The new length of the collection.
 
 #### Defined in
 
-[packages/carson/source/workspace/WorkspaceDependencies.ts:40](https://github.com/jakubmazanec/tools/blob/1c4f0471e4ca7ee64c14124101a8ac795175e9bf/packages/carson/source/workspace/WorkspaceDependencies.ts#L40)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:40](https://github.com/jakubmazanec/tools/blob/4ad59c6b8eb7868ab1902d25f4c1aae28b28a6e4/packages/carson/source/workspace/WorkspaceDependencies.ts#L40)
 
 ---
 
@@ -1533,22 +1533,46 @@ node_modules/typescript/lib/lib.es5.d.ts:1407
 
 ### toLocaleString()
 
+#### toLocaleString()
+
 > **toLocaleString**(): `string`
 
 Returns a string representation of an array. The elements are converted to string using their
 toLocaleString methods.
 
-#### Returns
+##### Returns
 
 `string`
 
-#### Inherited from
+##### Inherited from
 
 `Array.toLocaleString`
 
-#### Defined in
+##### Defined in
 
 node_modules/typescript/lib/lib.es5.d.ts:1334
+
+#### toLocaleString(locales, options)
+
+> **toLocaleString**(`locales`, `options`?): `string`
+
+##### Parameters
+
+• **locales**: `string` \| `string`[]
+
+• **options?**: `NumberFormatOptions` & `DateTimeFormatOptions`
+
+##### Returns
+
+`string`
+
+##### Inherited from
+
+`Array.toLocaleString`
+
+##### Defined in
+
+node_modules/typescript/lib/lib.es2015.core.d.ts:64
 
 ---
 
@@ -1721,13 +1745,13 @@ node_modules/typescript/lib/lib.es5.d.ts:1412
 
 ### values()
 
-> **values**(): `IterableIterator`\<`WorkspaceDependency`\>
+> **values**(): `ArrayIterator`\<`WorkspaceDependency`\>
 
 Returns an iterable of values in the array
 
 #### Returns
 
-`IterableIterator`\<`WorkspaceDependency`\>
+`ArrayIterator`\<`WorkspaceDependency`\>
 
 #### Inherited from
 
@@ -1735,7 +1759,7 @@ Returns an iterable of values in the array
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es2015.iterable.d.ts:73
+node_modules/typescript/lib/lib.es2015.iterable.d.ts:93
 
 ---
 
@@ -1801,7 +1825,7 @@ An array-like object to convert to an array.
 
 ##### Defined in
 
-node_modules/typescript/lib/lib.es2015.core.d.ts:70
+node_modules/typescript/lib/lib.es2015.core.d.ts:72
 
 #### from(arrayLike, mapfn, thisArg)
 
@@ -1839,7 +1863,7 @@ Value of 'this' used to invoke the mapfn.
 
 ##### Defined in
 
-node_modules/typescript/lib/lib.es2015.core.d.ts:78
+node_modules/typescript/lib/lib.es2015.core.d.ts:80
 
 #### from(iterable)
 
@@ -1853,7 +1877,7 @@ Creates an array from an iterable object.
 
 ##### Parameters
 
-• **iterable**: `Iterable`\<`T`\> \| `ArrayLike`\<`T`\>
+• **iterable**: `Iterable`\<`T`, `any`, `any`\> \| `ArrayLike`\<`T`\>
 
 An iterable object to convert to an array.
 
@@ -1867,7 +1891,7 @@ An iterable object to convert to an array.
 
 ##### Defined in
 
-node_modules/typescript/lib/lib.es2015.iterable.d.ts:81
+node_modules/typescript/lib/lib.es2015.iterable.d.ts:101
 
 #### from(iterable, mapfn, thisArg)
 
@@ -1883,7 +1907,7 @@ Creates an array from an iterable object.
 
 ##### Parameters
 
-• **iterable**: `Iterable`\<`T`\> \| `ArrayLike`\<`T`\>
+• **iterable**: `Iterable`\<`T`, `any`, `any`\> \| `ArrayLike`\<`T`\>
 
 An iterable object to convert to an array.
 
@@ -1905,7 +1929,78 @@ Value of 'this' used to invoke the mapfn.
 
 ##### Defined in
 
-node_modules/typescript/lib/lib.es2015.iterable.d.ts:89
+node_modules/typescript/lib/lib.es2015.iterable.d.ts:109
+
+---
+
+### fromAsync()
+
+#### fromAsync(iterableOrArrayLike)
+
+> `static` **fromAsync**\<`T`\>(`iterableOrArrayLike`): `Promise`\<`T`[]\>
+
+Creates an array from an async iterator or iterable object.
+
+##### Type Parameters
+
+• **T**
+
+##### Parameters
+
+• **iterableOrArrayLike**: `AsyncIterable`\<`T`, `any`, `any`\> \| `Iterable`\<`T` \|
+`PromiseLike`\<`T`\>, `any`, `any`\> \| `ArrayLike`\<`T` \| `PromiseLike`\<`T`\>\>
+
+An async iterator or array-like object to convert to an array.
+
+##### Returns
+
+`Promise`\<`T`[]\>
+
+##### Inherited from
+
+`Array.fromAsync`
+
+##### Defined in
+
+node_modules/typescript/lib/lib.esnext.array.d.ts:24
+
+#### fromAsync(iterableOrArrayLike, mapFn, thisArg)
+
+> `static` **fromAsync**\<`T`, `U`\>(`iterableOrArrayLike`, `mapFn`, `thisArg`?):
+> `Promise`\<`Awaited`\<`U`\>[]\>
+
+Creates an array from an async iterator or iterable object.
+
+##### Type Parameters
+
+• **T**
+
+• **U**
+
+##### Parameters
+
+• **iterableOrArrayLike**: `AsyncIterable`\<`T`, `any`, `any`\> \| `Iterable`\<`T`, `any`, `any`\>
+\| `ArrayLike`\<`T`\>
+
+An async iterator or array-like object to convert to an array.
+
+• **mapFn**
+
+• **thisArg?**: `any`
+
+Value of 'this' used when executing mapfn.
+
+##### Returns
+
+`Promise`\<`Awaited`\<`U`\>[]\>
+
+##### Inherited from
+
+`Array.fromAsync`
+
+##### Defined in
+
+node_modules/typescript/lib/lib.esnext.array.d.ts:34
 
 ---
 
@@ -1939,7 +2034,7 @@ The new [WorkspaceDependencies](WorkspaceDependencies.md) instance.
 
 #### Defined in
 
-[packages/carson/source/workspace/WorkspaceDependencies.ts:83](https://github.com/jakubmazanec/tools/blob/1c4f0471e4ca7ee64c14124101a8ac795175e9bf/packages/carson/source/workspace/WorkspaceDependencies.ts#L83)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:83](https://github.com/jakubmazanec/tools/blob/4ad59c6b8eb7868ab1902d25f4c1aae28b28a6e4/packages/carson/source/workspace/WorkspaceDependencies.ts#L83)
 
 ---
 
@@ -1991,4 +2086,4 @@ A set of elements to include in the new array object.
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es2015.core.d.ts:84
+node_modules/typescript/lib/lib.es2015.core.d.ts:86
