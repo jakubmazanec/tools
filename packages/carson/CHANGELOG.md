@@ -1,5 +1,86 @@
 # @jakubmazanec/carson
 
+## 1.2.1
+
+### Patch Changes
+
+- [#179](https://github.com/jakubmazanec/tools/pull/179)
+  [`28d51d1`](https://github.com/jakubmazanec/tools/commit/28d51d146a60c7f1f85fdb71478ccd531779c198)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `micromatch` updated to version
+  `^4.0.8`. Dependency `@types/micromatch` updated to version `^4.0.9`.
+
+- [#160](https://github.com/jakubmazanec/tools/pull/160)
+  [`c2d3450`](https://github.com/jakubmazanec/tools/commit/c2d345092d3f08658d9e8ce9935b5455c38ecbab)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@types/lodash` updated to version
+  `^4.17.13`.
+
+- [#170](https://github.com/jakubmazanec/tools/pull/170)
+  [`7a50642`](https://github.com/jakubmazanec/tools/commit/7a506427e9893f0502790a22b55bad77ca5b08ce)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `concurrently` updated to version
+  `^9.1.0`.
+
+- [#176](https://github.com/jakubmazanec/tools/pull/176)
+  [`e275f89`](https://github.com/jakubmazanec/tools/commit/e275f89d674f462cceb1fa3c8e470b776655fae1)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `prettier` updated to version
+  `^3.3.3`.
+
+- [#171](https://github.com/jakubmazanec/tools/pull/171)
+  [`feb68c3`](https://github.com/jakubmazanec/tools/commit/feb68c30671e0ebe2b2b25b0c464dec0e603a2ec)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `del-cli` updated to version
+  `^6.0.0`.
+
+- [#188](https://github.com/jakubmazanec/tools/pull/188)
+  [`5daeced`](https://github.com/jakubmazanec/tools/commit/5daecedbee7aab62bb81b552ba5ba857c9975923)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `esbuild` updated to version
+  `^0.24.0`.
+
+- [#173](https://github.com/jakubmazanec/tools/pull/173)
+  [`67f8b48`](https://github.com/jakubmazanec/tools/commit/67f8b487e599b40e3bca43b95e26fb70559c4848)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `simple-git` updated to version
+  `^3.27.0`.
+
+- [#161](https://github.com/jakubmazanec/tools/pull/161)
+  [`4ad59c6`](https://github.com/jakubmazanec/tools/commit/4ad59c6b8eb7868ab1902d25f4c1aae28b28a6e4)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `typescript` updated to version
+  `^5.6.3`.
+
+- [#177](https://github.com/jakubmazanec/tools/pull/177)
+  [`05074a1`](https://github.com/jakubmazanec/tools/commit/05074a1dedd887672f015df129961cd35c75acfe)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `prettier-plugin-packagejson` updated
+  to version `^2.5.3`.
+
+- [#166](https://github.com/jakubmazanec/tools/pull/166)
+  [`075eb4b`](https://github.com/jakubmazanec/tools/commit/075eb4b58c314f14aaee47cb6e5b2e1f2c82afef)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `ink` updated to version `5.x`.
+
+- [#165](https://github.com/jakubmazanec/tools/pull/165)
+  [`8a00a02`](https://github.com/jakubmazanec/tools/commit/8a00a029626e2250a17448b730b113019e58a527)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@vitest/coverage-v8` updated to
+  version `^2.1.4`. Dependency `vitest` updated to version `^2.1.4`.
+
+- [#180](https://github.com/jakubmazanec/tools/pull/180)
+  [`bc28df8`](https://github.com/jakubmazanec/tools/commit/bc28df80facf79094d9dca2f1be9f9a4416d5553)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `semver` updated to version `^7.6.3`.
+
+- [#158](https://github.com/jakubmazanec/tools/pull/158)
+  [`0b33ead`](https://github.com/jakubmazanec/tools/commit/0b33eadeffe00f356bfd0bb677cdc0daabb6f4e5)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Dependency `@types/node` updated to version
+  `^22.9.0`. Dependency `node` updated to version `^22.11.0`.
+
+- [#162](https://github.com/jakubmazanec/tools/pull/162)
+  [`6f942d9`](https://github.com/jakubmazanec/tools/commit/6f942d99ee63da4b67f1c91273d73e29f2f52a54)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `typedoc` updated to version
+  `^0.26.11`.
+
+- [#184](https://github.com/jakubmazanec/tools/pull/184)
+  [`2a85862`](https://github.com/jakubmazanec/tools/commit/2a85862933b47f0cf9fe826b7b9ce9be99ad6c09)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `yaml` updated to version `^2.6.0`.
+
+- [#163](https://github.com/jakubmazanec/tools/pull/163)
+  [`1c4f047`](https://github.com/jakubmazanec/tools/commit/1c4f0471e4ca7ee64c14124101a8ac795175e9bf)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `typedoc-plugin-markdown` updated to
+  version `^4.2.10`.
+
 ## 1.2.0
 
 ### Minor Changes
