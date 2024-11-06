@@ -31,4 +31,4 @@
 
 ## Source
 
-[packages/zod-utils/source/utils/readJson.ts:12](https://github.com/jakubmazanec/tools/blob/bb20df5276ddb119762948adc2cda520aef09f0f/packages/zod-utils/source/utils/readJson.ts#L12)
+[packages/zod-utils/source/utils/readJson.ts:12](https://github.com/jakubmazanec/tools/blob/ff982fbbc1a4d22edeaae8b283ad7d8de4b15bd8/packages/zod-utils/source/utils/readJson.ts#L12)

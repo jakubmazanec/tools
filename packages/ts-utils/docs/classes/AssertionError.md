@@ -32,7 +32,7 @@ Message added to the default error message
 
 #### Source
 
-[packages/ts-utils/source/utils/assert.ts:8](https://github.com/jakubmazanec/tools/blob/bb20df5276ddb119762948adc2cda520aef09f0f/packages/ts-utils/source/utils/assert.ts#L8)
+[packages/ts-utils/source/utils/assert.ts:8](https://github.com/jakubmazanec/tools/blob/ff982fbbc1a4d22edeaae8b283ad7d8de4b15bd8/packages/ts-utils/source/utils/assert.ts#L8)
 
 ## Properties
 
@@ -118,7 +118,7 @@ https://v8.dev/docs/stack-trace-api#customizing-stack-traces
 
 #### Source
 
-node_modules/@types/node/globals.d.ts:28
+node_modules/@types/node/globals.d.ts:143
 
 ---
 
@@ -132,7 +132,7 @@ node_modules/@types/node/globals.d.ts:28
 
 #### Source
 
-node_modules/@types/node/globals.d.ts:30
+node_modules/@types/node/globals.d.ts:145
 
 ## Methods
 
@@ -158,4 +158,4 @@ Create .stack property on a target object
 
 #### Source
 
-node_modules/@types/node/globals.d.ts:21
+node_modules/@types/node/globals.d.ts:136

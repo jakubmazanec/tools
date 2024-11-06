@@ -23,7 +23,7 @@ line arguments.
 
 #### Source
 
-[cli/source/program/Program.ts:56](https://github.com/jakubmazanec/tools/blob/bb20df5276ddb119762948adc2cda520aef09f0f/packages/cli/source/program/Program.ts#L56)
+[cli/source/program/Program.ts:56](https://github.com/jakubmazanec/tools/blob/ff982fbbc1a4d22edeaae8b283ad7d8de4b15bd8/packages/cli/source/program/Program.ts#L56)
 
 ## Properties
 
@@ -35,7 +35,7 @@ Custom error boundary fallback component
 
 #### Source
 
-[cli/source/program/Program.ts:54](https://github.com/jakubmazanec/tools/blob/bb20df5276ddb119762948adc2cda520aef09f0f/packages/cli/source/program/Program.ts#L54)
+[cli/source/program/Program.ts:54](https://github.com/jakubmazanec/tools/blob/ff982fbbc1a4d22edeaae8b283ad7d8de4b15bd8/packages/cli/source/program/Program.ts#L54)
 
 ---
 
@@ -47,7 +47,7 @@ Program executable name.
 
 #### Source
 
-[cli/source/program/Program.ts:38](https://github.com/jakubmazanec/tools/blob/bb20df5276ddb119762948adc2cda520aef09f0f/packages/cli/source/program/Program.ts#L38)
+[cli/source/program/Program.ts:38](https://github.com/jakubmazanec/tools/blob/ff982fbbc1a4d22edeaae8b283ad7d8de4b15bd8/packages/cli/source/program/Program.ts#L38)
 
 ---
 
@@ -60,7 +60,7 @@ Program commands
 
 #### Source
 
-[cli/source/program/Program.ts:41](https://github.com/jakubmazanec/tools/blob/bb20df5276ddb119762948adc2cda520aef09f0f/packages/cli/source/program/Program.ts#L41)
+[cli/source/program/Program.ts:41](https://github.com/jakubmazanec/tools/blob/ff982fbbc1a4d22edeaae8b283ad7d8de4b15bd8/packages/cli/source/program/Program.ts#L41)
 
 ---
 
@@ -72,7 +72,7 @@ Program description.
 
 #### Source
 
-[cli/source/program/Program.ts:35](https://github.com/jakubmazanec/tools/blob/bb20df5276ddb119762948adc2cda520aef09f0f/packages/cli/source/program/Program.ts#L35)
+[cli/source/program/Program.ts:35](https://github.com/jakubmazanec/tools/blob/ff982fbbc1a4d22edeaae8b283ad7d8de4b15bd8/packages/cli/source/program/Program.ts#L35)
 
 ---
 
@@ -84,7 +84,7 @@ More readable program name.
 
 #### Source
 
-[cli/source/program/Program.ts:26](https://github.com/jakubmazanec/tools/blob/bb20df5276ddb119762948adc2cda520aef09f0f/packages/cli/source/program/Program.ts#L26)
+[cli/source/program/Program.ts:26](https://github.com/jakubmazanec/tools/blob/ff982fbbc1a4d22edeaae8b283ad7d8de4b15bd8/packages/cli/source/program/Program.ts#L26)
 
 ---
 
@@ -94,7 +94,7 @@ More readable program name.
 
 #### Source
 
-[cli/source/program/Program.ts:45](https://github.com/jakubmazanec/tools/blob/bb20df5276ddb119762948adc2cda520aef09f0f/packages/cli/source/program/Program.ts#L45)
+[cli/source/program/Program.ts:45](https://github.com/jakubmazanec/tools/blob/ff982fbbc1a4d22edeaae8b283ad7d8de4b15bd8/packages/cli/source/program/Program.ts#L45)
 
 ---
 
@@ -106,7 +106,7 @@ Program latest version.
 
 #### Source
 
-[cli/source/program/Program.ts:32](https://github.com/jakubmazanec/tools/blob/bb20df5276ddb119762948adc2cda520aef09f0f/packages/cli/source/program/Program.ts#L32)
+[cli/source/program/Program.ts:32](https://github.com/jakubmazanec/tools/blob/ff982fbbc1a4d22edeaae8b283ad7d8de4b15bd8/packages/cli/source/program/Program.ts#L32)
 
 ---
 
@@ -118,7 +118,7 @@ Program name.
 
 #### Source
 
-[cli/source/program/Program.ts:23](https://github.com/jakubmazanec/tools/blob/bb20df5276ddb119762948adc2cda520aef09f0f/packages/cli/source/program/Program.ts#L23)
+[cli/source/program/Program.ts:23](https://github.com/jakubmazanec/tools/blob/ff982fbbc1a4d22edeaae8b283ad7d8de4b15bd8/packages/cli/source/program/Program.ts#L23)
 
 ---
 
@@ -128,7 +128,7 @@ Program name.
 
 #### Source
 
-[cli/source/program/Program.ts:47](https://github.com/jakubmazanec/tools/blob/bb20df5276ddb119762948adc2cda520aef09f0f/packages/cli/source/program/Program.ts#L47)
+[cli/source/program/Program.ts:47](https://github.com/jakubmazanec/tools/blob/ff982fbbc1a4d22edeaae8b283ad7d8de4b15bd8/packages/cli/source/program/Program.ts#L47)
 
 ---
 
@@ -140,7 +140,7 @@ Program version.
 
 #### Source
 
-[cli/source/program/Program.ts:29](https://github.com/jakubmazanec/tools/blob/bb20df5276ddb119762948adc2cda520aef09f0f/packages/cli/source/program/Program.ts#L29)
+[cli/source/program/Program.ts:29](https://github.com/jakubmazanec/tools/blob/ff982fbbc1a4d22edeaae8b283ad7d8de4b15bd8/packages/cli/source/program/Program.ts#L29)
 
 ## Methods
 
@@ -164,7 +164,7 @@ Program instance.
 
 #### Source
 
-[cli/source/program/Program.ts:150](https://github.com/jakubmazanec/tools/blob/bb20df5276ddb119762948adc2cda520aef09f0f/packages/cli/source/program/Program.ts#L150)
+[cli/source/program/Program.ts:150](https://github.com/jakubmazanec/tools/blob/ff982fbbc1a4d22edeaae8b283ad7d8de4b15bd8/packages/cli/source/program/Program.ts#L150)
 
 ---
 
@@ -186,7 +186,7 @@ The React element to render.
 
 #### Source
 
-[cli/source/program/Program.ts:162](https://github.com/jakubmazanec/tools/blob/bb20df5276ddb119762948adc2cda520aef09f0f/packages/cli/source/program/Program.ts#L162)
+[cli/source/program/Program.ts:162](https://github.com/jakubmazanec/tools/blob/ff982fbbc1a4d22edeaae8b283ad7d8de4b15bd8/packages/cli/source/program/Program.ts#L162)
 
 ---
 
@@ -208,7 +208,7 @@ Unparsed command line arguments.
 
 #### Source
 
-[cli/source/program/Program.ts:197](https://github.com/jakubmazanec/tools/blob/bb20df5276ddb119762948adc2cda520aef09f0f/packages/cli/source/program/Program.ts#L197)
+[cli/source/program/Program.ts:197](https://github.com/jakubmazanec/tools/blob/ff982fbbc1a4d22edeaae8b283ad7d8de4b15bd8/packages/cli/source/program/Program.ts#L197)
 
 ---
 
@@ -226,4 +226,4 @@ Unparsed command line arguments.
 
 #### Source
 
-[cli/source/program/Program.ts:96](https://github.com/jakubmazanec/tools/blob/bb20df5276ddb119762948adc2cda520aef09f0f/packages/cli/source/program/Program.ts#L96)
+[cli/source/program/Program.ts:96](https://github.com/jakubmazanec/tools/blob/ff982fbbc1a4d22edeaae8b283ad7d8de4b15bd8/packages/cli/source/program/Program.ts#L96)
