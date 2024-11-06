@@ -264,7 +264,7 @@ export const Listbox = forwardRef(
                         {selectedItem}
                       </span>
                     ))
-                  : placeholder ?? null}
+                  : (placeholder ?? null)}
                   {itemsHidden ?
                     <span
                       data-ellipsis
@@ -302,7 +302,7 @@ export const Listbox = forwardRef(
                         {selectedItem.label}
                       </span>
                     ))
-                  : placeholder ?? null}
+                  : (placeholder ?? null)}
                   {itemsHidden ?
                     <span
                       data-ellipsis

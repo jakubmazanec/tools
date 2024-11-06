@@ -10,11 +10,11 @@ import semver from 'semver';
 export function compareSemver(a: string, b: string) {
   let firstSemver =
     semver.validRange(a) ?
-      semver.minVersion(a)?.format() ?? semver.coerce(a)?.format() ?? '0.0.0'
+      (semver.minVersion(a)?.format() ?? semver.coerce(a)?.format() ?? '0.0.0')
     : '0.0.0';
   let secondSemver =
     semver.validRange(b) ?
-      semver.minVersion(b)?.format() ?? semver.coerce(b)?.format() ?? '0.0.0'
+      (semver.minVersion(b)?.format() ?? semver.coerce(b)?.format() ?? '0.0.0')
     : '0.0.0';
 
   let comparison = semver.compare(firstSemver, secondSemver);

@@ -93,9 +93,9 @@ export class WorkspaceDependencies<M extends boolean = true> extends Array<Works
       })) {
         let exactDependencyVersion =
           semver.validRange(dependencyVersion) ?
-            semver.minVersion(dependencyVersion)?.format() ??
+            (semver.minVersion(dependencyVersion)?.format() ??
             semver.coerce(dependencyVersion)?.format() ??
-            dependencyVersion.trim()
+            dependencyVersion.trim())
           : dependencyVersion.trim();
 
         let workspaceDependency: WorkspaceDependency = {
@@ -116,9 +116,9 @@ export class WorkspaceDependencies<M extends boolean = true> extends Array<Works
         )) {
           let exactDependencyVersion =
             semver.validRange(dependencyVersion) ?
-              semver.minVersion(dependencyVersion)?.format() ??
+              (semver.minVersion(dependencyVersion)?.format() ??
               semver.coerce(dependencyVersion)?.format() ??
-              dependencyVersion.trim()
+              dependencyVersion.trim())
             : dependencyVersion.trim();
 
           let workspaceDependency: WorkspaceDependency = {
@@ -148,9 +148,9 @@ export class WorkspaceDependencies<M extends boolean = true> extends Array<Works
         )) {
           let exactDependencyVersion =
             semver.validRange(dependencyVersion) ?
-              semver.minVersion(dependencyVersion)?.format() ??
+              (semver.minVersion(dependencyVersion)?.format() ??
               semver.coerce(dependencyVersion)?.format() ??
-              dependencyVersion.trim()
+              dependencyVersion.trim())
             : dependencyVersion.trim();
 
           let workspaceDependency: WorkspaceDependency = {

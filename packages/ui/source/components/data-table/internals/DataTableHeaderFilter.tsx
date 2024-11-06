@@ -51,11 +51,11 @@ export function DataTableHeaderFilter({
 
   let currentMin =
     filterVariant === 'range' ?
-      (currentFilter as [number?, number?] | undefined)?.[0] ?? undefined
+      ((currentFilter as [number?, number?] | undefined)?.[0] ?? undefined)
     : undefined;
   let currentMax =
     filterVariant === 'range' ?
-      (currentFilter as [number?, number?] | undefined)?.[1] ?? undefined
+      ((currentFilter as [number?, number?] | undefined)?.[1] ?? undefined)
     : undefined;
 
   let [filter, setFilter] = useState<string | undefined>(
@@ -79,11 +79,11 @@ export function DataTableHeaderFilter({
   let facetingMin =
     clientFaceting ?
       Number(column.getFacetedMinMaxValues()?.[0] ?? null)
-    : faceting?.[column.id]?.min ?? null;
+    : (faceting?.[column.id]?.min ?? null);
   let facetingMax =
     clientFaceting ?
       Number(column.getFacetedMinMaxValues()?.[1] ?? null)
-    : faceting?.[column.id]?.max ?? null;
+    : (faceting?.[column.id]?.max ?? null);
 
   let handleMinRangeChange = useCallback((event: ChangeEvent<HTMLInputElement>) => {
     setMin(event.target.value ? Number(event.target.value) : undefined);

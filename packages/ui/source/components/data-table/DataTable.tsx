@@ -284,12 +284,14 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
   let id = useId();
 
   let page =
-    clientPagination ? table.getState().pagination.pageIndex + 1 : controlledPagination?.page ?? 1;
+    clientPagination ?
+      table.getState().pagination.pageIndex + 1
+    : (controlledPagination?.page ?? 1);
   let pageSize =
     clientPagination ?
       table.getState().pagination.pageSize
-    : controlledPagination?.pageSize ?? DEFAULT_PAGE_SIZE;
-  let pageCount = clientPagination ? table.getPageCount() : controlledPagination?.pageCount ?? 1;
+    : (controlledPagination?.pageSize ?? DEFAULT_PAGE_SIZE);
+  let pageCount = clientPagination ? table.getPageCount() : (controlledPagination?.pageCount ?? 1);
 
   return (
     <DndContext
