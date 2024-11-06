@@ -48,7 +48,7 @@
     "micromatch": "^4.0.7",
     "prettier": "^3.3.3",
     "prettier-plugin-packagejson": "^2.5.3",
-    "semver": "^7.6.2",
+    "semver": "^7.6.3",
     "simple-git": "^3.27.0",
     "yaml": "^2.4.3",
     "zen-observable": "^0.10.0",
