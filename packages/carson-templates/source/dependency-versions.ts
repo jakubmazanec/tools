@@ -67,7 +67,7 @@ export const DEPENDENCY_VERSIONS: Record<string, string> = {
   concurrently: '^9.0.0',
   'cross-env': '^7.0.0',
   'del-cli': '^6.0.0',
-  esbuild: '^0.19.0',
+  esbuild: '^0.24.0',
   eslint: '^8.0.0',
   'happy-dom': '^15.0.0',
   isbot: '^4.0.0',
