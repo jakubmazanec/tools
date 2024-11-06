@@ -47,7 +47,7 @@
     "@vitest/coverage-v8": "^2.1.4",
     "concurrently": "^9.1.0",
     "cross-env": "^7.0.3",
-    "del-cli": "^5.1.0",
+    "del-cli": "^6.0.0",
     "esbuild": "^0.21.4",
     "eslint": "^8.56.0",
     "ink": "^5.0.1",
