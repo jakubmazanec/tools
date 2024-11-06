@@ -39,7 +39,7 @@
     "@dnd-kit/modifiers": "^7.0.0",
     "@dnd-kit/sortable": "^8.0.0",
     "@dnd-kit/utilities": "^3.2.2",
-    "@headlessui/react": "^2.1.2",
+    "@headlessui/react": "^2.2.0",
     "@heroicons/react": "^2.1.5",
     "@jakubmazanec/ts-utils": "^3.0.1",
     "@tanstack/match-sorter-utils": "^8.19.4",
