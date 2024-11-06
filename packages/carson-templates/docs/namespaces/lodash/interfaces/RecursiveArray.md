@@ -75,14 +75,6 @@ array.
 
 > `optional` **findIndex**
 
-#### findLast?
-
-> `optional` **findLast**
-
-#### findLastIndex?
-
-> `optional` **findLastIndex**
-
 #### flat?
 
 > `optional` **flat**
@@ -163,18 +155,6 @@ array.
 
 > `optional` **toLocaleString**
 
-#### toReversed?
-
-> `optional` **toReversed**
-
-#### toSorted?
-
-> `optional` **toSorted**
-
-#### toSpliced?
-
-> `optional` **toSpliced**
-
 #### toString?
 
 > `optional` **toString**
@@ -186,10 +166,6 @@ array.
 #### values?
 
 > `optional` **values**
-
-#### with?
-
-> `optional` **with**
 
 #### Inherited from
 
@@ -640,101 +616,6 @@ provided, undefined is used instead.
 #### Defined in
 
 node_modules/typescript/lib/lib.es2015.core.d.ts:41
-
----
-
-### findLast()
-
-#### findLast(predicate, thisArg)
-
-> **findLast**\<`S`\>(`predicate`, `thisArg`?): `undefined` \| `S`
-
-Returns the value of the last element in the array where predicate is true, and undefined otherwise.
-
-##### Type Parameters
-
-• **S**
-
-##### Parameters
-
-• **predicate**
-
-findLast calls predicate once for each element of the array, in descending order, until it finds one
-where predicate returns true. If such an element is found, findLast immediately returns that element
-value. Otherwise, findLast returns undefined.
-
-• **thisArg?**: `any`
-
-If provided, it will be used as the this value for each invocation of predicate. If it is not
-provided, undefined is used instead.
-
-##### Returns
-
-`undefined` \| `S`
-
-##### Inherited from
-
-`Array.findLast`
-
-##### Defined in
-
-node_modules/typescript/lib/lib.es2023.array.d.ts:29
-
-#### findLast(predicate, thisArg)
-
-> **findLast**(`predicate`, `thisArg`?): `undefined` \| [`RecursiveArray`](RecursiveArray.md)\<`T`\>
-> \| `T`
-
-##### Parameters
-
-• **predicate**
-
-• **thisArg?**: `any`
-
-##### Returns
-
-`undefined` \| [`RecursiveArray`](RecursiveArray.md)\<`T`\> \| `T`
-
-##### Inherited from
-
-`Array.findLast`
-
-##### Defined in
-
-node_modules/typescript/lib/lib.es2023.array.d.ts:30
-
----
-
-### findLastIndex()
-
-> **findLastIndex**(`predicate`, `thisArg`?): `number`
-
-Returns the index of the last element in the array where predicate is true, and -1 otherwise.
-
-#### Parameters
-
-• **predicate**
-
-findLastIndex calls predicate once for each element of the array, in descending order, until it
-finds one where predicate returns true. If such an element is found, findLastIndex immediately
-returns that element index. Otherwise, findLastIndex returns -1.
-
-• **thisArg?**: `any`
-
-If provided, it will be used as the this value for each invocation of predicate. If it is not
-provided, undefined is used instead.
-
-#### Returns
-
-`number`
-
-#### Inherited from
-
-`Array.findLastIndex`
-
-#### Defined in
-
-node_modules/typescript/lib/lib.es2023.array.d.ts:41
 
 ---
 
@@ -1502,128 +1383,6 @@ node_modules/typescript/lib/lib.es2015.core.d.ts:64
 
 ---
 
-### toReversed()
-
-> **toReversed**(): ([`RecursiveArray`](RecursiveArray.md)\<`T`\> \| `T`)[]
-
-Returns a copy of an array with its elements reversed.
-
-#### Returns
-
-([`RecursiveArray`](RecursiveArray.md)\<`T`\> \| `T`)[]
-
-#### Inherited from
-
-`Array.toReversed`
-
-#### Defined in
-
-node_modules/typescript/lib/lib.es2023.array.d.ts:46
-
----
-
-### toSorted()
-
-> **toSorted**(`compareFn`?): ([`RecursiveArray`](RecursiveArray.md)\<`T`\> \| `T`)[]
-
-Returns a copy of an array with its elements sorted.
-
-#### Parameters
-
-• **compareFn?**
-
-Function used to determine the order of the elements. It is expected to return a negative value if
-the first argument is less than the second argument, zero if they're equal, and a positive value
-otherwise. If omitted, the elements are sorted in ascending, ASCII character order.
-
-```ts
-[11, 2, 22, 1].toSorted((a, b) => a - b); // [1, 2, 11, 22]
-```
-
-#### Returns
-
-([`RecursiveArray`](RecursiveArray.md)\<`T`\> \| `T`)[]
-
-#### Inherited from
-
-`Array.toSorted`
-
-#### Defined in
-
-node_modules/typescript/lib/lib.es2023.array.d.ts:57
-
----
-
-### toSpliced()
-
-#### toSpliced(start, deleteCount, items)
-
-> **toSpliced**(`start`, `deleteCount`, ...`items`): ([`RecursiveArray`](RecursiveArray.md)\<`T`\>
-> \| `T`)[]
-
-Copies an array and removes elements and, if necessary, inserts new elements in their place. Returns
-the copied array.
-
-##### Parameters
-
-• **start**: `number`
-
-The zero-based location in the array from which to start removing elements.
-
-• **deleteCount**: `number`
-
-The number of elements to remove.
-
-• ...**items**: ([`RecursiveArray`](RecursiveArray.md)\<`T`\> \| `T`)[]
-
-Elements to insert into the copied array in place of the deleted elements.
-
-##### Returns
-
-([`RecursiveArray`](RecursiveArray.md)\<`T`\> \| `T`)[]
-
-The copied array.
-
-##### Inherited from
-
-`Array.toSpliced`
-
-##### Defined in
-
-node_modules/typescript/lib/lib.es2023.array.d.ts:66
-
-#### toSpliced(start, deleteCount)
-
-> **toSpliced**(`start`, `deleteCount`?): ([`RecursiveArray`](RecursiveArray.md)\<`T`\> \| `T`)[]
-
-Copies an array and removes elements while returning the remaining elements.
-
-##### Parameters
-
-• **start**: `number`
-
-The zero-based location in the array from which to start removing elements.
-
-• **deleteCount?**: `number`
-
-The number of elements to remove.
-
-##### Returns
-
-([`RecursiveArray`](RecursiveArray.md)\<`T`\> \| `T`)[]
-
-A copy of the original array with the remaining elements.
-
-##### Inherited from
-
-`Array.toSpliced`
-
-##### Defined in
-
-node_modules/typescript/lib/lib.es2023.array.d.ts:74
-
----
-
 ### toString()
 
 > **toString**(): `string`
@@ -1687,37 +1446,3 @@ Returns an iterable of values in the array
 #### Defined in
 
 node_modules/typescript/lib/lib.es2015.iterable.d.ts:93
-
----
-
-### with()
-
-> **with**(`index`, `value`): ([`RecursiveArray`](RecursiveArray.md)\<`T`\> \| `T`)[]
-
-Copies an array, then overwrites the value at the provided index with the given value. If the index
-is negative, then it replaces from the end of the array.
-
-#### Parameters
-
-• **index**: `number`
-
-The index of the value to overwrite. If the index is negative, then it replaces from the end of the
-array.
-
-• **value**: [`RecursiveArray`](RecursiveArray.md)\<`T`\> \| `T`
-
-The value to write into the copied array.
-
-#### Returns
-
-([`RecursiveArray`](RecursiveArray.md)\<`T`\> \| `T`)[]
-
-The copied array with the updated value.
-
-#### Inherited from
-
-`Array.with`
-
-#### Defined in
-
-node_modules/typescript/lib/lib.es2023.array.d.ts:85

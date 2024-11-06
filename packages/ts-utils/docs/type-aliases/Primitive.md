@@ -10,4 +10,4 @@ Union of primitive types.
 
 ## Defined in
 
-[packages/ts-utils/source/types/Primitive.ts:4](https://github.com/jakubmazanec/tools/blob/4ad59c6b8eb7868ab1902d25f4c1aae28b28a6e4/packages/ts-utils/source/types/Primitive.ts#L4)
+[packages/ts-utils/source/types/Primitive.ts:4](https://github.com/jakubmazanec/tools/blob/05074a1dedd887672f015df129961cd35c75acfe/packages/ts-utils/source/types/Primitive.ts#L4)
