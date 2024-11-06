@@ -1,11 +1,12 @@
 import {type Meta, type StoryObj} from '@storybook/react';
+import {type ElementType} from 'react';
 
-import {Textarea} from '../source/main.js';
+import {Textarea, type TextareaProps} from '../source/main.js';
 
 const meta = {
   title: 'Components/Textarea',
   component: Textarea,
-} satisfies Meta<typeof Textarea>;
+} satisfies Meta<TextareaProps<ElementType>>;
 
 export default meta;
 

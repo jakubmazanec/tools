@@ -1,6 +1,7 @@
 import {type Meta, type StoryObj} from '@storybook/react';
+import {type ElementType} from 'react';
 
-import {Combobox} from '../source/main.js';
+import {Combobox, type ComboboxProps} from '../source/main.js';
 
 const items = [
   {label: '🍎 Apples', value: 'apples'},
@@ -15,7 +16,7 @@ const manyItems = Array.from({length: 1000}, (_, i) => ({value: `${i + 1}`, labe
 const meta = {
   title: 'Components/Combobox',
   component: Combobox,
-} satisfies Meta<typeof Combobox>;
+} satisfies Meta<ComboboxProps<ElementType, boolean | number | string>>;
 
 export default meta;
 

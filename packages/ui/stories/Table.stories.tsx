@@ -1,11 +1,20 @@
 import {type Meta, type StoryObj} from '@storybook/react';
+import {type ElementType} from 'react';
 
-import {Table, TableCaption, TableCell, TableHead, TableHeader, TableRow} from '../source/main.js';
+import {
+  Table,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeader,
+  type TableProps,
+  TableRow,
+} from '../source/main.js';
 
 const meta = {
   title: 'Components/Table',
   component: Table,
-} satisfies Meta<typeof Table>;
+} satisfies Meta<TableProps<ElementType>>;
 
 export default meta;
 

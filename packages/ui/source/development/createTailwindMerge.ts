@@ -59,7 +59,7 @@ export function createTailwindMerge(tailwindConfig: TailwindConfig) {
           typeof tailwindConfigScale[key] === 'object'
         ) {
           combinedKeys.push(
-            ...Object.keys(tailwindConfigScale[key] as object)
+            ...Object.keys(tailwindConfigScale[key])
               .filter((value) => value !== 'DEFAULT')
               .map((value) => `${key}-${value}`),
           );
@@ -84,7 +84,7 @@ export function createTailwindMerge(tailwindConfig: TailwindConfig) {
           typeof tailwindConfigScale[key] === 'object'
         ) {
           combinedKeys.push(
-            ...Object.keys(tailwindConfigScale[key] as object)
+            ...Object.keys(tailwindConfigScale[key])
               .filter((value) => value !== 'DEFAULT')
               .map((value) => `${key}-${value}`),
           );
