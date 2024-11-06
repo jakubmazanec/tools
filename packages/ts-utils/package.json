@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "@jakubmazanec/eslint-config": "^3.2.0",
-    "@types/lodash": "^4.14.202",
+    "@types/lodash": "^4.17.13",
     "@types/node": "^22.9.0",
     "@vitest/coverage-v8": "^2.1.4",
     "concurrently": "^9.1.0",
