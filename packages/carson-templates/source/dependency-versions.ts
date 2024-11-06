@@ -64,7 +64,7 @@ export const DEPENDENCY_VERSIONS: Record<string, string> = {
   '@types/react-dom': '^18.0.0',
   '@vitest/coverage-v8': '^2.0.0',
   autoprefixer: '^10.0.0',
-  concurrently: '^8.0.0',
+  concurrently: '^9.0.0',
   'cross-env': '^7.0.0',
   'del-cli': '^5.0.0',
   esbuild: '^0.19.0',
