@@ -22,7 +22,7 @@
     "uninstall": "del-cli ./**/node_modules ./package-lock.json"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.27.5",
+    "@changesets/cli": "^2.27.9",
     "@types/node": "^22.9.0",
     "concurrently": "^8.2.2",
     "del-cli": "^5.1.0",
