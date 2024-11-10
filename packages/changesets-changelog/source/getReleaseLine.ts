@@ -20,7 +20,7 @@ export async function getReleaseLine(
   let commitFromSummary: string | undefined;
   let usersFromSummary: string[] = [];
   let replacedChangelog = changeset.summary
-    .replace(/^\s*(?:pr|pull|pull\s+request):\s*#?(\d+)/gim, (_, rawPullRequest) => {
+    .replaceAll(/^\s*(?:pr|pull|pull\s+request):\s*#?(\d+)/gim, (_, rawPullRequest) => {
       let pullRequest = Number(rawPullRequest);
 
       if (!Number.isNaN(pullRequest)) {
@@ -29,12 +29,12 @@ export async function getReleaseLine(
 
       return '';
     })
-    .replace(/^\s*commit:\s*(\S+)/gim, (_, commit: string) => {
+    .replaceAll(/^\s*commit:\s*(\S+)/gim, (_, commit: string) => {
       commitFromSummary = commit;
 
       return '';
     })
-    .replace(/^\s*(?:author|user):\s*@?(\S+)/gim, (_, user: string) => {
+    .replaceAll(/^\s*(?:author|user):\s*@?(\S+)/gim, (_, user: string) => {
       usersFromSummary.push(user);
 
       return '';

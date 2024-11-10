@@ -5,10 +5,12 @@ import {parseArguments} from '../source/parseArguments.js';
 import {ParsingError} from '../source/ParsingError.js';
 import {ValidationError} from '../source/ValidationError.js';
 import {EMPTY_PARSED_ARGUMENTS, NUMBER_STRING, SPECIAL_CHARACTERS} from './constants.js';
+import {validate} from './validate.js';
 
 describe('parseArgs()', () => {
   describe('correct typings', () => {
     test('no errors (#1)', () => {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars -- needed
       let result = parseArguments([], {
         commands: ['do stuff', 'undo stuff'],
       });
@@ -28,6 +30,7 @@ describe('parseArgs()', () => {
     });
 
     test('no errors (#2)', () => {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars -- needed
       let result = parseArguments([], {
         parameters: [
           {
@@ -62,6 +65,7 @@ describe('parseArgs()', () => {
     });
 
     test('no errors (#3)', () => {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars -- needed
       let result = parseArguments([], {
         parameters: [
           {
@@ -120,6 +124,7 @@ describe('parseArgs()', () => {
     });
 
     test('no errors (#4)', () => {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars -- needed
       let result = parseArguments([], {
         parameters: [
           {
@@ -178,6 +183,7 @@ describe('parseArgs()', () => {
     });
 
     test('no errors (#5)', () => {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars -- needed
       let result = parseArguments([], {
         options: {
           booleanOption1: {
@@ -1086,11 +1092,7 @@ describe('parseArgs()', () => {
               type: 'string',
               defaultValue: 'foobar',
               shortName: 'O',
-              validate: (value: string) => {
-                if (!/^\d{4}-\d{2}-\d{2}$/u.test(value)) {
-                  throw new Error('Invalid date.');
-                }
-              },
+              validate,
             },
           },
         } as const,

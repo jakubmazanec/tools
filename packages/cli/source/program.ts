@@ -1,11 +1,11 @@
 export * from './program/Command.js';
-export * from './program/CommandAction.js';
-export * from './program/CommandArguments.js';
-export * from './program/CommandOptions.js';
+export type * from './program/CommandAction.js';
+export type * from './program/CommandArguments.js';
+export type * from './program/CommandOptions.js';
 export * from './program/getProgramDetail.js';
 export * from './program/Program.js';
-export * from './program/ProgramCreateOptions.js';
-export * from './program/ProgramDetail.js';
+export type * from './program/ProgramCreateOptions.js';
+export type * from './program/ProgramDetail.js';
 export * from './program/ProgramError.js';
-export * from './program/ProgramOptions.js';
-export * from './program/ProgramStreams.js';
+export type * from './program/ProgramOptions.js';
+export type * from './program/ProgramStreams.js';

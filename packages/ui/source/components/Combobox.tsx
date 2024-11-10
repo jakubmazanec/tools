@@ -1,5 +1,3 @@
-// TODO: fix somehow
-/* eslint-disable complexity -- TODO */
 import {
   Combobox as HeadlessCombobox,
   ComboboxButton as HeadlessComboboxButton,
@@ -52,20 +50,6 @@ export type ComboboxProps<
     (
       | {
           as?: T | undefined;
-          value?: V | undefined;
-          defaultValue?: V | undefined;
-          multiple?: false | undefined;
-          items?: Array<ComboboxItem<V>> | undefined;
-          placeholder?: string;
-          immediate?: boolean | undefined;
-          virtual?: boolean | undefined;
-          customValue?: boolean | undefined;
-          name?: string | undefined;
-          className?: string;
-          onChange?: (selectedValue: V | undefined) => void;
-        }
-      | {
-          as?: T | undefined;
           value?: V[] | undefined;
           defaultValue?: V[] | undefined;
           multiple: true;
@@ -77,6 +61,20 @@ export type ComboboxProps<
           name?: string | undefined;
           className?: string;
           onChange?: (selectedValue: V[] | undefined) => void;
+        }
+      | {
+          as?: T | undefined;
+          value?: V | undefined;
+          defaultValue?: V | undefined;
+          multiple?: false | undefined;
+          items?: Array<ComboboxItem<V>> | undefined;
+          placeholder?: string;
+          immediate?: boolean | undefined;
+          virtual?: boolean | undefined;
+          customValue?: boolean | undefined;
+          name?: string | undefined;
+          className?: string;
+          onChange?: (selectedValue: V | undefined) => void;
         }
     )
 >;
@@ -158,8 +156,8 @@ export const Combobox = forwardRef(
         items?.filter((item) =>
           `${item.label as number | string}`
             .toLowerCase()
-            .replace(/\s+/g, '')
-            .includes(query.toLowerCase().replace(/\s+/g, '')),
+            .replaceAll(/\s+/g, '')
+            .includes(query.toLowerCase().replaceAll(/\s+/g, '')),
         )
       : items;
     let filteredChildren =
@@ -172,8 +170,8 @@ export const Combobox = forwardRef(
             typeof (child.props as {children?: unknown[] | string}).children === 'string' &&
             (child.props as {children: string}).children
               .toLowerCase()
-              .replace(/\s+/g, '')
-              .includes(query.toLowerCase().replace(/\s+/g, ''))
+              .replaceAll(/\s+/g, '')
+              .includes(query.toLowerCase().replaceAll(/\s+/g, ''))
           ) {
             return true;
           }
@@ -207,8 +205,8 @@ export const Combobox = forwardRef(
         <div className={theme.root('relative', className)} data-component="combobox">
           <HeadlessComboboxInput
             className={theme.input(null, className)}
-            size={1} // so the input default width without styling is small
             displayValue={displayValue}
+            size={1} // so the input default width without styling is small
             onChange={handleQueryChange}
           />
           <HeadlessComboboxButton className={theme.icon('absolute')}>
@@ -219,7 +217,7 @@ export const Combobox = forwardRef(
         </div>
 
         {virtual && filteredItems ?
-          <HeadlessComboboxOptions className={theme.options()} anchor="bottom start">
+          <HeadlessComboboxOptions anchor="bottom start" className={theme.options()}>
             {({option}: {option: V}) => (
               <ComboboxOption value={option}>
                 {items?.find((item) => item.value === option)?.label}
@@ -229,7 +227,7 @@ export const Combobox = forwardRef(
         : null}
 
         {!virtual && filteredItems ?
-          <HeadlessComboboxOptions className={theme.options()} anchor="bottom start">
+          <HeadlessComboboxOptions anchor="bottom start" className={theme.options()}>
             {customValue && query.length ?
               <ComboboxOption key={query} value={query}>
                 {query}
@@ -244,7 +242,7 @@ export const Combobox = forwardRef(
         : null}
 
         {!filteredItems && Array.isArray(filteredChildren) ?
-          <HeadlessComboboxOptions className={theme.options()} anchor="bottom start">
+          <HeadlessComboboxOptions anchor="bottom start" className={theme.options()}>
             {customValue && query.length ?
               <ComboboxOption value={query}>{query}</ComboboxOption>
             : null}

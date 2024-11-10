@@ -29,7 +29,7 @@ export function runUpdateWorkspace({workspace, args}: UpdateWorkspaceAndProjects
       .then(() => {
         observer.complete();
       })
-      .catch((error) => {
+      .catch((error: unknown) => {
         observer.error(error);
       });
   });

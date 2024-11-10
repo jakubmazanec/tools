@@ -10,6 +10,7 @@ import {type ErrorDetail} from './ErrorDetail.js';
 export function getErrorDetail(error: unknown): ErrorDetail {
   // TODO: add all codes
   if (error instanceof ParsingError) {
+    // eslint-disable-next-line @typescript-eslint/switch-exhaustiveness-check -- remove this when the TODO comment above is resolved
     switch (error.code) {
       default: {
         return {
@@ -22,6 +23,7 @@ export function getErrorDetail(error: unknown): ErrorDetail {
 
   // TODO: add all codes
   if (error instanceof ValidationError) {
+    // eslint-disable-next-line @typescript-eslint/switch-exhaustiveness-check -- remove this when the TODO comment above is resolved
     switch (error.code) {
       default: {
         return {

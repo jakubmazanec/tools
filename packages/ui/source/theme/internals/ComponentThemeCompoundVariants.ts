@@ -6,7 +6,9 @@ export type ComponentThemeCompoundVariants<
   V extends ComponentThemeDefinitionVariants,
   E extends ComponentThemeDefinitionElements | undefined,
 > = Array<
-  (E extends ComponentThemeDefinitionElements ?
+  {
+    [K in keyof V]?: Array<V[K][number]> | V[K][number];
+  } & (E extends ComponentThemeDefinitionElements ?
     {
       classNames: {
         [K in E[number]]: ClassName;
@@ -14,7 +16,5 @@ export type ComponentThemeCompoundVariants<
     }
   : {
       className: ClassName;
-    }) & {
-    [K in keyof V]?: Array<V[K][number]> | V[K][number];
-  }
+    })
 >;

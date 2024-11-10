@@ -1,6 +1,6 @@
 import type eslint from 'eslint';
 
-const config: eslint.Linter.Config['rules'] = {
+export const a11yRules: eslint.Linter.Config['rules'] = {
   // eslint-plugin-jsx-a11y rules
   'jsx-a11y/alt-text': 'warn', // enforce all elements that require alternative text have meaningful information to relay back to end user
   'jsx-a11y/anchor-ambiguous-text': 'off', // enforce <a> text to not exactly match "click here", "here", "link", or "a link"
@@ -45,5 +45,3 @@ const config: eslint.Linter.Config['rules'] = {
   'jsx-a11y/scope': 'error', // enforce scope prop is only used on <th> elements
   'jsx-a11y/tabindex-no-positive': 'error', // enforce tabIndex value is not greater than zero
 };
-
-export default config;

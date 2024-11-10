@@ -1,5 +1,3 @@
-// TODO: fix somehow
-/* eslint-disable complexity -- TODO */
 import {type Column, type Table} from '@tanstack/react-table';
 import {type ChangeEvent, type FormEvent, useCallback, useMemo, useState} from 'react';
 
@@ -266,26 +264,26 @@ export function DataTableHeaderFilter({
     filterElement = (
       <Container spacing="small">
         <Input
-          type="number"
-          min={String(facetingMin ?? '')}
           max={String(facetingMax ?? '')}
-          value={min ?? ''}
+          min={String(facetingMin ?? '')}
           placeholder={`Min ${facetingMin === null ? '' : `(${facetingMin})`}`}
+          type="number"
+          value={min ?? ''}
           onChange={handleMinRangeChange}
         />
         <Input
-          type="number"
-          min={String(facetingMin ?? '')}
           max={String(facetingMax ?? '')}
-          value={max ?? ''}
+          min={String(facetingMin ?? '')}
           placeholder={`Max ${facetingMax === null ? '' : `(${facetingMax})`}`}
+          type="number"
+          value={max ?? ''}
           onChange={handleMaxRangeChange}
         />
-        <Button submit variant="outline" aria-label="Filter" onClick={handleFilterClick}>
-          <Icon size="large" name="Funnel" />
+        <Button submit aria-label="Filter" variant="outline" onClick={handleFilterClick}>
+          <Icon name="Funnel" size="large" />
         </Button>
-        <Button variant="outline" aria-label="Cancel" onClick={handleResetClick}>
-          <Icon size="large" name="XMark" />
+        <Button aria-label="Cancel" variant="outline" onClick={handleResetClick}>
+          <Icon name="XMark" size="large" />
         </Button>
       </Container>
     );
@@ -293,15 +291,15 @@ export function DataTableHeaderFilter({
     filterElement = (
       <Container spacing="small">
         <Listbox
-          value={currentFilter as string}
           items={(facetingValues as string[]).map((value: string) => ({
             value,
             label: `${value as unknown}`,
           }))}
+          value={currentFilter as string}
           onChange={handleSelectFilterChange}
         />
-        <Button variant="outline" aria-label="Cancel" onClick={handleResetClick}>
-          <Icon size="large" name="XMark" />
+        <Button aria-label="Cancel" variant="outline" onClick={handleResetClick}>
+          <Icon name="XMark" size="large" />
         </Button>
       </Container>
     );
@@ -310,15 +308,15 @@ export function DataTableHeaderFilter({
       <Container spacing="small">
         <Combobox
           customValue
-          value={(currentFilter ?? '') as string}
           items={(facetingValues as string[]).map((value: string) => ({
             value,
             label: `${value as unknown}`,
           }))}
+          value={(currentFilter ?? '') as string}
           onChange={handleTextFilterChange}
         />
-        <Button variant="outline" aria-label="Cancel" onClick={handleResetClick}>
-          <Icon size="large" name="XMark" />
+        <Button aria-label="Cancel" variant="outline" onClick={handleResetClick}>
+          <Icon name="XMark" size="large" />
         </Button>
       </Container>
     );
@@ -326,11 +324,11 @@ export function DataTableHeaderFilter({
     filterElement = (
       <Container spacing="small">
         <Input value={filter ?? ''} onChange={handleFilterChange} />
-        <Button variant="outline" aria-label="Filter" onClick={handleFilterClick}>
-          <Icon size="large" name="Funnel" />
+        <Button aria-label="Filter" variant="outline" onClick={handleFilterClick}>
+          <Icon name="Funnel" size="large" />
         </Button>
-        <Button variant="outline" aria-label="Cancel" onClick={handleResetClick}>
-          <Icon size="large" name="XMark" />
+        <Button aria-label="Cancel" variant="outline" onClick={handleResetClick}>
+          <Icon name="XMark" size="large" />
         </Button>
       </Container>
     );

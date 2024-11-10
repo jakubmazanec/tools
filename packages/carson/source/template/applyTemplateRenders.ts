@@ -1,5 +1,3 @@
-// TODO: can this be fixed?
-/* eslint-disable complexity -- TODO */
 import fs from 'fs-extra';
 import path from 'node:path';
 import prettier from 'prettier';

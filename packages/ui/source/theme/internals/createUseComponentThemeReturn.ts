@@ -9,11 +9,11 @@ import {pickPropertyIfExists} from './pickPropertyIfExists.js';
 
 export function createUseComponentThemeReturn(
   componentTheme:
+    | ComponentTheme<{elements: ComponentThemeDefinitionElements}>
     | ComponentTheme<{
         variants: ComponentThemeDefinitionVariants;
         elements: ComponentThemeDefinitionElements;
       }>
-    | ComponentTheme<{elements: ComponentThemeDefinitionElements}>
     | ComponentTheme<{variants: ComponentThemeDefinitionVariants}>
     | ComponentTheme<undefined>,
   cx: (...inputs: ClassName[]) => string,

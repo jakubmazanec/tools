@@ -1,5 +1,5 @@
-export * from './types/CustomError.js';
-export * from './types/CustomErrorOptions.js';
-export * from './types/CustomErrorWithData.js';
-export * from './types/CustomErrorWithDataOptions.js';
-export * from './types/ErrorMessages.js';
+export type * from './types/CustomError.js';
+export type * from './types/CustomErrorOptions.js';
+export type * from './types/CustomErrorWithData.js';
+export type * from './types/CustomErrorWithDataOptions.js';
+export type * from './types/ErrorMessages.js';

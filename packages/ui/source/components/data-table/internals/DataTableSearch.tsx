@@ -97,11 +97,11 @@ export function DataTableSearch({
     <Form onSubmit={handleSearchSubmit}>
       <Container spacing="small">
         <Input value={search} onChange={handleSearchChange} />
-        <Button variant="outline" aria-label="Filter" onClick={handleSearchClick}>
-          <Icon size="large" name="MagnifyingGlass" />
+        <Button aria-label="Filter" variant="outline" onClick={handleSearchClick}>
+          <Icon name="MagnifyingGlass" size="large" />
         </Button>
-        <Button variant="outline" aria-label="Cancel" onClick={handleResetClick}>
-          <Icon size="large" name="XMark" />
+        <Button aria-label="Cancel" variant="outline" onClick={handleResetClick}>
+          <Icon name="XMark" size="large" />
         </Button>
       </Container>
     </Form>

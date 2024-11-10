@@ -31,14 +31,14 @@ export const Wrapper: FC<PropsWithChildren<WrapperProps>> = ({program, children}
         {program.latestVersion && program.latestVersion !== program.version ?
           <Box>
             <Box
-              flexDirection="column"
               borderColor={notice}
               borderStyle="round"
+              flexDirection="column"
               margin={1}
-              paddingTop={1}
-              paddingRight={4}
               paddingBottom={1}
               paddingLeft={4}
+              paddingRight={4}
+              paddingTop={1}
             >
               <Text>
                 New version <Text color={highlighted}>{program.latestVersion}</Text> is available!

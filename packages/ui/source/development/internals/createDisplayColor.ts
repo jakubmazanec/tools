@@ -8,7 +8,7 @@ export function createDisplayColor(hexColor: string, alphaPlaceholder?: boolean)
     return null;
   }
 
-  let display = null;
+  let display;
   let oklchColor = oklch(hexColor);
 
   if (!oklchColor) {

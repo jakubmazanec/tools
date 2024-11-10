@@ -1,5 +1,3 @@
-// TODO: fix
-/* eslint-disable complexity -- TODO */
 import {
   closestCenter,
   DndContext,
@@ -295,16 +293,16 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
 
   return (
     <DndContext
-      id={id}
       collisionDetection={closestCenter}
+      id={id}
       modifiers={[restrictToHorizontalAxis]}
       sensors={sensors}
       onDragEnd={handleDragEnd}
     >
       <DataTableSearchComponent
-        table={table}
         clientSearch={clientSearch}
         search={controlledSearch}
+        table={table}
         onSearch={onSearchChange}
       />
       <Table
@@ -320,16 +318,16 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
                 {headerGroup.headers.map((header) => (
                   <DataTableHeader
                     key={header.id}
-                    table={table}
-                    header={header}
-                    clientSorting={clientSorting}
-                    sorting={controlledSorting}
-                    clientFilters={clientFilters}
-                    filters={controlledFilters}
                     clientFaceting={clientFaceting}
+                    clientFilters={clientFilters}
+                    clientSorting={clientSorting}
                     faceting={faceting}
-                    onSorting={onSortingChange}
+                    filters={controlledFilters}
+                    header={header}
+                    sorting={controlledSorting}
+                    table={table}
                     onFiltering={onFiltersChange}
+                    onSorting={onSortingChange}
                   />
                 ))}
               </SortableContext>
@@ -367,11 +365,11 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
         </TableFoot>
       </Table>
       <DataTablePaginationComponent
-        table={table}
-        page={page}
-        pageSize={pageSize}
-        pageCount={pageCount}
         clientPagination={clientPagination}
+        page={page}
+        pageCount={pageCount}
+        pageSize={pageSize}
+        table={table}
         onPagination={onPaginationChange}
       />
     </DndContext>

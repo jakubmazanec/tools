@@ -33,7 +33,7 @@ export function runCreateWorkspace({workspacePath, templateId, args}: CreateWork
       .then(() => {
         observer.complete();
       })
-      .catch((error) => {
+      .catch((error: unknown) => {
         observer.error(error);
       });
   });

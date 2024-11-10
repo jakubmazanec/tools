@@ -7,7 +7,7 @@ import {sleep} from '../sleep.js';
 
 describe('SelectInput', () => {
   test('renders list', () => {
-    let {lastFrame} = render(<SelectInput label="Test" items={ITEMS} />);
+    let {lastFrame} = render(<SelectInput items={ITEMS} label="Test" />);
 
     expect(lastFrame()).toMatchInlineSnapshot(`
       "[35m?[39m [97mTest[39m
@@ -17,7 +17,7 @@ describe('SelectInput', () => {
   });
 
   test('renders list with initial index', () => {
-    let {lastFrame} = render(<SelectInput label="Test" items={ITEMS} initialIndex={1} />);
+    let {lastFrame} = render(<SelectInput initialIndex={1} items={ITEMS} label="Test" />);
 
     expect(lastFrame()).toMatchInlineSnapshot(`
       "[35m?[39m [97mTest[39m
@@ -27,7 +27,7 @@ describe('SelectInput', () => {
   });
 
   test('ignore input when not in focus', async () => {
-    let {stdin, lastFrame} = render(<SelectInput label="Test" focus={false} items={ITEMS} />);
+    let {stdin, lastFrame} = render(<SelectInput focus={false} items={ITEMS} label="Test" />);
 
     await sleep(100);
 
@@ -43,7 +43,7 @@ describe('SelectInput', () => {
   });
 
   test('moving the list', async () => {
-    let {stdin, lastFrame} = render(<SelectInput label="Test" items={ITEMS} />);
+    let {stdin, lastFrame} = render(<SelectInput items={ITEMS} label="Test" />);
 
     await sleep(100);
 
@@ -95,7 +95,7 @@ describe('SelectInput', () => {
   });
 
   test('moves to the beginning of the list', async () => {
-    let {stdin, lastFrame} = render(<SelectInput label="Test" items={ITEMS} />);
+    let {stdin, lastFrame} = render(<SelectInput items={ITEMS} label="Test" />);
 
     await sleep(100);
 
@@ -124,7 +124,7 @@ describe('SelectInput', () => {
 
   test('handles selecting', async () => {
     let handleSelect = vitest.fn();
-    let {stdin} = render(<SelectInput label="Test" items={ITEMS} onSelect={handleSelect} />);
+    let {stdin} = render(<SelectInput items={ITEMS} label="Test" onSelect={handleSelect} />);
 
     await sleep(100);
 
@@ -142,7 +142,7 @@ describe('SelectInput', () => {
 
   test('handles highliting', async () => {
     let handleHighlight = vitest.fn();
-    let {stdin} = render(<SelectInput label="Test" items={ITEMS} onHighlight={handleHighlight} />);
+    let {stdin} = render(<SelectInput items={ITEMS} label="Test" onHighlight={handleHighlight} />);
 
     await sleep(100);
 

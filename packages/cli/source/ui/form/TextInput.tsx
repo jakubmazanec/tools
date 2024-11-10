@@ -1,5 +1,3 @@
-// TODO: resolve
-/* eslint-disable complexity -- TODO */
 import chalk from 'chalk';
 import {Box, type BoxProps, Text, useInput} from 'ink';
 import {useEffect, useState} from 'react';
@@ -158,7 +156,7 @@ export function TextInput({
         if (state.cursorOffset > 0) {
           nextValue =
             originalValue.slice(0, state.cursorOffset - 1) +
-            originalValue.slice(state.cursorOffset, originalValue.length);
+            originalValue.slice(state.cursorOffset);
 
           nextCursorOffset -= 1;
         }
@@ -166,7 +164,7 @@ export function TextInput({
         nextValue =
           originalValue.slice(0, state.cursorOffset) +
           input +
-          originalValue.slice(state.cursorOffset, originalValue.length);
+          originalValue.slice(state.cursorOffset);
 
         nextCursorOffset += input.length;
 

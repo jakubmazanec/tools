@@ -42,7 +42,7 @@ export function runCreateProject({
       .then(() => {
         observer.complete();
       })
-      .catch((error) => {
+      .catch((error: unknown) => {
         observer.error(error);
       });
   });

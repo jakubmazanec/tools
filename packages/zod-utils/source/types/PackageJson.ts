@@ -99,6 +99,7 @@ const packageJsonScriptsSchema = z.intersection(
 
 const packageJsonDependenciesSchema = z.record(z.string());
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars -- needed
 const packageJsonExportConditionSchema = z.union([
   z.enum([
     'browser',
@@ -141,11 +142,11 @@ const packageJsonBundledDependenciesSchema = z.union([z.string().array(), z.bool
 
 type PackageJsonExports =
   | string[]
-  | string
+  | {[key: string]: PackageJsonExports | null | undefined}
   | {
       [key in PackageJsonExportCondition]?: PackageJsonExports | null;
     }
-  | {[key: string]: PackageJsonExports | null | undefined};
+  | string;
 
 export const packageJsonSchema = z.object({
   name: z.string().optional(),

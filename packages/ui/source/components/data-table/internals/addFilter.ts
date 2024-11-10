@@ -16,7 +16,7 @@ export function addFilter(
       if (filter.column === column) {
         newFilters.push({
           column,
-          filter: newFilter as string | [number, number],
+          filter: newFilter as [number, number] | string,
         });
 
         wasUpdated = true;
@@ -28,13 +28,13 @@ export function addFilter(
     if (!wasUpdated) {
       newFilters.push({
         column,
-        filter: newFilter as string | [number, number],
+        filter: newFilter as [number, number] | string,
       });
     }
   } else {
     newFilters.push({
       column,
-      filter: newFilter as string | [number, number],
+      filter: newFilter as [number, number] | string,
     });
   }
 

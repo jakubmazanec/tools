@@ -1,0 +1,26 @@
+diff --git a/node_modules/eslint-plugin-perfectionist/dist/utils/compare.js b/node_modules/eslint-plugin-perfectionist/dist/utils/compare.js
+index 70802ff..501a21c 100644
+--- a/node_modules/eslint-plugin-perfectionist/dist/utils/compare.js
++++ b/node_modules/eslint-plugin-perfectionist/dist/utils/compare.js
+@@ -12,7 +12,7 @@ let compare = (a, b, options) => {
+     )
+     sortingFunction = (aNode, bNode) =>
+       formatString(nodeValueGetter(aNode)).localeCompare(
+-        formatString(nodeValueGetter(bNode)),
++        formatString(nodeValueGetter(bNode)), 'en'
+       )
+   } else if (options.type === 'natural') {
+     let prepareNumeric = string => {
+diff --git a/node_modules/eslint-plugin-perfectionist/dist/utils/compare.mjs b/node_modules/eslint-plugin-perfectionist/dist/utils/compare.mjs
+index fabab31..56ae962 100644
+--- a/node_modules/eslint-plugin-perfectionist/dist/utils/compare.mjs
++++ b/node_modules/eslint-plugin-perfectionist/dist/utils/compare.mjs
+@@ -10,7 +10,7 @@ let compare = (a, b, options) => {
+     )
+     sortingFunction = (aNode, bNode) =>
+       formatString(nodeValueGetter(aNode)).localeCompare(
+-        formatString(nodeValueGetter(bNode)),
++        formatString(nodeValueGetter(bNode)), 'en'
+       )
+   } else if (options.type === 'natural') {
+     let prepareNumeric = string => {
