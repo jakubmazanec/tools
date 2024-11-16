@@ -1,6 +1,6 @@
 import type eslint from 'eslint';
 
-const config: eslint.Linter.Config['rules'] = {
+export const vitestRules: eslint.Linter.Config['rules'] = {
   // eslint-plugin-vitest
   'vitest/consistent-test-filename': 'error', // forbidden .spec test file pattern
   'vitest/consistent-test-it': ['error', {fn: 'test', withinDescribe: 'test'}], // prefer test or it but not both
@@ -11,8 +11,7 @@ const config: eslint.Linter.Config['rules'] = {
   'vitest/no-commented-out-tests': 'warn', // disallow commented out tests
   'vitest/no-conditional-expect': 'error', // disallow conditional expects
   'vitest/no-conditional-in-test': 'off', // disallow conditional tests
-  // TODO: turn the rul on when this is fixed: https://github.com/veritem/eslint-plugin-vitest/issues/358
-  'vitest/no-conditional-tests': 'off', // disallow conditional tests
+  'vitest/no-conditional-tests': 'error', // disallow conditional tests
   'vitest/no-disabled-tests': 'error', // disallow disabled tests
   'vitest/no-duplicate-hooks': 'error', // disallow duplicate hooks and teardown hooks
   'vitest/no-focused-tests': 'error', // disallow focused tests
@@ -27,6 +26,14 @@ const config: eslint.Linter.Config['rules'] = {
   'vitest/no-standalone-expect': 'error', // disallow using expect outside of it or test blocks
   'vitest/no-test-prefixes': 'error', // disallow using test as a prefix
   'vitest/no-test-return-statement': 'error', // disallow return statements in tests
+  'vitest/padding-around-after-all-blocks': 'off', // enforce padding around `afterAll` blocks
+  'vitest/padding-around-after-each-blocks': 'off', // enforce padding around `afterEach` blocks
+  'vitest/padding-around-all': 'error', // enforce padding around vitest functions
+  'vitest/padding-around-before-all-blocks': 'off', // enforce padding around `beforeAll` blocks
+  'vitest/padding-around-before-each-blocks': 'off', // enforce padding around `beforeEach` blocks
+  'vitest/padding-around-describe-blocks': 'off', // enforce padding around `describe` blocks
+  'vitest/padding-around-expect-groups': 'off', // enforce padding around `expect` groups
+  'vitest/padding-around-test-blocks': 'off', // enforce padding around afterAll blocks
   'vitest/prefer-called-with': 'error', // suggest using toBeCalledWith() or toHaveBeenCalledWith()
   'vitest/prefer-comparison-matcher': 'error', // suggest using the built-in comparison matchers
   'vitest/prefer-each': 'error', // prefer each rather than manual loops
@@ -47,13 +54,13 @@ const config: eslint.Linter.Config['rules'] = {
   'vitest/prefer-to-contain': 'error', // prefer using toContain()
   'vitest/prefer-to-have-length': 'error', // suggest using toHaveLength()
   'vitest/prefer-todo': 'warn', // suggest using test.todo
+  'vitest/prefer-vi-mocked': 'error', // prefer `vi.mocked()` over `fn as Mock`
   'vitest/require-hook': 'warn', // require setup and teardown to be within a hook
   'vitest/require-local-test-context-for-concurrent-snapshots': 'error', // require local Test Context for concurrent snapshot tests
   'vitest/require-to-throw-message': 'error', // require toThrow() to be called with an error message
   'vitest/require-top-level-describe': 'error', // enforce that all tests are in a top-level describe
   'vitest/valid-describe-callback': 'error', // enforce valid describe callback
   'vitest/valid-expect': ['error', {alwaysAwait: true}], // enforce valid expect() usage
+  'vitest/valid-expect-in-promise': 'error', // require promises that have expectations in their chain to be valid
   'vitest/valid-title': 'warn', // enforce valid titles
 };
-
-export default config;

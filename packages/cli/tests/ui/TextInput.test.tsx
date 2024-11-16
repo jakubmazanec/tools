@@ -18,7 +18,7 @@ describe('TextInput', () => {
 
   test('some value, no cursor', () => {
     let {lastFrame} = render(
-      <TextInput label="Test" value="foo" showCursor={false} onChange={NOOP} />,
+      <TextInput label="Test" showCursor={false} value="foo" onChange={NOOP} />,
     );
 
     expect(lastFrame()).toMatchInlineSnapshot(`
@@ -38,7 +38,7 @@ describe('TextInput', () => {
 
   test('display placeholder', () => {
     let {lastFrame} = render(
-      <TextInput label="Test" value="" placeholder="Write something" onChange={NOOP} />,
+      <TextInput label="Test" placeholder="Write something" value="" onChange={NOOP} />,
     );
 
     expect(lastFrame()).toMatchInlineSnapshot(`
@@ -51,9 +51,9 @@ describe('TextInput', () => {
     let {lastFrame} = render(
       <TextInput
         label="Test"
-        value="foo"
-        showCursor={false}
         placeholder="Write something"
+        showCursor={false}
+        value="foo"
         onChange={NOOP}
       />,
     );
@@ -65,7 +65,7 @@ describe('TextInput', () => {
   });
 
   test('masked value', () => {
-    let {lastFrame} = render(<TextInput label="Test" value="foo" mask="*" onChange={NOOP} />);
+    let {lastFrame} = render(<TextInput label="Test" mask="*" value="foo" onChange={NOOP} />);
 
     expect(lastFrame()).toMatchInlineSnapshot(`
       "[35m?[39m [97mTest[39m
@@ -103,7 +103,7 @@ describe('TextInput', () => {
     function App() {
       let [value, setValue] = useState('');
 
-      return <TextInput label="Test" focus={false} value={value} onChange={setValue} />;
+      return <TextInput focus={false} label="Test" value={value} onChange={setValue} />;
     }
 
     let {stdin, lastFrame} = render(<App />);

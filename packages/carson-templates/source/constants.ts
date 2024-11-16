@@ -1,4 +1,5 @@
 export const BUILD_DIRECTORY = 'build';
+export const STORYBOOK_BUILD_DIRECTORY = 'storybook-static';
 export const SOURCE_DIRECTORY = 'source';
 
 export const BUILD_TO_ESM_COMMAND = `esbuild "${SOURCE_DIRECTORY}/**/*" --platform=node --target=node20.8 --outdir=${BUILD_DIRECTORY} --sourcemap`;
@@ -12,20 +13,20 @@ export const LINTER_CONFIG_PACKAGE_NAME = '@jakubmazanec/eslint-config';
 export const CHANGELOG_PACKAGE_NAME = '@jakubmazanec/changesets-changelog';
 
 export const MAIN_BRANCH_NAMES = new Set(['main', 'master']);
-export const DEVELOPMENT_BRANCH_NAMES = new Set(['development', 'develop', 'dev']);
+export const DEVELOPMENT_BRANCH_NAMES = new Set(['dev', 'develop', 'development']);
 
-export const LINT_IGNORE_PATTERNS = [
-  '.cache/',
-  '.turbo/',
-  'bin/',
-  'coverage/',
-  'node_modules/',
-  'public/',
-  '*.d.ts',
-  '*.json',
-  '*.md',
-  '*.mdx',
-  `${BUILD_DIRECTORY}/`,
+export const LINT_IGNORES = [
+  '.cache/**',
+  '.turbo/**',
+  'bin/**',
+  'coverage/**',
+  'node_modules/**',
+  'public/**',
+  '**/*.d.ts',
+  '**/*.json',
+  '**/*.md',
+  '**/*.mdx',
+  `${BUILD_DIRECTORY}/**`,
 ].sort();
 
 export const FORMAT_IGNORE_PATTERNS = [

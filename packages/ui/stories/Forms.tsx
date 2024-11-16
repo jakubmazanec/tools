@@ -134,7 +134,7 @@ export function Example() {
         Add task
       </Button>
 
-      <Button submit idle={isIdle} className="self-center">
+      <Button submit className="self-center" idle={isIdle}>
         Send
       </Button>
     </Form>

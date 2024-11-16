@@ -9,6 +9,7 @@ export const JS_AND_TS_EXTENSIONS = [
   '.mjs',
   '.json',
 ];
+export const TS_EXTENSIONS = ['.ts', '.tsx', '.cts', '.mts'];
 
 export const JS_EXTENSIONS_GLOB_PART = '{js,jsx,cjs,mjs}';
 export const TS_EXTENSIONS_GLOB_PART = '{ts,tsx,cts,mts}';

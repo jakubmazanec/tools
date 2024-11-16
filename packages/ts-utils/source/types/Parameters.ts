@@ -16,5 +16,5 @@
  *
  * @typeParam T Base for the new type
  */
-export type Parameters<T extends '' | false | ((...args: any[]) => any) | null | undefined> =
+export type Parameters<T extends ((...args: any[]) => any) | '' | false | null | undefined> =
   T extends (...args: infer P) => any ? P : never;

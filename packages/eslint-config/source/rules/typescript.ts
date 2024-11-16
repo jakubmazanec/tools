@@ -2,10 +2,11 @@
 
 import type eslint from 'eslint';
 
-const config: eslint.Linter.Config['rules'] = {
+export const typescriptRules: eslint.Linter.Config['rules'] = {
   // override ESLint rules
   camelcase: 'off', // enforce camelcase naming convention
   'class-methods-use-this': 'off', // enforce that class methods utilize this
+  'consistent-return': 'off', // require return statements to either always or never specify values
   'default-param-last': 'off', // enforce default parameters to be last
   'dot-notation': 'off', // enforce dot notation whenever possible
   'no-array-constructor': 'off', // disallow Array constructors
@@ -15,7 +16,6 @@ const config: eslint.Linter.Config['rules'] = {
   'no-implied-eval': 'off', // disallow the use of eval()-like methods
   'no-invalid-this': 'off', // disallow this keywords outside of classes or class-like objects
   'no-loop-func': 'off', // disallow function declarations and expressions inside loop statements
-  'no-loss-of-precision': 'off', // disallow literal numbers that lose precision
   'no-magic-numbers': 'off', // disallow magic numbers
   'no-redeclare': 'off', // disallow variable redeclaration
   'no-shadow': 'off', // disallow variable declarations from shadowing variables declared in the outer scope
@@ -42,22 +42,22 @@ const config: eslint.Linter.Config['rules'] = {
   '@typescript-eslint/adjacent-overload-signatures': 'error', // require that member overloads be consecutive
   '@typescript-eslint/array-type': ['error', {default: 'array-simple'}], // requires using either T[] or Array<T> for arrays
   '@typescript-eslint/await-thenable': 'error', // disallows awaiting a value that is not a Thenable
-  '@typescript-eslint/ban-ts-comment': 'warn', // bans // @ts-<directive> comments from being used
-  '@typescript-eslint/ban-tslint-comment': 'error', // bans // tslint:<rule-flag> comments from being used
-  '@typescript-eslint/ban-types': [
+  '@typescript-eslint/ban-ts-comment': [
     'error',
     {
-      types: {
-        Function:
-          "Don't use Function as a type. Use explicit types like `(...args: any[]) => void`.",
-        String: {message: 'Use string instead.', fixWith: 'string'},
-      },
+      minimumDescriptionLength: 3,
+      'ts-check': false,
+      'ts-expect-error': 'allow-with-description',
+      'ts-ignore': false,
+      'ts-nocheck': false,
     },
-  ], // bans specific types from being used
+  ], // bans // @ts-<directive> comments from being used
+  '@typescript-eslint/ban-tslint-comment': 'off', // bans // tslint:<rule-flag> comments from being used
   '@typescript-eslint/class-literal-property-style': 'off', // ensures that literals on classes are exposed in a consistent style
   '@typescript-eslint/class-methods-use-this': 'off', // enforce that class methods utilize this
   '@typescript-eslint/consistent-generic-constructors': 'off', // enforces specifying generic type arguments on type annotation or constructor name of a constructor call
   '@typescript-eslint/consistent-indexed-object-style': 'off', // enforce or disallow the use of the record type
+  '@typescript-eslint/consistent-return': 'error', // require return statements to either always or never specify values
   '@typescript-eslint/consistent-type-assertions': [
     'error',
     {
@@ -199,8 +199,7 @@ const config: eslint.Linter.Config['rules'] = {
       leadingUnderscore: 'allow',
       trailingUnderscore: 'forbid',
       filter: {
-        regex:
-          '(^(\\^|&|\\$|\\/|\\\\|:|!).*)|(^\\d+$)|(^__typename$)|(^__html$)|(^x-tenant-context$)|(^accept-language$)', // don't check: 1) properties starting with symbol ^, &, $, /, \, :, or !, 2) GraphQL specific property `__typename`, 3) React specific property `__html`, 4) HTTP request headers
+        regex: String.raw`(^(\^|&|\$|\/|\\|:|!).*)|(^\d+$)|(^__typename$)|(^__html$)|(^x-tenant-context$)|(^accept-language$)`, // don't check: 1) properties starting with symbol ^, &, $, /, \, :, or !, 2) GraphQL specific property `__typename`, 3) React specific property `__html`, 4) HTTP request headers
         match: false,
       },
     },
@@ -226,7 +225,7 @@ const config: eslint.Linter.Config['rules'] = {
   '@typescript-eslint/no-duplicate-type-constituents': 'error', // disallow duplicate constituents of union or intersection types
   '@typescript-eslint/no-dynamic-delete': 'off', // bans usage of the delete operator with computed key expressions
   '@typescript-eslint/no-empty-function': 'off', // disallow empty functions
-  '@typescript-eslint/no-empty-interface': 'warn', // disallow the declaration of empty interfaces
+  '@typescript-eslint/no-empty-object-type': 'error', // disallow accidentally using the "empty object" type
   '@typescript-eslint/no-explicit-any': ['error', {fixToUnknown: true}], // disallow usage of the any type
   '@typescript-eslint/no-extra-non-null-assertion': 'warn', // disallow extra non-null assertion
   '@typescript-eslint/no-extraneous-class': [
@@ -248,7 +247,6 @@ const config: eslint.Linter.Config['rules'] = {
   '@typescript-eslint/no-invalid-this': 'warn', // disallow this keywords outside of classes or class-like objects
   '@typescript-eslint/no-invalid-void-type': 'warn', // disallows usage of void type outside of generic or return types
   '@typescript-eslint/no-loop-func': 'warn', // disallow function declarations that contain unsafe references inside loop statements
-  '@typescript-eslint/no-loss-of-precision': 'warn', // disallow literal numbers that lose precision
   '@typescript-eslint/no-magic-numbers': 'off', // disallows magic numbers
   '@typescript-eslint/no-meaningless-void-operator': [
     'error',
@@ -272,23 +270,37 @@ const config: eslint.Linter.Config['rules'] = {
   '@typescript-eslint/no-non-null-assertion': 'warn', // disallows non-null assertions using the ! postfix operator
   '@typescript-eslint/no-redundant-type-constituents': 'warn', // disallow members of unions and intersections that do nothing or override type information
   '@typescript-eslint/no-redeclare': 'error', // disallow variable redeclaration
+  '@typescript-eslint/no-deprecated': 'warn', // disallow using code marked as @deprecated
   '@typescript-eslint/no-restricted-imports': 'off', // disallow specified modules when loaded by import
+  '@typescript-eslint/no-restricted-types': [
+    'error',
+    {
+      types: {
+        Function:
+          "Don't use Function as a type. Use explicit types like `(...args: any[]) => void`.",
+        String: {message: 'Use string instead.', fixWith: 'string'},
+      },
+    },
+  ], // disallow certain types
   '@typescript-eslint/no-require-imports': 'error', // disallows invocation of require()
   '@typescript-eslint/no-shadow': ['warn', {allow: ['resolve, reject']}], // disallow variable declarations from shadowing variables declared in the outer scope
   '@typescript-eslint/no-this-alias': 'warn', // disallow aliasing this
-  '@typescript-eslint/no-throw-literal': 'error', // disallow throwing literals as exceptions
   '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'error', // flags unnecessary equality comparisons against boolean literals
   '@typescript-eslint/no-unnecessary-condition': ['error', {allowConstantLoopConditions: true}], // prevents conditionals where the type is always truthy or always falsy
+  '@typescript-eslint/no-unnecessary-parameter-property-assignment': 'error', // disallow unnecessary assignment of constructor property parameter
   '@typescript-eslint/no-unnecessary-qualifier': 'error', // warns when a namespace qualifier is unnecessary
+  '@typescript-eslint/no-unnecessary-template-expression': 'error', // disallow unnecessary template expressions
   '@typescript-eslint/no-unnecessary-type-arguments': 'error', // warns if an explicitly specified type argument is the default for that type parameter
   '@typescript-eslint/no-unnecessary-type-assertion': 'error', // warns if a type assertion does not change the type of an expression
   '@typescript-eslint/no-unnecessary-type-constraint': 'warn', // disallows unnecessary constraints on generic types
+  '@typescript-eslint/no-unnecessary-type-parameters': 'off', // disallow type parameters that aren't used multiple times
   '@typescript-eslint/no-unsafe-argument': 'error', // disallows calling an function with an any type value
   '@typescript-eslint/no-unsafe-assignment': 'error', // disallows assigning any to variables and properties
   '@typescript-eslint/no-unsafe-call': 'error', // disallows calling an any type value
   '@typescript-eslint/no-unsafe-declaration-merging': 'error', // disallows unsafe declaration merging
   '@typescript-eslint/no-unsafe-enum-comparison': 'error', // disallow comparing an enum value with a non-enum value
   '@typescript-eslint/no-unused-expressions': 'error', // disallow unused expressions
+  '@typescript-eslint/no-unsafe-function-type': 'error', // disallow using the unsafe built-in Function type
   '@typescript-eslint/no-unsafe-member-access': 'error', // disallows member access on any typed variables
   '@typescript-eslint/no-unsafe-return': 'error', // disallows returning any from a function
   '@typescript-eslint/no-unsafe-unary-minus': 'error', // require unary negation to take a number
@@ -304,9 +316,9 @@ const config: eslint.Linter.Config['rules'] = {
   ], // disallow the use of variables before they are defined
   '@typescript-eslint/no-useless-constructor': 'warn', // disallow unnecessary constructors
   '@typescript-eslint/no-useless-empty-export': 'error', // disallow empty exports that don't change anything in a module file
-  '@typescript-eslint/no-useless-template-literals': 'error', // disallow unnecessary template literals
-  '@typescript-eslint/no-var-requires': 'off', // disallows the use of require statements except in import statements
+  '@typescript-eslint/no-wrapper-object-types': 'error', // disallow using confusing built-in primitive class wrappers
   '@typescript-eslint/non-nullable-type-assertion-style': 'off', // prefers a non-null assertion over explicit type cast when possible
+  '@typescript-eslint/only-throw-error': 'error', // disallow throwing non-Error values as exceptions
   '@typescript-eslint/parameter-properties': 'error', // require or disallow the use of parameter properties in class constructors
   '@typescript-eslint/prefer-as-const': 'error', // prefer usage of as const over literal type
   '@typescript-eslint/prefer-destructuring': [
@@ -318,6 +330,7 @@ const config: eslint.Linter.Config['rules'] = {
     {enforceForRenamedProperties: false},
   ], // require destructuring from arrays and/or objects
   '@typescript-eslint/prefer-enum-initializers': 'off', // prefer initializing each enums member value
+  '@typescript-eslint/prefer-find': 'error', // enforce the use of Array.prototype.find() over Array.prototype.filter() followed by [0] when looking for a single result
   '@typescript-eslint/prefer-for-of': 'warn', // prefer a ‘for-of’ loop over a standard ‘for’ loop if the index is only used to access the array being iterated
   '@typescript-eslint/prefer-function-type': 'warn', // Use function types instead of interfaces with call signatures
   '@typescript-eslint/prefer-includes': 'warn', // enforce includes method over indexOf method
@@ -335,14 +348,12 @@ const config: eslint.Linter.Config['rules'] = {
   '@typescript-eslint/prefer-regexp-exec': 'off', // prefer RegExp#exec() over String#match() if no global flag is provided
   '@typescript-eslint/prefer-return-this-type': 'warn', // enforce that this is used when only this type is returned
   '@typescript-eslint/prefer-string-starts-ends-with': 'off', // enforce the use of String#startsWith and String#endsWith instead of other equivalent methods of checking substrings
-  '@typescript-eslint/prefer-ts-expect-error': 'warn', // recommends using // @ts-expect-error over // @ts-ignore
   '@typescript-eslint/promise-function-async': 'warn', // requires any function or method that returns a Promise to be marked async
   '@typescript-eslint/require-array-sort-compare': 'warn', // enforce giving compare argument to Array#sort
   '@typescript-eslint/require-await': 'off', // disallow async functions which have no await expression
   '@typescript-eslint/restrict-plus-operands': ['error'], // when adding two variables, operands must both be of type number or of type string
   '@typescript-eslint/restrict-template-expressions': 'off', // enforce template literal expressions to be of string type
   '@typescript-eslint/return-await': 'error', // rules for awaiting returned promises
-  '@typescript-eslint/sort-type-constituents': 'warn', // enforce constituents of a type union/intersection to be sorted alphabetically
   '@typescript-eslint/strict-boolean-expressions': [
     'warn',
     {
@@ -358,6 +369,5 @@ const config: eslint.Linter.Config['rules'] = {
   '@typescript-eslint/typedef': 'off', // requires type annotations to exist
   '@typescript-eslint/unbound-method': 'off', // enforces unbound methods are called with their expected scope
   '@typescript-eslint/unified-signatures': 'error', // warns for any two overloads that could be unified into one by using a union or an optional/rest parameter
+  '@typescript-eslint/use-unknown-in-catch-callback-variable': 'warn', // enforce typing arguments in Promise rejection callbacks as unknown
 };
-
-export default config;

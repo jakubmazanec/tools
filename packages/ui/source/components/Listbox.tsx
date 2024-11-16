@@ -1,5 +1,3 @@
-// TODO: fix somehow
-/* eslint-disable complexity -- TODO */
 import {
   Listbox as HeadlessListbox,
   ListboxButton as HeadlessListboxButton,
@@ -54,19 +52,6 @@ export type ListboxProps<
     (
       | {
           as?: T | undefined;
-          value?: V | undefined;
-          defaultValue?: V | undefined;
-          multiple?: false | undefined;
-          hideSelected?: never; // must be here so the type of props is correct
-          items?: Array<ListboxItem<V>> | undefined;
-          placeholder?: string;
-          name?: string | undefined;
-          className?: string | undefined;
-          showFilter?: boolean | undefined;
-          onChange?: (selectedValue: V) => void;
-        }
-      | {
-          as?: T | undefined;
           value?: V[] | undefined;
           defaultValue?: V[] | undefined;
           multiple: true;
@@ -82,6 +67,19 @@ export type ListboxProps<
           className?: string | undefined;
           showFilter?: boolean | undefined;
           onChange?: (selectedValue: V[]) => void;
+        }
+      | {
+          as?: T | undefined;
+          value?: V | undefined;
+          defaultValue?: V | undefined;
+          multiple?: false | undefined;
+          hideSelected?: never; // must be here so the type of props is correct
+          items?: Array<ListboxItem<V>> | undefined;
+          placeholder?: string;
+          name?: string | undefined;
+          className?: string | undefined;
+          showFilter?: boolean | undefined;
+          onChange?: (selectedValue: V) => void;
         }
     )
 >;
@@ -149,8 +147,8 @@ export const Listbox = forwardRef(
         items?.filter((item) =>
           item.label
             .toLowerCase()
-            .replace(/\s+/g, '')
-            .includes(query.toLowerCase().replace(/\s+/g, '')),
+            .replaceAll(/\s+/g, '')
+            .includes(query.toLowerCase().replaceAll(/\s+/g, '')),
         )
       : items;
     let filteredChildren =
@@ -163,8 +161,8 @@ export const Listbox = forwardRef(
             typeof (child.props as {children?: unknown[] | string}).children === 'string' &&
             (child.props as {children: string}).children
               .toLowerCase()
-              .replace(/\s+/g, '')
-              .includes(query.toLowerCase().replace(/\s+/g, ''))
+              .replaceAll(/\s+/g, '')
+              .includes(query.toLowerCase().replaceAll(/\s+/g, ''))
           ) {
             return true;
           }
@@ -192,8 +190,8 @@ export const Listbox = forwardRef(
       <HeadlessListbox {...props}>
         <HeadlessListboxButton
           className={theme.root('relative', className)}
-          data-multiple={multiple ? true : null}
           data-component="listbox"
+          data-multiple={multiple ? true : null}
         >
           {({value: selectedValue}) => {
             if (!items && !multiple) {
@@ -333,8 +331,8 @@ export const Listbox = forwardRef(
           }}
         </HeadlessListboxButton>
         <HeadlessListboxOptions
-          className={theme.options()}
           anchor="bottom start"
+          className={theme.options()}
           onKeyDown={handleTab}
         >
           {showFilter ?

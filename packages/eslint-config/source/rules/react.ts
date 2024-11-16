@@ -1,9 +1,10 @@
 import type eslint from 'eslint';
 
-const config: eslint.Linter.Config['rules'] = {
+export const reactRules: eslint.Linter.Config['rules'] = {
   // eslint-plugin-react rules
   'react/boolean-prop-naming': 'off', // enforces consistent naming for boolean props
   'react/button-has-type': ['error', {reset: false}], // forbid "button" element without an explicit "type" attribute
+  'react/checked-requires-onchange-or-readonly': 'warn', // enforce using onChange or readonly attribute when checked is used
   'react/default-props-match-prop-types': 'off', // enforce all defaultProps are defined and not "required" in propTypes
   'react/destructuring-assignment': 'warn', // rule enforces consistent usage of destructuring assignment in component
   'react/display-name': 'off', // prevent missing displayName in a React component definition
@@ -50,6 +51,7 @@ const config: eslint.Linter.Config['rules'] = {
       checkChildContextTypes: true,
     },
   ], // forbid certain propTypes
+  'react/forward-ref-uses-ref': 'error', // require all forwardRef components include a ref parameter
   'react/function-component-definition': 'off', // standardize the way function component get defined
   'react/hook-use-state': 'warn', // ensure symmetric naming of useState hook value and setter variables
   'react/iframe-missing-sandbox': 'warn', // enforce sandbox attribute on iframe elements
@@ -84,16 +86,9 @@ const config: eslint.Linter.Config['rules'] = {
   'react/jsx-one-expression-per-line': 'off', // Limit to one expression per line in JSX
   'react/jsx-pascal-case': 'error', // enforce PascalCase for user-defined JSX components
   'react/jsx-props-no-multi-spaces': 'off', // disallow multiple spaces between inline JSX props
+  'react/jsx-props-no-spread-multi': 'off', // disallow JSX prop spreading the same identifier multiple times
   'react/jsx-props-no-spreading': 'off', // prevent JSX prop spreading
-  'react/jsx-sort-props': [
-    'warn',
-    {
-      callbacksLast: true,
-      shorthandFirst: true,
-      noSortAlphabetically: true,
-      reservedFirst: true,
-    },
-  ], // enforce props alphabetical sorting
+  'react/jsx-sort-props': 'off', // enforce props alphabetical sorting
   'react/jsx-tag-spacing': 'off', // validate whitespace in and around the JSX opening and closing brackets
   'react/jsx-uses-react': 'off', // prevent React to be incorrectly marked as unused
   'react/jsx-uses-vars': 'error', // prevent variables used in JSX to be incorrectly marked as unused
@@ -173,5 +168,3 @@ const config: eslint.Linter.Config['rules'] = {
   'react/style-prop-object': 'warn', // enforce style prop value is an object
   'react/void-dom-elements-no-children': 'error', // prevent passing of children to void DOM elements (e.g. <br />)
 };
-
-export default config;

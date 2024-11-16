@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/sort-type-constituents -- sorting hurts readability in this case */
+/* eslint-disable perfectionist/sort-union-types -- sorting hurts readability in this case */
 
 export type BooleanParameterConfig =
   | {

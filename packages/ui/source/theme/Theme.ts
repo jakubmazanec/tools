@@ -62,8 +62,8 @@ export type Theme = Simplify<
     ComponentTheme<typeof useDialogTheme, {outputComponentName: true}> &
     ComponentTheme<typeof useDialogTitleTheme, {outputComponentName: true}> &
     ComponentTheme<typeof useErrorTheme, {outputComponentName: true}> &
-    ComponentTheme<typeof useFieldsetTheme, {outputComponentName: true}> &
     ComponentTheme<typeof useFieldTheme, {outputComponentName: true}> &
+    ComponentTheme<typeof useFieldsetTheme, {outputComponentName: true}> &
     ComponentTheme<typeof useFormTheme, {outputComponentName: true}> &
     ComponentTheme<typeof useIconTheme, {outputComponentName: true}> &
     ComponentTheme<typeof useInputTheme, {outputComponentName: true}> &
@@ -73,8 +73,8 @@ export type Theme = Simplify<
     ComponentTheme<typeof useListboxTheme, {outputComponentName: true}> &
     ComponentTheme<typeof useMenuButtonTheme, {outputComponentName: true}> &
     ComponentTheme<typeof useMenuHeadingTheme, {outputComponentName: true}> &
-    ComponentTheme<typeof useMenuItemsTheme, {outputComponentName: true}> &
     ComponentTheme<typeof useMenuItemTheme, {outputComponentName: true}> &
+    ComponentTheme<typeof useMenuItemsTheme, {outputComponentName: true}> &
     ComponentTheme<typeof useMenuSectionTheme, {outputComponentName: true}> &
     ComponentTheme<typeof useMenuSeparatorTheme, {outputComponentName: true}> &
     ComponentTheme<typeof useMenuTheme, {outputComponentName: true}> &
@@ -91,12 +91,12 @@ export type Theme = Simplify<
     ComponentTheme<typeof useTableCaptionTheme, {outputComponentName: true}> &
     ComponentTheme<typeof useTableCellTheme, {outputComponentName: true}> &
     ComponentTheme<typeof useTableFootTheme, {outputComponentName: true}> &
-    ComponentTheme<typeof useTableHeaderTheme, {outputComponentName: true}> &
     ComponentTheme<typeof useTableHeadTheme, {outputComponentName: true}> &
+    ComponentTheme<typeof useTableHeaderTheme, {outputComponentName: true}> &
     ComponentTheme<typeof useTableRowTheme, {outputComponentName: true}> &
     ComponentTheme<typeof useTableTheme, {outputComponentName: true}> &
-    ComponentTheme<typeof useTextareaTheme, {outputComponentName: true}> &
-    ComponentTheme<typeof useTextTheme, {outputComponentName: true}> & {
+    ComponentTheme<typeof useTextTheme, {outputComponentName: true}> &
+    ComponentTheme<typeof useTextareaTheme, {outputComponentName: true}> & {
       merge: (...rest: ClassName[]) => string;
     }
 >;

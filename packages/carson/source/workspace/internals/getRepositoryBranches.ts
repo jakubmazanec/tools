@@ -25,7 +25,7 @@ export async function getRepositoryBranches(repositoryPath: string): Promise<str
         branch.replace(REMOTE_NAME_PREFIX_REGEXP, ''),
       );
     }
-  } catch (error) {
+  } catch {
     // no-op
   }
 

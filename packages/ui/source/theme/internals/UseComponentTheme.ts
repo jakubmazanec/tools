@@ -8,15 +8,15 @@ export type UseComponentTheme<N extends string, D extends ComponentThemeDefiniti
   D extends ComponentThemeDefinition ?
     D['variants'] extends ComponentThemeDefinitionVariants ?
       D['elements'] extends ComponentThemeDefinitionElements ?
-        ((themeProps: ComponentThemeProps<D>) => UseComponentThemeReturn<D>) & {
+        {
           componentThemeName: N;
           themeDefinition: D;
-        }
-      : ((themeProps: ComponentThemeProps<D>) => UseComponentThemeReturn<D>) & {
+        } & ((themeProps: ComponentThemeProps<D>) => UseComponentThemeReturn<D>)
+      : {
           componentThemeName: N;
           themeDefinition: D;
-        }
+        } & ((themeProps: ComponentThemeProps<D>) => UseComponentThemeReturn<D>)
     : D['elements'] extends ComponentThemeDefinitionElements ?
-      (() => UseComponentThemeReturn<D>) & {componentThemeName: N; themeDefinition: D}
-    : (() => UseComponentThemeReturn<D>) & {componentThemeName: N; themeDefinition: D}
-  : (() => UseComponentThemeReturn<D>) & {componentThemeName: N; themeDefinition: D};
+      {componentThemeName: N; themeDefinition: D} & (() => UseComponentThemeReturn<D>)
+    : {componentThemeName: N; themeDefinition: D} & (() => UseComponentThemeReturn<D>)
+  : {componentThemeName: N; themeDefinition: D} & (() => UseComponentThemeReturn<D>);

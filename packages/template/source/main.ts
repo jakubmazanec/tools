@@ -1,8 +1,8 @@
 export * from './Template.js';
 export * from './TemplateAttributes.js';
-export * from './TemplateContent.js';
+export type * from './TemplateContent.js';
 export * from './TemplateError.js';
-export * from './TemplateFunction.js';
-export * from './TemplateRender.js';
-export * from './TemplateRenders.js';
+export type * from './TemplateFunction.js';
+export type * from './TemplateRender.js';
+export type * from './TemplateRenders.js';
 export * from './TemplateVariables.js';

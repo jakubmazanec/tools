@@ -64,15 +64,15 @@ export function CreateWorkspace({args}: CreateWorkspaceProps) {
       <Text>{`Creating workspace at ${chalk[colors.info](workspacePath)}.`}</Text>
 
       <CreateWorkspaceInput
-        values={createWorkspaceInputResult}
         marginTop={1}
+        values={createWorkspaceInputResult}
         onChange={setCreateWorkspaceInputResult}
         onComplete={setCreateWorkspaceInputResult}
       />
 
       {status === 'in-progress' || status === 'finished' ?
-        <Box marginTop={1} flexDirection="column">
-          <Header showSpinner={status === 'in-progress'} icon={icons.success} marginBottom={1}>
+        <Box flexDirection="column" marginTop={1}>
+          <Header icon={icons.success} marginBottom={1} showSpinner={status === 'in-progress'}>
             <Text>Creating workspace...</Text>
           </Header>
 
@@ -83,7 +83,7 @@ export function CreateWorkspace({args}: CreateWorkspaceProps) {
       : null}
 
       {status === 'finished' ?
-        <Header marginTop={1} icon={icons.success}>
+        <Header icon={icons.success} marginTop={1}>
           <Text>Done.</Text>
         </Header>
       : null}

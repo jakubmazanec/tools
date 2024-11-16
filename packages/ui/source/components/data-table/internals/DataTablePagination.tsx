@@ -134,20 +134,20 @@ export const DataTablePagination = memo(
     );
 
     return (
-      <Container justify="center" align="center">
+      <Container align="center" justify="center">
         <Container spacing="small">
           <Button
-            variant="outline"
             aria-label="First page"
             disabled={isFirstPage}
+            variant="outline"
             onClick={handleFirstPageClick}
           >
             <Icon name="ChevronDoubleLeft" />
           </Button>
           <Button
-            variant="outline"
             aria-label="Previous page"
             disabled={isFirstPage}
+            variant="outline"
             onClick={handlePreviousPageClick}
           >
             <Icon name="ChevronLeft" />
@@ -158,25 +158,25 @@ export const DataTablePagination = memo(
               <DataTablePageButton
                 // eslint-disable-next-line react/no-array-index-key -- needed, there is no other value
                 key={index}
-                page={index + 1}
                 isSelected={page === index + 1}
+                page={index + 1}
                 onClick={handlePageClick}
               />
             ))
           : null}
 
           <Button
-            variant="outline"
             aria-label="Next page"
             disabled={isLastPage}
+            variant="outline"
             onClick={handleNextPageClick}
           >
             <Icon name="ChevronRight" />
           </Button>
           <Button
-            variant="outline"
             aria-label="Last page"
             disabled={isLastPage}
+            variant="outline"
             onClick={handleLastPageClick}
           >
             <Icon name="ChevronDoubleRight" />
@@ -190,21 +190,21 @@ export const DataTablePagination = memo(
           </Container>
         : null}
         {pageCount > MAX_PAGE_BUTTONS_COUNT ?
-          <Container spacing="extra-small" align="center">
+          <Container align="center" spacing="extra-small">
             <Text>Go to page:</Text>
             <Input
-              type="text"
-              pattern="[0-9]*"
               className="w-12"
               defaultValue={page}
+              pattern="[0-9]*"
+              type="text"
               onChange={handlePageChange}
             />
           </Container>
         : null}
         <Container>
           <Listbox
-            value={String(pageSize)}
             className="w-auto min-w-min"
+            value={String(pageSize)}
             onChange={handlePageSizeChange}
           >
             {PAGE_SIZES.map((pageSize) => (

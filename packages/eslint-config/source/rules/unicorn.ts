@@ -1,6 +1,6 @@
 import type eslint from 'eslint';
 
-const config: eslint.Linter.Config['rules'] = {
+export const unicornRules: eslint.Linter.Config['rules'] = {
   // override ESLint rules
   'no-negated-condition': 'off', // disallow negated conditions
   'no-nested-ternary': 'off', // disallow nested ternary expressions
@@ -10,6 +10,8 @@ const config: eslint.Linter.Config['rules'] = {
   'unicorn/better-regex': 'warn', // improve regexes by making them shorter, consistent, and safer
   'unicorn/catch-error-name': 'warn', // enforce a specific parameter name in catch clauses
   'unicorn/consistent-destructuring': 'error', // use destructured variables over properties
+  'unicorn/consistent-empty-array-spread': 'error', // prefer consistent types when spreading a ternary in an array literal
+  'unicorn/consistent-existence-index-check': 'off', // enforce consistent style for element existence checks with indexOf(), lastIndexOf(), findIndex(), and findLastIndex()
   'unicorn/consistent-function-scoping': 'error', // move function definitions to the highest possible scope
   'unicorn/custom-error-definition': 'error', // enforce correct Error subclassing
   'unicorn/empty-brace-spaces': 'off', // enforce no spaces between braces
@@ -26,28 +28,35 @@ const config: eslint.Linter.Config['rules'] = {
   'unicorn/import-style': 'warn', // enforce specific import styles per module
   'unicorn/new-for-builtins': 'warn', // enforce the use of new for all builtins, except String, Number, Boolean, Symbol and BigInt
   'unicorn/no-abusive-eslint-disable': 'off', // enforce specifying rules to disable in eslint-disable comments
+  'unicorn/no-anonymous-default-export': 'error', // disallow anonymous functions and classes as the default export
   'unicorn/no-array-callback-reference': 'off', // prevent passing a function reference directly to iterator methods
   'unicorn/no-array-for-each': 'off', // prefer for…of over Array#forEach(…)
   'unicorn/no-array-method-this-argument': 'error', // disallow using the this argument in array methods
   'unicorn/no-array-push-push': 'error', // enforce combining multiple Array#push() into one call
   'unicorn/no-array-reduce': 'off', // disallow Array#reduce() and Array#reduceRight()
   'unicorn/no-await-expression-member': 'off', // forbid member access from await expression
+  'unicorn/no-await-in-promise-methods': 'error', // disallow using await in Promise method parameters
   'unicorn/no-console-spaces': 'off', // do not use leading/trailing space between console.log parameters
   'unicorn/no-document-cookie': 'error', // do not use document.cookie directly
   'unicorn/no-empty-file': 'warn', // disallow empty files
   'unicorn/no-for-loop': 'warn', // Do not use a for loop that can be replaced with a for-of loop
   'unicorn/no-hex-escape': 'warn', // enforce the use of Unicode escapes instead of hexadecimal escapes
   'unicorn/no-instanceof-array': 'error', // require Array.isArray() instead of instanceof Array
+  'unicorn/no-invalid-fetch-options': 'off', // disallow invalid options in fetch() and new Request()
   'unicorn/no-invalid-remove-event-listener': 'error', // prevent calling EventTarget#removeEventListener() with the result of an expression
   'unicorn/no-keyword-prefix': 'off', // disallow identifiers starting with new or class
-  'unicorn/no-lonely-if': 'warn', // disallow if statements as the only statement in if blocks without else
+  'unicorn/no-length-as-slice-end': 'error', // disallow using .length as the end argument of {Array,String,TypedArray}#slice()
+  'unicorn/no-lonely-if': 'error', // disallow if statements as the only statement in if blocks without else
+  'unicorn/no-magic-array-flat-depth': 'error', // disallow a magic number as the depth argument in Array#flat(…)
   'unicorn/no-negated-condition': 'error', // disallow negated conditions
+  'unicorn/no-negation-in-equality-check': 'error', // disallow negated expression in equality check
   'unicorn/no-nested-ternary': 'error', // disallow nested ternary expressions
   'unicorn/no-new-array': 'error', // disallow new Array()
   'unicorn/no-new-buffer': 'error', // enforce the use of Buffer.from() and Buffer.alloc() instead of the deprecated new Buffer()
   'unicorn/no-null': 'off', // disallow the use of the null literal
   'unicorn/no-object-as-default-parameter': 'error', // disallow the use of objects as default parameters
   'unicorn/no-process-exit': 'off', // disallow process.exit()
+  'unicorn/no-single-promise-in-promise-methods': 'error', // disallow passing single-element arrays to Promise methods
   'unicorn/no-static-only-class': 'error', // forbid classes that only have static members
   'unicorn/no-thenable': 'error', // disallow then property
   'unicorn/no-this-assignment': 'off', // disallow assigning this to a variable
@@ -83,10 +92,12 @@ const config: eslint.Linter.Config['rules'] = {
   'unicorn/prefer-dom-node-text-content': 'warn', // prefer .textContent over .innerText
   'unicorn/prefer-event-target': 'warn', // prefer EventTarget over EventEmitter
   'unicorn/prefer-export-from': ['error', {ignoreUsedVariables: true}], // prefer export…from when re-exporting
+  'unicorn/prefer-global-this': 'error', // prefer globalThis over window, self, and global
   'unicorn/prefer-includes': 'off', // prefer .includes() over .indexOf() when checking for existence or non-existence
   'unicorn/prefer-json-parse-buffer': 'off', // prefer reading a JSON file as a buffer
   'unicorn/prefer-keyboard-event-key': 'warn', // prefer KeyboardEvent#key over KeyboardEvent#keyCode
   'unicorn/prefer-logical-operator-over-ternary': 'warn', // prefer using a logical operator over a ternary
+  'unicorn/prefer-math-min-max': 'warn', // prefer Math.min() and Math.max() over ternaries for simple comparisons
   'unicorn/prefer-math-trunc': 'warn', // enforce the use of Math.trunc instead of bitwise operators
   'unicorn/prefer-modern-dom-apis': 'warn', // prefer .before() over .insertBefore(), .replaceWith() over .replaceChild(), prefer one of .before(), .after(),
   'unicorn/prefer-modern-math-apis': 'warn', // prefer modern Math APIs over legacy patterns..append() or .prepend() over insertAdjacentText() and insertAdjacentElement()
@@ -106,10 +117,12 @@ const config: eslint.Linter.Config['rules'] = {
   'unicorn/prefer-set-has': 'error', // prefer Set#has() over Array#includes() when checking for existence or non-existence
   'unicorn/prefer-set-size': 'error', // prefer using Set#size instead of Array#length
   'unicorn/prefer-spread': 'error', // prefer the spread operator over Array.from()
+  'unicorn/prefer-string-raw': 'warn', // prefer using the String.raw tag to avoid escaping \
   'unicorn/prefer-string-replace-all': 'warn', // prefer String#replaceAll() over regex searches with the global flag
   'unicorn/prefer-string-slice': 'warn', // prefer String#slice() over String#substr() and String#substring()
   'unicorn/prefer-string-starts-ends-with': 'warn', // prefer String#startsWith() & String#endsWith() over more complex alternatives
   'unicorn/prefer-string-trim-start-end': 'warn', // prefer String#trimStart() / String#trimEnd() over String#trimLeft() / String#trimRight()
+  'unicorn/prefer-structured-clone': 'warn', // prefer using structuredClone to create a deep clone
   'unicorn/prefer-switch': 'off', // prefer switch over multiple else-if
   'unicorn/prefer-ternary': 'off', // prefer ternary expressions over simple if-else statements
   // FIXME [@jakubmazanec]: enable when we support top-level await
@@ -126,5 +139,3 @@ const config: eslint.Linter.Config['rules'] = {
   'unicorn/text-encoding-identifier-case': 'warn', // enforce consistent case for text encoding identifiers
   'unicorn/throw-new-error': 'error', // require new when throwing an error
 };
-
-export default config;

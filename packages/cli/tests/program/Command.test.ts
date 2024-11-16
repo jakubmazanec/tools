@@ -8,6 +8,7 @@ import {Command} from '../../source/program/Command.js';
 describe('Command', () => {
   describe('correct typings', () => {
     test('no errors', () => {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars -- needed
       let command = new Command('do stuff', async () => {}, {
         parameters: [
           {

@@ -14,6 +14,8 @@ export function useProgram() {
 
   let exit = useCallback(
     (error: unknown) => {
+      // TODO: remove when this is fixed: https://github.com/facebook/react/issues/31544
+      // eslint-disable-next-line react-compiler/react-compiler -- false positive
       process.exitCode = 1;
 
       showBoundary(error);

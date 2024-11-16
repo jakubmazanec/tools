@@ -1,5 +1,3 @@
-// TODO: try to fix
-/* eslint-disable complexity -- TODO */
 import _ from 'lodash';
 import semver from 'semver';
 
