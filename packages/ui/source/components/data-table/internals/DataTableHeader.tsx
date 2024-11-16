@@ -74,7 +74,7 @@ export function DataTableHeader({
     contentElement = flexRender(header.column.columnDef.header, header.getContext());
   }
 
-  let sortElement = null;
+  let sortElement;
 
   if (!sorting) {
     sortElement = <Icon name="ArrowsUpDown" size="small" variant="light" />;
@@ -96,7 +96,7 @@ export function DataTableHeader({
 
   let handleSortClick = useCallback(() => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
-    let newSorting: DataTableProps<any, any>['sorting'] = null;
+    let newSorting: DataTableProps<any, any>['sorting'];
 
     if (!sorting) {
       newSorting = {
@@ -146,18 +146,18 @@ export function DataTableHeader({
   return (
     <TableHeader
       ref={setNodeRef}
-      colSpan={header.colSpan}
       className={getCommonPinningClasses(header.column)}
+      colSpan={header.colSpan}
       style={style}
     >
       <span className="relative mr-6 block overflow-hidden">
-        <Container spacing="extra-small" justify="spaced" align="center">
+        <Container align="center" justify="spaced" spacing="extra-small">
           {header.column.getCanSort() ?
             <Button
-              variant="text"
-              size="small"
               className="mr-auto inline-flex cursor-move"
+              size="small"
               title={title}
+              variant="text"
               onClick={handleSortClick}
               {...attributes}
               {...listeners}
@@ -168,39 +168,39 @@ export function DataTableHeader({
           : null}
           <Popover>
             <PopoverButton>
-              <Button variant="text" size="small" aria-label="Settings">
-                <Icon size="small" name="Cog6Tooth" />
+              <Button aria-label="Settings" size="small" variant="text">
+                <Icon name="Cog6Tooth" size="small" />
               </Button>
             </PopoverButton>
             <PopoverPanel anchor="right start">
-              <Container spacing="large" direction="column">
+              <Container direction="column" spacing="large">
                 {header.column.getCanPin() ?
-                  <Container spacing="small" direction="row">
+                  <Container direction="row" spacing="small">
                     <Text>Pin column</Text>
 
                     <Field>
                       <Container spacing="small">
                         {header.column.getIsPinned() === 'left' ? null : (
                           <Button
-                            variant="outline"
                             aria-label="Pin to left"
+                            variant="outline"
                             onClick={handlePinLeftClick}
                           >
-                            <Icon size="large" name="ArrowLeftEndOnRectangle" />
+                            <Icon name="ArrowLeftEndOnRectangle" size="large" />
                           </Button>
                         )}
                         {header.column.getIsPinned() ?
-                          <Button variant="outline" aria-label="Unpin" onClick={handleUnpinClick}>
-                            <Icon size="large" name="XMark" />
+                          <Button aria-label="Unpin" variant="outline" onClick={handleUnpinClick}>
+                            <Icon name="XMark" size="large" />
                           </Button>
                         : null}
                         {header.column.getIsPinned() === 'right' ? null : (
                           <Button
-                            variant="outline"
                             aria-label="Pin to right"
+                            variant="outline"
                             onClick={handlePinRightClick}
                           >
-                            <Icon size="large" name="ArrowRightEndOnRectangle" />
+                            <Icon name="ArrowRightEndOnRectangle" size="large" />
                           </Button>
                         )}
                       </Container>
@@ -209,24 +209,24 @@ export function DataTableHeader({
                 : null}
 
                 {header.column.getCanFilter() ?
-                  <Container spacing="small" direction="column">
+                  <Container direction="column" spacing="small">
                     <Text>Filter</Text>
 
                     <Field>
                       <DataTableHeaderFilter
-                        table={table}
-                        column={header.column}
-                        clientFilters={clientFilters}
-                        filters={controlledFilters}
                         clientFaceting={clientFaceting}
+                        clientFilters={clientFilters}
+                        column={header.column}
                         faceting={faceting}
+                        filters={controlledFilters}
+                        table={table}
                         onFiltering={onFiltering}
                       />
                     </Field>
                   </Container>
                 : null}
 
-                <Container spacing="small" direction="column">
+                <Container direction="column" spacing="small">
                   <Text>Visible columns</Text>
 
                   {table.getAllLeafColumns().map((column) => (
@@ -239,15 +239,15 @@ export function DataTableHeader({
         </Container>
       </span>
       <Button
-        variant="invisible"
-        size="small"
         aria-label="Resize"
         className="absolute right-1 top-2.5 cursor-col-resize"
+        size="small"
+        variant="invisible"
         onDoubleClick={handleWidthReset}
         onMouseDown={header.getResizeHandler()}
         onTouchStart={header.getResizeHandler()}
       >
-        <Icon size="small" name="ArrowsRightLeft" />
+        <Icon name="ArrowsRightLeft" size="small" />
       </Button>
     </TableHeader>
   );

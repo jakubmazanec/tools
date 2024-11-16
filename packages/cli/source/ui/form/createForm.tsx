@@ -64,12 +64,12 @@ export function createForm<C extends FormConfig>(formConfig: C): Form<C> {
         inputElements.push(
           <FormRow
             key={rowName}
-            marginTop={inputElements.length === 0 ? 0 : 1}
+            config={input}
             focus={rowName === activeInputName}
             isComplete={results[rowName as keyof C['rows']].isComplete}
-            config={input}
-            rows={rows}
+            marginTop={inputElements.length === 0 ? 0 : 1}
             rowName={rowName}
+            rows={rows}
             value={results[rowName as keyof C['rows']].value}
             onChange={handleChange}
             onComplete={handleFinish}

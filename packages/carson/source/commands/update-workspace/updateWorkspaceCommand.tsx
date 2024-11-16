@@ -20,7 +20,7 @@ export const updateWorkspaceCommand = new Command(
       }
     }
 
-    await program.renderElement(<UpdateWorkspace workspace={workspace} args={args} />);
+    await program.renderElement(<UpdateWorkspace args={args} workspace={workspace} />);
   },
   {
     description: 'Updates files in a workspace.',

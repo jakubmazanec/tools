@@ -3,6 +3,7 @@ import {
   runCreateWorkspace,
   runUpdateWorkspace,
   Workspace,
+  type WorkspacePackageJson,
 } from '@jakubmazanec/carson';
 import {createTempDirectory} from '@jakubmazanec/fs-utils';
 import {execa} from 'execa';
@@ -10,6 +11,7 @@ import fs from 'fs-extra';
 import path from 'node:path';
 import {describe, expect, test, vitest} from 'vitest';
 
+import {DEPENDENCY_VERSIONS} from '../source/main.js';
 import {NPMRC_PATH, ONLY_ONE_STAR_REGEXP} from './constants.js';
 import {observableToPromise} from './observableToPromise.js';
 import {packageNameToDirectory} from './packageNameToDirectory.js';
@@ -133,6 +135,17 @@ describe.each([
       if (await fs.pathExists(NPMRC_PATH)) {
         await fs.copyFile(NPMRC_PATH, path.join(workspacePath, '.npmrc'));
       }
+
+      // we need to override the ESLint version, because when updating to its newer major version, the old ESLint config package is still installed with previous major version in its peer dependencies, which leads to failed `npm install`
+      let packageJson = (await fs.readJson(
+        path.join(workspacePath, 'package.json'),
+      )) as WorkspacePackageJson<true>;
+
+      packageJson.overrides = {
+        eslint: DEPENDENCY_VERSIONS.eslint!,
+      };
+
+      await fs.writeJson(path.join(workspacePath, 'package.json'), packageJson);
 
       // we disable scripts, so npm doesn't try to run Carson
       await execa('npm', ['install', '--ignore-scripts'], {cwd: workspacePath});

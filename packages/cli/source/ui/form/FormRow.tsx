@@ -74,26 +74,13 @@ export function FormRow<C extends FormConfig>({
   );
 
   switch (config.type) {
-    case 'text': {
-      return (
-        <TextInput
-          key={String(rowName)}
-          label={config.label ?? ''}
-          validate={config.validate}
-          value={value as string}
-          focus={focus}
-          isComplete={isComplete}
-          onChange={handleChange}
-          onSubmit={handleFinish}
-          {...boxProps}
-        />
-      );
+    case 'confirm': {
+      return null;
     }
     case 'select': {
       return (
         <SelectInput
           key={String(rowName)}
-          label={config.label ?? ''}
           items={
             rows ?
               (
@@ -107,12 +94,30 @@ export function FormRow<C extends FormConfig>({
           }
           focus={focus}
           isComplete={isComplete}
+          label={config.label ?? ''}
           onSelect={handleSelectFinish}
           {...boxProps}
         />
       );
     }
+    case 'text': {
+      return (
+        <TextInput
+          key={String(rowName)}
+          focus={focus}
+          isComplete={isComplete}
+          label={config.label ?? ''}
+          validate={config.validate}
+          value={value as string}
+          onChange={handleChange}
+          onSubmit={handleFinish}
+          {...boxProps}
+        />
+      );
+    }
     default: {
+      config satisfies never;
+
       return null;
     }
   }

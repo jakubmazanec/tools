@@ -288,7 +288,16 @@ export const ControlledExample = {
     return (
       <DataTable
         {...args}
+        filters={filters}
         pagination={pagination}
+        search={search}
+        sorting={sorting}
+        // TODO: fix this
+        // eslint-disable-next-line react/jsx-no-bind -- TODO
+        onFiltersChange={(newFilters) => {
+          console.log('onFiltering...', newFilters);
+          updateArgs({filters: newFilters});
+        }}
         // TODO: fix this
         // eslint-disable-next-line react/jsx-no-bind -- TODO
         onPaginationChange={(newPagination) => {
@@ -305,26 +314,17 @@ export const ControlledExample = {
             });
           }
         }}
-        sorting={sorting}
-        // TODO: fix this
-        // eslint-disable-next-line react/jsx-no-bind -- TODO
-        onSortingChange={(newSorting) => {
-          console.log('onSorting...', newSorting);
-          updateArgs({sorting: newSorting});
-        }}
-        filters={filters}
-        // TODO: fix this
-        // eslint-disable-next-line react/jsx-no-bind -- TODO
-        onFiltersChange={(newFilters) => {
-          console.log('onFiltering...', newFilters);
-          updateArgs({filters: newFilters});
-        }}
-        search={search}
         // TODO: fix this
         // eslint-disable-next-line react/jsx-no-bind -- TODO
         onSearchChange={(newSearch) => {
           console.log('onSearch...', newSearch);
           updateArgs({search: newSearch});
+        }}
+        // TODO: fix this
+        // eslint-disable-next-line react/jsx-no-bind -- TODO
+        onSortingChange={(newSorting) => {
+          console.log('onSorting...', newSorting);
+          updateArgs({sorting: newSorting});
         }}
       />
     );

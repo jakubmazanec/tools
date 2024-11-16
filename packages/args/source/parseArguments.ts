@@ -43,8 +43,6 @@ function commitOptionScope(optionScope: OptionScope, parsedOptions: Record<strin
  * @return Parsed arguments.
  *
  */
-// TODO: refactor
-// eslint-disable-next-line complexity -- TODO
 export function parseArguments<const O extends ParserConfig>(
   argv: Argv,
   parserConfig: O,
@@ -117,10 +115,9 @@ export function parseArguments<const O extends ParserConfig>(
               );
             }
           }
-        }
 
-        optionScope = null;
-        commandScope = null;
+          commandScope = null;
+        }
 
         let optionName = arg;
         let optionValue;

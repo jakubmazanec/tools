@@ -39,8 +39,8 @@ export function UpdateWorkspace({workspace, args}: UpdateWorkspaceProps) {
     <Box flexDirection="column">
       <Text>{`Updating workspace at ${chalk[colors.info](workspace.path)}.`}</Text>
 
-      <Box marginTop={1} flexDirection="column">
-        <Header showSpinner={!isFinished} icon={icons.success} marginBottom={1}>
+      <Box flexDirection="column" marginTop={1}>
+        <Header icon={icons.success} marginBottom={1} showSpinner={!isFinished}>
           <Text>Updating workspace and projects...</Text>
         </Header>
 
@@ -50,7 +50,7 @@ export function UpdateWorkspace({workspace, args}: UpdateWorkspaceProps) {
       </Box>
 
       {isFinished ?
-        <Header marginTop={1} icon={icons.success}>
+        <Header icon={icons.success} marginTop={1}>
           <Text>Done.</Text>
         </Header>
       : null}

@@ -1,8 +1,8 @@
 import type eslint from 'eslint';
 
-import {JS_EXTENSIONS_GLOB_PART} from '../constants';
+import {JS_EXTENSIONS_GLOB_PART} from '../constants.js';
 
-const config: eslint.Linter.Config['rules'] = {
+export const importRules: eslint.Linter.Config['rules'] = {
   // override ESLint rules
   'no-duplicate-imports': 'off', // disallow duplicate module imports
   'sort-imports': 'off', // enforce sorted import declarations within modules
@@ -62,20 +62,12 @@ const config: eslint.Linter.Config['rules'] = {
   'import/no-restricted-paths': 'off', // restrict which files can be imported in a given folder
   'import/no-self-import': 'error', // forbid a module from importing itself
   'import/no-unassigned-import': 'off', // forbid unassigned imports
-  'import/no-unresolved': ['error', {commonjs: true, caseSensitive: true}], // ensure imports point to a file/module that can be resolved
+  // TODO: enable when these are fixed: https://github.com/import-js/eslint-plugin-import/issues/3088, https://github.com/import-js/eslint-plugin-import/issues/3082
+  'import/no-unresolved': ['off', {commonjs: true, caseSensitive: true}], // ensure imports point to a file/module that can be resolved
   'import/no-unused-modules': 'off', // report modules without exports, or exports without matching import in another module
   'import/no-useless-path-segments': ['error', {noUselessIndex: true}], // prevent unnecessary path segments in import and require statements
   'import/no-webpack-loader-syntax': 'error', // forbid webpack loader syntax in imports
   'import/unambiguous': 'off', // report potentially ambiguous parse goal (script vs. module)
-  'import/order': [
-    'error',
-    {
-      groups: [['builtin', 'external']],
-      'newlines-between': 'always',
-      alphabetize: {order: 'asc', caseInsensitive: true},
-    },
-  ], // enforce a convention in module import order
+  'import/order': 'off', // enforce a convention in module import order
   'import/prefer-default-export': 'off', // prefer a default export if module exports a single name
 };
-
-export default config;

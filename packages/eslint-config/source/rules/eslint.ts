@@ -1,7 +1,7 @@
-import * as confusingBrowserGlobals from 'confusing-browser-globals';
+import confusingBrowserGlobals from 'confusing-browser-globals';
 import type eslint from 'eslint';
 
-const config: eslint.Linter.Config['rules'] = {
+export const eslintRules: eslint.Linter.Config['rules'] = {
   // ESLint rules
   'accessor-pairs': 'off', // enforce getter and setter pairs in objects and classes
   'array-callback-return': ['error', {allowImplicit: true}], // enforce return statements in callbacks of array methods
@@ -10,7 +10,7 @@ const config: eslint.Linter.Config['rules'] = {
   camelcase: ['warn', {properties: 'always'}], // enforce camelcase naming convention
   'capitalized-comments': 'off', // enforce or disallow capitalization of the first letter of a comment
   'class-methods-use-this': 'off', // enforce that class methods utilize this
-  complexity: ['warn', 20], // enforce a maximum cyclomatic complexity allowed in a program
+  complexity: 'off', // enforce a maximum cyclomatic complexity allowed in a program
   'consistent-return': 'error', // require return statements to either always or never specify values
   'consistent-this': 'off', // enforce consistent naming when capturing the current execution context
   'constructor-super': 'error', // require super() calls in constructors
@@ -42,7 +42,6 @@ const config: eslint.Linter.Config['rules'] = {
   'id-length': 'off', // enforce minimum and maximum identifier lengths
   'id-match': 'off', // require identifiers to match a specified regular expression
   'init-declarations': 'off', // require or disallow initialization in variable declarations
-  'line-comment-position': 'off', // enforce position of line comments
   'logical-assignment-operators': ['warn', 'always', {enforceForIfStatements: true}], // require or disallow logical assignment logical operator shorthand
   'max-classes-per-file': ['warn', 1], // enforce a maximum number of classes per file
   'max-depth': 'off', // enforce a maximum depth that blocks can be nested
@@ -51,7 +50,6 @@ const config: eslint.Linter.Config['rules'] = {
   'max-nested-callbacks': 'off', // enforce a maximum depth that callbacks can be nested
   'max-params': ['warn', 3], // enforce a maximum number of parameters in function definitions
   'max-statements': 'off', // enforce a maximum number of statements allowed in function blocks
-  'multiline-comment-style': 'off', // enforce a particular style for multiline comments
   'new-cap': 'warn', // require constructor names to begin with a capital letter
   'no-alert': 'error', // disallow the use of alert, confirm, and prompt
   'no-array-constructor': 'warn', // disallow Array constructors
@@ -120,7 +118,6 @@ const config: eslint.Linter.Config['rules'] = {
   'no-new': 'error', // disallow new operators outside of assignments or comparisons
   'no-new-func': 'error', // disallow new operators with the Function object
   'no-new-native-nonconstructor': 'error', // disallow new operators with global non-constructor functions
-  'no-new-symbol': 'error', // disallow new operators with the Symbol object
   'no-new-wrappers': 'error', // disallow new operators with the String, Number, and Boolean objects
   'no-nonoctal-decimal-escape': 'error', // disallow `\8` and `\9` escape sequences in string literals
   'no-obj-calls': 'error', // disallow calling global object properties as functions
@@ -254,6 +251,7 @@ const config: eslint.Linter.Config['rules'] = {
   'no-unused-private-class-members': 'error', //  disallow unused private class members
   'no-unused-vars': ['error', {vars: 'local', args: 'after-used'}], // disallow unused variables
   'no-use-before-define': 'error', // disallow the use of variables before they are defined
+  'no-useless-assignment': 'error', // disallow variable assignments when the value is not used
   'no-useless-backreference': 'warn', // disallow useless backreferences in regular expressions
   'no-useless-call': 'error', // disallow unnecessary calls to .call() and .apply()
   'no-useless-catch': 'error', // disallow unnecessary catch clauses
@@ -283,8 +281,7 @@ const config: eslint.Linter.Config['rules'] = {
   'prefer-exponentiation-operator': 'error', // disallow the use of `Math.pow` in favor of the `**` operator
   'prefer-named-capture-group': 'off', // enforce using named capture group in regular expression
   'prefer-numeric-literals': 'error', // disallow parseInt() and Number.parseInt() in favor of binary, octal, and hexadecimal literals
-  // TODO: set to error when we ensure compatibility (e.g. Node.js v16.9 is needed for Object.hasOwn())
-  'prefer-object-has-own': 'off', // disallow use of `Object.prototype.hasOwnProperty.call()` and prefer use of `Object.hasOwn()`
+  'prefer-object-has-own': 'error', // disallow use of `Object.prototype.hasOwnProperty.call()` and prefer use of `Object.hasOwn()`
   'prefer-object-spread': 'error', // disallow using Object.assign with an object literal as the first argument and prefer the use of object spread instead.
   'prefer-promise-reject-errors': 'error', // require using Error objects as Promise rejection reasons
   'prefer-regex-literals': 'error', // disallow use of the RegExp constructor in favor of regular expression literals
@@ -314,5 +311,3 @@ const config: eslint.Linter.Config['rules'] = {
   'vars-on-top': 'error', // require var declarations be placed at the top of their containing scope
   yoda: 'error', // require or disallow “Yoda” conditions
 };
-
-export default config;

@@ -54,7 +54,7 @@ export const Example = {
         </tbody>
         <tfoot>
           <TableRow>
-            <TableHeader scope="row" colSpan={2}>
+            <TableHeader colSpan={2} scope="row">
               Average age
             </TableHeader>
             <TableCell>33</TableCell>

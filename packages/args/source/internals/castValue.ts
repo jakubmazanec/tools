@@ -8,11 +8,11 @@ import {isFalseString} from './isFalseString.js';
  * */
 export function castValue<T extends 'boolean' | 'number' | 'string'>(
   value: string,
-  type?: T,
+  targetType?: T,
 ): T extends 'boolean' ? boolean
 : T extends 'number' ? number
 : string {
-  switch (type) {
+  switch (targetType) {
     case 'boolean': {
       let booleanString = String(value).toLowerCase();
 
@@ -28,7 +28,21 @@ export function castValue<T extends 'boolean' | 'number' | 'string'>(
       : string;
     }
 
+    case 'string': {
+      return String(value) as T extends 'boolean' ? boolean
+      : T extends 'number' ? number
+      : string;
+    }
+
+    case undefined: {
+      return String(value) as T extends 'boolean' ? boolean
+      : T extends 'number' ? number
+      : string;
+    }
+
     default: {
+      targetType satisfies never;
+
       return String(value) as T extends 'boolean' ? boolean
       : T extends 'number' ? number
       : string;

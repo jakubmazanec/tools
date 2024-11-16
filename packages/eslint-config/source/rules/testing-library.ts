@@ -1,9 +1,9 @@
 import type eslint from 'eslint';
 
-const config: eslint.Linter.Config['rules'] = {
+export const testingLibraryRules: eslint.Linter.Config['rules'] = {
   // eslint-plugin-testing-library
   'testing-library/await-async-events': 'error', // enforce promises from async event methods are handled
-  'testing-library/await-async-queries': 'error', //enforce promises from async queries to be handled
+  'testing-library/await-async-queries': 'error', // enforce promises from async queries to be handled
   'testing-library/await-async-utils': 'error', // enforce async utils to be awaited properly
   'testing-library/consistent-data-testid': 'off', // ensure data-testid values match a provided regex
   'testing-library/no-await-sync-events': 'error', // disallow unnecessary await for sync events
@@ -30,5 +30,3 @@ const config: eslint.Linter.Config['rules'] = {
   'testing-library/prefer-screen-queries': 'off', // suggest using screen while using queries
   'testing-library/render-result-naming-convention': 'warn', // enforce a valid naming for return value from render
 };
-
-export default config;

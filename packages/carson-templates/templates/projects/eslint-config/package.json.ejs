@@ -21,15 +21,11 @@ let packageJson = lodash.merge(
       type: 'git',
       directory: project.relativePath,
     },
-    type: 'commonjs',
-    exports: {
-      '.': `./${BUILD_DIRECTORY}/main.js`,
-      './nodejs': `./${BUILD_DIRECTORY}/presets/nodejs.js`,
-      './prettier': `./${BUILD_DIRECTORY}/presets/prettier.js`,
-    },
+    type: 'module',
+    exports: `./${BUILD_DIRECTORY}/main.js`,
     files: [BUILD_DIRECTORY, SOURCE_DIRECTORY],
     scripts: {
-      build: `del-cli ${BUILD_DIRECTORY} tsconfig.tsbuildinfo && ${BUILD_TO_CJS_COMMAND} && tsc`,
+      build: `del-cli ${BUILD_DIRECTORY} tsconfig.tsbuildinfo && ${BUILD_TO_ESM_COMMAND} && tsc`,
       clean: `del-cli coverage ${BUILD_DIRECTORY} *.tsbuildinfo`,
       format: FORMAT_COMMAND,
       lint: 'eslint .',

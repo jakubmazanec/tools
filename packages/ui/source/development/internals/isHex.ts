@@ -1,7 +1,6 @@
 export function isHex(value: string) {
-  const valueHex = value.length === 6 && !value.startsWith(`#`) ? `#${value}` : value;
+  let valueHex = value.length === 6 && !value.startsWith(`#`) ? `#${value}` : value;
+  let regExp = new RegExp(/^#[\da-f]{6}$/i);
 
-  const re = new RegExp(/^#[\da-f]{6}$/i);
-
-  return re.test(valueHex.toUpperCase());
+  return regExp.test(valueHex.toUpperCase());
 }

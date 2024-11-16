@@ -16,9 +16,9 @@ export function hexToHsl(rawHex: string) {
   let cmin = Math.min(r, g, b);
   let cmax = Math.max(r, g, b);
   let delta = cmax - cmin;
-  let h = 0;
-  let s = 0;
-  let l = 0;
+  let h;
+  let s;
+  let l;
 
   if (delta === 0) {
     h = 0;

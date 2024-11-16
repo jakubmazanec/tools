@@ -56,7 +56,7 @@ export function Help({program, ...boxProps}: HelpProps) {
             }
 
             return (
-              <Box key={command.name} marginLeft={2} flexDirection="column">
+              <Box key={command.name} flexDirection="column" marginLeft={2}>
                 <Text>{line}</Text>
               </Box>
             );

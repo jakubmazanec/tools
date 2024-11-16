@@ -36,19 +36,19 @@ export function Failure({error, errorDetail, ...boxProps}: FailureProps) {
       : null}
 
       {stack ?
-        <Box flexDirection="column" marginTop={1} marginLeft={2}>
+        <Box flexDirection="column" marginLeft={2} marginTop={1}>
           <Text color={colors.muted}>{stack}</Text>
         </Box>
       : null}
 
       {cause ?
         <>
-          <Box flexDirection="column" marginTop={1} marginLeft={2}>
+          <Box flexDirection="column" marginLeft={2} marginTop={1}>
             <Text color={colors.muted}>{cause.description}</Text>
           </Box>
 
           {cause.stack ?
-            <Box flexDirection="column" marginTop={1} marginLeft={2}>
+            <Box flexDirection="column" marginLeft={2} marginTop={1}>
               <Text color={colors.muted}>{cause.stack}</Text>
             </Box>
           : null}

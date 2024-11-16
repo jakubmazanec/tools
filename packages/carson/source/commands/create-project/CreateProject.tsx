@@ -121,15 +121,15 @@ export function CreateProject({args, workspace}: CreateProjectProps) {
             choices: possiblePaths,
           },
         }}
-        values={createProjectInputResult}
         marginTop={1}
+        values={createProjectInputResult}
         onChange={setCreateProjectInputResult}
         onComplete={setCreateProjectInputResult}
       />
 
       {status === 'in-progress' || status === 'finished' ?
-        <Box marginTop={1} flexDirection="column">
-          <Header showSpinner={status === 'in-progress'} icon={icons.success} marginBottom={1}>
+        <Box flexDirection="column" marginTop={1}>
+          <Header icon={icons.success} marginBottom={1} showSpinner={status === 'in-progress'}>
             <Text>Creating project...</Text>
           </Header>
 
@@ -140,7 +140,7 @@ export function CreateProject({args, workspace}: CreateProjectProps) {
       : null}
 
       {status === 'finished' ?
-        <Header marginTop={1} icon={icons.success}>
+        <Header icon={icons.success} marginTop={1}>
           <Text>Done.</Text>
         </Header>
       : null}

@@ -2,7 +2,7 @@
 import {type Argv, type OptionsConfig, type ParametersConfig} from '@jakubmazanec/args';
 import fs from 'fs-extra';
 import fetchLatestVersion from 'latest-version';
-import path from 'path';
+import path from 'node:path';
 import {type ComponentType} from 'react';
 import {type FallbackProps} from 'react-error-boundary';
 

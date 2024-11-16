@@ -1,5 +1,5 @@
 export * as colors from './ui/colors.js';
-export * from './ui/ErrorDetail.js';
+export type * from './ui/ErrorDetail.js';
 export * from './ui/Failure.js';
 export * from './ui/form.js';
 export * from './ui/getErrorDetail.js';

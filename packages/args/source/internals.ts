@@ -11,6 +11,6 @@ export * from './internals/isOptionLike.js';
 export * from './internals/isShortOption.js';
 export * from './internals/isShortOptionsGroup.js';
 export * from './internals/isTrueString.js';
-export * from './internals/NormalizedCommandConfig.js';
-export * from './internals/NormalizedCommandsConfig.js';
+export type * from './internals/NormalizedCommandConfig.js';
+export type * from './internals/NormalizedCommandsConfig.js';
 export * from './internals/OptionScope.js';

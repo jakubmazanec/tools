@@ -59,13 +59,13 @@ export type CreateTailwindConfigOptions = {
   content?: string[] | undefined;
   colors?: Record<
     string,
-    | string
+    | {hex: string; hueShift?: number; saturationShift?: number}
     | {
         swatches: Array<{hex: string; stop: (typeof DEFAULT_STOPS)[number]}>;
         hueShift?: number;
         saturationShift?: number;
       }
-    | {hex: string; hueShift?: number; saturationShift?: number}
+    | string
   >;
 };
 

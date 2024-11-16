@@ -1,6 +1,6 @@
 import type eslint from 'eslint';
 
-const config: eslint.Linter.Config['rules'] = {
+export const promiseRules: eslint.Linter.Config['rules'] = {
   // eslint-plugin-promise rules
   'promise/always-return': 'off', // return inside each then() to create readable and reusable Promise chains
   'promise/avoid-new': 'off', // avoid creating new promises outside of utility libs (use pify instead)
@@ -21,7 +21,6 @@ const config: eslint.Linter.Config['rules'] = {
   'promise/param-names': 'error', // enforce consistent param names and ordering when creating new promises
   'promise/prefer-await-to-callbacks': 'off', // prefer async/await to the callback pattern
   'promise/prefer-await-to-then': 'off', // prefer await to then() for reading Promise values
+  'promise/spec-only': 'error', // disallow use of non-standard Promise static methods
   'promise/valid-params': 'error', // ensures the proper number of arguments are passed to Promise functions
 };
-
-export default config;
