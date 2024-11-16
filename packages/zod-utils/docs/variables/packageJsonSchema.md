@@ -221,4 +221,4 @@
 
 ## Defined in
 
-[packages/zod-utils/source/types/PackageJson.ts:150](https://github.com/jakubmazanec/tools/blob/05074a1dedd887672f015df129961cd35c75acfe/packages/zod-utils/source/types/PackageJson.ts#L150)
+[packages/zod-utils/source/types/PackageJson.ts:151](https://github.com/jakubmazanec/tools/blob/eb8c22844f0a0aa0874efeab93afc2bd96c269e6/packages/zod-utils/source/types/PackageJson.ts#L151)

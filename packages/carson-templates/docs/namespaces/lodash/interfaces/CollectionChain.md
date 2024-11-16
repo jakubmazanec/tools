@@ -229,11 +229,11 @@ node_modules/@types/lodash/common/function.d.ts:139
 
 ### camelCase()
 
-> **camelCase**(): [`StringChain`](StringChain.md)
+> **camelCase**(): [`StringChain`](StringChain.md)\<`string`\>
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 #### See
 
@@ -251,11 +251,11 @@ node_modules/@types/lodash/common/string.d.ts:22
 
 ### capitalize()
 
-> **capitalize**(): [`StringChain`](StringChain.md)
+> **capitalize**(): [`StringChain`](StringChain.md)\<`never`\>
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`never`\>
 
 #### See
 
@@ -747,11 +747,11 @@ node_modules/@types/lodash/common/collection.d.ts:59
 
 ### deburr()
 
-> **deburr**(): [`StringChain`](StringChain.md)
+> **deburr**(): [`StringChain`](StringChain.md)\<`string`\>
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 #### See
 
@@ -1226,11 +1226,11 @@ node_modules/@types/lodash/common/lang.d.ts:266
 
 ### escape()
 
-> **escape**(): [`StringChain`](StringChain.md)
+> **escape**(): [`StringChain`](StringChain.md)\<`string`\>
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 #### See
 
@@ -1248,11 +1248,11 @@ node_modules/@types/lodash/common/string.d.ts:124
 
 ### escapeRegExp()
 
-> **escapeRegExp**(): [`StringChain`](StringChain.md)
+> **escapeRegExp**(): [`StringChain`](StringChain.md)\<`string`\>
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 #### See
 
@@ -2122,7 +2122,7 @@ node_modules/@types/lodash/common/object.d.ts:1021
 
 ##### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:1300
+node_modules/@types/lodash/common/object.d.ts:1357
 
 #### get(path, defaultValue)
 
@@ -2150,7 +2150,7 @@ node_modules/@types/lodash/common/object.d.ts:1300
 
 ##### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:1304
+node_modules/@types/lodash/common/object.d.ts:1361
 
 ---
 
@@ -2251,7 +2251,7 @@ node_modules/@types/lodash/common/lang.d.ts:312
 
 #### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:1344
+node_modules/@types/lodash/common/object.d.ts:1401
 
 ---
 
@@ -2277,7 +2277,7 @@ node_modules/@types/lodash/common/object.d.ts:1344
 
 #### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:1382
+node_modules/@types/lodash/common/object.d.ts:1439
 
 ---
 
@@ -2295,7 +2295,7 @@ node_modules/@types/lodash/common/object.d.ts:1382
 
 #### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:607
+node_modules/@types/lodash/common/array.d.ts:608
 
 ---
 
@@ -2365,7 +2365,7 @@ node_modules/@types/lodash/common/collection.d.ts:1037
 
 #### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:642
+node_modules/@types/lodash/common/array.d.ts:643
 
 ---
 
@@ -2383,7 +2383,7 @@ node_modules/@types/lodash/common/array.d.ts:642
 
 #### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:663
+node_modules/@types/lodash/common/array.d.ts:664
 
 ---
 
@@ -2433,7 +2433,7 @@ node_modules/@types/lodash/common/number.d.ts:83
 
 #### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:685
+node_modules/@types/lodash/common/array.d.ts:686
 
 ---
 
@@ -2463,7 +2463,7 @@ node_modules/@types/lodash/common/array.d.ts:685
 
 ##### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:738
+node_modules/@types/lodash/common/array.d.ts:739
 
 #### intersectionBy(values)
 
@@ -2484,7 +2484,7 @@ node_modules/@types/lodash/common/array.d.ts:738
 
 ##### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:742
+node_modules/@types/lodash/common/array.d.ts:743
 
 ---
 
@@ -2515,7 +2515,7 @@ node_modules/@types/lodash/common/array.d.ts:742
 
 ##### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:790
+node_modules/@types/lodash/common/array.d.ts:791
 
 #### intersectionWith(values)
 
@@ -2536,7 +2536,7 @@ node_modules/@types/lodash/common/array.d.ts:790
 
 ##### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:794
+node_modules/@types/lodash/common/array.d.ts:795
 
 ---
 
@@ -2558,7 +2558,7 @@ node_modules/@types/lodash/common/array.d.ts:794
 
 #### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:1405
+node_modules/@types/lodash/common/object.d.ts:1462
 
 ---
 
@@ -2581,7 +2581,7 @@ node_modules/@types/lodash/common/object.d.ts:1405
 
 #### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:1457
+node_modules/@types/lodash/common/object.d.ts:1514
 
 ---
 
@@ -2609,7 +2609,7 @@ node_modules/@types/lodash/common/object.d.ts:1457
 
 #### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:1484
+node_modules/@types/lodash/common/object.d.ts:1541
 
 ---
 
@@ -3528,7 +3528,7 @@ node_modules/@types/lodash/common/util.d.ts:464
 
 ### join()
 
-> **join**(`separator`?): [`StringChain`](StringChain.md)
+> **join**(`separator`?): [`StringChain`](StringChain.md)\<`string`\>
 
 #### Parameters
 
@@ -3536,7 +3536,7 @@ node_modules/@types/lodash/common/util.d.ts:464
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 #### See
 
@@ -3544,17 +3544,17 @@ node_modules/@types/lodash/common/util.d.ts:464
 
 #### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:834
+node_modules/@types/lodash/common/array.d.ts:835
 
 ---
 
 ### kebabCase()
 
-> **kebabCase**(): [`StringChain`](StringChain.md)
+> **kebabCase**(): [`StringChain`](StringChain.md)\<`string`\>
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 #### See
 
@@ -3611,7 +3611,7 @@ node_modules/@types/lodash/common/collection.d.ts:1131
 
 #### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:1507
+node_modules/@types/lodash/common/object.d.ts:1564
 
 ---
 
@@ -3633,7 +3633,7 @@ node_modules/@types/lodash/common/object.d.ts:1507
 
 #### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:1530
+node_modules/@types/lodash/common/object.d.ts:1587
 
 ---
 
@@ -3651,7 +3651,7 @@ node_modules/@types/lodash/common/object.d.ts:1530
 
 #### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:855
+node_modules/@types/lodash/common/array.d.ts:856
 
 ---
 
@@ -3675,17 +3675,17 @@ node_modules/@types/lodash/common/array.d.ts:855
 
 #### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:896
+node_modules/@types/lodash/common/array.d.ts:897
 
 ---
 
 ### lowerCase()
 
-> **lowerCase**(): [`StringChain`](StringChain.md)
+> **lowerCase**(): [`StringChain`](StringChain.md)\<`string`\>
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 #### See
 
@@ -3703,11 +3703,11 @@ node_modules/@types/lodash/common/string.d.ts:191
 
 ### lowerFirst()
 
-> **lowerFirst**(): [`StringChain`](StringChain.md)
+> **lowerFirst**(): [`StringChain`](StringChain.md)\<`string`\>
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 #### See
 
@@ -3799,7 +3799,7 @@ node_modules/@types/lodash/common/lang.d.ts:1406
 
 ##### Defined in
 
-node_modules/@types/lodash/common/collection.d.ts:1261
+node_modules/@types/lodash/common/collection.d.ts:1265
 
 #### map(iteratee)
 
@@ -3823,7 +3823,7 @@ node_modules/@types/lodash/common/collection.d.ts:1261
 
 ##### Defined in
 
-node_modules/@types/lodash/common/collection.d.ts:1265
+node_modules/@types/lodash/common/collection.d.ts:1269
 
 #### map(iteratee)
 
@@ -3843,7 +3843,7 @@ node_modules/@types/lodash/common/collection.d.ts:1265
 
 ##### Defined in
 
-node_modules/@types/lodash/common/collection.d.ts:1269
+node_modules/@types/lodash/common/collection.d.ts:1273
 
 #### map(iteratee)
 
@@ -3863,7 +3863,7 @@ node_modules/@types/lodash/common/collection.d.ts:1269
 
 ##### Defined in
 
-node_modules/@types/lodash/common/collection.d.ts:1273
+node_modules/@types/lodash/common/collection.d.ts:1277
 
 #### map()
 
@@ -3879,7 +3879,7 @@ node_modules/@types/lodash/common/collection.d.ts:1273
 
 ##### Defined in
 
-node_modules/@types/lodash/common/collection.d.ts:1277
+node_modules/@types/lodash/common/collection.d.ts:1281
 
 ---
 
@@ -3901,7 +3901,7 @@ node_modules/@types/lodash/common/collection.d.ts:1277
 
 #### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:1563
+node_modules/@types/lodash/common/object.d.ts:1620
 
 ---
 
@@ -3910,7 +3910,7 @@ node_modules/@types/lodash/common/object.d.ts:1563
 #### mapValues(callback)
 
 > **mapValues**\<`TResult`\>(`callback`):
-> [`ObjectChain`](ObjectChain.md)\<[`Dictionary`](Dictionary.md)\<`TResult`\>\>
+> [`ObjectChain`](ObjectChain.md)\<[`NumericDictionary`](NumericDictionary.md)\<`TResult`\>\>
 
 ##### Type Parameters
 
@@ -3918,11 +3918,11 @@ node_modules/@types/lodash/common/object.d.ts:1563
 
 ##### Parameters
 
-• **callback**: [`DictionaryIterator`](../type-aliases/DictionaryIterator.md)\<`T`, `TResult`\>
+• **callback**: [`ArrayIterator`](../type-aliases/ArrayIterator.md)\<`T`, `TResult`\>
 
 ##### Returns
 
-[`ObjectChain`](ObjectChain.md)\<[`Dictionary`](Dictionary.md)\<`TResult`\>\>
+[`ObjectChain`](ObjectChain.md)\<[`NumericDictionary`](NumericDictionary.md)\<`TResult`\>\>
 
 ##### See
 
@@ -3930,7 +3930,7 @@ node_modules/@types/lodash/common/object.d.ts:1563
 
 ##### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:1705
+node_modules/@types/lodash/common/object.d.ts:1766
 
 #### mapValues(iteratee)
 
@@ -3955,7 +3955,7 @@ node_modules/@types/lodash/common/object.d.ts:1705
 
 ##### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:1709
+node_modules/@types/lodash/common/object.d.ts:1770
 
 #### mapValues(iteratee)
 
@@ -3976,7 +3976,7 @@ node_modules/@types/lodash/common/object.d.ts:1709
 
 ##### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:1713
+node_modules/@types/lodash/common/object.d.ts:1774
 
 #### mapValues(iteratee)
 
@@ -3997,7 +3997,7 @@ node_modules/@types/lodash/common/object.d.ts:1713
 
 ##### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:1717
+node_modules/@types/lodash/common/object.d.ts:1778
 
 #### mapValues()
 
@@ -4013,7 +4013,7 @@ node_modules/@types/lodash/common/object.d.ts:1717
 
 ##### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:1721
+node_modules/@types/lodash/common/object.d.ts:1782
 
 ---
 
@@ -4453,7 +4453,7 @@ node_modules/@types/lodash/common/date.d.ts:21
 
 #### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:918
+node_modules/@types/lodash/common/array.d.ts:919
 
 ---
 
@@ -4498,7 +4498,7 @@ node_modules/@types/lodash/common/util.d.ts:710
 
 #### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:1988
+node_modules/@types/lodash/common/object.d.ts:2049
 
 ---
 
@@ -4520,7 +4520,7 @@ node_modules/@types/lodash/common/object.d.ts:1988
 
 #### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:2043
+node_modules/@types/lodash/common/object.d.ts:2104
 
 ---
 
@@ -4545,7 +4545,7 @@ ListIterator\<T, unknown\>\>
 
 #### Defined in
 
-node_modules/@types/lodash/common/collection.d.ts:1357
+node_modules/@types/lodash/common/collection.d.ts:1361
 
 ---
 
@@ -4632,7 +4632,7 @@ node_modules/@types/lodash/common/util.d.ts:817
 
 ### pad()
 
-> **pad**(`length`?, `chars`?): [`StringChain`](StringChain.md)
+> **pad**(`length`?, `chars`?): [`StringChain`](StringChain.md)\<`string`\>
 
 #### Parameters
 
@@ -4642,7 +4642,7 @@ node_modules/@types/lodash/common/util.d.ts:817
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 #### See
 
@@ -4660,7 +4660,7 @@ node_modules/@types/lodash/common/string.d.ts:238
 
 ### padEnd()
 
-> **padEnd**(`length`?, `chars`?): [`StringChain`](StringChain.md)
+> **padEnd**(`length`?, `chars`?): [`StringChain`](StringChain.md)\<`string`\>
 
 #### Parameters
 
@@ -4670,7 +4670,7 @@ node_modules/@types/lodash/common/string.d.ts:238
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 #### See
 
@@ -4688,7 +4688,7 @@ node_modules/@types/lodash/common/string.d.ts:263
 
 ### padStart()
 
-> **padStart**(`length`?, `chars`?): [`StringChain`](StringChain.md)
+> **padStart**(`length`?, `chars`?): [`StringChain`](StringChain.md)\<`string`\>
 
 #### Parameters
 
@@ -4698,7 +4698,7 @@ node_modules/@types/lodash/common/string.d.ts:263
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 #### See
 
@@ -4765,7 +4765,7 @@ node_modules/@types/lodash/common/string.d.ts:314
 
 ##### Defined in
 
-node_modules/@types/lodash/common/collection.d.ts:1423
+node_modules/@types/lodash/common/collection.d.ts:1427
 
 #### partition(callback)
 
@@ -4785,7 +4785,7 @@ node_modules/@types/lodash/common/collection.d.ts:1423
 
 ##### Defined in
 
-node_modules/@types/lodash/common/collection.d.ts:1427
+node_modules/@types/lodash/common/collection.d.ts:1431
 
 ---
 
@@ -4815,7 +4815,7 @@ node_modules/@types/lodash/common/collection.d.ts:1427
 
 ##### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:2151
+node_modules/@types/lodash/common/object.d.ts:2212
 
 #### pickBy(predicate)
 
@@ -4835,7 +4835,7 @@ node_modules/@types/lodash/common/object.d.ts:2151
 
 ##### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:2155
+node_modules/@types/lodash/common/object.d.ts:2216
 
 ---
 
@@ -4947,7 +4947,7 @@ node_modules/@types/lodash/common/util.d.ts:868
 
 #### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:946
+node_modules/@types/lodash/common/array.d.ts:947
 
 ---
 
@@ -4969,7 +4969,7 @@ node_modules/@types/lodash/common/array.d.ts:946
 
 #### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:982
+node_modules/@types/lodash/common/array.d.ts:983
 
 ---
 
@@ -4997,7 +4997,7 @@ node_modules/@types/lodash/common/array.d.ts:982
 
 #### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:1029
+node_modules/@types/lodash/common/array.d.ts:1030
 
 ---
 
@@ -5025,7 +5025,7 @@ node_modules/@types/lodash/common/array.d.ts:1029
 
 #### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:1076
+node_modules/@types/lodash/common/array.d.ts:1077
 
 ---
 
@@ -5047,7 +5047,7 @@ node_modules/@types/lodash/common/array.d.ts:1076
 
 #### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:1105
+node_modules/@types/lodash/common/array.d.ts:1106
 
 ---
 
@@ -5207,7 +5207,7 @@ node_modules/@types/lodash/common/util.d.ts:950
 
 ##### Defined in
 
-node_modules/@types/lodash/common/collection.d.ts:1493
+node_modules/@types/lodash/common/collection.d.ts:1497
 
 #### reduce(callback)
 
@@ -5228,7 +5228,7 @@ node_modules/@types/lodash/common/collection.d.ts:1493
 
 ##### Defined in
 
-node_modules/@types/lodash/common/collection.d.ts:1497
+node_modules/@types/lodash/common/collection.d.ts:1501
 
 ---
 
@@ -5260,7 +5260,7 @@ node_modules/@types/lodash/common/collection.d.ts:1497
 
 ##### Defined in
 
-node_modules/@types/lodash/common/collection.d.ts:1564
+node_modules/@types/lodash/common/collection.d.ts:1568
 
 #### reduceRight(callback)
 
@@ -5281,7 +5281,7 @@ node_modules/@types/lodash/common/collection.d.ts:1564
 
 ##### Defined in
 
-node_modules/@types/lodash/common/collection.d.ts:1568
+node_modules/@types/lodash/common/collection.d.ts:1572
 
 ---
 
@@ -5303,7 +5303,7 @@ node_modules/@types/lodash/common/collection.d.ts:1568
 
 #### Defined in
 
-node_modules/@types/lodash/common/collection.d.ts:1633
+node_modules/@types/lodash/common/collection.d.ts:1637
 
 ---
 
@@ -5325,13 +5325,13 @@ node_modules/@types/lodash/common/collection.d.ts:1633
 
 #### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:1130
+node_modules/@types/lodash/common/array.d.ts:1131
 
 ---
 
 ### repeat()
 
-> **repeat**(`n`?): [`StringChain`](StringChain.md)
+> **repeat**(`n`?): [`StringChain`](StringChain.md)\<`string`\>
 
 #### Parameters
 
@@ -5339,7 +5339,7 @@ node_modules/@types/lodash/common/array.d.ts:1130
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 #### See
 
@@ -5359,7 +5359,7 @@ node_modules/@types/lodash/common/string.d.ts:337
 
 #### replace(pattern, replacement)
 
-> **replace**(`pattern`, `replacement`): [`StringChain`](StringChain.md)
+> **replace**(`pattern`, `replacement`): [`StringChain`](StringChain.md)\<`string`\>
 
 ##### Parameters
 
@@ -5369,7 +5369,7 @@ node_modules/@types/lodash/common/string.d.ts:337
 
 ##### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 ##### See
 
@@ -5385,7 +5385,7 @@ node_modules/@types/lodash/common/string.d.ts:369
 
 #### replace(replacement)
 
-> **replace**(`replacement`): [`StringChain`](StringChain.md)
+> **replace**(`replacement`): [`StringChain`](StringChain.md)\<`string`\>
 
 ##### Parameters
 
@@ -5393,7 +5393,7 @@ node_modules/@types/lodash/common/string.d.ts:369
 
 ##### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 ##### See
 
@@ -5438,7 +5438,7 @@ node_modules/@types/lodash/common/string.d.ts:373
 
 #### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:2189
+node_modules/@types/lodash/common/object.d.ts:2250
 
 ---
 
@@ -5504,7 +5504,7 @@ node_modules/@types/lodash/common/math.d.ts:312
 
 #### Defined in
 
-node_modules/@types/lodash/common/collection.d.ts:1692
+node_modules/@types/lodash/common/collection.d.ts:1696
 
 ---
 
@@ -5526,7 +5526,7 @@ node_modules/@types/lodash/common/collection.d.ts:1692
 
 #### Defined in
 
-node_modules/@types/lodash/common/collection.d.ts:1748
+node_modules/@types/lodash/common/collection.d.ts:1752
 
 ---
 
@@ -5556,7 +5556,7 @@ node_modules/@types/lodash/common/collection.d.ts:1748
 
 ##### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:2222
+node_modules/@types/lodash/common/object.d.ts:2283
 
 #### set(path, value)
 
@@ -5586,7 +5586,7 @@ node_modules/@types/lodash/common/object.d.ts:2222
 
 ##### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:2226
+node_modules/@types/lodash/common/object.d.ts:2287
 
 ---
 
@@ -5618,7 +5618,7 @@ node_modules/@types/lodash/common/object.d.ts:2226
 
 ##### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:2261
+node_modules/@types/lodash/common/object.d.ts:2322
 
 #### setWith(path, value, customizer)
 
@@ -5651,7 +5651,7 @@ node_modules/@types/lodash/common/object.d.ts:2261
 
 ##### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:2265
+node_modules/@types/lodash/common/object.d.ts:2326
 
 ---
 
@@ -5683,7 +5683,7 @@ node_modules/@types/lodash/common/common.d.ts:186
 
 #### Defined in
 
-node_modules/@types/lodash/common/collection.d.ts:1803
+node_modules/@types/lodash/common/collection.d.ts:1807
 
 ---
 
@@ -5705,7 +5705,7 @@ node_modules/@types/lodash/common/collection.d.ts:1803
 
 #### Defined in
 
-node_modules/@types/lodash/common/collection.d.ts:1831
+node_modules/@types/lodash/common/collection.d.ts:1835
 
 ---
 
@@ -5729,17 +5729,17 @@ node_modules/@types/lodash/common/collection.d.ts:1831
 
 #### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:1175
+node_modules/@types/lodash/common/array.d.ts:1176
 
 ---
 
 ### snakeCase()
 
-> **snakeCase**(): [`StringChain`](StringChain.md)
+> **snakeCase**(): [`StringChain`](StringChain.md)\<`string`\>
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 #### See
 
@@ -5773,7 +5773,7 @@ node_modules/@types/lodash/common/string.d.ts:395
 
 #### Defined in
 
-node_modules/@types/lodash/common/collection.d.ts:1864
+node_modules/@types/lodash/common/collection.d.ts:1868
 
 ---
 
@@ -5814,7 +5814,7 @@ node_modules/@types/lodash/common/common.d.ts:187
 
 #### Defined in
 
-node_modules/@types/lodash/common/collection.d.ts:1926
+node_modules/@types/lodash/common/collection.d.ts:1930
 
 ---
 
@@ -5838,7 +5838,7 @@ node_modules/@types/lodash/common/collection.d.ts:1926
 
 ##### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:1206
+node_modules/@types/lodash/common/array.d.ts:1207
 
 #### sortedIndex(value)
 
@@ -5858,7 +5858,7 @@ node_modules/@types/lodash/common/array.d.ts:1206
 
 ##### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:1237
+node_modules/@types/lodash/common/array.d.ts:1238
 
 ---
 
@@ -5882,7 +5882,7 @@ node_modules/@types/lodash/common/array.d.ts:1237
 
 #### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:1273
+node_modules/@types/lodash/common/array.d.ts:1274
 
 ---
 
@@ -5904,7 +5904,7 @@ node_modules/@types/lodash/common/array.d.ts:1273
 
 #### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:1301
+node_modules/@types/lodash/common/array.d.ts:1302
 
 ---
 
@@ -5926,7 +5926,7 @@ node_modules/@types/lodash/common/array.d.ts:1301
 
 #### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:1330
+node_modules/@types/lodash/common/array.d.ts:1331
 
 ---
 
@@ -5950,7 +5950,7 @@ node_modules/@types/lodash/common/array.d.ts:1330
 
 #### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:1361
+node_modules/@types/lodash/common/array.d.ts:1362
 
 ---
 
@@ -5972,7 +5972,7 @@ node_modules/@types/lodash/common/array.d.ts:1361
 
 #### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:1389
+node_modules/@types/lodash/common/array.d.ts:1390
 
 ---
 
@@ -5990,7 +5990,7 @@ node_modules/@types/lodash/common/array.d.ts:1389
 
 #### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:1416
+node_modules/@types/lodash/common/array.d.ts:1417
 
 ---
 
@@ -6012,7 +6012,7 @@ node_modules/@types/lodash/common/array.d.ts:1416
 
 #### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:1444
+node_modules/@types/lodash/common/array.d.ts:1445
 
 ---
 
@@ -6068,11 +6068,11 @@ node_modules/@types/lodash/common/string.d.ts:425
 
 ### startCase()
 
-> **startCase**(): [`StringChain`](StringChain.md)
+> **startCase**(): [`StringChain`](StringChain.md)\<`string`\>
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 #### See
 
@@ -6206,11 +6206,11 @@ node_modules/@types/lodash/common/util.d.ts:1029
 
 ### stubString()
 
-> **stubString**(): [`StringChain`](StringChain.md)
+> **stubString**(): [`StringChain`](StringChain.md)\<`string`\>
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 #### See
 
@@ -6354,7 +6354,7 @@ node_modules/@types/lodash/common/math.d.ts:403
 
 #### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:1465
+node_modules/@types/lodash/common/array.d.ts:1467
 
 ---
 
@@ -6376,7 +6376,7 @@ node_modules/@types/lodash/common/array.d.ts:1465
 
 #### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:1487
+node_modules/@types/lodash/common/array.d.ts:1489
 
 ---
 
@@ -6398,7 +6398,7 @@ node_modules/@types/lodash/common/array.d.ts:1487
 
 #### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:1509
+node_modules/@types/lodash/common/array.d.ts:1511
 
 ---
 
@@ -6420,7 +6420,7 @@ node_modules/@types/lodash/common/array.d.ts:1509
 
 #### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:1532
+node_modules/@types/lodash/common/array.d.ts:1534
 
 ---
 
@@ -6442,7 +6442,7 @@ node_modules/@types/lodash/common/array.d.ts:1532
 
 #### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:1555
+node_modules/@types/lodash/common/array.d.ts:1557
 
 ---
 
@@ -6689,11 +6689,11 @@ node_modules/@types/lodash/common/lang.d.ts:1580
 
 ### toLower()
 
-> **toLower**(): [`StringChain`](StringChain.md)
+> **toLower**(): [`StringChain`](StringChain.md)\<`string`\>
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 #### See
 
@@ -6749,7 +6749,7 @@ node_modules/@types/lodash/common/lang.d.ts:1616
 
 #### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:2290
+node_modules/@types/lodash/common/object.d.ts:2351
 
 ---
 
@@ -6771,7 +6771,7 @@ node_modules/@types/lodash/common/object.d.ts:2290
 
 #### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:2315
+node_modules/@types/lodash/common/object.d.ts:2376
 
 ---
 
@@ -6843,11 +6843,11 @@ node_modules/@types/lodash/common/lang.d.ts:1676
 
 ### toUpper()
 
-> **toUpper**(): [`StringChain`](StringChain.md)
+> **toUpper**(): [`StringChain`](StringChain.md)\<`string`\>
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 #### See
 
@@ -6891,7 +6891,7 @@ node_modules/@types/lodash/common/string.d.ts:570
 
 ##### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:2375
+node_modules/@types/lodash/common/object.d.ts:2436
 
 #### transform()
 
@@ -6907,13 +6907,13 @@ node_modules/@types/lodash/common/object.d.ts:2375
 
 ##### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:2379
+node_modules/@types/lodash/common/object.d.ts:2440
 
 ---
 
 ### trim()
 
-> **trim**(`chars`?): [`StringChain`](StringChain.md)
+> **trim**(`chars`?): [`StringChain`](StringChain.md)\<`string`\>
 
 #### Parameters
 
@@ -6921,7 +6921,7 @@ node_modules/@types/lodash/common/object.d.ts:2379
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 #### See
 
@@ -6939,7 +6939,7 @@ node_modules/@types/lodash/common/string.d.ts:597
 
 ### trimEnd()
 
-> **trimEnd**(`chars`?): [`StringChain`](StringChain.md)
+> **trimEnd**(`chars`?): [`StringChain`](StringChain.md)\<`string`\>
 
 #### Parameters
 
@@ -6947,7 +6947,7 @@ node_modules/@types/lodash/common/string.d.ts:597
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 #### See
 
@@ -6965,7 +6965,7 @@ node_modules/@types/lodash/common/string.d.ts:624
 
 ### trimStart()
 
-> **trimStart**(`chars`?): [`StringChain`](StringChain.md)
+> **trimStart**(`chars`?): [`StringChain`](StringChain.md)\<`string`\>
 
 #### Parameters
 
@@ -6973,7 +6973,7 @@ node_modules/@types/lodash/common/string.d.ts:624
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 #### See
 
@@ -6991,7 +6991,7 @@ node_modules/@types/lodash/common/string.d.ts:651
 
 ### truncate()
 
-> **truncate**(`options`?): [`StringChain`](StringChain.md)
+> **truncate**(`options`?): [`StringChain`](StringChain.md)\<`string`\>
 
 #### Parameters
 
@@ -6999,7 +6999,7 @@ node_modules/@types/lodash/common/string.d.ts:651
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 #### See
 
@@ -7017,11 +7017,11 @@ node_modules/@types/lodash/common/string.d.ts:689
 
 ### unescape()
 
-> **unescape**(): [`StringChain`](StringChain.md)
+> **unescape**(): [`StringChain`](StringChain.md)\<`string`\>
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 #### See
 
@@ -7055,7 +7055,7 @@ node_modules/@types/lodash/common/string.d.ts:715
 
 #### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:1577
+node_modules/@types/lodash/common/array.d.ts:1579
 
 ---
 
@@ -7081,7 +7081,7 @@ node_modules/@types/lodash/common/array.d.ts:1577
 
 ##### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:1621
+node_modules/@types/lodash/common/array.d.ts:1623
 
 #### unionBy(iteratee)
 
@@ -7102,7 +7102,7 @@ node_modules/@types/lodash/common/array.d.ts:1621
 
 ##### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:1625
+node_modules/@types/lodash/common/array.d.ts:1627
 
 ---
 
@@ -7128,7 +7128,7 @@ node_modules/@types/lodash/common/array.d.ts:1625
 
 ##### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:1669
+node_modules/@types/lodash/common/array.d.ts:1671
 
 #### unionWith(comparator)
 
@@ -7149,7 +7149,7 @@ node_modules/@types/lodash/common/array.d.ts:1669
 
 ##### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:1673
+node_modules/@types/lodash/common/array.d.ts:1675
 
 ---
 
@@ -7167,7 +7167,7 @@ node_modules/@types/lodash/common/array.d.ts:1673
 
 #### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:1702
+node_modules/@types/lodash/common/array.d.ts:1704
 
 ---
 
@@ -7189,17 +7189,17 @@ node_modules/@types/lodash/common/array.d.ts:1702
 
 #### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:1735
+node_modules/@types/lodash/common/array.d.ts:1737
 
 ---
 
 ### uniqueId()
 
-> **uniqueId**(): [`StringChain`](StringChain.md)
+> **uniqueId**(): [`StringChain`](StringChain.md)\<`string`\>
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 #### See
 
@@ -7233,7 +7233,7 @@ node_modules/@types/lodash/common/util.d.ts:1168
 
 #### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:1766
+node_modules/@types/lodash/common/array.d.ts:1768
 
 ---
 
@@ -7259,7 +7259,7 @@ node_modules/@types/lodash/common/array.d.ts:1766
 
 #### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:2417
+node_modules/@types/lodash/common/object.d.ts:2478
 
 ---
 
@@ -7297,7 +7297,7 @@ node_modules/@types/lodash/common/common.d.ts:189
 
 #### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:1788
+node_modules/@types/lodash/common/array.d.ts:1790
 
 ---
 
@@ -7325,7 +7325,7 @@ node_modules/@types/lodash/common/array.d.ts:1788
 
 ##### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:1819
+node_modules/@types/lodash/common/array.d.ts:1821
 
 #### unzipWith()
 
@@ -7343,7 +7343,7 @@ node_modules/@types/lodash/common/array.d.ts:1819
 
 ##### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:1823
+node_modules/@types/lodash/common/array.d.ts:1825
 
 ---
 
@@ -7371,17 +7371,17 @@ node_modules/@types/lodash/common/array.d.ts:1823
 
 #### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:2441
+node_modules/@types/lodash/common/object.d.ts:2502
 
 ---
 
 ### upperCase()
 
-> **upperCase**(): [`StringChain`](StringChain.md)
+> **upperCase**(): [`StringChain`](StringChain.md)\<`string`\>
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 #### See
 
@@ -7399,11 +7399,11 @@ node_modules/@types/lodash/common/string.d.ts:737
 
 ### upperFirst()
 
-> **upperFirst**(): [`StringChain`](StringChain.md)
+> **upperFirst**(): [`StringChain`](StringChain.md)\<`string`\>
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 #### See
 
@@ -7481,7 +7481,7 @@ node_modules/@types/lodash/common/seq.d.ts:160
 
 #### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:1845
+node_modules/@types/lodash/common/array.d.ts:1847
 
 ---
 
@@ -7562,7 +7562,7 @@ node_modules/@types/lodash/common/function.d.ts:1453
 
 #### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:1866
+node_modules/@types/lodash/common/array.d.ts:1868
 
 ---
 
@@ -7588,7 +7588,7 @@ node_modules/@types/lodash/common/array.d.ts:1866
 
 ##### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:1911
+node_modules/@types/lodash/common/array.d.ts:1913
 
 #### xorBy(iteratee)
 
@@ -7609,7 +7609,7 @@ node_modules/@types/lodash/common/array.d.ts:1911
 
 ##### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:1915
+node_modules/@types/lodash/common/array.d.ts:1917
 
 ---
 
@@ -7635,7 +7635,7 @@ node_modules/@types/lodash/common/array.d.ts:1915
 
 ##### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:1959
+node_modules/@types/lodash/common/array.d.ts:1961
 
 #### xorWith(comparator)
 
@@ -7656,7 +7656,7 @@ node_modules/@types/lodash/common/array.d.ts:1959
 
 ##### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:1963
+node_modules/@types/lodash/common/array.d.ts:1965
 
 ---
 
@@ -7685,7 +7685,7 @@ node_modules/@types/lodash/common/array.d.ts:1963
 
 ##### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:2005
+node_modules/@types/lodash/common/array.d.ts:2007
 
 #### zip(arrays)
 
@@ -7705,7 +7705,7 @@ node_modules/@types/lodash/common/array.d.ts:2005
 
 ##### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:2009
+node_modules/@types/lodash/common/array.d.ts:2011
 
 ---
 
@@ -7734,7 +7734,7 @@ node_modules/@types/lodash/common/array.d.ts:2009
 
 ##### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:2040
+node_modules/@types/lodash/common/array.d.ts:2042
 
 #### zipObject()
 
@@ -7750,7 +7750,7 @@ node_modules/@types/lodash/common/array.d.ts:2040
 
 ##### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:2044
+node_modules/@types/lodash/common/array.d.ts:2046
 
 ---
 
@@ -7772,7 +7772,7 @@ node_modules/@types/lodash/common/array.d.ts:2044
 
 #### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:2066
+node_modules/@types/lodash/common/array.d.ts:2068
 
 ---
 
@@ -7805,7 +7805,7 @@ node_modules/@types/lodash/common/array.d.ts:2066
 
 ##### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:2117
+node_modules/@types/lodash/common/array.d.ts:2119
 
 #### zipWith(arrays2, arrays3, iteratee)
 
@@ -7838,7 +7838,7 @@ node_modules/@types/lodash/common/array.d.ts:2117
 
 ##### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:2121
+node_modules/@types/lodash/common/array.d.ts:2123
 
 #### zipWith(iteratee)
 
@@ -7863,4 +7863,4 @@ node_modules/@types/lodash/common/array.d.ts:2121
 
 ##### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:2125
+node_modules/@types/lodash/common/array.d.ts:2127

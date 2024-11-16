@@ -32,4 +32,4 @@ Use MemoVoidArrayIterator or MemoVoidDictionaryIterator instead.
 
 ## Defined in
 
-node_modules/@types/lodash/common/common.d.ts:227
+node_modules/@types/lodash/common/common.d.ts:228

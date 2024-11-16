@@ -13,4 +13,4 @@
 
 ## Defined in
 
-node_modules/@types/lodash/common/common.d.ts:270
+node_modules/@types/lodash/common/common.d.ts:272

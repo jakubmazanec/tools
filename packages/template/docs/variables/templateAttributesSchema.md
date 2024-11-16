@@ -30,4 +30,4 @@ Zod schema for [TemplateAttributes](../type-aliases/TemplateAttributes.md).
 
 ## Defined in
 
-[packages/template/source/TemplateAttributes.ts:8](https://github.com/jakubmazanec/tools/blob/05074a1dedd887672f015df129961cd35c75acfe/packages/template/source/TemplateAttributes.ts#L8)
+[packages/template/source/TemplateAttributes.ts:8](https://github.com/jakubmazanec/tools/blob/eb8c22844f0a0aa0874efeab93afc2bd96c269e6/packages/template/source/TemplateAttributes.ts#L8)

@@ -2,17 +2,21 @@
 
 ---
 
-# Interface: StringChain
+# Interface: StringChain\<T\>
 
 ## Extends
 
-- [`LoDashExplicitWrapper`](LoDashExplicitWrapper.md)\<`string`\>
+- [`LoDashExplicitWrapper`](LoDashExplicitWrapper.md)\<`T`\>
+
+## Type Parameters
+
+• **T** _extends_ `string` = `string`
 
 ## Properties
 
 ### each()
 
-> **each**: (`iteratee`?) => [`StringChain`](StringChain.md)
+> **each**: (`iteratee`?) => [`StringChain`](StringChain.md)\<`string`\>
 
 #### Parameters
 
@@ -20,7 +24,7 @@
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 #### See
 
@@ -38,7 +42,7 @@ node_modules/@types/lodash/common/collection.d.ts:89
 
 ### eachRight()
 
-> **eachRight**: (`iteratee`?) => [`StringChain`](StringChain.md)
+> **eachRight**: (`iteratee`?) => [`StringChain`](StringChain.md)\<`string`\>
 
 #### Parameters
 
@@ -46,7 +50,7 @@ node_modules/@types/lodash/common/collection.d.ts:89
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 #### See
 
@@ -203,11 +207,11 @@ node_modules/@types/lodash/common/function.d.ts:139
 
 ### camelCase()
 
-> **camelCase**(): [`StringChain`](StringChain.md)
+> **camelCase**(): [`StringChain`](StringChain.md)\<`string`\>
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 #### See
 
@@ -225,11 +229,13 @@ node_modules/@types/lodash/common/string.d.ts:22
 
 ### capitalize()
 
-> **capitalize**(): [`StringChain`](StringChain.md)
+> **capitalize**(): [`StringChain`](StringChain.md)\<`Capitalize`\<`Lowercase`\<`T` _extends_
+> `string` ? `T`\<`T`\> : `never`\>\>\>
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`Capitalize`\<`Lowercase`\<`T` _extends_ `string` ? `T`\<`T`\> :
+`never`\>\>\>
 
 #### See
 
@@ -417,8 +423,7 @@ node_modules/@types/lodash/common/lang.d.ts:135
 
 ##### Parameters
 
-• **customizer**:
-[`CloneDeepWithCustomizer`](../type-aliases/CloneDeepWithCustomizer.md)\<`string`\>
+• **customizer**: [`CloneDeepWithCustomizer`](../type-aliases/CloneDeepWithCustomizer.md)\<`T`\>
 
 ##### Returns
 
@@ -470,8 +475,7 @@ node_modules/@types/lodash/common/lang.d.ts:143
 
 ##### Parameters
 
-• **customizer**: [`CloneWithCustomizer`](../type-aliases/CloneWithCustomizer.md)\<`string`,
-`TResult`\>
+• **customizer**: [`CloneWithCustomizer`](../type-aliases/CloneWithCustomizer.md)\<`T`, `TResult`\>
 
 ##### Returns
 
@@ -491,7 +495,7 @@ node_modules/@types/lodash/common/lang.d.ts:147
 
 #### cloneWith(customizer)
 
-> **cloneWith**\<`TResult`\>(`customizer`): [`StringChain`](StringChain.md) \|
+> **cloneWith**\<`TResult`\>(`customizer`): [`ExpChain`](../type-aliases/ExpChain.md)\<`T`\> \|
 > [`ExpChain`](../type-aliases/ExpChain.md)\<`TResult`\>
 
 ##### Type Parameters
@@ -500,12 +504,13 @@ node_modules/@types/lodash/common/lang.d.ts:147
 
 ##### Parameters
 
-• **customizer**: [`CloneWithCustomizer`](../type-aliases/CloneWithCustomizer.md)\<`string`,
-`undefined` \| `TResult`\>
+• **customizer**: [`CloneWithCustomizer`](../type-aliases/CloneWithCustomizer.md)\<`T`, `undefined`
+\| `TResult`\>
 
 ##### Returns
 
-[`StringChain`](StringChain.md) \| [`ExpChain`](../type-aliases/ExpChain.md)\<`TResult`\>
+[`ExpChain`](../type-aliases/ExpChain.md)\<`T`\> \|
+[`ExpChain`](../type-aliases/ExpChain.md)\<`TResult`\>
 
 ##### See
 
@@ -591,7 +596,7 @@ node_modules/@types/lodash/common/util.d.ts:106
 
 #### Parameters
 
-• **source**: `string`
+• **source**: [`ConformsPredicateObject`](../type-aliases/ConformsPredicateObject.md)\<`T`\>
 
 #### Returns
 
@@ -613,11 +618,11 @@ node_modules/@types/lodash/common/lang.d.ts:221
 
 ### constant()
 
-> **constant**(): [`FunctionChain`](FunctionChain.md)\<() => `string`\>
+> **constant**(): [`FunctionChain`](FunctionChain.md)\<() => `T`\>
 
 #### Returns
 
-[`FunctionChain`](FunctionChain.md)\<() => `string`\>
+[`FunctionChain`](FunctionChain.md)\<() => `T`\>
 
 #### See
 
@@ -658,11 +663,11 @@ node_modules/@types/lodash/common/collection.d.ts:47
 
 ### deburr()
 
-> **deburr**(): [`StringChain`](StringChain.md)
+> **deburr**(): [`StringChain`](StringChain.md)\<`string`\>
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 #### See
 
@@ -682,15 +687,15 @@ node_modules/@types/lodash/common/string.d.ts:67
 
 #### defaultTo(defaultValue)
 
-> **defaultTo**(`defaultValue`): [`StringChain`](StringChain.md)
+> **defaultTo**(`defaultValue`): [`ExpChain`](../type-aliases/ExpChain.md)\<`T`\>
 
 ##### Parameters
 
-• **defaultValue**: `string`
+• **defaultValue**: `T`
 
 ##### Returns
 
-[`StringChain`](StringChain.md)
+[`ExpChain`](../type-aliases/ExpChain.md)\<`T`\>
 
 ##### See
 
@@ -706,8 +711,8 @@ node_modules/@types/lodash/common/util.d.ts:161
 
 #### defaultTo(defaultValue)
 
-> **defaultTo**\<`TDefault`\>(`defaultValue`): [`StringChain`](StringChain.md) \|
-> [`ExpChain`](../type-aliases/ExpChain.md)\<`TDefault`\>
+> **defaultTo**\<`TDefault`\>(`defaultValue`): [`ExpChain`](../type-aliases/ExpChain.md)\<`T`
+> _extends_ `undefined` \| `null` ? `TDefault` : `T` \| `TDefault`\>
 
 ##### Type Parameters
 
@@ -719,7 +724,8 @@ node_modules/@types/lodash/common/util.d.ts:161
 
 ##### Returns
 
-[`StringChain`](StringChain.md) \| [`ExpChain`](../type-aliases/ExpChain.md)\<`TDefault`\>
+[`ExpChain`](../type-aliases/ExpChain.md)\<`T` _extends_ `undefined` \| `null` ? `TDefault` : `T` \|
+`TDefault`\>
 
 ##### See
 
@@ -915,11 +921,11 @@ node_modules/@types/lodash/common/lang.d.ts:266
 
 ### escape()
 
-> **escape**(): [`StringChain`](StringChain.md)
+> **escape**(): [`StringChain`](StringChain.md)\<`string`\>
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 #### See
 
@@ -937,11 +943,11 @@ node_modules/@types/lodash/common/string.d.ts:124
 
 ### escapeRegExp()
 
-> **escapeRegExp**(): [`StringChain`](StringChain.md)
+> **escapeRegExp**(): [`StringChain`](StringChain.md)\<`string`\>
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 #### See
 
@@ -985,7 +991,7 @@ node_modules/@types/lodash/common/collection.d.ts:253
 
 #### Parameters
 
-• **predicate?**: [`ObjectIteratee`](../type-aliases/ObjectIteratee.md)\<`string`\>
+• **predicate?**: [`ObjectIteratee`](../type-aliases/ObjectIteratee.md)\<`T`\>
 
 #### Returns
 
@@ -1011,7 +1017,7 @@ node_modules/@types/lodash/common/object.d.ts:823
 
 #### Parameters
 
-• **predicate?**: [`ObjectIteratee`](../type-aliases/ObjectIteratee.md)\<`string`\>
+• **predicate?**: [`ObjectIteratee`](../type-aliases/ObjectIteratee.md)\<`T`\>
 
 #### Returns
 
@@ -1237,7 +1243,7 @@ node_modules/@types/lodash/common/math.d.ts:92
 
 ### forEach()
 
-> **forEach**(`iteratee`?): [`StringChain`](StringChain.md)
+> **forEach**(`iteratee`?): [`StringChain`](StringChain.md)\<`string`\>
 
 #### Parameters
 
@@ -1245,7 +1251,7 @@ node_modules/@types/lodash/common/math.d.ts:92
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 #### See
 
@@ -1259,7 +1265,7 @@ node_modules/@types/lodash/common/collection.d.ts:838
 
 ### forEachRight()
 
-> **forEachRight**(`iteratee`?): [`StringChain`](StringChain.md)
+> **forEachRight**(`iteratee`?): [`StringChain`](StringChain.md)\<`string`\>
 
 #### Parameters
 
@@ -1267,7 +1273,7 @@ node_modules/@types/lodash/common/collection.d.ts:838
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 #### See
 
@@ -1285,7 +1291,7 @@ node_modules/@types/lodash/common/collection.d.ts:919
 
 #### Parameters
 
-• **iteratee?**: [`ObjectIterator`](../type-aliases/ObjectIterator.md)\<`string`, `any`\>
+• **iteratee?**: [`ObjectIterator`](../type-aliases/ObjectIterator.md)\<`T`, `any`\>
 
 #### Returns
 
@@ -1311,7 +1317,7 @@ node_modules/@types/lodash/common/object.d.ts:873
 
 #### Parameters
 
-• **iteratee?**: [`ObjectIterator`](../type-aliases/ObjectIterator.md)\<`string`, `any`\>
+• **iteratee?**: [`ObjectIterator`](../type-aliases/ObjectIterator.md)\<`T`, `any`\>
 
 #### Returns
 
@@ -1337,7 +1343,7 @@ node_modules/@types/lodash/common/object.d.ts:899
 
 #### Parameters
 
-• **iteratee?**: [`ObjectIterator`](../type-aliases/ObjectIterator.md)\<`string`, `any`\>
+• **iteratee?**: [`ObjectIterator`](../type-aliases/ObjectIterator.md)\<`T`, `any`\>
 
 #### Returns
 
@@ -1363,7 +1369,7 @@ node_modules/@types/lodash/common/object.d.ts:927
 
 #### Parameters
 
-• **iteratee?**: [`ObjectIterator`](../type-aliases/ObjectIterator.md)\<`string`, `any`\>
+• **iteratee?**: [`ObjectIterator`](../type-aliases/ObjectIterator.md)\<`T`, `any`\>
 
 #### Returns
 
@@ -1431,7 +1437,7 @@ node_modules/@types/lodash/common/object.d.ts:1021
 
 #### get(path)
 
-> **get**(`path`): [`StringChain`](StringChain.md)
+> **get**(`path`): [`StringChain`](StringChain.md)\<`string`\>
 
 ##### Parameters
 
@@ -1439,7 +1445,7 @@ node_modules/@types/lodash/common/object.d.ts:1021
 
 ##### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 ##### See
 
@@ -1447,11 +1453,11 @@ node_modules/@types/lodash/common/object.d.ts:1021
 
 ##### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:1218
+node_modules/@types/lodash/common/object.d.ts:1275
 
 #### get(path, defaultValue)
 
-> **get**(`path`, `defaultValue`): [`StringChain`](StringChain.md)
+> **get**(`path`, `defaultValue`): [`StringChain`](StringChain.md)\<`string`\>
 
 ##### Parameters
 
@@ -1461,7 +1467,7 @@ node_modules/@types/lodash/common/object.d.ts:1218
 
 ##### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 ##### See
 
@@ -1469,7 +1475,7 @@ node_modules/@types/lodash/common/object.d.ts:1218
 
 ##### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:1222
+node_modules/@types/lodash/common/object.d.ts:1279
 
 ---
 
@@ -1570,7 +1576,7 @@ node_modules/@types/lodash/common/lang.d.ts:312
 
 #### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:1344
+node_modules/@types/lodash/common/object.d.ts:1401
 
 ---
 
@@ -1596,7 +1602,7 @@ node_modules/@types/lodash/common/object.d.ts:1344
 
 #### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:1382
+node_modules/@types/lodash/common/object.d.ts:1439
 
 ---
 
@@ -1614,7 +1620,7 @@ node_modules/@types/lodash/common/object.d.ts:1382
 
 #### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:589
+node_modules/@types/lodash/common/array.d.ts:590
 
 ---
 
@@ -1710,7 +1716,7 @@ node_modules/@types/lodash/common/number.d.ts:83
 
 #### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:1405
+node_modules/@types/lodash/common/object.d.ts:1462
 
 ---
 
@@ -1733,7 +1739,7 @@ node_modules/@types/lodash/common/object.d.ts:1405
 
 #### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:1445
+node_modules/@types/lodash/common/object.d.ts:1502
 
 ---
 
@@ -1761,7 +1767,7 @@ node_modules/@types/lodash/common/object.d.ts:1445
 
 #### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:1484
+node_modules/@types/lodash/common/object.d.ts:1541
 
 ---
 
@@ -2680,7 +2686,7 @@ node_modules/@types/lodash/common/util.d.ts:476
 
 ### join()
 
-> **join**(`separator`?): [`StringChain`](StringChain.md)
+> **join**(`separator`?): [`StringChain`](StringChain.md)\<`string`\>
 
 #### Parameters
 
@@ -2688,7 +2694,7 @@ node_modules/@types/lodash/common/util.d.ts:476
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 #### See
 
@@ -2696,17 +2702,17 @@ node_modules/@types/lodash/common/util.d.ts:476
 
 #### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:816
+node_modules/@types/lodash/common/array.d.ts:817
 
 ---
 
 ### kebabCase()
 
-> **kebabCase**(): [`StringChain`](StringChain.md)
+> **kebabCase**(): [`StringChain`](StringChain.md)\<`string`\>
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 #### See
 
@@ -2764,7 +2770,7 @@ node_modules/@types/lodash/common/collection.d.ts:1119
 
 #### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:1507
+node_modules/@types/lodash/common/object.d.ts:1564
 
 ---
 
@@ -2786,7 +2792,7 @@ node_modules/@types/lodash/common/object.d.ts:1507
 
 #### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:1530
+node_modules/@types/lodash/common/object.d.ts:1587
 
 ---
 
@@ -2804,17 +2810,17 @@ node_modules/@types/lodash/common/object.d.ts:1530
 
 #### Defined in
 
-node_modules/@types/lodash/common/array.d.ts:867
+node_modules/@types/lodash/common/array.d.ts:868
 
 ---
 
 ### lowerCase()
 
-> **lowerCase**(): [`StringChain`](StringChain.md)
+> **lowerCase**(): [`StringChain`](StringChain.md)\<`string`\>
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 #### See
 
@@ -2832,11 +2838,12 @@ node_modules/@types/lodash/common/string.d.ts:191
 
 ### lowerFirst()
 
-> **lowerFirst**(): [`StringChain`](StringChain.md)
+> **lowerFirst**(): [`StringChain`](StringChain.md)\<`T` _extends_ `string` ?
+> `Uncapitalize`\<`T`\<`T`\>\> : `string`\>
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`T` _extends_ `string` ? `Uncapitalize`\<`T`\<`T`\>\> : `string`\>
 
 #### See
 
@@ -2928,7 +2935,7 @@ node_modules/@types/lodash/common/lang.d.ts:1406
 
 ##### Defined in
 
-node_modules/@types/lodash/common/collection.d.ts:1241
+node_modules/@types/lodash/common/collection.d.ts:1245
 
 #### map()
 
@@ -2944,7 +2951,7 @@ node_modules/@types/lodash/common/collection.d.ts:1241
 
 ##### Defined in
 
-node_modules/@types/lodash/common/collection.d.ts:1245
+node_modules/@types/lodash/common/collection.d.ts:1249
 
 ---
 
@@ -2973,7 +2980,7 @@ node_modules/@types/lodash/common/collection.d.ts:1245
 
 ##### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:1685
+node_modules/@types/lodash/common/object.d.ts:1746
 
 #### mapValues()
 
@@ -2990,7 +2997,7 @@ node_modules/@types/lodash/common/object.d.ts:1685
 
 ##### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:1689
+node_modules/@types/lodash/common/object.d.ts:1750
 
 ---
 
@@ -3334,7 +3341,7 @@ node_modules/@types/lodash/common/util.d.ts:710
 
 ### pad()
 
-> **pad**(`length`?, `chars`?): [`StringChain`](StringChain.md)
+> **pad**(`length`?, `chars`?): [`StringChain`](StringChain.md)\<`string`\>
 
 #### Parameters
 
@@ -3344,7 +3351,7 @@ node_modules/@types/lodash/common/util.d.ts:710
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 #### See
 
@@ -3362,7 +3369,7 @@ node_modules/@types/lodash/common/string.d.ts:238
 
 ### padEnd()
 
-> **padEnd**(`length`?, `chars`?): [`StringChain`](StringChain.md)
+> **padEnd**(`length`?, `chars`?): [`StringChain`](StringChain.md)\<`string`\>
 
 #### Parameters
 
@@ -3372,7 +3379,7 @@ node_modules/@types/lodash/common/string.d.ts:238
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 #### See
 
@@ -3390,7 +3397,7 @@ node_modules/@types/lodash/common/string.d.ts:263
 
 ### padStart()
 
-> **padStart**(`length`?, `chars`?): [`StringChain`](StringChain.md)
+> **padStart**(`length`?, `chars`?): [`StringChain`](StringChain.md)\<`string`\>
 
 #### Parameters
 
@@ -3400,7 +3407,7 @@ node_modules/@types/lodash/common/string.d.ts:263
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 #### See
 
@@ -3461,7 +3468,7 @@ node_modules/@types/lodash/common/string.d.ts:314
 
 #### Defined in
 
-node_modules/@types/lodash/common/collection.d.ts:1411
+node_modules/@types/lodash/common/collection.d.ts:1415
 
 ---
 
@@ -3669,13 +3676,13 @@ node_modules/@types/lodash/common/util.d.ts:950
 
 #### Defined in
 
-node_modules/@types/lodash/common/collection.d.ts:1621
+node_modules/@types/lodash/common/collection.d.ts:1625
 
 ---
 
 ### repeat()
 
-> **repeat**(`n`?): [`StringChain`](StringChain.md)
+> **repeat**(`n`?): [`StringChain`](StringChain.md)\<`string`\>
 
 #### Parameters
 
@@ -3683,7 +3690,7 @@ node_modules/@types/lodash/common/collection.d.ts:1621
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 #### See
 
@@ -3703,7 +3710,7 @@ node_modules/@types/lodash/common/string.d.ts:337
 
 #### replace(pattern, replacement)
 
-> **replace**(`pattern`, `replacement`): [`StringChain`](StringChain.md)
+> **replace**(`pattern`, `replacement`): [`StringChain`](StringChain.md)\<`string`\>
 
 ##### Parameters
 
@@ -3713,7 +3720,7 @@ node_modules/@types/lodash/common/string.d.ts:337
 
 ##### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 ##### See
 
@@ -3729,7 +3736,7 @@ node_modules/@types/lodash/common/string.d.ts:369
 
 #### replace(replacement)
 
-> **replace**(`replacement`): [`StringChain`](StringChain.md)
+> **replace**(`replacement`): [`StringChain`](StringChain.md)\<`string`\>
 
 ##### Parameters
 
@@ -3737,7 +3744,7 @@ node_modules/@types/lodash/common/string.d.ts:369
 
 ##### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 ##### See
 
@@ -3782,7 +3789,7 @@ node_modules/@types/lodash/common/string.d.ts:373
 
 #### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:2189
+node_modules/@types/lodash/common/object.d.ts:2250
 
 ---
 
@@ -3848,7 +3855,7 @@ node_modules/@types/lodash/common/math.d.ts:312
 
 #### Defined in
 
-node_modules/@types/lodash/common/collection.d.ts:1680
+node_modules/@types/lodash/common/collection.d.ts:1684
 
 ---
 
@@ -3870,7 +3877,7 @@ node_modules/@types/lodash/common/collection.d.ts:1680
 
 #### Defined in
 
-node_modules/@types/lodash/common/collection.d.ts:1736
+node_modules/@types/lodash/common/collection.d.ts:1740
 
 ---
 
@@ -3900,7 +3907,7 @@ node_modules/@types/lodash/common/collection.d.ts:1736
 
 ##### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:2222
+node_modules/@types/lodash/common/object.d.ts:2283
 
 #### set(path, value)
 
@@ -3930,7 +3937,7 @@ node_modules/@types/lodash/common/object.d.ts:2222
 
 ##### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:2226
+node_modules/@types/lodash/common/object.d.ts:2287
 
 ---
 
@@ -3946,7 +3953,7 @@ node_modules/@types/lodash/common/object.d.ts:2226
 
 • **value**: `any`
 
-• **customizer?**: [`SetWithCustomizer`](../type-aliases/SetWithCustomizer.md)\<`string`\>
+• **customizer?**: [`SetWithCustomizer`](../type-aliases/SetWithCustomizer.md)\<`T`\>
 
 ##### Returns
 
@@ -3962,7 +3969,7 @@ node_modules/@types/lodash/common/object.d.ts:2226
 
 ##### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:2261
+node_modules/@types/lodash/common/object.d.ts:2322
 
 #### setWith(path, value, customizer)
 
@@ -3979,7 +3986,7 @@ node_modules/@types/lodash/common/object.d.ts:2261
 
 • **value**: `any`
 
-• **customizer?**: [`SetWithCustomizer`](../type-aliases/SetWithCustomizer.md)\<`string`\>
+• **customizer?**: [`SetWithCustomizer`](../type-aliases/SetWithCustomizer.md)\<`T`\>
 
 ##### Returns
 
@@ -3995,7 +4002,7 @@ node_modules/@types/lodash/common/object.d.ts:2261
 
 ##### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:2265
+node_modules/@types/lodash/common/object.d.ts:2326
 
 ---
 
@@ -4013,7 +4020,7 @@ node_modules/@types/lodash/common/object.d.ts:2265
 
 #### Defined in
 
-node_modules/@types/lodash/common/collection.d.ts:1791
+node_modules/@types/lodash/common/collection.d.ts:1795
 
 ---
 
@@ -4035,17 +4042,17 @@ node_modules/@types/lodash/common/collection.d.ts:1791
 
 #### Defined in
 
-node_modules/@types/lodash/common/collection.d.ts:1831
+node_modules/@types/lodash/common/collection.d.ts:1835
 
 ---
 
 ### snakeCase()
 
-> **snakeCase**(): [`StringChain`](StringChain.md)
+> **snakeCase**(): [`StringChain`](StringChain.md)\<`string`\>
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 #### See
 
@@ -4091,11 +4098,11 @@ node_modules/@types/lodash/common/string.d.ts:425
 
 ### startCase()
 
-> **startCase**(): [`StringChain`](StringChain.md)
+> **startCase**(): [`StringChain`](StringChain.md)\<`string`\>
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 #### See
 
@@ -4229,11 +4236,11 @@ node_modules/@types/lodash/common/util.d.ts:1029
 
 ### stubString()
 
-> **stubString**(): [`StringChain`](StringChain.md)
+> **stubString**(): [`StringChain`](StringChain.md)\<`string`\>
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 #### See
 
@@ -4540,11 +4547,11 @@ node_modules/@types/lodash/common/lang.d.ts:1541
 
 ### toJSON()
 
-> **toJSON**(): `string`
+> **toJSON**(): `T`
 
 #### Returns
 
-`string`
+`T`
 
 #### See
 
@@ -4584,11 +4591,12 @@ node_modules/@types/lodash/common/lang.d.ts:1580
 
 ### toLower()
 
-> **toLower**(): [`StringChain`](StringChain.md)
+> **toLower**(): [`StringChain`](StringChain.md)\<`T` _extends_ `string` ? `Lowercase`\<`T`\<`T`\>\>
+> : `string`\>
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`T` _extends_ `string` ? `Lowercase`\<`T`\<`T`\>\> : `string`\>
 
 #### See
 
@@ -4628,11 +4636,15 @@ node_modules/@types/lodash/common/lang.d.ts:1616
 
 ### toPairs()
 
-> **toPairs**(): [`CollectionChain`](CollectionChain.md)\<[`string`, `string`]\>
+> **toPairs**(): [`CollectionChain`](CollectionChain.md)\<[`string`, `T` _extends_
+> [`Dictionary`](Dictionary.md)\<`U`\> ? `U` : `T` _extends_
+> [`NumericDictionary`](NumericDictionary.md)\<`V`\> ? `V` : `any`]\>
 
 #### Returns
 
-[`CollectionChain`](CollectionChain.md)\<[`string`, `string`]\>
+[`CollectionChain`](CollectionChain.md)\<[`string`, `T` _extends_
+[`Dictionary`](Dictionary.md)\<`U`\> ? `U` : `T` _extends_
+[`NumericDictionary`](NumericDictionary.md)\<`V`\> ? `V` : `any`]\>
 
 #### See
 
@@ -4644,17 +4656,21 @@ node_modules/@types/lodash/common/lang.d.ts:1616
 
 #### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:2290
+node_modules/@types/lodash/common/object.d.ts:2351
 
 ---
 
 ### toPairsIn()
 
-> **toPairsIn**(): [`CollectionChain`](CollectionChain.md)\<[`string`, `string`]\>
+> **toPairsIn**(): [`CollectionChain`](CollectionChain.md)\<[`string`, `T` _extends_
+> [`Dictionary`](Dictionary.md)\<`U`\> ? `U` : `T` _extends_
+> [`NumericDictionary`](NumericDictionary.md)\<`V`\> ? `V` : `any`]\>
 
 #### Returns
 
-[`CollectionChain`](CollectionChain.md)\<[`string`, `string`]\>
+[`CollectionChain`](CollectionChain.md)\<[`string`, `T` _extends_
+[`Dictionary`](Dictionary.md)\<`U`\> ? `U` : `T` _extends_
+[`NumericDictionary`](NumericDictionary.md)\<`V`\> ? `V` : `any`]\>
 
 #### See
 
@@ -4666,7 +4682,7 @@ node_modules/@types/lodash/common/object.d.ts:2290
 
 #### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:2315
+node_modules/@types/lodash/common/object.d.ts:2376
 
 ---
 
@@ -4738,11 +4754,12 @@ node_modules/@types/lodash/common/lang.d.ts:1676
 
 ### toUpper()
 
-> **toUpper**(): [`StringChain`](StringChain.md)
+> **toUpper**(): [`StringChain`](StringChain.md)\<`T` _extends_ `string` ? `Uppercase`\<`T`\<`T`\>\>
+> : `string`\>
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`T` _extends_ `string` ? `Uppercase`\<`T`\<`T`\>\> : `string`\>
 
 #### See
 
@@ -4760,7 +4777,7 @@ node_modules/@types/lodash/common/string.d.ts:570
 
 ### trim()
 
-> **trim**(`chars`?): [`StringChain`](StringChain.md)
+> **trim**(`chars`?): [`StringChain`](StringChain.md)\<`string`\>
 
 #### Parameters
 
@@ -4768,7 +4785,7 @@ node_modules/@types/lodash/common/string.d.ts:570
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 #### See
 
@@ -4786,7 +4803,7 @@ node_modules/@types/lodash/common/string.d.ts:597
 
 ### trimEnd()
 
-> **trimEnd**(`chars`?): [`StringChain`](StringChain.md)
+> **trimEnd**(`chars`?): [`StringChain`](StringChain.md)\<`string`\>
 
 #### Parameters
 
@@ -4794,7 +4811,7 @@ node_modules/@types/lodash/common/string.d.ts:597
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 #### See
 
@@ -4812,7 +4829,7 @@ node_modules/@types/lodash/common/string.d.ts:624
 
 ### trimStart()
 
-> **trimStart**(`chars`?): [`StringChain`](StringChain.md)
+> **trimStart**(`chars`?): [`StringChain`](StringChain.md)\<`string`\>
 
 #### Parameters
 
@@ -4820,7 +4837,7 @@ node_modules/@types/lodash/common/string.d.ts:624
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 #### See
 
@@ -4838,7 +4855,7 @@ node_modules/@types/lodash/common/string.d.ts:651
 
 ### truncate()
 
-> **truncate**(`options`?): [`StringChain`](StringChain.md)
+> **truncate**(`options`?): [`StringChain`](StringChain.md)\<`string`\>
 
 #### Parameters
 
@@ -4846,7 +4863,7 @@ node_modules/@types/lodash/common/string.d.ts:651
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 #### See
 
@@ -4864,11 +4881,11 @@ node_modules/@types/lodash/common/string.d.ts:689
 
 ### unescape()
 
-> **unescape**(): [`StringChain`](StringChain.md)
+> **unescape**(): [`StringChain`](StringChain.md)\<`string`\>
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 #### See
 
@@ -4886,11 +4903,11 @@ node_modules/@types/lodash/common/string.d.ts:715
 
 ### uniqueId()
 
-> **uniqueId**(): [`StringChain`](StringChain.md)
+> **uniqueId**(): [`StringChain`](StringChain.md)\<`string`\>
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 #### See
 
@@ -4928,7 +4945,7 @@ node_modules/@types/lodash/common/util.d.ts:1168
 
 #### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:2417
+node_modules/@types/lodash/common/object.d.ts:2478
 
 ---
 
@@ -4956,17 +4973,17 @@ node_modules/@types/lodash/common/object.d.ts:2417
 
 #### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:2441
+node_modules/@types/lodash/common/object.d.ts:2502
 
 ---
 
 ### upperCase()
 
-> **upperCase**(): [`StringChain`](StringChain.md)
+> **upperCase**(): [`StringChain`](StringChain.md)\<`string`\>
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`string`\>
 
 #### See
 
@@ -4984,11 +5001,12 @@ node_modules/@types/lodash/common/string.d.ts:737
 
 ### upperFirst()
 
-> **upperFirst**(): [`StringChain`](StringChain.md)
+> **upperFirst**(): [`StringChain`](StringChain.md)\<`T` _extends_ `string` ?
+> `Capitalize`\<`T`\<`T`\>\> : `string`\>
 
 #### Returns
 
-[`StringChain`](StringChain.md)
+[`StringChain`](StringChain.md)\<`T` _extends_ `string` ? `Capitalize`\<`T`\<`T`\>\> : `string`\>
 
 #### See
 
@@ -5006,11 +5024,11 @@ node_modules/@types/lodash/common/string.d.ts:759
 
 ### value()
 
-> **value**(): `string`
+> **value**(): `T`
 
 #### Returns
 
-`string`
+`T`
 
 #### See
 
@@ -5028,11 +5046,11 @@ node_modules/@types/lodash/common/seq.d.ts:147
 
 ### valueOf()
 
-> **valueOf**(): `string`
+> **valueOf**(): `T`
 
 #### Returns
 
-`string`
+`T`
 
 #### See
 
@@ -5062,7 +5080,7 @@ node_modules/@types/lodash/common/seq.d.ts:160
 
 #### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:2531
+node_modules/@types/lodash/common/object.d.ts:2592
 
 ---
 
@@ -5080,7 +5098,7 @@ node_modules/@types/lodash/common/object.d.ts:2531
 
 #### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:2568
+node_modules/@types/lodash/common/object.d.ts:2629
 
 ---
 

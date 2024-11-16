@@ -24,4 +24,4 @@
 
 ## Defined in
 
-node_modules/@types/lodash/common/object.d.ts:2228
+node_modules/@types/lodash/common/object.d.ts:2289

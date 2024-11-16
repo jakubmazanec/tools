@@ -32,4 +32,4 @@ Use MemoListIterator or MemoObjectIterator instead.
 
 ## Defined in
 
-node_modules/@types/lodash/common/common.d.ts:229
+node_modules/@types/lodash/common/common.d.ts:230

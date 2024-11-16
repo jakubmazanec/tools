@@ -11,7 +11,7 @@
 > [`Function`](../namespaces/lodash/interfaces/Function.md)\<`any`\> &
 > [`Object`](../namespaces/lodash/interfaces/Object.md)\<`any`\> &
 > [`Primitive`](../namespaces/lodash/interfaces/Primitive.md)\<`any`\> &
-> [`String`](../namespaces/lodash/interfaces/String.md)
+> [`String`](../namespaces/lodash/interfaces/String.md)\<`string`\>
 
 Creates a lodash object which wraps value to enable implicit method chain sequences. Methods that
 operate on and return arrays, collections, and functions can be chained together. Methods that
@@ -88,7 +88,27 @@ trimEnd, trimStart, truncate, unescape, uniqueId, upperCase, upperFirst, value, 
 [`Function`](../namespaces/lodash/interfaces/Function.md)\<`any`\> &
 [`Object`](../namespaces/lodash/interfaces/Object.md)\<`any`\> &
 [`Primitive`](../namespaces/lodash/interfaces/Primitive.md)\<`any`\> &
-[`String`](../namespaces/lodash/interfaces/String.md)
+[`String`](../namespaces/lodash/interfaces/String.md)\<`string`\>
+
+### Defined in
+
+node_modules/@types/lodash/common/common.d.ts:94
+
+## lodash(value)
+
+> **lodash**\<`T`\>(`value`): [`String`](../namespaces/lodash/interfaces/String.md)\<`T`\>
+
+### Type Parameters
+
+• **T** _extends_ `string`
+
+### Parameters
+
+• **value**: `T`
+
+### Returns
+
+[`String`](../namespaces/lodash/interfaces/String.md)\<`T`\>
 
 ### Defined in
 
@@ -116,7 +136,7 @@ node_modules/@types/lodash/common/common.d.ts:96
 
 ## lodash(value)
 
-> **lodash**(`value`): [`String`](../namespaces/lodash/interfaces/String.md)
+> **lodash**(`value`): [`String`](../namespaces/lodash/interfaces/String.md)\<`string`\>
 
 ### Parameters
 
@@ -124,7 +144,7 @@ node_modules/@types/lodash/common/common.d.ts:96
 
 ### Returns
 
-[`String`](../namespaces/lodash/interfaces/String.md)
+[`String`](../namespaces/lodash/interfaces/String.md)\<`string`\>
 
 ### Defined in
 

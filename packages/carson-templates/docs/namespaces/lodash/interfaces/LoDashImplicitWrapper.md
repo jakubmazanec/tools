@@ -156,11 +156,12 @@ node_modules/@types/lodash/common/string.d.ts:16
 
 ### capitalize()
 
-> **capitalize**(): `string`
+> **capitalize**(): `Capitalize`\<`Lowercase`\<`TValue` _extends_ `string` ? `TValue`\<`TValue`\> :
+> `never`\>\>
 
 #### Returns
 
-`string`
+`Capitalize`\<`Lowercase`\<`TValue` _extends_ `string` ? `TValue`\<`TValue`\> : `never`\>\>
 
 #### See
 
@@ -968,7 +969,7 @@ node_modules/@types/lodash/common/lang.d.ts:306
 
 #### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:1338
+node_modules/@types/lodash/common/object.d.ts:1395
 
 ---
 
@@ -990,7 +991,7 @@ node_modules/@types/lodash/common/object.d.ts:1338
 
 #### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:1376
+node_modules/@types/lodash/common/object.d.ts:1433
 
 ---
 
@@ -1050,7 +1051,7 @@ node_modules/@types/lodash/common/number.d.ts:77
 
 #### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:1399
+node_modules/@types/lodash/common/object.d.ts:1456
 
 ---
 
@@ -1074,7 +1075,7 @@ node_modules/@types/lodash/common/object.d.ts:1399
 
 #### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:1478
+node_modules/@types/lodash/common/object.d.ts:1535
 
 ---
 
@@ -1848,7 +1849,7 @@ node_modules/@types/lodash/common/string.d.ts:163
 
 #### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:1501
+node_modules/@types/lodash/common/object.d.ts:1558
 
 ---
 
@@ -1866,7 +1867,7 @@ node_modules/@types/lodash/common/object.d.ts:1501
 
 #### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:1524
+node_modules/@types/lodash/common/object.d.ts:1581
 
 ---
 
@@ -1890,11 +1891,11 @@ node_modules/@types/lodash/common/string.d.ts:185
 
 ### lowerFirst()
 
-> **lowerFirst**(): `string`
+> **lowerFirst**(): `TValue` _extends_ `string` ? `Uncapitalize`\<`TValue`\<`TValue`\>\> : `string`
 
 #### Returns
 
-`string`
+`TValue` _extends_ `string` ? `Uncapitalize`\<`TValue`\<`TValue`\>\> : `string`
 
 #### See
 
@@ -2578,7 +2579,7 @@ node_modules/@types/lodash/common/string.d.ts:363
 
 #### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:2183
+node_modules/@types/lodash/common/object.d.ts:2244
 
 ---
 
@@ -2662,7 +2663,7 @@ node_modules/@types/lodash/common/util.d.ts:966
 
 ##### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:2212
+node_modules/@types/lodash/common/object.d.ts:2273
 
 #### set(path, value)
 
@@ -2688,7 +2689,7 @@ node_modules/@types/lodash/common/object.d.ts:2212
 
 ##### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:2216
+node_modules/@types/lodash/common/object.d.ts:2277
 
 ---
 
@@ -2716,7 +2717,7 @@ node_modules/@types/lodash/common/object.d.ts:2216
 
 ##### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:2251
+node_modules/@types/lodash/common/object.d.ts:2312
 
 #### setWith(path, value, customizer)
 
@@ -2745,7 +2746,7 @@ node_modules/@types/lodash/common/object.d.ts:2251
 
 ##### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:2255
+node_modules/@types/lodash/common/object.d.ts:2316
 
 ---
 
@@ -2763,7 +2764,7 @@ node_modules/@types/lodash/common/object.d.ts:2255
 
 #### Defined in
 
-node_modules/@types/lodash/common/collection.d.ts:1825
+node_modules/@types/lodash/common/collection.d.ts:1829
 
 ---
 
@@ -3205,11 +3206,11 @@ node_modules/@types/lodash/common/lang.d.ts:1574
 
 ### toLower()
 
-> **toLower**(): `string`
+> **toLower**(): `TValue` _extends_ `string` ? `Lowercase`\<`TValue`\<`TValue`\>\> : `string`
 
 #### Returns
 
-`string`
+`TValue` _extends_ `string` ? `Lowercase`\<`TValue`\<`TValue`\>\> : `string`
 
 #### See
 
@@ -3256,7 +3257,7 @@ node_modules/@types/lodash/common/lang.d.ts:1610
 
 #### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:2284
+node_modules/@types/lodash/common/object.d.ts:2345
 
 ---
 
@@ -3277,7 +3278,7 @@ node_modules/@types/lodash/common/object.d.ts:2284
 
 #### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:2309
+node_modules/@types/lodash/common/object.d.ts:2370
 
 ---
 
@@ -3337,11 +3338,11 @@ node_modules/@types/lodash/common/lang.d.ts:1670
 
 ### toUpper()
 
-> **toUpper**(): `string`
+> **toUpper**(): `TValue` _extends_ `string` ? `Uppercase`\<`TValue`\<`TValue`\>\> : `string`
 
 #### Returns
 
-`string`
+`TValue` _extends_ `string` ? `Uppercase`\<`TValue`\<`TValue`\>\> : `string`
 
 #### See
 
@@ -3495,7 +3496,7 @@ node_modules/@types/lodash/common/util.d.ts:1162
 
 #### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:2411
+node_modules/@types/lodash/common/object.d.ts:2472
 
 ---
 
@@ -3519,7 +3520,7 @@ node_modules/@types/lodash/common/object.d.ts:2411
 
 #### Defined in
 
-node_modules/@types/lodash/common/object.d.ts:2435
+node_modules/@types/lodash/common/object.d.ts:2496
 
 ---
 
@@ -3543,11 +3544,11 @@ node_modules/@types/lodash/common/string.d.ts:731
 
 ### upperFirst()
 
-> **upperFirst**(): `string`
+> **upperFirst**(): `TValue` _extends_ `string` ? `Capitalize`\<`TValue`\<`TValue`\>\> : `string`
 
 #### Returns
 
-`string`
+`TValue` _extends_ `string` ? `Capitalize`\<`TValue`\<`TValue`\>\> : `string`
 
 #### See
 

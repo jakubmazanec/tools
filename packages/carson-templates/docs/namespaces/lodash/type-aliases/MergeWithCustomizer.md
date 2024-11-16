@@ -8,4 +8,4 @@
 
 ## Defined in
 
-node_modules/@types/lodash/common/object.d.ts:1839
+node_modules/@types/lodash/common/object.d.ts:1900

@@ -34,4 +34,4 @@ Type returned when `X` isn't assignable to `Y`
 
 ## Defined in
 
-[packages/ts-utils/source/types/If.ts:15](https://github.com/jakubmazanec/tools/blob/05074a1dedd887672f015df129961cd35c75acfe/packages/ts-utils/source/types/If.ts#L15)
+[packages/ts-utils/source/types/If.ts:15](https://github.com/jakubmazanec/tools/blob/eb8c22844f0a0aa0874efeab93afc2bd96c269e6/packages/ts-utils/source/types/If.ts#L15)
