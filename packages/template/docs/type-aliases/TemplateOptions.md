@@ -47,4 +47,4 @@ Template path.
 
 ## Defined in
 
-[packages/template/source/Template.ts:18](https://github.com/jakubmazanec/tools/blob/eb8c22844f0a0aa0874efeab93afc2bd96c269e6/packages/template/source/Template.ts#L18)
+[packages/template/source/Template.ts:18](https://github.com/jakubmazanec/tools/blob/2afd81e4680434017b6f838733fd5ccd928cec42/packages/template/source/Template.ts#L18)

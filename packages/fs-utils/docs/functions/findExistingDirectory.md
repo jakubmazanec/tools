@@ -25,4 +25,4 @@ Search path.
 
 ## Defined in
 
-[findExistingDirectory.ts:15](https://github.com/jakubmazanec/tools/blob/eb8c22844f0a0aa0874efeab93afc2bd96c269e6/packages/fs-utils/source/findExistingDirectory.ts#L15)
+[findExistingDirectory.ts:15](https://github.com/jakubmazanec/tools/blob/2afd81e4680434017b6f838733fd5ccd928cec42/packages/fs-utils/source/findExistingDirectory.ts#L15)
