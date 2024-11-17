@@ -57,7 +57,7 @@ export const DEPENDENCY_VERSIONS: Record<string, string> = {
   '@storybook/react-vite': '^8.0.0',
   '@storybook/test': '^8.0.0',
   '@testing-library/jest-dom': '^6.0.0',
-  '@testing-library/react': '^14.0.0',
+  '@testing-library/react': '^16.0.0',
   '@types/lodash': '^4.0.0',
   '@types/node': '^20.0.0',
   '@types/react': '^18.0.0',
