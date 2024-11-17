@@ -41,7 +41,7 @@ export const DEPENDENCY_VERSIONS: Record<string, string> = {
   [LINTER_CONFIG_PACKAGE_NAME]: '^3.0.0',
 
   '@changesets/cli': '^2.0.0',
-  '@chromatic-com/storybook': '^1.0.0',
+  '@chromatic-com/storybook': '^3.0.0',
   '@remix-run/dev': '^2.0.0',
   '@remix-run/express': '^2.0.0',
   '@remix-run/node': '^2.0.0',
