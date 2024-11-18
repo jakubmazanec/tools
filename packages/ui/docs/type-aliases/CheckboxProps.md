@@ -52,4 +52,4 @@
 
 ## Defined in
 
-[packages/ui/source/components/Checkbox.tsx:26](https://github.com/jakubmazanec/tools/blob/29163046acd1da0224b08fd05ca40f385e9ab4e5/packages/ui/source/components/Checkbox.tsx#L26)
+[packages/ui/source/components/Checkbox.tsx:26](https://github.com/jakubmazanec/tools/blob/6ed2cc9bf798455a62cfc34def34fef748169fa2/packages/ui/source/components/Checkbox.tsx#L26)

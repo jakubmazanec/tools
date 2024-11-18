@@ -20,4 +20,4 @@ Options.
 
 ## Defined in
 
-[packages/carson/source/workspace/saveProjectConfig.ts:21](https://github.com/jakubmazanec/tools/blob/29163046acd1da0224b08fd05ca40f385e9ab4e5/packages/carson/source/workspace/saveProjectConfig.ts#L21)
+[packages/carson/source/workspace/saveProjectConfig.ts:21](https://github.com/jakubmazanec/tools/blob/6ed2cc9bf798455a62cfc34def34fef748169fa2/packages/carson/source/workspace/saveProjectConfig.ts#L21)

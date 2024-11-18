@@ -8,4 +8,4 @@
 
 ## Defined in
 
-[packages/ui/source/theme/defaultTheme.ts:53](https://github.com/jakubmazanec/tools/blob/29163046acd1da0224b08fd05ca40f385e9ab4e5/packages/ui/source/theme/defaultTheme.ts#L53)
+[packages/ui/source/theme/defaultTheme.ts:53](https://github.com/jakubmazanec/tools/blob/6ed2cc9bf798455a62cfc34def34fef748169fa2/packages/ui/source/theme/defaultTheme.ts#L53)

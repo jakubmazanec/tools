@@ -50,4 +50,4 @@ String literal or union of string literals specifying properties of `T`
 
 ## Defined in
 
-[packages/ts-utils/source/types/AtLeastOneRequired.ts:34](https://github.com/jakubmazanec/tools/blob/29163046acd1da0224b08fd05ca40f385e9ab4e5/packages/ts-utils/source/types/AtLeastOneRequired.ts#L34)
+[packages/ts-utils/source/types/AtLeastOneRequired.ts:34](https://github.com/jakubmazanec/tools/blob/6ed2cc9bf798455a62cfc34def34fef748169fa2/packages/ts-utils/source/types/AtLeastOneRequired.ts#L34)

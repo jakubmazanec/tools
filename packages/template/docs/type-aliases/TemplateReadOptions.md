@@ -28,4 +28,4 @@ Zod schema for template data.
 
 ## Defined in
 
-[packages/template/source/Template.ts:39](https://github.com/jakubmazanec/tools/blob/29163046acd1da0224b08fd05ca40f385e9ab4e5/packages/template/source/Template.ts#L39)
+[packages/template/source/Template.ts:39](https://github.com/jakubmazanec/tools/blob/6ed2cc9bf798455a62cfc34def34fef748169fa2/packages/template/source/Template.ts#L39)

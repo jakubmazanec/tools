@@ -10,4 +10,4 @@ Code for an unknown error. You should never use nor encounter this error code.
 
 ## Defined in
 
-[constants.ts:6](https://github.com/jakubmazanec/tools/blob/29163046acd1da0224b08fd05ca40f385e9ab4e5/packages/error/source/constants.ts#L6)
+[constants.ts:6](https://github.com/jakubmazanec/tools/blob/6ed2cc9bf798455a62cfc34def34fef748169fa2/packages/error/source/constants.ts#L6)
