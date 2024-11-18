@@ -38,4 +38,4 @@ Carson template name.
 
 ## Defined in
 
-[packages/carson/source/template/CarsonTemplate.ts:10](https://github.com/jakubmazanec/tools/blob/2afd81e4680434017b6f838733fd5ccd928cec42/packages/carson/source/template/CarsonTemplate.ts#L10)
+[packages/carson/source/template/CarsonTemplate.ts:10](https://github.com/jakubmazanec/tools/blob/29163046acd1da0224b08fd05ca40f385e9ab4e5/packages/carson/source/template/CarsonTemplate.ts#L10)

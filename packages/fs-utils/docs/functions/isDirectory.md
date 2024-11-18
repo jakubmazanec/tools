@@ -22,4 +22,4 @@ The path to check.
 
 ## Defined in
 
-[isDirectory.ts:9](https://github.com/jakubmazanec/tools/blob/2afd81e4680434017b6f838733fd5ccd928cec42/packages/fs-utils/source/isDirectory.ts#L9)
+[isDirectory.ts:9](https://github.com/jakubmazanec/tools/blob/29163046acd1da0224b08fd05ca40f385e9ab4e5/packages/fs-utils/source/isDirectory.ts#L9)

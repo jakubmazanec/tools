@@ -14,4 +14,4 @@ Form result. It is the value of all form rows after the last one is accepted.
 
 ## Defined in
 
-[cli/source/ui/form/FormResult.ts:8](https://github.com/jakubmazanec/tools/blob/2afd81e4680434017b6f838733fd5ccd928cec42/packages/cli/source/ui/form/FormResult.ts#L8)
+[cli/source/ui/form/FormResult.ts:8](https://github.com/jakubmazanec/tools/blob/29163046acd1da0224b08fd05ca40f385e9ab4e5/packages/cli/source/ui/form/FormResult.ts#L8)

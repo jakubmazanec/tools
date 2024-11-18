@@ -27,4 +27,4 @@ Base for the new type
 
 ## Defined in
 
-[packages/ts-utils/source/types/Parameters.ts:19](https://github.com/jakubmazanec/tools/blob/2afd81e4680434017b6f838733fd5ccd928cec42/packages/ts-utils/source/types/Parameters.ts#L19)
+[packages/ts-utils/source/types/Parameters.ts:19](https://github.com/jakubmazanec/tools/blob/29163046acd1da0224b08fd05ca40f385e9ab4e5/packages/ts-utils/source/types/Parameters.ts#L19)

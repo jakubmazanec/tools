@@ -9,4 +9,4 @@
 
 ## Defined in
 
-[packages/carson/source/commands/create-project/CreateProjectInput.ts:37](https://github.com/jakubmazanec/tools/blob/2afd81e4680434017b6f838733fd5ccd928cec42/packages/carson/source/commands/create-project/CreateProjectInput.ts#L37)
+[packages/carson/source/commands/create-project/CreateProjectInput.ts:37](https://github.com/jakubmazanec/tools/blob/29163046acd1da0224b08fd05ca40f385e9ab4e5/packages/carson/source/commands/create-project/CreateProjectInput.ts#L37)
