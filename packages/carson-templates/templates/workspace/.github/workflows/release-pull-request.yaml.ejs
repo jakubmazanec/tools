@@ -69,7 +69,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: <%- semver.major(semver.minVersion(DEPENDENCY_VERSIONS.node)) %>
           registry-url: 'https://registry.npmjs.org'
 
 <%
