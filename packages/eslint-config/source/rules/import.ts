@@ -65,7 +65,7 @@ export const importRules: eslint.Linter.Config['rules'] = {
   // TODO: enable when these are fixed: https://github.com/import-js/eslint-plugin-import/issues/3088, https://github.com/import-js/eslint-plugin-import/issues/3082
   'import/no-unresolved': ['off', {commonjs: true, caseSensitive: true}], // ensure imports point to a file/module that can be resolved
   'import/no-unused-modules': 'off', // report modules without exports, or exports without matching import in another module
-  'import/no-useless-path-segments': ['error', {noUselessIndex: true}], // prevent unnecessary path segments in import and require statements
+  'import/no-useless-path-segments': 'error', // prevent unnecessary path segments in import and require statements
   'import/no-webpack-loader-syntax': 'error', // forbid webpack loader syntax in imports
   'import/unambiguous': 'off', // report potentially ambiguous parse goal (script vs. module)
   'import/order': 'off', // enforce a convention in module import order
