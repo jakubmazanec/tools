@@ -33,14 +33,23 @@ export const perfectionistRules: eslint.Linter.Config['rules'] = {
       ignoreCase: false,
       sortSideEffects: true,
       matcher: 'regex',
-      groups: ['first', 'second', 'third'],
-      customGroups: {
-        value: {
-          first: [String.raw`^@?\w`],
-          second: [String.raw`^\.`],
-          third: ['^'],
-        },
-      },
+      groups: [
+        ['builtin', 'external', 'external-type', 'builtin-type'],
+        [
+          'internal',
+          'parent',
+          'sibling',
+          'index',
+          'object',
+          'style',
+          'internal-type',
+          'parent-type',
+          'sibling-type',
+          'index-type',
+          'unknown',
+        ],
+        ['side-effect', 'side-effect-style'],
+      ],
     },
   ], // enforce sorted imports
   'perfectionist/sort-interfaces': 'off', // enforce sorted interface properties
