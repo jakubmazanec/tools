@@ -1,5 +1,14 @@
 # @jakubmazanec/carson-templates
 
+## 3.1.1
+
+### Patch Changes
+
+- [#210](https://github.com/jakubmazanec/tools/pull/210)
+  [`043f017`](https://github.com/jakubmazanec/tools/commit/043f017b24789eba8a7eb285e0e1042ac4eaaeea)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes GitHub workflows in the `workspace`
+  template, so the correct Node.js version is used.
+
 ## 3.1.0
 
 ### Minor Changes

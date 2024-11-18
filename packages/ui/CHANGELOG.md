@@ -1,5 +1,14 @@
 # @jakubmazanec/ui
 
+## 0.1.2
+
+### Patch Changes
+
+- [#208](https://github.com/jakubmazanec/tools/pull/208)
+  [`3580563`](https://github.com/jakubmazanec/tools/commit/3580563040270471f22a522ef2234d40977f4a7c)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@heroicons/react` updated to version
+  `^2.2.0`.
+
 ## 0.1.1
 
 ### Patch Changes
