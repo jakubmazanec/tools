@@ -123,4 +123,4 @@ Creates detailed information about a {@lincode Program}.
 
 ## Defined in
 
-[cli/source/program/getProgramDetail.ts:8](https://github.com/jakubmazanec/tools/blob/6ed2cc9bf798455a62cfc34def34fef748169fa2/packages/cli/source/program/getProgramDetail.ts#L8)
+[cli/source/program/getProgramDetail.ts:8](https://github.com/jakubmazanec/tools/blob/043f017b24789eba8a7eb285e0e1042ac4eaaeea/packages/cli/source/program/getProgramDetail.ts#L8)

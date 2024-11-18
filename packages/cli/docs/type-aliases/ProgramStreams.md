@@ -24,4 +24,4 @@
 
 ## Defined in
 
-[cli/source/program/ProgramStreams.ts:4](https://github.com/jakubmazanec/tools/blob/6ed2cc9bf798455a62cfc34def34fef748169fa2/packages/cli/source/program/ProgramStreams.ts#L4)
+[cli/source/program/ProgramStreams.ts:4](https://github.com/jakubmazanec/tools/blob/043f017b24789eba8a7eb285e0e1042ac4eaaeea/packages/cli/source/program/ProgramStreams.ts#L4)

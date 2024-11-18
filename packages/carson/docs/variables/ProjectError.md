@@ -25,4 +25,4 @@ A subclass of `Error` that indicates a project failure.
 
 ## Defined in
 
-[packages/carson/source/workspace/ProjectError.ts:7](https://github.com/jakubmazanec/tools/blob/6ed2cc9bf798455a62cfc34def34fef748169fa2/packages/carson/source/workspace/ProjectError.ts#L7)
+[packages/carson/source/workspace/ProjectError.ts:7](https://github.com/jakubmazanec/tools/blob/043f017b24789eba8a7eb285e0e1042ac4eaaeea/packages/carson/source/workspace/ProjectError.ts#L7)

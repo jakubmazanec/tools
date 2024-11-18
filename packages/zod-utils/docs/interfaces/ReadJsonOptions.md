@@ -12,4 +12,4 @@
 
 #### Defined in
 
-[packages/zod-utils/source/utils/readJson.ts:9](https://github.com/jakubmazanec/tools/blob/6ed2cc9bf798455a62cfc34def34fef748169fa2/packages/zod-utils/source/utils/readJson.ts#L9)
+[packages/zod-utils/source/utils/readJson.ts:9](https://github.com/jakubmazanec/tools/blob/043f017b24789eba8a7eb285e0e1042ac4eaaeea/packages/zod-utils/source/utils/readJson.ts#L9)

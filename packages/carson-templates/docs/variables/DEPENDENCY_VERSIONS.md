@@ -8,4 +8,4 @@
 
 ## Defined in
 
-[packages/carson-templates/source/dependency-versions.ts:35](https://github.com/jakubmazanec/tools/blob/6ed2cc9bf798455a62cfc34def34fef748169fa2/packages/carson-templates/source/dependency-versions.ts#L35)
+[packages/carson-templates/source/dependency-versions.ts:35](https://github.com/jakubmazanec/tools/blob/043f017b24789eba8a7eb285e0e1042ac4eaaeea/packages/carson-templates/source/dependency-versions.ts#L35)

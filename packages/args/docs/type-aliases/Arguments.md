@@ -52,4 +52,4 @@ Unconfigured options.
 
 ## Defined in
 
-[args/source/Arguments.ts:10](https://github.com/jakubmazanec/tools/blob/6ed2cc9bf798455a62cfc34def34fef748169fa2/packages/args/source/Arguments.ts#L10)
+[args/source/Arguments.ts:10](https://github.com/jakubmazanec/tools/blob/043f017b24789eba8a7eb285e0e1042ac4eaaeea/packages/args/source/Arguments.ts#L10)

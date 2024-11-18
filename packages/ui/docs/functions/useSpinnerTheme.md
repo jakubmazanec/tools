@@ -46,4 +46,4 @@
 
 ## Defined in
 
-[packages/ui/source/components/Spinner.tsx:9](https://github.com/jakubmazanec/tools/blob/6ed2cc9bf798455a62cfc34def34fef748169fa2/packages/ui/source/components/Spinner.tsx#L9)
+[packages/ui/source/components/Spinner.tsx:9](https://github.com/jakubmazanec/tools/blob/043f017b24789eba8a7eb285e0e1042ac4eaaeea/packages/ui/source/components/Spinner.tsx#L9)

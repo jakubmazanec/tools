@@ -14,4 +14,4 @@ Form values.
 
 ## Defined in
 
-[cli/source/ui/form/FormValues.ts:7](https://github.com/jakubmazanec/tools/blob/6ed2cc9bf798455a62cfc34def34fef748169fa2/packages/cli/source/ui/form/FormValues.ts#L7)
+[cli/source/ui/form/FormValues.ts:7](https://github.com/jakubmazanec/tools/blob/043f017b24789eba8a7eb285e0e1042ac4eaaeea/packages/cli/source/ui/form/FormValues.ts#L7)

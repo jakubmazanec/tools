@@ -31,4 +31,4 @@ used for showing an error (via an error boundary) and exiting.
 
 ## Defined in
 
-[cli/source/ui/useProgram.ts:10](https://github.com/jakubmazanec/tools/blob/6ed2cc9bf798455a62cfc34def34fef748169fa2/packages/cli/source/ui/useProgram.ts#L10)
+[cli/source/ui/useProgram.ts:10](https://github.com/jakubmazanec/tools/blob/043f017b24789eba8a7eb285e0e1042ac4eaaeea/packages/cli/source/ui/useProgram.ts#L10)

@@ -63,4 +63,4 @@
 
 ## Defined in
 
-[packages/ui/source/theme/Theme.ts:52](https://github.com/jakubmazanec/tools/blob/6ed2cc9bf798455a62cfc34def34fef748169fa2/packages/ui/source/theme/Theme.ts#L52)
+[packages/ui/source/theme/Theme.ts:52](https://github.com/jakubmazanec/tools/blob/043f017b24789eba8a7eb285e0e1042ac4eaaeea/packages/ui/source/theme/Theme.ts#L52)

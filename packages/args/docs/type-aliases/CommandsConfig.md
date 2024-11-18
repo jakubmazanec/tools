@@ -10,4 +10,4 @@ Parser's commands configuration.
 
 ## Defined in
 
-[args/source/CommandsConfig.ts:4](https://github.com/jakubmazanec/tools/blob/6ed2cc9bf798455a62cfc34def34fef748169fa2/packages/args/source/CommandsConfig.ts#L4)
+[args/source/CommandsConfig.ts:4](https://github.com/jakubmazanec/tools/blob/043f017b24789eba8a7eb285e0e1042ac4eaaeea/packages/args/source/CommandsConfig.ts#L4)

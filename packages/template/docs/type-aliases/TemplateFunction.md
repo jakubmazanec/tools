@@ -18,4 +18,4 @@ Type representing a template function that takes data and returns rendered strin
 
 ## Defined in
 
-[packages/template/source/TemplateFunction.ts:4](https://github.com/jakubmazanec/tools/blob/6ed2cc9bf798455a62cfc34def34fef748169fa2/packages/template/source/TemplateFunction.ts#L4)
+[packages/template/source/TemplateFunction.ts:4](https://github.com/jakubmazanec/tools/blob/043f017b24789eba8a7eb285e0e1042ac4eaaeea/packages/template/source/TemplateFunction.ts#L4)

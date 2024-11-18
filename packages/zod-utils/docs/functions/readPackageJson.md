@@ -32,4 +32,4 @@
 
 ## Defined in
 
-[packages/zod-utils/source/utils/readPackageJson.ts:13](https://github.com/jakubmazanec/tools/blob/6ed2cc9bf798455a62cfc34def34fef748169fa2/packages/zod-utils/source/utils/readPackageJson.ts#L13)
+[packages/zod-utils/source/utils/readPackageJson.ts:13](https://github.com/jakubmazanec/tools/blob/043f017b24789eba8a7eb285e0e1042ac4eaaeea/packages/zod-utils/source/utils/readPackageJson.ts#L13)
