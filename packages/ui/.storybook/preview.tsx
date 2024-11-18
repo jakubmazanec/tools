@@ -9,6 +9,7 @@ import {useArgs} from '@storybook/preview-api';
 import {type Preview} from '@storybook/react';
 
 import {defaultTheme, ThemeProvider} from '../source/main.js';
+
 import './tailwind.css';
 
 const preview: Preview = {
