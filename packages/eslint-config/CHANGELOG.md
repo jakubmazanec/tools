@@ -1,5 +1,28 @@
 # @jakubmazanec/eslint-config
 
+## 4.0.0
+
+### Major Changes
+
+- [`eb8c228`](https://github.com/jakubmazanec/tools/commit/eb8c22844f0a0aa0874efeab93afc2bd96c269e6)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – BREAKING: ESLint updated to v9 and config
+  changed to the ESLint's new flat config. Some rules were changed. The config is now an ESM
+  package.
+
+### Patch Changes
+
+- [#205](https://github.com/jakubmazanec/tools/pull/205)
+  [`5039007`](https://github.com/jakubmazanec/tools/commit/5039007ea24b0d9f0029db497011ab8b38cdd3a4)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes incorrect order of imports in
+  `perfectionist/sort-imports` rule.
+
+- [#207](https://github.com/jakubmazanec/tools/pull/207)
+  [`6ed2cc9`](https://github.com/jakubmazanec/tools/commit/6ed2cc9bf798455a62cfc34def34fef748169fa2)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes `import/no-useless-path-segments` rule.
+
+- [`eb8c228`](https://github.com/jakubmazanec/tools/commit/eb8c22844f0a0aa0874efeab93afc2bd96c269e6)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Updates ESLint and ESLint config.
+
 ## 3.3.2
 
 ### Patch Changes

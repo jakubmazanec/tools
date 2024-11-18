@@ -1,5 +1,17 @@
 # @jakubmazanec/error
 
+## 3.0.5
+
+### Patch Changes
+
+- [#201](https://github.com/jakubmazanec/tools/pull/201)
+  [`96ebbfd`](https://github.com/jakubmazanec/tools/commit/96ebbfdd53c8b44ed3d509e67e63015602fa8f5f)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@vitest/coverage-v8` updated to
+  version `^2.1.5`. Dependency `vitest` updated to version `^2.1.5`.
+
+- [`eb8c228`](https://github.com/jakubmazanec/tools/commit/eb8c22844f0a0aa0874efeab93afc2bd96c269e6)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Updates ESLint and ESLint config.
+
 ## 3.0.4
 
 ### Patch Changes

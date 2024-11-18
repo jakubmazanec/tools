@@ -1,5 +1,23 @@
 # @jakubmazanec/carson
 
+## 1.2.2
+
+### Patch Changes
+
+- [#201](https://github.com/jakubmazanec/tools/pull/201)
+  [`96ebbfd`](https://github.com/jakubmazanec/tools/commit/96ebbfdd53c8b44ed3d509e67e63015602fa8f5f)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@vitest/coverage-v8` updated to
+  version `^2.1.5`. Dependency `vitest` updated to version `^2.1.5`.
+
+- [#199](https://github.com/jakubmazanec/tools/pull/199)
+  [`2b37bf5`](https://github.com/jakubmazanec/tools/commit/2b37bf57e2a21d4b7498e1be77dbb2961d5a874b)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@types/react` updated to version
+  `^18.3.12`. Dependency `react` updated to version `^18.3.1`. Dependency `@types/react-dom` updated
+  to version `^18.3.1`.
+
+- [`eb8c228`](https://github.com/jakubmazanec/tools/commit/eb8c22844f0a0aa0874efeab93afc2bd96c269e6)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Updates ESLint and ESLint config.
+
 ## 1.2.1
 
 ### Patch Changes

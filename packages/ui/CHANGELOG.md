@@ -1,5 +1,59 @@
 # @jakubmazanec/ui
 
+## 0.1.1
+
+### Patch Changes
+
+- [#196](https://github.com/jakubmazanec/tools/pull/196)
+  [`f0f2000`](https://github.com/jakubmazanec/tools/commit/f0f2000355160a00bed0653bf52d45dfdbbb6f37)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `happy-dom` updated to version
+  `^15.11.6`.
+
+- [#204](https://github.com/jakubmazanec/tools/pull/204)
+  [`04f3355`](https://github.com/jakubmazanec/tools/commit/04f3355792418e79f590195e4bc821931ccc6243)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@testing-library/react` updated to
+  version `^16.0.1`.
+
+- [#195](https://github.com/jakubmazanec/tools/pull/195)
+  [`2afd81e`](https://github.com/jakubmazanec/tools/commit/2afd81e4680434017b6f838733fd5ccd928cec42)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `chromatic` updated to version
+  `^11.18.1`.
+
+- [#203](https://github.com/jakubmazanec/tools/pull/203)
+  [`3a1f239`](https://github.com/jakubmazanec/tools/commit/3a1f2398168b81501d72c6169a5adbcbfcd1c2ee)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@chromatic-com/storybook` updated to
+  version `^3.2.2`.
+
+- [#200](https://github.com/jakubmazanec/tools/pull/200)
+  [`7769180`](https://github.com/jakubmazanec/tools/commit/7769180dd45b33aafae11dccd5940f32dca0a5ad)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@storybook/addon-controls` updated
+  to version `^8.4.4`. Dependency `@storybook/addon-essentials` updated to version `^8.4.4`.
+  Dependency `@storybook/addon-interactions` updated to version `^8.4.4`. Dependency
+  `@storybook/addon-links` updated to version `^8.4.4`. Dependency `@storybook/blocks` updated to
+  version `^8.4.4`. Dependency `@storybook/preview-api` updated to version `^8.4.4`. Dependency
+  `@storybook/react` updated to version `^8.4.4`. Dependency `@storybook/react-vite` updated to
+  version `^8.4.4`. Dependency `@storybook/test` updated to version `^8.4.4`. Dependency `storybook`
+  updated to version `^8.4.4`.
+
+- [#201](https://github.com/jakubmazanec/tools/pull/201)
+  [`96ebbfd`](https://github.com/jakubmazanec/tools/commit/96ebbfdd53c8b44ed3d509e67e63015602fa8f5f)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@vitest/coverage-v8` updated to
+  version `^2.1.5`. Dependency `vitest` updated to version `^2.1.5`.
+
+- [#199](https://github.com/jakubmazanec/tools/pull/199)
+  [`2b37bf5`](https://github.com/jakubmazanec/tools/commit/2b37bf57e2a21d4b7498e1be77dbb2961d5a874b)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@types/react` updated to version
+  `^18.3.12`. Dependency `react` updated to version `^18.3.1`. Dependency `@types/react-dom` updated
+  to version `^18.3.1`.
+
+- [#197](https://github.com/jakubmazanec/tools/pull/197)
+  [`854ad17`](https://github.com/jakubmazanec/tools/commit/854ad1728cf6c2eda69f52c364265d9b55f6682d)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `tailwindcss` updated to version
+  `^3.4.15`.
+
+- [`eb8c228`](https://github.com/jakubmazanec/tools/commit/eb8c22844f0a0aa0874efeab93afc2bd96c269e6)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Updates ESLint and ESLint config.
+
 ## 0.1.0
 
 ### Minor Changes

@@ -1,5 +1,45 @@
 # @jakubmazanec/carson-templates
 
+## 3.1.0
+
+### Minor Changes
+
+- [`eb8c228`](https://github.com/jakubmazanec/tools/commit/eb8c22844f0a0aa0874efeab93afc2bd96c269e6)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Updates all templates to support ESLint v9.
+
+### Patch Changes
+
+- [`eb8c228`](https://github.com/jakubmazanec/tools/commit/eb8c22844f0a0aa0874efeab93afc2bd96c269e6)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Smoke tests for the templates were fixed so
+  updating ESLint doesn't break them.
+
+- [#201](https://github.com/jakubmazanec/tools/pull/201)
+  [`96ebbfd`](https://github.com/jakubmazanec/tools/commit/96ebbfdd53c8b44ed3d509e67e63015602fa8f5f)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@vitest/coverage-v8` updated to
+  version `^2.1.5`. Dependency `vitest` updated to version `^2.1.5`.
+
+- [`eb8c228`](https://github.com/jakubmazanec/tools/commit/eb8c22844f0a0aa0874efeab93afc2bd96c269e6)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes `.prettierignore` in the
+  `projects/react-library` template.
+
+- [`eb8c228`](https://github.com/jakubmazanec/tools/commit/eb8c22844f0a0aa0874efeab93afc2bd96c269e6)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Updates ESLint and ESLint config.
+
+- [#203](https://github.com/jakubmazanec/tools/pull/203)
+  [`3a1f239`](https://github.com/jakubmazanec/tools/commit/3a1f2398168b81501d72c6169a5adbcbfcd1c2ee)
+  ([@renovate](https://github.com/apps/renovate)) – Updates `@chromatic-com/storybook` to v3 in all
+  templates.
+
+- [#204](https://github.com/jakubmazanec/tools/pull/204)
+  [`04f3355`](https://github.com/jakubmazanec/tools/commit/04f3355792418e79f590195e4bc821931ccc6243)
+  ([@renovate](https://github.com/apps/renovate)) – Updates `@testing-library/react` to v16 in all
+  templates.
+
+- [#206](https://github.com/jakubmazanec/tools/pull/206)
+  [`2916304`](https://github.com/jakubmazanec/tools/commit/29163046acd1da0224b08fd05ca40f385e9ab4e5)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes ESLint config in the
+  `projects/remix-app` template.
+
 ## 3.0.0
 
 ### Major Changes

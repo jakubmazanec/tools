@@ -1,6 +1,6 @@
 {
   "name": "@jakubmazanec/zod-utils",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "Collection of Zod schemas and utilities.",
   "repository": {
     "type": "git",
@@ -30,7 +30,7 @@
     "@jakubmazanec/ts-utils": "^3.0.0"
   },
   "devDependencies": {
-    "@jakubmazanec/eslint-config": "^3.2.0",
+    "@jakubmazanec/eslint-config": "^4.0.0",
     "@types/lodash": "^4.17.13",
     "@types/node": "^22.9.0",
     "@vitest/coverage-v8": "^2.1.5",

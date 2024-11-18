@@ -1,6 +1,6 @@
 {
   "name": "@jakubmazanec/ui",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "React component library.",
   "repository": {
     "type": "git",
@@ -51,7 +51,7 @@
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.2",
-    "@jakubmazanec/eslint-config": "^3.2.0",
+    "@jakubmazanec/eslint-config": "^4.0.0",
     "@storybook/addon-controls": "^8.4.4",
     "@storybook/addon-essentials": "^8.4.4",
     "@storybook/addon-interactions": "^8.4.4",
