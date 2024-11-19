@@ -30,7 +30,7 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
-    "@jakubmazanec/eslint-config": "^4.0.0",
+    "@jakubmazanec/eslint-config": "^4.1.0",
     "@types/lodash": "^4.17.13",
     "@types/node": "^22.9.0",
     "@vitest/coverage-v8": "^2.1.5",
