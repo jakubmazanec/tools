@@ -31,4 +31,4 @@ information or take an action.
 
 ## Defined in
 
-[types/CustomErrorWithData.ts:6](https://github.com/jakubmazanec/tools/blob/053e1fea9cfce27a70a78b00a30cdd281cb0a72b/packages/error/source/types/CustomErrorWithData.ts#L6)
+[types/CustomErrorWithData.ts:6](https://github.com/jakubmazanec/tools/blob/28bd44b020b25cf8f9b96b5a385bb7c918cf32ab/packages/error/source/types/CustomErrorWithData.ts#L6)

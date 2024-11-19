@@ -36,7 +36,7 @@ A collection of WorkspaceDependency | workspace dependencies that are installed 
 
 #### Defined in
 
-[packages/carson/source/workspace/WorkspaceDependencies.ts:17](https://github.com/jakubmazanec/tools/blob/053e1fea9cfce27a70a78b00a30cdd281cb0a72b/packages/carson/source/workspace/WorkspaceDependencies.ts#L17)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:17](https://github.com/jakubmazanec/tools/blob/28bd44b020b25cf8f9b96b5a385bb7c918cf32ab/packages/carson/source/workspace/WorkspaceDependencies.ts#L17)
 
 ## Properties
 
@@ -228,7 +228,7 @@ The workspace the dependencies are installed in.
 
 #### Defined in
 
-[packages/carson/source/workspace/WorkspaceDependencies.ts:15](https://github.com/jakubmazanec/tools/blob/053e1fea9cfce27a70a78b00a30cdd281cb0a72b/packages/carson/source/workspace/WorkspaceDependencies.ts#L15)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:15](https://github.com/jakubmazanec/tools/blob/28bd44b020b25cf8f9b96b5a385bb7c918cf32ab/packages/carson/source/workspace/WorkspaceDependencies.ts#L15)
 
 ---
 
@@ -795,7 +795,7 @@ Object whose keys are dependency names and values are sorted versions.
 
 #### Defined in
 
-[packages/carson/source/workspace/WorkspaceDependencies.ts:185](https://github.com/jakubmazanec/tools/blob/053e1fea9cfce27a70a78b00a30cdd281cb0a72b/packages/carson/source/workspace/WorkspaceDependencies.ts#L185)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:185](https://github.com/jakubmazanec/tools/blob/28bd44b020b25cf8f9b96b5a385bb7c918cf32ab/packages/carson/source/workspace/WorkspaceDependencies.ts#L185)
 
 ---
 
@@ -1020,7 +1020,7 @@ The new length of the collection.
 
 #### Defined in
 
-[packages/carson/source/workspace/WorkspaceDependencies.ts:38](https://github.com/jakubmazanec/tools/blob/053e1fea9cfce27a70a78b00a30cdd281cb0a72b/packages/carson/source/workspace/WorkspaceDependencies.ts#L38)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:38](https://github.com/jakubmazanec/tools/blob/28bd44b020b25cf8f9b96b5a385bb7c918cf32ab/packages/carson/source/workspace/WorkspaceDependencies.ts#L38)
 
 ---
 
@@ -1690,7 +1690,7 @@ The new [WorkspaceDependencies](WorkspaceDependencies.md) instance.
 
 #### Defined in
 
-[packages/carson/source/workspace/WorkspaceDependencies.ts:81](https://github.com/jakubmazanec/tools/blob/053e1fea9cfce27a70a78b00a30cdd281cb0a72b/packages/carson/source/workspace/WorkspaceDependencies.ts#L81)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:81](https://github.com/jakubmazanec/tools/blob/28bd44b020b25cf8f9b96b5a385bb7c918cf32ab/packages/carson/source/workspace/WorkspaceDependencies.ts#L81)
 
 ---
 
