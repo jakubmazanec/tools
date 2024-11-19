@@ -1,5 +1,34 @@
 # @jakubmazanec/eslint-config
 
+## 4.1.0
+
+### Minor Changes
+
+- [`28bd44b`](https://github.com/jakubmazanec/tools/commit/28bd44b020b25cf8f9b96b5a385bb7c918cf32ab)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Updates ESLint rules.
+
+### Patch Changes
+
+- [#211](https://github.com/jakubmazanec/tools/pull/211)
+  [`39892a8`](https://github.com/jakubmazanec/tools/commit/39892a8d22e72fc5aa2b2aedf9320ac8bb26fd5d)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `eslint-plugin-unicorn` updated to
+  version `^56.0.1`.
+
+- [#209](https://github.com/jakubmazanec/tools/pull/209)
+  [`e8e1a06`](https://github.com/jakubmazanec/tools/commit/e8e1a063ee4a3ba5413ab6c19f760853c220a8ce)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@typescript-eslint/eslint-plugin`
+  updated to version `^8.15.0`. Dependency `@typescript-eslint/parser` updated to version `^8.15.0`.
+
+- [#151](https://github.com/jakubmazanec/tools/pull/151)
+  [`053e1fe`](https://github.com/jakubmazanec/tools/commit/053e1fea9cfce27a70a78b00a30cdd281cb0a72b)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@stylistic/eslint-plugin` updated to
+  version `^2.11.0`.
+
+- [#214](https://github.com/jakubmazanec/tools/pull/214)
+  [`a5f92f7`](https://github.com/jakubmazanec/tools/commit/a5f92f7f2969c6804808173bd093f7dbafca1b9f)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `eslint-plugin-perfectionist` updated
+  to version `^4.0.2`.
+
 ## 4.0.0
 
 ### Major Changes

@@ -1,5 +1,13 @@
 # @jakubmazanec/ts-utils
 
+## 3.0.6
+
+### Patch Changes
+
+- [#214](https://github.com/jakubmazanec/tools/pull/214)
+  [`a5f92f7`](https://github.com/jakubmazanec/tools/commit/a5f92f7f2969c6804808173bd093f7dbafca1b9f)
+  ([@renovate](https://github.com/apps/renovate)) – Fixes linting issues.
+
 ## 3.0.5
 
 ### Patch Changes
