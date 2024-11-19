@@ -1,11 +1,10 @@
+import fs from 'node:fs';
+import {createRequire} from 'node:module';
+import semver from 'semver';
+
 export const BUILD_DIRECTORY = 'build';
 export const STORYBOOK_BUILD_DIRECTORY = 'storybook-static';
 export const SOURCE_DIRECTORY = 'source';
-
-export const BUILD_TO_ESM_COMMAND = `esbuild "${SOURCE_DIRECTORY}/**/*" --platform=node --target=node20.8 --outdir=${BUILD_DIRECTORY} --sourcemap`;
-export const BUILD_TO_CJS_COMMAND = `esbuild "${SOURCE_DIRECTORY}/**/*" --platform=node --target=node20.8 --format=cjs --outdir=${BUILD_DIRECTORY} --sourcemap`;
-export const FORMAT_COMMAND = 'prettier . --write --ignore-unknown';
-export const TEST_COMMAND = 'vitest run --coverage --passWithNoTests';
 
 export const CARSON_PACKAGE_NAME = '@jakubmazanec/carson';
 export const TEMPLATE_PACKAGE_NAME = '@jakubmazanec/carson-templates';
@@ -95,3 +94,92 @@ export const TYPEDOC_CONFIG = {
   githubPages: false,
   hideBreadcrumbs: true,
 };
+
+// dependencies
+let require = createRequire(import.meta.url);
+let carsonPackageVersion =
+  semver
+    .minVersion(
+      (
+        JSON.parse(
+          fs.readFileSync(require.resolve(`${TEMPLATE_PACKAGE_NAME}/package.json`), {
+            encoding: 'utf8',
+          }),
+        ) as {peerDependencies: Record<string, string>}
+      ).peerDependencies[CARSON_PACKAGE_NAME] ?? '^1.0.0',
+    )
+    ?.format() ?? '1.0.0';
+let isCarsonPackageVersionPrerelease = !!semver.prerelease(carsonPackageVersion)?.length;
+let templatesPackageVersion = (
+  JSON.parse(
+    fs.readFileSync(require.resolve(`${TEMPLATE_PACKAGE_NAME}/package.json`), {
+      encoding: 'utf8',
+    }),
+  ) as {version: string}
+).version;
+let isTemplatesPackageVersionPrerelease = !!semver.prerelease(templatesPackageVersion)?.length;
+
+export const DEPENDENCY_VERSIONS: Record<string, string> = {
+  [CARSON_PACKAGE_NAME]:
+    isCarsonPackageVersionPrerelease ? carsonPackageVersion : `^${carsonPackageVersion}`,
+  [TEMPLATE_PACKAGE_NAME]:
+    isTemplatesPackageVersionPrerelease ? templatesPackageVersion : `^${templatesPackageVersion}`,
+  [CHANGELOG_PACKAGE_NAME]: '^2.0.0',
+  [LINTER_CONFIG_PACKAGE_NAME]: '^4.0.0',
+
+  '@changesets/cli': '^2.0.0',
+  '@chromatic-com/storybook': '^3.0.0',
+  '@remix-run/dev': '^2.0.0',
+  '@remix-run/express': '^2.0.0',
+  '@remix-run/node': '^2.0.0',
+  '@remix-run/react': '^2.0.0',
+  '@remix-run/serve': '^2.0.0',
+  '@storybook/addon-controls': '^8.0.0',
+  '@storybook/addon-essentials': '^8.0.0',
+  '@storybook/addon-interactions': '^8.0.0',
+  '@storybook/addon-links': '^8.0.0',
+  '@storybook/blocks': '^8.0.0',
+  '@storybook/preview-api': '^8.0.0',
+  '@storybook/react': '^8.0.0',
+  '@storybook/react-vite': '^8.0.0',
+  '@storybook/test': '^8.0.0',
+  '@testing-library/jest-dom': '^6.0.0',
+  '@testing-library/react': '^16.0.0',
+  '@types/lodash': '^4.0.0',
+  '@types/node': '^20.0.0',
+  '@types/react': '^18.0.0',
+  '@types/react-dom': '^18.0.0',
+  '@vitest/coverage-v8': '^2.0.0',
+  autoprefixer: '^10.0.0',
+  concurrently: '^9.0.0',
+  'cross-env': '^7.0.0',
+  'del-cli': '^6.0.0',
+  esbuild: '^0.24.0',
+  eslint: '^9.0.0',
+  'happy-dom': '^15.0.0',
+  isbot: '^4.0.0',
+  lodash: '^4.0.0',
+  'patch-package': '^6.0.0',
+  prettier: '^3.0.0',
+  'prettier-plugin-packagejson': '^2.0.0',
+  'prettier-plugin-tailwindcss': '^0.5.0',
+  react: '^18.0.0',
+  'react-dom': '^18.0.0',
+  storybook: '^8.0.0',
+  tailwindcss: '^3.0.0',
+  turbo: '^2.0.0',
+  typedoc: '^0.24.0',
+  'typedoc-plugin-markdown': '^3.0.0',
+  typescript: '^5.0.0',
+  vite: '^5.0.0',
+  vitest: '^2.0.0',
+
+  node: '^22.11.0',
+  npm: '^10.9.0',
+};
+
+// commands
+export const BUILD_TO_ESM_COMMAND = `esbuild "${SOURCE_DIRECTORY}/**/*" --platform=node --target=node${semver.major(semver.minVersion(DEPENDENCY_VERSIONS.node!)!)}.${semver.minor(semver.minVersion(DEPENDENCY_VERSIONS.node!)!)} --outdir=${BUILD_DIRECTORY} --sourcemap`;
+export const BUILD_TO_CJS_COMMAND = `esbuild "${SOURCE_DIRECTORY}/**/*" --platform=node --target=node${semver.major(semver.minVersion(DEPENDENCY_VERSIONS.node!)!)}.${semver.minor(semver.minVersion(DEPENDENCY_VERSIONS.node!)!)} --format=cjs --outdir=${BUILD_DIRECTORY} --sourcemap`;
+export const FORMAT_COMMAND = 'prettier . --write --ignore-unknown';
+export const TEST_COMMAND = 'vitest run --coverage --passWithNoTests';

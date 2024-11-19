@@ -1,8 +1,7 @@
 import {type Workspace} from '@jakubmazanec/carson';
 import semver from 'semver';
 
-import {TEMPLATE_PACKAGE_NAME} from './constants.js';
-import {DEPENDENCY_VERSIONS} from './dependency-versions.js';
+import {DEPENDENCY_VERSIONS, TEMPLATE_PACKAGE_NAME} from './constants.js';
 
 function getMajorVersion(version: string) {
   return Number(version.split('.')[0]!.replace(/\D/, ''));
