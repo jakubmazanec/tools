@@ -98,6 +98,9 @@ export const main: eslint.Linter.Config[] = [
           Button: 'button',
         },
       },
+      perfectionist: {
+        locales: ['en'],
+      },
     },
 
     rules: {
