@@ -26,9 +26,9 @@ export const nodejsRules: eslint.Linter.Config['rules'] = {
   'node/no-unpublished-bin': 'off', // disallow bin files that npm ignores
   'node/no-unpublished-import': 'off', // disallow import declarations which import private modules
   'node/no-unpublished-require': 'off', // disallow require() expressions which import private modules
-  'node/no-unsupported-features/es-builtins': ['error', {ignores: []}], // disallow unsupported ECMAScript built-ins on the specified version
-  'node/no-unsupported-features/es-syntax': ['error', {ignores: []}], // disallow unsupported ECMAScript syntax on the specified version
-  'node/no-unsupported-features/node-builtins': ['error', {ignores: []}], // disallow unsupported Node.js built-in APIs on the specified version
+  'node/no-unsupported-features/es-builtins': ['off', {ignores: []}], // disallow unsupported ECMAScript built-ins on the specified version
+  'node/no-unsupported-features/es-syntax': ['off', {ignores: []}], // disallow unsupported ECMAScript syntax on the specified version
+  'node/no-unsupported-features/node-builtins': ['off', {ignores: []}], // disallow unsupported Node.js built-in APIs on the specified version
   'node/prefer-global/buffer': 'warn', // enforce either Buffer or require("buffer").Buffer
   'node/prefer-global/console': 'warn', // enforce either console or require("console")
   'node/prefer-global/process': 'warn', // enforce either process or require("process")

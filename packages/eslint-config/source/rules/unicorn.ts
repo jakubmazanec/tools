@@ -92,7 +92,7 @@ export const unicornRules: eslint.Linter.Config['rules'] = {
   'unicorn/prefer-dom-node-text-content': 'warn', // prefer .textContent over .innerText
   'unicorn/prefer-event-target': 'warn', // prefer EventTarget over EventEmitter
   'unicorn/prefer-export-from': ['error', {ignoreUsedVariables: true}], // prefer export…from when re-exporting
-  'unicorn/prefer-global-this': 'error', // prefer globalThis over window, self, and global
+  'unicorn/prefer-global-this': 'warn', // prefer globalThis over window, self, and global
   'unicorn/prefer-includes': 'off', // prefer .includes() over .indexOf() when checking for existence or non-existence
   'unicorn/prefer-json-parse-buffer': 'off', // prefer reading a JSON file as a buffer
   'unicorn/prefer-keyboard-event-key': 'warn', // prefer KeyboardEvent#key over KeyboardEvent#keyCode
@@ -101,7 +101,6 @@ export const unicornRules: eslint.Linter.Config['rules'] = {
   'unicorn/prefer-math-trunc': 'warn', // enforce the use of Math.trunc instead of bitwise operators
   'unicorn/prefer-modern-dom-apis': 'warn', // prefer .before() over .insertBefore(), .replaceWith() over .replaceChild(), prefer one of .before(), .after(),
   'unicorn/prefer-modern-math-apis': 'warn', // prefer modern Math APIs over legacy patterns..append() or .prepend() over insertAdjacentText() and insertAdjacentElement()
-  // FIXME [@rajzik]: This is good rule but adoption isn't great so far
   'unicorn/prefer-module': 'off', // Prefer JavaScript modules (ESM) over CommonJS
   'unicorn/prefer-native-coercion-functions': 'off', // prefer using String, Number, BigInt, Boolean, and Symbol directly
   'unicorn/prefer-node-protocol': 'warn', // Prefer using the `node:` protocol when importing Node.js builtin modules
@@ -125,9 +124,8 @@ export const unicornRules: eslint.Linter.Config['rules'] = {
   'unicorn/prefer-structured-clone': 'warn', // prefer using structuredClone to create a deep clone
   'unicorn/prefer-switch': 'off', // prefer switch over multiple else-if
   'unicorn/prefer-ternary': 'off', // prefer ternary expressions over simple if-else statements
-  // FIXME [@jakubmazanec]: enable when we support top-level await
-  'unicorn/prefer-top-level-await': 'off', // prefer top-level await over top-level promises and async function calls
-  'unicorn/prefer-type-error': 'warn', // enforce throwing TypeError in type checking conditions
+  'unicorn/prefer-top-level-await': 'warn', // prefer top-level await over top-level promises and async function calls
+  'unicorn/prefer-type-error': 'off', // enforce throwing TypeError in type checking conditions
   'unicorn/prevent-abbreviations': 'off', // Prevent abbreviations
   'unicorn/relative-url-style': 'off', // enforce consistent relative URL style
   'unicorn/require-array-join-separator': 'error', // enforce using the separator argument with Array#join()
