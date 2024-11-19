@@ -23,4 +23,4 @@ A subclass of `Error` that indicates a parsing failure.
 
 ## Defined in
 
-[args/source/ParsingError.ts:6](https://github.com/jakubmazanec/tools/blob/043f017b24789eba8a7eb285e0e1042ac4eaaeea/packages/args/source/ParsingError.ts#L6)
+[args/source/ParsingError.ts:6](https://github.com/jakubmazanec/tools/blob/39892a8d22e72fc5aa2b2aedf9320ac8bb26fd5d/packages/args/source/ParsingError.ts#L6)

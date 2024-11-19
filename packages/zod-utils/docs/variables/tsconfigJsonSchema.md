@@ -46,4 +46,4 @@
 
 ## Defined in
 
-[packages/zod-utils/source/types/TsconfigJson.ts:333](https://github.com/jakubmazanec/tools/blob/043f017b24789eba8a7eb285e0e1042ac4eaaeea/packages/zod-utils/source/types/TsconfigJson.ts#L333)
+[packages/zod-utils/source/types/TsconfigJson.ts:333](https://github.com/jakubmazanec/tools/blob/39892a8d22e72fc5aa2b2aedf9320ac8bb26fd5d/packages/zod-utils/source/types/TsconfigJson.ts#L333)

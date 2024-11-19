@@ -45,7 +45,7 @@ A Zod schema type used to define the template datatype.
 
 #### Defined in
 
-[packages/template/source/Template.ts:116](https://github.com/jakubmazanec/tools/blob/043f017b24789eba8a7eb285e0e1042ac4eaaeea/packages/template/source/Template.ts#L116)
+[packages/template/source/Template.ts:116](https://github.com/jakubmazanec/tools/blob/39892a8d22e72fc5aa2b2aedf9320ac8bb26fd5d/packages/template/source/Template.ts#L116)
 
 ## Properties
 
@@ -65,7 +65,7 @@ Each variable that is a string is also rendered.
 
 #### Defined in
 
-[packages/template/source/Template.ts:104](https://github.com/jakubmazanec/tools/blob/043f017b24789eba8a7eb285e0e1042ac4eaaeea/packages/template/source/Template.ts#L104)
+[packages/template/source/Template.ts:104](https://github.com/jakubmazanec/tools/blob/39892a8d22e72fc5aa2b2aedf9320ac8bb26fd5d/packages/template/source/Template.ts#L104)
 
 ---
 
@@ -77,7 +77,7 @@ Zod schema for custom template attributes.
 
 #### Defined in
 
-[packages/template/source/Template.ts:111](https://github.com/jakubmazanec/tools/blob/043f017b24789eba8a7eb285e0e1042ac4eaaeea/packages/template/source/Template.ts#L111)
+[packages/template/source/Template.ts:111](https://github.com/jakubmazanec/tools/blob/39892a8d22e72fc5aa2b2aedf9320ac8bb26fd5d/packages/template/source/Template.ts#L111)
 
 ---
 
@@ -89,7 +89,7 @@ Template content. Templates are written in [EJS](https://ejs.co/).
 
 #### Defined in
 
-[packages/template/source/Template.ts:101](https://github.com/jakubmazanec/tools/blob/043f017b24789eba8a7eb285e0e1042ac4eaaeea/packages/template/source/Template.ts#L101)
+[packages/template/source/Template.ts:101](https://github.com/jakubmazanec/tools/blob/39892a8d22e72fc5aa2b2aedf9320ac8bb26fd5d/packages/template/source/Template.ts#L101)
 
 ---
 
@@ -101,7 +101,7 @@ Zod schema for template data.
 
 #### Defined in
 
-[packages/template/source/Template.ts:114](https://github.com/jakubmazanec/tools/blob/043f017b24789eba8a7eb285e0e1042ac4eaaeea/packages/template/source/Template.ts#L114)
+[packages/template/source/Template.ts:114](https://github.com/jakubmazanec/tools/blob/39892a8d22e72fc5aa2b2aedf9320ac8bb26fd5d/packages/template/source/Template.ts#L114)
 
 ---
 
@@ -113,7 +113,7 @@ Template path.
 
 #### Defined in
 
-[packages/template/source/Template.ts:98](https://github.com/jakubmazanec/tools/blob/043f017b24789eba8a7eb285e0e1042ac4eaaeea/packages/template/source/Template.ts#L98)
+[packages/template/source/Template.ts:98](https://github.com/jakubmazanec/tools/blob/39892a8d22e72fc5aa2b2aedf9320ac8bb26fd5d/packages/template/source/Template.ts#L98)
 
 ## Methods
 
@@ -142,7 +142,7 @@ Template renders.
 
 #### Defined in
 
-[packages/template/source/Template.ts:232](https://github.com/jakubmazanec/tools/blob/043f017b24789eba8a7eb285e0e1042ac4eaaeea/packages/template/source/Template.ts#L232)
+[packages/template/source/Template.ts:232](https://github.com/jakubmazanec/tools/blob/39892a8d22e72fc5aa2b2aedf9320ac8bb26fd5d/packages/template/source/Template.ts#L232)
 
 ---
 
@@ -173,7 +173,7 @@ Path to the template file.
 
 #### Defined in
 
-[packages/template/source/Template.ts:149](https://github.com/jakubmazanec/tools/blob/043f017b24789eba8a7eb285e0e1042ac4eaaeea/packages/template/source/Template.ts#L149)
+[packages/template/source/Template.ts:149](https://github.com/jakubmazanec/tools/blob/39892a8d22e72fc5aa2b2aedf9320ac8bb26fd5d/packages/template/source/Template.ts#L149)
 
 ---
 
@@ -213,4 +213,4 @@ Template renders.
 
 #### Defined in
 
-[packages/template/source/Template.ts:206](https://github.com/jakubmazanec/tools/blob/043f017b24789eba8a7eb285e0e1042ac4eaaeea/packages/template/source/Template.ts#L206)
+[packages/template/source/Template.ts:206](https://github.com/jakubmazanec/tools/blob/39892a8d22e72fc5aa2b2aedf9320ac8bb26fd5d/packages/template/source/Template.ts#L206)

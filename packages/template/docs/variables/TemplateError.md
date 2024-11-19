@@ -22,4 +22,4 @@ A subclass of `Error` that indicates a template failure.
 
 ## Defined in
 
-[packages/template/source/TemplateError.ts:9](https://github.com/jakubmazanec/tools/blob/043f017b24789eba8a7eb285e0e1042ac4eaaeea/packages/template/source/TemplateError.ts#L9)
+[packages/template/source/TemplateError.ts:9](https://github.com/jakubmazanec/tools/blob/39892a8d22e72fc5aa2b2aedf9320ac8bb26fd5d/packages/template/source/TemplateError.ts#L9)

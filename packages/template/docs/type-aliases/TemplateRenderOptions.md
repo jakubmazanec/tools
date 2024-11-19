@@ -22,4 +22,4 @@ Prettier options.
 
 ## Defined in
 
-[packages/template/source/Template.ts:67](https://github.com/jakubmazanec/tools/blob/043f017b24789eba8a7eb285e0e1042ac4eaaeea/packages/template/source/Template.ts#L67)
+[packages/template/source/Template.ts:67](https://github.com/jakubmazanec/tools/blob/39892a8d22e72fc5aa2b2aedf9320ac8bb26fd5d/packages/template/source/Template.ts#L67)

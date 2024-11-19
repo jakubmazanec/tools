@@ -17,4 +17,4 @@
 
 ## Defined in
 
-[packages/ui/source/theme/ThemeProvider.tsx:10](https://github.com/jakubmazanec/tools/blob/043f017b24789eba8a7eb285e0e1042ac4eaaeea/packages/ui/source/theme/ThemeProvider.tsx#L10)
+[packages/ui/source/theme/ThemeProvider.tsx:10](https://github.com/jakubmazanec/tools/blob/39892a8d22e72fc5aa2b2aedf9320ac8bb26fd5d/packages/ui/source/theme/ThemeProvider.tsx#L10)
