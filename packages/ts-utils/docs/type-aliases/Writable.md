@@ -14,4 +14,4 @@ Create a new type that removes `readonly` from object types's keys. Inverse of R
 
 ## Defined in
 
-[packages/ts-utils/source/types/Writable.ts:4](https://github.com/jakubmazanec/tools/blob/863f04cbbb9368fd023f0309084819aa9247d808/packages/ts-utils/source/types/Writable.ts#L4)
+[packages/ts-utils/source/types/Writable.ts:4](https://github.com/jakubmazanec/tools/blob/4809b04453aafb35a917917e0b4964a9ec0cd132/packages/ts-utils/source/types/Writable.ts#L4)

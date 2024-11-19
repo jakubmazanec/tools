@@ -44,4 +44,4 @@ Class that implements [CustomError](../type-aliases/CustomError.md).
 
 ## Defined in
 
-[createCustomError.ts:13](https://github.com/jakubmazanec/tools/blob/863f04cbbb9368fd023f0309084819aa9247d808/packages/error/source/createCustomError.ts#L13)
+[createCustomError.ts:13](https://github.com/jakubmazanec/tools/blob/4809b04453aafb35a917917e0b4964a9ec0cd132/packages/error/source/createCustomError.ts#L13)

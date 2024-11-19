@@ -36,4 +36,4 @@ Detailed error information.
 
 ## Defined in
 
-[cli/source/ui/ErrorDetail.ts:4](https://github.com/jakubmazanec/tools/blob/863f04cbbb9368fd023f0309084819aa9247d808/packages/cli/source/ui/ErrorDetail.ts#L4)
+[cli/source/ui/ErrorDetail.ts:4](https://github.com/jakubmazanec/tools/blob/4809b04453aafb35a917917e0b4964a9ec0cd132/packages/cli/source/ui/ErrorDetail.ts#L4)
