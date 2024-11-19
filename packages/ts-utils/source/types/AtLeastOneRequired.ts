@@ -31,7 +31,7 @@
  * @typeParam T Base for the new type
  * @typeParam P String literal or union of string literals specifying properties of `T`
  */
-export type AtLeastOneRequired<T, P extends keyof T = keyof T> = {
-  [K in P]-?: Partial<Pick<T, Exclude<P, K>>> & Required<Pick<T, K>>;
-}[P] &
-  Pick<T, Exclude<keyof T, P>>;
+export type AtLeastOneRequired<T, P extends keyof T = keyof T> = Pick<T, Exclude<keyof T, P>> &
+  {
+    [K in P]-?: Partial<Pick<T, Exclude<P, K>>> & Required<Pick<T, K>>;
+  }[P];

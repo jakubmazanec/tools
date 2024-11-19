@@ -32,7 +32,6 @@ export const perfectionistRules: eslint.Linter.Config['rules'] = {
       type: 'alphabetical',
       ignoreCase: false,
       sortSideEffects: true,
-      matcher: 'regex',
       groups: [
         ['builtin', 'external', 'external-type', 'builtin-type'],
         [
@@ -81,8 +80,8 @@ export const perfectionistRules: eslint.Linter.Config['rules'] = {
       ignoreCase: false,
       groups: ['reserved', 'shorthand', 'multiline', 'unknown', 'callback'],
       customGroups: {
-        callback: 'on*',
-        reserved: '{ref,key}',
+        callback: '^on.+',
+        reserved: '^(ref|key)$',
       },
     },
   ], // enforce sorted JSX props
