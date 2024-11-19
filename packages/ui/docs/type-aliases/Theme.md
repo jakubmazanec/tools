@@ -19,8 +19,8 @@
 > `object`\> & `ComponentTheme`\<_typeof_
 > [`useDialogTitleTheme`](../functions/useDialogTitleTheme.md), `object`\> &
 > `ComponentTheme`\<_typeof_ [`useErrorTheme`](../functions/useErrorTheme.md), `object`\> &
-> `ComponentTheme`\<_typeof_ [`useFieldTheme`](../functions/useFieldTheme.md), `object`\> &
 > `ComponentTheme`\<_typeof_ [`useFieldsetTheme`](../functions/useFieldsetTheme.md), `object`\> &
+> `ComponentTheme`\<_typeof_ [`useFieldTheme`](../functions/useFieldTheme.md), `object`\> &
 > `ComponentTheme`\<_typeof_ [`useFormTheme`](../functions/useFormTheme.md), `object`\> &
 > `ComponentTheme`\<_typeof_ [`useIconTheme`](../functions/useIconTheme.md), `object`\> &
 > `ComponentTheme`\<_typeof_ [`useInputTheme`](../functions/useInputTheme.md), `object`\> &
@@ -31,8 +31,8 @@
 > `object`\> & `ComponentTheme`\<_typeof_
 > [`useMenuButtonTheme`](../functions/useMenuButtonTheme.md), `object`\> &
 > `ComponentTheme`\<_typeof_ [`useMenuHeadingTheme`](../functions/useMenuHeadingTheme.md),
-> `object`\> & `ComponentTheme`\<_typeof_ [`useMenuItemTheme`](../functions/useMenuItemTheme.md),
 > `object`\> & `ComponentTheme`\<_typeof_ [`useMenuItemsTheme`](../functions/useMenuItemsTheme.md),
+> `object`\> & `ComponentTheme`\<_typeof_ [`useMenuItemTheme`](../functions/useMenuItemTheme.md),
 > `object`\> & `ComponentTheme`\<_typeof_
 > [`useMenuSectionTheme`](../functions/useMenuSectionTheme.md), `object`\> &
 > `ComponentTheme`\<_typeof_ [`useMenuSeparatorTheme`](../functions/useMenuSeparatorTheme.md),
@@ -53,14 +53,14 @@
 > [`useTableCaptionTheme`](../functions/useTableCaptionTheme.md), `object`\> &
 > `ComponentTheme`\<_typeof_ [`useTableCellTheme`](../functions/useTableCellTheme.md), `object`\> &
 > `ComponentTheme`\<_typeof_ [`useTableFootTheme`](../functions/useTableFootTheme.md), `object`\> &
-> `ComponentTheme`\<_typeof_ [`useTableHeadTheme`](../functions/useTableHeadTheme.md), `object`\> &
 > `ComponentTheme`\<_typeof_ [`useTableHeaderTheme`](../functions/useTableHeaderTheme.md),
+> `object`\> & `ComponentTheme`\<_typeof_ [`useTableHeadTheme`](../functions/useTableHeadTheme.md),
 > `object`\> & `ComponentTheme`\<_typeof_ [`useTableRowTheme`](../functions/useTableRowTheme.md),
 > `object`\> & `ComponentTheme`\<_typeof_ [`useTableTheme`](../functions/useTableTheme.md),
+> `object`\> & `ComponentTheme`\<_typeof_ [`useTextareaTheme`](../functions/useTextareaTheme.md),
 > `object`\> & `ComponentTheme`\<_typeof_ [`useTextTheme`](../functions/useTextTheme.md), `object`\>
-> & `ComponentTheme`\<_typeof_ [`useTextareaTheme`](../functions/useTextareaTheme.md), `object`\> &
-> `object`\>
+> & `object`\>
 
 ## Defined in
 
-[packages/ui/source/theme/Theme.ts:52](https://github.com/jakubmazanec/tools/blob/e8e1a063ee4a3ba5413ab6c19f760853c220a8ce/packages/ui/source/theme/Theme.ts#L52)
+[packages/ui/source/theme/Theme.ts:52](https://github.com/jakubmazanec/tools/blob/a5f92f7f2969c6804808173bd093f7dbafca1b9f/packages/ui/source/theme/Theme.ts#L52)

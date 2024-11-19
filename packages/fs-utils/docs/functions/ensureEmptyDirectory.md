@@ -22,4 +22,4 @@ created; if the path exists but isn't an ampty directory, error is thrown.
 
 ## Defined in
 
-[ensureEmptyDirectory.ts:19](https://github.com/jakubmazanec/tools/blob/e8e1a063ee4a3ba5413ab6c19f760853c220a8ce/packages/fs-utils/source/ensureEmptyDirectory.ts#L19)
+[ensureEmptyDirectory.ts:19](https://github.com/jakubmazanec/tools/blob/a5f92f7f2969c6804808173bd093f7dbafca1b9f/packages/fs-utils/source/ensureEmptyDirectory.ts#L19)

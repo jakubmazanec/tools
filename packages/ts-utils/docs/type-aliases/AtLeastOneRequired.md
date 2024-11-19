@@ -4,9 +4,8 @@
 
 # Type Alias: AtLeastOneRequired\<T, P\>
 
-> **AtLeastOneRequired**\<`T`, `P`\>:
-> `{ [K in P]-?: Partial<Pick<T, Exclude<P, K>>> & Required<Pick<T, K>> }`\[`P`\] & `Pick`\<`T`,
-> `Exclude`\<keyof `T`, `P`\>\>
+> **AtLeastOneRequired**\<`T`, `P`\>: `Pick`\<`T`, `Exclude`\<keyof `T`, `P`\>\> &
+> `{ [K in P]-?: Partial<Pick<T, Exclude<P, K>>> & Required<Pick<T, K>> }`\[`P`\]
 
 Constructs new type from `T` so that at least one property from the set of properties `P` is
 required:
@@ -50,4 +49,4 @@ String literal or union of string literals specifying properties of `T`
 
 ## Defined in
 
-[packages/ts-utils/source/types/AtLeastOneRequired.ts:34](https://github.com/jakubmazanec/tools/blob/e8e1a063ee4a3ba5413ab6c19f760853c220a8ce/packages/ts-utils/source/types/AtLeastOneRequired.ts#L34)
+[packages/ts-utils/source/types/AtLeastOneRequired.ts:34](https://github.com/jakubmazanec/tools/blob/a5f92f7f2969c6804808173bd093f7dbafca1b9f/packages/ts-utils/source/types/AtLeastOneRequired.ts#L34)

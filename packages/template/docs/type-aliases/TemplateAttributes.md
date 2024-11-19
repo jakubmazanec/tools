@@ -11,4 +11,4 @@ Type representing template attributes.
 
 ## Defined in
 
-[packages/template/source/TemplateAttributes.ts:20](https://github.com/jakubmazanec/tools/blob/e8e1a063ee4a3ba5413ab6c19f760853c220a8ce/packages/template/source/TemplateAttributes.ts#L20)
+[packages/template/source/TemplateAttributes.ts:20](https://github.com/jakubmazanec/tools/blob/a5f92f7f2969c6804808173bd093f7dbafca1b9f/packages/template/source/TemplateAttributes.ts#L20)
