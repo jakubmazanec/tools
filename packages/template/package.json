@@ -38,7 +38,7 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
-    "@jakubmazanec/eslint-config": "^4.0.0",
+    "@jakubmazanec/eslint-config": "^4.1.0",
     "@types/ejs": "^3.1.5",
     "@types/fs-extra": "^11.0.4",
     "@types/lodash": "^4.17.13",
