@@ -48,7 +48,7 @@ Additionl command options.
 
 #### Defined in
 
-[cli/source/program/Command.ts:36](https://github.com/jakubmazanec/tools/blob/28bd44b020b25cf8f9b96b5a385bb7c918cf32ab/packages/cli/source/program/Command.ts#L36)
+[cli/source/program/Command.ts:36](https://github.com/jakubmazanec/tools/blob/863f04cbbb9368fd023f0309084819aa9247d808/packages/cli/source/program/Command.ts#L36)
 
 ## Properties
 
@@ -58,7 +58,7 @@ Additionl command options.
 
 #### Defined in
 
-[cli/source/program/Command.ts:27](https://github.com/jakubmazanec/tools/blob/28bd44b020b25cf8f9b96b5a385bb7c918cf32ab/packages/cli/source/program/Command.ts#L27)
+[cli/source/program/Command.ts:27](https://github.com/jakubmazanec/tools/blob/863f04cbbb9368fd023f0309084819aa9247d808/packages/cli/source/program/Command.ts#L27)
 
 ---
 
@@ -68,7 +68,7 @@ Additionl command options.
 
 #### Defined in
 
-[cli/source/program/Command.ts:28](https://github.com/jakubmazanec/tools/blob/28bd44b020b25cf8f9b96b5a385bb7c918cf32ab/packages/cli/source/program/Command.ts#L28)
+[cli/source/program/Command.ts:28](https://github.com/jakubmazanec/tools/blob/863f04cbbb9368fd023f0309084819aa9247d808/packages/cli/source/program/Command.ts#L28)
 
 ---
 
@@ -78,7 +78,7 @@ Additionl command options.
 
 #### Defined in
 
-[cli/source/program/Command.ts:24](https://github.com/jakubmazanec/tools/blob/28bd44b020b25cf8f9b96b5a385bb7c918cf32ab/packages/cli/source/program/Command.ts#L24)
+[cli/source/program/Command.ts:24](https://github.com/jakubmazanec/tools/blob/863f04cbbb9368fd023f0309084819aa9247d808/packages/cli/source/program/Command.ts#L24)
 
 ---
 
@@ -88,7 +88,7 @@ Additionl command options.
 
 #### Defined in
 
-[cli/source/program/Command.ts:23](https://github.com/jakubmazanec/tools/blob/28bd44b020b25cf8f9b96b5a385bb7c918cf32ab/packages/cli/source/program/Command.ts#L23)
+[cli/source/program/Command.ts:23](https://github.com/jakubmazanec/tools/blob/863f04cbbb9368fd023f0309084819aa9247d808/packages/cli/source/program/Command.ts#L23)
 
 ---
 
@@ -98,7 +98,7 @@ Additionl command options.
 
 #### Defined in
 
-[cli/source/program/Command.ts:26](https://github.com/jakubmazanec/tools/blob/28bd44b020b25cf8f9b96b5a385bb7c918cf32ab/packages/cli/source/program/Command.ts#L26)
+[cli/source/program/Command.ts:26](https://github.com/jakubmazanec/tools/blob/863f04cbbb9368fd023f0309084819aa9247d808/packages/cli/source/program/Command.ts#L26)
 
 ---
 
@@ -108,7 +108,7 @@ Additionl command options.
 
 #### Defined in
 
-[cli/source/program/Command.ts:25](https://github.com/jakubmazanec/tools/blob/28bd44b020b25cf8f9b96b5a385bb7c918cf32ab/packages/cli/source/program/Command.ts#L25)
+[cli/source/program/Command.ts:25](https://github.com/jakubmazanec/tools/blob/863f04cbbb9368fd023f0309084819aa9247d808/packages/cli/source/program/Command.ts#L25)
 
 ## Methods
 
@@ -149,7 +149,7 @@ this command.
 
 #### Defined in
 
-[cli/source/program/Command.ts:82](https://github.com/jakubmazanec/tools/blob/28bd44b020b25cf8f9b96b5a385bb7c918cf32ab/packages/cli/source/program/Command.ts#L82)
+[cli/source/program/Command.ts:82](https://github.com/jakubmazanec/tools/blob/863f04cbbb9368fd023f0309084819aa9247d808/packages/cli/source/program/Command.ts#L82)
 
 ---
 
@@ -171,4 +171,4 @@ Executes command action with provided parsed arguments and [Program](Program.md)
 
 #### Defined in
 
-[cli/source/program/Command.ts:107](https://github.com/jakubmazanec/tools/blob/28bd44b020b25cf8f9b96b5a385bb7c918cf32ab/packages/cli/source/program/Command.ts#L107)
+[cli/source/program/Command.ts:107](https://github.com/jakubmazanec/tools/blob/863f04cbbb9368fd023f0309084819aa9247d808/packages/cli/source/program/Command.ts#L107)

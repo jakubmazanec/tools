@@ -22,4 +22,4 @@ Form row component.
 
 ## Defined in
 
-[cli/source/ui/form/FormRow.tsx:43](https://github.com/jakubmazanec/tools/blob/28bd44b020b25cf8f9b96b5a385bb7c918cf32ab/packages/cli/source/ui/form/FormRow.tsx#L43)
+[cli/source/ui/form/FormRow.tsx:43](https://github.com/jakubmazanec/tools/blob/863f04cbbb9368fd023f0309084819aa9247d808/packages/cli/source/ui/form/FormRow.tsx#L43)

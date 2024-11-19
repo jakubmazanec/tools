@@ -16,4 +16,4 @@
 
 ## Defined in
 
-[packages/zod-utils/source/utils/zodIssuesToString.ts:50](https://github.com/jakubmazanec/tools/blob/28bd44b020b25cf8f9b96b5a385bb7c918cf32ab/packages/zod-utils/source/utils/zodIssuesToString.ts#L50)
+[packages/zod-utils/source/utils/zodIssuesToString.ts:50](https://github.com/jakubmazanec/tools/blob/863f04cbbb9368fd023f0309084819aa9247d808/packages/zod-utils/source/utils/zodIssuesToString.ts#L50)

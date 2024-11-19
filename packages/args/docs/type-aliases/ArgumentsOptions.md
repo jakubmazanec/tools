@@ -16,4 +16,4 @@ Parsed options.
 
 ## Defined in
 
-[args/source/ArgumentsOptions.ts:79](https://github.com/jakubmazanec/tools/blob/28bd44b020b25cf8f9b96b5a385bb7c918cf32ab/packages/args/source/ArgumentsOptions.ts#L79)
+[args/source/ArgumentsOptions.ts:79](https://github.com/jakubmazanec/tools/blob/863f04cbbb9368fd023f0309084819aa9247d808/packages/args/source/ArgumentsOptions.ts#L79)

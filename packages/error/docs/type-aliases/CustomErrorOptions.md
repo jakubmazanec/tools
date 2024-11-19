@@ -26,4 +26,4 @@ Array of values that are used as parameters to generate the error message.
 
 ## Defined in
 
-[types/CustomErrorOptions.ts:4](https://github.com/jakubmazanec/tools/blob/28bd44b020b25cf8f9b96b5a385bb7c918cf32ab/packages/error/source/types/CustomErrorOptions.ts#L4)
+[types/CustomErrorOptions.ts:4](https://github.com/jakubmazanec/tools/blob/863f04cbbb9368fd023f0309084819aa9247d808/packages/error/source/types/CustomErrorOptions.ts#L4)
