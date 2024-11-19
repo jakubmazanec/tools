@@ -303,6 +303,8 @@ export const typescriptRules: eslint.Linter.Config['rules'] = {
   '@typescript-eslint/no-unsafe-function-type': 'error', // disallow using the unsafe built-in Function type
   '@typescript-eslint/no-unsafe-member-access': 'error', // disallows member access on any typed variables
   '@typescript-eslint/no-unsafe-return': 'error', // disallows returning any from a function
+  // TODO: think about turning this on in the future
+  '@typescript-eslint/no-unsafe-type-assertion': 'off', // disallow type assertions that narrow a type
   '@typescript-eslint/no-unsafe-unary-minus': 'error', // require unary negation to take a number
   '@typescript-eslint/no-unused-vars': [
     'error',
@@ -349,6 +351,7 @@ export const typescriptRules: eslint.Linter.Config['rules'] = {
   '@typescript-eslint/prefer-return-this-type': 'warn', // enforce that this is used when only this type is returned
   '@typescript-eslint/prefer-string-starts-ends-with': 'off', // enforce the use of String#startsWith and String#endsWith instead of other equivalent methods of checking substrings
   '@typescript-eslint/promise-function-async': 'warn', // requires any function or method that returns a Promise to be marked async
+  '@typescript-eslint/related-getter-setter-pairs': 'warn', // enforce that get() types should be assignable to their equivalent set() type
   '@typescript-eslint/require-array-sort-compare': 'warn', // enforce giving compare argument to Array#sort
   '@typescript-eslint/require-await': 'off', // disallow async functions which have no await expression
   '@typescript-eslint/restrict-plus-operands': ['error'], // when adding two variables, operands must both be of type number or of type string

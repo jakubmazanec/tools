@@ -11,6 +11,7 @@ export const perfectionistRules: eslint.Linter.Config['rules'] = {
     },
   ], // enforce sorted arrays before include method
   'perfectionist/sort-classes': 'off', // enforce sorted classes
+  'perfectionist/sort-decorators': 'off', // dnforce sorted decorators
   'perfectionist/sort-enums': [
     'error',
     {
@@ -26,6 +27,13 @@ export const perfectionistRules: eslint.Linter.Config['rules'] = {
       ignoreCase: false,
     },
   ], // enforce sorted exports
+  'perfectionist/sort-heritage-clauses': [
+    'error',
+    {
+      type: 'alphabetical',
+      ignoreCase: false,
+    },
+  ], // enforce sorted heritage clauses
   'perfectionist/sort-imports': [
     'error',
     {
@@ -93,6 +101,7 @@ export const perfectionistRules: eslint.Linter.Config['rules'] = {
       partitionByNewLine: true,
     },
   ], // enforce sorted Map elements
+  'perfectionist/sort-modules': 'off', // enforce sorted module members
   'perfectionist/sort-named-exports': [
     'error',
     {

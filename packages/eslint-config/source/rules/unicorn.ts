@@ -92,7 +92,7 @@ export const unicornRules: eslint.Linter.Config['rules'] = {
   'unicorn/prefer-dom-node-text-content': 'warn', // prefer .textContent over .innerText
   'unicorn/prefer-event-target': 'warn', // prefer EventTarget over EventEmitter
   'unicorn/prefer-export-from': ['error', {ignoreUsedVariables: true}], // prefer export…from when re-exporting
-  'unicorn/prefer-global-this': 'error', // prefer globalThis over window, self, and global
+  'unicorn/prefer-global-this': 'warn', // prefer globalThis over window, self, and global
   'unicorn/prefer-includes': 'off', // prefer .includes() over .indexOf() when checking for existence or non-existence
   'unicorn/prefer-json-parse-buffer': 'off', // prefer reading a JSON file as a buffer
   'unicorn/prefer-keyboard-event-key': 'warn', // prefer KeyboardEvent#key over KeyboardEvent#keyCode
