@@ -1,5 +1,18 @@
 # @jakubmazanec/carson
 
+## 1.2.3
+
+### Patch Changes
+
+- [#217](https://github.com/jakubmazanec/tools/pull/217)
+  [`4809b04`](https://github.com/jakubmazanec/tools/commit/4809b04453aafb35a917917e0b4964a9ec0cd132)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes peer dependencies.
+
+- [#217](https://github.com/jakubmazanec/tools/pull/217)
+  [`4809b04`](https://github.com/jakubmazanec/tools/commit/4809b04453aafb35a917917e0b4964a9ec0cd132)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes build task so it uses correct Node.js
+  version as a target.
+
 ## 1.2.2
 
 ### Patch Changes

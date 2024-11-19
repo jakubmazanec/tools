@@ -1,5 +1,24 @@
 # @jakubmazanec/carson-templates
 
+## 3.1.2
+
+### Patch Changes
+
+- [#217](https://github.com/jakubmazanec/tools/pull/217)
+  [`4809b04`](https://github.com/jakubmazanec/tools/commit/4809b04453aafb35a917917e0b4964a9ec0cd132)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes build tasks in all templates so they
+  use correct Node.js version as a target.
+
+- [#217](https://github.com/jakubmazanec/tools/pull/217)
+  [`4809b04`](https://github.com/jakubmazanec/tools/commit/4809b04453aafb35a917917e0b4964a9ec0cd132)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Updates all templates to support
+  `@jakubmazanec/eslint-config` v4.
+
+- [#217](https://github.com/jakubmazanec/tools/pull/217)
+  [`4809b04`](https://github.com/jakubmazanec/tools/commit/4809b04453aafb35a917917e0b4964a9ec0cd132)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes build task so it uses correct Node.js
+  version as a target.
+
 ## 3.1.1
 
 ### Patch Changes
