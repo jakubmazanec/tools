@@ -12,4 +12,4 @@
 
 ## Defined in
 
-[packages/ts-utils/source/types/NonArrayLike.ts:3](https://github.com/jakubmazanec/tools/blob/39892a8d22e72fc5aa2b2aedf9320ac8bb26fd5d/packages/ts-utils/source/types/NonArrayLike.ts#L3)
+[packages/ts-utils/source/types/NonArrayLike.ts:3](https://github.com/jakubmazanec/tools/blob/e8e1a063ee4a3ba5413ab6c19f760853c220a8ce/packages/ts-utils/source/types/NonArrayLike.ts#L3)

@@ -14,4 +14,4 @@ Object type whose property keys are `ErrorCode` and whose property values are `s
 
 ## Defined in
 
-[types/ErrorMessages.ts:4](https://github.com/jakubmazanec/tools/blob/39892a8d22e72fc5aa2b2aedf9320ac8bb26fd5d/packages/error/source/types/ErrorMessages.ts#L4)
+[types/ErrorMessages.ts:4](https://github.com/jakubmazanec/tools/blob/e8e1a063ee4a3ba5413ab6c19f760853c220a8ce/packages/error/source/types/ErrorMessages.ts#L4)

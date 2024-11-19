@@ -32,4 +32,4 @@ Command action.
 
 ## Defined in
 
-[cli/source/program/CommandAction.ts:8](https://github.com/jakubmazanec/tools/blob/39892a8d22e72fc5aa2b2aedf9320ac8bb26fd5d/packages/cli/source/program/CommandAction.ts#L8)
+[cli/source/program/CommandAction.ts:8](https://github.com/jakubmazanec/tools/blob/e8e1a063ee4a3ba5413ab6c19f760853c220a8ce/packages/cli/source/program/CommandAction.ts#L8)

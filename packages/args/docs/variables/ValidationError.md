@@ -29,4 +29,4 @@ A subclass of `Error` that indicates a validation issue.
 
 ## Defined in
 
-[args/source/ValidationError.ts:6](https://github.com/jakubmazanec/tools/blob/39892a8d22e72fc5aa2b2aedf9320ac8bb26fd5d/packages/args/source/ValidationError.ts#L6)
+[args/source/ValidationError.ts:6](https://github.com/jakubmazanec/tools/blob/e8e1a063ee4a3ba5413ab6c19f760853c220a8ce/packages/args/source/ValidationError.ts#L6)
