@@ -47,11 +47,9 @@ jobs:
               let names = [];
 
               for (let file of files) {
-                let data = JSON.parse(await fs.readFile(file, 'utf8'));
+                let packageJson = JSON.parse(await fs.readFile(file, 'utf8'));
 
-                if (!data.private) {
-                  names.push(data.name);
-                }
+                names.push(packageJson.name);
               }
 
               return names;
