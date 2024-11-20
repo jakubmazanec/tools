@@ -1,5 +1,14 @@
 # @jakubmazanec/carson-templates
 
+## 3.1.3
+
+### Patch Changes
+
+- [#221](https://github.com/jakubmazanec/tools/pull/221)
+  [`82ef42b`](https://github.com/jakubmazanec/tools/commit/82ef42ba5805b12f2697827df034592d5c73bd64)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes automatic changset generation in GitHub
+  worksflos in the `workspace` template.
+
 ## 3.1.2
 
 ### Patch Changes
