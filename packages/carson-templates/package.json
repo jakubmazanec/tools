@@ -35,6 +35,7 @@
   },
   "devDependencies": {
     "@jakubmazanec/carson": "^1.1.0",
+    "@jakubmazanec/carson-templates": "^3.1.3",
     "@jakubmazanec/eslint-config": "^4.1.0",
     "@jakubmazanec/fs-utils": "^0.2.0",
     "@types/fs-extra": "^11.0.4",
