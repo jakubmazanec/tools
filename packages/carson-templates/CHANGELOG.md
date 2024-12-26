@@ -1,5 +1,16 @@
 # @jakubmazanec/carson-templates
 
+## 3.2.0
+
+### Minor Changes
+
+- [#223](https://github.com/jakubmazanec/tools/pull/223)
+  [`3137813`](https://github.com/jakubmazanec/tools/commit/3137813ef46c72d3c081751f960a2aa2c61ad567)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Updates GitHub workflow in the `workspace`
+  template: when Renovate bot bumps a dependency that is this package, workflow step that creates a
+  changeset for this update now instead creates a changeset for all projects in the workspace that
+  use Carson.
+
 ## 3.1.3
 
 ### Patch Changes
