@@ -41,9 +41,10 @@ jobs:
         uses: actions/github-script@v6
         with:
           script: |
-            let { promises: fs } = require('fs');
+            let {promises: fs} = require('node:fs');
+            let path = require('node:path');
 
-            async function getPackagesNames(files) {
+            async function getProjects(files) {
               let names = [];
 
               for (let file of files) {
@@ -55,19 +56,30 @@ jobs:
               return names;
             }
 
-            async function createChangeset(fileName, packageBumps, packages) {
+            async function createChangeset(fileName, dependencyBumps, projects) {
               let message = '';
 
-              for (let [packageName, bump] of packageBumps) {
-                message =
-                  message + `Dependency \`${packageName}\` updated to version \`${bump}\`.\n`;
+              for (let [dependencyName, bump] of dependencyBumps) {
+                message = message + `Dependency \`${dependencyName}\` updated to version \`${bump}\`.\n`;
               }
 
               message = message.replace('\n', ' ');
 
-              let header = packages
-                .map((packageName) => `'${packageName}': patch`)
-                .join('\n');
+              let header = projects.map((projectName) => `'${projectName}': patch`).join('\n');
+
+              await fs.writeFile(fileName, `---\n${header}\n---\n${message.trim()}\n`);
+            }
+
+            async function createChangesetForCarsonTemplates(fileName, dependencyBumps, projects) {
+              let message = '';
+
+              for (let [dependencyName, bump] of dependencyBumps) {
+                message = message + `Applies templates from \`${dependencyName}\` updated to version \`${bump}\`.\n`;
+              }
+
+              message = message.replace('\n', ' ');
+
+              let header = projects.map((projectName) => `'${projectName}': patch`).join('\n');
 
               await fs.writeFile(fileName, `---\n${header}\n---\n${message.trim()}\n`);
             }
@@ -76,7 +88,7 @@ jobs:
               let bumps = new Map();
 
               for (let file of files) {
-                let { stdout: changes } = await exec.getExecOutput('git', ['show', file]);
+                let {stdout: changes} = await exec.getExecOutput('git', ['show', file]);
 
                 for (let change of changes.split('\n')) {
                   if (!change.startsWith('+ ')) {
@@ -92,6 +104,26 @@ jobs:
               return bumps;
             }
 
+            async function getProjectsUsingCarsonTemplates(dir = process.cwd(), result = []) {
+              let entries = await fs.readdir(dir, {withFileTypes: true});
+
+              for (let entry of entries) {
+                let fullPath = path.join(dir, entry.name);
+
+                if (entry.isDirectory()) {
+                  if (entry.name === '.carson' && dir !== process.cwd()) {
+                    let packageJson = JSON.parse(await fs.readFile(path.join(dir, 'package.json'), 'utf8'));
+
+                    result.push(packageJson.name);
+                  } else {
+                    await getProjectsUsingCarsonTemplates(fullPath, result);
+                  }
+                }
+              }
+
+              return result;
+            }
+
             let diffOutput = await exec.getExecOutput('git diff --name-only HEAD~1');
             let diffFiles = diffOutput.stdout.split('\n');
 
@@ -102,11 +134,28 @@ jobs:
             }
 
             let files = diffFiles
-              .filter((file) => file !== 'package.json') // skip root package.json
+              .filter((file) => file !== 'package.json') // skip workspace package.json
               .filter((file) => file.includes('package.json'));
-            let packageNames = await getPackagesNames(files);
+            let filesWithWorkspace = diffFiles
+              .filter((file) => file.includes('package.json'));
+            let {stdout: shortHash} = await exec.getExecOutput('git rev-parse --short HEAD');
+            let changesetName = `.changeset/renovate-${shortHash.trim()}.md`;
+            let projects = await getProjects(files);
+            let dependencyBumpsWithWorkspace = await getBumps(filesWithWorkspace);
 
-            if (!packageNames.length) {
+            if (
+              !projects.length &&
+              dependencyBumpsWithWorkspace.size === 1 &&
+              dependencyBumpsWithWorkspace.has('@jakubmazanec/carson-templates')
+            ) {
+              projects = await getProjectsUsingCarsonTemplates();
+
+              let dependencyBumps = await getBumps(filesWithWorkspace);
+
+              await createChangesetForCarsonTemplates(changesetName, dependencyBumps, projects);
+
+              return;
+            } else if (!projects.length) {
               console.log('No package.json changes to published packages, skipping...');
 
               await exec.exec('npx', ['changeset', '--empty']);
@@ -114,13 +163,9 @@ jobs:
               return;
             }
 
-            let { stdout: shortHash } = await exec.getExecOutput(
-              'git rev-parse --short HEAD',
-            );
-            let fileName = `.changeset/renovate-${shortHash.trim()}.md`;
-            let packageBumps = await getBumps(files);
+            let dependencyBumps = await getBumps(files);
 
-            await createChangeset(fileName, packageBumps, packageNames);
+            await createChangeset(changesetName, dependencyBumps, projects);
 
       - name: Update Carson
         run: |
