@@ -22,4 +22,4 @@ The path to check.
 
 ## Defined in
 
-[isEmptyDirectory.ts:9](https://github.com/jakubmazanec/tools/blob/4809b04453aafb35a917917e0b4964a9ec0cd132/packages/fs-utils/source/isEmptyDirectory.ts#L9)
+[isEmptyDirectory.ts:9](https://github.com/jakubmazanec/tools/blob/3137813ef46c72d3c081751f960a2aa2c61ad567/packages/fs-utils/source/isEmptyDirectory.ts#L9)

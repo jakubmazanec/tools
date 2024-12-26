@@ -11,4 +11,4 @@ A project configuration.
 
 ## Defined in
 
-[packages/carson/source/workspace/ProjectConfig.ts:12](https://github.com/jakubmazanec/tools/blob/4809b04453aafb35a917917e0b4964a9ec0cd132/packages/carson/source/workspace/ProjectConfig.ts#L12)
+[packages/carson/source/workspace/ProjectConfig.ts:12](https://github.com/jakubmazanec/tools/blob/3137813ef46c72d3c081751f960a2aa2c61ad567/packages/carson/source/workspace/ProjectConfig.ts#L12)

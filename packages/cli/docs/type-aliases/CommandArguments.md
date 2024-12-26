@@ -14,4 +14,4 @@ Parsed command arguments type.
 
 ## Defined in
 
-[cli/source/program/CommandArguments.ts:7](https://github.com/jakubmazanec/tools/blob/4809b04453aafb35a917917e0b4964a9ec0cd132/packages/cli/source/program/CommandArguments.ts#L7)
+[cli/source/program/CommandArguments.ts:7](https://github.com/jakubmazanec/tools/blob/3137813ef46c72d3c081751f960a2aa2c61ad567/packages/cli/source/program/CommandArguments.ts#L7)
