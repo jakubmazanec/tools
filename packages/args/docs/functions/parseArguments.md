@@ -32,4 +32,4 @@ Parsed arguments.
 
 ## Defined in
 
-[args/source/parseArguments.ts:46](https://github.com/jakubmazanec/tools/blob/3137813ef46c72d3c081751f960a2aa2c61ad567/packages/args/source/parseArguments.ts#L46)
+[args/source/parseArguments.ts:46](https://github.com/jakubmazanec/tools/blob/d628f137f5fc7b1bea261e1e59d468d8339ed884/packages/args/source/parseArguments.ts#L46)
