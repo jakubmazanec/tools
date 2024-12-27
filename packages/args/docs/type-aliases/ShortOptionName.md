@@ -14,4 +14,4 @@ Short option name.
 
 ## Defined in
 
-[args/source/ShortOptionName.ts:2](https://github.com/jakubmazanec/tools/blob/d628f137f5fc7b1bea261e1e59d468d8339ed884/packages/args/source/ShortOptionName.ts#L2)
+[args/source/ShortOptionName.ts:2](https://github.com/jakubmazanec/tools/blob/e8ae4d79f84effbab1b79b1c88222a54b84f3504/packages/args/source/ShortOptionName.ts#L2)

@@ -15,4 +15,4 @@
 
 ## Defined in
 
-[packages/carson/source/template/CarsonTemplateConfig.ts:3](https://github.com/jakubmazanec/tools/blob/d628f137f5fc7b1bea261e1e59d468d8339ed884/packages/carson/source/template/CarsonTemplateConfig.ts#L3)
+[packages/carson/source/template/CarsonTemplateConfig.ts:3](https://github.com/jakubmazanec/tools/blob/e8ae4d79f84effbab1b79b1c88222a54b84f3504/packages/carson/source/template/CarsonTemplateConfig.ts#L3)

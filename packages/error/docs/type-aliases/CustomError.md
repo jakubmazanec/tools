@@ -22,4 +22,4 @@ String that is used to quickly determine the nature of the error and why it coul
 
 ## Defined in
 
-[types/CustomError.ts:6](https://github.com/jakubmazanec/tools/blob/d628f137f5fc7b1bea261e1e59d468d8339ed884/packages/error/source/types/CustomError.ts#L6)
+[types/CustomError.ts:6](https://github.com/jakubmazanec/tools/blob/e8ae4d79f84effbab1b79b1c88222a54b84f3504/packages/error/source/types/CustomError.ts#L6)
