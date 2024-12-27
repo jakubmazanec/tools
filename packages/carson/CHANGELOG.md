@@ -1,5 +1,13 @@
 # @jakubmazanec/carson
 
+## 1.2.4
+
+### Patch Changes
+
+- [#212](https://github.com/jakubmazanec/tools/pull/212)
+  [`d628f13`](https://github.com/jakubmazanec/tools/commit/d628f137f5fc7b1bea261e1e59d468d8339ed884)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `yaml` updated to version `^2.6.1`.
+
 ## 1.2.3
 
 ### Patch Changes
