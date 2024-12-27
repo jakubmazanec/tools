@@ -1,5 +1,14 @@
 # @jakubmazanec/carson-templates
 
+## 3.2.1
+
+### Patch Changes
+
+- [#224](https://github.com/jakubmazanec/tools/pull/224)
+  [`e8ae4d7`](https://github.com/jakubmazanec/tools/commit/e8ae4d79f84effbab1b79b1c88222a54b84f3504)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes readme header in the
+  `projects/remix-app` template.
+
 ## 3.2.0
 
 ### Minor Changes
