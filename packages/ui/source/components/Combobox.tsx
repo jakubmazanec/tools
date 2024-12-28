@@ -13,7 +13,6 @@ import {
   type ElementType,
   Fragment,
   type PropsWithChildren,
-  type Ref,
   useCallback,
   useState,
 } from 'react';
@@ -24,8 +23,9 @@ import {
   createComponentTheme,
 } from '../theme/internals.js';
 import {ComboboxOption} from './ComboboxOption.js';
+import {type ComponentRef} from './ComponentRef.js';
 import {Icon} from './Icon.js';
-import {forwardRef, useFormId} from './internals.js';
+import {useFormId} from './internals.js';
 import {useField} from './useField.js';
 import {useFieldName} from './useFieldName.js';
 
@@ -44,215 +44,214 @@ export type ComboboxItem<V> = {
 export type ComboboxProps<
   T extends ElementType,
   V extends boolean | number | string,
-> = PropsWithChildren<
-  ComponentProps<typeof useComboboxTheme> &
-    ComponentPropsWithoutRef<T> &
-    (
-      | {
-          as?: T | undefined;
-          value?: V[] | undefined;
-          defaultValue?: V[] | undefined;
-          multiple: true;
-          items?: Array<ComboboxItem<V>> | undefined;
-          placeholder?: string;
-          immediate?: boolean | undefined;
-          virtual?: boolean | undefined;
-          customValue?: boolean | undefined;
-          name?: string | undefined;
-          className?: string;
-          onChange?: (selectedValue: V[] | undefined) => void;
+> = ComponentProps<typeof useComboboxTheme> &
+  ComponentPropsWithoutRef<T> &
+  ComponentRef<T> &
+  PropsWithChildren &
+  (
+    | {
+        as?: T | undefined;
+        value?: V[] | undefined;
+        defaultValue?: V[] | undefined;
+        multiple: true;
+        items?: Array<ComboboxItem<V>> | undefined;
+        placeholder?: string;
+        immediate?: boolean | undefined;
+        virtual?: boolean | undefined;
+        customValue?: boolean | undefined;
+        name?: string | undefined;
+        className?: string;
+        onChange?: (selectedValue: V[] | undefined) => void;
+      }
+    | {
+        as?: T | undefined;
+        value?: V | undefined;
+        defaultValue?: V | undefined;
+        multiple?: false | undefined;
+        items?: Array<ComboboxItem<V>> | undefined;
+        placeholder?: string;
+        immediate?: boolean | undefined;
+        virtual?: boolean | undefined;
+        customValue?: boolean | undefined;
+        name?: string | undefined;
+        className?: string;
+        onChange?: (selectedValue: V | undefined) => void;
+      }
+  );
+
+export const Combobox = <
+  T extends ElementType = typeof COMBOBOX_ELEMENT,
+  V extends boolean | number | string = string,
+>({
+  disabled = false,
+  invalid = false,
+  as = COMBOBOX_ELEMENT as unknown as T,
+  value,
+  defaultValue,
+  multiple,
+  items,
+  placeholder,
+  immediate = true,
+  virtual = false,
+  customValue = false,
+  name,
+  className,
+  onChange,
+  ref,
+  children,
+  ...rest
+}: ComboboxProps<T, V>) => {
+  let theme = useComboboxTheme({disabled, invalid});
+  let formId = useFormId();
+  let field = useField();
+  let fieldName = useFieldName();
+  let [query, setQuery] = useState('');
+
+  let handleChange = useCallback(
+    (selectedValue: V | null) => {
+      if (selectedValue) {
+        onChange?.(selectedValue as V & V[]);
+      }
+
+      if (selectedValue === null) {
+        onChange?.(undefined);
+      }
+    },
+    [onChange],
+  );
+
+  let displayValue = useCallback(
+    (option: string) => {
+      if (items) {
+        let selectedItem = items.find((item) => item.value === option);
+
+        if (selectedItem) {
+          return selectedItem.label;
         }
-      | {
-          as?: T | undefined;
-          value?: V | undefined;
-          defaultValue?: V | undefined;
-          multiple?: false | undefined;
-          items?: Array<ComboboxItem<V>> | undefined;
-          placeholder?: string;
-          immediate?: boolean | undefined;
-          virtual?: boolean | undefined;
-          customValue?: boolean | undefined;
-          name?: string | undefined;
-          className?: string;
-          onChange?: (selectedValue: V | undefined) => void;
-        }
-    )
->;
+      }
 
-export const Combobox = forwardRef(
-  <T extends ElementType = typeof COMBOBOX_ELEMENT, V extends boolean | number | string = string>(
-    {
-      disabled = false,
-      invalid = false,
-      as = COMBOBOX_ELEMENT as unknown as T,
-      value,
-      defaultValue,
-      multiple,
-      items,
-      placeholder,
-      immediate = true,
-      virtual = false,
-      customValue = false,
-      name,
-      className,
-      onChange,
-      children,
-      ...rest
-    }: ComboboxProps<T, V>,
-    ref: Ref<HTMLElement>,
-  ) => {
-    let theme = useComboboxTheme({disabled, invalid});
-    let formId = useFormId();
-    let field = useField();
-    let fieldName = useFieldName();
-    let [query, setQuery] = useState('');
+      return option;
+    },
+    [items],
+  );
 
-    let handleChange = useCallback(
-      (selectedValue: V | null) => {
-        if (selectedValue) {
-          onChange?.(selectedValue as V & V[]);
-        }
+  let handleQueryChange = useCallback((event: ChangeEvent<HTMLInputElement>) => {
+    setQuery(event.target.value);
+  }, []);
 
-        if (selectedValue === null) {
-          onChange?.(undefined);
-        }
-      },
-      [onChange],
-    );
+  if (virtual && !items) {
+    throw new Error('Combobox requires `items` prop in virtual scrolling mode!');
+  }
 
-    let displayValue = useCallback(
-      (option: string) => {
-        if (items) {
-          let selectedItem = items.find((item) => item.value === option);
+  if (virtual && customValue) {
+    throw new Error("Combobox doesn't support `customValue` prop in virtual scrolling mode!");
+  }
 
-          if (selectedItem) {
-            return selectedItem.label;
-          }
-        }
+  if (items && children) {
+    throw new Error('Combobox accepts only either `items` prop, or children!');
+  }
 
-        return option;
-      },
-      [items],
-    );
-
-    let handleQueryChange = useCallback((event: ChangeEvent<HTMLInputElement>) => {
-      setQuery(event.target.value);
-    }, []);
-
-    if (virtual && !items) {
-      throw new Error('Combobox requires `items` prop in virtual scrolling mode!');
-    }
-
-    if (virtual && customValue) {
-      throw new Error("Combobox doesn't support `customValue` prop in virtual scrolling mode!");
-    }
-
-    if (items && children) {
-      throw new Error('Combobox accepts only either `items` prop, or children!');
-    }
-
-    let filteredItems =
-      query ?
-        items?.filter((item) =>
-          `${item.label as number | string}`
+  let filteredItems =
+    query ?
+      items?.filter((item) =>
+        `${item.label as number | string}`
+          .toLowerCase()
+          .replaceAll(/\s+/g, '')
+          .includes(query.toLowerCase().replaceAll(/\s+/g, '')),
+      )
+    : items;
+  let filteredChildren =
+    query ?
+      Children.toArray(children).filter((child) => {
+        if (
+          typeof child === 'object' &&
+          'props' in child &&
+          typeof child.props === 'object' &&
+          typeof (child.props as {children?: unknown[] | string}).children === 'string' &&
+          (child.props as {children: string}).children
             .toLowerCase()
             .replaceAll(/\s+/g, '')
-            .includes(query.toLowerCase().replaceAll(/\s+/g, '')),
-        )
-      : items;
-    let filteredChildren =
-      query ?
-        Children.toArray(children).filter((child) => {
-          if (
-            typeof child === 'object' &&
-            'props' in child &&
-            typeof child.props === 'object' &&
-            typeof (child.props as {children?: unknown[] | string}).children === 'string' &&
-            (child.props as {children: string}).children
-              .toLowerCase()
-              .replaceAll(/\s+/g, '')
-              .includes(query.toLowerCase().replaceAll(/\s+/g, ''))
-          ) {
-            return true;
-          }
+            .includes(query.toLowerCase().replaceAll(/\s+/g, ''))
+        ) {
+          return true;
+        }
 
-          return false;
-        })
-      : children;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
-    let props: HeadlessComboboxProps<any, any, any> = {
-      as,
-      ref,
-      name: field?.name ?? fieldName ?? name,
-      value: value ?? null,
-      defaultValue,
-      multiple,
-      disabled,
-      immediate,
-      form: formId,
-      onChange: handleChange,
-      ...rest,
+        return false;
+      })
+    : children;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
+  let props: HeadlessComboboxProps<any, any, any> = {
+    as,
+    ref,
+    name: field?.name ?? fieldName ?? name,
+    value: value ?? undefined,
+    defaultValue,
+    multiple,
+    disabled,
+    immediate,
+    form: formId,
+    onChange: handleChange,
+    ...rest,
+  };
+
+  if (virtual) {
+    props.virtual = {
+      options: filteredItems?.map((item) => item.value) ?? [],
     };
+  }
 
-    if (virtual) {
-      props.virtual = {
-        options: filteredItems?.map((item) => item.value) ?? [],
-      };
-    }
+  return (
+    <HeadlessCombobox {...props}>
+      <div className={theme.root('relative', className)} data-component="combobox">
+        <HeadlessComboboxInput
+          className={theme.input(null, className)}
+          displayValue={displayValue}
+          size={1} // so the input default width without styling is small
+          onChange={handleQueryChange}
+        />
+        <HeadlessComboboxButton className={theme.icon('absolute')}>
+          <Icon>
+            <ChevronDownIcon />
+          </Icon>
+        </HeadlessComboboxButton>
+      </div>
 
-    return (
-      <HeadlessCombobox {...props}>
-        <div className={theme.root('relative', className)} data-component="combobox">
-          <HeadlessComboboxInput
-            className={theme.input(null, className)}
-            displayValue={displayValue}
-            size={1} // so the input default width without styling is small
-            onChange={handleQueryChange}
-          />
-          <HeadlessComboboxButton className={theme.icon('absolute')}>
-            <Icon>
-              <ChevronDownIcon />
-            </Icon>
-          </HeadlessComboboxButton>
-        </div>
+      {virtual && filteredItems ?
+        <HeadlessComboboxOptions anchor="bottom start" className={theme.options()}>
+          {({option}: {option: V}) => (
+            <ComboboxOption value={option}>
+              {items?.find((item) => item.value === option)?.label}
+            </ComboboxOption>
+          )}
+        </HeadlessComboboxOptions>
+      : null}
 
-        {virtual && filteredItems ?
-          <HeadlessComboboxOptions anchor="bottom start" className={theme.options()}>
-            {({option}: {option: V}) => (
-              <ComboboxOption value={option}>
-                {items?.find((item) => item.value === option)?.label}
-              </ComboboxOption>
-            )}
-          </HeadlessComboboxOptions>
-        : null}
+      {!virtual && filteredItems ?
+        <HeadlessComboboxOptions anchor="bottom start" className={theme.options()}>
+          {customValue && query.length ?
+            <ComboboxOption key={query} value={query}>
+              {query}
+            </ComboboxOption>
+          : null}
+          {filteredItems.map((item) => (
+            <ComboboxOption key={String(item.value)} value={item.value}>
+              {item.label}
+            </ComboboxOption>
+          ))}
+        </HeadlessComboboxOptions>
+      : null}
 
-        {!virtual && filteredItems ?
-          <HeadlessComboboxOptions anchor="bottom start" className={theme.options()}>
-            {customValue && query.length ?
-              <ComboboxOption key={query} value={query}>
-                {query}
-              </ComboboxOption>
-            : null}
-            {filteredItems.map((item) => (
-              <ComboboxOption key={String(item.value)} value={item.value}>
-                {item.label}
-              </ComboboxOption>
-            ))}
-          </HeadlessComboboxOptions>
-        : null}
-
-        {!filteredItems && Array.isArray(filteredChildren) ?
-          <HeadlessComboboxOptions anchor="bottom start" className={theme.options()}>
-            {customValue && query.length ?
-              <ComboboxOption value={query}>{query}</ComboboxOption>
-            : null}
-            {filteredChildren}
-          </HeadlessComboboxOptions>
-        : null}
-      </HeadlessCombobox>
-    );
-  },
-);
+      {!filteredItems && Array.isArray(filteredChildren) ?
+        <HeadlessComboboxOptions anchor="bottom start" className={theme.options()}>
+          {customValue && query.length ?
+            <ComboboxOption value={query}>{query}</ComboboxOption>
+          : null}
+          {filteredChildren}
+        </HeadlessComboboxOptions>
+      : null}
+    </HeadlessCombobox>
+  );
+};
 
 export const comboboxTheme: ComponentTheme<typeof useComboboxTheme> = {
   classNames: {

@@ -3,7 +3,6 @@ import {
   createElement,
   type ElementType,
   type PropsWithChildren,
-  type Ref,
 } from 'react';
 
 import {
@@ -11,7 +10,7 @@ import {
   type ComponentTheme,
   createComponentTheme,
 } from '../theme/internals.js';
-import {forwardRef} from './internals.js';
+import {type ComponentRef} from './ComponentRef.js';
 
 export const useContainerTheme = createComponentTheme('Container', {
   variants: {
@@ -24,39 +23,35 @@ export const useContainerTheme = createComponentTheme('Container', {
 
 const TEXT_ELEMENT = 'div';
 
-export type ContainerProps<T extends ElementType> = PropsWithChildren<
-  ComponentProps<typeof useContainerTheme> &
-    ComponentPropsWithoutRef<T> & {
-      as?: T | undefined;
-      className?: string;
-    }
->;
+export type ContainerProps<T extends ElementType> = ComponentProps<typeof useContainerTheme> &
+  ComponentPropsWithoutRef<T> &
+  ComponentRef<T> &
+  PropsWithChildren & {
+    as?: T | undefined;
+    className?: string;
+  };
 
-export const Container = forwardRef(
-  <T extends ElementType = typeof TEXT_ELEMENT>(
-    {
-      spacing = 'medium',
-      direction = 'row',
-      justify = 'normal',
-      align = 'normal',
-      as: Component = TEXT_ELEMENT as T,
-      className,
-      children,
-      ...rest
-    }: ContainerProps<T>,
-    ref: Ref<HTMLElement>,
-  ) => {
-    let theme = useContainerTheme({spacing, direction, justify, align});
-    let props = {
-      ref,
-      className: theme(null, className),
-      'data-component': 'container',
-      ...rest,
-    };
+export const Container = <T extends ElementType = typeof TEXT_ELEMENT>({
+  spacing = 'medium',
+  direction = 'row',
+  justify = 'normal',
+  align = 'normal',
+  as: Component = TEXT_ELEMENT as T,
+  className,
+  ref,
+  children,
+  ...rest
+}: ContainerProps<T>) => {
+  let theme = useContainerTheme({spacing, direction, justify, align});
+  let props = {
+    ref,
+    className: theme(null, className),
+    'data-component': 'container',
+    ...rest,
+  };
 
-    return createElement(Component, props, children);
-  },
-);
+  return createElement(Component, props, children);
+};
 
 export const containerTheme: ComponentTheme<typeof useContainerTheme> = {
   className: 'flex',

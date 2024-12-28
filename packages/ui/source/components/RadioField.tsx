@@ -9,11 +9,10 @@ import {
 
 export const useRadioFieldTheme = createComponentTheme('RadioField');
 
-export type RadioFieldProps = PropsWithChildren<
-  ComponentProps<typeof useRadioFieldTheme> & {
+export type RadioFieldProps = ComponentProps<typeof useRadioFieldTheme> &
+  PropsWithChildren & {
     className?: string;
-  }
->;
+  };
 
 export function RadioField({className, children}: RadioFieldProps) {
   let theme = useRadioFieldTheme();

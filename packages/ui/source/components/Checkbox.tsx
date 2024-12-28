@@ -2,15 +2,16 @@ import {
   Checkbox as HeadlessCheckbox,
   type CheckboxProps as HeadlessCheckboxProps,
 } from '@headlessui/react';
-import {type ComponentPropsWithoutRef, type ElementType, type Ref, useCallback} from 'react';
+import {type ComponentPropsWithoutRef, type ElementType, useCallback} from 'react';
 
 import {
   type ComponentProps,
   type ComponentTheme,
   createComponentTheme,
 } from '../theme/internals.js';
+import {type ComponentRef} from './ComponentRef.js';
 import {Icon} from './Icon.js';
-import {forwardRef, useFormId} from './internals.js';
+import {useFormId} from './internals.js';
 import {useField} from './useField.js';
 import {useFieldName} from './useFieldName.js';
 
@@ -24,6 +25,7 @@ export const useCheckboxTheme = createComponentTheme('Checkbox', {
 const CHECKBOX_ELEMENT = 'span';
 
 export type CheckboxProps<T extends ElementType> = ComponentProps<typeof useCheckboxTheme> &
+  ComponentRef<T> &
   Omit<ComponentPropsWithoutRef<T>, 'onChange'> & {
     as?: T | undefined;
     checked?: boolean | undefined;
@@ -34,64 +36,38 @@ export type CheckboxProps<T extends ElementType> = ComponentProps<typeof useChec
     onChange?: ((checked: boolean) => void) | undefined;
   };
 
-export const Checkbox = forwardRef(
-  <T extends ElementType = typeof CHECKBOX_ELEMENT>(
-    {
-      disabled = false,
-      as = CHECKBOX_ELEMENT as T,
-      checked,
-      indeterminate,
-      autoFocus,
-      name,
-      className,
-      onChange,
-      ...rest
-    }: CheckboxProps<T>,
-    ref: Ref<HTMLElement>,
-  ) => {
-    let theme = useCheckboxTheme({disabled});
-    let fieldName = useFieldName();
-    let field = useField();
-    let formId = useFormId();
+export const Checkbox = <T extends ElementType = typeof CHECKBOX_ELEMENT>({
+  disabled = false,
+  as = CHECKBOX_ELEMENT as T,
+  checked,
+  indeterminate,
+  autoFocus,
+  name,
+  className,
+  onChange,
+  ref,
+  ...rest
+}: CheckboxProps<T>) => {
+  let theme = useCheckboxTheme({disabled});
+  let fieldName = useFieldName();
+  let field = useField();
+  let formId = useFormId();
 
-    let handleChange = useCallback(() => {
-      onChange?.(!checked);
-    }, [checked, onChange]);
+  let handleChange = useCallback(() => {
+    onChange?.(!checked);
+  }, [checked, onChange]);
 
-    if (field || fieldName) {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
-      let props: HeadlessCheckboxProps<any> = {
-        as,
-        ref,
-        form: formId,
-        name: field?.name ?? fieldName,
-        indeterminate,
-        autoFocus,
-        className: theme.root('relative', className),
-        'data-component': 'checkbox',
-        ...rest,
-      };
-
-      return (
-        <HeadlessCheckbox {...props}>
-          <span className={theme.icon()}>
-            <Icon name="Check" />
-          </span>
-        </HeadlessCheckbox>
-      );
-    }
-
+  if (field || fieldName) {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
     let props: HeadlessCheckboxProps<any> = {
       as,
       ref,
-      checked: Boolean(checked),
-      name,
+      form: formId,
+      name: field?.name ?? fieldName,
       indeterminate,
       autoFocus,
       className: theme.root('relative', className),
       'data-component': 'checkbox',
-      onChange: handleChange,
       ...rest,
     };
 
@@ -102,8 +78,30 @@ export const Checkbox = forwardRef(
         </span>
       </HeadlessCheckbox>
     );
-  },
-);
+  }
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
+  let props: HeadlessCheckboxProps<any> = {
+    as,
+    ref,
+    checked: Boolean(checked),
+    name,
+    indeterminate,
+    autoFocus,
+    className: theme.root('relative', className),
+    'data-component': 'checkbox',
+    onChange: handleChange,
+    ...rest,
+  };
+
+  return (
+    <HeadlessCheckbox {...props}>
+      <span className={theme.icon()}>
+        <Icon name="Check" />
+      </span>
+    </HeadlessCheckbox>
+  );
+};
 
 export const checkboxTheme: ComponentTheme<typeof useCheckboxTheme> = {
   classNames: {

@@ -76,8 +76,8 @@ let packageJson = lodash.merge(
     },
     devDependencies: getDependencies(developmentDependencies, workspace),
     peerDependencies: {
-      react: '18.x',
-      'react-dom': '18.x',
+      react: `${semver.major(semver.minVersion(DEPENDENCY_VERSIONS['react']))}.x`,
+      'react-dom': `${semver.major(semver.minVersion(DEPENDENCY_VERSIONS['react-dom']))}.x`,
     },
     packageManager: `npm@${semver.minVersion(DEPENDENCY_VERSIONS.npm)}`,
     engines: {

@@ -2,51 +2,48 @@ import {
   DialogPanel as HeadlessDialogPanel,
   type DialogPanelProps as HeadlessDialogPanelProps,
 } from '@headlessui/react';
-import {
-  type ComponentPropsWithoutRef,
-  type ElementType,
-  type PropsWithChildren,
-  type Ref,
-} from 'react';
+import {type ComponentPropsWithoutRef, type ElementType, type PropsWithChildren} from 'react';
 
 import {
   type ComponentProps,
   type ComponentTheme,
   createComponentTheme,
 } from '../theme/internals.js';
-import {filterProps, forwardRef} from './internals.js';
+import {type ComponentRef} from './ComponentRef.js';
+import {filterProps} from './internals.js';
 
 export const useDialogPanelTheme = createComponentTheme('DialogPanel');
 
 const DIALOG_PANEL_ELEMENT = 'div';
 
-export type DialogPanelProps<T extends ElementType> = PropsWithChildren<
-  ComponentProps<typeof useDialogPanelTheme> &
-    ComponentPropsWithoutRef<T> & {
-      as?: T | undefined;
-      className?: string;
-    }
->;
+export type DialogPanelProps<T extends ElementType> = ComponentProps<typeof useDialogPanelTheme> &
+  ComponentPropsWithoutRef<T> &
+  ComponentRef<T> &
+  PropsWithChildren & {
+    as?: T | undefined;
+    className?: string;
+  };
 
-export const DialogPanel = forwardRef(
-  <T extends ElementType = typeof DIALOG_PANEL_ELEMENT>(
-    {as = DIALOG_PANEL_ELEMENT as T, className, children, ...rest}: DialogPanelProps<T>,
-    ref: Ref<HTMLElement>,
-  ) => {
-    let theme = useDialogPanelTheme();
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
-    let props: HeadlessDialogPanelProps<any> = filterProps({
-      as,
-      ref,
-      className: theme(null, className),
-      transition: true,
-      'data-component': 'dialog-panel',
-      ...rest,
-    });
+export const DialogPanel = <T extends ElementType = typeof DIALOG_PANEL_ELEMENT>({
+  as = DIALOG_PANEL_ELEMENT as T,
+  className,
+  ref,
+  children,
+  ...rest
+}: DialogPanelProps<T>) => {
+  let theme = useDialogPanelTheme();
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
+  let props: HeadlessDialogPanelProps<any> = filterProps({
+    as,
+    ref,
+    className: theme(null, className),
+    transition: true,
+    'data-component': 'dialog-panel',
+    ...rest,
+  });
 
-    return <HeadlessDialogPanel {...props}>{children}</HeadlessDialogPanel>;
-  },
-);
+  return <HeadlessDialogPanel {...props}>{children}</HeadlessDialogPanel>;
+};
 
 export const dialogPanelTheme: ComponentTheme<typeof useDialogPanelTheme> = {
   className:

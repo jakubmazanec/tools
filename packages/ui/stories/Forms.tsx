@@ -47,7 +47,6 @@ export function Example() {
       setIsIdle(false);
 
       console.log(
-        'onSubmit!',
         context.submission?.status === 'success' ? context.submission.value : null,
         form.value,
       );
@@ -63,7 +62,7 @@ export function Example() {
   }, [fields.tasks.name, form]);
 
   return (
-    <Form form={form}>
+    <Form className="sb-unstyled" form={form}>
       <div>{form.errors}</div>
 
       <Field field={fields.name}>
@@ -73,15 +72,13 @@ export function Example() {
       </Field>
 
       <Fieldset>
-        <Legend className="sb-unstyled">Notification</Legend>
-        <Text className="sb-unstyled">
-          Settings related to how you&apos;ll be notified about each task.
-        </Text>
+        <Legend>Notification</Legend>
+        <Text>Settings related to how you&apos;ll be notified about each task.</Text>
 
         <CheckboxField field={fields.alert}>
           <Checkbox />
           <Label>Alert?</Label>
-          <Description className="sb-unstyled">Sound alert when notifying</Description>
+          <Description>Sound alert when notifying</Description>
           <Error />
         </CheckboxField>
       </Fieldset>
@@ -97,7 +94,7 @@ export function Example() {
 
         return (
           <Fieldset key={taskField.key}>
-            <Legend className="sb-unstyled">Task</Legend>
+            <Legend>Task</Legend>
 
             <Field field={taskFields.description}>
               <Label>Description</Label>
@@ -110,9 +107,7 @@ export function Example() {
                 <RadioField key={value}>
                   <Radio value={value} />
                   <Label>{value}</Label>
-                  <Description className="sb-unstyled">
-                    Tasks with higher priority are handled first
-                  </Description>
+                  <Description>Tasks with higher priority are handled first</Description>
                 </RadioField>
               ))}
               <Error />

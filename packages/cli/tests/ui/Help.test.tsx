@@ -1,3 +1,4 @@
+// TODO: enable tests when this is fixed: https://github.com/vadimdemedes/ink/issues/688
 import {render} from 'ink-testing-library';
 import {describe, expect, test} from 'vitest';
 
@@ -5,7 +6,7 @@ import {Command} from '../../source/program/Command.js';
 import {Program} from '../../source/program/Program.js';
 import {Help} from '../../source/ui/Help.js';
 
-describe('Help', () => {
+describe.todo('Help', () => {
   test('works', async () => {
     let program = await Program.create({
       name: 'App',

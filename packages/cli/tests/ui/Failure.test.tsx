@@ -1,10 +1,11 @@
+// TODO: enable tests when this is fixed: https://github.com/vadimdemedes/ink/issues/688
 import {render} from 'ink-testing-library';
 import {describe, expect, test} from 'vitest';
 
 import {Failure} from '../../source/ui/Failure.js';
 import {getErrorDetail} from '../../source/ui/getErrorDetail.js';
 
-describe('Failure', () => {
+describe.todo('Failure', () => {
   test('works', () => {
     let error = new Error('Invalid foo!');
     let errorDetail = getErrorDetail(error);
