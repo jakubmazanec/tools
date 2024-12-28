@@ -1,6 +1,6 @@
 {
   "name": "@jakubmazanec/carson",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "Tool for managing workspace and project configuration.",
   "repository": {
     "type": "git",

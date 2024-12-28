@@ -1,5 +1,19 @@
 # @jakubmazanec/error
 
+## 3.0.7
+
+### Patch Changes
+
+- [#226](https://github.com/jakubmazanec/tools/pull/226)
+  [`a9765e3`](https://github.com/jakubmazanec/tools/commit/a9765e3de8390a6e57bec51efaeb411fbd7881ab)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `typedoc-plugin-markdown` updated to
+  version `^4.3.3`.
+
+- [#225](https://github.com/jakubmazanec/tools/pull/225)
+  [`d6abb8c`](https://github.com/jakubmazanec/tools/commit/d6abb8c84f598d0d9cccbe21e096aa43da8ae0af)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `typedoc` updated to version
+  `^0.27.6`.
+
 ## 3.0.6
 
 ### Patch Changes
