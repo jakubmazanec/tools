@@ -43,4 +43,4 @@ Data used to render the template.
 
 ## Defined in
 
-[packages/template/source/TemplateRender.ts:11](https://github.com/jakubmazanec/tools/blob/a9765e3de8390a6e57bec51efaeb411fbd7881ab/packages/template/source/TemplateRender.ts#L11)
+[packages/template/source/TemplateRender.ts:11](https://github.com/jakubmazanec/tools/blob/0633c96618f3c6692ade528aee0f27ac091468a5/packages/template/source/TemplateRender.ts#L11)

@@ -228,4 +228,4 @@ Creates detailed information about a {@lincode Program}.
 
 ## Defined in
 
-[cli/source/program/getProgramDetail.ts:8](https://github.com/jakubmazanec/tools/blob/a9765e3de8390a6e57bec51efaeb411fbd7881ab/packages/cli/source/program/getProgramDetail.ts#L8)
+[cli/source/program/getProgramDetail.ts:8](https://github.com/jakubmazanec/tools/blob/0633c96618f3c6692ade528aee0f27ac091468a5/packages/cli/source/program/getProgramDetail.ts#L8)

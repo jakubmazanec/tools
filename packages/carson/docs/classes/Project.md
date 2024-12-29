@@ -31,7 +31,7 @@ If true, the project belongs to a multi-project workspace.
 
 #### Defined in
 
-[packages/carson/source/workspace/Project.ts:51](https://github.com/jakubmazanec/tools/blob/a9765e3de8390a6e57bec51efaeb411fbd7881ab/packages/carson/source/workspace/Project.ts#L51)
+[packages/carson/source/workspace/Project.ts:51](https://github.com/jakubmazanec/tools/blob/0633c96618f3c6692ade528aee0f27ac091468a5/packages/carson/source/workspace/Project.ts#L51)
 
 ## Properties
 
@@ -44,7 +44,7 @@ Project configuration; if it's not found, the default is an empty object.
 
 #### Defined in
 
-[packages/carson/source/workspace/Project.ts:40](https://github.com/jakubmazanec/tools/blob/a9765e3de8390a6e57bec51efaeb411fbd7881ab/packages/carson/source/workspace/Project.ts#L40)
+[packages/carson/source/workspace/Project.ts:40](https://github.com/jakubmazanec/tools/blob/0633c96618f3c6692ade528aee0f27ac091468a5/packages/carson/source/workspace/Project.ts#L40)
 
 ---
 
@@ -58,7 +58,7 @@ Errors found during reading from the file system.
 
 #### Defined in
 
-[packages/carson/source/workspace/Project.ts:49](https://github.com/jakubmazanec/tools/blob/a9765e3de8390a6e57bec51efaeb411fbd7881ab/packages/carson/source/workspace/Project.ts#L49)
+[packages/carson/source/workspace/Project.ts:49](https://github.com/jakubmazanec/tools/blob/0633c96618f3c6692ade528aee0f27ac091468a5/packages/carson/source/workspace/Project.ts#L49)
 
 ---
 
@@ -70,7 +70,7 @@ Project name.
 
 #### Defined in
 
-[packages/carson/source/workspace/Project.ts:31](https://github.com/jakubmazanec/tools/blob/a9765e3de8390a6e57bec51efaeb411fbd7881ab/packages/carson/source/workspace/Project.ts#L31)
+[packages/carson/source/workspace/Project.ts:31](https://github.com/jakubmazanec/tools/blob/0633c96618f3c6692ade528aee0f27ac091468a5/packages/carson/source/workspace/Project.ts#L31)
 
 ---
 
@@ -433,7 +433,7 @@ Parsed project `package.json` file; if it's not found, the default is an empty o
 
 #### Defined in
 
-[packages/carson/source/workspace/Project.ts:43](https://github.com/jakubmazanec/tools/blob/a9765e3de8390a6e57bec51efaeb411fbd7881ab/packages/carson/source/workspace/Project.ts#L43)
+[packages/carson/source/workspace/Project.ts:43](https://github.com/jakubmazanec/tools/blob/0633c96618f3c6692ade528aee0f27ac091468a5/packages/carson/source/workspace/Project.ts#L43)
 
 ---
 
@@ -445,7 +445,7 @@ Project path.
 
 #### Defined in
 
-[packages/carson/source/workspace/Project.ts:34](https://github.com/jakubmazanec/tools/blob/a9765e3de8390a6e57bec51efaeb411fbd7881ab/packages/carson/source/workspace/Project.ts#L34)
+[packages/carson/source/workspace/Project.ts:34](https://github.com/jakubmazanec/tools/blob/0633c96618f3c6692ade528aee0f27ac091468a5/packages/carson/source/workspace/Project.ts#L34)
 
 ---
 
@@ -457,7 +457,7 @@ Project path relative to workspace path.
 
 #### Defined in
 
-[packages/carson/source/workspace/Project.ts:37](https://github.com/jakubmazanec/tools/blob/a9765e3de8390a6e57bec51efaeb411fbd7881ab/packages/carson/source/workspace/Project.ts#L37)
+[packages/carson/source/workspace/Project.ts:37](https://github.com/jakubmazanec/tools/blob/0633c96618f3c6692ade528aee0f27ac091468a5/packages/carson/source/workspace/Project.ts#L37)
 
 ---
 
@@ -469,7 +469,7 @@ Parent [Workspace](Workspace.md) instance.
 
 #### Defined in
 
-[packages/carson/source/workspace/Project.ts:46](https://github.com/jakubmazanec/tools/blob/a9765e3de8390a6e57bec51efaeb411fbd7881ab/packages/carson/source/workspace/Project.ts#L46)
+[packages/carson/source/workspace/Project.ts:46](https://github.com/jakubmazanec/tools/blob/0633c96618f3c6692ade528aee0f27ac091468a5/packages/carson/source/workspace/Project.ts#L46)
 
 ## Methods
 
@@ -483,7 +483,7 @@ Parent [Workspace](Workspace.md) instance.
 
 #### Defined in
 
-[packages/carson/source/workspace/Project.ts:164](https://github.com/jakubmazanec/tools/blob/a9765e3de8390a6e57bec51efaeb411fbd7881ab/packages/carson/source/workspace/Project.ts#L164)
+[packages/carson/source/workspace/Project.ts:164](https://github.com/jakubmazanec/tools/blob/0633c96618f3c6692ade528aee0f27ac091468a5/packages/carson/source/workspace/Project.ts#L164)
 
 ---
 
@@ -503,7 +503,7 @@ Parent [Workspace](Workspace.md) instance.
 
 #### Defined in
 
-[packages/carson/source/workspace/Project.ts:245](https://github.com/jakubmazanec/tools/blob/a9765e3de8390a6e57bec51efaeb411fbd7881ab/packages/carson/source/workspace/Project.ts#L245)
+[packages/carson/source/workspace/Project.ts:245](https://github.com/jakubmazanec/tools/blob/0633c96618f3c6692ade528aee0f27ac091468a5/packages/carson/source/workspace/Project.ts#L245)
 
 ---
 
@@ -527,7 +527,7 @@ Parent [Workspace](Workspace.md) instance.
 
 #### Defined in
 
-[packages/carson/source/workspace/Project.ts:91](https://github.com/jakubmazanec/tools/blob/a9765e3de8390a6e57bec51efaeb411fbd7881ab/packages/carson/source/workspace/Project.ts#L91)
+[packages/carson/source/workspace/Project.ts:91](https://github.com/jakubmazanec/tools/blob/0633c96618f3c6692ade528aee0f27ac091468a5/packages/carson/source/workspace/Project.ts#L91)
 
 ---
 
@@ -555,4 +555,4 @@ Parent [Workspace](Workspace.md) instance.
 
 #### Defined in
 
-[packages/carson/source/workspace/Project.ts:150](https://github.com/jakubmazanec/tools/blob/a9765e3de8390a6e57bec51efaeb411fbd7881ab/packages/carson/source/workspace/Project.ts#L150)
+[packages/carson/source/workspace/Project.ts:150](https://github.com/jakubmazanec/tools/blob/0633c96618f3c6692ade528aee0f27ac091468a5/packages/carson/source/workspace/Project.ts#L150)

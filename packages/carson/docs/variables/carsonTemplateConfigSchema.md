@@ -10,4 +10,4 @@
 
 ## Defined in
 
-[packages/carson/source/template/CarsonTemplateConfig.ts:3](https://github.com/jakubmazanec/tools/blob/a9765e3de8390a6e57bec51efaeb411fbd7881ab/packages/carson/source/template/CarsonTemplateConfig.ts#L3)
+[packages/carson/source/template/CarsonTemplateConfig.ts:3](https://github.com/jakubmazanec/tools/blob/0633c96618f3c6692ade528aee0f27ac091468a5/packages/carson/source/template/CarsonTemplateConfig.ts#L3)

@@ -34,4 +34,4 @@
 
 ## Defined in
 
-[packages/carson-templates/source/constants.ts:89](https://github.com/jakubmazanec/tools/blob/a9765e3de8390a6e57bec51efaeb411fbd7881ab/packages/carson-templates/source/constants.ts#L89)
+[packages/carson-templates/source/constants.ts:89](https://github.com/jakubmazanec/tools/blob/0633c96618f3c6692ade528aee0f27ac091468a5/packages/carson-templates/source/constants.ts#L89)

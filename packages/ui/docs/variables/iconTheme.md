@@ -8,4 +8,4 @@
 
 ## Defined in
 
-[packages/ui/source/components/Icon.tsx:89](https://github.com/jakubmazanec/tools/blob/a9765e3de8390a6e57bec51efaeb411fbd7881ab/packages/ui/source/components/Icon.tsx#L89)
+[packages/ui/source/components/Icon.tsx:89](https://github.com/jakubmazanec/tools/blob/0633c96618f3c6692ade528aee0f27ac091468a5/packages/ui/source/components/Icon.tsx#L89)
