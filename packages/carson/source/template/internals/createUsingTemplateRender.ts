@@ -7,12 +7,8 @@ import yaml from 'yaml';
 import {type TemplateRender} from '../TemplateRender.js';
 import {merge} from './merge.js';
 import {prettify} from './prettify.js';
-import {type TemplateRenderSnapshot} from './TemplateRenderSnapshot.js';
 
-export async function createUsingTemplateRender(
-  templateRender: TemplateRender | TemplateRenderSnapshot,
-  basePath: string,
-) {
+export async function createUsingTemplateRender(templateRender: TemplateRender, basePath: string) {
   let to = path.join(basePath, templateRender.attributes.to);
   let extension = path.extname(to);
 

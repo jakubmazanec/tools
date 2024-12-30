@@ -3,10 +3,9 @@ import path from 'node:path';
 
 import {type TemplateRender} from '../TemplateRender.js';
 import {prettify} from './prettify.js';
-import {type TemplateRenderSnapshot} from './TemplateRenderSnapshot.js';
 
 export async function overwriteUsingTemplateRender(
-  templateRender: TemplateRender | TemplateRenderSnapshot,
+  templateRender: TemplateRender,
   basePath: string,
 ) {
   let to = path.join(basePath, templateRender.attributes.to);

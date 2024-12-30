@@ -6,12 +6,7 @@ import {templateAttributesSchema} from '../TemplateAttributes.js';
 export const templateRenderSnapshotSchema = z
   .object({
     attributes: baseTemplateAttributesSchema.pick({to: true}).merge(templateAttributesSchema),
-    content: z.string(),
-    template: z
-      .object({
-        path: z.string(),
-      })
-      .strict(),
+    content: z.string().optional(),
   })
   .strict();
 
