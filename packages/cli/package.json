@@ -50,7 +50,7 @@
     "del-cli": "^6.0.0",
     "esbuild": "^0.24.0",
     "eslint": "^9.15.0",
-    "ink": "^5.0.1",
+    "ink": "^5.1.0",
     "ink-testing-library": "^4.0.0",
     "lodash": "^4.17.21",
     "prettier": "^3.4.2",
