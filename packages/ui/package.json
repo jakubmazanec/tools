@@ -76,7 +76,7 @@
     "esbuild": "^0.24.0",
     "eslint": "^9.15.0",
     "happy-dom": "^15.11.6",
-    "prettier": "^3.3.3",
+    "prettier": "^3.4.2",
     "prettier-plugin-packagejson": "^2.5.6",
     "prettier-plugin-tailwindcss": "^0.6.9",
     "react": "^18.3.1",
