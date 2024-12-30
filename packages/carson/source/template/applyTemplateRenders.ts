@@ -6,14 +6,14 @@ import {CARSON_CONFIG_DIRECTORY} from '../constants.js';
 import {CarsonTemplateError} from './CarsonTemplateError.js';
 import {
   createUsingTemplateRender,
-  deleteUsingTemplateRender,
+  deleteUsingTemplateRenderSnapshot,
   insertUsingTemplateRender,
   loadTemplateRenderSnapshots,
   mergeUsingTemplateRender,
   overwriteUsingTemplateRender,
   saveTemplateRenderSnapshots,
-  uninsertUsingTemplateRender,
-  unmergeUsingTemplateRender,
+  uninsertUsingTemplateRenderSnapshot,
+  unmergeUsingTemplateRenderSnapshot,
 } from './internals.js';
 import {type TemplateRenders} from './TemplateRenders.js';
 
@@ -51,21 +51,21 @@ export async function applyTemplateRenders({
       }
 
       if (templateRenderSnapshot.attributes.strategy === 'ensure') {
-        await deleteUsingTemplateRender(templateRenderSnapshot, targetPath, {
+        await deleteUsingTemplateRenderSnapshot(templateRenderSnapshot, targetPath, {
           onlyDeleteWhenContentsMatch: true,
         });
       }
 
       if (templateRenderSnapshot.attributes.strategy === 'overwrite') {
-        await deleteUsingTemplateRender(templateRenderSnapshot, targetPath);
+        await deleteUsingTemplateRenderSnapshot(templateRenderSnapshot, targetPath);
       }
 
       if (templateRenderSnapshot.attributes.strategy === 'merge') {
-        await unmergeUsingTemplateRender(templateRenderSnapshot, targetPath);
+        await unmergeUsingTemplateRenderSnapshot(templateRenderSnapshot, targetPath);
       }
 
       if (templateRenderSnapshot.attributes.strategy[0] === 'insert') {
-        await uninsertUsingTemplateRender(templateRenderSnapshot, targetPath);
+        await uninsertUsingTemplateRenderSnapshot(templateRenderSnapshot, targetPath);
       }
     }
   }

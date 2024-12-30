@@ -1,7 +1,10 @@
 import {deflateSync, strToU8} from 'fflate';
 import fs from 'fs-extra';
+import path from 'node:path';
+import yaml from 'yaml';
 
 import {type TemplateRenders} from '../TemplateRenders.js';
+import {simplify} from './simplify.js';
 import {type TemplateRenderSnapshots} from './TemplateRenderSnapshots.js';
 
 export async function saveTemplateRenderSnapshots(
@@ -12,9 +15,7 @@ export async function saveTemplateRenderSnapshots(
 
   for (let templateRender of templateRenders) {
     if (
-      templateRender.attributes.strategy === 'ensure' ||
       templateRender.attributes.strategy === 'overwrite' ||
-      templateRender.attributes.strategy === 'merge' ||
       templateRender.attributes.strategy[0] === 'insert'
     ) {
       templateRendersSnapshots.push({
@@ -22,9 +23,54 @@ export async function saveTemplateRenderSnapshots(
           to: templateRender.attributes.to,
           strategy: templateRender.attributes.strategy,
         },
-        content: templateRender.content,
-        template: templateRender.template,
       });
+
+      continue;
+    }
+
+    if (templateRender.attributes.strategy === 'ensure') {
+      templateRendersSnapshots.push({
+        attributes: {
+          to: templateRender.attributes.to,
+          strategy: templateRender.attributes.strategy,
+        },
+        content: templateRender.content,
+      });
+
+      continue;
+    }
+
+    if (templateRender.attributes.strategy === 'merge') {
+      let extension = path.extname(templateRender.attributes.to);
+      let content;
+
+      switch (extension) {
+        case '.json': {
+          content = JSON.stringify(simplify(JSON.parse(templateRender.content)));
+
+          break;
+        }
+
+        case '.yaml': {
+          content = yaml.stringify(simplify(yaml.parse(templateRender.content)));
+
+          break;
+        }
+
+        default: {
+          content = templateRender.content;
+        }
+      }
+
+      templateRendersSnapshots.push({
+        attributes: {
+          to: templateRender.attributes.to,
+          strategy: templateRender.attributes.strategy,
+        },
+        content,
+      });
+
+      continue;
     }
   }
 
