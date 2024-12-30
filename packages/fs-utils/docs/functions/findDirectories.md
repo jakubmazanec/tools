@@ -24,4 +24,4 @@ The list of directory names.
 
 ## Defined in
 
-[findDirectories.ts:9](https://github.com/jakubmazanec/tools/blob/3e339f67fc5b5cd011c28acb315570a2f29efedc/packages/fs-utils/source/findDirectories.ts#L9)
+[findDirectories.ts:9](https://github.com/jakubmazanec/tools/blob/4bb343d3736e4f9f11a014de3241c6054262151e/packages/fs-utils/source/findDirectories.ts#L9)

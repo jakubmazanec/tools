@@ -28,4 +28,4 @@
 
 ## Defined in
 
-[packages/ui/source/development/createTailwindMerge.ts:32](https://github.com/jakubmazanec/tools/blob/3e339f67fc5b5cd011c28acb315570a2f29efedc/packages/ui/source/development/createTailwindMerge.ts#L32)
+[packages/ui/source/development/createTailwindMerge.ts:32](https://github.com/jakubmazanec/tools/blob/4bb343d3736e4f9f11a014de3241c6054262151e/packages/ui/source/development/createTailwindMerge.ts#L32)

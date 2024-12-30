@@ -6,8 +6,8 @@
 
 > `const` **CarsonTemplateError**: (`code`, `options`?) =>
 > `CustomErrorWithData`\<`"INVALID_CARSON_TEMPLATE_ID"` \| `"CARSON_TEMPLATE_NOT_FOUND"` \|
-> `"STRATEGY_UNSUPPORTED_EXTENSION"` \| `"STRATEGY_MISSING_FILE"` \| `"UNKNOWN_ERROR"`,
-> `CarsonTemplateErrorData`\>
+> `"STRATEGY_UNSUPPORTED_EXTENSION"` \| `"STRATEGY_MISSING_FILE"` \| `"INVALID_SNAPSHOT"` \|
+> `"UNKNOWN_ERROR"`, `CarsonTemplateErrorData`\>
 
 A subclass of `Error` that indicates a Carson template failure.
 
@@ -16,7 +16,7 @@ A subclass of `Error` that indicates a Carson template failure.
 ### code
 
 `"INVALID_CARSON_TEMPLATE_ID"` | `"CARSON_TEMPLATE_NOT_FOUND"` | `"STRATEGY_UNSUPPORTED_EXTENSION"`
-| `"STRATEGY_MISSING_FILE"`
+| `"STRATEGY_MISSING_FILE"` | `"INVALID_SNAPSHOT"`
 
 ### options?
 
@@ -25,9 +25,9 @@ A subclass of `Error` that indicates a Carson template failure.
 ## Returns
 
 `CustomErrorWithData`\<`"INVALID_CARSON_TEMPLATE_ID"` \| `"CARSON_TEMPLATE_NOT_FOUND"` \|
-`"STRATEGY_UNSUPPORTED_EXTENSION"` \| `"STRATEGY_MISSING_FILE"` \| `"UNKNOWN_ERROR"`,
-`CarsonTemplateErrorData`\>
+`"STRATEGY_UNSUPPORTED_EXTENSION"` \| `"STRATEGY_MISSING_FILE"` \| `"INVALID_SNAPSHOT"` \|
+`"UNKNOWN_ERROR"`, `CarsonTemplateErrorData`\>
 
 ## Defined in
 
-[packages/carson/source/template/CarsonTemplateError.ts:6](https://github.com/jakubmazanec/tools/blob/3e339f67fc5b5cd011c28acb315570a2f29efedc/packages/carson/source/template/CarsonTemplateError.ts#L6)
+[packages/carson/source/template/CarsonTemplateError.ts:6](https://github.com/jakubmazanec/tools/blob/4bb343d3736e4f9f11a014de3241c6054262151e/packages/carson/source/template/CarsonTemplateError.ts#L6)
