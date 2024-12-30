@@ -17,7 +17,7 @@ Program executable name.
 
 #### Defined in
 
-[cli/source/program/Program.ts:38](https://github.com/jakubmazanec/tools/blob/0633c96618f3c6692ade528aee0f27ac091468a5/packages/cli/source/program/Program.ts#L38)
+[cli/source/program/Program.ts:38](https://github.com/jakubmazanec/tools/blob/3e339f67fc5b5cd011c28acb315570a2f29efedc/packages/cli/source/program/Program.ts#L38)
 
 ---
 
@@ -30,7 +30,7 @@ Program commands
 
 #### Defined in
 
-[cli/source/program/Program.ts:41](https://github.com/jakubmazanec/tools/blob/0633c96618f3c6692ade528aee0f27ac091468a5/packages/cli/source/program/Program.ts#L41)
+[cli/source/program/Program.ts:41](https://github.com/jakubmazanec/tools/blob/3e339f67fc5b5cd011c28acb315570a2f29efedc/packages/cli/source/program/Program.ts#L41)
 
 ---
 
@@ -42,7 +42,7 @@ Program description.
 
 #### Defined in
 
-[cli/source/program/Program.ts:35](https://github.com/jakubmazanec/tools/blob/0633c96618f3c6692ade528aee0f27ac091468a5/packages/cli/source/program/Program.ts#L35)
+[cli/source/program/Program.ts:35](https://github.com/jakubmazanec/tools/blob/3e339f67fc5b5cd011c28acb315570a2f29efedc/packages/cli/source/program/Program.ts#L35)
 
 ---
 
@@ -54,7 +54,7 @@ More readable program name.
 
 #### Defined in
 
-[cli/source/program/Program.ts:26](https://github.com/jakubmazanec/tools/blob/0633c96618f3c6692ade528aee0f27ac091468a5/packages/cli/source/program/Program.ts#L26)
+[cli/source/program/Program.ts:26](https://github.com/jakubmazanec/tools/blob/3e339f67fc5b5cd011c28acb315570a2f29efedc/packages/cli/source/program/Program.ts#L26)
 
 ---
 
@@ -66,7 +66,7 @@ Custom error boundary fallback component
 
 #### Defined in
 
-[cli/source/program/Program.ts:54](https://github.com/jakubmazanec/tools/blob/0633c96618f3c6692ade528aee0f27ac091468a5/packages/cli/source/program/Program.ts#L54)
+[cli/source/program/Program.ts:54](https://github.com/jakubmazanec/tools/blob/3e339f67fc5b5cd011c28acb315570a2f29efedc/packages/cli/source/program/Program.ts#L54)
 
 ---
 
@@ -76,7 +76,7 @@ Custom error boundary fallback component
 
 #### Defined in
 
-[cli/source/program/Program.ts:45](https://github.com/jakubmazanec/tools/blob/0633c96618f3c6692ade528aee0f27ac091468a5/packages/cli/source/program/Program.ts#L45)
+[cli/source/program/Program.ts:45](https://github.com/jakubmazanec/tools/blob/3e339f67fc5b5cd011c28acb315570a2f29efedc/packages/cli/source/program/Program.ts#L45)
 
 ---
 
@@ -88,7 +88,7 @@ Program latest version.
 
 #### Defined in
 
-[cli/source/program/Program.ts:32](https://github.com/jakubmazanec/tools/blob/0633c96618f3c6692ade528aee0f27ac091468a5/packages/cli/source/program/Program.ts#L32)
+[cli/source/program/Program.ts:32](https://github.com/jakubmazanec/tools/blob/3e339f67fc5b5cd011c28acb315570a2f29efedc/packages/cli/source/program/Program.ts#L32)
 
 ---
 
@@ -100,7 +100,7 @@ Program name.
 
 #### Defined in
 
-[cli/source/program/Program.ts:23](https://github.com/jakubmazanec/tools/blob/0633c96618f3c6692ade528aee0f27ac091468a5/packages/cli/source/program/Program.ts#L23)
+[cli/source/program/Program.ts:23](https://github.com/jakubmazanec/tools/blob/3e339f67fc5b5cd011c28acb315570a2f29efedc/packages/cli/source/program/Program.ts#L23)
 
 ---
 
@@ -110,7 +110,7 @@ Program name.
 
 #### Defined in
 
-[cli/source/program/Program.ts:47](https://github.com/jakubmazanec/tools/blob/0633c96618f3c6692ade528aee0f27ac091468a5/packages/cli/source/program/Program.ts#L47)
+[cli/source/program/Program.ts:47](https://github.com/jakubmazanec/tools/blob/3e339f67fc5b5cd011c28acb315570a2f29efedc/packages/cli/source/program/Program.ts#L47)
 
 ---
 
@@ -122,7 +122,7 @@ Program version.
 
 #### Defined in
 
-[cli/source/program/Program.ts:29](https://github.com/jakubmazanec/tools/blob/0633c96618f3c6692ade528aee0f27ac091468a5/packages/cli/source/program/Program.ts#L29)
+[cli/source/program/Program.ts:29](https://github.com/jakubmazanec/tools/blob/3e339f67fc5b5cd011c28acb315570a2f29efedc/packages/cli/source/program/Program.ts#L29)
 
 ## Methods
 
@@ -148,7 +148,7 @@ Program instance.
 
 #### Defined in
 
-[cli/source/program/Program.ts:150](https://github.com/jakubmazanec/tools/blob/0633c96618f3c6692ade528aee0f27ac091468a5/packages/cli/source/program/Program.ts#L150)
+[cli/source/program/Program.ts:150](https://github.com/jakubmazanec/tools/blob/3e339f67fc5b5cd011c28acb315570a2f29efedc/packages/cli/source/program/Program.ts#L150)
 
 ---
 
@@ -172,7 +172,7 @@ The React element to render.
 
 #### Defined in
 
-[cli/source/program/Program.ts:162](https://github.com/jakubmazanec/tools/blob/0633c96618f3c6692ade528aee0f27ac091468a5/packages/cli/source/program/Program.ts#L162)
+[cli/source/program/Program.ts:162](https://github.com/jakubmazanec/tools/blob/3e339f67fc5b5cd011c28acb315570a2f29efedc/packages/cli/source/program/Program.ts#L162)
 
 ---
 
@@ -196,7 +196,7 @@ Unparsed command line arguments.
 
 #### Defined in
 
-[cli/source/program/Program.ts:197](https://github.com/jakubmazanec/tools/blob/0633c96618f3c6692ade528aee0f27ac091468a5/packages/cli/source/program/Program.ts#L197)
+[cli/source/program/Program.ts:197](https://github.com/jakubmazanec/tools/blob/3e339f67fc5b5cd011c28acb315570a2f29efedc/packages/cli/source/program/Program.ts#L197)
 
 ---
 
@@ -216,4 +216,4 @@ Unparsed command line arguments.
 
 #### Defined in
 
-[cli/source/program/Program.ts:96](https://github.com/jakubmazanec/tools/blob/0633c96618f3c6692ade528aee0f27ac091468a5/packages/cli/source/program/Program.ts#L96)
+[cli/source/program/Program.ts:96](https://github.com/jakubmazanec/tools/blob/3e339f67fc5b5cd011c28acb315570a2f29efedc/packages/cli/source/program/Program.ts#L96)
