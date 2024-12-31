@@ -15,4 +15,4 @@ Form component props.
 
 ## Defined in
 
-[cli/source/ui/form/FormProps.ts:34](https://github.com/jakubmazanec/tools/blob/4bb343d3736e4f9f11a014de3241c6054262151e/packages/cli/source/ui/form/FormProps.ts#L34)
+[cli/source/ui/form/FormProps.ts:34](https://github.com/jakubmazanec/tools/blob/a4967209f10f2b04ade958bd873ac46f1290cee7/packages/cli/source/ui/form/FormProps.ts#L34)

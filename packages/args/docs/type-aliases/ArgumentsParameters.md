@@ -18,4 +18,4 @@ Parsed parameters.
 
 ## Defined in
 
-[args/source/ArgumentsParameters.ts:141](https://github.com/jakubmazanec/tools/blob/4bb343d3736e4f9f11a014de3241c6054262151e/packages/args/source/ArgumentsParameters.ts#L141)
+[args/source/ArgumentsParameters.ts:141](https://github.com/jakubmazanec/tools/blob/a4967209f10f2b04ade958bd873ac46f1290cee7/packages/args/source/ArgumentsParameters.ts#L141)

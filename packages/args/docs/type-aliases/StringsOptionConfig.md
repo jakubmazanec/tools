@@ -17,4 +17,4 @@
 
 ## Defined in
 
-[args/source/OptionConfig.ts:230](https://github.com/jakubmazanec/tools/blob/4bb343d3736e4f9f11a014de3241c6054262151e/packages/args/source/OptionConfig.ts#L230)
+[args/source/OptionConfig.ts:230](https://github.com/jakubmazanec/tools/blob/a4967209f10f2b04ade958bd873ac46f1290cee7/packages/args/source/OptionConfig.ts#L230)

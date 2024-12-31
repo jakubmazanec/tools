@@ -80,4 +80,4 @@
 
 ## Defined in
 
-[packages/ui/source/theme/Theme.ts:52](https://github.com/jakubmazanec/tools/blob/4bb343d3736e4f9f11a014de3241c6054262151e/packages/ui/source/theme/Theme.ts#L52)
+[packages/ui/source/theme/Theme.ts:52](https://github.com/jakubmazanec/tools/blob/a4967209f10f2b04ade958bd873ac46f1290cee7/packages/ui/source/theme/Theme.ts#L52)

@@ -22,7 +22,7 @@
 
 #### Defined in
 
-[packages/zod-utils/source/utils/readFile.ts:7](https://github.com/jakubmazanec/tools/blob/4bb343d3736e4f9f11a014de3241c6054262151e/packages/zod-utils/source/utils/readFile.ts#L7)
+[packages/zod-utils/source/utils/readFile.ts:7](https://github.com/jakubmazanec/tools/blob/a4967209f10f2b04ade958bd873ac46f1290cee7/packages/zod-utils/source/utils/readFile.ts#L7)
 
 ---
 
@@ -32,4 +32,4 @@
 
 #### Defined in
 
-[packages/zod-utils/source/utils/readFile.ts:8](https://github.com/jakubmazanec/tools/blob/4bb343d3736e4f9f11a014de3241c6054262151e/packages/zod-utils/source/utils/readFile.ts#L8)
+[packages/zod-utils/source/utils/readFile.ts:8](https://github.com/jakubmazanec/tools/blob/a4967209f10f2b04ade958bd873ac46f1290cee7/packages/zod-utils/source/utils/readFile.ts#L8)
