@@ -6,6 +6,9 @@
 
 > **CreateWorkspaceInput**(`props`, `deprecatedLegacyContext`?): `ReactNode`
 
+Defined in:
+[packages/carson/source/commands/create-workspace/CreateWorkspaceInput.ts:5](https://github.com/jakubmazanec/tools/blob/7c5f40d811171692b72a47160bc33d644201b16a/packages/carson/source/commands/create-workspace/CreateWorkspaceInput.ts#L5)
+
 ## Parameters
 
 ### props
@@ -25,7 +28,3 @@
 ## Returns
 
 `ReactNode`
-
-## Defined in
-
-[packages/carson/source/commands/create-workspace/CreateWorkspaceInput.ts:5](https://github.com/jakubmazanec/tools/blob/92d3fc1374d1ad6d45198d05d061e0f856a89434/packages/carson/source/commands/create-workspace/CreateWorkspaceInput.ts#L5)

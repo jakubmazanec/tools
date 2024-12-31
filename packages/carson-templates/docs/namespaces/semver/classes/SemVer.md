@@ -4,11 +4,15 @@
 
 # Class: SemVer
 
+Defined in: node_modules/@types/semver/classes/semver.d.ts:3
+
 ## Constructors
 
 ### new SemVer()
 
 > **new SemVer**(`version`, `optionsOrLoose`?): [`SemVer`](SemVer.md)
+
+Defined in: node_modules/@types/semver/classes/semver.d.ts:4
 
 #### Parameters
 
@@ -24,19 +28,13 @@
 
 [`SemVer`](SemVer.md)
 
-#### Defined in
-
-node_modules/@types/semver/classes/semver.d.ts:4
-
 ## Properties
 
 ### build
 
 > **build**: readonly `string`[]
 
-#### Defined in
-
-node_modules/@types/semver/classes/semver.d.ts:16
+Defined in: node_modules/@types/semver/classes/semver.d.ts:16
 
 ---
 
@@ -44,9 +42,7 @@ node_modules/@types/semver/classes/semver.d.ts:16
 
 > **loose**: `boolean`
 
-#### Defined in
-
-node_modules/@types/semver/classes/semver.d.ts:7
+Defined in: node_modules/@types/semver/classes/semver.d.ts:7
 
 ---
 
@@ -54,9 +50,7 @@ node_modules/@types/semver/classes/semver.d.ts:7
 
 > **major**: `number`
 
-#### Defined in
-
-node_modules/@types/semver/classes/semver.d.ts:12
+Defined in: node_modules/@types/semver/classes/semver.d.ts:12
 
 ---
 
@@ -64,9 +58,7 @@ node_modules/@types/semver/classes/semver.d.ts:12
 
 > **minor**: `number`
 
-#### Defined in
-
-node_modules/@types/semver/classes/semver.d.ts:13
+Defined in: node_modules/@types/semver/classes/semver.d.ts:13
 
 ---
 
@@ -74,9 +66,7 @@ node_modules/@types/semver/classes/semver.d.ts:13
 
 > **options**: [`Options`](../interfaces/Options.md)
 
-#### Defined in
-
-node_modules/@types/semver/classes/semver.d.ts:8
+Defined in: node_modules/@types/semver/classes/semver.d.ts:8
 
 ---
 
@@ -84,9 +74,7 @@ node_modules/@types/semver/classes/semver.d.ts:8
 
 > **patch**: `number`
 
-#### Defined in
-
-node_modules/@types/semver/classes/semver.d.ts:14
+Defined in: node_modules/@types/semver/classes/semver.d.ts:14
 
 ---
 
@@ -94,9 +82,7 @@ node_modules/@types/semver/classes/semver.d.ts:14
 
 > **prerelease**: readonly (`string` \| `number`)[]
 
-#### Defined in
-
-node_modules/@types/semver/classes/semver.d.ts:17
+Defined in: node_modules/@types/semver/classes/semver.d.ts:17
 
 ---
 
@@ -104,9 +90,7 @@ node_modules/@types/semver/classes/semver.d.ts:17
 
 > **raw**: `string`
 
-#### Defined in
-
-node_modules/@types/semver/classes/semver.d.ts:6
+Defined in: node_modules/@types/semver/classes/semver.d.ts:6
 
 ---
 
@@ -114,15 +98,15 @@ node_modules/@types/semver/classes/semver.d.ts:6
 
 > **version**: `string`
 
-#### Defined in
-
-node_modules/@types/semver/classes/semver.d.ts:15
+Defined in: node_modules/@types/semver/classes/semver.d.ts:15
 
 ## Methods
 
 ### compare()
 
 > **compare**(`other`): `-1` \| `0` \| `1`
+
+Defined in: node_modules/@types/semver/classes/semver.d.ts:27
 
 Compares two versions excluding build identifiers (the bit after `+` in the semantic version
 string).
@@ -141,15 +125,13 @@ string).
 - `1` if `this` is greater
 - `-1` if `other` is greater.
 
-#### Defined in
-
-node_modules/@types/semver/classes/semver.d.ts:27
-
 ---
 
 ### compareBuild()
 
 > **compareBuild**(`other`): `-1` \| `0` \| `1`
+
+Defined in: node_modules/@types/semver/classes/semver.d.ts:57
 
 Compares the build identifier of two versions.
 
@@ -167,15 +149,13 @@ Compares the build identifier of two versions.
 - `1` if `this` is greater
 - `-1` if `other` is greater.
 
-#### Defined in
-
-node_modules/@types/semver/classes/semver.d.ts:57
-
 ---
 
 ### compareMain()
 
 > **compareMain**(`other`): `-1` \| `0` \| `1`
+
+Defined in: node_modules/@types/semver/classes/semver.d.ts:37
 
 Compares the release portion of two versions.
 
@@ -193,15 +173,13 @@ Compares the release portion of two versions.
 - `1` if `this` is greater
 - `-1` if `other` is greater.
 
-#### Defined in
-
-node_modules/@types/semver/classes/semver.d.ts:37
-
 ---
 
 ### comparePre()
 
 > **comparePre**(`other`): `-1` \| `0` \| `1`
+
+Defined in: node_modules/@types/semver/classes/semver.d.ts:47
 
 Compares the prerelease portion of two versions.
 
@@ -219,29 +197,25 @@ Compares the prerelease portion of two versions.
 - `1` if `this` is greater
 - `-1` if `other` is greater.
 
-#### Defined in
-
-node_modules/@types/semver/classes/semver.d.ts:47
-
 ---
 
 ### format()
 
 > **format**(): `string`
 
+Defined in: node_modules/@types/semver/classes/semver.d.ts:9
+
 #### Returns
 
 `string`
-
-#### Defined in
-
-node_modules/@types/semver/classes/semver.d.ts:9
 
 ---
 
 ### inc()
 
 > **inc**(`release`, `identifier`?): [`SemVer`](SemVer.md)
+
+Defined in: node_modules/@types/semver/classes/semver.d.ts:59
 
 #### Parameters
 
@@ -257,23 +231,17 @@ node_modules/@types/semver/classes/semver.d.ts:9
 
 [`SemVer`](SemVer.md)
 
-#### Defined in
-
-node_modules/@types/semver/classes/semver.d.ts:59
-
 ---
 
 ### inspect()
 
 > **inspect**(): `string`
 
+Defined in: node_modules/@types/semver/classes/semver.d.ts:10
+
 #### Returns
 
 `string`
-
-#### Defined in
-
-node_modules/@types/semver/classes/semver.d.ts:10
 
 ---
 
@@ -281,10 +249,8 @@ node_modules/@types/semver/classes/semver.d.ts:10
 
 > **toString**(): `string`
 
+Defined in: node_modules/@types/semver/classes/semver.d.ts:61
+
 #### Returns
 
 `string`
-
-#### Defined in
-
-node_modules/@types/semver/classes/semver.d.ts:61

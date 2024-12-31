@@ -7,6 +7,4 @@
 > **ReleaseType**: `"major"` \| `"premajor"` \| `"minor"` \| `"preminor"` \| `"patch"` \|
 > `"prepatch"` \| `"prerelease"`
 
-## Defined in
-
-node_modules/@types/semver/index.d.ts:104
+Defined in: node_modules/@types/semver/index.d.ts:104

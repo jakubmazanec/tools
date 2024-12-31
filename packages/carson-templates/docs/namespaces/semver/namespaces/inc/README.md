@@ -4,8 +4,6 @@
 
 # inc
 
-## Index
-
-### Type Aliases
+## Type Aliases
 
 - [IdentifierBase](type-aliases/IdentifierBase.md)

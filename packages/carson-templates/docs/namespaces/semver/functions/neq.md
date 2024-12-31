@@ -6,6 +6,8 @@
 
 > **neq**(`v1`, `v2`, `optionsOrLoose`?): `boolean`
 
+Defined in: node_modules/@types/semver/functions/neq.d.ts:7
+
 v1 != v2 The opposite of eq.
 
 ## Parameters
@@ -25,7 +27,3 @@ v1 != v2 The opposite of eq.
 ## Returns
 
 `boolean`
-
-## Defined in
-
-node_modules/@types/semver/functions/neq.d.ts:7

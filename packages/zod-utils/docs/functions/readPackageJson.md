@@ -11,6 +11,9 @@
 > [`PackageJson`](../type-aliases/PackageJson.md), [`PackageJson`](../type-aliases/PackageJson.md)
 > \| `ZodError`\<[`PackageJson`](../type-aliases/PackageJson.md)\>\>\>
 
+Defined in:
+[packages/zod-utils/source/utils/readPackageJson.ts:13](https://github.com/jakubmazanec/tools/blob/7c5f40d811171692b72a47160bc33d644201b16a/packages/zod-utils/source/utils/readPackageJson.ts#L13)
+
 ## Type Parameters
 
 • **O** _extends_ `undefined` \| [`ReadPackageJsonOptions`](../interfaces/ReadPackageJsonOptions.md)
@@ -33,7 +36,3 @@
 `If`\<`NonNullable`\<`O`\>\[`"throwOnZodError"`\], `true`,
 [`PackageJson`](../type-aliases/PackageJson.md), [`PackageJson`](../type-aliases/PackageJson.md) \|
 `ZodError`\<[`PackageJson`](../type-aliases/PackageJson.md)\>\>\>
-
-## Defined in
-
-[packages/zod-utils/source/utils/readPackageJson.ts:13](https://github.com/jakubmazanec/tools/blob/92d3fc1374d1ad6d45198d05d061e0f856a89434/packages/zod-utils/source/utils/readPackageJson.ts#L13)

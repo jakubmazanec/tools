@@ -6,6 +6,9 @@
 
 > **CustomErrorWithDataOptions**\<`ErrorData`\>: `object`
 
+Defined in:
+[types/CustomErrorWithDataOptions.ts:4](https://github.com/jakubmazanec/tools/blob/7c5f40d811171692b72a47160bc33d644201b16a/packages/error/source/types/CustomErrorWithDataOptions.ts#L4)
+
 Type representing options object used when instantianting class returned from
 [createCustomErrorWithData](../functions/createCustomErrorWithData.md).
 
@@ -33,7 +36,3 @@ Custom data that will be attached to the error instance.
 > `optional` **messageParameters**: `unknown`[]
 
 Array of values that are used as parameters to generate the error message.
-
-## Defined in
-
-[types/CustomErrorWithDataOptions.ts:4](https://github.com/jakubmazanec/tools/blob/92d3fc1374d1ad6d45198d05d061e0f856a89434/packages/error/source/types/CustomErrorWithDataOptions.ts#L4)

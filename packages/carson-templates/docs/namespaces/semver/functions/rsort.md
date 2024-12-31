@@ -6,6 +6,8 @@
 
 > **rsort**\<`T`\>(`list`, `optionsOrLoose`?): `T`[]
 
+Defined in: node_modules/@types/semver/functions/rsort.d.ts:7
+
 Sorts an array of semver entries in descending order using `compareBuild()`.
 
 ## Type Parameters
@@ -25,7 +27,3 @@ Sorts an array of semver entries in descending order using `compareBuild()`.
 ## Returns
 
 `T`[]
-
-## Defined in
-
-node_modules/@types/semver/functions/rsort.d.ts:7

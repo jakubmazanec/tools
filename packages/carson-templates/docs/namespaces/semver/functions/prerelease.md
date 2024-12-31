@@ -6,6 +6,8 @@
 
 > **prerelease**(`version`, `optionsOrLoose`?): `ReadonlyArray`\<`string` \| `number`\> \| `null`
 
+Defined in: node_modules/@types/semver/functions/prerelease.d.ts:7
+
 Returns an array of prerelease components, or null if none exist.
 
 ## Parameters
@@ -21,7 +23,3 @@ Returns an array of prerelease components, or null if none exist.
 ## Returns
 
 `ReadonlyArray`\<`string` \| `number`\> \| `null`
-
-## Defined in
-
-node_modules/@types/semver/functions/prerelease.d.ts:7

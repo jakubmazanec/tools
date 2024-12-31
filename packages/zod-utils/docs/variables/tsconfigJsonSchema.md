@@ -23,28 +23,28 @@
 > `ZodOptional`\<`ZodBoolean`\>; `experimentalDecorators`: `ZodOptional`\<`ZodBoolean`\>;
 > `explainFiles`: `ZodOptional`\<`ZodBoolean`\>; `extendedDiagnostics`:
 > `ZodOptional`\<`ZodBoolean`\>; `fallbackPolling`:
-> `ZodOptional`\<`ZodEnum`\<[`"fixedPollingInterval"`, `"priorityPollingInterval"`,
+> `ZodOptional`\<`ZodEnum`\<\[`"fixedPollingInterval"`, `"priorityPollingInterval"`,
 > `"dynamicPriorityPolling"`, `"fixedInterval"`, `"priorityInterval"`, `"dynamicPriority"`,
-> `"fixedChunkSize"`]\>\>; `forceConsistentCasingInFileNames`: `ZodOptional`\<`ZodBoolean`\>;
+> `"fixedChunkSize"`\]\>\>; `forceConsistentCasingInFileNames`: `ZodOptional`\<`ZodBoolean`\>;
 > `generateCpuProfile`: `ZodOptional`\<`ZodString`\>; `importHelpers`:
-> `ZodOptional`\<`ZodBoolean`\>; `importsNotUsedAsValues`: `ZodOptional`\<`ZodEnum`\<[`"remove"`,
-> `"preserve"`, `"error"`]\>\>; `incremental`: `ZodOptional`\<`ZodBoolean`\>; `inlineSourceMap`:
+> `ZodOptional`\<`ZodBoolean`\>; `importsNotUsedAsValues`: `ZodOptional`\<`ZodEnum`\<\[`"remove"`,
+> `"preserve"`, `"error"`\]\>\>; `incremental`: `ZodOptional`\<`ZodBoolean`\>; `inlineSourceMap`:
 > `ZodOptional`\<`ZodBoolean`\>; `inlineSources`: `ZodOptional`\<`ZodBoolean`\>; `isolatedModules`:
-> `ZodOptional`\<`ZodBoolean`\>; `jsx`: `ZodOptional`\<`ZodEnum`\<[`"preserve"`, `"react"`,
-> `"react-jsx"`, `"react-jsxdev"`, `"react-native"`]\>\>; `jsxFactory`:
+> `ZodOptional`\<`ZodBoolean`\>; `jsx`: `ZodOptional`\<`ZodEnum`\<\[`"preserve"`, `"react"`,
+> `"react-jsx"`, `"react-jsxdev"`, `"react-native"`\]\>\>; `jsxFactory`:
 > `ZodOptional`\<`ZodString`\>; `jsxFragmentFactory`: `ZodOptional`\<`ZodString`\>;
 > `jsxImportSource`: `ZodOptional`\<`ZodString`\>; `keyofStringsOnly`:
-> `ZodOptional`\<`ZodBoolean`\>; `lib`: `ZodOptional`\<`ZodArray`\<`ZodEnum`\<[`"ES5"`, `"ES6"`,
+> `ZodOptional`\<`ZodBoolean`\>; `lib`: `ZodOptional`\<`ZodArray`\<`ZodEnum`\<\[`"ES5"`, `"ES6"`,
 > `"ES7"`, `"ES2015"`, `"ES2015.Collection"`, `"ES2015.Core"`, `"ES2015.Generator"`,
 > `"ES2015.Iterable"`, `"ES2015.Promise"`, `"ES2015.Proxy"`, `"ES2015.Reflect"`,
-> `"ES2015.Symbol.WellKnown"`, `"ES2015.Symbol"`, `"ES2016"`]\>\>\>; `listEmittedFiles`:
+> `"ES2015.Symbol.WellKnown"`, `"ES2015.Symbol"`, `"ES2016"`\]\>\>\>; `listEmittedFiles`:
 > `ZodOptional`\<`ZodBoolean`\>; `listFiles`: `ZodOptional`\<`ZodBoolean`\>; `listFilesOnly`:
 > `ZodOptional`\<`ZodBoolean`\>; `mapRoot`: `ZodOptional`\<`ZodString`\>; `maxNodeModuleJsDepth`:
-> `ZodOptional`\<`ZodNumber`\>; `module`: `ZodOptional`\<`ZodEnum`\<[`"CommonJS"`, `"AMD"`,
+> `ZodOptional`\<`ZodNumber`\>; `module`: `ZodOptional`\<`ZodEnum`\<\[`"CommonJS"`, `"AMD"`,
 > `"System"`, `"UMD"`, `"ES6"`, `"ES2015"`, `"ES2020"`, `"ESNext"`, `"None"`, `"commonjs"`, `"amd"`,
-> `"system"`, `"umd"`, `"es6"`, `"es2015"`, `"es2020"`, `"esnext"`, `"none"`]\>\>;
-> `moduleResolution`: `ZodOptional`\<`ZodEnum`\<[`"classic"`, `"node"`]\>\>; `newLine`:
-> `ZodOptional`\<`ZodEnum`\<[`"CRLF"`, `"LF"`, `"crlf"`, `"lf"`]\>\>; `noEmit`:
+> `"system"`, `"umd"`, `"es6"`, `"es2015"`, `"es2020"`, `"esnext"`, `"none"`\]\>\>;
+> `moduleResolution`: `ZodOptional`\<`ZodEnum`\<\[`"classic"`, `"node"`\]\>\>; `newLine`:
+> `ZodOptional`\<`ZodEnum`\<\[`"CRLF"`, `"LF"`, `"crlf"`, `"lf"`\]\>\>; `noEmit`:
 > `ZodOptional`\<`ZodBoolean`\>; `noEmitHelpers`: `ZodOptional`\<`ZodBoolean`\>; `noEmitOnError`:
 > `ZodOptional`\<`ZodBoolean`\>; `noErrorTruncation`: `ZodOptional`\<`ZodBoolean`\>;
 > `noFallthroughCasesInSwitch`: `ZodOptional`\<`ZodBoolean`\>; `noImplicitAny`:
@@ -73,19 +73,20 @@
 > `ZodOptional`\<`ZodBoolean`\>; `strictPropertyInitialization`: `ZodOptional`\<`ZodBoolean`\>;
 > `stripInternal`: `ZodOptional`\<`ZodBoolean`\>; `suppressExcessPropertyErrors`:
 > `ZodOptional`\<`ZodBoolean`\>; `suppressImplicitAnyIndexErrors`: `ZodOptional`\<`ZodBoolean`\>;
-> `target`: `ZodOptional`\<`ZodEnum`\<[`"ES3"`, `"ES5"`, `"ES6"`, `"ES2015"`, `"ES2016"`,
+> `target`: `ZodOptional`\<`ZodEnum`\<\[`"ES3"`, `"ES5"`, `"ES6"`, `"ES2015"`, `"ES2016"`,
 > `"ES2017"`, `"ES2018"`, `"ES2019"`, `"ES2020"`, `"ES2021"`, `"ESNext"`, `"es3"`, `"es5"`, `"es6"`,
 > `"es2015"`, `"es2016"`, `"es2017"`, `"es2018"`, `"es2019"`, `"es2020"`, `"es2021"`,
-> `"esnext"`]\>\>; `traceResolution`: `ZodOptional`\<`ZodBoolean`\>; `tsBuildInfoFile`:
+> `"esnext"`\]\>\>; `traceResolution`: `ZodOptional`\<`ZodBoolean`\>; `tsBuildInfoFile`:
 > `ZodOptional`\<`ZodString`\>; `typeRoots`: `ZodOptional`\<`ZodArray`\<`ZodString`\>\>; `types`:
 > `ZodOptional`\<`ZodArray`\<`ZodString`\>\>; `useDefineForClassFields`:
 > `ZodOptional`\<`ZodBoolean`\>; `useUnknownInCatchVariables`: `ZodOptional`\<`ZodBoolean`\>;
 > `watch`: `ZodOptional`\<`ZodBoolean`\>; `watchDirectory`:
-> `ZodOptional`\<`ZodEnum`\<[`"useFsEvents"`, `"fixedPollingInterval"`, `"dynamicPriorityPolling"`,
-> `"fixedChunkSizePolling"`]\>\>; `watchFile`: `ZodOptional`\<`ZodEnum`\<[`"fixedPollingInterval"`,
-> `"priorityPollingInterval"`, `"dynamicPriorityPolling"`, `"useFsEvents"`,
-> `"useFsEventsOnParentDirectory"`, `"fixedChunkSizePolling"`]\>\>; \}, `"strict"`, \{ `allowJs`:
-> `boolean`; `allowSyntheticDefaultImports`: `boolean`; `allowUmdGlobalAccess`: `boolean`;
+> `ZodOptional`\<`ZodEnum`\<\[`"useFsEvents"`, `"fixedPollingInterval"`, `"dynamicPriorityPolling"`,
+> `"fixedChunkSizePolling"`\]\>\>; `watchFile`:
+> `ZodOptional`\<`ZodEnum`\<\[`"fixedPollingInterval"`, `"priorityPollingInterval"`,
+> `"dynamicPriorityPolling"`, `"useFsEvents"`, `"useFsEventsOnParentDirectory"`,
+> `"fixedChunkSizePolling"`\]\>\>; \}, `"strict"`, \{ `allowJs`: `boolean`;
+> `allowSyntheticDefaultImports`: `boolean`; `allowUmdGlobalAccess`: `boolean`;
 > `allowUnreachableCode`: `boolean`; `allowUnusedLabels`: `boolean`; `alwaysStrict`: `boolean`;
 > `assumeChangesOnlyAffectDirectDependencies`: `boolean`; `baseUrl`: `string`; `charset`: `string`;
 > `checkJs`: `boolean`; `composite`: `boolean`; `declaration`: `boolean`; `declarationDir`:
@@ -395,6 +396,5 @@
 > `string`[]; `include`: `string`[]; `references`: `object`[]; `typeAcquisition`: \{ `enable`:
 > `boolean`; `exclude`: `string`[]; `include`: `string`[]; \}; \}\>
 
-## Defined in
-
-[packages/zod-utils/source/types/TsconfigJson.ts:333](https://github.com/jakubmazanec/tools/blob/92d3fc1374d1ad6d45198d05d061e0f856a89434/packages/zod-utils/source/types/TsconfigJson.ts#L333)
+Defined in:
+[packages/zod-utils/source/types/TsconfigJson.ts:333](https://github.com/jakubmazanec/tools/blob/7c5f40d811171692b72a47160bc33d644201b16a/packages/zod-utils/source/types/TsconfigJson.ts#L333)

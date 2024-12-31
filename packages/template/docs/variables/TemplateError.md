@@ -7,6 +7,9 @@
 > `const` **TemplateError**: (`code`, `options`?) => `CustomErrorWithData`\<`"INVALID_ATTRIBUTES"`
 > \| `"FAILED_FORMAT"` \| `"FAILED_RENDER"` \| `"UNKNOWN_ERROR"`, `TemplateErrorData`\>
 
+Defined in:
+[packages/template/source/TemplateError.ts:9](https://github.com/jakubmazanec/tools/blob/7c5f40d811171692b72a47160bc33d644201b16a/packages/template/source/TemplateError.ts#L9)
+
 A subclass of `Error` that indicates a template failure.
 
 ## Parameters
@@ -23,7 +26,3 @@ A subclass of `Error` that indicates a template failure.
 
 `CustomErrorWithData`\<`"INVALID_ATTRIBUTES"` \| `"FAILED_FORMAT"` \| `"FAILED_RENDER"` \|
 `"UNKNOWN_ERROR"`, `TemplateErrorData`\>
-
-## Defined in
-
-[packages/template/source/TemplateError.ts:9](https://github.com/jakubmazanec/tools/blob/92d3fc1374d1ad6d45198d05d061e0f856a89434/packages/template/source/TemplateError.ts#L9)

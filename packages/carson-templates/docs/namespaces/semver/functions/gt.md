@@ -6,6 +6,8 @@
 
 > **gt**(`v1`, `v2`, `optionsOrLoose`?): `boolean`
 
+Defined in: node_modules/@types/semver/functions/gt.d.ts:7
+
 v1 > v2
 
 ## Parameters
@@ -25,7 +27,3 @@ v1 > v2
 ## Returns
 
 `boolean`
-
-## Defined in
-
-node_modules/@types/semver/functions/gt.d.ts:7

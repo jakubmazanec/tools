@@ -6,6 +6,8 @@
 
 > **coerce**(`version`, `options`?): [`SemVer`](../classes/SemVer.md) \| `null`
 
+Defined in: node_modules/@types/semver/functions/coerce.d.ts:7
+
 Coerces a string to SemVer if possible
 
 ## Parameters
@@ -21,7 +23,3 @@ Coerces a string to SemVer if possible
 ## Returns
 
 [`SemVer`](../classes/SemVer.md) \| `null`
-
-## Defined in
-
-node_modules/@types/semver/functions/coerce.d.ts:7

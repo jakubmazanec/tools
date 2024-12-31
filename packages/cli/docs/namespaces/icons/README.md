@@ -4,9 +4,7 @@
 
 # icons
 
-## Index
-
-### Variables
+## Variables
 
 - [error](variables/error.md)
 - [info](variables/info.md)

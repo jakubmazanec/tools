@@ -11,6 +11,9 @@
 > [`CustomErrorWithData`](../type-aliases/CustomErrorWithData.md)\<`ErrorCode` \| _typeof_
 > [`UNKNOWN_ERROR`](../variables/UNKNOWN_ERROR.md), `z.infer`\<`ErrorData`\>\>
 
+Defined in:
+[createCustomErrorWithData.ts:21](https://github.com/jakubmazanec/tools/blob/7c5f40d811171692b72a47160bc33d644201b16a/packages/error/source/createCustomErrorWithData.ts#L21)
+
 Function for creating custom error classes. Such custom error class properly subclasses built-in
 `Error`, simplifies generating error messages via predefined error codes and allows attaching custom
 data to the error instance.
@@ -63,16 +66,15 @@ Class that implements [CustomErrorWithData](../type-aliases/CustomErrorWithData.
 [`CustomErrorWithData`](../type-aliases/CustomErrorWithData.md)\<`ErrorCode` \| _typeof_
 [`UNKNOWN_ERROR`](../variables/UNKNOWN_ERROR.md), `z.infer`\<`ErrorData`\>\>
 
-### Defined in
-
-[createCustomErrorWithData.ts:21](https://github.com/jakubmazanec/tools/blob/92d3fc1374d1ad6d45198d05d061e0f856a89434/packages/error/source/createCustomErrorWithData.ts#L21)
-
 ## Call Signature
 
 > **createCustomErrorWithData**\<`ErrorCode`, `ErrorData`\>(`errorName`, `errorMessages`,
 > `errorData`): (`code`, `options`?) =>
 > [`CustomErrorWithData`](../type-aliases/CustomErrorWithData.md)\<`ErrorCode` \| _typeof_
 > [`UNKNOWN_ERROR`](../variables/UNKNOWN_ERROR.md), `InstanceType`\<`ErrorData`\>\>
+
+Defined in:
+[createCustomErrorWithData.ts:29](https://github.com/jakubmazanec/tools/blob/7c5f40d811171692b72a47160bc33d644201b16a/packages/error/source/createCustomErrorWithData.ts#L29)
 
 Function for creating custom error classes. Such custom error class properly subclasses built-in
 `Error`, simplifies generating error messages via predefined error codes and allows attaching custom
@@ -125,7 +127,3 @@ Class that implements [CustomErrorWithData](../type-aliases/CustomErrorWithData.
 
 [`CustomErrorWithData`](../type-aliases/CustomErrorWithData.md)\<`ErrorCode` \| _typeof_
 [`UNKNOWN_ERROR`](../variables/UNKNOWN_ERROR.md), `InstanceType`\<`ErrorData`\>\>
-
-### Defined in
-
-[createCustomErrorWithData.ts:29](https://github.com/jakubmazanec/tools/blob/92d3fc1374d1ad6d45198d05d061e0f856a89434/packages/error/source/createCustomErrorWithData.ts#L29)

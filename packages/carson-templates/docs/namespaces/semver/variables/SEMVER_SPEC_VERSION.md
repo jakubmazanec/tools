@@ -6,6 +6,4 @@
 
 > `const` **SEMVER_SPEC_VERSION**: `"2.0.0"`
 
-## Defined in
-
-node_modules/@types/semver/index.d.ts:100
+Defined in: node_modules/@types/semver/index.d.ts:100

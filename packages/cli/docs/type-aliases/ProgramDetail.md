@@ -6,6 +6,9 @@
 
 > **ProgramDetail**: `object`
 
+Defined in:
+[cli/source/program/ProgramDetail.ts:4](https://github.com/jakubmazanec/tools/blob/7c5f40d811171692b72a47160bc33d644201b16a/packages/cli/source/program/ProgramDetail.ts#L4)
+
 Detailed program information.
 
 ## Type declaration
@@ -25,7 +28,3 @@ Detailed program information.
 ### version?
 
 > `optional` **version**: `string`
-
-## Defined in
-
-[cli/source/program/ProgramDetail.ts:4](https://github.com/jakubmazanec/tools/blob/92d3fc1374d1ad6d45198d05d061e0f856a89434/packages/cli/source/program/ProgramDetail.ts#L4)

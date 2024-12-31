@@ -6,6 +6,8 @@
 
 > **parse**(`version`, `optionsOrLoose`?): [`SemVer`](../classes/SemVer.md) \| `null`
 
+Defined in: node_modules/@types/semver/functions/parse.d.ts:7
+
 Return the parsed version as a SemVer object, or null if it's not valid.
 
 ## Parameters
@@ -21,7 +23,3 @@ Return the parsed version as a SemVer object, or null if it's not valid.
 ## Returns
 
 [`SemVer`](../classes/SemVer.md) \| `null`
-
-## Defined in
-
-node_modules/@types/semver/functions/parse.d.ts:7

@@ -4,6 +4,8 @@
 
 # Interface: CoerceOptions
 
+Defined in: node_modules/@types/semver/index.d.ts:113
+
 ## Extends
 
 - [`Options`](Options.md)
@@ -14,9 +16,7 @@
 
 > `optional` **includePrerelease**: `boolean`
 
-#### Defined in
-
-node_modules/@types/semver/index.d.ts:114
+Defined in: node_modules/@types/semver/index.d.ts:114
 
 ---
 
@@ -24,19 +24,19 @@ node_modules/@types/semver/index.d.ts:114
 
 > `optional` **loose**: `boolean`
 
+Defined in: node_modules/@types/semver/index.d.ts:107
+
 #### Inherited from
 
 [`Options`](Options.md).[`loose`](Options.md#loose)
-
-#### Defined in
-
-node_modules/@types/semver/index.d.ts:107
 
 ---
 
 ### rtl?
 
 > `optional` **rtl**: `boolean`
+
+Defined in: node_modules/@types/semver/index.d.ts:126
 
 Used by `coerce()` to coerce from right to left.
 
@@ -56,7 +56,3 @@ coerce('1.2.3.4', {rtl: true});
 #### Since
 
 6.2.0
-
-#### Defined in
-
-node_modules/@types/semver/index.d.ts:126

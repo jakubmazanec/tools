@@ -4,35 +4,33 @@
 
 # semver
 
-## Index
-
-### Namespaces
+## Namespaces
 
 - [inc](namespaces/inc/README.md)
 
-### Classes
+## Classes
 
 - [Comparator](classes/Comparator.md)
 - [Range](classes/Range.md)
 - [SemVer](classes/SemVer.md)
 
-### Interfaces
+## Interfaces
 
 - [CoerceOptions](interfaces/CoerceOptions.md)
 - [Options](interfaces/Options.md)
 - [RangeOptions](interfaces/RangeOptions.md)
 
-### Type Aliases
+## Type Aliases
 
 - [Operator](type-aliases/Operator.md)
 - [ReleaseType](type-aliases/ReleaseType.md)
 
-### Variables
+## Variables
 
 - [RELEASE_TYPES](variables/RELEASE_TYPES.md)
 - [SEMVER_SPEC_VERSION](variables/SEMVER_SPEC_VERSION.md)
 
-### Functions
+## Functions
 
 - [clean](functions/clean.md)
 - [cmp](functions/cmp.md)

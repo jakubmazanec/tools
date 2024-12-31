@@ -9,6 +9,9 @@
 > _extends_ `ReadonlySet`\<infer I\> ? `DeepReadonlySet`\<`I`\> : `T` _extends_ `object` ?
 > `DeepReadonlyObject`\<`T`\> : `unknown`
 
+Defined in:
+[packages/ts-utils/source/types/DeepReadonly.ts:22](https://github.com/jakubmazanec/tools/blob/7c5f40d811171692b72a47160bc33d644201b16a/packages/ts-utils/source/types/DeepReadonly.ts#L22)
+
 Same as built-in `Readonly`, but works recursively:
 
 ```TypeScript
@@ -28,7 +31,3 @@ data.foo.push('bar'); // error TS2339: Property 'push' does not exist on type 'r
 • **T**
 
 Base for the new type
-
-## Defined in
-
-[packages/ts-utils/source/types/DeepReadonly.ts:22](https://github.com/jakubmazanec/tools/blob/92d3fc1374d1ad6d45198d05d061e0f856a89434/packages/ts-utils/source/types/DeepReadonly.ts#L22)

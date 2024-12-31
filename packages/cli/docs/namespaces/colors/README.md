@@ -4,9 +4,7 @@
 
 # colors
 
-## Index
-
-### Variables
+## Variables
 
 - [body](variables/body.md)
 - [failure](variables/failure.md)

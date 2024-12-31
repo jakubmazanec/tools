@@ -6,6 +6,9 @@
 
 > **If**\<`X`, `Y`, `T`, `F`\>: `X` _extends_ `Y` ? `T` : `F`
 
+Defined in:
+[packages/ts-utils/source/types/If.ts:15](https://github.com/jakubmazanec/tools/blob/7c5f40d811171692b72a47160bc33d644201b16a/packages/ts-utils/source/types/If.ts#L15)
+
 `If<X, Y, T, F>` is shorthand for conditional type `X extends Y ? T : F`:
 
 ```TypeScript
@@ -31,7 +34,3 @@ Type returned when `X` is assignable to `Y`
 • **F**
 
 Type returned when `X` isn't assignable to `Y`
-
-## Defined in
-
-[packages/ts-utils/source/types/If.ts:15](https://github.com/jakubmazanec/tools/blob/92d3fc1374d1ad6d45198d05d061e0f856a89434/packages/ts-utils/source/types/If.ts#L15)

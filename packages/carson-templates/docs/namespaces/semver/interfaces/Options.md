@@ -4,6 +4,8 @@
 
 # Interface: Options
 
+Defined in: node_modules/@types/semver/index.d.ts:106
+
 ## Extended by
 
 - [`RangeOptions`](RangeOptions.md)
@@ -15,6 +17,4 @@
 
 > `optional` **loose**: `boolean`
 
-#### Defined in
-
-node_modules/@types/semver/index.d.ts:107
+Defined in: node_modules/@types/semver/index.d.ts:107

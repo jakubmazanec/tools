@@ -6,6 +6,9 @@
 
 > **TemplateOptions**\<`A`, `D`\>: `object`
 
+Defined in:
+[packages/template/source/Template.ts:18](https://github.com/jakubmazanec/tools/blob/7c5f40d811171692b72a47160bc33d644201b16a/packages/template/source/Template.ts#L18)
+
 ## Type Parameters
 
 • **A** _extends_ `AnyZodObject` \| `undefined` = `undefined`
@@ -44,7 +47,3 @@ Zod schema for template data.
 > `optional` **path**: `string`
 
 Template path.
-
-## Defined in
-
-[packages/template/source/Template.ts:18](https://github.com/jakubmazanec/tools/blob/92d3fc1374d1ad6d45198d05d061e0f856a89434/packages/template/source/Template.ts#L18)

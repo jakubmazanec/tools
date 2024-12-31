@@ -5,24 +5,24 @@
 # Variable: packageJsonSchema
 
 > `const` **packageJsonSchema**: `ZodObject`\<\{ `author`:
-> `ZodOptional`\<`ZodUnion`\<[`ZodObject`\<\{ `email`: `ZodOptional`\<`ZodString`\>; `name`:
+> `ZodOptional`\<`ZodUnion`\<\[`ZodObject`\<\{ `email`: `ZodOptional`\<`ZodString`\>; `name`:
 > `ZodString`; `url`: `ZodOptional`\<`ZodString`\>; \}, `"strict"`, \{ `email`: `string`; `name`:
 > `string`; `url`: `string`; \}, \{ `email`: `string`; `name`: `string`; `url`: `string`; \}\>,
-> `ZodString`]\>\>; `bin`: `ZodOptional`\<`ZodUnion`\<[`ZodRecord`, `ZodString`]\>\>; `browser`:
-> `ZodOptional`\<`ZodUnion`\<[`ZodString`, `ZodRecord`\<`ZodUnion`\<[`ZodString`,
-> `ZodLiteral`\<`false`\>]\>\>]\>\>; `bugs`: `ZodOptional`\<`ZodUnion`\<[`ZodObject`\<\{ `email`:
+> `ZodString`\]\>\>; `bin`: `ZodOptional`\<`ZodUnion`\<\[`ZodRecord`, `ZodString`\]\>\>; `browser`:
+> `ZodOptional`\<`ZodUnion`\<\[`ZodString`, `ZodRecord`\<`ZodUnion`\<\[`ZodString`,
+> `ZodLiteral`\<`false`\>\]\>\>\]\>\>; `bugs`: `ZodOptional`\<`ZodUnion`\<\[`ZodObject`\<\{ `email`:
 > `ZodOptional`\<`ZodString`\>; `url`: `ZodOptional`\<`ZodString`\>; \}, `"strict"`, \{ `email`:
-> `string`; `url`: `string`; \}, \{ `email`: `string`; `url`: `string`; \}\>, `ZodString`]\>\>;
-> `bundledDependencies`: `ZodOptional`\<`ZodUnion`\<[`ZodArray`\<`ZodString`\>, `ZodBoolean`]\>\>;
-> `bundleDependencies`: `ZodOptional`\<`ZodUnion`\<[`ZodArray`\<`ZodString`\>, `ZodBoolean`]\>\>;
+> `string`; `url`: `string`; \}, \{ `email`: `string`; `url`: `string`; \}\>, `ZodString`\]\>\>;
+> `bundledDependencies`: `ZodOptional`\<`ZodUnion`\<\[`ZodArray`\<`ZodString`\>, `ZodBoolean`\]\>\>;
+> `bundleDependencies`: `ZodOptional`\<`ZodUnion`\<\[`ZodArray`\<`ZodString`\>, `ZodBoolean`\]\>\>;
 > `config`: `ZodOptional`\<`ZodRecord`\<`ZodUnknown`\>\>; `contributors`:
-> `ZodOptional`\<`ZodArray`\<`ZodUnion`\<[`ZodObject`\<\{ `email`: `ZodOptional`\<`ZodString`\>;
+> `ZodOptional`\<`ZodArray`\<`ZodUnion`\<\[`ZodObject`\<\{ `email`: `ZodOptional`\<`ZodString`\>;
 > `name`: `ZodString`; `url`: `ZodOptional`\<`ZodString`\>; \}, `"strict"`, \{ `email`: `string`;
 > `name`: `string`; `url`: `string`; \}, \{ `email`: `string`; `name`: `string`; `url`: `string`;
-> \}\>, `ZodString`]\>\>\>; `cpu`: `ZodOptional`\<`ZodArray`\<`ZodUnion`\<[`ZodEnum`\<[`"!arm"`,
+> \}\>, `ZodString`\]\>\>\>; `cpu`: `ZodOptional`\<`ZodArray`\<`ZodUnion`\<\[`ZodEnum`\<\[`"!arm"`,
 > `"!arm64"`, `"!ia32"`, `"!mips"`, `"!mipsel"`, `"!ppc"`, `"!ppc64"`, `"!s390"`, `"!s390x"`,
 > `"!x32"`, `"!x64"`, `"arm"`, `"arm64"`, `"ia32"`, `"mips"`, `"mipsel"`, `"ppc"`, `"ppc64"`,
-> `"s390"`, `"s390x"`, `"x32"`, `"x64"`]\>, `ZodString`]\>\>\>; `dependencies`:
+> `"s390"`, `"s390x"`, `"x32"`, `"x64"`\]\>, `ZodString`\]\>\>\>; `dependencies`:
 > `ZodOptional`\<`ZodRecord`\>; `description`: `ZodOptional`\<`ZodString`\>; `devDependencies`:
 > `ZodOptional`\<`ZodRecord`\>; `directories`: `ZodOptional`\<`ZodObject`\<\{ `bin`:
 > `ZodOptional`\<`ZodString`\>; `doc`: `ZodOptional`\<`ZodString`\>; `example`:
@@ -33,41 +33,41 @@
 > `v`: `string`; \}\>\>; `engines`: `ZodOptional`\<`ZodIntersection`\<`ZodObject`\<\{ `node`:
 > `ZodOptional`\<`ZodString`\>; `npm`: `ZodOptional`\<`ZodString`\>; \}, `"strip"`, \{ `node`:
 > `string`; `npm`: `string`; \}, \{ `node`: `string`; `npm`: `string`; \}\>, `ZodRecord`\>\>;
-> `esnext`: `ZodOptional`\<`ZodUnion`\<[`ZodString`, `ZodRecord`]\>\>; `exports`:
+> `esnext`: `ZodOptional`\<`ZodUnion`\<\[`ZodString`, `ZodRecord`\]\>\>; `exports`:
 > `ZodOptional`\<`ZodType`\<`PackageJsonExports`, `PackageJsonExports`\>\>; `files`:
 > `ZodOptional`\<`ZodArray`\<`ZodString`\>\>; `flat`: `ZodOptional`\<`ZodBoolean`\>; `funding`:
-> `ZodOptional`\<`ZodUnion`\<[`ZodArray`\<`ZodUnion`\<[`ZodObject`\<\{ `type`: `ZodOptional`\<...\>;
-> `url`: `ZodString`; \}, `"strict"`, \{ `type`: ... \| ...; `url`: `string`; \}, \{ `type`: ... \|
-> ...; `url`: `string`; \}\>, `ZodString`]\>\>, `ZodUnion`\<[`ZodObject`\<\{ `type`:
-> `ZodOptional`\<`ZodUnion`\<...\>\>; `url`: `ZodString`; \}, `"strict"`, \{ `type`: `string`;
-> `url`: `string`; \}, \{ `type`: `string`; `url`: `string`; \}\>, `ZodString`]\>]\>\>; `homepage`:
-> `ZodOptional`\<`ZodString`\>; `keywords`: `ZodOptional`\<`ZodArray`\<`ZodString`\>\>; `license`:
-> `ZodOptional`\<`ZodString`\>; `main`: `ZodOptional`\<`ZodString`\>; `maintainers`:
-> `ZodOptional`\<`ZodArray`\<`ZodUnion`\<[`ZodObject`\<\{ `email`: `ZodOptional`\<`ZodString`\>;
+> `ZodOptional`\<`ZodUnion`\<\[`ZodArray`\<`ZodUnion`\<\[`ZodObject`\<\{ `type`:
+> `ZodOptional`\<...\>; `url`: `ZodString`; \}, `"strict"`, \{ `type`: ... \| ...; `url`: `string`;
+> \}, \{ `type`: ... \| ...; `url`: `string`; \}\>, `ZodString`\]\>\>, `ZodUnion`\<\[`ZodObject`\<\{
+> `type`: `ZodOptional`\<`ZodUnion`\<...\>\>; `url`: `ZodString`; \}, `"strict"`, \{ `type`:
+> `string`; `url`: `string`; \}, \{ `type`: `string`; `url`: `string`; \}\>, `ZodString`\]\>\]\>\>;
+> `homepage`: `ZodOptional`\<`ZodString`\>; `keywords`: `ZodOptional`\<`ZodArray`\<`ZodString`\>\>;
+> `license`: `ZodOptional`\<`ZodString`\>; `main`: `ZodOptional`\<`ZodString`\>; `maintainers`:
+> `ZodOptional`\<`ZodArray`\<`ZodUnion`\<\[`ZodObject`\<\{ `email`: `ZodOptional`\<`ZodString`\>;
 > `name`: `ZodString`; `url`: `ZodOptional`\<`ZodString`\>; \}, `"strict"`, \{ `email`: `string`;
 > `name`: `string`; `url`: `string`; \}, \{ `email`: `string`; `name`: `string`; `url`: `string`;
-> \}\>, `ZodString`]\>\>\>; `man`: `ZodOptional`\<`ZodUnion`\<[`ZodArray`\<`ZodString`\>,
-> `ZodString`]\>\>; `module`: `ZodOptional`\<`ZodString`\>; `name`: `ZodOptional`\<`ZodString`\>;
+> \}\>, `ZodString`\]\>\>\>; `man`: `ZodOptional`\<`ZodUnion`\<\[`ZodArray`\<`ZodString`\>,
+> `ZodString`\]\>\>; `module`: `ZodOptional`\<`ZodString`\>; `name`: `ZodOptional`\<`ZodString`\>;
 > `optionalDependencies`: `ZodOptional`\<`ZodRecord`\>; `os`:
-> `ZodOptional`\<`ZodArray`\<`ZodUnion`\<[`ZodEnum`\<[`"!aix"`, `"!darwin"`, `"!freebsd"`,
+> `ZodOptional`\<`ZodArray`\<`ZodUnion`\<\[`ZodEnum`\<\[`"!aix"`, `"!darwin"`, `"!freebsd"`,
 > `"!linux"`, `"!openbsd"`, `"!sunos"`, `"!win32"`, `"aix"`, `"darwin"`, `"freebsd"`, `"linux"`,
-> `"openbsd"`, `"sunos"`, `"win32"`]\>, `ZodString`]\>\>\>; `overrides`:
-> `ZodOptional`\<`ZodRecord`\<`ZodUnion`\<[`ZodString`, `ZodRecord`\<`ZodUnion`\<[`ZodString`,
-> `ZodRecord`\<`ZodUnknown`\>]\>\>]\>\>\>; `packageManager`: `ZodOptional`\<`ZodString`\>;
+> `"openbsd"`, `"sunos"`, `"win32"`\]\>, `ZodString`\]\>\>\>; `overrides`:
+> `ZodOptional`\<`ZodRecord`\<`ZodUnion`\<\[`ZodString`, `ZodRecord`\<`ZodUnion`\<\[`ZodString`,
+> `ZodRecord`\<`ZodUnknown`\>\]\>\>\]\>\>\>; `packageManager`: `ZodOptional`\<`ZodString`\>;
 > `peerDependencies`: `ZodOptional`\<`ZodRecord`\>; `peerDependenciesMeta`:
 > `ZodOptional`\<`ZodRecord`\<`ZodObject`\<\{ `optional`: `ZodBoolean`; \}, `"strip"`, \{
 > `optional`: `boolean`; \}, \{ `optional`: `boolean`; \}\>\>\>; `preferGlobal`:
 > `ZodOptional`\<`ZodBoolean`\>; `private`: `ZodOptional`\<`ZodBoolean`\>; `publishConfig`:
-> `ZodOptional`\<`ZodIntersection`\<`ZodObject`\<\{ `access`: `ZodOptional`\<`ZodEnum`\<[`"public"`,
-> `"restricted"`]\>\>; `registry`: `ZodOptional`\<`ZodString`\>; `tag`:
-> `ZodOptional`\<`ZodString`\>; \}, `"strip"`, \{ `access`: `"public"` \| `"restricted"`;
-> `registry`: `string`; `tag`: `string`; \}, \{ `access`: `"public"` \| `"restricted"`; `registry`:
-> `string`; `tag`: `string`; \}\>, `ZodRecord`\<`ZodUnknown`\>\>\>; `repository`:
-> `ZodOptional`\<`ZodUnion`\<[`ZodObject`\<\{ `directory`: `ZodOptional`\<`ZodString`\>; `type`:
-> `ZodString`; `url`: `ZodString`; \}, `"strict"`, \{ `directory`: `string`; `type`: `string`;
-> `url`: `string`; \}, \{ `directory`: `string`; `type`: `string`; `url`: `string`; \}\>,
-> `ZodString`]\>\>; `resolutions`: `ZodOptional`\<`ZodRecord`\>; `scripts`:
-> `ZodOptional`\<`ZodIntersection`\<`ZodRecord`, `ZodObject`\<\{ `install`:
+> `ZodOptional`\<`ZodIntersection`\<`ZodObject`\<\{ `access`:
+> `ZodOptional`\<`ZodEnum`\<\[`"public"`, `"restricted"`\]\>\>; `registry`:
+> `ZodOptional`\<`ZodString`\>; `tag`: `ZodOptional`\<`ZodString`\>; \}, `"strip"`, \{ `access`:
+> `"public"` \| `"restricted"`; `registry`: `string`; `tag`: `string`; \}, \{ `access`: `"public"`
+> \| `"restricted"`; `registry`: `string`; `tag`: `string`; \}\>, `ZodRecord`\<`ZodUnknown`\>\>\>;
+> `repository`: `ZodOptional`\<`ZodUnion`\<\[`ZodObject`\<\{ `directory`:
+> `ZodOptional`\<`ZodString`\>; `type`: `ZodString`; `url`: `ZodString`; \}, `"strict"`, \{
+> `directory`: `string`; `type`: `string`; `url`: `string`; \}, \{ `directory`: `string`; `type`:
+> `string`; `url`: `string`; \}\>, `ZodString`\]\>\>; `resolutions`: `ZodOptional`\<`ZodRecord`\>;
+> `scripts`: `ZodOptional`\<`ZodIntersection`\<`ZodRecord`, `ZodObject`\<\{ `install`:
 > `ZodOptional`\<`ZodString`\>; `postinstall`: `ZodOptional`\<`ZodString`\>; `postpack`:
 > `ZodOptional`\<`ZodString`\>; `postpublish`: `ZodOptional`\<`ZodString`\>; `postrestart`:
 > `ZodOptional`\<`ZodString`\>; `poststart`: `ZodOptional`\<`ZodString`\>; `poststop`:
@@ -96,14 +96,14 @@
 > `string`; `prestop`: `string`; `pretest`: `string`; `preuninstall`: `string`; `preversion`:
 > `string`; `publish`: `string`; `restart`: `string`; `start`: `string`; `stop`: `string`; `test`:
 > `string`; `uninstall`: `string`; `version`: `string`; \}\>\>\>; `sideEffects`:
-> `ZodOptional`\<`ZodUnion`\<[`ZodArray`\<`ZodString`\>, `ZodBoolean`]\>\>; `source`:
-> `ZodOptional`\<`ZodString`\>; `type`: `ZodOptional`\<`ZodUnion`\<[`ZodLiteral`\<`"commonjs"`\>,
-> `ZodLiteral`\<`"module"`\>]\>\>; `types`: `ZodOptional`\<`ZodString`\>; `typings`:
+> `ZodOptional`\<`ZodUnion`\<\[`ZodArray`\<`ZodString`\>, `ZodBoolean`\]\>\>; `source`:
+> `ZodOptional`\<`ZodString`\>; `type`: `ZodOptional`\<`ZodUnion`\<\[`ZodLiteral`\<`"commonjs"`\>,
+> `ZodLiteral`\<`"module"`\>\]\>\>; `types`: `ZodOptional`\<`ZodString`\>; `typings`:
 > `ZodOptional`\<`ZodString`\>; `version`: `ZodOptional`\<`ZodString`\>; `workspaces`:
-> `ZodOptional`\<`ZodUnion`\<[`ZodArray`\<`ZodString`\>, `ZodObject`\<\{ `nohoist`:
+> `ZodOptional`\<`ZodUnion`\<\[`ZodArray`\<`ZodString`\>, `ZodObject`\<\{ `nohoist`:
 > `ZodOptional`\<`ZodArray`\<`ZodString`\>\>; `packages`:
 > `ZodOptional`\<`ZodArray`\<`ZodString`\>\>; \}, `"strict"`, \{ `nohoist`: `string`[]; `packages`:
-> `string`[]; \}, \{ `nohoist`: `string`[]; `packages`: `string`[]; \}\>]\>\>; \}, `"strip"`, \{
+> `string`[]; \}, \{ `nohoist`: `string`[]; `packages`: `string`[]; \}\>\]\>\>; \}, `"strip"`, \{
 > `author`: `string` \| \{ `email`: `string`; `name`: `string`; `url`: `string`; \}; `bin`: `string`
 > \| `Record`\<`string`, `string`\>; `browser`: `string` \| `Record`\<`string`, `string` \|
 > `false`\>; `bugs`: `string` \| \{ `email`: `string`; `url`: `string`; \}; `bundledDependencies`:
@@ -152,6 +152,5 @@
 > `string`; `type`: `"commonjs"` \| `"module"`; `types`: `string`; `typings`: `string`; `version`:
 > `string`; `workspaces`: `string`[] \| \{ `nohoist`: `string`[]; `packages`: `string`[]; \}; \}\>
 
-## Defined in
-
-[packages/zod-utils/source/types/PackageJson.ts:151](https://github.com/jakubmazanec/tools/blob/92d3fc1374d1ad6d45198d05d061e0f856a89434/packages/zod-utils/source/types/PackageJson.ts#L151)
+Defined in:
+[packages/zod-utils/source/types/PackageJson.ts:151](https://github.com/jakubmazanec/tools/blob/7c5f40d811171692b72a47160bc33d644201b16a/packages/zod-utils/source/types/PackageJson.ts#L151)

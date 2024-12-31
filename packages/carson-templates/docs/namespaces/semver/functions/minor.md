@@ -6,6 +6,8 @@
 
 > **minor**(`version`, `optionsOrLoose`?): `number`
 
+Defined in: node_modules/@types/semver/functions/minor.d.ts:7
+
 Return the minor version number.
 
 ## Parameters
@@ -21,7 +23,3 @@ Return the minor version number.
 ## Returns
 
 `number`
-
-## Defined in
-
-node_modules/@types/semver/functions/minor.d.ts:7

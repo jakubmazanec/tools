@@ -11,6 +11,9 @@
 > `"DUPLICATE_PROJECT_NAME"` \| `"DUPLICATE_PROJECT_PATH"` \| `"TOO_MANY_PROJECTS"` \|
 > `"PROJECT_GLOBS_MISMATCH"`, `WorkspaceErrorData`\>
 
+Defined in:
+[packages/carson/source/workspace/WorkspaceError.ts:7](https://github.com/jakubmazanec/tools/blob/7c5f40d811171692b72a47160bc33d644201b16a/packages/carson/source/workspace/WorkspaceError.ts#L7)
+
 A subclass of `Error` that indicates a workspace failure.
 
 ## Parameters
@@ -33,7 +36,3 @@ A subclass of `Error` that indicates a workspace failure.
 `"NO_WORKSPACE_FOUND"` \| `"PATH_MISMATCH"` \| `"WORKSPACE_PATH_NOT_EMPTY"` \|
 `"DUPLICATE_PROJECT_NAME"` \| `"DUPLICATE_PROJECT_PATH"` \| `"TOO_MANY_PROJECTS"` \|
 `"PROJECT_GLOBS_MISMATCH"`, `WorkspaceErrorData`\>
-
-## Defined in
-
-[packages/carson/source/workspace/WorkspaceError.ts:7](https://github.com/jakubmazanec/tools/blob/92d3fc1374d1ad6d45198d05d061e0f856a89434/packages/carson/source/workspace/WorkspaceError.ts#L7)

@@ -6,6 +6,8 @@
 
 > **major**(`version`, `optionsOrLoose`?): `number`
 
+Defined in: node_modules/@types/semver/functions/major.d.ts:7
+
 Return the major version number.
 
 ## Parameters
@@ -21,7 +23,3 @@ Return the major version number.
 ## Returns
 
 `number`
-
-## Defined in
-
-node_modules/@types/semver/functions/major.d.ts:7

@@ -9,6 +9,9 @@
 > `If`\<`NonNullable`\<`O`\>\[`"throwOnZodError"`\], `true`, `z.infer`\<`S`\>, `z.infer`\<`S`\> \|
 > `ZodError`\<`z.infer`\<`S`\>\>\>\>
 
+Defined in:
+[packages/zod-utils/source/utils/readJson.ts:12](https://github.com/jakubmazanec/tools/blob/7c5f40d811171692b72a47160bc33d644201b16a/packages/zod-utils/source/utils/readJson.ts#L12)
+
 ## Type Parameters
 
 • **S** _extends_ `ZodTypeAny`
@@ -34,7 +37,3 @@
 `Promise`\<`O` _extends_ `undefined` ? `z.infer`\<`S`\> \| `ZodError`\<`z.infer`\<`S`\>\> :
 `If`\<`NonNullable`\<`O`\>\[`"throwOnZodError"`\], `true`, `z.infer`\<`S`\>, `z.infer`\<`S`\> \|
 `ZodError`\<`z.infer`\<`S`\>\>\>\>
-
-## Defined in
-
-[packages/zod-utils/source/utils/readJson.ts:12](https://github.com/jakubmazanec/tools/blob/92d3fc1374d1ad6d45198d05d061e0f856a89434/packages/zod-utils/source/utils/readJson.ts#L12)

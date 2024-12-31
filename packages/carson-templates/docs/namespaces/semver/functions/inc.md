@@ -8,6 +8,8 @@
 
 > **inc**(`version`, `release`, `optionsOrLoose`?, `identifier`?): `string` \| `null`
 
+Defined in: node_modules/@types/semver/functions/inc.d.ts:12
+
 Return the version incremented by the release type (major, premajor, minor, preminor, patch,
 prepatch, or prerelease), or null if it's not valid.
 
@@ -33,13 +35,11 @@ prepatch, or prerelease), or null if it's not valid.
 
 `string` \| `null`
 
-### Defined in
-
-node_modules/@types/semver/functions/inc.d.ts:12
-
 ## Call Signature
 
 > **inc**(`version`, `release`, `identifier`?, `identifierBase`?): `string` \| `null`
+
+Defined in: node_modules/@types/semver/functions/inc.d.ts:18
 
 Return the version incremented by the release type (major, premajor, minor, preminor, patch,
 prepatch, or prerelease), or null if it's not valid.
@@ -65,7 +65,3 @@ prepatch, or prerelease), or null if it's not valid.
 ### Returns
 
 `string` \| `null`
-
-### Defined in
-
-node_modules/@types/semver/functions/inc.d.ts:18

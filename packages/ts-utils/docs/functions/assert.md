@@ -6,6 +6,9 @@
 
 > **assert**(`condition`, `errorMessage`?): `asserts condition`
 
+Defined in:
+[packages/ts-utils/source/utils/assert.ts:39](https://github.com/jakubmazanec/tools/blob/7c5f40d811171692b72a47160bc33d644201b16a/packages/ts-utils/source/utils/assert.ts#L39)
+
 A function that throws [AssertionError](../classes/AssertionError.md) (with optional message defined
 with `errorMessage`) if `condition` is falsy. You can use it to narrow types:
 
@@ -42,7 +45,3 @@ Message for the `AssertionError`
 ## Returns
 
 `asserts condition`
-
-## Defined in
-
-[packages/ts-utils/source/utils/assert.ts:39](https://github.com/jakubmazanec/tools/blob/92d3fc1374d1ad6d45198d05d061e0f856a89434/packages/ts-utils/source/utils/assert.ts#L39)

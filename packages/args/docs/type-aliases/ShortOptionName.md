@@ -10,8 +10,7 @@
 > \| `"P"` \| `"q"` \| `"Q"` \| `"r"` \| `"R"` \| `"s"` \| `"S"` \| `"t"` \| `"T"` \| `"u"` \| `"U"`
 > \| `"v"` \| `"V"` \| `"w"` \| `"W"` \| `"x"` \| `"X"` \| `"y"` \| `"Y"` \| `"z"` \| `"Z"`
 
+Defined in:
+[args/source/ShortOptionName.ts:2](https://github.com/jakubmazanec/tools/blob/7c5f40d811171692b72a47160bc33d644201b16a/packages/args/source/ShortOptionName.ts#L2)
+
 Short option name.
-
-## Defined in
-
-[args/source/ShortOptionName.ts:2](https://github.com/jakubmazanec/tools/blob/92d3fc1374d1ad6d45198d05d061e0f856a89434/packages/args/source/ShortOptionName.ts#L2)

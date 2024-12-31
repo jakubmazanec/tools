@@ -6,6 +6,8 @@
 
 > **subset**(`sub`, `dom`, `options`?): `boolean`
 
+Defined in: node_modules/@types/semver/ranges/subset.d.ts:7
+
 Return true if the subRange range is entirely contained by the superRange range.
 
 ## Parameters
@@ -25,7 +27,3 @@ Return true if the subRange range is entirely contained by the superRange range.
 ## Returns
 
 `boolean`
-
-## Defined in
-
-node_modules/@types/semver/ranges/subset.d.ts:7

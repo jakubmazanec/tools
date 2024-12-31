@@ -6,6 +6,9 @@
 
 > **ProgramStreams**: `object`
 
+Defined in:
+[cli/source/program/ProgramStreams.ts:4](https://github.com/jakubmazanec/tools/blob/7c5f40d811171692b72a47160bc33d644201b16a/packages/cli/source/program/ProgramStreams.ts#L4)
+
 [Program](../classes/Program.md) streams;
 
 ## Type declaration
@@ -21,7 +24,3 @@
 ### stdout
 
 > **stdout**: `NodeJS.WriteStream`
-
-## Defined in
-
-[cli/source/program/ProgramStreams.ts:4](https://github.com/jakubmazanec/tools/blob/92d3fc1374d1ad6d45198d05d061e0f856a89434/packages/cli/source/program/ProgramStreams.ts#L4)

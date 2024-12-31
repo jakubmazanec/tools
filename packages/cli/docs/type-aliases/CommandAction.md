@@ -6,6 +6,9 @@
 
 > **CommandAction**\<`A`, `B`, `C`, `D`, `E`\>: (`parsedArgs`, `program`) => `Promise`\<`void`\>
 
+Defined in:
+[cli/source/program/CommandAction.ts:8](https://github.com/jakubmazanec/tools/blob/7c5f40d811171692b72a47160bc33d644201b16a/packages/cli/source/program/CommandAction.ts#L8)
+
 Command action.
 
 ## Type Parameters
@@ -25,7 +28,7 @@ Command action.
 ### parsedArgs
 
 `Arguments`\<\{ `allowUnknownOptions`: `D`; `allowUnknownParameters`: `E`; `commands`: readonly
-[`A`]; `options`: `C`; `parameters`: `B`; \}\>
+\[`A`\]; `options`: `C`; `parameters`: `B`; \}\>
 
 ### program
 
@@ -34,7 +37,3 @@ Command action.
 ## Returns
 
 `Promise`\<`void`\>
-
-## Defined in
-
-[cli/source/program/CommandAction.ts:8](https://github.com/jakubmazanec/tools/blob/92d3fc1374d1ad6d45198d05d061e0f856a89434/packages/cli/source/program/CommandAction.ts#L8)

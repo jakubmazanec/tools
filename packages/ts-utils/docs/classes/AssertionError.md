@@ -4,6 +4,9 @@
 
 # Class: AssertionError
 
+Defined in:
+[packages/ts-utils/source/utils/assert.ts:4](https://github.com/jakubmazanec/tools/blob/7c5f40d811171692b72a47160bc33d644201b16a/packages/ts-utils/source/utils/assert.ts#L4)
+
 A subclass of `Error` that indicates an assertion failure.
 
 ## Extends
@@ -15,6 +18,9 @@ A subclass of `Error` that indicates an assertion failure.
 ### new AssertionError()
 
 > **new AssertionError**(`message`?): [`AssertionError`](AssertionError.md)
+
+Defined in:
+[packages/ts-utils/source/utils/assert.ts:8](https://github.com/jakubmazanec/tools/blob/7c5f40d811171692b72a47160bc33d644201b16a/packages/ts-utils/source/utils/assert.ts#L8)
 
 #### Parameters
 
@@ -32,23 +38,17 @@ Message added to the default error message
 
 `Error.constructor`
 
-#### Defined in
-
-[packages/ts-utils/source/utils/assert.ts:8](https://github.com/jakubmazanec/tools/blob/92d3fc1374d1ad6d45198d05d061e0f856a89434/packages/ts-utils/source/utils/assert.ts#L8)
-
 ## Properties
 
 ### cause?
 
 > `optional` **cause**: `unknown`
 
+Defined in: node_modules/typescript/lib/lib.es2022.error.d.ts:26
+
 #### Inherited from
 
 `Error.cause`
-
-#### Defined in
-
-node_modules/typescript/lib/lib.es2022.error.d.ts:26
 
 ---
 
@@ -56,13 +56,11 @@ node_modules/typescript/lib/lib.es2022.error.d.ts:26
 
 > **message**: `string`
 
+Defined in: node_modules/typescript/lib/lib.es5.d.ts:1077
+
 #### Inherited from
 
 `Error.message`
-
-#### Defined in
-
-node_modules/typescript/lib/lib.es5.d.ts:1077
 
 ---
 
@@ -70,13 +68,11 @@ node_modules/typescript/lib/lib.es5.d.ts:1077
 
 > **name**: `string`
 
+Defined in: node_modules/typescript/lib/lib.es5.d.ts:1076
+
 #### Inherited from
 
 `Error.name`
-
-#### Defined in
-
-node_modules/typescript/lib/lib.es5.d.ts:1076
 
 ---
 
@@ -84,19 +80,19 @@ node_modules/typescript/lib/lib.es5.d.ts:1076
 
 > `optional` **stack**: `string`
 
+Defined in: node_modules/typescript/lib/lib.es5.d.ts:1078
+
 #### Inherited from
 
 `Error.stack`
-
-#### Defined in
-
-node_modules/typescript/lib/lib.es5.d.ts:1078
 
 ---
 
 ### prepareStackTrace()?
 
 > `static` `optional` **prepareStackTrace**: (`err`, `stackTraces`) => `any`
+
+Defined in: node_modules/@types/node/globals.d.ts:143
 
 Optional override for formatting stack traces
 
@@ -122,29 +118,25 @@ https://v8.dev/docs/stack-trace-api#customizing-stack-traces
 
 `Error.prepareStackTrace`
 
-#### Defined in
-
-node_modules/@types/node/globals.d.ts:143
-
 ---
 
 ### stackTraceLimit
 
 > `static` **stackTraceLimit**: `number`
 
+Defined in: node_modules/@types/node/globals.d.ts:145
+
 #### Inherited from
 
 `Error.stackTraceLimit`
-
-#### Defined in
-
-node_modules/@types/node/globals.d.ts:145
 
 ## Methods
 
 ### captureStackTrace()
 
 > `static` **captureStackTrace**(`targetObject`, `constructorOpt`?): `void`
+
+Defined in: node_modules/@types/node/globals.d.ts:136
 
 Create .stack property on a target object
 
@@ -165,7 +157,3 @@ Create .stack property on a target object
 #### Inherited from
 
 `Error.captureStackTrace`
-
-#### Defined in
-
-node_modules/@types/node/globals.d.ts:136

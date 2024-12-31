@@ -9,6 +9,9 @@
 > \| `"MISSING_OPTION"` \| `"INVALID_OPTION_DEFAULT_AND_CHOICES"` \| `"INVALID_OPTION_NAME"` \|
 > `"REPEATED_OPTION_NAME"` \| `"INVALID_OPTION_ARITY"` \| `"UNKNOWN_ERROR"`\>
 
+Defined in:
+[args/source/ValidationError.ts:6](https://github.com/jakubmazanec/tools/blob/7c5f40d811171692b72a47160bc33d644201b16a/packages/args/source/ValidationError.ts#L6)
+
 A subclass of `Error` that indicates a validation issue.
 
 ## Parameters
@@ -29,7 +32,3 @@ A subclass of `Error` that indicates a validation issue.
 `"INVALID_PARAMETER_DEFAULT_AND_CHOICES"` \| `"INVALID_PARAMETER_ORDER"` \| `"MISSING_OPTION"` \|
 `"INVALID_OPTION_DEFAULT_AND_CHOICES"` \| `"INVALID_OPTION_NAME"` \| `"REPEATED_OPTION_NAME"` \|
 `"INVALID_OPTION_ARITY"` \| `"UNKNOWN_ERROR"`\>
-
-## Defined in
-
-[args/source/ValidationError.ts:6](https://github.com/jakubmazanec/tools/blob/92d3fc1374d1ad6d45198d05d061e0f856a89434/packages/args/source/ValidationError.ts#L6)

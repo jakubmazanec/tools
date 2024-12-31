@@ -6,6 +6,9 @@
 
 > **ProjectCreateOptions**\<`M`\>: `object`
 
+Defined in:
+[packages/carson/source/workspace/ProjectCreateOptions.ts:6](https://github.com/jakubmazanec/tools/blob/7c5f40d811171692b72a47160bc33d644201b16a/packages/carson/source/workspace/ProjectCreateOptions.ts#L6)
+
 [Project.create](../classes/Project.md#create) options parameter.
 
 ## Type Parameters
@@ -33,7 +36,3 @@
 ### workspace
 
 > **workspace**: [`Workspace`](../classes/Workspace.md)\<`M`\>
-
-## Defined in
-
-[packages/carson/source/workspace/ProjectCreateOptions.ts:6](https://github.com/jakubmazanec/tools/blob/92d3fc1374d1ad6d45198d05d061e0f856a89434/packages/carson/source/workspace/ProjectCreateOptions.ts#L6)

@@ -33,6 +33,9 @@
 > string; typings?: string; version?: string; workspaces?: string\[\] \| \{ nohoist?: string\[\];
 > packages?: string\[\] \} \}
 
+Defined in:
+[packages/zod-utils/source/utils/isPackageJson.ts:3](https://github.com/jakubmazanec/tools/blob/7c5f40d811171692b72a47160bc33d644201b16a/packages/zod-utils/source/utils/isPackageJson.ts#L3)
+
 ## Parameters
 
 ### value
@@ -68,7 +71,3 @@ preversion?: string; publish?: string; restart?: string; start?: string; stop?: 
 string; uninstall?: string; version?: string \}; sideEffects?: boolean \| string\[\]; source?:
 string; type?: "commonjs" \| "module"; types?: string; typings?: string; version?: string;
 workspaces?: string\[\] \| \{ nohoist?: string\[\]; packages?: string\[\] \} \}
-
-## Defined in
-
-[packages/zod-utils/source/utils/isPackageJson.ts:3](https://github.com/jakubmazanec/tools/blob/92d3fc1374d1ad6d45198d05d061e0f856a89434/packages/zod-utils/source/utils/isPackageJson.ts#L3)

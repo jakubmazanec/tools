@@ -6,6 +6,8 @@
 
 > **compareBuild**(`a`, `b`, `optionsOrLoose`?): `1` \| `0` \| `-1`
 
+Defined in: node_modules/@types/semver/functions/compare-build.d.ts:16
+
 Compares two versions including build identifiers (the bit after `+` in the semantic version
 string).
 
@@ -36,7 +38,3 @@ Sorts in ascending order when passed to `Array.sort()`.
 ## Since
 
 6.1.0
-
-## Defined in
-
-node_modules/@types/semver/functions/compare-build.d.ts:16

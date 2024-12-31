@@ -6,6 +6,8 @@
 
 > **valid**(`version`, `optionsOrLoose`?): `string` \| `null`
 
+Defined in: node_modules/@types/semver/functions/valid.d.ts:6
+
 Return the parsed version as a string, or null if it's not valid.
 
 ## Parameters
@@ -21,7 +23,3 @@ Return the parsed version as a string, or null if it's not valid.
 ## Returns
 
 `string` \| `null`
-
-## Defined in
-
-node_modules/@types/semver/functions/valid.d.ts:6

@@ -4,6 +4,8 @@
 
 # Interface: RangeOptions
 
+Defined in: node_modules/@types/semver/index.d.ts:110
+
 ## Extends
 
 - [`Options`](Options.md)
@@ -14,9 +16,7 @@
 
 > `optional` **includePrerelease**: `boolean`
 
-#### Defined in
-
-node_modules/@types/semver/index.d.ts:111
+Defined in: node_modules/@types/semver/index.d.ts:111
 
 ---
 
@@ -24,10 +24,8 @@ node_modules/@types/semver/index.d.ts:111
 
 > `optional` **loose**: `boolean`
 
+Defined in: node_modules/@types/semver/index.d.ts:107
+
 #### Inherited from
 
 [`Options`](Options.md).[`loose`](Options.md#loose)
-
-#### Defined in
-
-node_modules/@types/semver/index.d.ts:107

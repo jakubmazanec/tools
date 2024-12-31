@@ -6,6 +6,9 @@
 
 > **CreateProjectProps**: `object`
 
+Defined in:
+[packages/carson/source/commands/create-project/CreateProject.tsx:15](https://github.com/jakubmazanec/tools/blob/7c5f40d811171692b72a47160bc33d644201b16a/packages/carson/source/commands/create-project/CreateProject.tsx#L15)
+
 ## Type declaration
 
 ### args
@@ -17,7 +20,3 @@
 
 > **workspace**: [`Workspace`](../classes/Workspace.md) \|
 > [`Workspace`](../classes/Workspace.md)\<`false`\>
-
-## Defined in
-
-[packages/carson/source/commands/create-project/CreateProject.tsx:15](https://github.com/jakubmazanec/tools/blob/92d3fc1374d1ad6d45198d05d061e0f856a89434/packages/carson/source/commands/create-project/CreateProject.tsx#L15)

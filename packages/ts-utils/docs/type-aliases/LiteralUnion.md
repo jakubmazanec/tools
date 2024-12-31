@@ -6,6 +6,9 @@
 
 > **LiteralUnion**\<`L`, `T`\>: `L` \| `Record`\<`never`, `never`\> & `T`
 
+Defined in:
+[packages/ts-utils/source/types/LiteralUnion.ts:22](https://github.com/jakubmazanec/tools/blob/7c5f40d811171692b72a47160bc33d644201b16a/packages/ts-utils/source/types/LiteralUnion.ts#L22)
+
 Creates union type by combining primitve types and literal types while allowing auto-completion in
 IDEs. This type is a workaround for
 [Microsoft/TypeScript#29729](https://github.com/Microsoft/TypeScript/issues/29729).
@@ -31,7 +34,3 @@ Union of literal types
 • **T** _extends_ [`Primitive`](Primitive.md)
 
 Primitive type
-
-## Defined in
-
-[packages/ts-utils/source/types/LiteralUnion.ts:22](https://github.com/jakubmazanec/tools/blob/92d3fc1374d1ad6d45198d05d061e0f856a89434/packages/ts-utils/source/types/LiteralUnion.ts#L22)

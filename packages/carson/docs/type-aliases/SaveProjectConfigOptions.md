@@ -6,6 +6,9 @@
 
 > **SaveProjectConfigOptions**: `object`
 
+Defined in:
+[packages/carson/source/workspace/saveProjectConfig.ts:11](https://github.com/jakubmazanec/tools/blob/7c5f40d811171692b72a47160bc33d644201b16a/packages/carson/source/workspace/saveProjectConfig.ts#L11)
+
 [saveProjectConfig](../functions/saveProjectConfig.md) options parameter.
 
 ## Type declaration
@@ -17,7 +20,3 @@
 ### projectPath
 
 > **projectPath**: `string`
-
-## Defined in
-
-[packages/carson/source/workspace/saveProjectConfig.ts:11](https://github.com/jakubmazanec/tools/blob/92d3fc1374d1ad6d45198d05d061e0f856a89434/packages/carson/source/workspace/saveProjectConfig.ts#L11)

@@ -8,6 +8,9 @@
 > `UnionToIntersectionHelper`\<`Exclude`\<`U`, `boolean`\>\> & `boolean` :
 > `UnionToIntersectionHelper`\<`U`\>
 
+Defined in:
+[packages/ts-utils/source/types/UnionToIntersection.ts:10](https://github.com/jakubmazanec/tools/blob/7c5f40d811171692b72a47160bc33d644201b16a/packages/ts-utils/source/types/UnionToIntersection.ts#L10)
+
 Converts union type to intersection type:
 
 ```TypeScript
@@ -19,7 +22,3 @@ type Result = UnionToIntersection<{ foo: string } | { bar: string }>; // `typeof
 • **U**
 
 Base for the new type
-
-## Defined in
-
-[packages/ts-utils/source/types/UnionToIntersection.ts:10](https://github.com/jakubmazanec/tools/blob/92d3fc1374d1ad6d45198d05d061e0f856a89434/packages/ts-utils/source/types/UnionToIntersection.ts#L10)

@@ -6,6 +6,8 @@
 
 > **compareLoose**(`v1`, `v2`): `1` \| `0` \| `-1`
 
+Defined in: node_modules/@types/semver/functions/compare-loose.d.ts:3
+
 ## Parameters
 
 ### v1
@@ -19,7 +21,3 @@
 ## Returns
 
 `1` \| `0` \| `-1`
-
-## Defined in
-
-node_modules/@types/semver/functions/compare-loose.d.ts:3

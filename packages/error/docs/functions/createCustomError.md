@@ -8,6 +8,9 @@
 > [`CustomError`](../type-aliases/CustomError.md)\<`ErrorCode` \| _typeof_
 > [`UNKNOWN_ERROR`](../variables/UNKNOWN_ERROR.md)\>
 
+Defined in:
+[createCustomError.ts:13](https://github.com/jakubmazanec/tools/blob/7c5f40d811171692b72a47160bc33d644201b16a/packages/error/source/createCustomError.ts#L13)
+
 Function for creating custom error classes. Such custom error class properly subclasses built-in
 `Error` and simplifies generating error messages via predefined error codes.
 
@@ -49,7 +52,3 @@ Class that implements [CustomError](../type-aliases/CustomError.md).
 
 [`CustomError`](../type-aliases/CustomError.md)\<`ErrorCode` \| _typeof_
 [`UNKNOWN_ERROR`](../variables/UNKNOWN_ERROR.md)\>
-
-## Defined in
-
-[createCustomError.ts:13](https://github.com/jakubmazanec/tools/blob/92d3fc1374d1ad6d45198d05d061e0f856a89434/packages/error/source/createCustomError.ts#L13)

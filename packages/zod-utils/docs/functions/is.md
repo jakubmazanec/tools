@@ -6,6 +6,9 @@
 
 > **is**\<`S`\>(`value`, `schema`): `value is TypeOf<S>`
 
+Defined in:
+[packages/zod-utils/source/utils/is.ts:3](https://github.com/jakubmazanec/tools/blob/7c5f40d811171692b72a47160bc33d644201b16a/packages/zod-utils/source/utils/is.ts#L3)
+
 ## Type Parameters
 
 • **S** _extends_ `ZodTypeAny`
@@ -23,7 +26,3 @@
 ## Returns
 
 `value is TypeOf<S>`
-
-## Defined in
-
-[packages/zod-utils/source/utils/is.ts:3](https://github.com/jakubmazanec/tools/blob/92d3fc1374d1ad6d45198d05d061e0f856a89434/packages/zod-utils/source/utils/is.ts#L3)

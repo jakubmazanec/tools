@@ -6,6 +6,9 @@
 
 > **getMainBranch**(`workspace`): `undefined` \| `string`
 
+Defined in:
+[packages/carson-templates/source/getMainBranch.ts:5](https://github.com/jakubmazanec/tools/blob/7c5f40d811171692b72a47160bc33d644201b16a/packages/carson-templates/source/getMainBranch.ts#L5)
+
 ## Parameters
 
 ### workspace
@@ -15,7 +18,3 @@
 ## Returns
 
 `undefined` \| `string`
-
-## Defined in
-
-[packages/carson-templates/source/getMainBranch.ts:5](https://github.com/jakubmazanec/tools/blob/92d3fc1374d1ad6d45198d05d061e0f856a89434/packages/carson-templates/source/getMainBranch.ts#L5)

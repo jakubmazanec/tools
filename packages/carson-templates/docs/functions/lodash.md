@@ -12,6 +12,8 @@
 > [`Primitive`](../../index/interfaces/Primitive.md)\<`any`\> &
 > [`String`](../../index/interfaces/String.md)
 
+Defined in: node_modules/@types/lodash/common/common.d.ts:94
+
 Creates a lodash object which wraps value to enable implicit method chain sequences. Methods that
 operate on and return arrays, collections, and functions can be chained together. Methods that
 retrieve a single value or may return a primitive value will automatically end the chain sequence
@@ -91,13 +93,11 @@ trimEnd, trimStart, truncate, unescape, uniqueId, upperCase, upperFirst, value, 
 [`Primitive`](../../index/interfaces/Primitive.md)\<`any`\> &
 [`String`](../../index/interfaces/String.md)
 
-### Defined in
-
-node_modules/@types/lodash/common/common.d.ts:94
-
 ## Call Signature
 
 > **lodash**\<`T`\>(`value`): [`String`](../../index/interfaces/String.md)\<`T`\>
+
+Defined in: node_modules/@types/lodash/common/common.d.ts:95
 
 ### Type Parameters
 
@@ -113,13 +113,11 @@ node_modules/@types/lodash/common/common.d.ts:94
 
 [`String`](../../index/interfaces/String.md)\<`T`\>
 
-### Defined in
-
-node_modules/@types/lodash/common/common.d.ts:95
-
 ## Call Signature
 
 > **lodash**\<`T`\>(`value`): [`Primitive`](../../index/interfaces/Primitive.md)\<`T`\>
+
+Defined in: node_modules/@types/lodash/common/common.d.ts:96
 
 ### Type Parameters
 
@@ -135,13 +133,11 @@ node_modules/@types/lodash/common/common.d.ts:95
 
 [`Primitive`](../../index/interfaces/Primitive.md)\<`T`\>
 
-### Defined in
-
-node_modules/@types/lodash/common/common.d.ts:96
-
 ## Call Signature
 
 > **lodash**(`value`): [`String`](../../index/interfaces/String.md)
+
+Defined in: node_modules/@types/lodash/common/common.d.ts:97
 
 ### Parameters
 
@@ -153,13 +149,11 @@ node_modules/@types/lodash/common/common.d.ts:96
 
 [`String`](../../index/interfaces/String.md)
 
-### Defined in
-
-node_modules/@types/lodash/common/common.d.ts:97
-
 ## Call Signature
 
 > **lodash**\<`T`\>(`value`): [`Function`](../../index/interfaces/Function.md)\<`T`\>
+
+Defined in: node_modules/@types/lodash/common/common.d.ts:98
 
 ### Type Parameters
 
@@ -175,13 +169,11 @@ node_modules/@types/lodash/common/common.d.ts:97
 
 [`Function`](../../index/interfaces/Function.md)\<`T`\>
 
-### Defined in
-
-node_modules/@types/lodash/common/common.d.ts:98
-
 ## Call Signature
 
 > **lodash**\<`T`\>(`value`): [`Collection`](../../index/interfaces/Collection.md)\<`T`\>
+
+Defined in: node_modules/@types/lodash/common/common.d.ts:99
 
 ### Type Parameters
 
@@ -197,13 +189,11 @@ node_modules/@types/lodash/common/common.d.ts:98
 
 [`Collection`](../../index/interfaces/Collection.md)\<`T`\>
 
-### Defined in
-
-node_modules/@types/lodash/common/common.d.ts:99
-
 ## Call Signature
 
 > **lodash**\<`T`\>(`value`): [`Object`](../../index/interfaces/Object.md)\<`T`\>
+
+Defined in: node_modules/@types/lodash/common/common.d.ts:100
 
 ### Type Parameters
 
@@ -219,13 +209,11 @@ node_modules/@types/lodash/common/common.d.ts:99
 
 [`Object`](../../index/interfaces/Object.md)\<`T`\>
 
-### Defined in
-
-node_modules/@types/lodash/common/common.d.ts:100
-
 ## Call Signature
 
 > **lodash**\<`T`\>(`value`): [`Primitive`](../../index/interfaces/Primitive.md)\<`T`\>
+
+Defined in: node_modules/@types/lodash/common/common.d.ts:101
 
 ### Type Parameters
 
@@ -240,7 +228,3 @@ node_modules/@types/lodash/common/common.d.ts:100
 ### Returns
 
 [`Primitive`](../../index/interfaces/Primitive.md)\<`T`\>
-
-### Defined in
-
-node_modules/@types/lodash/common/common.d.ts:101

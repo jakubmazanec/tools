@@ -7,12 +7,11 @@
 > **FormProps**\<`C`\>: `FormPropsRows`\<`C`\> _extends_ `Record`\<`number` \| `string` \| `symbol`,
 > `never`\> ? `BoxProps` & `object` : `BoxProps` & `object`
 
+Defined in:
+[cli/source/ui/form/FormProps.ts:34](https://github.com/jakubmazanec/tools/blob/7c5f40d811171692b72a47160bc33d644201b16a/packages/cli/source/ui/form/FormProps.ts#L34)
+
 Form component props.
 
 ## Type Parameters
 
 • **C** _extends_ [`FormConfig`](FormConfig.md)
-
-## Defined in
-
-[cli/source/ui/form/FormProps.ts:34](https://github.com/jakubmazanec/tools/blob/92d3fc1374d1ad6d45198d05d061e0f856a89434/packages/cli/source/ui/form/FormProps.ts#L34)

@@ -7,6 +7,9 @@
 > **RequiredKeys**\<`T`\>:
 > `Exclude`\<`{ [K in keyof T]: T extends Record<K, T[K]> ? K : never }`\[keyof `T`\], `undefined`\>
 
+Defined in:
+[packages/ts-utils/source/types/RequiredKeys.ts:10](https://github.com/jakubmazanec/tools/blob/7c5f40d811171692b72a47160bc33d644201b16a/packages/ts-utils/source/types/RequiredKeys.ts#L10)
+
 Extracts the non-optional keys of type `T`:
 
 ```TypeScript
@@ -18,7 +21,3 @@ type Result = RequiredKeys<{ foo: number; bar: string; baz?: boolean; }>; // `ty
 • **T** _extends_ `object`
 
 Base for the new type
-
-## Defined in
-
-[packages/ts-utils/source/types/RequiredKeys.ts:10](https://github.com/jakubmazanec/tools/blob/92d3fc1374d1ad6d45198d05d061e0f856a89434/packages/ts-utils/source/types/RequiredKeys.ts#L10)

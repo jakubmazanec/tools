@@ -6,6 +6,9 @@
 
 > **TemplateRender**\<`A`, `D`\>: `object`
 
+Defined in:
+[packages/template/source/TemplateRender.ts:11](https://github.com/jakubmazanec/tools/blob/7c5f40d811171692b72a47160bc33d644201b16a/packages/template/source/TemplateRender.ts#L11)
+
 An object type representing the result of a template render.
 
 ## Type Parameters
@@ -40,7 +43,3 @@ Rendered template content.
 > **data**: `D` _extends_ `undefined` ? `null` : `z.infer`\<`NonNullable`\<`D`\>\>
 
 Data used to render the template.
-
-## Defined in
-
-[packages/template/source/TemplateRender.ts:11](https://github.com/jakubmazanec/tools/blob/92d3fc1374d1ad6d45198d05d061e0f856a89434/packages/template/source/TemplateRender.ts#L11)
