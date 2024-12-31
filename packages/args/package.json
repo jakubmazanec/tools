@@ -37,7 +37,7 @@
     "@types/lodash.camelcase": "^4.3.9",
     "@types/node": "^22.9.0",
     "@vitest/coverage-v8": "^2.1.5",
-    "concurrently": "^9.1.1",
+    "concurrently": "^9.1.2",
     "del-cli": "^6.0.0",
     "esbuild": "^0.24.2",
     "eslint": "^9.15.0",
