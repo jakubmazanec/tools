@@ -8,4 +8,4 @@
 
 ## Defined in
 
-[packages/zod-utils/source/types/PackageJson.ts:295](https://github.com/jakubmazanec/tools/blob/a4967209f10f2b04ade958bd873ac46f1290cee7/packages/zod-utils/source/types/PackageJson.ts#L295)
+[packages/zod-utils/source/types/PackageJson.ts:295](https://github.com/jakubmazanec/tools/blob/077fa4993ebe623b1c463499cc41912353ae6eb1/packages/zod-utils/source/types/PackageJson.ts#L295)

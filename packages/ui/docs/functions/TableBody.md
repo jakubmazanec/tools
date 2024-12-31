@@ -22,4 +22,4 @@
 
 ## Defined in
 
-[packages/ui/source/components/TableBody.ts:28](https://github.com/jakubmazanec/tools/blob/a4967209f10f2b04ade958bd873ac46f1290cee7/packages/ui/source/components/TableBody.ts#L28)
+[packages/ui/source/components/TableBody.ts:28](https://github.com/jakubmazanec/tools/blob/077fa4993ebe623b1c463499cc41912353ae6eb1/packages/ui/source/components/TableBody.ts#L28)
