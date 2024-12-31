@@ -70,7 +70,7 @@
     "@types/react-dom": "^18.3.1",
     "@vitest/coverage-v8": "^2.1.5",
     "autoprefixer": "^10.4.20",
-    "chromatic": "^11.18.1",
+    "chromatic": "^11.20.2",
     "concurrently": "^9.1.2",
     "del-cli": "^6.0.0",
     "esbuild": "^0.24.2",
