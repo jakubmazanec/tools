@@ -7,4 +7,4 @@
 > **CreateWorkspaceStatus**: `string`
 
 Defined in:
-[packages/carson/source/commands/create-workspace/runCreateWorkspace.ts:13](https://github.com/jakubmazanec/tools/blob/7c5f40d811171692b72a47160bc33d644201b16a/packages/carson/source/commands/create-workspace/runCreateWorkspace.ts#L13)
+[packages/carson/source/commands/create-workspace/runCreateWorkspace.ts:13](https://github.com/jakubmazanec/tools/blob/90a5050fae768000bb00b2044438762c3c8c0f98/packages/carson/source/commands/create-workspace/runCreateWorkspace.ts#L13)

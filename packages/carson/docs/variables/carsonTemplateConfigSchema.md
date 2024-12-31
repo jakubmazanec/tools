@@ -9,4 +9,4 @@
 > `boolean`; \}\>
 
 Defined in:
-[packages/carson/source/template/CarsonTemplateConfig.ts:3](https://github.com/jakubmazanec/tools/blob/7c5f40d811171692b72a47160bc33d644201b16a/packages/carson/source/template/CarsonTemplateConfig.ts#L3)
+[packages/carson/source/template/CarsonTemplateConfig.ts:3](https://github.com/jakubmazanec/tools/blob/90a5050fae768000bb00b2044438762c3c8c0f98/packages/carson/source/template/CarsonTemplateConfig.ts#L3)

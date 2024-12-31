@@ -13,4 +13,4 @@
 > (`value`) => `void`; \}
 
 Defined in:
-[args/source/ParameterConfig.ts:32](https://github.com/jakubmazanec/tools/blob/7c5f40d811171692b72a47160bc33d644201b16a/packages/args/source/ParameterConfig.ts#L32)
+[args/source/ParameterConfig.ts:32](https://github.com/jakubmazanec/tools/blob/90a5050fae768000bb00b2044438762c3c8c0f98/packages/args/source/ParameterConfig.ts#L32)

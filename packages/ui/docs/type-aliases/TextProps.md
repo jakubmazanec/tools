@@ -8,7 +8,7 @@
 > [`useTextTheme`](../functions/useTextTheme.md)\> & `ComponentPropsWithoutRef`\<`T`\> & `object`\>
 
 Defined in:
-[packages/ui/source/components/Text.ts:24](https://github.com/jakubmazanec/tools/blob/7c5f40d811171692b72a47160bc33d644201b16a/packages/ui/source/components/Text.ts#L24)
+[packages/ui/source/components/Text.ts:24](https://github.com/jakubmazanec/tools/blob/90a5050fae768000bb00b2044438762c3c8c0f98/packages/ui/source/components/Text.ts#L24)
 
 ## Type Parameters
 

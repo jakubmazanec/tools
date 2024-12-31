@@ -7,7 +7,7 @@
 > **tuple**\<`T`\>(...`values`): `T`
 
 Defined in:
-[packages/ts-utils/source/utils/tuple.ts:4](https://github.com/jakubmazanec/tools/blob/7c5f40d811171692b72a47160bc33d644201b16a/packages/ts-utils/source/utils/tuple.ts#L4)
+[packages/ts-utils/source/utils/tuple.ts:4](https://github.com/jakubmazanec/tools/blob/90a5050fae768000bb00b2044438762c3c8c0f98/packages/ts-utils/source/utils/tuple.ts#L4)
 
 ## Type Parameters
 

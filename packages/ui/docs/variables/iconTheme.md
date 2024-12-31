@@ -7,4 +7,4 @@
 > `const` **iconTheme**: `ComponentTheme`\<_typeof_ [`useIconTheme`](../functions/useIconTheme.md)\>
 
 Defined in:
-[packages/ui/source/components/Icon.tsx:89](https://github.com/jakubmazanec/tools/blob/7c5f40d811171692b72a47160bc33d644201b16a/packages/ui/source/components/Icon.tsx#L89)
+[packages/ui/source/components/Icon.tsx:89](https://github.com/jakubmazanec/tools/blob/90a5050fae768000bb00b2044438762c3c8c0f98/packages/ui/source/components/Icon.tsx#L89)

@@ -9,7 +9,7 @@
 > `Omit`\<`ComponentPropsWithoutRef`\<`T`\>, `"onChange"`\> & `object`
 
 Defined in:
-[packages/ui/source/components/Checkbox.tsx:26](https://github.com/jakubmazanec/tools/blob/7c5f40d811171692b72a47160bc33d644201b16a/packages/ui/source/components/Checkbox.tsx#L26)
+[packages/ui/source/components/Checkbox.tsx:26](https://github.com/jakubmazanec/tools/blob/90a5050fae768000bb00b2044438762c3c8c0f98/packages/ui/source/components/Checkbox.tsx#L26)
 
 ## Type declaration
 
