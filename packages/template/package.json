@@ -44,7 +44,7 @@
     "@types/lodash": "^4.17.13",
     "@types/lodash.merge": "^4.6.9",
     "@types/lodash.omit": "^4.5.9",
-    "@types/node": "^22.9.0",
+    "@types/node": "^22.10.2",
     "@vitest/coverage-v8": "^2.1.8",
     "concurrently": "^9.1.2",
     "del-cli": "^6.0.0",
@@ -60,6 +60,6 @@
   },
   "packageManager": "npm@10.9.0",
   "engines": {
-    "node": "^22.11.0"
+    "node": "^22.12.0"
   }
 }

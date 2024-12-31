@@ -33,7 +33,7 @@
     "@changesets/types": "^6.0.0",
     "@jakubmazanec/eslint-config": "^4.1.0",
     "@types/lodash": "^4.17.13",
-    "@types/node": "^22.9.0",
+    "@types/node": "^22.10.2",
     "@vitest/coverage-v8": "^2.1.8",
     "del-cli": "^6.0.0",
     "esbuild": "^0.24.2",
@@ -46,6 +46,6 @@
   },
   "packageManager": "npm@10.9.0",
   "engines": {
-    "node": "^22.11.0"
+    "node": "^22.12.0"
   }
 }
