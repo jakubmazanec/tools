@@ -22,9 +22,9 @@
     "source"
   ],
   "scripts": {
-    "build": "del-cli build tsconfig.tsbuildinfo && esbuild \"source/**/*\" --platform=node --target=node22.11 --outdir=build --sourcemap --loader:.woff2=copy && tsc && storybook build",
+    "build": "del-cli build tsconfig.tsbuildinfo && esbuild \"source/**/*\" --platform=node --target=node22.12 --outdir=build --sourcemap --loader:.woff2=copy && tsc && storybook build",
     "clean": "del-cli coverage build *.tsbuildinfo",
-    "develop": "concurrently \"esbuild \"source/**/*\" --platform=node --target=node22.11 --outdir=build --sourcemap --watch\" \"tsc --watch\" \"storybook dev -p 6006 --no-open\"",
+    "develop": "concurrently \"esbuild \"source/**/*\" --platform=node --target=node22.12 --outdir=build --sourcemap --watch\" \"tsc --watch\" \"storybook dev -p 6006 --no-open\"",
     "document": "del-cli docs && typedoc --options typedoc.config.cjs",
     "format": "prettier . --write --ignore-unknown",
     "lint": "eslint .",
@@ -65,7 +65,7 @@
     "@testing-library/react": "^16.1.0",
     "@types/culori": "^2.1.1",
     "@types/lodash": "^4.17.13",
-    "@types/node": "^22.9.0",
+    "@types/node": "^22.10.2",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
     "@vitest/coverage-v8": "^2.1.8",
@@ -96,6 +96,6 @@
   },
   "packageManager": "npm@10.9.0",
   "engines": {
-    "node": "^22.11.0"
+    "node": "^22.12.0"
   }
 }
