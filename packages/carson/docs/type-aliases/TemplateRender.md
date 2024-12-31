@@ -22,4 +22,4 @@ A result of rendering a Carson template file.
 
 ## Defined in
 
-[packages/carson/source/template/TemplateRender.ts:9](https://github.com/jakubmazanec/tools/blob/077fa4993ebe623b1c463499cc41912353ae6eb1/packages/carson/source/template/TemplateRender.ts#L9)
+[packages/carson/source/template/TemplateRender.ts:9](https://github.com/jakubmazanec/tools/blob/92d3fc1374d1ad6d45198d05d061e0f856a89434/packages/carson/source/template/TemplateRender.ts#L9)

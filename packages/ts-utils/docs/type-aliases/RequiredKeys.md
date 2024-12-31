@@ -21,4 +21,4 @@ Base for the new type
 
 ## Defined in
 
-[packages/ts-utils/source/types/RequiredKeys.ts:10](https://github.com/jakubmazanec/tools/blob/077fa4993ebe623b1c463499cc41912353ae6eb1/packages/ts-utils/source/types/RequiredKeys.ts#L10)
+[packages/ts-utils/source/types/RequiredKeys.ts:10](https://github.com/jakubmazanec/tools/blob/92d3fc1374d1ad6d45198d05d061e0f856a89434/packages/ts-utils/source/types/RequiredKeys.ts#L10)
