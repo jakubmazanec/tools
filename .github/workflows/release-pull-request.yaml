@@ -20,7 +20,7 @@ concurrency:
 jobs:
   release_pull_request:
     name: Release pull request
-    if: ${{ github.actor != 'renovate[bot]' }}
+    if: ${{ github.actor != 'renovate[bot]' && !contains(github.head_ref, 'renovate/') }}
     runs-on: ubuntu-latest
     timeout-minutes: 15
     permissions:
