@@ -17,7 +17,7 @@
     "source"
   ],
   "scripts": {
-    "build": "del-cli build tsconfig.tsbuildinfo && esbuild \"source/**/*\" --platform=node --target=node22.11 --outdir=build --sourcemap && tsc",
+    "build": "del-cli build tsconfig.tsbuildinfo && esbuild \"source/**/*\" --platform=node --target=node22.12 --outdir=build --sourcemap && tsc",
     "check-rules": "tsx tools/check-rules/main.ts",
     "clean": "del-cli coverage build *.tsbuildinfo",
     "format": "prettier . --write --ignore-unknown",
@@ -72,6 +72,6 @@
   },
   "packageManager": "npm@10.9.0",
   "engines": {
-    "node": "^22.11.0"
+    "node": "^22.12.0"
   }
 }
