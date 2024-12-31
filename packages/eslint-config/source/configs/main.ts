@@ -125,12 +125,15 @@ export const main: eslint.Linter.Config[] = [
       parser: typescriptEslintParser,
       globals: {
         ...globals.node,
-        ...vitestEslintPlugin.environments.env.globals,
+        // TODO: fix somehow
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access -- plugin has bad types
+        ...(vitestEslintPlugin.environments!.env.globals as object),
         jsdom: 'readonly',
       },
     },
+    // TODO: fix the type essertions
     plugins: {
-      vitest: vitestEslintPlugin,
+      vitest: vitestEslintPlugin as unknown as ESLint.Plugin,
       'testing-library': testingLibraryEslintPlugin as ESLint.Plugin,
     },
     settings: {
