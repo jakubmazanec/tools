@@ -43,7 +43,7 @@
     "typescript": "^5.7.2",
     "vitest": "^2.1.5"
   },
-  "packageManager": "npm@10.9.0",
+  "packageManager": "npm@10.9.2",
   "engines": {
     "node": "^22.11.0"
   }

@@ -94,7 +94,7 @@
     "react-dom": "18.x",
     "tailwindcss": "3.x"
   },
-  "packageManager": "npm@10.9.0",
+  "packageManager": "npm@10.9.2",
   "engines": {
     "node": "^22.11.0"
   }
