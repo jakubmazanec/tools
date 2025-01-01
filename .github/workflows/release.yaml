@@ -125,23 +125,9 @@ jobs:
         run: |
           git push --follow-tags
 
-      - name: Deploy "@jakubmazanec/ui"
-        run: |
-          cd packages/ui
-          npx --yes chromatic --project-token="$CHROMATIC_TOKEN" --storybook-build-dir storybook-static --exit-zero-on-changes --no-interactive
-        env:
-          CHROMATIC_TOKEN: ${{ secrets.JAKUBMAZANEC_UI_CHROMATIC_TOKEN }}
-
-      - name: Checkout main branch
-        run: |
-          git fetch -p origin
-          git checkout main
-          git branch --set-upstream-to=origin/main main
-          git reset --hard origin/main
-          git pull
-
       - name: Checkout development branch
         run: |
+          git fetch -p origin
           git checkout -B development
           git branch --set-upstream-to=origin/development development
           git reset --hard origin/development
@@ -150,6 +136,20 @@ jobs:
         run: |
           git merge main --no-verify
           git push -u origin development --no-verify
+
+      - name: Checkout main branch
+        run: |
+          git checkout -B main
+          git branch --set-upstream-to=origin/main main
+          git reset --hard origin/main
+          git pull
+
+      - name: Deploy "@jakubmazanec/ui"
+        run: |
+          cd packages/ui
+          npx --yes chromatic --project-token="$CHROMATIC_TOKEN" --storybook-build-dir storybook-static --exit-zero-on-changes --no-interactive
+        env:
+          CHROMATIC_TOKEN: ${{ secrets.JAKUBMAZANEC_UI_CHROMATIC_TOKEN }}
 
   release_development_branch:
     name: Release preview
