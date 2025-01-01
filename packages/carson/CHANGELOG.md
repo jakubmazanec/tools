@@ -1,5 +1,94 @@
 # @jakubmazanec/carson
 
+## 1.3.0
+
+### Minor Changes
+
+- [#230](https://github.com/jakubmazanec/tools/pull/230)
+  [`4bb343d`](https://github.com/jakubmazanec/tools/commit/4bb343d3736e4f9f11a014de3241c6054262151e)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Format of snapshot was optimized to reduce
+  number of git conflicts after running a workspace update.
+
+### Patch Changes
+
+- [#261](https://github.com/jakubmazanec/tools/pull/261)
+  [`2309ffb`](https://github.com/jakubmazanec/tools/commit/2309ffb4d6cb7ad6b646254efc55de666ce7f092)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `typedoc-plugin-markdown` updated to
+  version `^4.4.0`.
+
+- [#237](https://github.com/jakubmazanec/tools/pull/237)
+  [`e83aa28`](https://github.com/jakubmazanec/tools/commit/e83aa28b5ca4b4760fa3e8597f6e56dca022ec33)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `ink` updated to version `^5.1.0`.
+
+- [#257](https://github.com/jakubmazanec/tools/pull/257)
+  [`711921e`](https://github.com/jakubmazanec/tools/commit/711921eebfba9e7657460976e14730207b7e4d73)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `chalk` updated to version `^5.4.1`.
+
+- [#215](https://github.com/jakubmazanec/tools/pull/215)
+  [`7c5f40d`](https://github.com/jakubmazanec/tools/commit/7c5f40d811171692b72a47160bc33d644201b16a)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@types/node` updated to version
+  `^22.10.2`. Dependency `node` updated to version `^22.12.0`.
+
+- [#259](https://github.com/jakubmazanec/tools/pull/259)
+  [`92d3fc1`](https://github.com/jakubmazanec/tools/commit/92d3fc1374d1ad6d45198d05d061e0f856a89434)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `eslint` updated to version
+  `^9.17.0`.
+
+- [#264](https://github.com/jakubmazanec/tools/pull/264)
+  [`9ab41ec`](https://github.com/jakubmazanec/tools/commit/9ab41ecca4a2113b1c5d5ff53573a0bbb360279c)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@types/react` updated to version
+  `^18.3.18`. Dependency `eslint-plugin-react-compiler` updated to version
+  `^19.0.0-beta-df7b47d-20241124`. Dependency `eslint-plugin-react-hooks` updated to version
+  `^5.1.0`. Dependency `@types/react-dom` updated to version `^18.3.5`.
+
+- [#241](https://github.com/jakubmazanec/tools/pull/241)
+  [`06721b5`](https://github.com/jakubmazanec/tools/commit/06721b5a4bd5519ea0443d05dca3d8774594bbbf)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `typescript` updated to version
+  `^5.7.2`.
+
+- [#220](https://github.com/jakubmazanec/tools/pull/220)
+  [`d452bc4`](https://github.com/jakubmazanec/tools/commit/d452bc4554b7c107e6909f802b6a5de1a00733ac)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `prettier-plugin-packagejson` updated
+  to version `^2.5.6`.
+
+- [#238](https://github.com/jakubmazanec/tools/pull/238)
+  [`2f5b244`](https://github.com/jakubmazanec/tools/commit/2f5b2446c088fc7ba698125a26c81326cac2130a)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `zod` updated to version `^3.24.1`.
+
+- [#266](https://github.com/jakubmazanec/tools/pull/266)
+  [`f408c30`](https://github.com/jakubmazanec/tools/commit/f408c3041ac4b7cc264df2db6296e02ecd04a97c)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@vitest/coverage-v8` updated to
+  version `^2.1.8`. Dependency `vitest` updated to version `^2.1.8`.
+
+- [#242](https://github.com/jakubmazanec/tools/pull/242)
+  [`30393aa`](https://github.com/jakubmazanec/tools/commit/30393aa9ac454118561a87a587c83ef048b3664d)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `concurrently` updated to version
+  `^9.1.2`.
+
+- [#231](https://github.com/jakubmazanec/tools/pull/231)
+  [`3056e59`](https://github.com/jakubmazanec/tools/commit/3056e59909816ed7299ca0af56b8cb31cd735999)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `prettier` updated to version
+  `^3.4.2`.
+
+- [#218](https://github.com/jakubmazanec/tools/pull/218)
+  [`0958303`](https://github.com/jakubmazanec/tools/commit/0958303d76ca0dcc1c7c1e3e7182c91fc0035b82)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `eslint-plugin-perfectionist` updated
+  to version `^4.0.3`.
+
+- [#240](https://github.com/jakubmazanec/tools/pull/240)
+  [`9c623b1`](https://github.com/jakubmazanec/tools/commit/9c623b1c8acf7231679aab7c5332af802c110544)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `esbuild` updated to version
+  `^0.24.2`.
+
+- [#262](https://github.com/jakubmazanec/tools/pull/262)
+  [`be3a660`](https://github.com/jakubmazanec/tools/commit/be3a66074d2b36dd1a518c281339e13f699352b0)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `yaml` updated to version `^2.7.0`.
+
+- [#233](https://github.com/jakubmazanec/tools/pull/233)
+  [`4782e61`](https://github.com/jakubmazanec/tools/commit/4782e61f766d07f8e6fe9bdd44de9a5256ac20cc)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `concurrently` updated to version
+  `^9.1.1`.
+
 ## 1.2.5
 
 ### Patch Changes

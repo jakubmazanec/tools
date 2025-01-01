@@ -1,6 +1,6 @@
 {
   "name": "@jakubmazanec/args",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "description": "TypeScript-first library for parsing command line arguments.",
   "repository": {
     "type": "git",

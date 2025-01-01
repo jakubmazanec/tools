@@ -1,5 +1,82 @@
 # @jakubmazanec/carson-templates
 
+## 3.3.0
+
+### Minor Changes
+
+- [#244](https://github.com/jakubmazanec/tools/pull/244)
+  [`a496720`](https://github.com/jakubmazanec/tools/commit/a4967209f10f2b04ade958bd873ac46f1290cee7)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Updates GitHub workflow in the `workspace`
+  template so it doesn't make pre-releases (including publishing packages and deplyoing apps) from
+  pull requests that have their source branch created by Renovate bot (i.e. starting with
+  "renovate/").
+
+- [#215](https://github.com/jakubmazanec/tools/pull/215)
+  [`7c5f40d`](https://github.com/jakubmazanec/tools/commit/7c5f40d811171692b72a47160bc33d644201b16a)
+  ([@renovate](https://github.com/apps/renovate)) – In all templates, Node.js version was updated to
+  `^22.12.0`; related dependencies were also updated.
+
+### Patch Changes
+
+- [#202](https://github.com/jakubmazanec/tools/pull/202)
+  [`90a5050`](https://github.com/jakubmazanec/tools/commit/90a5050fae768000bb00b2044438762c3c8c0f98)
+  ([@renovate](https://github.com/apps/renovate)) – Updates GitHub workflow steps to use
+  `actions/github-script` v7 in the `workspace` template.
+
+- [#261](https://github.com/jakubmazanec/tools/pull/261)
+  [`2309ffb`](https://github.com/jakubmazanec/tools/commit/2309ffb4d6cb7ad6b646254efc55de666ce7f092)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `typedoc-plugin-markdown` updated to
+  version `^4.4.0`.
+
+- [#215](https://github.com/jakubmazanec/tools/pull/215)
+  [`7c5f40d`](https://github.com/jakubmazanec/tools/commit/7c5f40d811171692b72a47160bc33d644201b16a)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@types/node` updated to version
+  `^22.10.2`. Dependency `node` updated to version `^22.12.0`.
+
+- [#259](https://github.com/jakubmazanec/tools/pull/259)
+  [`92d3fc1`](https://github.com/jakubmazanec/tools/commit/92d3fc1374d1ad6d45198d05d061e0f856a89434)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `eslint` updated to version
+  `^9.17.0`.
+
+- [#241](https://github.com/jakubmazanec/tools/pull/241)
+  [`06721b5`](https://github.com/jakubmazanec/tools/commit/06721b5a4bd5519ea0443d05dca3d8774594bbbf)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `typescript` updated to version
+  `^5.7.2`.
+
+- [#220](https://github.com/jakubmazanec/tools/pull/220)
+  [`d452bc4`](https://github.com/jakubmazanec/tools/commit/d452bc4554b7c107e6909f802b6a5de1a00733ac)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `prettier-plugin-packagejson` updated
+  to version `^2.5.6`.
+
+- [#266](https://github.com/jakubmazanec/tools/pull/266)
+  [`f408c30`](https://github.com/jakubmazanec/tools/commit/f408c3041ac4b7cc264df2db6296e02ecd04a97c)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@vitest/coverage-v8` updated to
+  version `^2.1.8`. Dependency `vitest` updated to version `^2.1.8`.
+
+- [#231](https://github.com/jakubmazanec/tools/pull/231)
+  [`3056e59`](https://github.com/jakubmazanec/tools/commit/3056e59909816ed7299ca0af56b8cb31cd735999)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `prettier` updated to version
+  `^3.4.2`.
+
+- [#218](https://github.com/jakubmazanec/tools/pull/218)
+  [`0958303`](https://github.com/jakubmazanec/tools/commit/0958303d76ca0dcc1c7c1e3e7182c91fc0035b82)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `eslint-plugin-perfectionist` updated
+  to version `^4.0.3`.
+
+- [#240](https://github.com/jakubmazanec/tools/pull/240)
+  [`9c623b1`](https://github.com/jakubmazanec/tools/commit/9c623b1c8acf7231679aab7c5332af802c110544)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `esbuild` updated to version
+  `^0.24.2`.
+
+- [#243](https://github.com/jakubmazanec/tools/pull/243)
+  [`2c96b93`](https://github.com/jakubmazanec/tools/commit/2c96b93758a3d80dde39d39e71266ddbdef3fff8)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `execa` updated to version `^9.5.2`.
+
+- [#274](https://github.com/jakubmazanec/tools/pull/274)
+  [`341c074`](https://github.com/jakubmazanec/tools/commit/341c0742469acf3a9d864b8b428c0c4fd62a3b5d)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes release GitHub workflow in the
+  `workspace` template so a failed deploy doesn't interrupt backmerge to the development branch.
+
 ## 3.2.2
 
 ### Patch Changes
