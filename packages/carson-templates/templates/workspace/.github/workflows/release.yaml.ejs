@@ -207,6 +207,25 @@ for (let project of workspace.projects) {
         run: |
           git push --follow-tags
 
+      - name: Checkout development branch
+        run: |
+          git fetch -p origin
+          git checkout -B <%- getDevelopmentBranch(workspace) %>
+          git branch --set-upstream-to=origin/<%- getDevelopmentBranch(workspace) %> <%- getDevelopmentBranch(workspace) %>
+          git reset --hard origin/<%- getDevelopmentBranch(workspace) %>
+
+      - name: Merge and commit
+        run: |
+          git merge <%- getMainBranch(workspace) %> --no-verify
+          git push -u origin <%- getDevelopmentBranch(workspace) %> --no-verify
+
+      - name: Checkout main branch
+        run: |
+          git checkout -B <%- getMainBranch(workspace) %>
+          git branch --set-upstream-to=origin/<%- getMainBranch(workspace) %> <%- getMainBranch(workspace) %>
+          git reset --hard origin/<%- getMainBranch(workspace) %>
+          git pull
+
 <%
 for (let project of workspace.projects) {
   if (project.config.deployment?.appName && project.config.deployment?.dbInstance) {
@@ -247,25 +266,6 @@ for (let project of workspace.projects) {
   }
 }
 -%>
-
-      - name: Checkout main branch
-        run: |
-          git fetch -p origin
-          git checkout <%- getMainBranch(workspace) %>
-          git branch --set-upstream-to=origin/<%- getMainBranch(workspace) %> <%- getMainBranch(workspace) %>
-          git reset --hard origin/<%- getMainBranch(workspace) %>
-          git pull
-
-      - name: Checkout development branch
-        run: |
-          git checkout -B <%- getDevelopmentBranch(workspace) %>
-          git branch --set-upstream-to=origin/<%- getDevelopmentBranch(workspace) %> <%- getDevelopmentBranch(workspace) %>
-          git reset --hard origin/<%- getDevelopmentBranch(workspace) %>
-
-      - name: Merge and commit
-        run: |
-          git merge <%- getMainBranch(workspace) %> --no-verify
-          git push -u origin <%- getDevelopmentBranch(workspace) %> --no-verify
 
   release_development_branch:
     name: Release preview
