@@ -47,6 +47,33 @@ jobs:
           script: |
             let {promises: fs} = require('node:fs');
             let path = require('node:path');
+            let semver = require('semver');
+            let _ = require('lodash');
+
+            async function checkCarsonTemplatesPackage(dependencyBumps) {
+              if (<%- !workspace.projects.some((project) => project.name === TEMPLATE_PACKAGE_NAME) %>) {
+                return false;
+              }
+
+              let constantsFilePath = '<%- `${workspace.projects.find((project) => project.name === TEMPLATE_PACKAGE_NAME)?.relativePath ?? ''}/source/constants.ts` %>';
+              let constantsFile = await fs.readFile(constantsFilePath, 'utf8');
+
+              for (let [dependencyName, bump] of dependencyBumps) {
+                let regexp = new RegExp(`(?<='?${_.escapeRegExp(dependencyName)}'?:\\s+')\\^\\d+\\.\\d+\\.\\d+(?='.*$)`, 'mi');
+                let result = regexp.exec(constantsFile);
+
+                if (result) {
+                  let newMajorVersion = semver.major(semver.minVersion(bump));
+                  let oldMajorVersion = semver.major(semver.minVersion(result[0]));
+
+                  if (newMajorVersion > oldMajorVersion) {
+                    throw new Error(`Bumbing major version of dependency "${dependencyName}" that is handled by Carson, update of the Carson template package is needed!`);
+                  }
+                }
+              }
+
+              return;
+            }
 
             async function getProjects(files) {
               let names = [];
@@ -144,22 +171,24 @@ jobs:
               .filter((file) => file.includes('package.json'));
             let {stdout: shortHash} = await exec.getExecOutput('git rev-parse --short HEAD');
             let changesetName = `.changeset/renovate-${shortHash.trim()}.md`;
-            let projects = await getProjects(files);
+            let updatedProjects = await getProjects(files);
             let dependencyBumpsWithWorkspace = await getBumps(filesWithWorkspace);
 
+            await checkCarsonTemplatesPackage(dependencyBumpsWithWorkspace);
+
             if (
-              !projects.length &&
+              !updatedProjects.length &&
               dependencyBumpsWithWorkspace.size === 1 &&
               dependencyBumpsWithWorkspace.has('<%- TEMPLATE_PACKAGE_NAME %>')
             ) {
-              projects = await getProjectsUsingCarsonTemplates();
+              updatedProjects = await getProjectsUsingCarsonTemplates();
 
               let dependencyBumps = await getBumps(filesWithWorkspace);
 
-              await createChangesetForCarsonTemplates(changesetName, dependencyBumps, projects);
+              await createChangesetForCarsonTemplates(changesetName, dependencyBumps, updatedProjects);
 
               return;
-            } else if (!projects.length) {
+            } else if (!updatedProjects.length) {
               console.log('No package.json changes to published packages, skipping...');
 
               await exec.exec('npx', ['changeset', '--empty']);
