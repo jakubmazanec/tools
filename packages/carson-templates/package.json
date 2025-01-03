@@ -38,7 +38,7 @@
     "@jakubmazanec/eslint-config": "^4.1.0",
     "@jakubmazanec/fs-utils": "^0.2.0",
     "@types/fs-extra": "^11.0.4",
-    "@types/lodash": "^4.17.13",
+    "@types/lodash": "^4.17.14",
     "@types/node": "^22.10.2",
     "@types/zen-observable": "^0.8.7",
     "@vitest/coverage-v8": "^2.1.8",
