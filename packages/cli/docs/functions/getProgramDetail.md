@@ -7,7 +7,7 @@
 > **getProgramDetail**(`packageJson`): [`ProgramDetail`](../type-aliases/ProgramDetail.md)
 
 Defined in:
-[cli/source/program/getProgramDetail.ts:8](https://github.com/jakubmazanec/tools/blob/90a5050fae768000bb00b2044438762c3c8c0f98/packages/cli/source/program/getProgramDetail.ts#L8)
+[cli/source/program/getProgramDetail.ts:8](https://github.com/jakubmazanec/tools/blob/66e975ab265618dba82f8e4c56654145b7ba4db7/packages/cli/source/program/getProgramDetail.ts#L8)
 
 Creates detailed information about a {@lincode Program}.
 

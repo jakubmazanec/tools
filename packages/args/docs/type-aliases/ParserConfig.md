@@ -7,7 +7,7 @@
 > **ParserConfig**: `object`
 
 Defined in:
-[args/source/ParserConfig.ts:6](https://github.com/jakubmazanec/tools/blob/90a5050fae768000bb00b2044438762c3c8c0f98/packages/args/source/ParserConfig.ts#L6)
+[args/source/ParserConfig.ts:6](https://github.com/jakubmazanec/tools/blob/66e975ab265618dba82f8e4c56654145b7ba4db7/packages/args/source/ParserConfig.ts#L6)
 
 Parser configuration specifies how the command line arguments should be parsed.
 

@@ -9,7 +9,7 @@
 > `UnionToIntersectionHelper`\<`U`\>
 
 Defined in:
-[packages/ts-utils/source/types/UnionToIntersection.ts:10](https://github.com/jakubmazanec/tools/blob/90a5050fae768000bb00b2044438762c3c8c0f98/packages/ts-utils/source/types/UnionToIntersection.ts#L10)
+[packages/ts-utils/source/types/UnionToIntersection.ts:10](https://github.com/jakubmazanec/tools/blob/66e975ab265618dba82f8e4c56654145b7ba4db7/packages/ts-utils/source/types/UnionToIntersection.ts#L10)
 
 Converts union type to intersection type:
 
