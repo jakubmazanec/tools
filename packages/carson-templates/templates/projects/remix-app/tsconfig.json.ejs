@@ -11,9 +11,11 @@ let tsconfig = lodash.merge(
       esModuleInterop: true,
       noEmit: true,
       resolveJsonModule: true,
-      rootDir: '.',
+      rootDirs: ['.', './.react-router/types'],
     },
-    include: project.config.deployment?.dbInstance ? ['./app/**/*', './dbschema/**/*', './*'] : ['./app/**/*', './*'],
+    include: project.config.deployment?.dbInstance
+      ? ['./.react-router/types/**/*', './app/**/*', './dbschema/**/*', './*']
+      : ['./.react-router/types/**/*', './app/**/*', './*'],
     references: getReferences(workspace, project),
   },
   project.config.overrides?.tsconfig ?? {},

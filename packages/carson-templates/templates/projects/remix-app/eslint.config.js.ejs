@@ -3,7 +3,7 @@ to: 'eslint.config.js'
 strategy: overwrite
 ---
 <%
-let lintIgnores = [...LINT_IGNORES];
+let lintIgnores = [...LINT_IGNORES, '.react-router/**'];
 
 if (project.config.deployment?.dbInstance) {
   lintIgnores.push('dbschema/edgeql-js/**', 'dbschema/interfaces.*');
