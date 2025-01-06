@@ -15,6 +15,7 @@ import _ from 'lodash';
 
 export default _.merge(
   {
+    appDirectory: <%- JSON.stringify(SOURCE_DIRECTORY) %>,
     ssr: true,
   },
   <%- JSON.stringify(project.config.overrides?.reactRouterConfig ?? {}, null, 2) %>,

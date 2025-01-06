@@ -10,4 +10,4 @@ strategy: overwrite
  * Run `npx carson update workspace` to regenerate.
  */
 
-export {tailwindConfig as default} from './app/tailwindConfig.js';
+export {tailwindConfig as default} from <%- JSON.stringify(`./${SOURCE_DIRECTORY}/tailwindConfig.js`) %>;
