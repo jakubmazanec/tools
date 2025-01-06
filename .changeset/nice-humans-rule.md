@@ -2,4 +2,4 @@
 '@jakubmazanec/carson-templates': patch
 ---
 
-All templates now use Vite 6.
+Template `projects/remix-app` was updated to use Vite 6.
