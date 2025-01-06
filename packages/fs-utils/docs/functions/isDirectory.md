@@ -7,7 +7,7 @@
 > **isDirectory**(`path`): `Promise`\<`boolean`\>
 
 Defined in:
-[isDirectory.ts:9](https://github.com/jakubmazanec/tools/blob/66e975ab265618dba82f8e4c56654145b7ba4db7/packages/fs-utils/source/isDirectory.ts#L9)
+[isDirectory.ts:9](https://github.com/jakubmazanec/tools/blob/adfe44f908094c1d1cdf19837842b33066bbd9d7/packages/fs-utils/source/isDirectory.ts#L9)
 
 Checks if a path is a directory.
 

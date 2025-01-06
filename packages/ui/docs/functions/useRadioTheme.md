@@ -7,7 +7,7 @@
 > **useRadioTheme**(`themeProps`): `object`
 
 Defined in:
-[packages/ui/source/components/Radio.tsx:12](https://github.com/jakubmazanec/tools/blob/66e975ab265618dba82f8e4c56654145b7ba4db7/packages/ui/source/components/Radio.tsx#L12)
+[packages/ui/source/components/Radio.tsx:12](https://github.com/jakubmazanec/tools/blob/adfe44f908094c1d1cdf19837842b33066bbd9d7/packages/ui/source/components/Radio.tsx#L12)
 
 ## Parameters
 

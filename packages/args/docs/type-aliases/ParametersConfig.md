@@ -17,6 +17,6 @@
 > [`ParameterConfig`](ParameterConfig.md)\] \| readonly \[[`ParameterConfig`](ParameterConfig.md)\]
 
 Defined in:
-[args/source/ParametersConfig.ts:4](https://github.com/jakubmazanec/tools/blob/66e975ab265618dba82f8e4c56654145b7ba4db7/packages/args/source/ParametersConfig.ts#L4)
+[args/source/ParametersConfig.ts:4](https://github.com/jakubmazanec/tools/blob/adfe44f908094c1d1cdf19837842b33066bbd9d7/packages/args/source/ParametersConfig.ts#L4)
 
 Parser's parameters configuration.
