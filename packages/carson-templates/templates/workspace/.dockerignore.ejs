@@ -8,38 +8,38 @@ let lines = [];
 
 for (let project of workspace.projects) {
   if (project.config.deployment?.appName) {
-    lines.push(`!${project.relativePath}/app/**`);
+    lines.push(`!${project.relativePath}/${SOURCE_DIRECTORY}/**`);
+    lines.push(`!${project.relativePath}/env.d.ts`);
+    lines.push(`!${project.relativePath}/package.json`);
+    lines.push(`!${project.relativePath}/postcss.config.cjs`);
+    lines.push(`!${project.relativePath}/public/**`);
+    lines.push(`!${project.relativePath}/react-router.config.ts`);
+    lines.push(`!${project.relativePath}/tailwind.config.ts`);
+    lines.push(`!${project.relativePath}/tsconfig.json`);
+    lines.push(`!${project.relativePath}/vite.config.ts`);
 
     if (project.config.deployment?.dbInstance) {
       lines.push(`!${project.relativePath}/dbschema/**`);
     }
 
-    lines.push(`!${project.relativePath}/public/**`);
-
     if (project.config.deployment?.dbInstance) {
       lines.push(`!${project.relativePath}/edgedb.toml`);
     }
-
-    lines.push(`!${project.relativePath}/env.d.ts`);
-    lines.push(`!${project.relativePath}/package.json`);
-    lines.push(`!${project.relativePath}/postcss.config.cjs`);
-    lines.push(`!${project.relativePath}/tailwind.config.ts`);
-    lines.push(`!${project.relativePath}/tsconfig.json`);
-    lines.push(`!${project.relativePath}/vite.config.ts`);
-
   } else {
+    lines.push(`!${project.relativePath}/${BUILD_DIRECTORY}/**`);
+    lines.push(`!${project.relativePath}/package.json`);
+
     if (project.packageJson.bin) {
       lines.push(`!${project.relativePath}/bin/**`);
     }
-
-    lines.push(`!${project.relativePath}/${BUILD_DIRECTORY}/**`);
-    lines.push(`!${project.relativePath}/package.json`);
   }
 }
 
 lines.push('!/package-lock.json');
 lines.push('!/package.json');
 lines.push('!/turbo.json');
+
+lines.sort();
 -%>
 #
 # DO NOT EDIT!

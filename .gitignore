@@ -246,8 +246,10 @@ storybook-static/
 .pnp.*
 
 ## Turborepo
-
 .turbo/
+
+## React Router
+.react-router/
 
 
 # Project specific files

@@ -3,18 +3,17 @@ to: 'package.json'
 strategy: merge
 ---
 <%
-let developmentDependencies = getDependencies(
-  [
-    '@types/node',
-    'del-cli',
-    'esbuild',
-    'eslint',
-    'prettier',
-    'prettier-plugin-packagejson',
-    'typescript',
-  ],
-  workspace,
-);
+let developmentDependencies = [
+  '@types/node',
+  'del-cli',
+  'esbuild',
+  'eslint',
+  'prettier',
+  'prettier-plugin-packagejson',
+  'typescript',
+].filter((dependency) => {
+  return !Object.keys(project.packageJson.dependencies ?? {}).some((key) => key === dependency); // if the project package.json already contains dependency, we don't need to add it
+});
 let packageJson = lodash.merge(
   {
     repository: {
@@ -31,7 +30,7 @@ let packageJson = lodash.merge(
       lint: 'eslint .',
       typecheck: 'tsc --project tsconfig.typecheck.json',
     },
-    devDependencies: developmentDependencies,
+    devDependencies: getDependencies(developmentDependencies, workspace),
     packageManager: `npm@${semver.minVersion(DEPENDENCY_VERSIONS.npm)}`,
     engines: {
       node: DEPENDENCY_VERSIONS.node,

@@ -11,26 +11,25 @@ if (project.packageJson.bin) {
 
 files.sort();
 
-let developmentDependencies = getDependencies(
-  [
-    LINTER_CONFIG_PACKAGE_NAME,
-    '@types/lodash',
-    '@types/node',
-    '@vitest/coverage-v8',
-    'concurrently',
-    'del-cli',
-    'esbuild',
-    'eslint',
-    'lodash',
-    'prettier',
-    'prettier-plugin-packagejson',
-    'typedoc',
-    'typedoc-plugin-markdown',
-    'typescript',
-    'vitest',
-  ],
-  workspace,
-);
+let developmentDependencies = [
+  LINTER_CONFIG_PACKAGE_NAME,
+  '@types/lodash',
+  '@types/node',
+  '@vitest/coverage-v8',
+  'concurrently',
+  'del-cli',
+  'esbuild',
+  'eslint',
+  'lodash',
+  'prettier',
+  'prettier-plugin-packagejson',
+  'typedoc',
+  'typedoc-plugin-markdown',
+  'typescript',
+  'vitest',
+].filter((dependency) => {
+  return !Object.keys(project.packageJson.dependencies ?? {}).some((key) => key === dependency); // if the project package.json already contains dependency, we don't need to add it
+});
 let packageJson = lodash.merge(
   {
     repository: {
@@ -50,7 +49,7 @@ let packageJson = lodash.merge(
       test: `del-cli coverage && ${TEST_COMMAND}`,
       typecheck: 'tsc --project tsconfig.typecheck.json',
     },
-    devDependencies: developmentDependencies,
+    devDependencies: getDependencies(developmentDependencies, workspace),
     packageManager: `npm@${semver.minVersion(DEPENDENCY_VERSIONS.npm)}`,
     engines: {
       node: DEPENDENCY_VERSIONS.node,

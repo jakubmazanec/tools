@@ -45,6 +45,6 @@ export async function readCarsonTemplate(templateId: string): Promise<CarsonTemp
   }
 
   throw new CarsonTemplateError('CARSON_TEMPLATE_NOT_FOUND', {
-    messageParameters: [templateId, moduleId],
+    messageParameters: [templateName, moduleId],
   });
 }

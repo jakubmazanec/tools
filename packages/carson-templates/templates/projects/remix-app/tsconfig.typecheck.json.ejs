@@ -9,7 +9,9 @@ let tsconfig = lodash.merge(
     compilerOptions: {
       composite: false,
     },
-    include: project.config.deployment?.dbInstance ? ['./app/**/*', './dbschema/**/*', './tests/**/*', './*'] : ['./app/**/*', './tests/**/*', './*'],
+    include: project.config.deployment?.dbInstance
+      ? ['./.react-router/types/**/*', `./${SOURCE_DIRECTORY}/**/*`, './dbschema/**/*', './tests/**/*', './*']
+      : ['./.react-router/types/**/*', `./${SOURCE_DIRECTORY}/**/*`, './tests/**/*', './*'],
   },
   project.config.overrides?.tsconfig ?? {},
 );

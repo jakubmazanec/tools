@@ -31,6 +31,7 @@ let developmentDependencies = [
   '@types/react-dom',
   '@vitest/coverage-v8',
   'autoprefixer',
+  'chromatic',
   'concurrently',
   'del-cli',
   'esbuild',
@@ -49,7 +50,7 @@ let developmentDependencies = [
   'typescript',
   'vitest',
 ].filter((dependency) => {
-  return !Object.keys(project.packageJson.dependencies ?? {}).some((key) => key === dependency); // if a project package.json already contains dependency, we don't need to add it
+  return !Object.keys(project.packageJson.dependencies ?? {}).some((key) => key === dependency); // if the project package.json already contains dependency, we don't need to add it
 });
 let packageJson = lodash.merge(
   {

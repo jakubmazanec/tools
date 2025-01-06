@@ -8,7 +8,7 @@ let turboConfig = {
   tasks: {
     build: {
       dependsOn: ['^build', 'codegen'],
-      outputs: [`${BUILD_DIRECTORY}/**`, 'app/**'],
+      outputs: [`${BUILD_DIRECTORY}/**`],
     },
     clean: {
       cache: false,
@@ -44,9 +44,9 @@ let turboConfig = {
   globalEnv: ['CI'],
   globalDependencies: [
     '.editorconfig',
-    '.eslintrc.cjs',
     '.prettierignore',
-    'prettier.config.js',
+    'eslint.config.js',
+    'prettier.config.cjs',
     'tsconfig.json',
     'tsconfig.typecheck.json',
   ],

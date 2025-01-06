@@ -4,19 +4,19 @@ strategy: merge
 ---
 <%
 let dependencies = [
-  '@remix-run/express',
-  '@remix-run/node',
-  '@remix-run/react',
-  '@remix-run/serve',
+  '@react-router/fs-routes',
+  '@react-router/node',
+  '@react-router/serve',
   'cross-env',
   'isbot',
   'lodash',
   'react',
-  'react-dom'
+  'react-dom',
+  'react-router',
 ];
 let developmentDependencies = [
   LINTER_CONFIG_PACKAGE_NAME,
-  '@remix-run/dev',
+  '@react-router/dev',
   '@testing-library/jest-dom',
   '@testing-library/react',
   '@types/lodash',
@@ -35,8 +35,9 @@ let developmentDependencies = [
   'typescript',
   'vite',
   'vitest',
-];
-
+].filter((dependency) => {
+  return !Object.keys(project.packageJson.dependencies ?? {}).some((key) => key === dependency); // if the project package.json already contains dependency, we don't need to add it
+});
 let packageJson = lodash.merge(
   {
     private: true,
@@ -46,13 +47,14 @@ let packageJson = lodash.merge(
     },
     type: 'module',
     scripts: {
-      build: 'del-cli build && remix vite:build',
+      build: 'del-cli build && react-router build',
       clean: 'del-cli coverage build *.tsbuildinfo',
-      develop: 'remix vite:dev --port 5000',
+      codegen: 'react-router typegen',
+      develop: 'react-router dev --port 5000',
       format: FORMAT_COMMAND,
       lint: 'eslint .',
       start:
-        'cross-env NODE_ENV=production PORT=5000 remix-serve ./build/server/index.js',
+        'cross-env NODE_ENV=production PORT=5000 react-router-serve ./build/server/index.js',
       test: `del-cli coverage && ${TEST_COMMAND}`,
       typecheck: 'tsc --project tsconfig.typecheck.json',
     },
@@ -68,6 +70,10 @@ let packageJson = lodash.merge(
 
 if (project.config.deployment?.appName) {
   packageJson.scripts.deploy = `flyctl deploy ../.. --config ${project.relativePath}/fly.toml`;
+}
+
+if (project.config.deployment?.dbInstance) {
+  packageJson.scripts.codegen += ' && del-cli dbschema/edgeql-js dbschema/interfaces.* && generate edgeql-js --force-overwrite --target mts && generate interfaces --force-overwrite';
 }
 -%>
 <%- JSON.stringify(packageJson) %>

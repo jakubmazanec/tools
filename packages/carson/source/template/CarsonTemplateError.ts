@@ -13,6 +13,7 @@ export const CarsonTemplateError = createCustomErrorWithData(
       'Strategy "{0}" in the template file "{1}" doesn\'t support extension "{2}".',
     STRATEGY_MISSING_FILE: 'Strategy "{0}" in the template file "{1}" is missing file "{2}".',
     INVALID_SNAPSHOT: 'Invalid Carson template render snapshot.',
+    FAILED_RENDER: 'Template "{0}" rendering has failed.',
   },
   class CarsonTemplateErrorData {
     path?: string;
