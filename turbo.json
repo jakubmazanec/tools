@@ -3,7 +3,7 @@
   "tasks": {
     "build": {
       "dependsOn": ["^build", "codegen"],
-      "outputs": ["build/**", "app/**"]
+      "outputs": ["build/**"]
     },
     "clean": {
       "cache": false
@@ -39,9 +39,9 @@
   "globalEnv": ["CI"],
   "globalDependencies": [
     ".editorconfig",
-    ".eslintrc.cjs",
     ".prettierignore",
-    "prettier.config.js",
+    "eslint.config.js",
+    "prettier.config.cjs",
     "tsconfig.json",
     "tsconfig.typecheck.json"
   ]
