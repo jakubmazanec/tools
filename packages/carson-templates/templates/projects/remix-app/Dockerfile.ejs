@@ -97,5 +97,5 @@ RUN npm ci --omit=dev --ignore-scripts
 
 # Start the server
 WORKDIR /workspace/<%- project.relativePath %>
-EXPOSE 5000
+EXPOSE <%- APP_PORT %>
 ENTRYPOINT ["npm", "start"]

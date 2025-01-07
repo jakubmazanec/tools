@@ -33,7 +33,13 @@ npm install @jakubmazanec/carson @jakubmazanec/carson-templates -g
 
 #### Prerequisites
 
-- Node.js 20 or later
+<!-- prerequisites -->
+
+#### Prerequisites
+
+- Node.js 22 or later
+- TypeScript 5 or later
+<!-- prerequisites -->
 
 ## Usage
 

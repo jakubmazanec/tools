@@ -14,10 +14,13 @@ ESLint config for TypeScript projects.
 npm install @jakubmazanec/eslint-config
 ```
 
+<!-- prerequisites -->
+
 #### Prerequisites
 
-- Node.js 20 or later
+- Node.js 22 or later
 - TypeScript 5 or later
+<!-- prerequisites -->
 
 ## Usage
 
