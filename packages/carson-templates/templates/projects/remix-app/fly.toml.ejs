@@ -10,7 +10,7 @@ primary_region = "ams"
   dockerfile = "./Dockerfile"
 
 [http_service]
-  internal_port = 5000
+  internal_port = <%- APP_PORT %>
   force_https = true
   auto_stop_machines = true
   auto_start_machines = true

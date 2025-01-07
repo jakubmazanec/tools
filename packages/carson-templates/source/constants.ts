@@ -2,9 +2,13 @@ import fs from 'node:fs';
 import {createRequire} from 'node:module';
 import semver from 'semver';
 
+export const AUTHOR = 'Jakub Mazanec <jakub@mazanec.dev>';
+
 export const BUILD_DIRECTORY = 'build';
 export const STORYBOOK_BUILD_DIRECTORY = 'storybook-static';
 export const SOURCE_DIRECTORY = 'source';
+
+export const APP_PORT = 5000;
 
 export const CARSON_PACKAGE_NAME = '@jakubmazanec/carson';
 export const TEMPLATE_PACKAGE_NAME = '@jakubmazanec/carson-templates';

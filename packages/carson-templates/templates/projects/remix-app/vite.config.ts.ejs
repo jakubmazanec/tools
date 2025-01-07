@@ -18,7 +18,7 @@ export default defineConfig(
   _.merge(
     {
       server: {
-        port: 5000,
+        port: <%- JSON.stringify(APP_PORT) %>,
         strictPort: true,
       },
       plugins: [!process.env.VITEST && reactRouter()],
