@@ -45,6 +45,8 @@ export const FORMAT_IGNORE_PATTERNS = [
   `${BUILD_DIRECTORY}/`,
 ].sort();
 
+export const ECMASCRIPT_VERSION = 2024;
+
 export const TSCONFIG_COMPILER_OPTIONS = {
   allowSyntheticDefaultImports: true,
   composite: true,
@@ -52,7 +54,7 @@ export const TSCONFIG_COMPILER_OPTIONS = {
   forceConsistentCasingInFileNames: true,
   isolatedModules: true,
   jsx: 'react-jsx',
-  lib: ['dom', 'dom.iterable', 'es2022'],
+  lib: ['dom', 'dom.iterable', `es${ECMASCRIPT_VERSION}`],
   module: 'node16',
   moduleResolution: 'node16',
   noEmitOnError: false, // TODO: change to `true` when this is fixed: https://github.com/kulshekhar/ts-jest/issues/4198
@@ -61,7 +63,7 @@ export const TSCONFIG_COMPILER_OPTIONS = {
   noUncheckedIndexedAccess: true,
   skipLibCheck: true,
   strict: true,
-  target: 'es2022',
+  target: `es${ECMASCRIPT_VERSION}`,
 };
 
 export const PRETTIER_OPTIONS = {
