@@ -14,9 +14,12 @@ Collection of Carson templates.
 npm install @jakubmazanec/carson-templates
 ```
 
+<!-- prerequisites -->
+
 #### Prerequisites
 
-- Node.js 20 or later
+- Node.js 22 or later
+<!-- prerequisites -->
 
 ## Usage
 
