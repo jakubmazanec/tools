@@ -57,7 +57,7 @@ export const TSCONFIG_COMPILER_OPTIONS = {
   lib: ['dom', 'dom.iterable', `es${ECMASCRIPT_VERSION}`],
   module: 'node16',
   moduleResolution: 'node16',
-  noEmitOnError: false, // TODO: change to `true` when this is fixed: https://github.com/kulshekhar/ts-jest/issues/4198
+  noEmitOnError: true,
   noImplicitOverride: true,
   noImplicitReturns: true,
   noUncheckedIndexedAccess: true,
