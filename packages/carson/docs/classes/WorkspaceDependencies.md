@@ -5,7 +5,7 @@
 # Class: WorkspaceDependencies\<M\>
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceDependencies.ts:13](https://github.com/jakubmazanec/tools/blob/adfe44f908094c1d1cdf19837842b33066bbd9d7/packages/carson/source/workspace/WorkspaceDependencies.ts#L13)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:13](https://github.com/jakubmazanec/tools/blob/797379ce98752dc838b82c8398e04d90c58ce9e7/packages/carson/source/workspace/WorkspaceDependencies.ts#L13)
 
 A collection of WorkspaceDependency \| workspace dependencies that are installed in
 [a workspace](Workspace.md).
@@ -30,7 +30,7 @@ A collection of WorkspaceDependency \| workspace dependencies that are installed
 > [`WorkspaceDependencies`](WorkspaceDependencies.md)\<`M`\>
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceDependencies.ts:17](https://github.com/jakubmazanec/tools/blob/adfe44f908094c1d1cdf19837842b33066bbd9d7/packages/carson/source/workspace/WorkspaceDependencies.ts#L17)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:17](https://github.com/jakubmazanec/tools/blob/797379ce98752dc838b82c8398e04d90c58ce9e7/packages/carson/source/workspace/WorkspaceDependencies.ts#L17)
 
 #### Parameters
 
@@ -115,6 +115,14 @@ array.
 
 > `optional` **findIndex**
 
+#### findLast?
+
+> `optional` **findLast**
+
+#### findLastIndex?
+
+> `optional` **findLastIndex**
+
 #### flat?
 
 > `optional` **flat**
@@ -195,6 +203,18 @@ array.
 
 > `optional` **toLocaleString**
 
+#### toReversed?
+
+> `optional` **toReversed**
+
+#### toSorted?
+
+> `optional` **toSorted**
+
+#### toSpliced?
+
+> `optional` **toSpliced**
+
 #### toString?
 
 > `optional` **toString**
@@ -206,6 +226,10 @@ array.
 #### values?
 
 > `optional` **values**
+
+#### with?
+
+> `optional` **with**
 
 #### Inherited from
 
@@ -233,7 +257,7 @@ array.
 > **workspace**: [`Workspace`](Workspace.md)\<`M`\>
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceDependencies.ts:15](https://github.com/jakubmazanec/tools/blob/adfe44f908094c1d1cdf19837842b33066bbd9d7/packages/carson/source/workspace/WorkspaceDependencies.ts#L15)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:15](https://github.com/jakubmazanec/tools/blob/797379ce98752dc838b82c8398e04d90c58ce9e7/packages/carson/source/workspace/WorkspaceDependencies.ts#L15)
 
 The workspace the dependencies are installed in.
 
@@ -692,6 +716,106 @@ provided, undefined is used instead.
 
 ---
 
+### findLast()
+
+#### Call Signature
+
+> **findLast**\<`S`\>(`predicate`, `thisArg`?): `undefined` \| `S`
+
+Defined in: node_modules/typescript/lib/lib.es2023.array.d.ts:29
+
+Returns the value of the last element in the array where predicate is true, and undefined otherwise.
+
+##### Type Parameters
+
+• **S** _extends_ `WorkspaceDependency`
+
+##### Parameters
+
+###### predicate
+
+(`value`, `index`, `array`) => `value is S`
+
+findLast calls predicate once for each element of the array, in descending order, until it finds one
+where predicate returns true. If such an element is found, findLast immediately returns that element
+value. Otherwise, findLast returns undefined.
+
+###### thisArg?
+
+`any`
+
+If provided, it will be used as the this value for each invocation of predicate. If it is not
+provided, undefined is used instead.
+
+##### Returns
+
+`undefined` \| `S`
+
+##### Inherited from
+
+`Array.findLast`
+
+#### Call Signature
+
+> **findLast**(`predicate`, `thisArg`?): `undefined` \| `WorkspaceDependency`
+
+Defined in: node_modules/typescript/lib/lib.es2023.array.d.ts:30
+
+##### Parameters
+
+###### predicate
+
+(`value`, `index`, `array`) => `unknown`
+
+###### thisArg?
+
+`any`
+
+##### Returns
+
+`undefined` \| `WorkspaceDependency`
+
+##### Inherited from
+
+`Array.findLast`
+
+---
+
+### findLastIndex()
+
+> **findLastIndex**(`predicate`, `thisArg`?): `number`
+
+Defined in: node_modules/typescript/lib/lib.es2023.array.d.ts:41
+
+Returns the index of the last element in the array where predicate is true, and -1 otherwise.
+
+#### Parameters
+
+##### predicate
+
+(`value`, `index`, `array`) => `unknown`
+
+findLastIndex calls predicate once for each element of the array, in descending order, until it
+finds one where predicate returns true. If such an element is found, findLastIndex immediately
+returns that element index. Otherwise, findLastIndex returns -1.
+
+##### thisArg?
+
+`any`
+
+If provided, it will be used as the this value for each invocation of predicate. If it is not
+provided, undefined is used instead.
+
+#### Returns
+
+`number`
+
+#### Inherited from
+
+`Array.findLastIndex`
+
+---
+
 ### flat()
 
 > **flat**\<`A`, `D`\>(`this`, `depth`?): `FlatArray`\<`A`, `D`\>[]
@@ -809,7 +933,7 @@ undefined is used as the this value.
 > **getVersions**(`options`?): `Record`\<`string`, `string`[]\>
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceDependencies.ts:185](https://github.com/jakubmazanec/tools/blob/adfe44f908094c1d1cdf19837842b33066bbd9d7/packages/carson/source/workspace/WorkspaceDependencies.ts#L185)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:185](https://github.com/jakubmazanec/tools/blob/797379ce98752dc838b82c8398e04d90c58ce9e7/packages/carson/source/workspace/WorkspaceDependencies.ts#L185)
 
 Creates map of all dependnecies and their installed version.
 
@@ -1035,7 +1159,7 @@ and the array is not modified.
 > **push**(...`newWorkspaceDependencies`): `number`
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceDependencies.ts:38](https://github.com/jakubmazanec/tools/blob/adfe44f908094c1d1cdf19837842b33066bbd9d7/packages/carson/source/workspace/WorkspaceDependencies.ts#L38)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:38](https://github.com/jakubmazanec/tools/blob/797379ce98752dc838b82c8398e04d90c58ce9e7/packages/carson/source/workspace/WorkspaceDependencies.ts#L38)
 
 Adds one or more new dependencies.
 
@@ -1507,6 +1631,131 @@ Defined in: node_modules/typescript/lib/lib.es2015.core.d.ts:64
 
 ---
 
+### toReversed()
+
+> **toReversed**(): `WorkspaceDependency`[]
+
+Defined in: node_modules/typescript/lib/lib.es2023.array.d.ts:46
+
+Returns a copy of an array with its elements reversed.
+
+#### Returns
+
+`WorkspaceDependency`[]
+
+#### Inherited from
+
+`Array.toReversed`
+
+---
+
+### toSorted()
+
+> **toSorted**(`compareFn`?): `WorkspaceDependency`[]
+
+Defined in: node_modules/typescript/lib/lib.es2023.array.d.ts:57
+
+Returns a copy of an array with its elements sorted.
+
+#### Parameters
+
+##### compareFn?
+
+(`a`, `b`) => `number`
+
+Function used to determine the order of the elements. It is expected to return a negative value if
+the first argument is less than the second argument, zero if they're equal, and a positive value
+otherwise. If omitted, the elements are sorted in ascending, ASCII character order.
+
+```ts
+[11, 2, 22, 1].toSorted((a, b) => a - b); // [1, 2, 11, 22]
+```
+
+#### Returns
+
+`WorkspaceDependency`[]
+
+#### Inherited from
+
+`Array.toSorted`
+
+---
+
+### toSpliced()
+
+#### Call Signature
+
+> **toSpliced**(`start`, `deleteCount`, ...`items`): `WorkspaceDependency`[]
+
+Defined in: node_modules/typescript/lib/lib.es2023.array.d.ts:66
+
+Copies an array and removes elements and, if necessary, inserts new elements in their place. Returns
+the copied array.
+
+##### Parameters
+
+###### start
+
+`number`
+
+The zero-based location in the array from which to start removing elements.
+
+###### deleteCount
+
+`number`
+
+The number of elements to remove.
+
+###### items
+
+...`WorkspaceDependency`[]
+
+Elements to insert into the copied array in place of the deleted elements.
+
+##### Returns
+
+`WorkspaceDependency`[]
+
+The copied array.
+
+##### Inherited from
+
+`Array.toSpliced`
+
+#### Call Signature
+
+> **toSpliced**(`start`, `deleteCount`?): `WorkspaceDependency`[]
+
+Defined in: node_modules/typescript/lib/lib.es2023.array.d.ts:74
+
+Copies an array and removes elements while returning the remaining elements.
+
+##### Parameters
+
+###### start
+
+`number`
+
+The zero-based location in the array from which to start removing elements.
+
+###### deleteCount?
+
+`number`
+
+The number of elements to remove.
+
+##### Returns
+
+`WorkspaceDependency`[]
+
+A copy of the original array with the remaining elements.
+
+##### Inherited from
+
+`Array.toSpliced`
+
+---
+
 ### toString()
 
 > **toString**(): `string`
@@ -1566,6 +1815,42 @@ Returns an iterable of values in the array
 #### Inherited from
 
 `Array.values`
+
+---
+
+### with()
+
+> **with**(`index`, `value`): `WorkspaceDependency`[]
+
+Defined in: node_modules/typescript/lib/lib.es2023.array.d.ts:85
+
+Copies an array, then overwrites the value at the provided index with the given value. If the index
+is negative, then it replaces from the end of the array.
+
+#### Parameters
+
+##### index
+
+`number`
+
+The index of the value to overwrite. If the index is negative, then it replaces from the end of the
+array.
+
+##### value
+
+`WorkspaceDependency`
+
+The value to write into the copied array.
+
+#### Returns
+
+`WorkspaceDependency`[]
+
+The copied array with the updated value.
+
+#### Inherited from
+
+`Array.with`
 
 ---
 
@@ -1719,7 +2004,7 @@ Value of 'this' used to invoke the mapfn.
 > [`WorkspaceDependencies`](WorkspaceDependencies.md)\<`M`\>
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceDependencies.ts:81](https://github.com/jakubmazanec/tools/blob/adfe44f908094c1d1cdf19837842b33066bbd9d7/packages/carson/source/workspace/WorkspaceDependencies.ts#L81)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:81](https://github.com/jakubmazanec/tools/blob/797379ce98752dc838b82c8398e04d90c58ce9e7/packages/carson/source/workspace/WorkspaceDependencies.ts#L81)
 
 Creates new [WorkspaceDependencies](WorkspaceDependencies.md) instance from a
 [Workspace](Workspace.md) instance and its dependencies.

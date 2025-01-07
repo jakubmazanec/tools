@@ -7,7 +7,7 @@
 > **useMenuTheme**(): (`baseClassName`?, `overrideClassName`?) => `string`
 
 Defined in:
-[packages/ui/source/components/Menu.tsx:17](https://github.com/jakubmazanec/tools/blob/adfe44f908094c1d1cdf19837842b33066bbd9d7/packages/ui/source/components/Menu.tsx#L17)
+[packages/ui/source/components/Menu.tsx:17](https://github.com/jakubmazanec/tools/blob/797379ce98752dc838b82c8398e04d90c58ce9e7/packages/ui/source/components/Menu.tsx#L17)
 
 ## Returns
 

@@ -7,7 +7,7 @@
 > **Button**\<`T`\>(`props`): `ReactNode`
 
 Defined in:
-[packages/ui/source/components/Button.tsx:40](https://github.com/jakubmazanec/tools/blob/adfe44f908094c1d1cdf19837842b33066bbd9d7/packages/ui/source/components/Button.tsx#L40)
+[packages/ui/source/components/Button.tsx:40](https://github.com/jakubmazanec/tools/blob/797379ce98752dc838b82c8398e04d90c58ce9e7/packages/ui/source/components/Button.tsx#L40)
 
 ## Type Parameters
 
