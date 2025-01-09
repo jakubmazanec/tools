@@ -50,7 +50,7 @@ let packageJson = lodash.merge(
       build: 'del-cli build && react-router build',
       clean: 'del-cli coverage build *.tsbuildinfo',
       codegen: 'react-router typegen',
-      develop: `react-router dev --port %{APP_PORT}`,
+      develop: `react-router dev --port ${APP_PORT}`,
       format: FORMAT_COMMAND,
       lint: 'eslint .',
       start:
