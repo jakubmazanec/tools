@@ -34,7 +34,7 @@ export type IconProps<T extends ElementType> = ComponentProps<typeof useIconThem
     className?: string | undefined;
   };
 
-export const Icon = <T extends ElementType = typeof ICON_ELEMENT>({
+export function Icon<T extends ElementType = typeof ICON_ELEMENT>({
   size = 'medium',
   variant = 'default',
   as: Component = ICON_ELEMENT as T,
@@ -43,7 +43,7 @@ export const Icon = <T extends ElementType = typeof ICON_ELEMENT>({
   ref,
   children,
   ...rest
-}: IconProps<T>) => {
+}: IconProps<T>) {
   let theme = useIconTheme({size, variant});
   let props: Record<string, unknown> = {
     ref,
@@ -79,7 +79,7 @@ export const Icon = <T extends ElementType = typeof ICON_ELEMENT>({
   }
 
   return createElement(Component, props, (Child ? <Child /> : children) as ReactNode);
-};
+}
 
 export const iconTheme: ComponentTheme<typeof useIconTheme> = {
   className: 'inline-block shrink-0 *:w-full *:h-full data-[icon]:-mx-1 select-none',

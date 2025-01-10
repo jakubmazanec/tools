@@ -79,7 +79,7 @@ export type ComboboxProps<
       }
   );
 
-export const Combobox = <
+export function Combobox<
   T extends ElementType = typeof COMBOBOX_ELEMENT,
   V extends boolean | number | string = string,
 >({
@@ -100,7 +100,7 @@ export const Combobox = <
   ref,
   children,
   ...rest
-}: ComboboxProps<T, V>) => {
+}: ComboboxProps<T, V>) {
   let theme = useComboboxTheme({disabled, invalid});
   let formId = useFormId();
   let field = useField();
@@ -251,7 +251,7 @@ export const Combobox = <
       : null}
     </HeadlessCombobox>
   );
-};
+}
 
 export const comboboxTheme: ComponentTheme<typeof useComboboxTheme> = {
   classNames: {

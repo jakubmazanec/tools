@@ -25,13 +25,13 @@ export type TableFootProps<T extends ElementType> = ComponentProps<typeof useTab
     className?: string;
   };
 
-export const TableFoot = <T extends ElementType = typeof TABLE_FOOT_ELEMENT>({
+export function TableFoot<T extends ElementType = typeof TABLE_FOOT_ELEMENT>({
   as: Component = TABLE_FOOT_ELEMENT as T,
   className,
   ref,
   children,
   ...rest
-}: TableFootProps<T>) => {
+}: TableFootProps<T>) {
   let theme = useTableFootTheme();
   let props = filterProps({
     ref,
@@ -41,7 +41,7 @@ export const TableFoot = <T extends ElementType = typeof TABLE_FOOT_ELEMENT>({
   });
 
   return createElement(Component, props, children);
-};
+}
 
 export const tableFootTheme: ComponentTheme<typeof useTableFootTheme> = {
   className: 'font-sans text-sm',

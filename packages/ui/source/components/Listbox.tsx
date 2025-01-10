@@ -84,7 +84,7 @@ export type ListboxProps<
       }
   );
 
-export const Listbox = <
+export function Listbox<
   T extends ElementType = typeof LISTBOX_ELEMENT,
   V extends boolean | number | string = string,
 >({
@@ -104,7 +104,7 @@ export const Listbox = <
   ref,
   children,
   ...rest
-}: ListboxProps<T, V>) => {
+}: ListboxProps<T, V>) {
   let theme = useListboxTheme({disabled, invalid});
   let formId = useFormId();
   let field = useField();
@@ -350,7 +350,7 @@ export const Listbox = <
       </HeadlessListboxOptions>
     </HeadlessListbox>
   );
-};
+}
 
 export const listboxTheme: ComponentTheme<typeof useListboxTheme> = {
   classNames: {

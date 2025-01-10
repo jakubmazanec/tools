@@ -29,7 +29,7 @@ export type RadioProps<T extends ElementType, V extends boolean | number | strin
     className?: string;
   };
 
-export const Radio = <
+export function Radio<
   T extends ElementType = typeof RADIO_ELEMENT,
   V extends boolean | number | string = string,
 >({
@@ -40,7 +40,7 @@ export const Radio = <
   className,
   ref,
   ...rest
-}: RadioProps<T, V>) => {
+}: RadioProps<T, V>) {
   let theme = useRadioTheme({disabled});
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
@@ -66,7 +66,7 @@ export const Radio = <
       </span>
     </HeadlessRadio>
   );
-};
+}
 
 export const radioTheme: ComponentTheme<typeof useRadioTheme> = {
   classNames: {

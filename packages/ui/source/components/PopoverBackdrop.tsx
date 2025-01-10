@@ -26,13 +26,13 @@ export type PopoverBackdropProps<T extends ElementType> = ComponentProps<
     className?: string;
   };
 
-export const PopoverBackdrop = <T extends ElementType = typeof POPOVER_BACKDROP_ELEMENT>({
+export function PopoverBackdrop<T extends ElementType = typeof POPOVER_BACKDROP_ELEMENT>({
   as = POPOVER_BACKDROP_ELEMENT as T,
   className,
   ref,
   children,
   ...rest
-}: PopoverBackdropProps<T>) => {
+}: PopoverBackdropProps<T>) {
   let theme = usePopoverBackdropTheme();
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   let props: HeadlessPopoverBackdropProps<any> = filterProps({
@@ -44,7 +44,7 @@ export const PopoverBackdrop = <T extends ElementType = typeof POPOVER_BACKDROP_
   });
 
   return <HeadlessPopoverBackdrop {...props}>{children}</HeadlessPopoverBackdrop>;
-};
+}
 
 export const popoverBackdropTheme: ComponentTheme<typeof usePopoverBackdropTheme> = {
   className: '',

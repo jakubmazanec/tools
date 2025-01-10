@@ -28,14 +28,14 @@ export type FieldsetProps<T extends ElementType> = ComponentProps<typeof useFiel
     className?: string | undefined;
   };
 
-export const Fieldset = <T extends ElementType = typeof FIELDSET_ELEMENT>({
+export function Fieldset<T extends ElementType = typeof FIELDSET_ELEMENT>({
   as = FIELDSET_ELEMENT as T,
   disabled = false,
   className,
   ref,
   children,
   ...rest
-}: FieldsetProps<T>) => {
+}: FieldsetProps<T>) {
   let theme = useFieldsetTheme({disabled});
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   let props: HeadlessFieldsetProps<any> = filterProps({
@@ -48,7 +48,7 @@ export const Fieldset = <T extends ElementType = typeof FIELDSET_ELEMENT>({
   });
 
   return <HeadlessFieldset {...props}>{children}</HeadlessFieldset>;
-};
+}
 
 export const fieldsetnTheme: ComponentTheme<typeof useFieldsetTheme> = {
   className:

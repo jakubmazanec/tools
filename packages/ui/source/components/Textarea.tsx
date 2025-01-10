@@ -29,7 +29,7 @@ export type TextareaProps<T extends ElementType> = ComponentProps<typeof useText
     icon?: ComponentType<object> | undefined;
   };
 
-export const Textarea = <T extends ElementType = typeof TEXTAREA_ELEMENT>({
+export function Textarea<T extends ElementType = typeof TEXTAREA_ELEMENT>({
   disabled = false,
   as = TEXTAREA_ELEMENT as T,
   name,
@@ -37,7 +37,7 @@ export const Textarea = <T extends ElementType = typeof TEXTAREA_ELEMENT>({
   icon: Icon,
   ref,
   ...rest
-}: TextareaProps<T>) => {
+}: TextareaProps<T>) {
   let theme = useTextareaTheme({disabled});
   let fieldName = useFieldName();
   let field = useField();
@@ -75,7 +75,7 @@ export const Textarea = <T extends ElementType = typeof TEXTAREA_ELEMENT>({
       : null}
     </span>
   );
-};
+}
 
 export const textareaTheme: ComponentTheme<typeof useTextareaTheme> = {
   classNames: {

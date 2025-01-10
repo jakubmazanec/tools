@@ -28,14 +28,14 @@ export type MenuButtonProps<T extends ElementType> = ComponentProps<typeof useMe
     className?: string;
   };
 
-export const MenuButton = <T extends ElementType = typeof MENU_BUTTON_ELEMENT>({
+export function MenuButton<T extends ElementType = typeof MENU_BUTTON_ELEMENT>({
   disabled = false,
   as = MENU_BUTTON_ELEMENT as T,
   className,
   ref,
   children,
   ...rest
-}: MenuButtonProps<T>) => {
+}: MenuButtonProps<T>) {
   let theme = useMenuButtonTheme({disabled});
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   let props: HeadlessMenuButtonProps<any> = filterProps({
@@ -48,7 +48,7 @@ export const MenuButton = <T extends ElementType = typeof MENU_BUTTON_ELEMENT>({
   });
 
   return <HeadlessMenuButton {...props}>{children}</HeadlessMenuButton>;
-};
+}
 
 export const menuButtonTheme: ComponentTheme<typeof useMenuButtonTheme> = {
   className: 'text-sm',

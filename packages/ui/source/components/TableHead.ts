@@ -24,13 +24,13 @@ export type TableHeadProps<T extends ElementType> = ComponentProps<typeof useTab
     className?: string;
   };
 
-export const TableHead = <T extends ElementType = typeof TABLE_HEAD_ELEMENT>({
+export function TableHead<T extends ElementType = typeof TABLE_HEAD_ELEMENT>({
   as: Component = TABLE_HEAD_ELEMENT as T,
   className,
   ref,
   children,
   ...rest
-}: TableHeadProps<T>) => {
+}: TableHeadProps<T>) {
   let theme = useTableHeadTheme();
   let props = {
     ref,
@@ -40,7 +40,7 @@ export const TableHead = <T extends ElementType = typeof TABLE_HEAD_ELEMENT>({
   };
 
   return createElement(Component, props, children);
-};
+}
 
 export const tableHeadTheme: ComponentTheme<typeof useTableHeadTheme> = {
   className: 'font-sans border-b-2 border-neutral-100',

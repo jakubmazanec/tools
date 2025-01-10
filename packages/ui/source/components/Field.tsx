@@ -35,7 +35,7 @@ export type FieldProps<T extends ElementType> = ComponentProps<typeof useFieldTh
       }
   );
 
-export const Field = <T extends ElementType = typeof FIELD_ELEMENT>({
+export function Field<T extends ElementType = typeof FIELD_ELEMENT>({
   as = FIELD_ELEMENT as T,
   name,
   field,
@@ -43,7 +43,7 @@ export const Field = <T extends ElementType = typeof FIELD_ELEMENT>({
   ref,
   children,
   ...rest
-}: FieldProps<T>) => {
+}: FieldProps<T>) {
   let theme = useFieldTheme();
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   let props: HeadlessFieldProps<any> = filterProps({
@@ -71,7 +71,7 @@ export const Field = <T extends ElementType = typeof FIELD_ELEMENT>({
   }
 
   return <HeadlessField {...props}>{children}</HeadlessField>;
-};
+}
 
 export const fieldTheme: ComponentTheme<typeof useFieldTheme> = {
   className: 'flex flex-col gap-y-2 font-sans',

@@ -26,13 +26,13 @@ export type MenuProps<T extends ElementType> = ComponentProps<typeof useMenuThem
     className?: string;
   };
 
-export const Menu = <T extends ElementType = typeof MENU_ELEMENT>({
+export function Menu<T extends ElementType = typeof MENU_ELEMENT>({
   as = MENU_ELEMENT as unknown as T,
   className,
   ref,
   children,
   ...rest
-}: MenuProps<T>) => {
+}: MenuProps<T>) {
   let theme = useMenuTheme();
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed because of type of `as`
   let props: HeadlessMenuProps<any> = filterProps({
@@ -44,7 +44,7 @@ export const Menu = <T extends ElementType = typeof MENU_ELEMENT>({
   });
 
   return <HeadlessMenu {...props}>{children}</HeadlessMenu>;
-};
+}
 
 export const menuTheme: ComponentTheme<typeof useMenuTheme> = {
   className: null,

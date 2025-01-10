@@ -26,13 +26,13 @@ export type ErrorProps<T extends ElementType> = ComponentProps<typeof useErrorTh
     className?: string;
   };
 
-export const Error = <T extends ElementType = typeof ERROR_ELEMENT>({
+export function Error<T extends ElementType = typeof ERROR_ELEMENT>({
   as: Component = ERROR_ELEMENT as T,
   className,
   ref,
   children,
   ...rest
-}: ErrorProps<T>) => {
+}: ErrorProps<T>) {
   let theme = useErrorTheme();
   let field = useField();
   let props = {
@@ -51,7 +51,7 @@ export const Error = <T extends ElementType = typeof ERROR_ELEMENT>({
   }
 
   return createElement(Component, props, children);
-};
+}
 
 export const errorTheme: ComponentTheme<typeof useErrorTheme> = {
   className: 'flex text-danger-500 empty:hidden',

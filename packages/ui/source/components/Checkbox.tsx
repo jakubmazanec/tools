@@ -36,7 +36,7 @@ export type CheckboxProps<T extends ElementType> = ComponentProps<typeof useChec
     onChange?: ((checked: boolean) => void) | undefined;
   };
 
-export const Checkbox = <T extends ElementType = typeof CHECKBOX_ELEMENT>({
+export function Checkbox<T extends ElementType = typeof CHECKBOX_ELEMENT>({
   disabled = false,
   as = CHECKBOX_ELEMENT as T,
   checked,
@@ -47,7 +47,7 @@ export const Checkbox = <T extends ElementType = typeof CHECKBOX_ELEMENT>({
   onChange,
   ref,
   ...rest
-}: CheckboxProps<T>) => {
+}: CheckboxProps<T>) {
   let theme = useCheckboxTheme({disabled});
   let fieldName = useFieldName();
   let field = useField();
@@ -101,7 +101,7 @@ export const Checkbox = <T extends ElementType = typeof CHECKBOX_ELEMENT>({
       </span>
     </HeadlessCheckbox>
   );
-};
+}
 
 export const checkboxTheme: ComponentTheme<typeof useCheckboxTheme> = {
   classNames: {

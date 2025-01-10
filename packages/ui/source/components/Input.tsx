@@ -38,7 +38,7 @@ export type InputProps<T extends ElementType> = ComponentProps<typeof useInputTh
     showClearButton?: boolean | undefined;
   };
 
-export const Input = <T extends ElementType = typeof INPUT_ELEMENT>({
+export function Input<T extends ElementType = typeof INPUT_ELEMENT>({
   disabled = false,
   as = INPUT_ELEMENT as T,
   name,
@@ -47,7 +47,7 @@ export const Input = <T extends ElementType = typeof INPUT_ELEMENT>({
   showClearButton = false,
   ref,
   ...rest
-}: InputProps<T>) => {
+}: InputProps<T>) {
   let theme = useInputTheme({disabled});
   let fieldName = useFieldName();
   let field = useField();
@@ -123,7 +123,7 @@ export const Input = <T extends ElementType = typeof INPUT_ELEMENT>({
       : null}
     </span>
   );
-};
+}
 
 export const inputTheme: ComponentTheme<typeof useInputTheme> = {
   classNames: {

@@ -1,12 +1,11 @@
 import {type Meta, type StoryObj} from '@storybook/react';
-import {type ElementType} from 'react';
 
-import {Checkbox, type CheckboxProps} from '../source/main.js';
+import {Checkbox} from '../source/main.js';
 
 const meta = {
   title: 'Components/Checkbox',
   component: Checkbox,
-} satisfies Meta<CheckboxProps<ElementType>>;
+} satisfies Meta<typeof Checkbox>;
 
 export default meta;
 

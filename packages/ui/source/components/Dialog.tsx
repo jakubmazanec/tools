@@ -36,7 +36,7 @@ export type DialogProps<T extends ElementType> = ComponentProps<typeof useDialog
     onClose?: () => void;
   };
 
-export const Dialog = <T extends ElementType = typeof DIALOG_ELEMENT>({
+export function Dialog<T extends ElementType = typeof DIALOG_ELEMENT>({
   as = DIALOG_ELEMENT as T,
   open,
   static: isStatic,
@@ -46,7 +46,7 @@ export const Dialog = <T extends ElementType = typeof DIALOG_ELEMENT>({
   ref,
   children,
   ...rest
-}: DialogProps<T>) => {
+}: DialogProps<T>) {
   let theme = useDialogTheme();
 
   let handleClose = useCallback(() => {
@@ -71,7 +71,7 @@ export const Dialog = <T extends ElementType = typeof DIALOG_ELEMENT>({
       <div className={theme.root('fixed inset-0', className)}>{children}</div>
     </HeadlessDialog>
   );
-};
+}
 
 export const dialogTheme: ComponentTheme<typeof useDialogTheme> = {
   classNames: {

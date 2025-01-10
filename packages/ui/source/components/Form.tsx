@@ -28,14 +28,14 @@ export type FormProps<T extends ElementType> = ComponentProps<typeof useFormThem
     form?: FormMetadata<any, any> | undefined;
   };
 
-export const Form = <T extends ElementType = typeof FORM_ELEMENT>({
+export function Form<T extends ElementType = typeof FORM_ELEMENT>({
   as: Component = FORM_ELEMENT as T,
   className,
   form,
   ref,
   children,
   ...rest
-}: FormProps<T>) => {
+}: FormProps<T>) {
   let theme = useFormTheme();
 
   if (form) {
@@ -67,7 +67,7 @@ export const Form = <T extends ElementType = typeof FORM_ELEMENT>({
   };
 
   return createElement(Component, props, children);
-};
+}
 
 export const formTheme: ComponentTheme<typeof useFormTheme> = {
   className: 'flex flex-col gap-y-6',

@@ -28,14 +28,14 @@ export type TextProps<T extends ElementType> = ComponentProps<typeof useTextThem
     className?: string;
   };
 
-export const Text = <T extends ElementType = typeof TEXT_ELEMENT>({
+export function Text<T extends ElementType = typeof TEXT_ELEMENT>({
   size = 'medium',
   as: Component = TEXT_ELEMENT as T,
   className,
   ref,
   children,
   ...rest
-}: TextProps<T>) => {
+}: TextProps<T>) {
   let theme = useTextTheme({size});
   let props = {
     ref,
@@ -45,7 +45,7 @@ export const Text = <T extends ElementType = typeof TEXT_ELEMENT>({
   };
 
   return createElement(Component, props, children);
-};
+}
 
 export const textTheme: ComponentTheme<typeof useTextTheme> = {
   className: 'm-0',

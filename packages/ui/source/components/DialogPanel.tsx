@@ -24,13 +24,13 @@ export type DialogPanelProps<T extends ElementType> = ComponentProps<typeof useD
     className?: string;
   };
 
-export const DialogPanel = <T extends ElementType = typeof DIALOG_PANEL_ELEMENT>({
+export function DialogPanel<T extends ElementType = typeof DIALOG_PANEL_ELEMENT>({
   as = DIALOG_PANEL_ELEMENT as T,
   className,
   ref,
   children,
   ...rest
-}: DialogPanelProps<T>) => {
+}: DialogPanelProps<T>) {
   let theme = useDialogPanelTheme();
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   let props: HeadlessDialogPanelProps<any> = filterProps({
@@ -43,7 +43,7 @@ export const DialogPanel = <T extends ElementType = typeof DIALOG_PANEL_ELEMENT>
   });
 
   return <HeadlessDialogPanel {...props}>{children}</HeadlessDialogPanel>;
-};
+}
 
 export const dialogPanelTheme: ComponentTheme<typeof useDialogPanelTheme> = {
   className:

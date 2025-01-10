@@ -24,13 +24,13 @@ export type MenuHeadingProps<T extends ElementType> = ComponentProps<typeof useM
     className?: string;
   };
 
-export const MenuHeading = <T extends ElementType = typeof MENU_HEADING_ELEMENT>({
+export function MenuHeading<T extends ElementType = typeof MENU_HEADING_ELEMENT>({
   as = MENU_HEADING_ELEMENT as T,
   className,
   ref,
   children,
   ...rest
-}: MenuHeadingProps<T>) => {
+}: MenuHeadingProps<T>) {
   let theme = useMenuHeadingTheme();
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   let props: HeadlessMenuHeadingProps<any> = filterProps({
@@ -42,7 +42,7 @@ export const MenuHeading = <T extends ElementType = typeof MENU_HEADING_ELEMENT>
   });
 
   return <HeadlessMenuHeading {...props}>{children}</HeadlessMenuHeading>;
-};
+}
 
 export const menuHeadingTheme: ComponentTheme<typeof useMenuHeadingTheme> = {
   className: 'p-1 rounded-1 text-neutral-800 text-xs uppercase font-medium',

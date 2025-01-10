@@ -31,7 +31,7 @@ export type PopoverButtonProps<T extends ElementType> = ComponentProps<
     className?: string;
   };
 
-export const PopoverButton = <T extends ElementType = typeof POPOVER_BUTTON_ELEMENT>({
+export function PopoverButton<T extends ElementType = typeof POPOVER_BUTTON_ELEMENT>({
   disabled = false,
   as = POPOVER_BUTTON_ELEMENT as T,
   autoFocus,
@@ -39,7 +39,7 @@ export const PopoverButton = <T extends ElementType = typeof POPOVER_BUTTON_ELEM
   ref,
   children,
   ...rest
-}: PopoverButtonProps<T>) => {
+}: PopoverButtonProps<T>) {
   let theme = usePopoverButtonTheme({disabled});
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   let props: HeadlessPopoverButtonProps<any> = filterProps({
@@ -53,7 +53,7 @@ export const PopoverButton = <T extends ElementType = typeof POPOVER_BUTTON_ELEM
   });
 
   return <HeadlessPopoverButton {...props}>{children}</HeadlessPopoverButton>;
-};
+}
 
 export const popoverButtonTheme: ComponentTheme<typeof usePopoverButtonTheme> = {
   className: '',

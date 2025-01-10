@@ -1,12 +1,11 @@
 import {type Meta, type StoryObj} from '@storybook/react';
-import {type ElementType} from 'react';
 
-import {Dialog, DialogPanel, type DialogProps, DialogTitle} from '../source/main.js';
+import {Dialog, DialogPanel, DialogTitle} from '../source/main.js';
 
 const meta = {
   title: 'Components/Dialog',
   component: Dialog,
-} satisfies Meta<DialogProps<ElementType>>;
+} satisfies Meta<typeof Dialog>;
 
 export default meta;
 

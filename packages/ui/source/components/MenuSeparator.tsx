@@ -26,13 +26,13 @@ export type MenuSeparatorProps<T extends ElementType> = ComponentProps<
     className?: string;
   };
 
-export const MenuSeparator = <T extends ElementType = typeof MENU_SEPARATOR_ELEMENT>({
+export function MenuSeparator<T extends ElementType = typeof MENU_SEPARATOR_ELEMENT>({
   as = MENU_SEPARATOR_ELEMENT as T,
   className,
   ref,
   children,
   ...rest
-}: MenuSeparatorProps<T>) => {
+}: MenuSeparatorProps<T>) {
   let theme = useMenuSeparatorTheme();
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   let props: HeadlessMenuSeparatorProps<any> = filterProps({
@@ -44,7 +44,7 @@ export const MenuSeparator = <T extends ElementType = typeof MENU_SEPARATOR_ELEM
   });
 
   return <HeadlessMenuSeparator {...props}>{children}</HeadlessMenuSeparator>;
-};
+}
 
 export const menuSeparatorTheme: ComponentTheme<typeof useMenuSeparatorTheme> = {
   className: 'h-0 border-b-2 border-neutral-50 bg-transparent',

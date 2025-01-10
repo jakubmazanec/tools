@@ -24,13 +24,13 @@ export type TableHeaderProps<T extends ElementType> = ComponentProps<typeof useT
     className?: string;
   };
 
-export const TableHeader = <T extends ElementType = typeof TABLE_HEADER_ELEMENT>({
+export function TableHeader<T extends ElementType = typeof TABLE_HEADER_ELEMENT>({
   as: Component = TABLE_HEADER_ELEMENT as T,
   className,
   ref,
   children,
   ...rest
-}: TableHeaderProps<T>) => {
+}: TableHeaderProps<T>) {
   let theme = useTableHeaderTheme();
   let props = {
     ref,
@@ -40,7 +40,7 @@ export const TableHeader = <T extends ElementType = typeof TABLE_HEADER_ELEMENT>
   };
 
   return createElement(Component, props, children);
-};
+}
 
 export const tableHeaderTheme: ComponentTheme<typeof useTableHeaderTheme> = {
   className: 'relative p-1 text-sm font-medium z-20 font-sans tabular-nums whitespace-nowrap',

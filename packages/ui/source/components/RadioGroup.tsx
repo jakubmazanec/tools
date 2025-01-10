@@ -53,7 +53,7 @@ export type RadioGroupProps<
       }
   );
 
-export const RadioGroup = <
+export function RadioGroup<
   T extends ElementType = typeof RADIO_GROUP_ELEMENT,
   V extends boolean | number | string = string,
 >({
@@ -68,7 +68,7 @@ export const RadioGroup = <
   ref,
   children,
   ...rest
-}: RadioGroupProps<T, V>) => {
+}: RadioGroupProps<T, V>) {
   let theme = useRadioGroupTheme({disabled});
   let formId = useFormId();
 
@@ -130,7 +130,7 @@ export const RadioGroup = <
   };
 
   return <HeadlessRadioGroup {...props}>{children}</HeadlessRadioGroup>;
-};
+}
 
 export const radioGroupTheme: ComponentTheme<typeof useRadioGroupTheme> = {
   className: 'flex flex-col gap-y-2',

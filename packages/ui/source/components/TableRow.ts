@@ -24,13 +24,13 @@ export type TableRowProps<T extends ElementType> = ComponentProps<typeof useTabl
     className?: string;
   };
 
-export const TableRow = <T extends ElementType = typeof TABLE_ROW_ELEMENT>({
+export function TableRow<T extends ElementType = typeof TABLE_ROW_ELEMENT>({
   as: Component = TABLE_ROW_ELEMENT as T,
   className,
   ref,
   children,
   ...rest
-}: TableRowProps<T>) => {
+}: TableRowProps<T>) {
   let theme = useTableRowTheme();
   let props = {
     ref,
@@ -40,7 +40,7 @@ export const TableRow = <T extends ElementType = typeof TABLE_ROW_ELEMENT>({
   };
 
   return createElement(Component, props, children);
-};
+}
 
 export const tableRowTheme: ComponentTheme<typeof useTableRowTheme> = {
   className: 'font-sans odd:bg-white even:bg-neutral-25',

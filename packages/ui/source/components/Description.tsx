@@ -24,13 +24,13 @@ export type DescriptionProps<T extends ElementType> = ComponentProps<typeof useD
     className?: string | undefined;
   };
 
-export const Description = <T extends ElementType = typeof DESCRIPTION_ELEMENT>({
+export function Description<T extends ElementType = typeof DESCRIPTION_ELEMENT>({
   as = DESCRIPTION_ELEMENT as T,
   className,
   ref,
   children,
   ...rest
-}: DescriptionProps<T>) => {
+}: DescriptionProps<T>) {
   let theme = useDescriptionTheme();
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   let props: HeadlessDescriptionProps<any> = filterProps({
@@ -42,7 +42,7 @@ export const Description = <T extends ElementType = typeof DESCRIPTION_ELEMENT>(
   });
 
   return <HeadlessDescription {...props}>{children}</HeadlessDescription>;
-};
+}
 
 export const descriptionTheme: ComponentTheme<typeof useDescriptionTheme> = {
   className: 'font-sans text-sm',

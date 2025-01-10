@@ -26,7 +26,7 @@ export type PopoverPanelProps<T extends ElementType> = ComponentProps<typeof use
     className?: string;
   };
 
-export const PopoverPanel = <T extends ElementType = typeof POPOVER_PANEL_ELEMENT>({
+export function PopoverPanel<T extends ElementType = typeof POPOVER_PANEL_ELEMENT>({
   as = POPOVER_PANEL_ELEMENT as T,
   static: isStatic,
   anchor = 'bottom start',
@@ -34,7 +34,7 @@ export const PopoverPanel = <T extends ElementType = typeof POPOVER_PANEL_ELEMEN
   ref,
   children,
   ...rest
-}: PopoverPanelProps<T>) => {
+}: PopoverPanelProps<T>) {
   let theme = usePopoverPanelTheme();
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   let props: HeadlessPopoverPanelProps<any> = filterProps({
@@ -49,7 +49,7 @@ export const PopoverPanel = <T extends ElementType = typeof POPOVER_PANEL_ELEMEN
   });
 
   return <HeadlessPopoverPanel {...props}>{children}</HeadlessPopoverPanel>;
-};
+}
 
 export const popoverPanelTheme: ComponentTheme<typeof usePopoverPanelTheme> = {
   className:

@@ -31,7 +31,7 @@ export type ListboxOptionProps<
     className?: string;
   };
 
-export const ListboxOption = <
+export function ListboxOption<
   T extends ElementType = typeof LISTBOX_OPTION_ELEMENT,
   V extends boolean | number | string = string,
 >({
@@ -42,7 +42,7 @@ export const ListboxOption = <
   ref,
   children,
   ...rest
-}: ListboxOptionProps<T, V>) => {
+}: ListboxOptionProps<T, V>) {
   let theme = useListboxOptionTheme({disabled});
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
@@ -64,7 +64,7 @@ export const ListboxOption = <
       {children}
     </HeadlessListboxOption>
   );
-};
+}
 
 export const listboxOptionTheme: ComponentTheme<typeof useListboxOptionTheme> = {
   classNames: {

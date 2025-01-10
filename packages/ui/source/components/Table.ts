@@ -24,13 +24,13 @@ export type TableProps<T extends ElementType> = ComponentProps<typeof useTableTh
     className?: string | undefined;
   };
 
-export const Table = <T extends ElementType = typeof TABLE_ELEMENT>({
+export function Table<T extends ElementType = typeof TABLE_ELEMENT>({
   as: Component = TABLE_ELEMENT as T,
   className,
   ref,
   children,
   ...rest
-}: TableProps<T>) => {
+}: TableProps<T>) {
   let theme = useTableTheme();
   let props = {
     ref,
@@ -40,7 +40,7 @@ export const Table = <T extends ElementType = typeof TABLE_ELEMENT>({
   };
 
   return createElement(Component, props, children);
-};
+}
 
 export const tableTheme: ComponentTheme<typeof useTableTheme> = {
   className: '',

@@ -31,7 +31,7 @@ export type ContainerProps<T extends ElementType> = ComponentProps<typeof useCon
     className?: string;
   };
 
-export const Container = <T extends ElementType = typeof TEXT_ELEMENT>({
+export function Container<T extends ElementType = typeof TEXT_ELEMENT>({
   spacing = 'medium',
   direction = 'row',
   justify = 'normal',
@@ -41,7 +41,7 @@ export const Container = <T extends ElementType = typeof TEXT_ELEMENT>({
   ref,
   children,
   ...rest
-}: ContainerProps<T>) => {
+}: ContainerProps<T>) {
   let theme = useContainerTheme({spacing, direction, justify, align});
   let props = {
     ref,
@@ -51,7 +51,7 @@ export const Container = <T extends ElementType = typeof TEXT_ELEMENT>({
   };
 
   return createElement(Component, props, children);
-};
+}
 
 export const containerTheme: ComponentTheme<typeof useContainerTheme> = {
   className: 'flex',

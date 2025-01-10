@@ -24,13 +24,13 @@ export type TableCellProps<T extends ElementType> = ComponentProps<typeof useTab
     className?: string;
   };
 
-export const TableCell = <T extends ElementType = typeof TABLE_CELL_ELEMENT>({
+export function TableCell<T extends ElementType = typeof TABLE_CELL_ELEMENT>({
   as: Component = TABLE_CELL_ELEMENT as T,
   className,
   ref,
   children,
   ...rest
-}: TableCellProps<T>) => {
+}: TableCellProps<T>) {
   let theme = useTableCellTheme();
   let props = {
     ref,
@@ -40,7 +40,7 @@ export const TableCell = <T extends ElementType = typeof TABLE_CELL_ELEMENT>({
   };
 
   return createElement(Component, props, children);
-};
+}
 
 export const tableCellTheme: ComponentTheme<typeof useTableCellTheme> = {
   className: 'p-2 text-sm font-sans tabular-nums text-right truncate',

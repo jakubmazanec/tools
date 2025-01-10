@@ -24,13 +24,13 @@ export type CardProps<T extends ElementType> = ComponentProps<typeof useCardThem
     className?: string;
   }>;
 
-export const Card = <T extends ElementType = typeof CARD_ELEMENT>({
+export function Card<T extends ElementType = typeof CARD_ELEMENT>({
   as: Component = CARD_ELEMENT as T,
   className,
   ref,
   children,
   ...rest
-}: CardProps<T>) => {
+}: CardProps<T>) {
   let theme = useCardTheme();
   let props = {
     ref,
@@ -40,7 +40,7 @@ export const Card = <T extends ElementType = typeof CARD_ELEMENT>({
   };
 
   return createElement(Component, props, children);
-};
+}
 
 export const cardTheme: ComponentTheme<typeof useCardTheme> = {
   className: 'rounded-2 border border-neutral-100 p-4',

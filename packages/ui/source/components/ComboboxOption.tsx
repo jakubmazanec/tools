@@ -31,7 +31,7 @@ export type ComboboxOptionProps<
     className?: string;
   };
 
-export const ComboboxOption = <
+export function ComboboxOption<
   T extends ElementType = typeof LISTBOX_OPTION_ELEMENT,
   V extends boolean | number | string = string,
 >({
@@ -42,7 +42,7 @@ export const ComboboxOption = <
   children,
   ref,
   ...rest
-}: ComboboxOptionProps<T, V>) => {
+}: ComboboxOptionProps<T, V>) {
   let theme = useComboboxOptionTheme({disabled});
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
@@ -64,7 +64,7 @@ export const ComboboxOption = <
       {children}
     </HeadlessComboboxOption>
   );
-};
+}
 
 export const comboboxOptionTheme: ComponentTheme<typeof useComboboxOptionTheme> = {
   classNames: {

@@ -24,13 +24,13 @@ export type MenuSectionProps<T extends ElementType> = ComponentProps<typeof useM
     className?: string;
   };
 
-export const MenuSection = <T extends ElementType = typeof MENU_SECTION_ELEMENT>({
+export function MenuSection<T extends ElementType = typeof MENU_SECTION_ELEMENT>({
   as = MENU_SECTION_ELEMENT as T,
   className,
   ref,
   children,
   ...rest
-}: MenuSectionProps<T>) => {
+}: MenuSectionProps<T>) {
   let theme = useMenuSectionTheme();
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   let props: HeadlessMenuSectionProps<any> = filterProps({
@@ -42,7 +42,7 @@ export const MenuSection = <T extends ElementType = typeof MENU_SECTION_ELEMENT>
   });
 
   return <HeadlessMenuSection {...props}>{children}</HeadlessMenuSection>;
-};
+}
 
 export const menuSectionTheme: ComponentTheme<typeof useMenuSectionTheme> = {
   className: 'flex flex-col gap-y-1',

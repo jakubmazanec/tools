@@ -24,13 +24,13 @@ export type TableBodyProps<T extends ElementType> = ComponentProps<typeof useTab
     className?: string;
   };
 
-export const TableBody = <T extends ElementType = typeof TABLE_BODY_ELEMENT>({
+export function TableBody<T extends ElementType = typeof TABLE_BODY_ELEMENT>({
   as: Component = TABLE_BODY_ELEMENT as T,
   className,
   ref,
   children,
   ...rest
-}: TableBodyProps<T>) => {
+}: TableBodyProps<T>) {
   let theme = useTableBodyTheme();
   let props = {
     ref,
@@ -40,7 +40,7 @@ export const TableBody = <T extends ElementType = typeof TABLE_BODY_ELEMENT>({
   };
 
   return createElement(Component, props, children);
-};
+}
 
 export const tableBodyTheme: ComponentTheme<typeof useTableBodyTheme> = {
   className: 'font-sans',

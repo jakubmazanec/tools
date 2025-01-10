@@ -24,13 +24,13 @@ export type PopoverGroupProps<T extends ElementType> = ComponentProps<typeof use
     className?: string;
   };
 
-export const PopoverGroup = <T extends ElementType = typeof POPOVER_GROUP_ELEMENT>({
+export function PopoverGroup<T extends ElementType = typeof POPOVER_GROUP_ELEMENT>({
   as = POPOVER_GROUP_ELEMENT as T,
   className,
   ref,
   children,
   ...rest
-}: PopoverGroupProps<T>) => {
+}: PopoverGroupProps<T>) {
   let theme = usePopoverGroupTheme();
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   let props: HeadlessPopoverGroupProps<any> = filterProps({
@@ -42,7 +42,7 @@ export const PopoverGroup = <T extends ElementType = typeof POPOVER_GROUP_ELEMEN
   });
 
   return <HeadlessPopoverGroup {...props}>{children}</HeadlessPopoverGroup>;
-};
+}
 
 export const popoverGroupTheme: ComponentTheme<typeof usePopoverGroupTheme> = {
   className: '',

@@ -24,13 +24,13 @@ export type TableCaptionProps<T extends ElementType> = ComponentProps<typeof use
     className?: string;
   };
 
-export const TableCaption = <T extends ElementType = typeof TABLE_CAPTION_ELEMENT>({
+export function TableCaption<T extends ElementType = typeof TABLE_CAPTION_ELEMENT>({
   as: Component = TABLE_CAPTION_ELEMENT as T,
   className,
   ref,
   children,
   ...rest
-}: TableCaptionProps<T>) => {
+}: TableCaptionProps<T>) {
   let theme = useTableCaptionTheme();
   let props = {
     ref,
@@ -40,7 +40,7 @@ export const TableCaption = <T extends ElementType = typeof TABLE_CAPTION_ELEMEN
   };
 
   return createElement(Component, props, children);
-};
+}
 
 export const tableCaptionTheme: ComponentTheme<typeof useTableCaptionTheme> = {
   className: 'font-sans text-sm font-medium mb-2',

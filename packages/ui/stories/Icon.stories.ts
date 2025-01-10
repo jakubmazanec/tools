@@ -1,12 +1,11 @@
 import {type Meta, type StoryObj} from '@storybook/react';
-import {type ElementType} from 'react';
 
-import {Icon, type IconProps} from '../source/main.js';
+import {Icon} from '../source/main.js';
 
 const meta = {
   title: 'Components/Icon',
   component: Icon,
-} satisfies Meta<IconProps<ElementType>>;
+} satisfies Meta<typeof Icon>;
 
 export default meta;
 

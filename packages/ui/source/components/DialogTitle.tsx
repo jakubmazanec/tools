@@ -1,7 +1,4 @@
-import {
-  DialogTitle as HeadlessDialogTitle,
-  type DialogTitleProps as HeadlessDialogTitleProps,
-} from '@headlessui/react';
+import * as react from '@headlessui/react';
 import {type ComponentPropsWithoutRef, type ElementType, type PropsWithChildren} from 'react';
 
 import {
@@ -33,7 +30,7 @@ export const DialogTitle = <T extends ElementType = typeof DIALOG_TITLE_ELEMENT>
 }: DialogTitleProps<T>) => {
   let theme = useDialogTitleTheme();
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
-  let props: HeadlessDialogTitleProps<any> = filterProps({
+  let props: react.DialogTitleProps<any> = filterProps({
     as,
     ref,
     className: theme(null, className),
@@ -41,7 +38,7 @@ export const DialogTitle = <T extends ElementType = typeof DIALOG_TITLE_ELEMENT>
     ...rest,
   });
 
-  return <HeadlessDialogTitle {...props}>{children}</HeadlessDialogTitle>;
+  return <react.DialogTitle {...props}>{children}</react.DialogTitle>;
 };
 
 export const dialogTitleTheme: ComponentTheme<typeof useDialogTitleTheme> = {
