@@ -2,4 +2,4 @@
 '@jakubmazanec/carson-templates': major
 ---
 
-BREAKING: Updates all templates to support React v19.
+BREAKING: Templates `projects/react-library` and `projects/remix-app` now use React v19.
