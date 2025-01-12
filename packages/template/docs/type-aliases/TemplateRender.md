@@ -7,7 +7,7 @@
 > **TemplateRender**\<`A`, `D`\>: `object`
 
 Defined in:
-[packages/template/source/TemplateRender.ts:11](https://github.com/jakubmazanec/tools/blob/f779e75b9ef98389e12e52575295bd1ef364daca/packages/template/source/TemplateRender.ts#L11)
+[packages/template/source/TemplateRender.ts:11](https://github.com/jakubmazanec/tools/blob/b70ba93afff7f67760159378262d2c0b19cfed9e/packages/template/source/TemplateRender.ts#L11)
 
 An object type representing the result of a template render.
 

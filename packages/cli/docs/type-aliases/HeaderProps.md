@@ -7,7 +7,7 @@
 > **HeaderProps**: `BoxProps` & `object`
 
 Defined in:
-[cli/source/ui/Header.tsx:9](https://github.com/jakubmazanec/tools/blob/f779e75b9ef98389e12e52575295bd1ef364daca/packages/cli/source/ui/Header.tsx#L9)
+[cli/source/ui/Header.tsx:9](https://github.com/jakubmazanec/tools/blob/b70ba93afff7f67760159378262d2c0b19cfed9e/packages/cli/source/ui/Header.tsx#L9)
 
 [Header](../functions/Header.md) component props.
 

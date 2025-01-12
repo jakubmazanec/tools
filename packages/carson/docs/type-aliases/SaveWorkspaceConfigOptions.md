@@ -7,7 +7,7 @@
 > **SaveWorkspaceConfigOptions**: `object`
 
 Defined in:
-[packages/carson/source/workspace/saveWorkspaceConfig.ts:11](https://github.com/jakubmazanec/tools/blob/f779e75b9ef98389e12e52575295bd1ef364daca/packages/carson/source/workspace/saveWorkspaceConfig.ts#L11)
+[packages/carson/source/workspace/saveWorkspaceConfig.ts:11](https://github.com/jakubmazanec/tools/blob/b70ba93afff7f67760159378262d2c0b19cfed9e/packages/carson/source/workspace/saveWorkspaceConfig.ts#L11)
 
 [saveWorkspaceConfig](../functions/saveWorkspaceConfig.md) options parameter.
 

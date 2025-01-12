@@ -12,7 +12,7 @@
 > \| `ZodError`\<[`PackageJson`](../type-aliases/PackageJson.md)\>\>\>
 
 Defined in:
-[packages/zod-utils/source/utils/readPackageJson.ts:13](https://github.com/jakubmazanec/tools/blob/f779e75b9ef98389e12e52575295bd1ef364daca/packages/zod-utils/source/utils/readPackageJson.ts#L13)
+[packages/zod-utils/source/utils/readPackageJson.ts:13](https://github.com/jakubmazanec/tools/blob/b70ba93afff7f67760159378262d2c0b19cfed9e/packages/zod-utils/source/utils/readPackageJson.ts#L13)
 
 ## Type Parameters
 

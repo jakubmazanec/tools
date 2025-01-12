@@ -7,7 +7,7 @@
 > **Legend**\<`T`\>(`__namedParameters`): `Element`
 
 Defined in:
-[packages/ui/source/components/Legend.tsx:24](https://github.com/jakubmazanec/tools/blob/f779e75b9ef98389e12e52575295bd1ef364daca/packages/ui/source/components/Legend.tsx#L24)
+[packages/ui/source/components/Legend.tsx:24](https://github.com/jakubmazanec/tools/blob/b70ba93afff7f67760159378262d2c0b19cfed9e/packages/ui/source/components/Legend.tsx#L24)
 
 ## Type Parameters
 

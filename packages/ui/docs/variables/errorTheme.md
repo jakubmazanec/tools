@@ -8,4 +8,4 @@
 > [`useErrorTheme`](../functions/useErrorTheme.md)\>
 
 Defined in:
-[packages/ui/source/components/Error.tsx:56](https://github.com/jakubmazanec/tools/blob/f779e75b9ef98389e12e52575295bd1ef364daca/packages/ui/source/components/Error.tsx#L56)
+[packages/ui/source/components/Error.tsx:56](https://github.com/jakubmazanec/tools/blob/b70ba93afff7f67760159378262d2c0b19cfed9e/packages/ui/source/components/Error.tsx#L56)

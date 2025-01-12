@@ -7,7 +7,7 @@
 > **CommandOptions**\<`B`, `C`, `D`, `E`\>: `object`
 
 Defined in:
-[cli/source/program/CommandOptions.ts:6](https://github.com/jakubmazanec/tools/blob/f779e75b9ef98389e12e52575295bd1ef364daca/packages/cli/source/program/CommandOptions.ts#L6)
+[cli/source/program/CommandOptions.ts:6](https://github.com/jakubmazanec/tools/blob/b70ba93afff7f67760159378262d2c0b19cfed9e/packages/cli/source/program/CommandOptions.ts#L6)
 
 [Command constructor](../classes/Command.md#constructors) options parameter.
 

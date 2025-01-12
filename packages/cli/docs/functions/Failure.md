@@ -7,7 +7,7 @@
 > **Failure**(`__namedParameters`): `Element`
 
 Defined in:
-[cli/source/ui/Failure.tsx:23](https://github.com/jakubmazanec/tools/blob/f779e75b9ef98389e12e52575295bd1ef364daca/packages/cli/source/ui/Failure.tsx#L23)
+[cli/source/ui/Failure.tsx:23](https://github.com/jakubmazanec/tools/blob/b70ba93afff7f67760159378262d2c0b19cfed9e/packages/cli/source/ui/Failure.tsx#L23)
 
 A component that renders a failure state.
 

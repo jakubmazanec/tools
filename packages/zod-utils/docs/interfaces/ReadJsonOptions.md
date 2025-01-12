@@ -5,7 +5,7 @@
 # Interface: ReadJsonOptions
 
 Defined in:
-[packages/zod-utils/source/utils/readJson.ts:8](https://github.com/jakubmazanec/tools/blob/f779e75b9ef98389e12e52575295bd1ef364daca/packages/zod-utils/source/utils/readJson.ts#L8)
+[packages/zod-utils/source/utils/readJson.ts:8](https://github.com/jakubmazanec/tools/blob/b70ba93afff7f67760159378262d2c0b19cfed9e/packages/zod-utils/source/utils/readJson.ts#L8)
 
 ## Properties
 
@@ -14,4 +14,4 @@ Defined in:
 > `optional` **throwOnZodError**: `boolean`
 
 Defined in:
-[packages/zod-utils/source/utils/readJson.ts:9](https://github.com/jakubmazanec/tools/blob/f779e75b9ef98389e12e52575295bd1ef364daca/packages/zod-utils/source/utils/readJson.ts#L9)
+[packages/zod-utils/source/utils/readJson.ts:9](https://github.com/jakubmazanec/tools/blob/b70ba93afff7f67760159378262d2c0b19cfed9e/packages/zod-utils/source/utils/readJson.ts#L9)

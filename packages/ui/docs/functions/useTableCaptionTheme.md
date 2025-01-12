@@ -7,7 +7,7 @@
 > **useTableCaptionTheme**(): (`baseClassName`?, `overrideClassName`?) => `string`
 
 Defined in:
-[packages/ui/source/components/TableCaption.ts:15](https://github.com/jakubmazanec/tools/blob/f779e75b9ef98389e12e52575295bd1ef364daca/packages/ui/source/components/TableCaption.ts#L15)
+[packages/ui/source/components/TableCaption.ts:15](https://github.com/jakubmazanec/tools/blob/b70ba93afff7f67760159378262d2c0b19cfed9e/packages/ui/source/components/TableCaption.ts#L15)
 
 ## Returns
 

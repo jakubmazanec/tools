@@ -7,7 +7,7 @@
 > **TemplateRenders**\<`A`, `D`\>: [`TemplateRender`](TemplateRender.md)\<`A`, `D`\>[]
 
 Defined in:
-[packages/template/source/TemplateRenders.ts:5](https://github.com/jakubmazanec/tools/blob/f779e75b9ef98389e12e52575295bd1ef364daca/packages/template/source/TemplateRenders.ts#L5)
+[packages/template/source/TemplateRenders.ts:5](https://github.com/jakubmazanec/tools/blob/b70ba93afff7f67760159378262d2c0b19cfed9e/packages/template/source/TemplateRenders.ts#L5)
 
 ## Type Parameters
 

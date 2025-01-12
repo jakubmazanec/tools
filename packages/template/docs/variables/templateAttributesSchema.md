@@ -13,6 +13,6 @@
 > `Record`\<`string`, `unknown`\> \| `Record`\<`string`, `unknown`\>[]; \}\>
 
 Defined in:
-[packages/template/source/TemplateAttributes.ts:8](https://github.com/jakubmazanec/tools/blob/f779e75b9ef98389e12e52575295bd1ef364daca/packages/template/source/TemplateAttributes.ts#L8)
+[packages/template/source/TemplateAttributes.ts:8](https://github.com/jakubmazanec/tools/blob/b70ba93afff7f67760159378262d2c0b19cfed9e/packages/template/source/TemplateAttributes.ts#L8)
 
 Zod schema for [TemplateAttributes](../type-aliases/TemplateAttributes.md).

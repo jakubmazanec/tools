@@ -7,7 +7,7 @@
 > **Form**\<`C`\>: `FC`\<[`FormProps`](FormProps.md)\<`C`\>\> & `object`
 
 Defined in:
-[cli/source/ui/form/Form.ts:9](https://github.com/jakubmazanec/tools/blob/f779e75b9ef98389e12e52575295bd1ef364daca/packages/cli/source/ui/form/Form.ts#L9)
+[cli/source/ui/form/Form.ts:9](https://github.com/jakubmazanec/tools/blob/b70ba93afff7f67760159378262d2c0b19cfed9e/packages/cli/source/ui/form/Form.ts#L9)
 
 Form component.
 
