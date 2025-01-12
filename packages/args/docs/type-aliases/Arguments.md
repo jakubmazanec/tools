@@ -7,7 +7,7 @@
 > **Arguments**\<`T`\>: `object`
 
 Defined in:
-[args/source/Arguments.ts:10](https://github.com/jakubmazanec/tools/blob/b189bd808f93a39eacbf7e401a82a754c5ce3b63/packages/args/source/Arguments.ts#L10)
+[args/source/Arguments.ts:10](https://github.com/jakubmazanec/tools/blob/412167e80a7675933e43d5220a19d05130301e2d/packages/args/source/Arguments.ts#L10)
 
 Parsed arguments.
 

@@ -16,4 +16,4 @@
 > `workspace`: [`Workspace`](../classes/Workspace.md)\<`boolean`\>; \}\>
 
 Defined in:
-[packages/carson/source/template/TemplateData.ts:7](https://github.com/jakubmazanec/tools/blob/b189bd808f93a39eacbf7e401a82a754c5ce3b63/packages/carson/source/template/TemplateData.ts#L7)
+[packages/carson/source/template/TemplateData.ts:7](https://github.com/jakubmazanec/tools/blob/412167e80a7675933e43d5220a19d05130301e2d/packages/carson/source/template/TemplateData.ts#L7)

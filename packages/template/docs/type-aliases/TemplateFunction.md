@@ -7,7 +7,7 @@
 > **TemplateFunction**: (`data`?) => `string`
 
 Defined in:
-[packages/template/source/TemplateFunction.ts:4](https://github.com/jakubmazanec/tools/blob/b189bd808f93a39eacbf7e401a82a754c5ce3b63/packages/template/source/TemplateFunction.ts#L4)
+[packages/template/source/TemplateFunction.ts:4](https://github.com/jakubmazanec/tools/blob/412167e80a7675933e43d5220a19d05130301e2d/packages/template/source/TemplateFunction.ts#L4)
 
 Type representing a template function that takes data and returns rendered string.
 
