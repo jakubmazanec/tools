@@ -181,7 +181,7 @@ export const DEPENDENCY_VERSIONS: Record<string, string> = {
   vite: '^6.0.0',
   vitest: '^2.0.0',
 
-  node: '^22.12.0',
+  node: '^22.13.0',
   npm: '^10.9.0',
 };
 
