@@ -60,7 +60,7 @@
     "@types/lodash": "^4.17.13",
     "@types/micromatch": "^4.0.9",
     "@types/node": "^22.10.2",
-    "@types/react": "^18.3.18",
+    "@types/react": "^19.0.5",
     "@types/semver": "^7.5.8",
     "@types/zen-observable": "^0.8.7",
     "@vitest/coverage-v8": "^2.1.8",
@@ -69,7 +69,7 @@
     "esbuild": "^0.24.2",
     "eslint": "^9.17.0",
     "ink": "^5.1.0",
-    "react": "^18.3.1",
+    "react": "^19.0.0",
     "ts-node": "^10.9.2",
     "typedoc": "^0.27.6",
     "typedoc-plugin-markdown": "^4.4.0",
@@ -78,7 +78,7 @@
   },
   "peerDependencies": {
     "ink": "4.x || 5.x",
-    "react": "18.x"
+    "react": "19.x"
   },
   "packageManager": "npm@10.9.0",
   "engines": {
