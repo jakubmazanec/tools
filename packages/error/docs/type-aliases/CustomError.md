@@ -7,7 +7,7 @@
 > **CustomError**\<`ErrorCode`\>: `Error` & `object`
 
 Defined in:
-[types/CustomError.ts:6](https://github.com/jakubmazanec/tools/blob/412167e80a7675933e43d5220a19d05130301e2d/packages/error/source/types/CustomError.ts#L6)
+[types/CustomError.ts:6](https://github.com/jakubmazanec/tools/blob/f779e75b9ef98389e12e52575295bd1ef364daca/packages/error/source/types/CustomError.ts#L6)
 
 Type representing custom error.
 
