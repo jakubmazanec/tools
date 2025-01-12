@@ -57,7 +57,7 @@
   "devDependencies": {
     "@jakubmazanec/eslint-config": "^4.1.0",
     "@types/fs-extra": "^11.0.4",
-    "@types/lodash": "^4.17.13",
+    "@types/lodash": "^4.17.14",
     "@types/micromatch": "^4.0.9",
     "@types/node": "^22.10.2",
     "@types/react": "^19.0.3",
