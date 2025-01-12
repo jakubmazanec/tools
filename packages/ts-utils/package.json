@@ -1,6 +1,6 @@
 {
   "name": "@jakubmazanec/ts-utils",
-  "version": "3.0.9",
+  "version": "3.0.10",
   "description": "Collection of TypeScript types and utilities.",
   "repository": {
     "type": "git",

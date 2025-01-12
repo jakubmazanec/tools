@@ -1,6 +1,6 @@
 {
   "name": "@jakubmazanec/carson",
-  "version": "1.3.0",
+  "version": "2.0.0",
   "description": "Tool for managing workspace and project configuration.",
   "repository": {
     "type": "git",
@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "@jakubmazanec/args": "^2.0.0",
-    "@jakubmazanec/cli": "^0.3.0",
+    "@jakubmazanec/cli": "^0.4.0",
     "@jakubmazanec/error": "^3.0.0",
     "@jakubmazanec/fs-utils": "^0.2.0",
     "@jakubmazanec/template": "^2.0.0",

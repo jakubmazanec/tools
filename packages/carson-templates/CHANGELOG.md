@@ -1,5 +1,169 @@
 # @jakubmazanec/carson-templates
 
+## 4.0.0
+
+### Major Changes
+
+- [#280](https://github.com/jakubmazanec/tools/pull/280)
+  [`adfe44f`](https://github.com/jakubmazanec/tools/commit/adfe44f908094c1d1cdf19837842b33066bbd9d7)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – BREAKING: In `projects/remix-app` template
+  the project source directory name was changed from `app` to `source`, to align it with other
+  project templates.
+
+- [#282](https://github.com/jakubmazanec/tools/pull/282)
+  [`40ba1fb`](https://github.com/jakubmazanec/tools/commit/40ba1fb8bbde716fbe797d7886fffe14521e098a)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – BREAKING: Templates `projects/react-library`
+  and `projects/remix-app` now use React v19.
+
+- [#280](https://github.com/jakubmazanec/tools/pull/280)
+  [`adfe44f`](https://github.com/jakubmazanec/tools/commit/adfe44f908094c1d1cdf19837842b33066bbd9d7)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – BREAKING: Templates `projects/remix-app` and
+  `workspace` were updated to use React Router v7. Follow
+  [its update guide](https://reactrouter.com/upgrading/remix) if applying the new
+  `projects/remix-app` template.
+
+### Minor Changes
+
+- [#281](https://github.com/jakubmazanec/tools/pull/281)
+  [`797379c`](https://github.com/jakubmazanec/tools/commit/797379ce98752dc838b82c8398e04d90c58ce9e7)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Project prerequisites are now generated in
+  all project templates.
+
+- [#277](https://github.com/jakubmazanec/tools/pull/277)
+  [`66e975a`](https://github.com/jakubmazanec/tools/commit/66e975ab265618dba82f8e4c56654145b7ba4db7)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Updates GitHub workflow in the `workspace`
+  template so when Renovate bot bumps major version of a dependency that is handled by Carson, an
+  error is thrown that warns a Carson template package update is also needed.
+
+### Patch Changes
+
+- [#277](https://github.com/jakubmazanec/tools/pull/277)
+  [`66e975a`](https://github.com/jakubmazanec/tools/commit/66e975ab265618dba82f8e4c56654145b7ba4db7)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Updates dependency versions of dependencies
+  handled by the templates.
+
+- [`43410f8`](https://github.com/jakubmazanec/tools/commit/43410f851e2757c2010928195f90af6ef6f7bba3)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes GitHub workflow in the `workspace`
+  template.
+
+- [`b189bd8`](https://github.com/jakubmazanec/tools/commit/b189bd808f93a39eacbf7e401a82a754c5ce3b63)
+  ([@renovate[bot]](https://github.com/renovate%5Bbot%5D)) – In all templates, Node.js version was
+  updated to `^22.13.0`.
+
+- [#281](https://github.com/jakubmazanec/tools/pull/281)
+  [`797379c`](https://github.com/jakubmazanec/tools/commit/797379ce98752dc838b82c8398e04d90c58ce9e7)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Minor refactor of some templates.
+
+- [#282](https://github.com/jakubmazanec/tools/pull/282)
+  [`40ba1fb`](https://github.com/jakubmazanec/tools/commit/40ba1fb8bbde716fbe797d7886fffe14521e098a)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fix incorrect port in the
+  `projects/remix-app` template.
+
+- [#280](https://github.com/jakubmazanec/tools/pull/280)
+  [`adfe44f`](https://github.com/jakubmazanec/tools/commit/adfe44f908094c1d1cdf19837842b33066bbd9d7)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes and unifies how dependencies are
+  handled in all templates.
+
+- [#280](https://github.com/jakubmazanec/tools/pull/280)
+  [`adfe44f`](https://github.com/jakubmazanec/tools/commit/adfe44f908094c1d1cdf19837842b33066bbd9d7)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Template `projects/remix-app` was updated to
+  use Vite 6.
+
+- [#280](https://github.com/jakubmazanec/tools/pull/280)
+  [`adfe44f`](https://github.com/jakubmazanec/tools/commit/adfe44f908094c1d1cdf19837842b33066bbd9d7)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Remove unnecessary dependencies.
+
+- [#282](https://github.com/jakubmazanec/tools/pull/282)
+  [`40ba1fb`](https://github.com/jakubmazanec/tools/commit/40ba1fb8bbde716fbe797d7886fffe14521e098a)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes GitHub workflow in the `workspace`
+  template.
+
+- [`31e6706`](https://github.com/jakubmazanec/tools/commit/31e6706856f7c3ae9eeb29272bc3a1c6455636cd)
+  ([@renovate[bot]](https://github.com/renovate%5Bbot%5D)) – Dependency `typescript` updated to
+  version `^5.7.3`.
+
+- [#279](https://github.com/jakubmazanec/tools/pull/279)
+  [`d434d82`](https://github.com/jakubmazanec/tools/commit/d434d824406d915dd626a1c8812af24dc1225b89)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@types/lodash` updated to version
+  `^4.17.14`.
+
+- [#283](https://github.com/jakubmazanec/tools/pull/283)
+  [`a3fa95a`](https://github.com/jakubmazanec/tools/commit/a3fa95a297d42532902cfe45754913669d3dee86)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `fast-glob` updated to version
+  `^3.3.3`.
+
+- [#273](https://github.com/jakubmazanec/tools/pull/273)
+  [`1f11d9f`](https://github.com/jakubmazanec/tools/commit/1f11d9f3d583c69fc5960b64c11b74d71f2699ca)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `typedoc-plugin-markdown` updated to
+  version `^4.4.1`.
+
+- [`e0f3dce`](https://github.com/jakubmazanec/tools/commit/e0f3dcea163a769664b7f7bf40d6195ff237be48)
+  ([@renovate[bot]](https://github.com/renovate%5Bbot%5D)) – Dependency `eslint` updated to version
+  `^9.18.0`.
+
+- [`b189bd8`](https://github.com/jakubmazanec/tools/commit/b189bd808f93a39eacbf7e401a82a754c5ce3b63)
+  ([@renovate[bot]](https://github.com/renovate%5Bbot%5D)) – Dependency `@types/node` updated to
+  version `^22.10.5`. Dependency `node` updated to version `^22.13.0`.
+
+- [#281](https://github.com/jakubmazanec/tools/pull/281)
+  [`797379c`](https://github.com/jakubmazanec/tools/commit/797379ce98752dc838b82c8398e04d90c58ce9e7)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Refactor of templates to reduce duplicate
+  code.
+
+- [#288](https://github.com/jakubmazanec/tools/pull/288)
+  [`c90d923`](https://github.com/jakubmazanec/tools/commit/c90d923e2a8c91a19f26dde01e97c4675f5a0f56)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixex GitHub workflow in the `workspace`
+  template.
+
+- [#280](https://github.com/jakubmazanec/tools/pull/280)
+  [`adfe44f`](https://github.com/jakubmazanec/tools/commit/adfe44f908094c1d1cdf19837842b33066bbd9d7)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes missing `chromatic` dependency in the
+  `projects/react-library` template.
+
+- [#281](https://github.com/jakubmazanec/tools/pull/281)
+  [`797379c`](https://github.com/jakubmazanec/tools/commit/797379ce98752dc838b82c8398e04d90c58ce9e7)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes and unifies how ECMAScript version is
+  handled in all templates.
+
+- [#281](https://github.com/jakubmazanec/tools/pull/281)
+  [`797379c`](https://github.com/jakubmazanec/tools/commit/797379ce98752dc838b82c8398e04d90c58ce9e7)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fix TypeScript config.
+
+- [#281](https://github.com/jakubmazanec/tools/pull/281)
+  [`797379c`](https://github.com/jakubmazanec/tools/commit/797379ce98752dc838b82c8398e04d90c58ce9e7)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fix Prettier config in the
+  `projects/remix-app` template.
+
+- [#281](https://github.com/jakubmazanec/tools/pull/281)
+  [`797379c`](https://github.com/jakubmazanec/tools/commit/797379ce98752dc838b82c8398e04d90c58ce9e7)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes readme.
+
+- [#280](https://github.com/jakubmazanec/tools/pull/280)
+  [`adfe44f`](https://github.com/jakubmazanec/tools/commit/adfe44f908094c1d1cdf19837842b33066bbd9d7)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fix Turborepo config in the `workspace`
+  template.
+
+- [#281](https://github.com/jakubmazanec/tools/pull/281)
+  [`797379c`](https://github.com/jakubmazanec/tools/commit/797379ce98752dc838b82c8398e04d90c58ce9e7)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes TypeScript config.
+
+- Updated dependencies
+  [[`40ba1fb`](https://github.com/jakubmazanec/tools/commit/40ba1fb8bbde716fbe797d7886fffe14521e098a),
+  [`adfe44f`](https://github.com/jakubmazanec/tools/commit/adfe44f908094c1d1cdf19837842b33066bbd9d7),
+  [`adfe44f`](https://github.com/jakubmazanec/tools/commit/adfe44f908094c1d1cdf19837842b33066bbd9d7),
+  [`31e6706`](https://github.com/jakubmazanec/tools/commit/31e6706856f7c3ae9eeb29272bc3a1c6455636cd),
+  [`d434d82`](https://github.com/jakubmazanec/tools/commit/d434d824406d915dd626a1c8812af24dc1225b89),
+  [`a3fa95a`](https://github.com/jakubmazanec/tools/commit/a3fa95a297d42532902cfe45754913669d3dee86),
+  [`1f11d9f`](https://github.com/jakubmazanec/tools/commit/1f11d9f3d583c69fc5960b64c11b74d71f2699ca),
+  [`412167e`](https://github.com/jakubmazanec/tools/commit/412167e80a7675933e43d5220a19d05130301e2d),
+  [`e0f3dce`](https://github.com/jakubmazanec/tools/commit/e0f3dcea163a769664b7f7bf40d6195ff237be48),
+  [`b189bd8`](https://github.com/jakubmazanec/tools/commit/b189bd808f93a39eacbf7e401a82a754c5ce3b63),
+  [`adfe44f`](https://github.com/jakubmazanec/tools/commit/adfe44f908094c1d1cdf19837842b33066bbd9d7),
+  [`40ba1fb`](https://github.com/jakubmazanec/tools/commit/40ba1fb8bbde716fbe797d7886fffe14521e098a),
+  [`797379c`](https://github.com/jakubmazanec/tools/commit/797379ce98752dc838b82c8398e04d90c58ce9e7),
+  [`797379c`](https://github.com/jakubmazanec/tools/commit/797379ce98752dc838b82c8398e04d90c58ce9e7)]:
+  - @jakubmazanec/carson@2.0.0
+
 ## 3.3.0
 
 ### Minor Changes

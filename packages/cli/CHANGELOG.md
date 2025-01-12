@@ -1,5 +1,55 @@
 # @jakubmazanec/cli
 
+## 0.4.0
+
+### Minor Changes
+
+- [#282](https://github.com/jakubmazanec/tools/pull/282)
+  [`40ba1fb`](https://github.com/jakubmazanec/tools/commit/40ba1fb8bbde716fbe797d7886fffe14521e098a)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – BREAKING: Update to React v19 and drop
+  support for older versions.
+
+### Patch Changes
+
+- [#280](https://github.com/jakubmazanec/tools/pull/280)
+  [`adfe44f`](https://github.com/jakubmazanec/tools/commit/adfe44f908094c1d1cdf19837842b33066bbd9d7)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Remove unnecessary dependencies.
+
+- [`31e6706`](https://github.com/jakubmazanec/tools/commit/31e6706856f7c3ae9eeb29272bc3a1c6455636cd)
+  ([@renovate[bot]](https://github.com/renovate%5Bbot%5D)) – Dependency `typescript` updated to
+  version `^5.7.3`.
+
+- [#279](https://github.com/jakubmazanec/tools/pull/279)
+  [`d434d82`](https://github.com/jakubmazanec/tools/commit/d434d824406d915dd626a1c8812af24dc1225b89)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@types/lodash` updated to version
+  `^4.17.14`.
+
+- [#273](https://github.com/jakubmazanec/tools/pull/273)
+  [`1f11d9f`](https://github.com/jakubmazanec/tools/commit/1f11d9f3d583c69fc5960b64c11b74d71f2699ca)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `typedoc-plugin-markdown` updated to
+  version `^4.4.1`.
+
+- [#285](https://github.com/jakubmazanec/tools/pull/285)
+  [`412167e`](https://github.com/jakubmazanec/tools/commit/412167e80a7675933e43d5220a19d05130301e2d)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@types/react` updated to version
+  `^19.0.5`. Dependency `@types/react-dom` updated to version `^19.0.3`.
+
+- [`e0f3dce`](https://github.com/jakubmazanec/tools/commit/e0f3dcea163a769664b7f7bf40d6195ff237be48)
+  ([@renovate[bot]](https://github.com/renovate%5Bbot%5D)) – Dependency `eslint` updated to version
+  `^9.18.0`.
+
+- [`b189bd8`](https://github.com/jakubmazanec/tools/commit/b189bd808f93a39eacbf7e401a82a754c5ce3b63)
+  ([@renovate[bot]](https://github.com/renovate%5Bbot%5D)) – Dependency `@types/node` updated to
+  version `^22.10.5`. Dependency `node` updated to version `^22.13.0`.
+
+- [#281](https://github.com/jakubmazanec/tools/pull/281)
+  [`797379c`](https://github.com/jakubmazanec/tools/commit/797379ce98752dc838b82c8398e04d90c58ce9e7)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes readme.
+
+- [#281](https://github.com/jakubmazanec/tools/pull/281)
+  [`797379c`](https://github.com/jakubmazanec/tools/commit/797379ce98752dc838b82c8398e04d90c58ce9e7)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes TypeScript config.
+
 ## 0.3.8
 
 ### Patch Changes
