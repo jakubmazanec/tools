@@ -177,9 +177,7 @@ jobs:
             await checkCarsonTemplatesPackage(dependencyBumpsWithWorkspace);
 
             if (
-              !updatedProjects.length &&
-              dependencyBumpsWithWorkspace.size === 1 &&
-              dependencyBumpsWithWorkspace.has('<%- TEMPLATE_PACKAGE_NAME %>')
+              !updatedProjects.length && dependencyBumpsWithWorkspace.has('<%- TEMPLATE_PACKAGE_NAME %>')
             ) {
               updatedProjects = await getProjectsUsingCarsonTemplates();
 
