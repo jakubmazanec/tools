@@ -65,7 +65,7 @@
     "@testing-library/react": "^16.1.0",
     "@types/culori": "^2.1.1",
     "@types/lodash": "^4.17.14",
-    "@types/node": "^22.10.2",
+    "@types/node": "^22.10.5",
     "@types/react": "^19.0.3",
     "@types/react-dom": "^19.0.2",
     "@vitest/coverage-v8": "^2.1.8",
@@ -96,6 +96,6 @@
   },
   "packageManager": "npm@10.9.0",
   "engines": {
-    "node": "^22.12.0"
+    "node": "^22.13.0"
   }
 }
