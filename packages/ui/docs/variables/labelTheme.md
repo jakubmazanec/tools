@@ -8,4 +8,4 @@
 > [`useLabelTheme`](../functions/useLabelTheme.md)\>
 
 Defined in:
-[packages/ui/source/components/Label.tsx:47](https://github.com/jakubmazanec/tools/blob/797379ce98752dc838b82c8398e04d90c58ce9e7/packages/ui/source/components/Label.tsx#L47)
+[packages/ui/source/components/Label.tsx:44](https://github.com/jakubmazanec/tools/blob/40ba1fb8bbde716fbe797d7886fffe14521e098a/packages/ui/source/components/Label.tsx#L44)

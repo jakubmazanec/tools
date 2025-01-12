@@ -5,11 +5,11 @@
 # Type Alias: CheckboxProps\<T\>
 
 > **CheckboxProps**\<`T`\>: `ComponentProps`\<_typeof_
-> [`useCheckboxTheme`](../functions/useCheckboxTheme.md)\> &
+> [`useCheckboxTheme`](../functions/useCheckboxTheme.md)\> & `ComponentRef`\<`T`\> &
 > `Omit`\<`ComponentPropsWithoutRef`\<`T`\>, `"onChange"`\> & `object`
 
 Defined in:
-[packages/ui/source/components/Checkbox.tsx:26](https://github.com/jakubmazanec/tools/blob/797379ce98752dc838b82c8398e04d90c58ce9e7/packages/ui/source/components/Checkbox.tsx#L26)
+[packages/ui/source/components/Checkbox.tsx:27](https://github.com/jakubmazanec/tools/blob/40ba1fb8bbde716fbe797d7886fffe14521e098a/packages/ui/source/components/Checkbox.tsx#L27)
 
 ## Type declaration
 

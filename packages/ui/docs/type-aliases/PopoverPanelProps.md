@@ -4,12 +4,30 @@
 
 # Type Alias: PopoverPanelProps\<T\>
 
-> **PopoverPanelProps**\<`T`\>: `PropsWithChildren`\<`ComponentProps`\<_typeof_
+> **PopoverPanelProps**\<`T`\>: `ComponentProps`\<_typeof_
 > [`usePopoverPanelTheme`](../functions/usePopoverPanelTheme.md)\> &
-> `ComponentPropsWithoutRef`\<`T`\> & `object`\>
+> `ComponentPropsWithoutRef`\<`T`\> & `ComponentRef`\<`T`\> & `PropsWithChildren` & `object`
 
 Defined in:
-[packages/ui/source/components/PopoverPanel.tsx:23](https://github.com/jakubmazanec/tools/blob/797379ce98752dc838b82c8398e04d90c58ce9e7/packages/ui/source/components/PopoverPanel.tsx#L23)
+[packages/ui/source/components/PopoverPanel.tsx:19](https://github.com/jakubmazanec/tools/blob/40ba1fb8bbde716fbe797d7886fffe14521e098a/packages/ui/source/components/PopoverPanel.tsx#L19)
+
+## Type declaration
+
+### anchor?
+
+> `optional` **anchor**: `HeadlessPopoverPanelProps`\[`"anchor"`\]
+
+### as?
+
+> `optional` **as**: `T`
+
+### className?
+
+> `optional` **className**: `string`
+
+### static?
+
+> `optional` **static**: `boolean`
 
 ## Type Parameters
 

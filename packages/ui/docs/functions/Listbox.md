@@ -4,10 +4,10 @@
 
 # Function: Listbox()
 
-> **Listbox**\<`T`, `V`\>(`props`): `ReactNode`
+> **Listbox**\<`T`, `V`\>(`__namedParameters`): `Element`
 
 Defined in:
-[packages/ui/source/components/Listbox.tsx:87](https://github.com/jakubmazanec/tools/blob/797379ce98752dc838b82c8398e04d90c58ce9e7/packages/ui/source/components/Listbox.tsx#L87)
+[packages/ui/source/components/Listbox.tsx:87](https://github.com/jakubmazanec/tools/blob/40ba1fb8bbde716fbe797d7886fffe14521e098a/packages/ui/source/components/Listbox.tsx#L87)
 
 ## Type Parameters
 
@@ -17,10 +17,10 @@ Defined in:
 
 ## Parameters
 
-### props
+### \_\_namedParameters
 
-[`ListboxProps`](../type-aliases/ListboxProps.md)\<`T`, `V`\> & `object`
+[`ListboxProps`](../type-aliases/ListboxProps.md)\<`T`, `V`\>
 
 ## Returns
 
-`ReactNode`
+`Element`

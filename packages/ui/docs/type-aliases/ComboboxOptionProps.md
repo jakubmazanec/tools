@@ -4,12 +4,26 @@
 
 # Type Alias: ComboboxOptionProps\<T, V\>
 
-> **ComboboxOptionProps**\<`T`, `V`\>: `PropsWithChildren`\<`ComponentProps`\<_typeof_
+> **ComboboxOptionProps**\<`T`, `V`\>: `ComponentProps`\<_typeof_
 > [`useComboboxOptionTheme`](../functions/useComboboxOptionTheme.md)\> &
-> `ComponentPropsWithoutRef`\<`T`\> & `object`\>
+> `ComponentPropsWithoutRef`\<`T`\> & `ComponentRef`\<`T`\> & `PropsWithChildren` & `object`
 
 Defined in:
-[packages/ui/source/components/ComboboxOption.tsx:27](https://github.com/jakubmazanec/tools/blob/797379ce98752dc838b82c8398e04d90c58ce9e7/packages/ui/source/components/ComboboxOption.tsx#L27)
+[packages/ui/source/components/ComboboxOption.tsx:22](https://github.com/jakubmazanec/tools/blob/40ba1fb8bbde716fbe797d7886fffe14521e098a/packages/ui/source/components/ComboboxOption.tsx#L22)
+
+## Type declaration
+
+### as?
+
+> `optional` **as**: `T`
+
+### className?
+
+> `optional` **className**: `string`
+
+### value
+
+> **value**: `V`
 
 ## Type Parameters
 

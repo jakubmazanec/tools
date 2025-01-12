@@ -4,10 +4,10 @@
 
 # Function: CreateProjectInput()
 
-> **CreateProjectInput**(`props`, `deprecatedLegacyContext`?): `ReactNode`
+> **CreateProjectInput**(`props`): `ReactNode` \| `Promise`\<`ReactNode`\>
 
 Defined in:
-[packages/carson/source/commands/create-project/CreateProjectInput.ts:6](https://github.com/jakubmazanec/tools/blob/797379ce98752dc838b82c8398e04d90c58ce9e7/packages/carson/source/commands/create-project/CreateProjectInput.ts#L6)
+[packages/carson/source/commands/create-project/CreateProjectInput.ts:6](https://github.com/jakubmazanec/tools/blob/40ba1fb8bbde716fbe797d7886fffe14521e098a/packages/carson/source/commands/create-project/CreateProjectInput.ts#L6)
 
 ## Parameters
 
@@ -15,16 +15,6 @@ Defined in:
 
 `object` & `object`
 
-### deprecatedLegacyContext?
-
-`any`
-
-**Deprecated**
-
-**See**
-
-[React Docs](https://legacy.reactjs.org/docs/legacy-context.html#referencing-context-in-lifecycle-methods)
-
 ## Returns
 
-`ReactNode`
+`ReactNode` \| `Promise`\<`ReactNode`\>

@@ -4,18 +4,18 @@
 
 # Type Alias: ListboxProps\<T, V\>
 
-> **ListboxProps**\<`T`, `V`\>: `PropsWithChildren`\<`ComponentProps`\<_typeof_
-> [`useListboxTheme`](../functions/useListboxTheme.md)\> & `ComponentPropsWithoutRef`\<`T`\> & \{
-> `as`: `T`; `className`: `string`; `defaultValue`: `V`[]; `hideSelected`: \{ `limit`: `number`;
-> `message`: `string`; \}; `items`: [`ListboxItem`](ListboxItem.md)\<`V`\>[]; `multiple`: `true`;
-> `name`: `string`; `onChange`: (`selectedValue`) => `void`; `placeholder`: `string`; `showFilter`:
-> `boolean`; `value`: `V`[]; \} \| \{ `as`: `T`; `className`: `string`; `defaultValue`: `V`;
-> `hideSelected`: `never`; `items`: [`ListboxItem`](ListboxItem.md)\<`V`\>[]; `multiple`: `false`;
-> `name`: `string`; `onChange`: (`selectedValue`) => `void`; `placeholder`: `string`; `showFilter`:
-> `boolean`; `value`: `V`; \}\>
+> **ListboxProps**\<`T`, `V`\>: `ComponentProps`\<_typeof_
+> [`useListboxTheme`](../functions/useListboxTheme.md)\> & `ComponentPropsWithoutRef`\<`T`\> &
+> `ComponentRef`\<`T`\> & `PropsWithChildren` & \{ `as`: `T`; `className`: `string`; `defaultValue`:
+> `V`[]; `hideSelected`: \{ `limit`: `number`; `message`: `string`; \}; `items`:
+> [`ListboxItem`](ListboxItem.md)\<`V`\>[]; `multiple`: `true`; `name`: `string`; `onChange`:
+> (`selectedValue`) => `void`; `placeholder`: `string`; `showFilter`: `boolean`; `value`: `V`[]; \}
+> \| \{ `as`: `T`; `className`: `string`; `defaultValue`: `V`; `hideSelected`: `never`; `items`:
+> [`ListboxItem`](ListboxItem.md)\<`V`\>[]; `multiple`: `false`; `name`: `string`; `onChange`:
+> (`selectedValue`) => `void`; `placeholder`: `string`; `showFilter`: `boolean`; `value`: `V`; \}
 
 Defined in:
-[packages/ui/source/components/Listbox.tsx:46](https://github.com/jakubmazanec/tools/blob/797379ce98752dc838b82c8398e04d90c58ce9e7/packages/ui/source/components/Listbox.tsx#L46)
+[packages/ui/source/components/Listbox.tsx:46](https://github.com/jakubmazanec/tools/blob/40ba1fb8bbde716fbe797d7886fffe14521e098a/packages/ui/source/components/Listbox.tsx#L46)
 
 ## Type Parameters
 

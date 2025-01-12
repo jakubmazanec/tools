@@ -4,10 +4,10 @@
 
 # Function: PopoverGroup()
 
-> **PopoverGroup**\<`T`\>(`props`): `ReactNode`
+> **PopoverGroup**\<`T`\>(`__namedParameters`): `Element`
 
 Defined in:
-[packages/ui/source/components/PopoverGroup.tsx:31](https://github.com/jakubmazanec/tools/blob/797379ce98752dc838b82c8398e04d90c58ce9e7/packages/ui/source/components/PopoverGroup.tsx#L31)
+[packages/ui/source/components/PopoverGroup.tsx:27](https://github.com/jakubmazanec/tools/blob/40ba1fb8bbde716fbe797d7886fffe14521e098a/packages/ui/source/components/PopoverGroup.tsx#L27)
 
 ## Type Parameters
 
@@ -15,10 +15,10 @@ Defined in:
 
 ## Parameters
 
-### props
+### \_\_namedParameters
 
-`PropsWithoutRef`\<`ComponentProps`\<`T`\>\> & `object` & `object` & `object`
+[`PopoverGroupProps`](../type-aliases/PopoverGroupProps.md)\<`T`\>
 
 ## Returns
 
-`ReactNode`
+`Element`

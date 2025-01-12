@@ -7,7 +7,7 @@
 > **HelpProps**: `BoxProps` & `object`
 
 Defined in:
-[cli/source/ui/Help.tsx:12](https://github.com/jakubmazanec/tools/blob/797379ce98752dc838b82c8398e04d90c58ce9e7/packages/cli/source/ui/Help.tsx#L12)
+[cli/source/ui/Help.tsx:12](https://github.com/jakubmazanec/tools/blob/40ba1fb8bbde716fbe797d7886fffe14521e098a/packages/cli/source/ui/Help.tsx#L12)
 
 [Help](../functions/Help.md) component props.
 

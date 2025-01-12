@@ -4,10 +4,10 @@
 
 # Function: TableCell()
 
-> **TableCell**\<`T`\>(`props`): `ReactNode`
+> **TableCell**\<`T`\>(`__namedParameters`): `ReactElement`\<`any`\>
 
 Defined in:
-[packages/ui/source/components/TableCell.ts:28](https://github.com/jakubmazanec/tools/blob/797379ce98752dc838b82c8398e04d90c58ce9e7/packages/ui/source/components/TableCell.ts#L28)
+[packages/ui/source/components/TableCell.ts:27](https://github.com/jakubmazanec/tools/blob/40ba1fb8bbde716fbe797d7886fffe14521e098a/packages/ui/source/components/TableCell.ts#L27)
 
 ## Type Parameters
 
@@ -15,10 +15,10 @@ Defined in:
 
 ## Parameters
 
-### props
+### \_\_namedParameters
 
-`PropsWithoutRef`\<`ComponentProps`\<`T`\>\> & `object` & `object` & `object`
+[`TableCellProps`](../type-aliases/TableCellProps.md)\<`T`\>
 
 ## Returns
 
-`ReactNode`
+`ReactElement`\<`any`\>

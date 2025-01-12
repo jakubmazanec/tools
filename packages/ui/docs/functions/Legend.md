@@ -4,10 +4,10 @@
 
 # Function: Legend()
 
-> **Legend**\<`T`\>(`props`): `ReactNode`
+> **Legend**\<`T`\>(`__namedParameters`): `Element`
 
 Defined in:
-[packages/ui/source/components/Legend.tsx:28](https://github.com/jakubmazanec/tools/blob/797379ce98752dc838b82c8398e04d90c58ce9e7/packages/ui/source/components/Legend.tsx#L28)
+[packages/ui/source/components/Legend.tsx:24](https://github.com/jakubmazanec/tools/blob/40ba1fb8bbde716fbe797d7886fffe14521e098a/packages/ui/source/components/Legend.tsx#L24)
 
 ## Type Parameters
 
@@ -15,10 +15,10 @@ Defined in:
 
 ## Parameters
 
-### props
+### \_\_namedParameters
 
-`PropsWithoutRef`\<`ComponentProps`\<`T`\>\> & `object` & `object` & `object`
+[`LegendProps`](../type-aliases/LegendProps.md)\<`T`\>
 
 ## Returns
 
-`ReactNode`
+`Element`

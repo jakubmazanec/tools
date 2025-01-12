@@ -4,10 +4,10 @@
 
 # Function: PopoverButton()
 
-> **PopoverButton**\<`T`\>(`props`): `ReactNode`
+> **PopoverButton**\<`T`\>(`__namedParameters`): `Element`
 
 Defined in:
-[packages/ui/source/components/PopoverButton.tsx:36](https://github.com/jakubmazanec/tools/blob/797379ce98752dc838b82c8398e04d90c58ce9e7/packages/ui/source/components/PopoverButton.tsx#L36)
+[packages/ui/source/components/PopoverButton.tsx:34](https://github.com/jakubmazanec/tools/blob/40ba1fb8bbde716fbe797d7886fffe14521e098a/packages/ui/source/components/PopoverButton.tsx#L34)
 
 ## Type Parameters
 
@@ -15,11 +15,10 @@ Defined in:
 
 ## Parameters
 
-### props
+### \_\_namedParameters
 
-`Partial`\<`Writable`\<\{ `disabled`: `boolean`; \}\>\> &
-`PropsWithoutRef`\<`ComponentProps`\<`T`\>\> & `object` & `object` & `object`
+[`PopoverButtonProps`](../type-aliases/PopoverButtonProps.md)\<`T`\>
 
 ## Returns
 
-`ReactNode`
+`Element`
