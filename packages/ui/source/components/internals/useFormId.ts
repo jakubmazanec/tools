@@ -1,7 +1,7 @@
 import {useContext} from 'react';
 
-import {formIdContext} from './formIdContext.js';
+import {FormIdContext} from './FormIdContext.js';
 
 export function useFormId() {
-  return useContext(formIdContext);
+  return useContext(FormIdContext);
 }

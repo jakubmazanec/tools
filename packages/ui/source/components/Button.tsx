@@ -5,7 +5,6 @@ import {
   type ComponentPropsWithoutRef,
   type ElementType,
   isValidElement,
-  type Ref,
 } from 'react';
 
 import {
@@ -13,8 +12,8 @@ import {
   type ComponentTheme,
   createComponentTheme,
 } from '../theme/internals.js';
+import {type ComponentRef} from './ComponentRef.js';
 import {Icon} from './Icon.js';
-import {forwardRef} from './internals.js';
 import {Spinner} from './Spinner.js';
 
 export const useButtonTheme = createComponentTheme('Button', {
@@ -28,74 +27,72 @@ export const useButtonTheme = createComponentTheme('Button', {
 const BUTTON_ELEMENT = 'button';
 
 export type ButtonProps<T extends ElementType> = ComponentProps<typeof useButtonTheme> &
+  ComponentRef<T> &
   Omit<ComponentPropsWithoutRef<T>, 'type'> & {
     as?: T | undefined;
     submit?: boolean | undefined;
     idle?: boolean | undefined;
     autoFocus?: boolean | undefined;
     className?: string | undefined;
+    // ref?: Ref<R> | undefined;
     children?: HeadlessButtonProps['children'] | undefined; // sadly, we cannot use `T`'s children type, because Headless UI always, if `children` is function, calls it with its own render props documented here: https://headlessui.com/react/button#using-render-props
   };
 
-export const Button = forwardRef(
-  <T extends ElementType = typeof BUTTON_ELEMENT>(
-    {
-      variant = 'solid',
-      size = 'medium',
-      disabled = false,
-      as = BUTTON_ELEMENT as T,
-      idle = true,
-      autoFocus = false,
-      submit = false,
-      className,
-      children,
-      ...rest
-    }: ButtonProps<T>,
-    ref: Ref<HTMLElement>,
-  ) => {
-    let theme = useButtonTheme({variant, size, disabled});
+export function Button<T extends ElementType = typeof BUTTON_ELEMENT>({
+  variant = 'solid',
+  size = 'medium',
+  disabled = false,
+  as = BUTTON_ELEMENT as T,
+  idle = true,
+  autoFocus = false,
+  submit = false,
+  className,
+  ref,
+  children,
+  ...rest
+}: ButtonProps<T>) {
+  let theme = useButtonTheme({variant, size, disabled});
 
-    let props: Record<string, unknown> = {
-      as,
-      ref,
-      className: theme(disabled ? 'pointer-events-none' : null, className),
-      disabled: disabled || (submit && !idle),
-      autoFocus,
-      'data-component': 'button',
-      ...rest,
-    };
+  let props: Record<string, unknown> = {
+    as,
+    ref,
+    className: theme(disabled ? 'pointer-events-none' : null, className),
+    disabled: disabled || (submit && !idle),
+    autoFocus,
+    'data-component': 'button',
+    ...rest,
+  };
 
-    if (as === BUTTON_ELEMENT) {
-      props.type = 'button';
+  if (as === BUTTON_ELEMENT) {
+    props.type = 'button';
+  }
+
+  if (submit) {
+    props.type = 'submit';
+  }
+
+  if (typeof children === 'function') {
+    return <HeadlessButton {...props}>{children}</HeadlessButton>;
+  }
+
+  let enhancedChildren = Children.map(children, (child) => {
+    if (isValidElement(child) && (child.type === Icon || child.type === Spinner)) {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
+      return cloneElement<any>(child, {'data-icon': ''});
     }
 
-    if (submit) {
-      props.type = 'submit';
-    }
+    return child;
+  });
 
-    if (typeof children === 'function') {
-      return <HeadlessButton {...props}>{children}</HeadlessButton>;
-    }
-
-    let enhancedChildren = Children.map(children, (child) => {
-      if (isValidElement(child) && (child.type === Icon || child.type === Spinner)) {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
-        return cloneElement<any>(child, {'data-icon': ''});
-      }
-
-      return child;
-    });
-
-    return (
-      <HeadlessButton {...props}>
-        {submit && !idle ?
-          <Spinner data-icon />
-        : null}
-        {enhancedChildren}
-      </HeadlessButton>
-    );
-  },
-);
+  return (
+    <HeadlessButton {...props}>
+      {submit && !idle ?
+        <Spinner data-icon />
+      : null}
+      {enhancedChildren}
+    </HeadlessButton>
+  );
+}
 
 export const buttonTheme: ComponentTheme<typeof useButtonTheme> = {
   className:

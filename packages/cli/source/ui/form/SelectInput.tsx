@@ -1,6 +1,6 @@
 import {Box, type BoxProps, type Key, Text, useInput} from 'ink';
 import _ from 'lodash';
-import {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
 import * as colors from '../colors.js';
 import * as icons from '../icons.js';
@@ -49,7 +49,7 @@ export function SelectInput({
   onHighlight,
   isComplete,
   ...boxProps
-}: SelectInputProps): JSX.Element {
+}: SelectInputProps): React.JSX.Element {
   let [rotatedIndex, setRotatedIndex] = useState(0);
   let [selectedIndex, setSelectedIndex] = useState(initialIndex);
   let hasLimit = typeof userDefinedLimit === 'number' && items.length > userDefinedLimit;

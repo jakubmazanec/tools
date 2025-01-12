@@ -1,5 +1,4 @@
 import {type Meta, type StoryObj} from '@storybook/react';
-import {type ElementType} from 'react';
 
 import {
   Menu,
@@ -7,7 +6,6 @@ import {
   MenuHeading,
   MenuItem,
   MenuItems,
-  type MenuProps,
   MenuSection,
   MenuSeparator,
 } from '../source/main.js';
@@ -15,7 +13,7 @@ import {
 const meta = {
   title: 'Components/Menu',
   component: Menu,
-} satisfies Meta<MenuProps<ElementType>>;
+} satisfies Meta<typeof Menu>;
 
 export default meta;
 

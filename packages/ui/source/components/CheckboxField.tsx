@@ -7,7 +7,7 @@ import {
   type ComponentTheme,
   createComponentTheme,
 } from '../theme/internals.js';
-import {fieldContext, fieldNameContext} from './internals.js';
+import {FieldContext, FieldNameContext} from './internals.js';
 
 export const useCheckboxFieldTheme = createComponentTheme('CheckboxField');
 
@@ -34,21 +34,21 @@ export function CheckboxField({field, name, className, children}: CheckboxFieldP
 
   if (field) {
     return (
-      <fieldContext.Provider value={field}>
+      <FieldContext value={field}>
         <HeadlessField className={theme(null, className)} data-component="checkbox-field">
           {children}
         </HeadlessField>
-      </fieldContext.Provider>
+      </FieldContext>
     );
   }
 
   if (name) {
     return (
-      <fieldNameContext.Provider value={name}>
+      <FieldNameContext value={name}>
         <HeadlessField className={theme(null, className)} data-component="checkbox-field">
           {children}
         </HeadlessField>
-      </fieldNameContext.Provider>
+      </FieldNameContext>
     );
   }
 

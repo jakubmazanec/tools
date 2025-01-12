@@ -1,3 +1,4 @@
+// TODO: enable tests when this is fixed: https://github.com/vadimdemedes/ink/issues/688
 import {render} from 'ink-testing-library';
 import {useState} from 'react';
 import {describe, expect, test, vitest} from 'vitest';
@@ -6,7 +7,7 @@ import {TextInput} from '../../source/ui/form/TextInput.js';
 import {DELETE, ENTER, LEFT_ARROW, NOOP, RIGHT_ARROW, SHIFT_PLUS_TAB, TAB} from '../constants.js';
 import {sleep} from '../sleep.js';
 
-describe('TextInput', () => {
+describe.todo('TextInput', () => {
   test('empty string', () => {
     let {lastFrame} = render(<TextInput label="Test" value="" onChange={NOOP} />);
 

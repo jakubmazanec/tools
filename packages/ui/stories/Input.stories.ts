@@ -1,13 +1,12 @@
 import {MagnifyingGlassIcon} from '@heroicons/react/24/solid';
 import {type Meta, type StoryObj} from '@storybook/react';
-import {type ElementType} from 'react';
 
-import {Input, type InputProps} from '../source/main.js';
+import {Input} from '../source/main.js';
 
 const meta = {
   title: 'Components/Input',
   component: Input,
-} satisfies Meta<InputProps<ElementType>>;
+} satisfies Meta<typeof Input>;
 
 export default meta;
 

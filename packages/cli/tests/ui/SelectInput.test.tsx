@@ -1,3 +1,4 @@
+// TODO: enable tests when this is fixed: https://github.com/vadimdemedes/ink/issues/688
 import {render} from 'ink-testing-library';
 import {describe, expect, test, vitest} from 'vitest';
 
@@ -5,7 +6,7 @@ import {SelectInput} from '../../source/ui/form/SelectInput.js';
 import {DOWN_ARROW, ENTER, ITEMS, UP_ARROW} from '../constants.js';
 import {sleep} from '../sleep.js';
 
-describe('SelectInput', () => {
+describe.todo('SelectInput', () => {
   test('renders list', () => {
     let {lastFrame} = render(<SelectInput items={ITEMS} label="Test" />);
 

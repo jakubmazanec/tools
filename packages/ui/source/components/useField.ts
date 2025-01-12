@@ -1,7 +1,7 @@
 import {useContext} from 'react';
 
-import {fieldContext} from './internals.js';
+import {FieldContext} from './internals.js';
 
 export function useField() {
-  return useContext(fieldContext);
+  return useContext(FieldContext);
 }

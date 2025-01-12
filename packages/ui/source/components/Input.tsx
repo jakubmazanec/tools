@@ -4,7 +4,6 @@ import {
   type ComponentPropsWithoutRef,
   type ComponentType,
   type ElementType,
-  type Ref,
   useCallback,
   useImperativeHandle,
   useRef,
@@ -15,8 +14,8 @@ import {
   type ComponentTheme,
   createComponentTheme,
 } from '../theme/internals.js';
+import {type ComponentRef} from './ComponentRef.js';
 import {Icon} from './Icon.js';
-import {forwardRef} from './internals.js';
 import {useField} from './useField.js';
 import {useFieldName} from './useFieldName.js';
 
@@ -30,7 +29,8 @@ export const useInputTheme = createComponentTheme('Input', {
 const INPUT_ELEMENT = 'input';
 
 export type InputProps<T extends ElementType> = ComponentProps<typeof useInputTheme> &
-  ComponentPropsWithoutRef<T> & {
+  ComponentPropsWithoutRef<T> &
+  ComponentRef<T> & {
     as?: T | undefined;
     name?: string | undefined;
     className?: string | undefined;
@@ -38,96 +38,92 @@ export type InputProps<T extends ElementType> = ComponentProps<typeof useInputTh
     showClearButton?: boolean | undefined;
   };
 
-export const Input = forwardRef(
-  <T extends ElementType = typeof INPUT_ELEMENT>(
-    {
-      disabled = false,
-      as = INPUT_ELEMENT as T,
-      name,
-      className,
-      icon: IconComponent,
-      showClearButton = false,
-      ...rest
-    }: InputProps<T>,
-    ref: Ref<HTMLElement>,
-  ) => {
-    let theme = useInputTheme({disabled});
-    let fieldName = useFieldName();
-    let field = useField();
-    let inputRef = useRef<HTMLInputElement>();
+export function Input<T extends ElementType = typeof INPUT_ELEMENT>({
+  disabled = false,
+  as = INPUT_ELEMENT as T,
+  name,
+  className,
+  icon: IconComponent,
+  showClearButton = false,
+  ref,
+  ...rest
+}: InputProps<T>) {
+  let theme = useInputTheme({disabled});
+  let fieldName = useFieldName();
+  let field = useField();
+  let inputRef = useRef<HTMLInputElement>(null);
 
-    useImperativeHandle(ref, () => {
-      if (inputRef.current) {
-        return inputRef.current;
-      }
-
-      // eslint-disable-next-line @typescript-eslint/consistent-type-assertions -- false positive
-      return {} as HTMLElement;
-    });
-
-    let handleClear = useCallback(() => {
-      if (inputRef.current) {
-        inputRef.current.value = '';
-        inputRef.current.dispatchEvent(new Event('input', {bubbles: true}));
-      }
-    }, []);
-
-    let rootProps: Record<string, unknown> = {
-      className: theme.root('relative', className),
-      'data-component': 'input',
-    };
-    let inputProps: Record<string, unknown> = {
-      as,
-      ref: inputRef,
-      disabled,
-      name: field?.name ?? fieldName ?? name,
-      className: theme.input(),
-      size: 1, // so the input default width without styling is small
-      ...rest,
-    };
-    let iconProps: Record<string, unknown> = {
-      className: theme.icon('absolute'),
-    };
-    let clearButtonProps: Record<string, unknown> = {
-      className: theme.clearButton('absolute'),
-    };
-
-    if (IconComponent) {
-      rootProps['data-icon'] = '';
+  useImperativeHandle(ref, () => {
+    if (inputRef.current) {
+      return inputRef.current;
     }
 
-    if (showClearButton) {
-      rootProps['data-clear-button'] = '';
+    // eslint-disable-next-line @typescript-eslint/consistent-type-assertions -- false positive
+    return {} as HTMLElement;
+  });
+
+  let handleClear = useCallback(() => {
+    if (inputRef.current) {
+      inputRef.current.value = '';
+      inputRef.current.dispatchEvent(new Event('input', {bubbles: true}));
     }
+  }, []);
 
-    if (field) {
-      let {key, ...restProps} = getInputProps(field, {type: 'text'});
+  let rootProps: Record<string, unknown> = {
+    className: theme.root('relative', className),
+    'data-component': 'input',
+  };
+  let inputProps: Record<string, unknown> = {
+    as,
+    ref: inputRef,
+    disabled,
+    name: field?.name ?? fieldName ?? name,
+    className: theme.input(),
+    size: 1, // so the input default width without styling is small
+    ...rest,
+  };
+  let iconProps: Record<string, unknown> = {
+    className: theme.icon('absolute'),
+  };
+  let clearButtonProps: Record<string, unknown> = {
+    className: theme.clearButton('absolute'),
+  };
 
-      inputProps = {...restProps, ...inputProps};
-    }
+  if (IconComponent) {
+    rootProps['data-icon'] = '';
+  }
 
-    return (
-      <span {...rootProps}>
-        <HeadlessInput {...inputProps} />
-        {IconComponent ?
-          <span {...iconProps}>
-            {typeof IconComponent === 'string' ?
-              <Icon name={IconComponent} />
-            : <Icon size="large">
-                <IconComponent />
-              </Icon>
-            }
-          </span>
-        : null}
-        {showClearButton ?
-          <span {...clearButtonProps} onClick={handleClear}>
-            <Icon name="XMark" />
-          </span>
-        : null}
-      </span>
-    );
-  },
-);
+  if (showClearButton) {
+    rootProps['data-clear-button'] = '';
+  }
+
+  if (field) {
+    let {key, ...restProps} = getInputProps(field, {type: 'text'});
+
+    inputProps = {...restProps, ...inputProps};
+  }
+
+  return (
+    <span {...rootProps}>
+      <HeadlessInput {...inputProps} />
+      {IconComponent ?
+        <span {...iconProps}>
+          {typeof IconComponent === 'string' ?
+            <Icon name={IconComponent} />
+          : <Icon size="large">
+              <IconComponent />
+            </Icon>
+          }
+        </span>
+      : null}
+      {showClearButton ?
+        <span {...clearButtonProps} onClick={handleClear}>
+          <Icon name="XMark" />
+        </span>
+      : null}
+    </span>
+  );
+}
 
 export const inputTheme: ComponentTheme<typeof useInputTheme> = {
   classNames: {

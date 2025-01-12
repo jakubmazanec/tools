@@ -1,7 +1,6 @@
 import {type Meta, type StoryObj} from '@storybook/react';
-import {type ElementType} from 'react';
 
-import {Radio, RadioGroup, type RadioProps} from '../source/main.js';
+import {Radio, RadioGroup} from '../source/main.js';
 
 const meta = {
   title: 'Components/Radio',
@@ -13,7 +12,7 @@ const meta = {
       </RadioGroup>
     ),
   ],
-} satisfies Meta<RadioProps<ElementType, boolean | number | string>>;
+} satisfies Meta<typeof Radio>;
 
 export default meta;
 

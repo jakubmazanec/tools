@@ -2,59 +2,51 @@ import {
   MenuItems as HeadlessMenuItems,
   type MenuItemsProps as HeadlessMenuItemsProps,
 } from '@headlessui/react';
-import {
-  type ComponentPropsWithoutRef,
-  type ElementType,
-  type PropsWithChildren,
-  type Ref,
-} from 'react';
+import {type ComponentPropsWithoutRef, type ElementType, type PropsWithChildren} from 'react';
 
 import {
   type ComponentProps,
   type ComponentTheme,
   createComponentTheme,
 } from '../theme/internals.js';
-import {filterProps, forwardRef} from './internals.js';
+import {type ComponentRef} from './ComponentRef.js';
+import {filterProps} from './internals.js';
 
 export const useMenuItemsTheme = createComponentTheme('MenuItems');
 
 const MENU_ITEMS_ELEMENT = 'div';
 
-export type MenuItemsProps<T extends ElementType> = PropsWithChildren<
-  ComponentProps<typeof useMenuItemsTheme> &
-    ComponentPropsWithoutRef<T> & {
-      as?: T | undefined;
-      anchor?: HeadlessMenuItemsProps['anchor'] | undefined;
-      className?: string;
-    }
->;
+export type MenuItemsProps<T extends ElementType> = ComponentProps<typeof useMenuItemsTheme> &
+  ComponentPropsWithoutRef<T> &
+  ComponentRef<T> &
+  PropsWithChildren & {
+    as?: T | undefined;
+    anchor?: HeadlessMenuItemsProps['anchor'] | undefined;
+    className?: string;
+  };
 
-export const MenuItems = forwardRef(
-  <T extends ElementType = typeof MENU_ITEMS_ELEMENT>(
-    {
-      as = MENU_ITEMS_ELEMENT as T,
-      anchor = 'bottom start',
-      className,
-      children,
-      ...rest
-    }: MenuItemsProps<T>,
-    ref: Ref<HTMLElement>,
-  ) => {
-    let theme = useMenuItemsTheme();
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
-    let props: HeadlessMenuItemsProps<any> = filterProps({
-      as,
-      ref,
-      anchor,
-      className: theme(null, className),
-      transition: true,
-      'data-component': 'menu-items',
-      ...rest,
-    });
+export function MenuItems<T extends ElementType = typeof MENU_ITEMS_ELEMENT>({
+  as = MENU_ITEMS_ELEMENT as T,
+  anchor = 'bottom start',
+  className,
+  ref,
+  children,
+  ...rest
+}: MenuItemsProps<T>) {
+  let theme = useMenuItemsTheme();
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
+  let props: HeadlessMenuItemsProps<any> = filterProps({
+    as,
+    ref,
+    anchor,
+    className: theme(null, className),
+    transition: true,
+    'data-component': 'menu-items',
+    ...rest,
+  });
 
-    return <HeadlessMenuItems {...props}>{children}</HeadlessMenuItems>;
-  },
-);
+  return <HeadlessMenuItems {...props}>{children}</HeadlessMenuItems>;
+}
 
 export const menuItemsTheme: ComponentTheme<typeof useMenuItemsTheme> = {
   className:

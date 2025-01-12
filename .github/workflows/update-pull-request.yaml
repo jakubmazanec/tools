@@ -194,7 +194,7 @@ jobs:
 
             let dependencyBumps = await getBumps(files);
 
-            await createChangeset(changesetName, dependencyBumps, projects);
+            await createChangeset(changesetName, dependencyBumps, updatedProjects);
 
       - name: Update Carson
         run: |

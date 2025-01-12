@@ -1,7 +1,6 @@
 import {type Meta, type StoryObj} from '@storybook/react';
-import {type ElementType} from 'react';
 
-import {Field, Listbox, type ListboxProps} from '../source/main.js';
+import {Field, Listbox} from '../source/main.js';
 
 const items = [
   {label: '🍎 Apples', value: 'apples'},
@@ -22,7 +21,7 @@ const meta = {
       </Field>
     ),
   ],
-} satisfies Meta<ListboxProps<ElementType, boolean | number | string>>;
+} satisfies Meta<typeof Listbox>;
 
 export default meta;
 
