@@ -54,7 +54,7 @@ let packageJson = lodash.merge(
       format: FORMAT_COMMAND,
       lint: 'eslint .',
       start:
-        'cross-env NODE_ENV=production PORT=${APP_PORT} react-router-serve ./build/server/index.js',
+        `cross-env NODE_ENV=production PORT=${APP_PORT} react-router-serve ./build/server/index.js`,
       test: `del-cli coverage && ${TEST_COMMAND}`,
       typecheck: 'tsc --project tsconfig.typecheck.json',
     },
