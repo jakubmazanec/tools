@@ -55,7 +55,7 @@ jobs:
               let constantsFile = await fs.readFile(constantsFilePath, 'utf8');
 
               for (let [dependencyName, bump] of dependencyBumps) {
-                let regexp = new RegExp(`(?<='?${_.escapeRegExp(dependencyName)}'?:\\s+')\\^\\d+\\.\\d+\\.\\d+(?='.*$)`, 'mi');
+                let regexp = new RegExp(`(?<=('${_.escapeRegExp(dependencyName)}'|${_.escapeRegExp(dependencyName)}):\\s+')\\^\\d+\\.\\d+\\.\\d+(?='.*$)`, 'mi');
                 let result = regexp.exec(constantsFile);
 
                 if (result) {
@@ -63,7 +63,7 @@ jobs:
                   let oldMajorVersion = semver.major(semver.minVersion(result[0]));
 
                   if (newMajorVersion > oldMajorVersion) {
-                    throw new Error(`Bumbing major version of dependency "${dependencyName}" that is handled by Carson, update of the Carson template package is needed!`);
+                    throw new Error(`Bumping major version of dependency "${dependencyName}" that is handled by Carson, update of the Carson template package is needed!`);
                   }
                 }
               }
