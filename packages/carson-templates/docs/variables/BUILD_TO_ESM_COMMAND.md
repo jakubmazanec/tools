@@ -7,4 +7,4 @@
 > `const` **BUILD_TO_ESM_COMMAND**: `string`
 
 Defined in:
-[packages/carson-templates/source/constants.ts:189](https://github.com/jakubmazanec/tools/blob/40ba1fb8bbde716fbe797d7886fffe14521e098a/packages/carson-templates/source/constants.ts#L189)
+[packages/carson-templates/source/constants.ts:189](https://github.com/jakubmazanec/tools/blob/b189bd808f93a39eacbf7e401a82a754c5ce3b63/packages/carson-templates/source/constants.ts#L189)

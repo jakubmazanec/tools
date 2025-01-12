@@ -8,7 +8,7 @@
 > `"UNKNOWN_PARAMETER"` \| `"INVALID_OPTION"` \| `"UNKNOWN_OPTION"` \| `"UNKNOWN_ERROR"`\>
 
 Defined in:
-[args/source/ParsingError.ts:6](https://github.com/jakubmazanec/tools/blob/40ba1fb8bbde716fbe797d7886fffe14521e098a/packages/args/source/ParsingError.ts#L6)
+[args/source/ParsingError.ts:6](https://github.com/jakubmazanec/tools/blob/b189bd808f93a39eacbf7e401a82a754c5ce3b63/packages/args/source/ParsingError.ts#L6)
 
 A subclass of `Error` that indicates a parsing failure.
 
