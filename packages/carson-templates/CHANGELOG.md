@@ -1,5 +1,14 @@
 # @jakubmazanec/carson-templates
 
+## 4.0.2
+
+### Patch Changes
+
+- [#292](https://github.com/jakubmazanec/tools/pull/292)
+  [`b70ba93`](https://github.com/jakubmazanec/tools/commit/b70ba93afff7f67760159378262d2c0b19cfed9e)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes GitHub workflow in the `workspace`
+  template.
+
 ## 4.0.1
 
 ### Patch Changes
