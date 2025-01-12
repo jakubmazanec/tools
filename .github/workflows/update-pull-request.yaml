@@ -62,7 +62,7 @@ jobs:
                   let newMajorVersion = semver.major(semver.minVersion(bump));
                   let oldMajorVersion = semver.major(semver.minVersion(result[0]));
 
-                  if (newMajorVersion > oldMajorVersion) {
+                  if (newMajorVersion > oldMajorVersion || dependencyName === 'node') { // Node.js is a special case, because it isn't specified in `dependencies` field
                     throw new Error(`Bumping major version of dependency "${dependencyName}" that is handled by Carson, update of the Carson template package is needed!`);
                   }
                 }
