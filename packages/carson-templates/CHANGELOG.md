@@ -1,5 +1,14 @@
 # @jakubmazanec/carson-templates
 
+## 4.0.1
+
+### Patch Changes
+
+- [#291](https://github.com/jakubmazanec/tools/pull/291)
+  [`f779e75`](https://github.com/jakubmazanec/tools/commit/f779e75b9ef98389e12e52575295bd1ef364daca)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fix incorrect port in the
+  `projects/remix-app` template.
+
 ## 4.0.0
 
 ### Major Changes
