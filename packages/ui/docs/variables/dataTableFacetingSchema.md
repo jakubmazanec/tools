@@ -10,4 +10,4 @@
 > `values`: `unknown`[]; \}, \{ `max`: `unknown`; `min`: `unknown`; `values`: `unknown`[]; \}\>\>
 
 Defined in:
-[packages/ui/source/components/data-table/DataTableFaceting.ts:3](https://github.com/jakubmazanec/tools/blob/b70ba93afff7f67760159378262d2c0b19cfed9e/packages/ui/source/components/data-table/DataTableFaceting.ts#L3)
+[packages/ui/source/components/data-table/DataTableFaceting.ts:3](https://github.com/jakubmazanec/tools/blob/dd3219e5c9e39fb2c6c2fa06c4f20acd2118ac84/packages/ui/source/components/data-table/DataTableFaceting.ts#L3)

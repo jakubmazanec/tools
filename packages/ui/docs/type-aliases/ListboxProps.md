@@ -15,7 +15,7 @@
 > (`selectedValue`) => `void`; `placeholder`: `string`; `showFilter`: `boolean`; `value`: `V`; \}
 
 Defined in:
-[packages/ui/source/components/Listbox.tsx:46](https://github.com/jakubmazanec/tools/blob/b70ba93afff7f67760159378262d2c0b19cfed9e/packages/ui/source/components/Listbox.tsx#L46)
+[packages/ui/source/components/Listbox.tsx:46](https://github.com/jakubmazanec/tools/blob/dd3219e5c9e39fb2c6c2fa06c4f20acd2118ac84/packages/ui/source/components/Listbox.tsx#L46)
 
 ## Type Parameters
 
