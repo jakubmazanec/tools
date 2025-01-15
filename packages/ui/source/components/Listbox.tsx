@@ -186,8 +186,6 @@ export function Listbox<
     ...rest,
   };
 
-  console.log('Listbox...', props);
-
   return (
     <HeadlessListbox {...props}>
       <HeadlessListboxButton

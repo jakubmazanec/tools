@@ -94,7 +94,8 @@ export type DataTableProps<D, C> = {
   onSearchChange?: ((search: DataTableSearch) => void) | undefined;
 };
 
-export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
+// eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed so the type parameters are useful
+export function DataTable<D extends RowData, C extends Array<ColumnDef<D, any>>>({
   data,
   columns,
   clientPagination = false,
