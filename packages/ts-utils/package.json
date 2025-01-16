@@ -29,7 +29,7 @@
   "devDependencies": {
     "@jakubmazanec/eslint-config": "^4.1.0",
     "@types/lodash": "^4.17.14",
-    "@types/node": "^22.10.5",
+    "@types/node": "^22.10.7",
     "@vitest/coverage-v8": "^2.1.8",
     "concurrently": "^9.1.2",
     "del-cli": "^6.0.0",
