@@ -16,7 +16,7 @@ export const useContainerTheme = createComponentTheme('Container', {
   variants: {
     spacing: ['extra-small', 'small', 'medium', 'large'],
     direction: ['row', 'column'],
-    justify: ['normal', 'center', 'spaced'],
+    justify: ['normal', 'center', 'spaced', 'start', 'end'],
     align: ['normal', 'center'],
   },
 });
@@ -70,6 +70,8 @@ export const containerTheme: ComponentTheme<typeof useContainerTheme> = {
       normal: '',
       center: 'justify-center',
       spaced: 'justify-between',
+      start: 'justify-start',
+      end: 'justify-end',
     },
     align: {
       normal: '',

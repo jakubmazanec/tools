@@ -43,5 +43,5 @@ export function TableCell<T extends ElementType = typeof TABLE_CELL_ELEMENT>({
 }
 
 export const tableCellTheme: ComponentTheme<typeof useTableCellTheme> = {
-  className: 'p-2 text-sm font-sans tabular-nums text-right truncate',
+  className: 'px-1 py-2 text-sm font-sans tabular-nums text-right truncate',
 };

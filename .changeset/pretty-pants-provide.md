@@ -2,4 +2,4 @@
 '@jakubmazanec/ui': patch
 ---
 
-Fixes `DataTable` component.
+Fixes various bugs in table components.

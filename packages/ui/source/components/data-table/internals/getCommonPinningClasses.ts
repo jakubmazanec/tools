@@ -7,8 +7,8 @@ export function getCommonPinningClasses(column: Column<any>): string {
   let isFirstRightPinnedColumn = isPinned === 'right' && column.getIsFirstColumn('right');
 
   let borderClassName =
-    isLastLeftPinnedColumn ? 'border-r-2 border-neutral-100'
-    : isFirstRightPinnedColumn ? 'border-l-2 border-neutral-100'
+    isLastLeftPinnedColumn ? 'pr-2 border-r-2 border-neutral-100'
+    : isFirstRightPinnedColumn ? 'pl-2 border-l-2 border-neutral-100'
     : undefined;
   let opacityClassName = isPinned ? 'opacity-90' : 'opacity-100';
   let positionClassName = isPinned ? 'sticky' : 'relative';

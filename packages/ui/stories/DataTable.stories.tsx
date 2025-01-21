@@ -107,18 +107,26 @@ export const Example = {
     ],
     data,
     clientPagination: true,
+    // hidePagination: true,
     clientSorting: true,
+    // hideSorting: true,
     clientFilters: true,
+    // hideFilters: true,
     clientFaceting: true,
     clientSearch: true,
+    // hideSearch: true,
+    // hideColumnVisibility: true,
     columnVisibility: {
       age: false,
     },
+    // hideColumnOrder: true,
     columnOrder: ['lastName', 'firstName'],
+    // hideColumnPinning: true,
     columnPinning: {
       lastName: 'left',
       firstName: 'left',
     },
+    // hideColumnResizing: true,
     onPaginationChange: (...args) => {
       console.log('onPagination...', ...args);
     },
