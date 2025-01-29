@@ -13,7 +13,7 @@
 > `value`: `V`; \}
 
 Defined in:
-[packages/ui/source/components/RadioGroup.tsx:26](https://github.com/jakubmazanec/tools/blob/4a8f82fa13ce52bb52e412e9ac98b543cce14fc2/packages/ui/source/components/RadioGroup.tsx#L26)
+[packages/ui/source/components/RadioGroup.tsx:26](https://github.com/jakubmazanec/tools/blob/0373298af23ca7b778987184cd6fcccd21ae54be/packages/ui/source/components/RadioGroup.tsx#L26)
 
 ## Type Parameters
 

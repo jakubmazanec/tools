@@ -7,7 +7,7 @@
 > **createTailwindMerge**(`tailwindConfig`): (...`classLists`) => `string`
 
 Defined in:
-[packages/ui/source/development/createTailwindMerge.ts:32](https://github.com/jakubmazanec/tools/blob/4a8f82fa13ce52bb52e412e9ac98b543cce14fc2/packages/ui/source/development/createTailwindMerge.ts#L32)
+[packages/ui/source/development/createTailwindMerge.ts:32](https://github.com/jakubmazanec/tools/blob/0373298af23ca7b778987184cd6fcccd21ae54be/packages/ui/source/development/createTailwindMerge.ts#L32)
 
 ## Parameters
 

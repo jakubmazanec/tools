@@ -7,7 +7,7 @@
 > **CommandArguments**\<`C`\>: `ReturnType`\<`C`\[`"parseArguments"`\]\>
 
 Defined in:
-[cli/source/program/CommandArguments.ts:7](https://github.com/jakubmazanec/tools/blob/4a8f82fa13ce52bb52e412e9ac98b543cce14fc2/packages/cli/source/program/CommandArguments.ts#L7)
+[cli/source/program/CommandArguments.ts:7](https://github.com/jakubmazanec/tools/blob/0373298af23ca7b778987184cd6fcccd21ae54be/packages/cli/source/program/CommandArguments.ts#L7)
 
 Parsed command arguments type.
 
