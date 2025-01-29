@@ -107,26 +107,18 @@ export const Example = {
     ],
     data,
     clientPagination: true,
-    // hidePagination: true,
     clientSorting: true,
-    // hideSorting: true,
     clientFilters: true,
-    // hideFilters: true,
     clientFaceting: true,
     clientSearch: true,
-    // hideSearch: true,
-    // hideColumnVisibility: true,
     columnVisibility: {
       age: false,
     },
-    // hideColumnOrder: true,
     columnOrder: ['lastName', 'firstName'],
-    // hideColumnPinning: true,
     columnPinning: {
       lastName: 'left',
       firstName: 'left',
     },
-    // hideColumnResizing: true,
     onPaginationChange: (...args) => {
       console.log('onPagination...', ...args);
     },
@@ -148,6 +140,110 @@ export const Example = {
     onSearchChange: (...args) => {
       console.log('onSearch...', ...args);
     },
+  },
+} satisfies StoryObj<typeof meta>;
+
+export const MinimalExample = {
+  args: {
+    columns: [
+      columnHelper.accessor('firstName', {
+        header: 'First name',
+        size: 150,
+        meta: {
+          filterVariant: 'text',
+        },
+      }),
+      columnHelper.accessor('lastName', {
+        header: 'Last name',
+        meta: {
+          filterVariant: 'text',
+        },
+      }),
+      columnHelper.accessor('age', {
+        header: 'Age',
+        size: 100,
+        meta: {
+          filterVariant: 'range',
+        },
+      }),
+      columnHelper.accessor('visits', {
+        header: 'Visits',
+        sortUndefined: 'last',
+        meta: {
+          filterVariant: 'range',
+        },
+      }),
+      columnHelper.accessor('visitedAt', {
+        header: 'Visited at',
+        size: 300,
+        cell: ({cell}) => {
+          let value = cell.getValue();
+
+          if (!value) {
+            return null;
+          }
+
+          return formatDateTime(value.toString(), {
+            locale: 'en-US',
+            dateStyle: 'long',
+            timeStyle: 'medium',
+          });
+        },
+      }),
+      columnHelper.accessor('status', {
+        header: 'Status',
+        size: 200,
+        cell: ({cell}) => {
+          let value = cell.getValue();
+
+          if (value === 'in-progress') {
+            return 'In progress';
+          }
+
+          if (value === 'not-started') {
+            return 'Not started';
+          }
+
+          return 'Done';
+        },
+        meta: {
+          filterVariant: 'select',
+        },
+      }),
+      columnHelper.accessor('progress', {
+        header: 'Progress',
+        meta: {
+          filterVariant: 'range',
+        },
+        cell: ({cell}) => {
+          let value = cell.getValue();
+
+          if (!value) {
+            return null;
+          }
+
+          return `${formatNumber(value * 100, {
+            locale: 'en-US',
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2,
+          })} %`;
+        },
+      }),
+    ],
+    data,
+    clientPagination: true,
+    hidePagination: true,
+    clientSorting: true,
+    hideSorting: true,
+    clientFilters: true,
+    hideFilters: true,
+    clientFaceting: true,
+    clientSearch: true,
+    hideSearch: true,
+    hideColumnVisibility: true,
+    hideColumnOrder: true,
+    hideColumnPinning: true,
+    hideColumnResizing: true,
   },
 } satisfies StoryObj<typeof meta>;
 
