@@ -198,6 +198,7 @@ describe('Workspace', () => {
         projectGlobs: null,
         projects: [
           {
+            name: undefined,
             path: '.',
             relativePath: '',
             config: {},
@@ -207,6 +208,18 @@ describe('Workspace', () => {
                 messageParameters: [
                   path.join(TEST_WORKSPACES_PATH, 'single-project/bad/package.json'),
                 ],
+                data: {
+                  path: path.join(TEST_WORKSPACES_PATH, 'single-project/bad/package.json'),
+                  zodIssues: [
+                    {
+                      code: 'invalid_type',
+                      expected: 'string',
+                      message: 'Expected string, received object',
+                      path: ['name'],
+                      received: 'object',
+                    },
+                  ],
+                },
               }),
             ],
           },
@@ -254,6 +267,21 @@ describe('Workspace', () => {
                     'single-project/with-bad-configs/.carson/project.json',
                   ),
                 ],
+                data: {
+                  path: path.join(
+                    TEST_WORKSPACES_PATH,
+                    'single-project/with-bad-configs/.carson/project.json',
+                  ),
+                  zodIssues: [
+                    {
+                      code: 'invalid_type',
+                      expected: 'string',
+                      message: 'Expected string, received null',
+                      path: ['template'],
+                      received: 'null',
+                    },
+                  ],
+                },
               }),
             ],
           },
@@ -269,6 +297,21 @@ describe('Workspace', () => {
                 'single-project/with-bad-configs/.carson/workspace.json',
               ),
             ],
+            data: {
+              path: path.join(
+                TEST_WORKSPACES_PATH,
+                'single-project/with-bad-configs/.carson/workspace.json',
+              ),
+              zodIssues: [
+                {
+                  code: 'invalid_type',
+                  expected: 'string',
+                  message: 'Expected string, received null',
+                  path: ['template'],
+                  received: 'null',
+                },
+              ],
+            },
           }),
         ],
       },
@@ -419,18 +462,34 @@ describe('Workspace', () => {
         projectGlobs: ['./packages/*'],
         projects: [
           {
+            name: undefined,
             path: 'packages/foo',
             relativePath: 'packages/foo',
             config: {},
             packageJson: {},
             errors: [
-              new WorkspaceError('INVALID_PACKAGE_JSON', {
+              new ProjectError('INVALID_PACKAGE_JSON', {
                 messageParameters: [
                   path.join(
                     TEST_WORKSPACES_PATH,
                     'multi-project/with-bad-project/packages/foo/package.json',
                   ),
                 ],
+                data: {
+                  path: path.join(
+                    TEST_WORKSPACES_PATH,
+                    'multi-project/with-bad-project/packages/foo/package.json',
+                  ),
+                  zodIssues: [
+                    {
+                      code: 'invalid_type',
+                      expected: 'string',
+                      message: 'Expected string, received object',
+                      path: ['name'],
+                      received: 'object',
+                    },
+                  ],
+                },
               }),
             ],
           },
@@ -463,6 +522,21 @@ describe('Workspace', () => {
                     'multi-project/with-bad-configs/packages/foo/.carson/project.json',
                   ),
                 ],
+                data: {
+                  path: path.join(
+                    TEST_WORKSPACES_PATH,
+                    'multi-project/with-bad-configs/packages/foo/.carson/project.json',
+                  ),
+                  zodIssues: [
+                    {
+                      code: 'invalid_type',
+                      expected: 'string',
+                      message: 'Expected string, received null',
+                      path: ['template'],
+                      received: 'null',
+                    },
+                  ],
+                },
               }),
             ],
           },
@@ -480,6 +554,21 @@ describe('Workspace', () => {
                 'multi-project/with-bad-configs/.carson/workspace.json',
               ),
             ],
+            data: {
+              path: path.join(
+                TEST_WORKSPACES_PATH,
+                'multi-project/with-bad-configs/.carson/workspace.json',
+              ),
+              zodIssues: [
+                {
+                  code: 'invalid_type',
+                  expected: 'string',
+                  message: 'Expected string, received null',
+                  path: ['template'],
+                  received: 'null',
+                },
+              ],
+            },
           }),
         ],
       },
@@ -676,6 +765,9 @@ describe('Workspace', () => {
       ).rejects.toEqual(
         new WorkspaceError('NO_SUCH_WORKSPACE_PATH', {
           messageParameters: [path.join(TEST_WORKSPACES_PATH, 'this-directory-should-not-exist')],
+          data: {
+            path: path.join(TEST_WORKSPACES_PATH, 'this-directory-should-not-exist'),
+          },
         }),
       );
     });
