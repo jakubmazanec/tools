@@ -174,8 +174,6 @@ jobs:
             let updatedProjects = await getProjects(files);
             let dependencyBumpsWithWorkspace = await getBumps(filesWithWorkspace);
 
-            await checkCarsonTemplatesPackage(dependencyBumpsWithWorkspace);
-
             if (
               !updatedProjects.length && dependencyBumpsWithWorkspace.has('<%- TEMPLATE_PACKAGE_NAME %>')
             ) {
@@ -197,6 +195,8 @@ jobs:
             let dependencyBumps = await getBumps(files);
 
             await createChangeset(changesetName, dependencyBumps, updatedProjects);
+
+            await checkCarsonTemplatesPackage(dependencyBumpsWithWorkspace);
 
       - name: Update Carson
         run: |
