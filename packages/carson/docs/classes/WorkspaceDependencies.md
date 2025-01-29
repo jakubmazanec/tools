@@ -5,7 +5,7 @@
 # Class: WorkspaceDependencies\<M\>
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceDependencies.ts:13](https://github.com/jakubmazanec/tools/blob/dd3219e5c9e39fb2c6c2fa06c4f20acd2118ac84/packages/carson/source/workspace/WorkspaceDependencies.ts#L13)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:13](https://github.com/jakubmazanec/tools/blob/4a8f82fa13ce52bb52e412e9ac98b543cce14fc2/packages/carson/source/workspace/WorkspaceDependencies.ts#L13)
 
 A collection of WorkspaceDependency \| workspace dependencies that are installed in
 [a workspace](Workspace.md).
@@ -30,7 +30,7 @@ A collection of WorkspaceDependency \| workspace dependencies that are installed
 > [`WorkspaceDependencies`](WorkspaceDependencies.md)\<`M`\>
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceDependencies.ts:17](https://github.com/jakubmazanec/tools/blob/dd3219e5c9e39fb2c6c2fa06c4f20acd2118ac84/packages/carson/source/workspace/WorkspaceDependencies.ts#L17)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:17](https://github.com/jakubmazanec/tools/blob/4a8f82fa13ce52bb52e412e9ac98b543cce14fc2/packages/carson/source/workspace/WorkspaceDependencies.ts#L17)
 
 #### Parameters
 
@@ -257,7 +257,7 @@ array.
 > **workspace**: [`Workspace`](Workspace.md)\<`M`\>
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceDependencies.ts:15](https://github.com/jakubmazanec/tools/blob/dd3219e5c9e39fb2c6c2fa06c4f20acd2118ac84/packages/carson/source/workspace/WorkspaceDependencies.ts#L15)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:15](https://github.com/jakubmazanec/tools/blob/4a8f82fa13ce52bb52e412e9ac98b543cce14fc2/packages/carson/source/workspace/WorkspaceDependencies.ts#L15)
 
 The workspace the dependencies are installed in.
 
@@ -933,7 +933,7 @@ undefined is used as the this value.
 > **getVersions**(`options`?): `Record`\<`string`, `string`[]\>
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceDependencies.ts:185](https://github.com/jakubmazanec/tools/blob/dd3219e5c9e39fb2c6c2fa06c4f20acd2118ac84/packages/carson/source/workspace/WorkspaceDependencies.ts#L185)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:185](https://github.com/jakubmazanec/tools/blob/4a8f82fa13ce52bb52e412e9ac98b543cce14fc2/packages/carson/source/workspace/WorkspaceDependencies.ts#L185)
 
 Creates map of all dependnecies and their installed version.
 
@@ -1159,7 +1159,7 @@ and the array is not modified.
 > **push**(...`newWorkspaceDependencies`): `number`
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceDependencies.ts:38](https://github.com/jakubmazanec/tools/blob/dd3219e5c9e39fb2c6c2fa06c4f20acd2118ac84/packages/carson/source/workspace/WorkspaceDependencies.ts#L38)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:38](https://github.com/jakubmazanec/tools/blob/4a8f82fa13ce52bb52e412e9ac98b543cce14fc2/packages/carson/source/workspace/WorkspaceDependencies.ts#L38)
 
 Adds one or more new dependencies.
 
@@ -2004,7 +2004,7 @@ Value of 'this' used to invoke the mapfn.
 > [`WorkspaceDependencies`](WorkspaceDependencies.md)\<`M`\>
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceDependencies.ts:81](https://github.com/jakubmazanec/tools/blob/dd3219e5c9e39fb2c6c2fa06c4f20acd2118ac84/packages/carson/source/workspace/WorkspaceDependencies.ts#L81)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:81](https://github.com/jakubmazanec/tools/blob/4a8f82fa13ce52bb52e412e9ac98b543cce14fc2/packages/carson/source/workspace/WorkspaceDependencies.ts#L81)
 
 Creates new [WorkspaceDependencies](WorkspaceDependencies.md) instance from a
 [Workspace](Workspace.md) instance and its dependencies.

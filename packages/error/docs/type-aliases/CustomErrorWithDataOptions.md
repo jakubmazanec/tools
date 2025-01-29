@@ -7,7 +7,7 @@
 > **CustomErrorWithDataOptions**\<`ErrorData`\>: `object`
 
 Defined in:
-[types/CustomErrorWithDataOptions.ts:4](https://github.com/jakubmazanec/tools/blob/dd3219e5c9e39fb2c6c2fa06c4f20acd2118ac84/packages/error/source/types/CustomErrorWithDataOptions.ts#L4)
+[types/CustomErrorWithDataOptions.ts:4](https://github.com/jakubmazanec/tools/blob/4a8f82fa13ce52bb52e412e9ac98b543cce14fc2/packages/error/source/types/CustomErrorWithDataOptions.ts#L4)
 
 Type representing options object used when instantianting class returned from
 [createCustomErrorWithData](../functions/createCustomErrorWithData.md).

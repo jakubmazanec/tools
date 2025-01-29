@@ -7,7 +7,7 @@
 > **DataTableProps**\<`D`, `C`\>: `object`
 
 Defined in:
-[packages/ui/source/components/data-table/DataTable.tsx:68](https://github.com/jakubmazanec/tools/blob/dd3219e5c9e39fb2c6c2fa06c4f20acd2118ac84/packages/ui/source/components/data-table/DataTable.tsx#L68)
+[packages/ui/source/components/data-table/DataTable.tsx:68](https://github.com/jakubmazanec/tools/blob/4a8f82fa13ce52bb52e412e9ac98b543cce14fc2/packages/ui/source/components/data-table/DataTable.tsx#L68)
 
 ## Type Parameters
 
@@ -64,6 +64,38 @@ Defined in:
 ### filters?
 
 > `optional` **filters**: [`DataTableFilters`](DataTableFilters.md)
+
+### hideColumnOrder?
+
+> `optional` **hideColumnOrder**: `boolean`
+
+### hideColumnPinning?
+
+> `optional` **hideColumnPinning**: `boolean`
+
+### hideColumnResizing?
+
+> `optional` **hideColumnResizing**: `boolean`
+
+### hideColumnVisibility?
+
+> `optional` **hideColumnVisibility**: `boolean`
+
+### hideFilters?
+
+> `optional` **hideFilters**: `boolean`
+
+### hidePagination?
+
+> `optional` **hidePagination**: `boolean`
+
+### hideSearch?
+
+> `optional` **hideSearch**: `boolean`
+
+### hideSorting?
+
+> `optional` **hideSorting**: `boolean`
 
 ### onColumnOrderChange()?
 
