@@ -2,4 +2,4 @@
 '@jakubmazanec/ui': minor
 ---
 
-Adds more justify options to `Container` component.
+Adds more options to the `Container` component `justify` prop: `start`, and `end`.

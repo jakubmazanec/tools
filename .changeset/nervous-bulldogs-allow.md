@@ -2,4 +2,6 @@
 '@jakubmazanec/ui': minor
 ---
 
-Adds props to `DataTable` component allowing to disable various functionality.
+Adds props to the `DataTable` component allowing to hide various functionality: `hidePagination`,
+`hideColumnVisibility`, `hideColumnOrder`, `hideColumnPinning`, `hideColumnResizing`, `hideSorting`,
+`hideFilters`, and `hideSearch`.
