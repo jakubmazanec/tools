@@ -69,6 +69,7 @@ export type DataTableProps<D, C> = {
   data: D[];
   columns: C;
   clientPagination?: boolean | undefined;
+  hidePagination?: boolean | undefined;
   pagination?: DataTablePagination | undefined;
   onPaginationChange?:
     | ((
@@ -76,45 +77,61 @@ export type DataTableProps<D, C> = {
       ) => void)
     | undefined;
   columnVisibility?: DataTableColumnVisibility;
+  hideColumnVisibility?: boolean | undefined;
   onColumnVisibilityChange?: ((columnVisibility: DataTableColumnVisibility) => void) | undefined;
   columnOrder?: DataTableColumnOrder;
+  hideColumnOrder?: boolean | undefined;
   onColumnOrderChange?: ((columnOrder: DataTableColumnOrder) => void) | undefined;
   columnPinning?: DataTableColumnPinning;
+  hideColumnPinning?: boolean | undefined;
   onColumnPinningChange?: ((columnPinning: DataTableColumnPinning) => void) | undefined;
+  hideColumnResizing?: boolean | undefined;
   clientSorting?: boolean | undefined;
   sorting?: DataTableSorting | undefined;
+  hideSorting?: boolean | undefined;
   onSortingChange?: ((sorting: DataTableSorting) => void) | undefined;
   clientFilters?: boolean | undefined;
+  hideFilters?: boolean | undefined;
   filters?: DataTableFilters | undefined;
   onFiltersChange?: ((filters: DataTableFilters) => void) | undefined;
   clientFaceting?: boolean | undefined;
   faceting?: DataTableFaceting | undefined;
   clientSearch?: boolean | undefined;
+  hideSearch?: boolean | undefined;
   search?: DataTableSearch | undefined;
   onSearchChange?: ((search: DataTableSearch) => void) | undefined;
 };
 
-export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
+// eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed so the type parameters are useful
+export function DataTable<D extends RowData, C extends Array<ColumnDef<D, any>>>({
   data,
   columns,
   clientPagination = false,
+  hidePagination = false,
   pagination: controlledPagination,
   onPaginationChange,
   clientSorting = false,
   sorting: controlledSorting,
+  hideSorting = false,
   onSortingChange,
   columnVisibility: controlledColumnVisibility,
+  hideColumnVisibility = false,
   onColumnVisibilityChange,
   columnOrder: controlledColumnOrder,
+  hideColumnOrder = false,
   onColumnOrderChange,
   columnPinning: controlledColumnPinning,
+  hideColumnPinning = false,
   onColumnPinningChange,
+  hideColumnResizing = false,
   clientFilters = false,
+  hideFilters = false,
   filters: controlledFilters,
   onFiltersChange,
   clientFaceting = false,
   faceting,
   clientSearch = false,
+  hideSearch = false,
   search: controlledSearch,
   onSearchChange,
 }: DataTableProps<D, C>) {
@@ -299,79 +316,95 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D>>>({
       sensors={sensors}
       onDragEnd={handleDragEnd}
     >
-      <DataTableSearchComponent
-        clientSearch={clientSearch}
-        search={controlledSearch}
-        table={table}
-        onSearch={onSearchChange}
-      />
-      <Table
-        style={{
-          width: table.getCenterTotalSize(),
-          tableLayout: 'fixed',
-        }}
-      >
-        <TableHead>
-          {table.getHeaderGroups().map((headerGroup) => (
-            <TableRow key={headerGroup.id}>
-              <SortableContext items={columnOrder} strategy={horizontalListSortingStrategy}>
-                {headerGroup.headers.map((header) => (
-                  <DataTableHeader
-                    key={header.id}
-                    clientFaceting={clientFaceting}
-                    clientFilters={clientFilters}
-                    clientSorting={clientSorting}
-                    faceting={faceting}
-                    filters={controlledFilters}
-                    header={header}
-                    sorting={controlledSorting}
-                    table={table}
-                    onFiltering={onFiltersChange}
-                    onSorting={onSortingChange}
-                  />
+      {hideSearch ? null : (
+        <DataTableSearchComponent
+          clientSearch={clientSearch}
+          search={controlledSearch}
+          table={table}
+          onSearch={onSearchChange}
+        />
+      )}
+      <div className="w-full overflow-y-visible overflow-x-scroll [scrollbar-width:thin]">
+        <Table
+          style={{
+            width: table.getCenterTotalSize(),
+            tableLayout: 'fixed',
+          }}
+        >
+          <TableHead>
+            {table.getHeaderGroups().map((headerGroup) => (
+              <TableRow key={headerGroup.id}>
+                <SortableContext items={columnOrder} strategy={horizontalListSortingStrategy}>
+                  {headerGroup.headers.map((header) => (
+                    <DataTableHeader
+                      key={header.id}
+                      clientFaceting={clientFaceting}
+                      clientFilters={clientFilters}
+                      clientSorting={clientSorting}
+                      faceting={faceting}
+                      filters={controlledFilters}
+                      header={header}
+                      hideColumnOrder={hideColumnOrder}
+                      hideColumnPinning={hideColumnPinning}
+                      hideColumnResizing={hideColumnResizing}
+                      hideColumnVisibility={hideColumnVisibility}
+                      hideFilters={hideFilters}
+                      hideSorting={hideSorting}
+                      sorting={controlledSorting}
+                      table={table}
+                      onFiltering={onFiltersChange}
+                      onSorting={onSortingChange}
+                    />
+                  ))}
+                </SortableContext>
+              </TableRow>
+            ))}
+          </TableHead>
+          <TableBody>
+            {table.getRowModel().rows.map((row) => (
+              <TableRow key={row.id}>
+                {row.getVisibleCells().map((cell) => {
+                  let value = cell.getValue();
+
+                  return (
+                    <TableCell
+                      key={cell.id}
+                      className={getCommonPinningClasses(cell.column)}
+                      style={{...getCommonPinningStyles(cell.column)}}
+                      title={value === null || value === undefined ? undefined : String(value)}
+                    >
+                      {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                    </TableCell>
+                  );
+                })}
+              </TableRow>
+            ))}
+          </TableBody>
+          <TableFoot>
+            {table.getFooterGroups().map((footerGroup) => (
+              <TableRow key={footerGroup.id}>
+                {footerGroup.headers.map((header) => (
+                  <TableHeader key={header.id}>
+                    {header.isPlaceholder ? null : (
+                      flexRender(header.column.columnDef.footer, header.getContext())
+                    )}
+                  </TableHeader>
                 ))}
-              </SortableContext>
-            </TableRow>
-          ))}
-        </TableHead>
-        <TableBody>
-          {table.getRowModel().rows.map((row) => (
-            <TableRow key={row.id}>
-              {row.getVisibleCells().map((cell) => (
-                <TableCell
-                  key={cell.id}
-                  className={getCommonPinningClasses(cell.column)}
-                  style={{...getCommonPinningStyles(cell.column)}}
-                  title={String(cell.getValue())}
-                >
-                  {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                </TableCell>
-              ))}
-            </TableRow>
-          ))}
-        </TableBody>
-        <TableFoot>
-          {table.getFooterGroups().map((footerGroup) => (
-            <TableRow key={footerGroup.id}>
-              {footerGroup.headers.map((header) => (
-                <TableHeader key={header.id}>
-                  {header.isPlaceholder ? null : (
-                    flexRender(header.column.columnDef.footer, header.getContext())
-                  )}
-                </TableHeader>
-              ))}
-            </TableRow>
-          ))}
-        </TableFoot>
-      </Table>
-      <DataTablePaginationComponent
-        clientPagination={clientPagination}
-        page={page}
-        pageCount={pageCount}
-        pageSize={pageSize}
-        table={table}
-        onPagination={onPaginationChange}
-      />
+              </TableRow>
+            ))}
+          </TableFoot>
+        </Table>
+      </div>
+      {hidePagination ? null : (
+        <DataTablePaginationComponent
+          clientPagination={clientPagination}
+          page={page}
+          pageCount={pageCount}
+          pageSize={pageSize}
+          table={table}
+          onPagination={onPaginationChange}
+        />
+      )}
     </DndContext>
   );
 }

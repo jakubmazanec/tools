@@ -27,11 +27,15 @@ export type DataTableHeaderProps = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   clientSorting: DataTableProps<any, any>['clientSorting'];
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
+  hideSorting: DataTableProps<any, any>['hideSorting'];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   sorting: DataTableProps<any, any>['sorting'];
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   onSorting: DataTableProps<any, any>['onSortingChange'];
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   clientFilters: DataTableProps<any, any>['clientFilters'];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
+  hideFilters: DataTableProps<any, any>['hideFilters'];
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   filters: DataTableProps<any, any>['filters'];
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
@@ -40,19 +44,33 @@ export type DataTableHeaderProps = {
   clientFaceting: DataTableProps<any, any>['clientFaceting'];
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   faceting: DataTableProps<any, any>['faceting'];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
+  hideColumnVisibility: DataTableProps<any, any>['hideColumnVisibility'];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
+  hideColumnOrder: DataTableProps<any, any>['hideColumnOrder'];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
+  hideColumnPinning: DataTableProps<any, any>['hideColumnPinning'];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
+  hideColumnResizing: DataTableProps<any, any>['hideColumnResizing'];
 };
 
 export function DataTableHeader({
   table,
   header,
   clientSorting,
+  hideSorting = false,
   sorting: controlledSorting,
   onSorting,
   clientFilters,
+  hideFilters = false,
   filters: controlledFilters,
   onFiltering,
   clientFaceting,
   faceting,
+  hideColumnVisibility = false,
+  hideColumnOrder = false,
+  hideColumnPinning = false,
+  hideColumnResizing = false,
 }: DataTableHeaderProps) {
   let {attributes, isDragging, listeners, setNodeRef, transform} = useSortable({
     id: header.column.id,
@@ -143,6 +161,10 @@ export function DataTableHeader({
     header.column.pin(false);
   }, [header.column]);
 
+  let resolvedHideFilters = hideFilters || !header.column.getCanFilter();
+  let resolvedHideSorting = hideSorting || !header.column.getCanSort();
+  let resolvedHideColumnPinning = hideColumnPinning || !header.column.getCanPin();
+
   return (
     <TableHeader
       ref={setNodeRef}
@@ -150,105 +172,123 @@ export function DataTableHeader({
       colSpan={header.colSpan}
       style={style}
     >
-      <span className="relative mr-6 block overflow-hidden">
-        <Container align="center" justify="spaced" spacing="extra-small">
-          {header.column.getCanSort() ?
-            <Button
-              className="mr-auto inline-flex cursor-move"
+      <span
+        className={
+          hideColumnResizing ?
+            'relative block overflow-hidden'
+          : 'relative mr-6 block overflow-hidden'
+        }
+      >
+        <Container align="center" justify="end" spacing="extra-small">
+          {resolvedHideSorting && hideColumnOrder ?
+            contentElement
+          : <Button
+              className={hideColumnOrder ? 'inline-flex' : 'inline-flex cursor-move'}
               size="small"
               title={title}
               variant="text"
-              onClick={handleSortClick}
-              {...attributes}
-              {...listeners}
+              onClick={resolvedHideSorting ? undefined : handleSortClick}
+              {...(hideColumnOrder ? {} : attributes)}
+              {...(hideColumnOrder ? {} : listeners)}
             >
-              {sortElement}
+              {resolvedHideSorting ? null : sortElement}
               {contentElement}
             </Button>
-          : null}
-          <Popover>
-            <PopoverButton>
-              <Button aria-label="Settings" size="small" variant="text">
-                <Icon name="Cog6Tooth" size="small" />
-              </Button>
-            </PopoverButton>
-            <PopoverPanel anchor="right start">
-              <Container direction="column" spacing="large">
-                {header.column.getCanPin() ?
-                  <Container direction="row" spacing="small">
-                    <Text>Pin column</Text>
+          }
+          {resolvedHideColumnPinning && resolvedHideFilters && hideColumnVisibility ? null : (
+            <Popover>
+              <PopoverButton>
+                <Button aria-label="Settings" size="small" variant="text">
+                  <Icon name="Cog6Tooth" size="small" />
+                </Button>
+              </PopoverButton>
+              <PopoverPanel anchor="right start">
+                <Container direction="column" spacing="large">
+                  {resolvedHideColumnPinning ? null : (
+                    <Container direction="row" spacing="small">
+                      <Text>Pin column</Text>
 
-                    <Field>
-                      <Container spacing="small">
-                        {header.column.getIsPinned() === 'left' ? null : (
-                          <Button
-                            aria-label="Pin to left"
-                            variant="outline"
-                            onClick={handlePinLeftClick}
-                          >
-                            <Icon name="ArrowLeftEndOnRectangle" size="large" />
-                          </Button>
-                        )}
-                        {header.column.getIsPinned() ?
-                          <Button aria-label="Unpin" variant="outline" onClick={handleUnpinClick}>
-                            <Icon name="XMark" size="large" />
-                          </Button>
-                        : null}
-                        {header.column.getIsPinned() === 'right' ? null : (
-                          <Button
-                            aria-label="Pin to right"
-                            variant="outline"
-                            onClick={handlePinRightClick}
-                          >
-                            <Icon name="ArrowRightEndOnRectangle" size="large" />
-                          </Button>
-                        )}
-                      </Container>
-                    </Field>
-                  </Container>
-                : null}
+                      <Field>
+                        <Container spacing="small">
+                          {header.column.getIsPinned() === 'left' ? null : (
+                            <Button
+                              aria-label="Pin to left"
+                              variant="outline"
+                              onClick={handlePinLeftClick}
+                            >
+                              <Icon name="ArrowLeftEndOnRectangle" size="large" />
+                            </Button>
+                          )}
+                          {header.column.getIsPinned() ?
+                            <Button aria-label="Unpin" variant="outline" onClick={handleUnpinClick}>
+                              <Icon name="XMark" size="large" />
+                            </Button>
+                          : null}
+                          {header.column.getIsPinned() === 'right' ? null : (
+                            <Button
+                              aria-label="Pin to right"
+                              variant="outline"
+                              onClick={handlePinRightClick}
+                            >
+                              <Icon name="ArrowRightEndOnRectangle" size="large" />
+                            </Button>
+                          )}
+                        </Container>
+                      </Field>
+                    </Container>
+                  )}
 
-                {header.column.getCanFilter() ?
-                  <Container direction="column" spacing="small">
-                    <Text>Filter</Text>
+                  {resolvedHideFilters ? null : (
+                    <Container direction="column" spacing="small">
+                      <Text>Filter</Text>
 
-                    <Field>
-                      <DataTableHeaderFilter
-                        clientFaceting={clientFaceting}
-                        clientFilters={clientFilters}
-                        column={header.column}
-                        faceting={faceting}
-                        filters={controlledFilters}
-                        table={table}
-                        onFiltering={onFiltering}
-                      />
-                    </Field>
-                  </Container>
-                : null}
+                      <Field>
+                        <DataTableHeaderFilter
+                          clientFaceting={clientFaceting}
+                          clientFilters={clientFilters}
+                          column={header.column}
+                          faceting={faceting}
+                          filters={controlledFilters}
+                          table={table}
+                          onFiltering={onFiltering}
+                        />
+                      </Field>
+                    </Container>
+                  )}
 
-                <Container direction="column" spacing="small">
-                  <Text>Visible columns</Text>
+                  {hideColumnVisibility ? null : (
+                    <Container direction="column" spacing="small">
+                      <Text>Visible columns</Text>
 
-                  {table.getAllLeafColumns().map((column) => (
-                    <DataTableHeaderColumnCheckbox key={column.id} column={column} table={table} />
-                  ))}
+                      {table.getAllLeafColumns().map((column) => (
+                        <DataTableHeaderColumnCheckbox
+                          key={column.id}
+                          column={column}
+                          table={table}
+                        />
+                      ))}
+                    </Container>
+                  )}
                 </Container>
-              </Container>
-            </PopoverPanel>
-          </Popover>
+              </PopoverPanel>
+            </Popover>
+          )}
         </Container>
       </span>
-      <Button
-        aria-label="Resize"
-        className="absolute right-1 top-2.5 cursor-col-resize"
-        size="small"
-        variant="invisible"
-        onDoubleClick={handleWidthReset}
-        onMouseDown={header.getResizeHandler()}
-        onTouchStart={header.getResizeHandler()}
-      >
-        <Icon name="ArrowsRightLeft" size="small" />
-      </Button>
+      {hideColumnResizing ? null : (
+        <Button
+          aria-label="Resize"
+          // className="absolute right-1 top-2.5 cursor-col-resize"
+          className="absolute right-1 top-1/2 -mt-2.5 cursor-col-resize"
+          size="small"
+          variant="invisible"
+          onDoubleClick={handleWidthReset}
+          onMouseDown={header.getResizeHandler()}
+          onTouchStart={header.getResizeHandler()}
+        >
+          <Icon name="ArrowsRightLeft" size="small" />
+        </Button>
+      )}
     </TableHeader>
   );
 }
