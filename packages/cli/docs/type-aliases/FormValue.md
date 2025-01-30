@@ -8,7 +8,7 @@
 > : `C`\[`"type"`\] _extends_ `"select"` ? [`StringFormValue`](StringFormValue.md) : `never`
 
 Defined in:
-[cli/source/ui/form/FormValue.ts:8](https://github.com/jakubmazanec/tools/blob/76a9140b954a789a6120dd2126b179ec0180d7e9/packages/cli/source/ui/form/FormValue.ts#L8)
+[cli/source/ui/form/FormValue.ts:8](https://github.com/jakubmazanec/tools/blob/dcfb3b06be051bf99e23e7e35174b07af0f0fddd/packages/cli/source/ui/form/FormValue.ts#L8)
 
 Form value.
 

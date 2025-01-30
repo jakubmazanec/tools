@@ -7,7 +7,7 @@
 > **ensureEmptyDirectory**(`targetPath`, `__namedParameters`): `Promise`\<`void`\>
 
 Defined in:
-[ensureEmptyDirectory.ts:19](https://github.com/jakubmazanec/tools/blob/76a9140b954a789a6120dd2126b179ec0180d7e9/packages/fs-utils/source/ensureEmptyDirectory.ts#L19)
+[ensureEmptyDirectory.ts:19](https://github.com/jakubmazanec/tools/blob/dcfb3b06be051bf99e23e7e35174b07af0f0fddd/packages/fs-utils/source/ensureEmptyDirectory.ts#L19)
 
 Ensures that a path is actually an empty directory. If the path doesn't exist, the directory is
 created; if the path exists but isn't an ampty directory, error is thrown.

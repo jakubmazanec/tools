@@ -7,7 +7,7 @@
 > **SelectInput**(`__namedParameters`): `React.JSX.Element`
 
 Defined in:
-[cli/source/ui/form/SelectInput.tsx:42](https://github.com/jakubmazanec/tools/blob/76a9140b954a789a6120dd2126b179ec0180d7e9/packages/cli/source/ui/form/SelectInput.tsx#L42)
+[cli/source/ui/form/SelectInput.tsx:42](https://github.com/jakubmazanec/tools/blob/dcfb3b06be051bf99e23e7e35174b07af0f0fddd/packages/cli/source/ui/form/SelectInput.tsx#L42)
 
 Select input component.
 
