@@ -7,7 +7,7 @@
 > **CustomErrorOptions**: `object`
 
 Defined in:
-[types/CustomErrorOptions.ts:4](https://github.com/jakubmazanec/tools/blob/0373298af23ca7b778987184cd6fcccd21ae54be/packages/error/source/types/CustomErrorOptions.ts#L4)
+[types/CustomErrorOptions.ts:4](https://github.com/jakubmazanec/tools/blob/76a9140b954a789a6120dd2126b179ec0180d7e9/packages/error/source/types/CustomErrorOptions.ts#L4)
 
 Type representing options object used when instantianting class returned from
 [createCustomError](../functions/createCustomError.md).

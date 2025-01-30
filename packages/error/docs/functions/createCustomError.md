@@ -9,7 +9,7 @@
 > [`UNKNOWN_ERROR`](../variables/UNKNOWN_ERROR.md)\>
 
 Defined in:
-[createCustomError.ts:13](https://github.com/jakubmazanec/tools/blob/0373298af23ca7b778987184cd6fcccd21ae54be/packages/error/source/createCustomError.ts#L13)
+[createCustomError.ts:13](https://github.com/jakubmazanec/tools/blob/76a9140b954a789a6120dd2126b179ec0180d7e9/packages/error/source/createCustomError.ts#L13)
 
 Function for creating custom error classes. Such custom error class properly subclasses built-in
 `Error` and simplifies generating error messages via predefined error codes.

@@ -7,7 +7,7 @@
 > **findDirectories**(`searchPath`): `Promise`\<`string`[]\>
 
 Defined in:
-[findDirectories.ts:9](https://github.com/jakubmazanec/tools/blob/0373298af23ca7b778987184cd6fcccd21ae54be/packages/fs-utils/source/findDirectories.ts#L9)
+[findDirectories.ts:9](https://github.com/jakubmazanec/tools/blob/76a9140b954a789a6120dd2126b179ec0180d7e9/packages/fs-utils/source/findDirectories.ts#L9)
 
 Finds all directories that are direct sub-directories of a path.
 

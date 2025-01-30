@@ -15,4 +15,4 @@
 > `type`: `"boolean"`; `validate`: (`value`) => `void`; \}
 
 Defined in:
-[args/source/OptionConfig.ts:40](https://github.com/jakubmazanec/tools/blob/0373298af23ca7b778987184cd6fcccd21ae54be/packages/args/source/OptionConfig.ts#L40)
+[args/source/OptionConfig.ts:40](https://github.com/jakubmazanec/tools/blob/76a9140b954a789a6120dd2126b179ec0180d7e9/packages/args/source/OptionConfig.ts#L40)

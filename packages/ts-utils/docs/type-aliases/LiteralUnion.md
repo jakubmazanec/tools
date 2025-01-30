@@ -7,7 +7,7 @@
 > **LiteralUnion**\<`L`, `T`\>: `L` \| `Record`\<`never`, `never`\> & `T`
 
 Defined in:
-[packages/ts-utils/source/types/LiteralUnion.ts:22](https://github.com/jakubmazanec/tools/blob/0373298af23ca7b778987184cd6fcccd21ae54be/packages/ts-utils/source/types/LiteralUnion.ts#L22)
+[packages/ts-utils/source/types/LiteralUnion.ts:22](https://github.com/jakubmazanec/tools/blob/76a9140b954a789a6120dd2126b179ec0180d7e9/packages/ts-utils/source/types/LiteralUnion.ts#L22)
 
 Creates union type by combining primitve types and literal types while allowing auto-completion in
 IDEs. This type is a workaround for
