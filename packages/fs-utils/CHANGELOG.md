@@ -1,5 +1,12 @@
 # @jakubmazanec/fs-utils
 
+## 0.2.11
+
+### Patch Changes
+
+- [`76a9140`](https://github.com/jakubmazanec/tools/commit/76a9140b954a789a6120dd2126b179ec0180d7e9)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fix bad release.
+
 ## 0.2.10
 
 ### Patch Changes

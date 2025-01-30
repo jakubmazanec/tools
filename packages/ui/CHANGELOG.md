@@ -1,5 +1,17 @@
 # @jakubmazanec/ui
 
+## 0.3.1
+
+### Patch Changes
+
+- [`76a9140`](https://github.com/jakubmazanec/tools/commit/76a9140b954a789a6120dd2126b179ec0180d7e9)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fix bad release.
+
+- [#332](https://github.com/jakubmazanec/tools/pull/332)
+  [`c24622b`](https://github.com/jakubmazanec/tools/commit/c24622bc50271afb2c821e563a829923457689e4)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `chromatic` updated to version
+  `^11.25.2`.
+
 ## 0.3.0
 
 ### Minor Changes

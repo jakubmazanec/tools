@@ -1,6 +1,6 @@
 {
   "name": "@jakubmazanec/zod-utils",
-  "version": "2.0.10",
+  "version": "2.0.11",
   "description": "Collection of Zod schemas and utilities.",
   "repository": {
     "type": "git",
