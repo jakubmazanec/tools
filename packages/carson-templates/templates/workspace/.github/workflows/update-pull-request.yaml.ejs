@@ -88,6 +88,8 @@ jobs:
             }
 
             async function createChangeset(fileName, dependencyBumps, projects) {
+              console.log('Creating changeset...');
+
               let message = '';
 
               for (let [dependencyName, bump] of dependencyBumps) {
@@ -102,6 +104,8 @@ jobs:
             }
 
             async function createChangesetForCarsonTemplates(fileName, dependencyBumps, projects) {
+              console.log('Creating changeset for Carson templates update...');
+
               let message = '';
 
               for (let [dependencyName, bump] of dependencyBumps) {
@@ -174,14 +178,14 @@ jobs:
             let updatedProjects = await getProjects(files);
             let dependencyBumpsWithWorkspace = await getBumps(filesWithWorkspace);
 
-            if (
-              !updatedProjects.length && dependencyBumpsWithWorkspace.has('<%- TEMPLATE_PACKAGE_NAME %>')
-            ) {
+            console.log('Changed package.json files:', files);
+            console.log('Updated projects:', updatedProjects);
+            console.log('Dependecy bumps (including the workspace):', Array.from(dependencyBumpsWithWorkspace));
+
+            if (dependencyBumpsWithWorkspace.has('<%- TEMPLATE_PACKAGE_NAME %>')) {
               updatedProjects = await getProjectsUsingCarsonTemplates();
 
-              let dependencyBumps = await getBumps(filesWithWorkspace);
-
-              await createChangesetForCarsonTemplates(changesetName, dependencyBumps, updatedProjects);
+              await createChangesetForCarsonTemplates(changesetName, dependencyBumpsWithWorkspace, updatedProjects);
 
               return;
             } else if (!updatedProjects.length) {
@@ -193,6 +197,8 @@ jobs:
             }
 
             let dependencyBumps = await getBumps(files);
+
+            console.log('Dependecy bumps:', Array.from(dependencyBumps));
 
             await createChangeset(changesetName, dependencyBumps, updatedProjects);
 
