@@ -12,7 +12,6 @@ export * from './internals/hslToHex.js';
 export * from './internals/hslToRgb.js';
 export * from './internals/isHex.js';
 export type * from './internals/PaletteConfig.js';
-export * from './internals/resolveModule.js';
 export * from './internals/round.js';
 export type * from './internals/SwatchValue.js';
 export * from './internals/unsignedModulo.js';

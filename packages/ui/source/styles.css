@@ -16,10 +16,17 @@
 
 @layer base {
   html {
-    @apply font-sans text-neutral-950;
+    font-family: var(--font-sans);
+    color: var(--color-neutral-550);
   }
 
   * {
-    scrollbar-color: theme(colors.neutral.200) theme(colors.transparent);
+    scrollbar-color: var(--color-neutral-200) var(--color-transparent);
   }
 }
+
+@theme {
+  --spacing: 4px;
+}
+
+@source "./";

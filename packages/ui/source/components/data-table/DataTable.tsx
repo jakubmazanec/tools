@@ -324,7 +324,7 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D, any>>>
           onSearch={onSearchChange}
         />
       )}
-      <div className="w-full overflow-y-visible overflow-x-scroll [scrollbar-width:thin]">
+      <div className="w-full overflow-x-scroll overflow-y-visible [scrollbar-width:thin]">
         <Table
           style={{
             width: table.getCenterTotalSize(),
