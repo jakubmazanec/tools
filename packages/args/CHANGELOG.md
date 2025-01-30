@@ -1,5 +1,39 @@
 # @jakubmazanec/args
 
+## 2.0.10
+
+### Patch Changes
+
+- [#309](https://github.com/jakubmazanec/tools/pull/309)
+  [`7df3e5c`](https://github.com/jakubmazanec/tools/commit/7df3e5c0fca190960e9cfcbb4e8786ab8a57f7d7)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `vitest` updated to version `^3.0.4`.
+  Dependency `@vitest/coverage-v8` updated to version `^3.0.4`.
+
+- [#297](https://github.com/jakubmazanec/tools/pull/297)
+  [`cca00ce`](https://github.com/jakubmazanec/tools/commit/cca00ce0122d0e787cf9d1c2f858f9ebd2ecb311)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `prettier-plugin-packagejson` updated
+  to version `^2.5.7`.
+
+- [#327](https://github.com/jakubmazanec/tools/pull/327)
+  [`a5e9065`](https://github.com/jakubmazanec/tools/commit/a5e9065af8873880856627bcde537509570e7cee)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `eslint` updated to version
+  `^9.19.0`.
+
+- [#321](https://github.com/jakubmazanec/tools/pull/321)
+  [`2290b77`](https://github.com/jakubmazanec/tools/commit/2290b7778472c34e8853cccc306aa4b798f59d79)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@types/lodash` updated to version
+  `^4.17.15`.
+
+- [#295](https://github.com/jakubmazanec/tools/pull/295)
+  [`c9c21ea`](https://github.com/jakubmazanec/tools/commit/c9c21ead455806a794027e7b53683d04e5eb76a1)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@types/node` updated to version
+  `^22.10.7`.
+
+- [#311](https://github.com/jakubmazanec/tools/pull/311)
+  [`7276f93`](https://github.com/jakubmazanec/tools/commit/7276f93f0e53a93e01802fdb3a2c4710b0c8b11f)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `prettier-plugin-packagejson` updated
+  to version `^2.5.8`.
+
 ## 2.0.9
 
 ### Patch Changes

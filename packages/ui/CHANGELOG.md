@@ -1,5 +1,135 @@
 # @jakubmazanec/ui
 
+## 0.3.0
+
+### Minor Changes
+
+- [#314](https://github.com/jakubmazanec/tools/pull/314)
+  [`4a8f82f`](https://github.com/jakubmazanec/tools/commit/4a8f82fa13ce52bb52e412e9ac98b543cce14fc2)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Adds more options to the `Container`
+  component `justify` prop: `start`, and `end`.
+
+- [#314](https://github.com/jakubmazanec/tools/pull/314)
+  [`4a8f82f`](https://github.com/jakubmazanec/tools/commit/4a8f82fa13ce52bb52e412e9ac98b543cce14fc2)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Adds props to the `DataTable` component
+  allowing to hide various functionality: `hidePagination`, `hideColumnVisibility`,
+  `hideColumnOrder`, `hideColumnPinning`, `hideColumnResizing`, `hideSorting`, `hideFilters`, and
+  `hideSearch`.
+
+### Patch Changes
+
+- [#309](https://github.com/jakubmazanec/tools/pull/309)
+  [`7df3e5c`](https://github.com/jakubmazanec/tools/commit/7df3e5c0fca190960e9cfcbb4e8786ab8a57f7d7)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `vitest` updated to version `^3.0.4`.
+  Dependency `@vitest/coverage-v8` updated to version `^3.0.4`.
+
+- [#314](https://github.com/jakubmazanec/tools/pull/314)
+  [`4a8f82f`](https://github.com/jakubmazanec/tools/commit/4a8f82fa13ce52bb52e412e9ac98b543cce14fc2)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixes various bugs in table components.
+
+- [#293](https://github.com/jakubmazanec/tools/pull/293)
+  [`7c11c72`](https://github.com/jakubmazanec/tools/commit/7c11c720a9b298b6528d4a5a33b1731ce3805670)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@types/react` updated to version
+  `^19.0.6`.
+
+- [#310](https://github.com/jakubmazanec/tools/pull/310)
+  [`619f437`](https://github.com/jakubmazanec/tools/commit/619f437e0788f1b76a879e83f60105b1c222f7c6)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `chromatic` updated to version
+  `^11.25.1`.
+
+- [#316](https://github.com/jakubmazanec/tools/pull/316)
+  [`6883736`](https://github.com/jakubmazanec/tools/commit/6883736957d84b0bc76cedbedb6adae0662196b3)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `happy-dom` updated to version
+  `^16.7.3`.
+
+- [#323](https://github.com/jakubmazanec/tools/pull/323)
+  [`c7f92d5`](https://github.com/jakubmazanec/tools/commit/c7f92d58ae849b9781fd29013b458fae4c6c327d)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@types/react` updated to version
+  `^19.0.8`.
+
+- [#297](https://github.com/jakubmazanec/tools/pull/297)
+  [`cca00ce`](https://github.com/jakubmazanec/tools/commit/cca00ce0122d0e787cf9d1c2f858f9ebd2ecb311)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `prettier-plugin-packagejson` updated
+  to version `^2.5.7`.
+
+- [#299](https://github.com/jakubmazanec/tools/pull/299)
+  [`991f696`](https://github.com/jakubmazanec/tools/commit/991f69667baf08267da3d7dbb30b30790f80a3ce)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `happy-dom` updated to version
+  `^16.6.0`.
+
+- [#303](https://github.com/jakubmazanec/tools/pull/303)
+  [`1dd56fa`](https://github.com/jakubmazanec/tools/commit/1dd56fa553589346f05dcd971754156f1c4c11aa)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `prettier-plugin-tailwindcss` updated
+  to version `^0.6.10`.
+
+- [#298](https://github.com/jakubmazanec/tools/pull/298)
+  [`18a99cb`](https://github.com/jakubmazanec/tools/commit/18a99cb8a60fe32fb158b24c3645dc9b499c2e41)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `chromatic` updated to version
+  `^11.24.0`.
+
+- [#312](https://github.com/jakubmazanec/tools/pull/312)
+  [`462bd43`](https://github.com/jakubmazanec/tools/commit/462bd43fa54137e6f7b2f4e3a1e09cc6a8b1dc47)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@chromatic-com/storybook` updated to
+  version `^3.2.4`.
+
+- [#327](https://github.com/jakubmazanec/tools/pull/327)
+  [`a5e9065`](https://github.com/jakubmazanec/tools/commit/a5e9065af8873880856627bcde537509570e7cee)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `eslint` updated to version
+  `^9.19.0`.
+
+- [#321](https://github.com/jakubmazanec/tools/pull/321)
+  [`2290b77`](https://github.com/jakubmazanec/tools/commit/2290b7778472c34e8853cccc306aa4b798f59d79)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@types/lodash` updated to version
+  `^4.17.15`.
+
+- [#295](https://github.com/jakubmazanec/tools/pull/295)
+  [`c9c21ea`](https://github.com/jakubmazanec/tools/commit/c9c21ead455806a794027e7b53683d04e5eb76a1)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@types/node` updated to version
+  `^22.10.7`.
+
+- [#306](https://github.com/jakubmazanec/tools/pull/306)
+  [`2482e0e`](https://github.com/jakubmazanec/tools/commit/2482e0ea554d481bc6cbe396ce3d977f62706f00)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@testing-library/react` updated to
+  version `^16.2.0`.
+
+- [#304](https://github.com/jakubmazanec/tools/pull/304)
+  [`98788ad`](https://github.com/jakubmazanec/tools/commit/98788adb16c29a85ac45dab7498f274b8800f868)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@types/react` updated to version
+  `^19.0.7`. Dependency `eslint-plugin-react-compiler` updated to version
+  `^19.0.0-beta-e552027-20250112`.
+
+- [#324](https://github.com/jakubmazanec/tools/pull/324)
+  [`5af23b9`](https://github.com/jakubmazanec/tools/commit/5af23b9c2778eb456f5c5a253cfb52e26e1be03c)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `prettier-plugin-tailwindcss` updated
+  to version `^0.6.11`.
+
+- [#311](https://github.com/jakubmazanec/tools/pull/311)
+  [`7276f93`](https://github.com/jakubmazanec/tools/commit/7276f93f0e53a93e01802fdb3a2c4710b0c8b11f)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `prettier-plugin-packagejson` updated
+  to version `^2.5.8`.
+
+- [#305](https://github.com/jakubmazanec/tools/pull/305)
+  [`03cab6c`](https://github.com/jakubmazanec/tools/commit/03cab6c66ae1afaf0fa7d9e623515fe67d9d431f)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@storybook/addon-controls` updated
+  to version `^8.5.0`. Dependency `@storybook/addon-essentials` updated to version `^8.5.0`.
+  Dependency `@storybook/addon-interactions` updated to version `^8.5.0`. Dependency
+  `@storybook/addon-links` updated to version `^8.5.0`. Dependency `@storybook/blocks` updated to
+  version `^8.5.0`. Dependency `@storybook/preview-api` updated to version `^8.5.0`. Dependency
+  `@storybook/react` updated to version `^8.5.0`. Dependency `@storybook/react-vite` updated to
+  version `^8.5.0`. Dependency `@storybook/test` updated to version `^8.5.0`. Dependency `storybook`
+  updated to version `^8.5.0`.
+
+- [#326](https://github.com/jakubmazanec/tools/pull/326)
+  [`73ab9f0`](https://github.com/jakubmazanec/tools/commit/73ab9f07f1c29f7d3ac053c9c7a59fc85e22e0d1)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@storybook/addon-controls` updated
+  to version `^8.5.2`. Dependency `@storybook/addon-essentials` updated to version `^8.5.2`.
+  Dependency `@storybook/addon-interactions` updated to version `^8.5.2`. Dependency
+  `@storybook/addon-links` updated to version `^8.5.2`. Dependency `@storybook/blocks` updated to
+  version `^8.5.2`. Dependency `@storybook/preview-api` updated to version `^8.5.2`. Dependency
+  `@storybook/react` updated to version `^8.5.2`. Dependency `@storybook/react-vite` updated to
+  version `^8.5.2`. Dependency `@storybook/test` updated to version `^8.5.2`. Dependency `storybook`
+  updated to version `^8.5.2`.
+
 ## 0.2.0
 
 ### Minor Changes
