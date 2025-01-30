@@ -8,7 +8,7 @@
 > `"NO_NESTED_RENDER"`\>
 
 Defined in:
-[cli/source/program/ProgramError.ts:6](https://github.com/jakubmazanec/tools/blob/d8ee2855cc8c253cbcc5c4d49e7356ff8450cbde/packages/cli/source/program/ProgramError.ts#L6)
+[cli/source/program/ProgramError.ts:6](https://github.com/jakubmazanec/tools/blob/0373298af23ca7b778987184cd6fcccd21ae54be/packages/cli/source/program/ProgramError.ts#L6)
 
 A subclass of `Error` that indicates a program failure.
 

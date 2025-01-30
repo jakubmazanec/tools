@@ -8,7 +8,7 @@
 > `never`\> ? `BoxProps` & `object` : `BoxProps` & `object`
 
 Defined in:
-[cli/source/ui/form/FormProps.ts:34](https://github.com/jakubmazanec/tools/blob/d8ee2855cc8c253cbcc5c4d49e7356ff8450cbde/packages/cli/source/ui/form/FormProps.ts#L34)
+[cli/source/ui/form/FormProps.ts:34](https://github.com/jakubmazanec/tools/blob/0373298af23ca7b778987184cd6fcccd21ae54be/packages/cli/source/ui/form/FormProps.ts#L34)
 
 Form component props.
 

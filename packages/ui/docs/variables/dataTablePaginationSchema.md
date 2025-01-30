@@ -11,4 +11,4 @@
 > `number`; `pageCount`: `number`; `pageSize`: `10` \| `25` \| `50` \| `75` \| `100`; \}\>
 
 Defined in:
-[packages/ui/source/components/data-table/DataTablePagination.ts:5](https://github.com/jakubmazanec/tools/blob/d8ee2855cc8c253cbcc5c4d49e7356ff8450cbde/packages/ui/source/components/data-table/DataTablePagination.ts#L5)
+[packages/ui/source/components/data-table/DataTablePagination.ts:5](https://github.com/jakubmazanec/tools/blob/0373298af23ca7b778987184cd6fcccd21ae54be/packages/ui/source/components/data-table/DataTablePagination.ts#L5)
