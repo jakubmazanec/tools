@@ -1,15 +1,4 @@
-import {
-  closestCenter,
-  DndContext,
-  type DragEndEvent,
-  KeyboardSensor,
-  MouseSensor,
-  TouchSensor,
-  useSensor,
-  useSensors,
-} from '@dnd-kit/core';
-import {restrictToHorizontalAxis} from '@dnd-kit/modifiers';
-import {arrayMove, horizontalListSortingStrategy, SortableContext} from '@dnd-kit/sortable';
+import {horizontalListSortingStrategy, SortableContext} from '@dnd-kit/sortable';
 import {
   type ColumnDef,
   type ColumnFiltersState,
@@ -23,15 +12,21 @@ import {
   getFilteredRowModel,
   getPaginationRowModel,
   getSortedRowModel,
+  type Header,
   type PaginationState,
+  type Row,
   type RowData,
   type SortingState,
   type Updater,
   useReactTable,
   type VisibilityState,
 } from '@tanstack/react-table';
-import {useCallback, useId, useState} from 'react';
+import {useCallback, useState} from 'react';
 
+import {Button} from '../Button.js';
+import {Container} from '../Container.js';
+import {Dialog} from '../Dialog.js';
+import {DialogPanel} from '../DialogPanel.js';
 import {Table} from '../Table.js';
 import {TableBody} from '../TableBody.js';
 import {TableCell} from '../TableCell.js';
@@ -48,15 +43,16 @@ import {type DataTablePagination} from './DataTablePagination.js';
 import {type DataTableSearch} from './DataTableSearch.js';
 import {type DataTableSorting} from './DataTableSorting.js';
 import {
+  DataTableFilters as DataTableFiltersComponent,
   DataTableHeader,
+  DataTableMenu,
   DataTablePagination as DataTablePaginationComponent,
   DataTableSearch as DataTableSearchComponent,
   DEFAULT_PAGE_SIZE,
   fromPinningState,
   fuzzyFilter,
-  getCommonPinningClasses,
-  getCommonPinningStyles,
 } from './internals.js';
+import {DataTableRow} from './internals/DataTableRow.js';
 
 declare module '@tanstack/react-table' {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars -- false positive
@@ -100,6 +96,7 @@ export type DataTableProps<D, C> = {
   hideSearch?: boolean | undefined;
   search?: DataTableSearch | undefined;
   onSearchChange?: ((search: DataTableSearch) => void) | undefined;
+  showRowSummaryOnClick?: boolean | undefined;
 };
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed so the type parameters are useful
@@ -134,6 +131,7 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D, any>>>
   hideSearch = false,
   search: controlledSearch,
   onSearchChange,
+  showRowSummaryOnClick = false,
 }: DataTableProps<D, C>) {
   let [pagination, setPagination] = useState<PaginationState>(
     controlledPagination ?
@@ -199,7 +197,10 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D, any>>>
   );
   let [sorting, setSorting] = useState<SortingState>([]);
   let [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
+  let [showFilters, setShowFilters] = useState(false);
   let [search, setSearch] = useState('');
+  let [showRowSummary, setShowRowSummary] = useState(false);
+  let [rowSummaryRow, setRowSummaryRow] = useState<Row<D> | null>(null);
 
   let handleColumnVisibilityChange = useCallback(
     (columnVisibilityState: Updater<VisibilityState>) => {
@@ -268,36 +269,6 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D, any>>>
     globalFilterFn: fuzzyFilter,
   });
 
-  let handleDragEnd = useCallback(
-    ({active, over}: DragEndEvent) => {
-      if (over && active.id !== over.id) {
-        table.setColumnOrder((previousColumnOrder) => {
-          let oldIndex = previousColumnOrder.indexOf(active.id as string);
-          let newIndex = previousColumnOrder.indexOf(over.id as string);
-
-          return arrayMove(previousColumnOrder, oldIndex, newIndex);
-        });
-      }
-    },
-    [table],
-  );
-
-  let sensors = useSensors(
-    useSensor(MouseSensor, {
-      activationConstraint: {
-        distance: 5,
-      },
-    }),
-    useSensor(TouchSensor, {
-      activationConstraint: {
-        distance: 5,
-      },
-    }),
-    useSensor(KeyboardSensor, {}),
-  );
-
-  let id = useId();
-
   let page =
     clientPagination ?
       table.getState().pagination.pageIndex + 1
@@ -308,20 +279,52 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D, any>>>
     : (controlledPagination?.pageSize ?? DEFAULT_PAGE_SIZE);
   let pageCount = clientPagination ? table.getPageCount() : (controlledPagination?.pageCount ?? 1);
 
+  let toggleFilters = useCallback(() => {
+    setShowFilters((value) => !value);
+  }, []);
+
+  let handleRowClick = useCallback((row: Row<D>) => {
+    setRowSummaryRow(row);
+    setShowRowSummary(true);
+  }, []);
+
+  let handleCloseRowDialog = useCallback(() => {
+    setShowRowSummary(false);
+  }, []);
+
   return (
-    <DndContext
-      collisionDetection={closestCenter}
-      id={id}
-      modifiers={[restrictToHorizontalAxis]}
-      sensors={sensors}
-      onDragEnd={handleDragEnd}
+    <div
+      className="group/table grid w-full grid-cols-[100%] grid-rows-[min-content_min-content_1fr] gap-6 sm:gap-4 sm:data-[show-filters]:grid-cols-[1fr_2fr] md:data-[show-filters]:grid-cols-[1fr_3fr] lg:data-[show-filters]:grid-cols-[1fr_4fr]"
+      data-show-filters={showFilters || undefined}
     >
-      {hideSearch ? null : (
-        <DataTableSearchComponent
-          clientSearch={clientSearch}
-          search={controlledSearch}
+      <div className="flex flex-col gap-2">
+        {hideSearch ? null : (
+          <DataTableSearchComponent
+            clientSearch={clientSearch}
+            search={controlledSearch}
+            table={table}
+            onSearch={onSearchChange}
+          />
+        )}
+        {hideColumnOrder && hideColumnPinning && hideColumnVisibility && hideFilters ? null : (
+          <DataTableMenu
+            hideColumnOrder={hideColumnOrder}
+            hideColumnPinning={hideColumnPinning}
+            hideColumnVisibility={hideColumnVisibility}
+            hideFilters={hideFilters}
+            table={table}
+            toggleFilters={toggleFilters}
+          />
+        )}
+      </div>
+      {hideFilters ? null : (
+        <DataTableFiltersComponent
+          clientFaceting={clientFaceting}
+          clientFilters={clientFilters}
+          faceting={faceting}
+          filters={controlledFilters}
           table={table}
-          onSearch={onSearchChange}
+          onFiltering={onFiltersChange}
         />
       )}
       <div className="w-full overflow-x-scroll overflow-y-visible [scrollbar-width:thin]">
@@ -338,21 +341,12 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D, any>>>
                   {headerGroup.headers.map((header) => (
                     <DataTableHeader
                       key={header.id}
-                      clientFaceting={clientFaceting}
-                      clientFilters={clientFilters}
                       clientSorting={clientSorting}
-                      faceting={faceting}
-                      filters={controlledFilters}
                       header={header}
                       hideColumnOrder={hideColumnOrder}
-                      hideColumnPinning={hideColumnPinning}
                       hideColumnResizing={hideColumnResizing}
-                      hideColumnVisibility={hideColumnVisibility}
-                      hideFilters={hideFilters}
                       hideSorting={hideSorting}
                       sorting={controlledSorting}
-                      table={table}
-                      onFiltering={onFiltersChange}
                       onSorting={onSortingChange}
                     />
                   ))}
@@ -362,22 +356,11 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D, any>>>
           </TableHead>
           <TableBody>
             {table.getRowModel().rows.map((row) => (
-              <TableRow key={row.id}>
-                {row.getVisibleCells().map((cell) => {
-                  let value = cell.getValue();
-
-                  return (
-                    <TableCell
-                      key={cell.id}
-                      className={getCommonPinningClasses(cell.column)}
-                      style={{...getCommonPinningStyles(cell.column)}}
-                      title={value === null || value === undefined ? undefined : String(value)}
-                    >
-                      {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                    </TableCell>
-                  );
-                })}
-              </TableRow>
+              <DataTableRow
+                key={row.id}
+                row={row}
+                onClick={showRowSummaryOnClick ? handleRowClick : undefined}
+              />
             ))}
           </TableBody>
           <TableFoot>
@@ -405,6 +388,38 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D, any>>>
           onPagination={onPaginationChange}
         />
       )}
-    </DndContext>
+      {showRowSummaryOnClick ?
+        <Dialog open={showRowSummary} onClose={handleCloseRowDialog}>
+          <DialogPanel className="flex flex-col gap-4">
+            {rowSummaryRow ?
+              <Table className="w-full">
+                <TableBody>
+                  {rowSummaryRow.getVisibleCells().map((cell) => (
+                    <TableRow key={cell.id}>
+                      <TableHeader className="px-4">
+                        {flexRender(cell.column.columnDef.header, {
+                          table,
+                          column: cell.column,
+                          // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/consistent-type-assertions -- needed
+                          header: {column: cell.column} as Header<any, any>,
+                        })}
+                      </TableHeader>
+                      <TableCell className="overflow-visible whitespace-normal">
+                        {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                      </TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            : null}
+            <Container align="center" direction="column">
+              <Button className="self-center" onClick={handleCloseRowDialog}>
+                Close
+              </Button>
+            </Container>
+          </DialogPanel>
+        </Dialog>
+      : null}
+    </div>
   );
 }

@@ -117,9 +117,9 @@ export function Input<T extends ElementType = typeof INPUT_ELEMENT>({
         </span>
       : null}
       {showClearButton ?
-        <span {...clearButtonProps} onClick={handleClear}>
+        <button type="button" {...clearButtonProps} onClick={handleClear}>
           <Icon name="XMark" />
-        </span>
+        </button>
       : null}
     </span>
   );
@@ -127,11 +127,11 @@ export function Input<T extends ElementType = typeof INPUT_ELEMENT>({
 
 export const inputTheme: ComponentTheme<typeof useInputTheme> = {
   classNames: {
-    root: 'group flex w-full items-center rounded-2 border-2 border-neutral-100 hover:border-neutral-200 px-2.5 h-9 bg-white shadow-inner transition-colors',
+    root: 'group flex w-full items-center rounded-2 border-2 border-neutral-100 hover:border-neutral-200 px-2.5 h-9 bg-white shadow-inner transition-colors focus-within:outline-solid focus-within:outline-2 focus-within:outline-blue-400/50 focus-within:outline-offset-[calc(var(--spacing)*0.5)]',
     input:
-      'p-0 focus-visible:outline-none w-full group-data-[icon]:pl-6 group-data-[clear-button]:pr-4 bg-transparent font-sans text-sm',
+      'p-0 focus:outline-none w-full group-data-[icon]:pl-6 group-data-[clear-button]:pr-4 bg-transparent font-sans text-sm',
     icon: 'size-6 left-[0.3125rem] top-[0.3125rem] text-neutral-300',
-    clearButton: 'text-neutral-500 size-5 right-2 cursor-pointer',
+    clearButton: 'rounded-1 text-neutral-500 size-5 right-2 cursor-pointer',
   },
   variants: {
     disabled: {

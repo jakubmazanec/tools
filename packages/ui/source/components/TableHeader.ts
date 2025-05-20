@@ -43,5 +43,6 @@ export function TableHeader<T extends ElementType = typeof TABLE_HEADER_ELEMENT>
 }
 
 export const tableHeaderTheme: ComponentTheme<typeof useTableHeaderTheme> = {
-  className: 'relative p-1 text-sm font-medium z-20 font-sans tabular-nums whitespace-nowrap',
+  className:
+    'relative p-1 text-sm font-medium z-20 font-sans tabular-nums whitespace-nowrap empty:p-0',
 };

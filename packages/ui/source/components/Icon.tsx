@@ -82,7 +82,7 @@ export function Icon<T extends ElementType = typeof ICON_ELEMENT>({
 }
 
 export const iconTheme: ComponentTheme<typeof useIconTheme> = {
-  className: 'inline-block shrink-0 *:w-full *:h-full data-[icon]:-mx-1 select-none',
+  className: 'inline-block shrink-0 *:w-full *:h-full select-none',
   variants: {
     size: {
       small: 'size-4',

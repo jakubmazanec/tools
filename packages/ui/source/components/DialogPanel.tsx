@@ -47,5 +47,5 @@ export function DialogPanel<T extends ElementType = typeof DIALOG_PANEL_ELEMENT>
 
 export const dialogPanelTheme: ComponentTheme<typeof useDialogPanelTheme> = {
   className:
-    'shadow-1 relative flex w-full min-w-[300px] max-w-[900px] flex-col gap-y-6 rounded-4 bg-white p-6 max-h-[calc(100vh-3rem)] overflow-hidden overflow-y-auto',
+    'shadow-1 relative w-full min-w-[300px] max-w-full lg:max-w-[900px] gap-y-6 rounded-4 bg-white p-6 max-h-full overflow-auto',
 };

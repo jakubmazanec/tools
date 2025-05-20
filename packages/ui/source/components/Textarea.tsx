@@ -79,9 +79,9 @@ export function Textarea<T extends ElementType = typeof TEXTAREA_ELEMENT>({
 
 export const textareaTheme: ComponentTheme<typeof useTextareaTheme> = {
   classNames: {
-    root: 'group flex w-full items-center rounded border-2 border-neutral-100 hover:border-neutral-200 py-2 px-2.5 min-h-19 bg-white shadow-inner transition-colors',
+    root: 'group flex w-full items-center rounded border-2 border-neutral-100 hover:border-neutral-200 py-2 px-2.5 min-h-19 bg-white shadow-inner transition-colors focus-within:outline-solid focus-within:outline-2 focus-within:outline-blue-400/50 focus-within:outline-offset-[calc(var(--spacing)*0.5)]',
     textarea:
-      'min-h-15 p-0 focus-visible:outline-none w-full group-data-[icon]:pl-6 bg-transparent font-sans text-sm',
+      'min-h-15 p-0 focus:outline-none w-full group-data-[icon]:pl-6 bg-transparent font-sans text-sm',
     icon: 'size-6 left-[0.3125rem] top-[0.3125rem] text-neutral-300',
   },
   variants: {

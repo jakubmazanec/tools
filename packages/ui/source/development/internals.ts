@@ -6,6 +6,7 @@ export * from './internals/createHueScale.js';
 export * from './internals/createPalette.js';
 export * from './internals/createSaturationScale.js';
 export * from './internals/createSwatches.js';
+export * from './internals/createTailwindThemeColors.js';
 export * from './internals/hexToHsl.js';
 export * from './internals/hexToRgb.js';
 export * from './internals/hslToHex.js';

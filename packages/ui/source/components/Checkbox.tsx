@@ -106,13 +106,13 @@ export function Checkbox<T extends ElementType = typeof CHECKBOX_ELEMENT>({
 export const checkboxTheme: ComponentTheme<typeof useCheckboxTheme> = {
   classNames: {
     root: 'group/checkbox inline-block size-5 cursor-pointer',
-    icon: 'flex justify-content justify-item size-5 *:rounded-2 *:bg-white *:border-2 *:border-neutral-100 *:hover:border-neutral-200 *:shadow-inner *:transition-colors *:text-transparent *:hover:text-neutral-100 group-data-[checked]/checkbox:*:bg-neutral-950 group-data-[checked]/checkbox:*:border-neutral-950 group-data-[checked]/checkbox:*:text-white',
+    icon: 'flex justify-content justify-item size-5 *:rounded-2 *:bg-white *:border-2 *:border-neutral-100 *:hover:border-neutral-200 *:shadow-inner *:transition-colors *:text-transparent *:hover:text-neutral-100 group-data-[checked]/checkbox:*:bg-neutral-950 group-data-[checked]/checkbox:*:border-neutral-950 group-data-[checked]/checkbox:*:text-white hover:group-data-[checked]/checkbox:*:border-neutral-950 hover:group-data-[checked]/checkbox:*:text-white',
   },
   variants: {
     disabled: {
       true: {
         root: 'cursor-not-allowed',
-        icon: '*:hover:text-transparent *:border-neutral-50 *:hover:border-neutral-50 group-data-[checked]/checkbox:*:bg-neutral-100 group-data-[checked]/checkbox:*:border-neutral-100 group-data-[checked]/checkbox:*:text-white',
+        icon: '*:hover:text-transparent *:border-neutral-50 *:hover:border-neutral-50 group-data-[checked]/checkbox:*:bg-neutral-100 group-data-[checked]/checkbox:*:border-neutral-100 group-data-[checked]/checkbox:*:text-white hover:group-data-[checked]/checkbox:*:border-neutral-100 hover:group-data-[checked]/checkbox:*:text-white',
       },
       false: {
         root: '',

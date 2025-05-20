@@ -15,6 +15,7 @@ import {type useErrorTheme} from '../components/Error.js';
 import {type useFieldTheme} from '../components/Field.js';
 import {type useFieldsetTheme} from '../components/Fieldset.js';
 import {type useFormTheme} from '../components/Form.js';
+import {type useHeadingTheme} from '../components/Heading.js';
 import {type useIconTheme} from '../components/Icon.js';
 import {type useInputTheme} from '../components/Input.js';
 import {type useLabelTheme} from '../components/Label.js';
@@ -65,6 +66,7 @@ export type Theme = Simplify<
     ComponentTheme<typeof useFieldsetTheme, {outputComponentName: true}> &
     ComponentTheme<typeof useFieldTheme, {outputComponentName: true}> &
     ComponentTheme<typeof useFormTheme, {outputComponentName: true}> &
+    ComponentTheme<typeof useHeadingTheme, {outputComponentName: true}> &
     ComponentTheme<typeof useIconTheme, {outputComponentName: true}> &
     ComponentTheme<typeof useInputTheme, {outputComponentName: true}> &
     ComponentTheme<typeof useLabelTheme, {outputComponentName: true}> &

@@ -42,5 +42,5 @@ export const DialogTitle = <T extends ElementType = typeof DIALOG_TITLE_ELEMENT>
 };
 
 export const dialogTitleTheme: ComponentTheme<typeof useDialogTitleTheme> = {
-  className: 'text-xl font-bold',
+  className: 'text-lg font-medium',
 };
