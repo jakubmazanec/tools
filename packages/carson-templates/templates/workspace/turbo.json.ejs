@@ -57,7 +57,7 @@ if (workspace.projects.some((project) => project.config.deployment?.appName)) {
 }
 
 if (workspace.projects.some((project) => project.config.deployment?.dbInstance)) {
-  turboConfig.globalEnv.push('EDGEDB_INSTANCE', 'EDGEDB_BRANCH', 'EDGEDB_SECRET_KEY');
+  turboConfig.globalEnv.push('GEL_INSTANCE', 'GEL_BRANCH', 'GEL_SECRET_KEY');
 }
 
 if (workspace.projects.find((project) => project.name === LINTER_CONFIG_PACKAGE_NAME)) {
