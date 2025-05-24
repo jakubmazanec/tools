@@ -174,7 +174,7 @@ export const DEPENDENCY_VERSIONS: Record<string, string> = {
   storybook: '^8.0.0',
   tailwindcss: '^3.0.0',
   turbo: '^2.0.0',
-  typedoc: '^0.27.0',
+  typedoc: '^0.28.0',
   'typedoc-plugin-markdown': '^4.0.0',
   typescript: '^5.0.0',
   vite: '^6.0.0',
