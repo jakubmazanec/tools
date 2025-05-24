@@ -59,7 +59,7 @@
     "@types/fs-extra": "^11.0.4",
     "@types/lodash": "^4.17.15",
     "@types/micromatch": "^4.0.9",
-    "@types/node": "^22.10.7",
+    "@types/node": "^22.15.21",
     "@types/react": "^19.0.8",
     "@types/semver": "^7.5.8",
     "@types/zen-observable": "^0.8.7",
@@ -82,6 +82,6 @@
   },
   "packageManager": "npm@10.9.0",
   "engines": {
-    "node": "^22.13.0"
+    "node": "^22.16.0"
   }
 }
