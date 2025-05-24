@@ -4,23 +4,31 @@
 
 # Type Alias: SelectInputItem
 
-> **SelectInputItem**: `object`
+> **SelectInputItem** = `object`
 
 Defined in:
-[cli/source/ui/form/SelectInputItem.ts:4](https://github.com/jakubmazanec/tools/blob/dcfb3b06be051bf99e23e7e35174b07af0f0fddd/packages/cli/source/ui/form/SelectInputItem.ts#L4)
+[cli/source/ui/form/SelectInputItem.ts:4](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/cli/source/ui/form/SelectInputItem.ts#L4)
 
 Select input item.
 
-## Type declaration
+## Properties
 
 ### label
 
 > **label**: `string`
 
+Defined in:
+[cli/source/ui/form/SelectInputItem.ts:6](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/cli/source/ui/form/SelectInputItem.ts#L6)
+
 Text to display as a label.
+
+---
 
 ### value
 
 > **value**: `string`
+
+Defined in:
+[cli/source/ui/form/SelectInputItem.ts:9](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/cli/source/ui/form/SelectInputItem.ts#L9)
 
 Value.

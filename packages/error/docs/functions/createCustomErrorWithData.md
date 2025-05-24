@@ -7,12 +7,12 @@
 ## Call Signature
 
 > **createCustomErrorWithData**\<`ErrorCode`, `ErrorData`\>(`errorName`, `errorMessages`,
-> `errorData`): (`code`, `options`?) =>
-> [`CustomErrorWithData`](../type-aliases/CustomErrorWithData.md)\<`ErrorCode` \| _typeof_
-> [`UNKNOWN_ERROR`](../variables/UNKNOWN_ERROR.md), `z.infer`\<`ErrorData`\>\>
+> `errorData`): (`code`, `options?`) =>
+> [`CustomErrorWithData`](../type-aliases/CustomErrorWithData.md)\<`"UNKNOWN_ERROR"` \| `ErrorCode`,
+> `TypeOf`\<`ErrorData`\>\>
 
 Defined in:
-[createCustomErrorWithData.ts:21](https://github.com/jakubmazanec/tools/blob/dcfb3b06be051bf99e23e7e35174b07af0f0fddd/packages/error/source/createCustomErrorWithData.ts#L21)
+[createCustomErrorWithData.ts:21](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/error/source/createCustomErrorWithData.ts#L21)
 
 Function for creating custom error classes. Such custom error class properly subclasses built-in
 `Error`, simplifies generating error messages via predefined error codes and allows attaching custom
@@ -20,9 +20,13 @@ data to the error instance.
 
 ### Type Parameters
 
-• **ErrorCode** _extends_ `string`
+#### ErrorCode
 
-• **ErrorData** _extends_ `AnyZodObject`
+`ErrorCode` _extends_ `string`
+
+#### ErrorData
+
+`ErrorData` _extends_ `AnyZodObject`
 
 ### Parameters
 
@@ -47,9 +51,11 @@ schema.
 
 ### Returns
 
-`Function`
-
 Class that implements [CustomErrorWithData](../type-aliases/CustomErrorWithData.md).
+
+> **new createCustomErrorWithData**(`code`, `options?`):
+> [`CustomErrorWithData`](../type-aliases/CustomErrorWithData.md)\<`"UNKNOWN_ERROR"` \| `ErrorCode`,
+> `TypeOf`\<`ErrorData`\>\>
 
 #### Parameters
 
@@ -59,22 +65,22 @@ Class that implements [CustomErrorWithData](../type-aliases/CustomErrorWithData.
 
 ##### options?
 
-[`CustomErrorWithDataOptions`](../type-aliases/CustomErrorWithDataOptions.md)\<`z.infer`\<`ErrorData`\>\>
+[`CustomErrorWithDataOptions`](../type-aliases/CustomErrorWithDataOptions.md)\<`TypeOf`\<`ErrorData`\>\>
 
 #### Returns
 
-[`CustomErrorWithData`](../type-aliases/CustomErrorWithData.md)\<`ErrorCode` \| _typeof_
-[`UNKNOWN_ERROR`](../variables/UNKNOWN_ERROR.md), `z.infer`\<`ErrorData`\>\>
+[`CustomErrorWithData`](../type-aliases/CustomErrorWithData.md)\<`"UNKNOWN_ERROR"` \| `ErrorCode`,
+`TypeOf`\<`ErrorData`\>\>
 
 ## Call Signature
 
 > **createCustomErrorWithData**\<`ErrorCode`, `ErrorData`\>(`errorName`, `errorMessages`,
-> `errorData`): (`code`, `options`?) =>
-> [`CustomErrorWithData`](../type-aliases/CustomErrorWithData.md)\<`ErrorCode` \| _typeof_
-> [`UNKNOWN_ERROR`](../variables/UNKNOWN_ERROR.md), `InstanceType`\<`ErrorData`\>\>
+> `errorData`): (`code`, `options?`) =>
+> [`CustomErrorWithData`](../type-aliases/CustomErrorWithData.md)\<`"UNKNOWN_ERROR"` \| `ErrorCode`,
+> `InstanceType`\<`ErrorData`\>\>
 
 Defined in:
-[createCustomErrorWithData.ts:29](https://github.com/jakubmazanec/tools/blob/dcfb3b06be051bf99e23e7e35174b07af0f0fddd/packages/error/source/createCustomErrorWithData.ts#L29)
+[createCustomErrorWithData.ts:29](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/error/source/createCustomErrorWithData.ts#L29)
 
 Function for creating custom error classes. Such custom error class properly subclasses built-in
 `Error`, simplifies generating error messages via predefined error codes and allows attaching custom
@@ -82,9 +88,13 @@ data to the error instance.
 
 ### Type Parameters
 
-• **ErrorCode** _extends_ `string`
+#### ErrorCode
 
-• **ErrorData** _extends_ (...`args`) => `any`
+`ErrorCode` _extends_ `string`
+
+#### ErrorData
+
+`ErrorData` _extends_ (...`args`) => `any`
 
 ### Parameters
 
@@ -109,9 +119,11 @@ schema.
 
 ### Returns
 
-`Function`
-
 Class that implements [CustomErrorWithData](../type-aliases/CustomErrorWithData.md).
+
+> **new createCustomErrorWithData**(`code`, `options?`):
+> [`CustomErrorWithData`](../type-aliases/CustomErrorWithData.md)\<`"UNKNOWN_ERROR"` \| `ErrorCode`,
+> `InstanceType`\<`ErrorData`\>\>
 
 #### Parameters
 
@@ -125,5 +137,5 @@ Class that implements [CustomErrorWithData](../type-aliases/CustomErrorWithData.
 
 #### Returns
 
-[`CustomErrorWithData`](../type-aliases/CustomErrorWithData.md)\<`ErrorCode` \| _typeof_
-[`UNKNOWN_ERROR`](../variables/UNKNOWN_ERROR.md), `InstanceType`\<`ErrorData`\>\>
+[`CustomErrorWithData`](../type-aliases/CustomErrorWithData.md)\<`"UNKNOWN_ERROR"` \| `ErrorCode`,
+`InstanceType`\<`ErrorData`\>\>

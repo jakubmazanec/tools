@@ -6,8 +6,8 @@
 
 ## Namespaces
 
-- [colors](namespaces/colors/README.md)
-- [icons](namespaces/icons/README.md)
+- [colors](@jakubmazanec/namespaces/colors/README.md)
+- [icons](@jakubmazanec/namespaces/icons/README.md)
 
 ## Classes
 

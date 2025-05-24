@@ -4,12 +4,12 @@
 
 # Type Alias: FieldsetProps\<T\>
 
-> **FieldsetProps**\<`T`\>: `ComponentProps`\<_typeof_
-> [`useFieldsetTheme`](../functions/useFieldsetTheme.md)\> & `ComponentPropsWithoutRef`\<`T`\> &
+> **FieldsetProps**\<`T`\> = `ComponentProps`\<_typeof_
+> [`useFieldsetTheme`](../variables/useFieldsetTheme.md)\> & `ComponentPropsWithoutRef`\<`T`\> &
 > `ComponentRef`\<`T`\> & `PropsWithChildren` & `object`
 
 Defined in:
-[packages/ui/source/components/Fieldset.tsx:23](https://github.com/jakubmazanec/tools/blob/dcfb3b06be051bf99e23e7e35174b07af0f0fddd/packages/ui/source/components/Fieldset.tsx#L23)
+[packages/ui/source/components/Fieldset.tsx:23](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/ui/source/components/Fieldset.tsx#L23)
 
 ## Type declaration
 
@@ -23,4 +23,6 @@ Defined in:
 
 ## Type Parameters
 
-• **T** _extends_ `ElementType`
+### T
+
+`T` _extends_ `ElementType`

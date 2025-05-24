@@ -4,8 +4,8 @@
 
 # Type Alias: DataTableColumnOrder
 
-> **DataTableColumnOrder**: `z.infer`\<_typeof_
+> **DataTableColumnOrder** = `z.infer`\<_typeof_
 > [`dataTableColumnOrderSchema`](../variables/dataTableColumnOrderSchema.md)\>
 
 Defined in:
-[packages/ui/source/components/data-table/DataTableColumnOrder.ts:5](https://github.com/jakubmazanec/tools/blob/dcfb3b06be051bf99e23e7e35174b07af0f0fddd/packages/ui/source/components/data-table/DataTableColumnOrder.ts#L5)
+[packages/ui/source/components/data-table/DataTableColumnOrder.ts:5](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/ui/source/components/data-table/DataTableColumnOrder.ts#L5)

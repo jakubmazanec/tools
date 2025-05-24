@@ -4,18 +4,17 @@
 
 # Type Alias: DeepPartial\<T\>
 
-> **DeepPartial**\<`T`\>: `T` _extends_ `Date` \| [`Primitive`](Primitive.md) \| `RegExp` ? `T` :
+> **DeepPartial**\<`T`\> = `T` _extends_ `Date` \| [`Primitive`](Primitive.md) \| `RegExp` ? `T` :
 > `T` _extends_ `Map`\<infer KeyType, infer ValueType\> ? `DeepPartialMap`\<`KeyType`, `ValueType`\>
 > : `T` _extends_ `Set`\<infer ItemType\> ? `DeepPartialSet`\<`ItemType`\> : `T` _extends_
 > `ReadonlyMap`\<infer KeyType, infer ValueType\> ? `DeepPartialReadonlyMap`\<`KeyType`,
 > `ValueType`\> : `T` _extends_ `ReadonlySet`\<infer ItemType\> ?
 > `DeepPartialReadonlySet`\<`ItemType`\> : `T` _extends_ (...`args`) => `unknown` ? `T` \|
 > `undefined` : `T` _extends_ `object` ? `T` _extends_ infer I[] ? `I`[] _extends_ `T` ?
-> [`DeepPartial`](DeepPartial.md)\<...\>[] : `DeepPartialObject`\<`T`\> : `DeepPartialObject`\<`T`\>
-> : `unknown`
+> `DeepPartial`\<...\>[] : `DeepPartialObject`\<`T`\> : `DeepPartialObject`\<`T`\> : `unknown`
 
 Defined in:
-[packages/ts-utils/source/types/DeepPartial.ts:36](https://github.com/jakubmazanec/tools/blob/dcfb3b06be051bf99e23e7e35174b07af0f0fddd/packages/ts-utils/source/types/DeepPartial.ts#L36)
+[packages/ts-utils/source/types/DeepPartial.ts:36](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/ts-utils/source/types/DeepPartial.ts#L36)
 
 Same as built-in `Partial`, but works recursively. Useful when 1) you have a config object to which
 you need to merge another object, which would be a deep partial of a default object, or 2) you need
@@ -49,6 +48,8 @@ settings = updateSettings({ minimap: { enabled: true } });
 
 ## Type Parameters
 
-• **T**
+### T
+
+`T`
 
 Base for the new type

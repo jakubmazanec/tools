@@ -4,10 +4,10 @@
 
 # Type Alias: Form\<C\>
 
-> **Form**\<`C`\>: `FC`\<[`FormProps`](FormProps.md)\<`C`\>\> & `object`
+> **Form**\<`C`\> = `FC`\<[`FormProps`](FormProps.md)\<`C`\>\> & `object`
 
 Defined in:
-[cli/source/ui/form/Form.ts:9](https://github.com/jakubmazanec/tools/blob/dcfb3b06be051bf99e23e7e35174b07af0f0fddd/packages/cli/source/ui/form/Form.ts#L9)
+[cli/source/ui/form/Form.ts:9](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/cli/source/ui/form/Form.ts#L9)
 
 Form component.
 
@@ -19,4 +19,6 @@ Form component.
 
 ## Type Parameters
 
-• **C** _extends_ [`FormConfig`](FormConfig.md)
+### C
+
+`C` _extends_ [`FormConfig`](FormConfig.md)

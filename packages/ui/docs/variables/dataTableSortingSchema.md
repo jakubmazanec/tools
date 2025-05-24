@@ -5,9 +5,9 @@
 # Variable: dataTableSortingSchema
 
 > `const` **dataTableSortingSchema**: `ZodUnion`\<\[`ZodNull`, `ZodObject`\<\{ `column`:
-> `ZodString`; `direction`: `ZodEnum`\<\[`"ascending"`, `"descending"`\]\>; \}, `"strip"`, \{
-> `column`: `string`; `direction`: `"ascending"` \| `"descending"`; \}, \{ `column`: `string`;
-> `direction`: `"ascending"` \| `"descending"`; \}\>\]\>
+> `ZodString`; `direction`: `ZodEnum`\<\[`"ascending"`, `"descending"`\]\>; \}, `"strip"`,
+> `ZodTypeAny`, \{ `column`: `string`; `direction`: `"ascending"` \| `"descending"`; \}, \{
+> `column`: `string`; `direction`: `"ascending"` \| `"descending"`; \}\>\]\>
 
 Defined in:
-[packages/ui/source/components/data-table/DataTableSorting.ts:3](https://github.com/jakubmazanec/tools/blob/dcfb3b06be051bf99e23e7e35174b07af0f0fddd/packages/ui/source/components/data-table/DataTableSorting.ts#L3)
+[packages/ui/source/components/data-table/DataTableSorting.ts:3](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/ui/source/components/data-table/DataTableSorting.ts#L3)

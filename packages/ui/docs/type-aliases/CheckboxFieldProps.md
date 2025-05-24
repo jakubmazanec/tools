@@ -4,10 +4,10 @@
 
 # Type Alias: CheckboxFieldProps
 
-> **CheckboxFieldProps**: `PropsWithChildren`\<`ComponentProps`\<_typeof_
-> [`useCheckboxFieldTheme`](../functions/useCheckboxFieldTheme.md)\> & \{ `className`: `string`;
-> `field`: `FieldMetadata`\<`any`, `any`\>; `name`: `undefined`; \} \| \{ `className`: `string`;
-> `field`: `undefined`; `name`: `FieldName`\<`any`, `any`\> \| `string`; \}\>
+> **CheckboxFieldProps** = `PropsWithChildren`\<`ComponentProps`\<_typeof_
+> [`useCheckboxFieldTheme`](../variables/useCheckboxFieldTheme.md)\> & \{ `className?`: `string`;
+> `field?`: `FieldMetadata`\<`any`, `any`\>; `name?`: `undefined`; \} \| \{ `className?`: `string`;
+> `field?`: `undefined`; `name?`: `FieldName`\<`any`, `any`\> \| `string`; \}\>
 
 Defined in:
-[packages/ui/source/components/CheckboxField.tsx:14](https://github.com/jakubmazanec/tools/blob/dcfb3b06be051bf99e23e7e35174b07af0f0fddd/packages/ui/source/components/CheckboxField.tsx#L14)
+[packages/ui/source/components/CheckboxField.tsx:14](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/ui/source/components/CheckboxField.tsx#L14)

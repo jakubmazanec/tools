@@ -4,79 +4,79 @@
 
 # Type Alias: Theme
 
-> **Theme**: `Simplify`\<`ComponentTheme`\<_typeof_
-> [`useButtonTheme`](../functions/useButtonTheme.md), \{ `outputComponentName`: `true`; \}\> &
-> `ComponentTheme`\<_typeof_ [`useCardTheme`](../functions/useCardTheme.md), \{
+> **Theme** = `Simplify`\<`ComponentTheme`\<_typeof_
+> [`useButtonTheme`](../variables/useButtonTheme.md), \{ `outputComponentName`: `true`; \}\> &
+> `ComponentTheme`\<_typeof_ [`useCardTheme`](../variables/useCardTheme.md), \{
 > `outputComponentName`: `true`; \}\> & `ComponentTheme`\<_typeof_
-> [`useCheckboxFieldTheme`](../functions/useCheckboxFieldTheme.md), \{ `outputComponentName`:
-> `true`; \}\> & `ComponentTheme`\<_typeof_ [`useCheckboxTheme`](../functions/useCheckboxTheme.md),
+> [`useCheckboxFieldTheme`](../variables/useCheckboxFieldTheme.md), \{ `outputComponentName`:
+> `true`; \}\> & `ComponentTheme`\<_typeof_ [`useCheckboxTheme`](../variables/useCheckboxTheme.md),
 > \{ `outputComponentName`: `true`; \}\> & `ComponentTheme`\<_typeof_
-> [`useComboboxOptionTheme`](../functions/useComboboxOptionTheme.md), \{ `outputComponentName`:
-> `true`; \}\> & `ComponentTheme`\<_typeof_ [`useComboboxTheme`](../functions/useComboboxTheme.md),
+> [`useComboboxOptionTheme`](../variables/useComboboxOptionTheme.md), \{ `outputComponentName`:
+> `true`; \}\> & `ComponentTheme`\<_typeof_ [`useComboboxTheme`](../variables/useComboboxTheme.md),
 > \{ `outputComponentName`: `true`; \}\> & `ComponentTheme`\<_typeof_
-> [`useContainerTheme`](../functions/useContainerTheme.md), \{ `outputComponentName`: `true`; \}\> &
-> `ComponentTheme`\<_typeof_ [`useDescriptionTheme`](../functions/useDescriptionTheme.md), \{
+> [`useContainerTheme`](../variables/useContainerTheme.md), \{ `outputComponentName`: `true`; \}\> &
+> `ComponentTheme`\<_typeof_ [`useDescriptionTheme`](../variables/useDescriptionTheme.md), \{
 > `outputComponentName`: `true`; \}\> & `ComponentTheme`\<_typeof_
-> [`useDialogPanelTheme`](../functions/useDialogPanelTheme.md), \{ `outputComponentName`: `true`;
-> \}\> & `ComponentTheme`\<_typeof_ [`useDialogTheme`](../functions/useDialogTheme.md), \{
+> [`useDialogPanelTheme`](../variables/useDialogPanelTheme.md), \{ `outputComponentName`: `true`;
+> \}\> & `ComponentTheme`\<_typeof_ [`useDialogTheme`](../variables/useDialogTheme.md), \{
 > `outputComponentName`: `true`; \}\> & `ComponentTheme`\<_typeof_
-> [`useDialogTitleTheme`](../functions/useDialogTitleTheme.md), \{ `outputComponentName`: `true`;
-> \}\> & `ComponentTheme`\<_typeof_ [`useErrorTheme`](../functions/useErrorTheme.md), \{
+> [`useDialogTitleTheme`](../variables/useDialogTitleTheme.md), \{ `outputComponentName`: `true`;
+> \}\> & `ComponentTheme`\<_typeof_ [`useErrorTheme`](../variables/useErrorTheme.md), \{
 > `outputComponentName`: `true`; \}\> & `ComponentTheme`\<_typeof_
-> [`useFieldsetTheme`](../functions/useFieldsetTheme.md), \{ `outputComponentName`: `true`; \}\> &
-> `ComponentTheme`\<_typeof_ [`useFieldTheme`](../functions/useFieldTheme.md), \{
+> [`useFieldsetTheme`](../variables/useFieldsetTheme.md), \{ `outputComponentName`: `true`; \}\> &
+> `ComponentTheme`\<_typeof_ [`useFieldTheme`](../variables/useFieldTheme.md), \{
 > `outputComponentName`: `true`; \}\> & `ComponentTheme`\<_typeof_
-> [`useFormTheme`](../functions/useFormTheme.md), \{ `outputComponentName`: `true`; \}\> &
-> `ComponentTheme`\<_typeof_ [`useIconTheme`](../functions/useIconTheme.md), \{
+> [`useFormTheme`](../variables/useFormTheme.md), \{ `outputComponentName`: `true`; \}\> &
+> `ComponentTheme`\<_typeof_ [`useIconTheme`](../variables/useIconTheme.md), \{
 > `outputComponentName`: `true`; \}\> & `ComponentTheme`\<_typeof_
-> [`useInputTheme`](../functions/useInputTheme.md), \{ `outputComponentName`: `true`; \}\> &
-> `ComponentTheme`\<_typeof_ [`useLabelTheme`](../functions/useLabelTheme.md), \{
+> [`useInputTheme`](../variables/useInputTheme.md), \{ `outputComponentName`: `true`; \}\> &
+> `ComponentTheme`\<_typeof_ [`useLabelTheme`](../variables/useLabelTheme.md), \{
 > `outputComponentName`: `true`; \}\> & `ComponentTheme`\<_typeof_
-> [`useLegendTheme`](../functions/useLegendTheme.md), \{ `outputComponentName`: `true`; \}\> &
-> `ComponentTheme`\<_typeof_ [`useListboxOptionTheme`](../functions/useListboxOptionTheme.md), \{
+> [`useLegendTheme`](../variables/useLegendTheme.md), \{ `outputComponentName`: `true`; \}\> &
+> `ComponentTheme`\<_typeof_ [`useListboxOptionTheme`](../variables/useListboxOptionTheme.md), \{
 > `outputComponentName`: `true`; \}\> & `ComponentTheme`\<_typeof_
-> [`useListboxTheme`](../functions/useListboxTheme.md), \{ `outputComponentName`: `true`; \}\> &
-> `ComponentTheme`\<_typeof_ [`useMenuButtonTheme`](../functions/useMenuButtonTheme.md), \{
+> [`useListboxTheme`](../variables/useListboxTheme.md), \{ `outputComponentName`: `true`; \}\> &
+> `ComponentTheme`\<_typeof_ [`useMenuButtonTheme`](../variables/useMenuButtonTheme.md), \{
 > `outputComponentName`: `true`; \}\> & `ComponentTheme`\<_typeof_
-> [`useMenuHeadingTheme`](../functions/useMenuHeadingTheme.md), \{ `outputComponentName`: `true`;
-> \}\> & `ComponentTheme`\<_typeof_ [`useMenuItemsTheme`](../functions/useMenuItemsTheme.md), \{
+> [`useMenuHeadingTheme`](../variables/useMenuHeadingTheme.md), \{ `outputComponentName`: `true`;
+> \}\> & `ComponentTheme`\<_typeof_ [`useMenuItemsTheme`](../variables/useMenuItemsTheme.md), \{
 > `outputComponentName`: `true`; \}\> & `ComponentTheme`\<_typeof_
-> [`useMenuItemTheme`](../functions/useMenuItemTheme.md), \{ `outputComponentName`: `true`; \}\> &
-> `ComponentTheme`\<_typeof_ [`useMenuSectionTheme`](../functions/useMenuSectionTheme.md), \{
+> [`useMenuItemTheme`](../variables/useMenuItemTheme.md), \{ `outputComponentName`: `true`; \}\> &
+> `ComponentTheme`\<_typeof_ [`useMenuSectionTheme`](../variables/useMenuSectionTheme.md), \{
 > `outputComponentName`: `true`; \}\> & `ComponentTheme`\<_typeof_
-> [`useMenuSeparatorTheme`](../functions/useMenuSeparatorTheme.md), \{ `outputComponentName`:
-> `true`; \}\> & `ComponentTheme`\<_typeof_ [`useMenuTheme`](../functions/useMenuTheme.md), \{
+> [`useMenuSeparatorTheme`](../variables/useMenuSeparatorTheme.md), \{ `outputComponentName`:
+> `true`; \}\> & `ComponentTheme`\<_typeof_ [`useMenuTheme`](../variables/useMenuTheme.md), \{
 > `outputComponentName`: `true`; \}\> & `ComponentTheme`\<_typeof_
-> [`usePopoverBackdropTheme`](../functions/usePopoverBackdropTheme.md), \{ `outputComponentName`:
+> [`usePopoverBackdropTheme`](../variables/usePopoverBackdropTheme.md), \{ `outputComponentName`:
 > `true`; \}\> & `ComponentTheme`\<_typeof_
-> [`usePopoverButtonTheme`](../functions/usePopoverButtonTheme.md), \{ `outputComponentName`:
+> [`usePopoverButtonTheme`](../variables/usePopoverButtonTheme.md), \{ `outputComponentName`:
 > `true`; \}\> & `ComponentTheme`\<_typeof_
-> [`usePopoverGroupTheme`](../functions/usePopoverGroupTheme.md), \{ `outputComponentName`: `true`;
-> \}\> & `ComponentTheme`\<_typeof_ [`usePopoverPanelTheme`](../functions/usePopoverPanelTheme.md),
+> [`usePopoverGroupTheme`](../variables/usePopoverGroupTheme.md), \{ `outputComponentName`: `true`;
+> \}\> & `ComponentTheme`\<_typeof_ [`usePopoverPanelTheme`](../variables/usePopoverPanelTheme.md),
 > \{ `outputComponentName`: `true`; \}\> & `ComponentTheme`\<_typeof_
-> [`usePopoverTheme`](../functions/usePopoverTheme.md), \{ `outputComponentName`: `true`; \}\> &
-> `ComponentTheme`\<_typeof_ [`useRadioFieldTheme`](../functions/useRadioFieldTheme.md), \{
+> [`usePopoverTheme`](../variables/usePopoverTheme.md), \{ `outputComponentName`: `true`; \}\> &
+> `ComponentTheme`\<_typeof_ [`useRadioFieldTheme`](../variables/useRadioFieldTheme.md), \{
 > `outputComponentName`: `true`; \}\> & `ComponentTheme`\<_typeof_
-> [`useRadioGroupTheme`](../functions/useRadioGroupTheme.md), \{ `outputComponentName`: `true`; \}\>
-> & `ComponentTheme`\<_typeof_ [`useRadioTheme`](../functions/useRadioTheme.md), \{
+> [`useRadioGroupTheme`](../variables/useRadioGroupTheme.md), \{ `outputComponentName`: `true`; \}\>
+> & `ComponentTheme`\<_typeof_ [`useRadioTheme`](../variables/useRadioTheme.md), \{
 > `outputComponentName`: `true`; \}\> & `ComponentTheme`\<_typeof_
-> [`useSpinnerTheme`](../functions/useSpinnerTheme.md), \{ `outputComponentName`: `true`; \}\> &
-> `ComponentTheme`\<_typeof_ [`useTableBodyTheme`](../functions/useTableBodyTheme.md), \{
+> [`useSpinnerTheme`](../variables/useSpinnerTheme.md), \{ `outputComponentName`: `true`; \}\> &
+> `ComponentTheme`\<_typeof_ [`useTableBodyTheme`](../variables/useTableBodyTheme.md), \{
 > `outputComponentName`: `true`; \}\> & `ComponentTheme`\<_typeof_
-> [`useTableCaptionTheme`](../functions/useTableCaptionTheme.md), \{ `outputComponentName`: `true`;
-> \}\> & `ComponentTheme`\<_typeof_ [`useTableCellTheme`](../functions/useTableCellTheme.md), \{
+> [`useTableCaptionTheme`](../variables/useTableCaptionTheme.md), \{ `outputComponentName`: `true`;
+> \}\> & `ComponentTheme`\<_typeof_ [`useTableCellTheme`](../variables/useTableCellTheme.md), \{
 > `outputComponentName`: `true`; \}\> & `ComponentTheme`\<_typeof_
-> [`useTableFootTheme`](../functions/useTableFootTheme.md), \{ `outputComponentName`: `true`; \}\> &
-> `ComponentTheme`\<_typeof_ [`useTableHeaderTheme`](../functions/useTableHeaderTheme.md), \{
+> [`useTableFootTheme`](../variables/useTableFootTheme.md), \{ `outputComponentName`: `true`; \}\> &
+> `ComponentTheme`\<_typeof_ [`useTableHeaderTheme`](../variables/useTableHeaderTheme.md), \{
 > `outputComponentName`: `true`; \}\> & `ComponentTheme`\<_typeof_
-> [`useTableHeadTheme`](../functions/useTableHeadTheme.md), \{ `outputComponentName`: `true`; \}\> &
-> `ComponentTheme`\<_typeof_ [`useTableRowTheme`](../functions/useTableRowTheme.md), \{
+> [`useTableHeadTheme`](../variables/useTableHeadTheme.md), \{ `outputComponentName`: `true`; \}\> &
+> `ComponentTheme`\<_typeof_ [`useTableRowTheme`](../variables/useTableRowTheme.md), \{
 > `outputComponentName`: `true`; \}\> & `ComponentTheme`\<_typeof_
-> [`useTableTheme`](../functions/useTableTheme.md), \{ `outputComponentName`: `true`; \}\> &
-> `ComponentTheme`\<_typeof_ [`useTextareaTheme`](../functions/useTextareaTheme.md), \{
+> [`useTableTheme`](../variables/useTableTheme.md), \{ `outputComponentName`: `true`; \}\> &
+> `ComponentTheme`\<_typeof_ [`useTextareaTheme`](../variables/useTextareaTheme.md), \{
 > `outputComponentName`: `true`; \}\> & `ComponentTheme`\<_typeof_
-> [`useTextTheme`](../functions/useTextTheme.md), \{ `outputComponentName`: `true`; \}\> &
+> [`useTextTheme`](../variables/useTextTheme.md), \{ `outputComponentName`: `true`; \}\> &
 > `object`\>
 
 Defined in:
-[packages/ui/source/theme/Theme.ts:52](https://github.com/jakubmazanec/tools/blob/dcfb3b06be051bf99e23e7e35174b07af0f0fddd/packages/ui/source/theme/Theme.ts#L52)
+[packages/ui/source/theme/Theme.ts:52](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/ui/source/theme/Theme.ts#L52)

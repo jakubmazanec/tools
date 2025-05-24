@@ -4,10 +4,10 @@
 
 # Type Alias: LiteralUnion\<L, T\>
 
-> **LiteralUnion**\<`L`, `T`\>: `L` \| `Record`\<`never`, `never`\> & `T`
+> **LiteralUnion**\<`L`, `T`\> = `L` \| `Record`\<`never`, `never`\> & `T`
 
 Defined in:
-[packages/ts-utils/source/types/LiteralUnion.ts:22](https://github.com/jakubmazanec/tools/blob/dcfb3b06be051bf99e23e7e35174b07af0f0fddd/packages/ts-utils/source/types/LiteralUnion.ts#L22)
+[packages/ts-utils/source/types/LiteralUnion.ts:22](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/ts-utils/source/types/LiteralUnion.ts#L22)
 
 Creates union type by combining primitve types and literal types while allowing auto-completion in
 IDEs. This type is a workaround for
@@ -27,10 +27,14 @@ const: animal: Animal = ''; // Auto-completion works: 'cat' and 'dog' is suggest
 
 ## Type Parameters
 
-• **L**
+### L
+
+`L`
 
 Union of literal types
 
-• **T** _extends_ [`Primitive`](Primitive.md)
+### T
+
+`T` _extends_ [`Primitive`](Primitive.md)
 
 Primitive type

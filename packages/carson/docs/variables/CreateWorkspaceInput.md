@@ -1,0 +1,11 @@
+[**@jakubmazanec/carson**](../README.md)
+
+---
+
+# Variable: CreateWorkspaceInput
+
+> `const` **CreateWorkspaceInput**: `Form`\<\{ `rows`: \{ `templateId`: \{ `label`: `string`;
+> `type`: `"text"`; `validate`: (`value`) => `void`; \}; \}; \}\>
+
+Defined in:
+[packages/carson/source/commands/create-workspace/CreateWorkspaceInput.ts:5](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/carson/source/commands/create-workspace/CreateWorkspaceInput.ts#L5)

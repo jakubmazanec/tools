@@ -4,11 +4,11 @@
 
 # Type Alias: IconProps\<T\>
 
-> **IconProps**\<`T`\>: `ComponentProps`\<_typeof_ [`useIconTheme`](../functions/useIconTheme.md)\>
+> **IconProps**\<`T`\> = `ComponentProps`\<_typeof_ [`useIconTheme`](../variables/useIconTheme.md)\>
 > & `ComponentPropsWithoutRef`\<`T`\> & `ComponentRef`\<`T`\> & `PropsWithChildren` & `object`
 
 Defined in:
-[packages/ui/source/components/Icon.tsx:28](https://github.com/jakubmazanec/tools/blob/dcfb3b06be051bf99e23e7e35174b07af0f0fddd/packages/ui/source/components/Icon.tsx#L28)
+[packages/ui/source/components/Icon.tsx:28](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/ui/source/components/Icon.tsx#L28)
 
 ## Type declaration
 
@@ -26,4 +26,6 @@ Defined in:
 
 ## Type Parameters
 
-• **T** _extends_ `ElementType`
+### T
+
+`T` _extends_ `ElementType`

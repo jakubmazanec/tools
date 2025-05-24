@@ -4,8 +4,7 @@
 
 # Variable: legendTheme
 
-> `const` **legendTheme**: `ComponentTheme`\<_typeof_
-> [`useLegendTheme`](../functions/useLegendTheme.md)\>
+> `const` **legendTheme**: `ComponentTheme`\<_typeof_ [`useLegendTheme`](useLegendTheme.md)\>
 
 Defined in:
-[packages/ui/source/components/Legend.tsx:44](https://github.com/jakubmazanec/tools/blob/dcfb3b06be051bf99e23e7e35174b07af0f0fddd/packages/ui/source/components/Legend.tsx#L44)
+[packages/ui/source/components/Legend.tsx:44](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/ui/source/components/Legend.tsx#L44)

@@ -4,11 +4,11 @@
 
 # Variable: ParsingError()
 
-> `const` **ParsingError**: (`code`, `options`?) => `CustomError`\<`"INVALID_PARAMETER"` \|
+> `const` **ParsingError**: (`code`, `options?`) => `CustomError`\<`"INVALID_PARAMETER"` \|
 > `"UNKNOWN_PARAMETER"` \| `"INVALID_OPTION"` \| `"UNKNOWN_OPTION"` \| `"UNKNOWN_ERROR"`\>
 
 Defined in:
-[args/source/ParsingError.ts:6](https://github.com/jakubmazanec/tools/blob/dcfb3b06be051bf99e23e7e35174b07af0f0fddd/packages/args/source/ParsingError.ts#L6)
+[args/source/ParsingError.ts:6](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/args/source/ParsingError.ts#L6)
 
 A subclass of `Error` that indicates a parsing failure.
 

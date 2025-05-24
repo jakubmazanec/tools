@@ -4,19 +4,27 @@
 
 # Type Alias: SaveWorkspaceConfigOptions
 
-> **SaveWorkspaceConfigOptions**: `object`
+> **SaveWorkspaceConfigOptions** = `object`
 
 Defined in:
-[packages/carson/source/workspace/saveWorkspaceConfig.ts:11](https://github.com/jakubmazanec/tools/blob/dcfb3b06be051bf99e23e7e35174b07af0f0fddd/packages/carson/source/workspace/saveWorkspaceConfig.ts#L11)
+[packages/carson/source/workspace/saveWorkspaceConfig.ts:11](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/carson/source/workspace/saveWorkspaceConfig.ts#L11)
 
 [saveWorkspaceConfig](../functions/saveWorkspaceConfig.md) options parameter.
 
-## Type declaration
+## Properties
 
 ### workspaceConfig
 
 > **workspaceConfig**: [`WorkspaceConfig`](WorkspaceConfig.md)
 
+Defined in:
+[packages/carson/source/workspace/saveWorkspaceConfig.ts:13](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/carson/source/workspace/saveWorkspaceConfig.ts#L13)
+
+---
+
 ### workspacePath
 
 > **workspacePath**: `string`
+
+Defined in:
+[packages/carson/source/workspace/saveWorkspaceConfig.ts:12](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/carson/source/workspace/saveWorkspaceConfig.ts#L12)

@@ -4,19 +4,27 @@
 
 # Type Alias: WorkspaceRepository
 
-> **WorkspaceRepository**: `object`
+> **WorkspaceRepository** = `object`
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceRepository.ts:4](https://github.com/jakubmazanec/tools/blob/dcfb3b06be051bf99e23e7e35174b07af0f0fddd/packages/carson/source/workspace/WorkspaceRepository.ts#L4)
+[packages/carson/source/workspace/WorkspaceRepository.ts:4](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/carson/source/workspace/WorkspaceRepository.ts#L4)
 
 A workspace repository.
 
-## Type declaration
+## Properties
 
 ### branches
 
 > **branches**: `string`[]
 
+Defined in:
+[packages/carson/source/workspace/WorkspaceRepository.ts:5](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/carson/source/workspace/WorkspaceRepository.ts#L5)
+
+---
+
 ### url?
 
 > `optional` **url**: `string`
+
+Defined in:
+[packages/carson/source/workspace/WorkspaceRepository.ts:6](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/carson/source/workspace/WorkspaceRepository.ts#L6)

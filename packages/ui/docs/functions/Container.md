@@ -4,14 +4,17 @@
 
 # Function: Container()
 
-> **Container**\<`T`\>(`__namedParameters`): `ReactElement`\<`any`\>
+> **Container**\<`T`\>(`__namedParameters`): `ReactElement`\<`any`, `string` \|
+> `JSXElementConstructor`\<`any`\>\>
 
 Defined in:
-[packages/ui/source/components/Container.ts:34](https://github.com/jakubmazanec/tools/blob/dcfb3b06be051bf99e23e7e35174b07af0f0fddd/packages/ui/source/components/Container.ts#L34)
+[packages/ui/source/components/Container.ts:34](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/ui/source/components/Container.ts#L34)
 
 ## Type Parameters
 
-• **T** _extends_ `ElementType` = `"div"`
+### T
+
+`T` _extends_ `ElementType` = `"div"`
 
 ## Parameters
 
@@ -21,4 +24,4 @@ Defined in:
 
 ## Returns
 
-`ReactElement`\<`any`\>
+`ReactElement`\<`any`, `string` \| `JSXElementConstructor`\<`any`\>\>

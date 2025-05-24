@@ -4,19 +4,20 @@
 
 # Function: createCustomError()
 
-> **createCustomError**\<`ErrorCode`\>(`errorName`, `errorMessages`): (`code`, `options`?) =>
-> [`CustomError`](../type-aliases/CustomError.md)\<`ErrorCode` \| _typeof_
-> [`UNKNOWN_ERROR`](../variables/UNKNOWN_ERROR.md)\>
+> **createCustomError**\<`ErrorCode`\>(`errorName`, `errorMessages`): (`code`, `options?`) =>
+> [`CustomError`](../type-aliases/CustomError.md)\<`"UNKNOWN_ERROR"` \| `ErrorCode`\>
 
 Defined in:
-[createCustomError.ts:13](https://github.com/jakubmazanec/tools/blob/dcfb3b06be051bf99e23e7e35174b07af0f0fddd/packages/error/source/createCustomError.ts#L13)
+[createCustomError.ts:13](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/error/source/createCustomError.ts#L13)
 
 Function for creating custom error classes. Such custom error class properly subclasses built-in
 `Error` and simplifies generating error messages via predefined error codes.
 
 ## Type Parameters
 
-• **ErrorCode** _extends_ `string`
+### ErrorCode
+
+`ErrorCode` _extends_ `string`
 
 ## Parameters
 
@@ -34,9 +35,10 @@ Object containing all possible error messages.
 
 ## Returns
 
-`Function`
-
 Class that implements [CustomError](../type-aliases/CustomError.md).
+
+> **new createCustomError**(`code`, `options?`):
+> [`CustomError`](../type-aliases/CustomError.md)\<`"UNKNOWN_ERROR"` \| `ErrorCode`\>
 
 ### Parameters
 
@@ -50,5 +52,4 @@ Class that implements [CustomError](../type-aliases/CustomError.md).
 
 ### Returns
 
-[`CustomError`](../type-aliases/CustomError.md)\<`ErrorCode` \| _typeof_
-[`UNKNOWN_ERROR`](../variables/UNKNOWN_ERROR.md)\>
+[`CustomError`](../type-aliases/CustomError.md)\<`"UNKNOWN_ERROR"` \| `ErrorCode`\>

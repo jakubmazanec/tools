@@ -4,8 +4,7 @@
 
 # Variable: buttonTheme
 
-> `const` **buttonTheme**: `ComponentTheme`\<_typeof_
-> [`useButtonTheme`](../functions/useButtonTheme.md)\>
+> `const` **buttonTheme**: `ComponentTheme`\<_typeof_ [`useButtonTheme`](useButtonTheme.md)\>
 
 Defined in:
-[packages/ui/source/components/Button.tsx:97](https://github.com/jakubmazanec/tools/blob/dcfb3b06be051bf99e23e7e35174b07af0f0fddd/packages/ui/source/components/Button.tsx#L97)
+[packages/ui/source/components/Button.tsx:97](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/ui/source/components/Button.tsx#L97)

@@ -7,13 +7,17 @@
 > **DataTable**\<`D`, `C`\>(`__namedParameters`): `Element`
 
 Defined in:
-[packages/ui/source/components/data-table/DataTable.tsx:106](https://github.com/jakubmazanec/tools/blob/dcfb3b06be051bf99e23e7e35174b07af0f0fddd/packages/ui/source/components/data-table/DataTable.tsx#L106)
+[packages/ui/source/components/data-table/DataTable.tsx:106](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/ui/source/components/data-table/DataTable.tsx#L106)
 
 ## Type Parameters
 
-• **D** _extends_ `unknown`
+### D
 
-• **C** _extends_ `ColumnDef`\<`D`, `any`\>[]
+`D` _extends_ `unknown`
+
+### C
+
+`C` _extends_ `ColumnDef`\<`D`, `any`\>[]
 
 ## Parameters
 

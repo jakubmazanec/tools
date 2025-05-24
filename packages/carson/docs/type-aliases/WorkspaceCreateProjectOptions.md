@@ -4,27 +4,45 @@
 
 # Type Alias: WorkspaceCreateProjectOptions
 
-> **WorkspaceCreateProjectOptions**: `object`
+> **WorkspaceCreateProjectOptions** = `object`
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceCreateProjectOptions.ts:4](https://github.com/jakubmazanec/tools/blob/dcfb3b06be051bf99e23e7e35174b07af0f0fddd/packages/carson/source/workspace/WorkspaceCreateProjectOptions.ts#L4)
+[packages/carson/source/workspace/WorkspaceCreateProjectOptions.ts:4](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/carson/source/workspace/WorkspaceCreateProjectOptions.ts#L4)
 
 [Workspace.createProject](../classes/Workspace.md#createproject) options parameter.
 
-## Type declaration
+## Properties
 
 ### args
 
 > **args**: `Record`\<`string`, `unknown`\>
 
+Defined in:
+[packages/carson/source/workspace/WorkspaceCreateProjectOptions.ts:8](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/carson/source/workspace/WorkspaceCreateProjectOptions.ts#L8)
+
+---
+
 ### projectName
 
 > **projectName**: `string`
+
+Defined in:
+[packages/carson/source/workspace/WorkspaceCreateProjectOptions.ts:7](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/carson/source/workspace/WorkspaceCreateProjectOptions.ts#L7)
+
+---
 
 ### projectPath
 
 > **projectPath**: `string`
 
+Defined in:
+[packages/carson/source/workspace/WorkspaceCreateProjectOptions.ts:6](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/carson/source/workspace/WorkspaceCreateProjectOptions.ts#L6)
+
+---
+
 ### templateId
 
 > **templateId**: `string`
+
+Defined in:
+[packages/carson/source/workspace/WorkspaceCreateProjectOptions.ts:5](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/carson/source/workspace/WorkspaceCreateProjectOptions.ts#L5)

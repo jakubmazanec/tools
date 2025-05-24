@@ -4,20 +4,25 @@
 
 # Type Alias: CarsonTemplate
 
-> **CarsonTemplate**: `object`
+> **CarsonTemplate** = `object`
 
 Defined in:
-[packages/carson/source/template/CarsonTemplate.ts:10](https://github.com/jakubmazanec/tools/blob/dcfb3b06be051bf99e23e7e35174b07af0f0fddd/packages/carson/source/template/CarsonTemplate.ts#L10)
+[packages/carson/source/template/CarsonTemplate.ts:10](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/carson/source/template/CarsonTemplate.ts#L10)
 
 Carson template.
 
-## Type declaration
+## Properties
 
 ### config
 
 > **config**: [`CarsonTemplateConfig`](CarsonTemplateConfig.md)
 
+Defined in:
+[packages/carson/source/template/CarsonTemplate.ts:18](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/carson/source/template/CarsonTemplate.ts#L18)
+
 Carson template config.
+
+---
 
 ### files
 
@@ -25,16 +30,29 @@ Carson template config.
 > [`templateAttributesSchema`](../variables/templateAttributesSchema.md), _typeof_
 > [`templateDataSchema`](../variables/templateDataSchema.md)\>[]
 
+Defined in:
+[packages/carson/source/template/CarsonTemplate.ts:21](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/carson/source/template/CarsonTemplate.ts#L21)
+
 Carson template files, actually instances of Template.
+
+---
 
 ### id
 
 > **id**: `string`
 
+Defined in:
+[packages/carson/source/template/CarsonTemplate.ts:12](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/carson/source/template/CarsonTemplate.ts#L12)
+
 Carson template ID.
+
+---
 
 ### name
 
 > **name**: `string`
+
+Defined in:
+[packages/carson/source/template/CarsonTemplate.ts:15](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/carson/source/template/CarsonTemplate.ts#L15)
 
 Carson template name.

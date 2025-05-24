@@ -4,13 +4,13 @@
 
 # Type Alias: DeepReadonly\<T\>
 
-> **DeepReadonly**\<`T`\>: `T` _extends_ [`Primitive`](Primitive.md) \| (...`args`) => `unknown` ?
+> **DeepReadonly**\<`T`\> = `T` _extends_ [`Primitive`](Primitive.md) \| (...`args`) => `unknown` ?
 > `T` : `T` _extends_ `ReadonlyMap`\<infer K, infer V\> ? `DeepReadonlyMap`\<`K`, `V`\> : `T`
 > _extends_ `ReadonlySet`\<infer I\> ? `DeepReadonlySet`\<`I`\> : `T` _extends_ `object` ?
 > `DeepReadonlyObject`\<`T`\> : `unknown`
 
 Defined in:
-[packages/ts-utils/source/types/DeepReadonly.ts:22](https://github.com/jakubmazanec/tools/blob/dcfb3b06be051bf99e23e7e35174b07af0f0fddd/packages/ts-utils/source/types/DeepReadonly.ts#L22)
+[packages/ts-utils/source/types/DeepReadonly.ts:22](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/ts-utils/source/types/DeepReadonly.ts#L22)
 
 Same as built-in `Readonly`, but works recursively:
 
@@ -28,6 +28,8 @@ data.foo.push('bar'); // error TS2339: Property 'push' does not exist on type 'r
 
 ## Type Parameters
 
-• **T**
+### T
+
+`T`
 
 Base for the new type

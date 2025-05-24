@@ -4,24 +4,34 @@
 
 # Type Alias: CommandAction()\<A, B, C, D, E\>
 
-> **CommandAction**\<`A`, `B`, `C`, `D`, `E`\>: (`parsedArgs`, `program`) => `Promise`\<`void`\>
+> **CommandAction**\<`A`, `B`, `C`, `D`, `E`\> = (`parsedArgs`, `program`) => `Promise`\<`void`\>
 
 Defined in:
-[cli/source/program/CommandAction.ts:8](https://github.com/jakubmazanec/tools/blob/dcfb3b06be051bf99e23e7e35174b07af0f0fddd/packages/cli/source/program/CommandAction.ts#L8)
+[cli/source/program/CommandAction.ts:8](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/cli/source/program/CommandAction.ts#L8)
 
 Command action.
 
 ## Type Parameters
 
-• **A** _extends_ `string`
+### A
 
-• **B** _extends_ `ParametersConfig` \| `undefined` = `undefined`
+`A` _extends_ `string`
 
-• **C** _extends_ `OptionsConfig` \| `undefined` = `undefined`
+### B
 
-• **D** _extends_ `boolean` = `false`
+`B` _extends_ `ParametersConfig` \| `undefined` = `undefined`
 
-• **E** _extends_ `boolean` = `false`
+### C
+
+`C` _extends_ `OptionsConfig` \| `undefined` = `undefined`
+
+### D
+
+`D` _extends_ `boolean` = `false`
+
+### E
+
+`E` _extends_ `boolean` = `false`
 
 ## Parameters
 

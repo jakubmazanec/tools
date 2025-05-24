@@ -7,4 +7,4 @@
 > `const` **CARSON_PACKAGE_NAME**: `"@jakubmazanec/carson"` = `'@jakubmazanec/carson'`
 
 Defined in:
-[packages/carson-templates/source/constants.ts:13](https://github.com/jakubmazanec/tools/blob/dcfb3b06be051bf99e23e7e35174b07af0f0fddd/packages/carson-templates/source/constants.ts#L13)
+[packages/carson-templates/source/constants.ts:13](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/carson-templates/source/constants.ts#L13)

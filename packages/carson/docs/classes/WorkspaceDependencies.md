@@ -5,7 +5,7 @@
 # Class: WorkspaceDependencies\<M\>
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceDependencies.ts:13](https://github.com/jakubmazanec/tools/blob/dcfb3b06be051bf99e23e7e35174b07af0f0fddd/packages/carson/source/workspace/WorkspaceDependencies.ts#L13)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:13](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/carson/source/workspace/WorkspaceDependencies.ts#L13)
 
 A collection of WorkspaceDependency \| workspace dependencies that are installed in
 [a workspace](Workspace.md).
@@ -16,7 +16,9 @@ A collection of WorkspaceDependency \| workspace dependencies that are installed
 
 ## Type Parameters
 
-• **M** _extends_ `boolean` = `true`
+### M
+
+`M` _extends_ `boolean` = `true`
 
 ## Indexable
 
@@ -24,13 +26,12 @@ A collection of WorkspaceDependency \| workspace dependencies that are installed
 
 ## Constructors
 
-### new WorkspaceDependencies()
+### Constructor
 
-> **new WorkspaceDependencies**\<`M`\>(...`args`):
-> [`WorkspaceDependencies`](WorkspaceDependencies.md)\<`M`\>
+> **new WorkspaceDependencies**\<`M`\>(...`args`): `WorkspaceDependencies`\<`M`\>
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceDependencies.ts:17](https://github.com/jakubmazanec/tools/blob/dcfb3b06be051bf99e23e7e35174b07af0f0fddd/packages/carson/source/workspace/WorkspaceDependencies.ts#L17)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:17](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/carson/source/workspace/WorkspaceDependencies.ts#L17)
 
 #### Parameters
 
@@ -40,7 +41,7 @@ Defined in:
 
 #### Returns
 
-[`WorkspaceDependencies`](WorkspaceDependencies.md)\<`M`\>
+`WorkspaceDependencies`\<`M`\>
 
 #### Overrides
 
@@ -61,12 +62,92 @@ statement.
 
 \[`key`: `number`\]: `undefined` \| `boolean`
 
+#### \[iterator\]?
+
+> `optional` **\[iterator\]**: `boolean`
+
 #### \[unscopables\]?
 
 > `readonly` `optional` **\[unscopables\]**: `boolean`
 
 Is an object whose properties have the value 'true' when they will be absent when used in a 'with'
 statement.
+
+#### at?
+
+> `optional` **at**: `boolean`
+
+#### concat?
+
+> `optional` **concat**: `boolean`
+
+#### copyWithin?
+
+> `optional` **copyWithin**: `boolean`
+
+#### entries?
+
+> `optional` **entries**: `boolean`
+
+#### every?
+
+> `optional` **every**: `boolean`
+
+#### fill?
+
+> `optional` **fill**: `boolean`
+
+#### filter?
+
+> `optional` **filter**: `boolean`
+
+#### find?
+
+> `optional` **find**: `boolean`
+
+#### findIndex?
+
+> `optional` **findIndex**: `boolean`
+
+#### findLast?
+
+> `optional` **findLast**: `boolean`
+
+#### findLastIndex?
+
+> `optional` **findLastIndex**: `boolean`
+
+#### flat?
+
+> `optional` **flat**: `boolean`
+
+#### flatMap?
+
+> `optional` **flatMap**: `boolean`
+
+#### forEach?
+
+> `optional` **forEach**: `boolean`
+
+#### includes?
+
+> `optional` **includes**: `boolean`
+
+#### indexOf?
+
+> `optional` **indexOf**: `boolean`
+
+#### join?
+
+> `optional` **join**: `boolean`
+
+#### keys?
+
+> `optional` **keys**: `boolean`
+
+#### lastIndexOf?
+
+> `optional` **lastIndexOf**: `boolean`
 
 #### length?
 
@@ -75,161 +156,81 @@ statement.
 Gets or sets the length of the array. This is a number one higher than the highest index in the
 array.
 
-#### \[iterator\]?
-
-> `optional` **\[iterator\]**
-
-#### at?
-
-> `optional` **at**
-
-#### concat?
-
-> `optional` **concat**
-
-#### copyWithin?
-
-> `optional` **copyWithin**
-
-#### entries?
-
-> `optional` **entries**
-
-#### every?
-
-> `optional` **every**
-
-#### fill?
-
-> `optional` **fill**
-
-#### filter?
-
-> `optional` **filter**
-
-#### find?
-
-> `optional` **find**
-
-#### findIndex?
-
-> `optional` **findIndex**
-
-#### findLast?
-
-> `optional` **findLast**
-
-#### findLastIndex?
-
-> `optional` **findLastIndex**
-
-#### flat?
-
-> `optional` **flat**
-
-#### flatMap?
-
-> `optional` **flatMap**
-
-#### forEach?
-
-> `optional` **forEach**
-
-#### includes?
-
-> `optional` **includes**
-
-#### indexOf?
-
-> `optional` **indexOf**
-
-#### join?
-
-> `optional` **join**
-
-#### keys?
-
-> `optional` **keys**
-
-#### lastIndexOf?
-
-> `optional` **lastIndexOf**
-
 #### map?
 
-> `optional` **map**
+> `optional` **map**: `boolean`
 
 #### pop?
 
-> `optional` **pop**
+> `optional` **pop**: `boolean`
 
 #### push?
 
-> `optional` **push**
+> `optional` **push**: `boolean`
 
 #### reduce?
 
-> `optional` **reduce**
+> `optional` **reduce**: `boolean`
 
 #### reduceRight?
 
-> `optional` **reduceRight**
+> `optional` **reduceRight**: `boolean`
 
 #### reverse?
 
-> `optional` **reverse**
+> `optional` **reverse**: `boolean`
 
 #### shift?
 
-> `optional` **shift**
+> `optional` **shift**: `boolean`
 
 #### slice?
 
-> `optional` **slice**
+> `optional` **slice**: `boolean`
 
 #### some?
 
-> `optional` **some**
+> `optional` **some**: `boolean`
 
 #### sort?
 
-> `optional` **sort**
+> `optional` **sort**: `boolean`
 
 #### splice?
 
-> `optional` **splice**
+> `optional` **splice**: `boolean`
 
 #### toLocaleString?
 
-> `optional` **toLocaleString**
+> `optional` **toLocaleString**: `boolean`
 
 #### toReversed?
 
-> `optional` **toReversed**
+> `optional` **toReversed**: `boolean`
 
 #### toSorted?
 
-> `optional` **toSorted**
+> `optional` **toSorted**: `boolean`
 
 #### toSpliced?
 
-> `optional` **toSpliced**
+> `optional` **toSpliced**: `boolean`
 
 #### toString?
 
-> `optional` **toString**
+> `optional` **toString**: `boolean`
 
 #### unshift?
 
-> `optional` **unshift**
+> `optional` **unshift**: `boolean`
 
 #### values?
 
-> `optional` **values**
+> `optional` **values**: `boolean`
 
 #### with?
 
-> `optional` **with**
+> `optional` **with**: `boolean`
 
 #### Inherited from
 
@@ -257,7 +258,7 @@ array.
 > **workspace**: [`Workspace`](Workspace.md)\<`M`\>
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceDependencies.ts:15](https://github.com/jakubmazanec/tools/blob/dcfb3b06be051bf99e23e7e35174b07af0f0fddd/packages/carson/source/workspace/WorkspaceDependencies.ts#L15)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:15](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/carson/source/workspace/WorkspaceDependencies.ts#L15)
 
 The workspace the dependencies are installed in.
 
@@ -373,7 +374,7 @@ Additional arrays and/or items to add to the end of the array.
 
 ### copyWithin()
 
-> **copyWithin**(`target`, `start`, `end`?): `this`
+> **copyWithin**(`target`, `start`, `end?`): `this`
 
 Defined in: node_modules/typescript/lib/lib.es2015.core.d.ts:62
 
@@ -433,7 +434,7 @@ Returns an iterable of key, value pairs for every entry in the array
 
 #### Call Signature
 
-> **every**\<`S`\>(`predicate`, `thisArg`?): `this is S[]`
+> **every**\<`S`\>(`predicate`, `thisArg?`): `this is S[]`
 
 Defined in: node_modules/typescript/lib/lib.es5.d.ts:1433
 
@@ -441,7 +442,9 @@ Determines whether all the members of an array satisfy the specified test.
 
 ##### Type Parameters
 
-• **S** _extends_ `WorkspaceDependency`
+###### S
+
+`S` _extends_ `WorkspaceDependency`
 
 ##### Parameters
 
@@ -470,7 +473,7 @@ undefined is used as the this value.
 
 #### Call Signature
 
-> **every**(`predicate`, `thisArg`?): `boolean`
+> **every**(`predicate`, `thisArg?`): `boolean`
 
 Defined in: node_modules/typescript/lib/lib.es5.d.ts:1442
 
@@ -505,7 +508,7 @@ undefined is used as the this value.
 
 ### fill()
 
-> **fill**(`value`, `start`?, `end`?): `this`
+> **fill**(`value`, `start?`, `end?`): `this`
 
 Defined in: node_modules/typescript/lib/lib.es2015.core.d.ts:51
 
@@ -547,7 +550,7 @@ index to stop filling the array at. If end is negative, it is treated as length+
 
 #### Call Signature
 
-> **filter**\<`S`\>(`predicate`, `thisArg`?): `S`[]
+> **filter**\<`S`\>(`predicate`, `thisArg?`): `S`[]
 
 Defined in: node_modules/typescript/lib/lib.es5.d.ts:1469
 
@@ -555,7 +558,9 @@ Returns the elements of an array that meet the condition specified in a callback
 
 ##### Type Parameters
 
-• **S** _extends_ `WorkspaceDependency`
+###### S
+
+`S` _extends_ `WorkspaceDependency`
 
 ##### Parameters
 
@@ -583,7 +588,7 @@ undefined is used as the this value.
 
 #### Call Signature
 
-> **filter**(`predicate`, `thisArg`?): `WorkspaceDependency`[]
+> **filter**(`predicate`, `thisArg?`): `WorkspaceDependency`[]
 
 Defined in: node_modules/typescript/lib/lib.es5.d.ts:1475
 
@@ -619,7 +624,7 @@ undefined is used as the this value.
 
 #### Call Signature
 
-> **find**\<`S`\>(`predicate`, `thisArg`?): `undefined` \| `S`
+> **find**\<`S`\>(`predicate`, `thisArg?`): `undefined` \| `S`
 
 Defined in: node_modules/typescript/lib/lib.es2015.core.d.ts:29
 
@@ -628,7 +633,9 @@ otherwise.
 
 ##### Type Parameters
 
-• **S** _extends_ `WorkspaceDependency`
+###### S
+
+`S` _extends_ `WorkspaceDependency`
 
 ##### Parameters
 
@@ -657,7 +664,7 @@ provided, undefined is used instead.
 
 #### Call Signature
 
-> **find**(`predicate`, `thisArg`?): `undefined` \| `WorkspaceDependency`
+> **find**(`predicate`, `thisArg?`): `undefined` \| `WorkspaceDependency`
 
 Defined in: node_modules/typescript/lib/lib.es2015.core.d.ts:30
 
@@ -683,7 +690,7 @@ Defined in: node_modules/typescript/lib/lib.es2015.core.d.ts:30
 
 ### findIndex()
 
-> **findIndex**(`predicate`, `thisArg`?): `number`
+> **findIndex**(`predicate`, `thisArg?`): `number`
 
 Defined in: node_modules/typescript/lib/lib.es2015.core.d.ts:41
 
@@ -720,7 +727,7 @@ provided, undefined is used instead.
 
 #### Call Signature
 
-> **findLast**\<`S`\>(`predicate`, `thisArg`?): `undefined` \| `S`
+> **findLast**\<`S`\>(`predicate`, `thisArg?`): `undefined` \| `S`
 
 Defined in: node_modules/typescript/lib/lib.es2023.array.d.ts:29
 
@@ -728,7 +735,9 @@ Returns the value of the last element in the array where predicate is true, and 
 
 ##### Type Parameters
 
-• **S** _extends_ `WorkspaceDependency`
+###### S
+
+`S` _extends_ `WorkspaceDependency`
 
 ##### Parameters
 
@@ -757,7 +766,7 @@ provided, undefined is used instead.
 
 #### Call Signature
 
-> **findLast**(`predicate`, `thisArg`?): `undefined` \| `WorkspaceDependency`
+> **findLast**(`predicate`, `thisArg?`): `undefined` \| `WorkspaceDependency`
 
 Defined in: node_modules/typescript/lib/lib.es2023.array.d.ts:30
 
@@ -783,7 +792,7 @@ Defined in: node_modules/typescript/lib/lib.es2023.array.d.ts:30
 
 ### findLastIndex()
 
-> **findLastIndex**(`predicate`, `thisArg`?): `number`
+> **findLastIndex**(`predicate`, `thisArg?`): `number`
 
 Defined in: node_modules/typescript/lib/lib.es2023.array.d.ts:41
 
@@ -818,7 +827,7 @@ provided, undefined is used instead.
 
 ### flat()
 
-> **flat**\<`A`, `D`\>(`this`, `depth`?): `FlatArray`\<`A`, `D`\>[]
+> **flat**\<`A`, `D`\>(`this`, `depth?`): `FlatArray`\<`A`, `D`\>[]
 
 Defined in: node_modules/typescript/lib/lib.es2019.array.d.ts:75
 
@@ -827,9 +836,13 @@ depth.
 
 #### Type Parameters
 
-• **A**
+##### A
 
-• **D** _extends_ `number` = `1`
+`A`
+
+##### D
+
+`D` _extends_ `number` = `1`
 
 #### Parameters
 
@@ -855,7 +868,7 @@ The maximum recursion depth
 
 ### flatMap()
 
-> **flatMap**\<`U`, `This`\>(`callback`, `thisArg`?): `U`[]
+> **flatMap**\<`U`, `This`\>(`callback`, `thisArg?`): `U`[]
 
 Defined in: node_modules/typescript/lib/lib.es2019.array.d.ts:64
 
@@ -864,9 +877,13 @@ array. This is identical to a map followed by flat with depth 1.
 
 #### Type Parameters
 
-• **U**
+##### U
 
-• **This** = `undefined`
+`U`
+
+##### This
+
+`This` = `undefined`
 
 #### Parameters
 
@@ -896,7 +913,7 @@ undefined is used as the this value.
 
 ### forEach()
 
-> **forEach**(`callbackfn`, `thisArg`?): `void`
+> **forEach**(`callbackfn`, `thisArg?`): `void`
 
 Defined in: node_modules/typescript/lib/lib.es5.d.ts:1457
 
@@ -930,10 +947,10 @@ undefined is used as the this value.
 
 ### getVersions()
 
-> **getVersions**(`options`?): `Record`\<`string`, `string`[]\>
+> **getVersions**(`options?`): `Record`\<`string`, `string`[]\>
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceDependencies.ts:185](https://github.com/jakubmazanec/tools/blob/dcfb3b06be051bf99e23e7e35174b07af0f0fddd/packages/carson/source/workspace/WorkspaceDependencies.ts#L185)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:185](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/carson/source/workspace/WorkspaceDependencies.ts#L185)
 
 Creates map of all dependnecies and their installed version.
 
@@ -955,7 +972,7 @@ Object whose keys are dependency names and values are sorted versions.
 
 ### includes()
 
-> **includes**(`searchElement`, `fromIndex`?): `boolean`
+> **includes**(`searchElement`, `fromIndex?`): `boolean`
 
 Defined in: node_modules/typescript/lib/lib.es2016.array.include.d.ts:25
 
@@ -987,7 +1004,7 @@ The position in this array at which to begin searching for searchElement.
 
 ### indexOf()
 
-> **indexOf**(`searchElement`, `fromIndex`?): `number`
+> **indexOf**(`searchElement`, `fromIndex?`): `number`
 
 Defined in: node_modules/typescript/lib/lib.es5.d.ts:1418
 
@@ -1019,7 +1036,7 @@ The array index at which to begin the search. If fromIndex is omitted, the searc
 
 ### join()
 
-> **join**(`separator`?): `string`
+> **join**(`separator?`): `string`
 
 Defined in: node_modules/typescript/lib/lib.es5.d.ts:1361
 
@@ -1064,7 +1081,7 @@ Returns an iterable of keys in the array
 
 ### lastIndexOf()
 
-> **lastIndexOf**(`searchElement`, `fromIndex`?): `number`
+> **lastIndexOf**(`searchElement`, `fromIndex?`): `number`
 
 Defined in: node_modules/typescript/lib/lib.es5.d.ts:1424
 
@@ -1098,7 +1115,7 @@ the last index in the array.
 
 ### map()
 
-> **map**\<`U`\>(`callbackfn`, `thisArg`?): `U`[]
+> **map**\<`U`\>(`callbackfn`, `thisArg?`): `U`[]
 
 Defined in: node_modules/typescript/lib/lib.es5.d.ts:1463
 
@@ -1107,7 +1124,9 @@ the results.
 
 #### Type Parameters
 
-• **U**
+##### U
+
+`U`
 
 #### Parameters
 
@@ -1159,7 +1178,7 @@ and the array is not modified.
 > **push**(...`newWorkspaceDependencies`): `number`
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceDependencies.ts:38](https://github.com/jakubmazanec/tools/blob/dcfb3b06be051bf99e23e7e35174b07af0f0fddd/packages/carson/source/workspace/WorkspaceDependencies.ts#L38)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:38](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/carson/source/workspace/WorkspaceDependencies.ts#L38)
 
 Adds one or more new dependencies.
 
@@ -1248,7 +1267,9 @@ callback function.
 
 ##### Type Parameters
 
-• **U**
+###### U
+
+`U`
 
 ##### Parameters
 
@@ -1341,7 +1362,9 @@ the next call to the callback function.
 
 ##### Type Parameters
 
-• **U**
+###### U
+
+`U`
 
 ##### Parameters
 
@@ -1409,7 +1432,7 @@ and the array is not modified.
 
 ### slice()
 
-> **slice**(`start`?, `end`?): `WorkspaceDependency`[]
+> **slice**(`start?`, `end?`): `WorkspaceDependency`[]
 
 Defined in: node_modules/typescript/lib/lib.es5.d.ts:1381
 
@@ -1445,7 +1468,7 @@ The end index of the specified portion of the array. This is exclusive of the el
 
 ### some()
 
-> **some**(`predicate`, `thisArg`?): `boolean`
+> **some**(`predicate`, `thisArg?`): `boolean`
 
 Defined in: node_modules/typescript/lib/lib.es5.d.ts:1451
 
@@ -1480,7 +1503,7 @@ undefined is used as the this value.
 
 ### sort()
 
-> **sort**(`compareFn`?): `this`
+> **sort**(`compareFn?`): `this`
 
 Defined in: node_modules/typescript/lib/lib.es5.d.ts:1392
 
@@ -1514,7 +1537,7 @@ otherwise. If omitted, the elements are sorted in ascending, ASCII character ord
 
 #### Call Signature
 
-> **splice**(`start`, `deleteCount`?): `WorkspaceDependency`[]
+> **splice**(`start`, `deleteCount?`): `WorkspaceDependency`[]
 
 Defined in: node_modules/typescript/lib/lib.es5.d.ts:1399
 
@@ -1607,7 +1630,7 @@ toLocaleString methods.
 
 #### Call Signature
 
-> **toLocaleString**(`locales`, `options`?): `string`
+> **toLocaleString**(`locales`, `options?`): `string`
 
 Defined in: node_modules/typescript/lib/lib.es2015.core.d.ts:64
 
@@ -1651,7 +1674,7 @@ Returns a copy of an array with its elements reversed.
 
 ### toSorted()
 
-> **toSorted**(`compareFn`?): `WorkspaceDependency`[]
+> **toSorted**(`compareFn?`): `WorkspaceDependency`[]
 
 Defined in: node_modules/typescript/lib/lib.es2023.array.d.ts:57
 
@@ -1724,7 +1747,7 @@ The copied array.
 
 #### Call Signature
 
-> **toSpliced**(`start`, `deleteCount`?): `WorkspaceDependency`[]
+> **toSpliced**(`start`, `deleteCount?`): `WorkspaceDependency`[]
 
 Defined in: node_modules/typescript/lib/lib.es2023.array.d.ts:74
 
@@ -1866,7 +1889,9 @@ Creates an array from an array-like object.
 
 ##### Type Parameters
 
-• **T**
+###### T
+
+`T`
 
 ##### Parameters
 
@@ -1886,7 +1911,7 @@ An array-like object to convert to an array.
 
 #### Call Signature
 
-> `static` **from**\<`T`, `U`\>(`arrayLike`, `mapfn`, `thisArg`?): `U`[]
+> `static` **from**\<`T`, `U`\>(`arrayLike`, `mapfn`, `thisArg?`): `U`[]
 
 Defined in: node_modules/typescript/lib/lib.es2015.core.d.ts:80
 
@@ -1894,9 +1919,13 @@ Creates an array from an iterable object.
 
 ##### Type Parameters
 
-• **T**
+###### T
 
-• **U**
+`T`
+
+###### U
+
+`U`
 
 ##### Parameters
 
@@ -1936,7 +1965,9 @@ Creates an array from an iterable object.
 
 ##### Type Parameters
 
-• **T**
+###### T
+
+`T`
 
 ##### Parameters
 
@@ -1944,7 +1975,7 @@ Creates an array from an iterable object.
 
 An iterable object to convert to an array.
 
-`Iterable`\<`T`\> | `ArrayLike`\<`T`\>
+`Iterable`\<`T`, `any`, `any`\> | `ArrayLike`\<`T`\>
 
 ##### Returns
 
@@ -1956,7 +1987,7 @@ An iterable object to convert to an array.
 
 #### Call Signature
 
-> `static` **from**\<`T`, `U`\>(`iterable`, `mapfn`, `thisArg`?): `U`[]
+> `static` **from**\<`T`, `U`\>(`iterable`, `mapfn`, `thisArg?`): `U`[]
 
 Defined in: node_modules/typescript/lib/lib.es2015.iterable.d.ts:109
 
@@ -1964,9 +1995,13 @@ Creates an array from an iterable object.
 
 ##### Type Parameters
 
-• **T**
+###### T
 
-• **U**
+`T`
+
+###### U
+
+`U`
 
 ##### Parameters
 
@@ -1974,7 +2009,7 @@ Creates an array from an iterable object.
 
 An iterable object to convert to an array.
 
-`Iterable`\<`T`\> | `ArrayLike`\<`T`\>
+`Iterable`\<`T`, `any`, `any`\> | `ArrayLike`\<`T`\>
 
 ###### mapfn
 
@@ -2000,18 +2035,19 @@ Value of 'this' used to invoke the mapfn.
 
 ### fromWorkspace()
 
-> `static` **fromWorkspace**\<`M`\>(`workspace`, `options`?):
-> [`WorkspaceDependencies`](WorkspaceDependencies.md)\<`M`\>
+> `static` **fromWorkspace**\<`M`\>(`workspace`, `options?`): `WorkspaceDependencies`\<`M`\>
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceDependencies.ts:81](https://github.com/jakubmazanec/tools/blob/dcfb3b06be051bf99e23e7e35174b07af0f0fddd/packages/carson/source/workspace/WorkspaceDependencies.ts#L81)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:81](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/carson/source/workspace/WorkspaceDependencies.ts#L81)
 
-Creates new [WorkspaceDependencies](WorkspaceDependencies.md) instance from a
-[Workspace](Workspace.md) instance and its dependencies.
+Creates new WorkspaceDependencies instance from a [Workspace](Workspace.md) instance and its
+dependencies.
 
 #### Type Parameters
 
-• **M** _extends_ `boolean` = `true`
+##### M
+
+`M` _extends_ `boolean` = `true`
 
 #### Parameters
 
@@ -2029,9 +2065,9 @@ Options.
 
 #### Returns
 
-[`WorkspaceDependencies`](WorkspaceDependencies.md)\<`M`\>
+`WorkspaceDependencies`\<`M`\>
 
-The new [WorkspaceDependencies](WorkspaceDependencies.md) instance.
+The new WorkspaceDependencies instance.
 
 ---
 
@@ -2067,7 +2103,9 @@ Returns a new array from a set of elements.
 
 #### Type Parameters
 
-• **T**
+##### T
+
+`T`
 
 #### Parameters
 

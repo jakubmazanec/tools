@@ -8,4 +8,4 @@
 > `'prettier . --write --ignore-unknown'`
 
 Defined in:
-[packages/carson-templates/source/constants.ts:191](https://github.com/jakubmazanec/tools/blob/dcfb3b06be051bf99e23e7e35174b07af0f0fddd/packages/carson-templates/source/constants.ts#L191)
+[packages/carson-templates/source/constants.ts:191](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/carson-templates/source/constants.ts#L191)

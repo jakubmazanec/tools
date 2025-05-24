@@ -7,13 +7,13 @@
 > **getDevelopmentBranch**(`workspace`): `undefined` \| `string`
 
 Defined in:
-[packages/carson-templates/source/getDevelopmentBranch.ts:5](https://github.com/jakubmazanec/tools/blob/dcfb3b06be051bf99e23e7e35174b07af0f0fddd/packages/carson-templates/source/getDevelopmentBranch.ts#L5)
+[packages/carson-templates/source/getDevelopmentBranch.ts:5](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/carson-templates/source/getDevelopmentBranch.ts#L5)
 
 ## Parameters
 
 ### workspace
 
-`Workspace` | `Workspace`\<`false`\>
+`Workspace`\<`true`\> | `Workspace`\<`false`\>
 
 ## Returns
 

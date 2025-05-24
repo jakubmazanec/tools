@@ -10,7 +10,7 @@
 
 ## Namespaces
 
-- [semver](namespaces/semver/README.md)
+- [semver](@jakubmazanec/namespaces/semver/README.md)
 
 ## Variables
 
@@ -28,6 +28,7 @@
 - [FORMAT_IGNORE_PATTERNS](variables/FORMAT_IGNORE_PATTERNS.md)
 - [LINT_IGNORES](variables/LINT_IGNORES.md)
 - [LINTER_CONFIG_PACKAGE_NAME](variables/LINTER_CONFIG_PACKAGE_NAME.md)
+- [lodash](variables/lodash.md)
 - [MAIN_BRANCH_NAMES](variables/MAIN_BRANCH_NAMES.md)
 - [PRETTIER_OPTIONS](variables/PRETTIER_OPTIONS.md)
 - [SOURCE_DIRECTORY](variables/SOURCE_DIRECTORY.md)
@@ -45,4 +46,3 @@
 - [getMainBranch](functions/getMainBranch.md)
 - [getReferences](functions/getReferences.md)
 - [getWorkspaceName](functions/getWorkspaceName.md)
-- [lodash](functions/lodash.md)

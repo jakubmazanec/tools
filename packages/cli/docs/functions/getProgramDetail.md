@@ -7,223 +7,223 @@
 > **getProgramDetail**(`packageJson`): [`ProgramDetail`](../type-aliases/ProgramDetail.md)
 
 Defined in:
-[cli/source/program/getProgramDetail.ts:8](https://github.com/jakubmazanec/tools/blob/dcfb3b06be051bf99e23e7e35174b07af0f0fddd/packages/cli/source/program/getProgramDetail.ts#L8)
+[cli/source/program/getProgramDetail.ts:8](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/cli/source/program/getProgramDetail.ts#L8)
 
-Creates detailed information about a {@lincode Program}.
+Creates detailed information about a Program.
 
 ## Parameters
 
 ### packageJson
 
-#### author
+#### author?
 
-`string` \| \{ `email`: `string`; `name`: `string`; `url`: `string`; \}
+`string` \| \{ `email?`: `string`; `name`: `string`; `url?`: `string`; \}
 
-#### bin
+#### bin?
 
 `string` \| `Record`\<`string`, `string`\>
 
-#### browser
+#### browser?
 
 `string` \| `Record`\<`string`, `string` \| `false`\>
 
-#### bugs
+#### bugs?
 
-`string` \| \{ `email`: `string`; `url`: `string`; \}
+`string` \| \{ `email?`: `string`; `url?`: `string`; \}
 
-#### bundledDependencies
-
-`boolean` \| `string`[]
-
-#### bundleDependencies
+#### bundledDependencies?
 
 `boolean` \| `string`[]
 
-#### config
+#### bundleDependencies?
+
+`boolean` \| `string`[]
+
+#### config?
 
 `Record`\<`string`, `unknown`\>
 
-#### contributors
+#### contributors?
 
-(`string` \| \{ `email`: `string`; `name`: `string`; `url`: `string`; \})[]
+(`string` \| \{ `email?`: `string`; `name`: `string`; `url?`: `string`; \})[]
 
-#### cpu
+#### cpu?
 
 `string`[]
 
-#### dependencies
+#### dependencies?
 
 `Record`\<`string`, `string`\>
 
-#### description
+#### description?
 
 `string`
 
-#### devDependencies
+#### devDependencies?
 
 `Record`\<`string`, `string`\>
 
-#### directories
+#### directories?
 
-\{ `bin`: `string`; `doc`: `string`; `example`: `string`; `lib`: `string`; `man`: `string`; `v`:
-`string`; \}
+\{ `bin?`: `string`; `doc?`: `string`; `example?`: `string`; `lib?`: `string`; `man?`: `string`;
+`v?`: `string`; \}
 
-#### directories.bin
-
-`string`
-
-#### directories.doc
+#### directories.bin?
 
 `string`
 
-#### directories.example
+#### directories.doc?
 
 `string`
 
-#### directories.lib
+#### directories.example?
 
 `string`
 
-#### directories.man
+#### directories.lib?
 
 `string`
 
-#### directories.v
+#### directories.man?
 
 `string`
 
-#### engines
+#### directories.v?
+
+`string`
+
+#### engines?
 
 `object` & `Record`\<`string`, `string`\>
 
-#### esnext
+#### esnext?
 
 `string` \| `Record`\<`string`, `string`\>
 
-#### exports
+#### exports?
 
 `PackageJsonExports`
 
-#### files
+#### files?
 
 `string`[]
 
-#### flat
+#### flat?
 
 `boolean`
 
-#### funding
+#### funding?
 
-`string` \| \{ `type`: `string`; `url`: `string`; \} \| (`string` \| \{ `type`: `string`; `url`:
+`string` \| \{ `type?`: `string`; `url`: `string`; \} \| (`string` \| \{ `type?`: `string`; `url`:
 `string`; \})[]
 
-#### homepage
+#### homepage?
 
 `string`
 
-#### keywords
+#### keywords?
 
 `string`[]
 
-#### license
+#### license?
 
 `string`
 
-#### main
+#### main?
 
 `string`
 
-#### maintainers
+#### maintainers?
 
-(`string` \| \{ `email`: `string`; `name`: `string`; `url`: `string`; \})[]
+(`string` \| \{ `email?`: `string`; `name`: `string`; `url?`: `string`; \})[]
 
-#### man
+#### man?
 
 `string` \| `string`[]
 
-#### module
+#### module?
 
 `string`
 
-#### name
+#### name?
 
 `string`
 
-#### optionalDependencies
+#### optionalDependencies?
 
 `Record`\<`string`, `string`\>
 
-#### os
+#### os?
 
 `string`[]
 
-#### overrides
+#### overrides?
 
 `Record`\<`string`, `string` \| `Record`\<`string`, `string` \| `Record`\<`string`, `unknown`\>\>\>
 
-#### packageManager
+#### packageManager?
 
 `string`
 
-#### peerDependencies
+#### peerDependencies?
 
 `Record`\<`string`, `string`\>
 
-#### peerDependenciesMeta
+#### peerDependenciesMeta?
 
 `Record`\<`string`, \{ `optional`: `boolean`; \}\>
 
-#### preferGlobal
+#### preferGlobal?
 
 `boolean`
 
-#### private
+#### private?
 
 `boolean`
 
-#### publishConfig
+#### publishConfig?
 
 `object` & `Record`\<`string`, `unknown`\>
 
-#### repository
+#### repository?
 
-`string` \| \{ `directory`: `string`; `type`: `string`; `url`: `string`; \}
+`string` \| \{ `directory?`: `string`; `type`: `string`; `url`: `string`; \}
 
-#### resolutions
+#### resolutions?
 
 `Record`\<`string`, `string`\>
 
-#### scripts
+#### scripts?
 
 `Record`\<`string`, `string`\> & `object`
 
-#### sideEffects
+#### sideEffects?
 
 `boolean` \| `string`[]
 
-#### source
+#### source?
 
 `string`
 
-#### type
+#### type?
 
 `"commonjs"` \| `"module"`
 
-#### types
+#### types?
 
 `string`
 
-#### typings
+#### typings?
 
 `string`
 
-#### version
+#### version?
 
 `string`
 
-#### workspaces
+#### workspaces?
 
-`string`[] \| \{ `nohoist`: `string`[]; `packages`: `string`[]; \}
+`string`[] \| \{ `nohoist?`: `string`[]; `packages?`: `string`[]; \}
 
 ## Returns
 

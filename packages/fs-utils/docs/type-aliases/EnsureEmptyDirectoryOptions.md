@@ -4,17 +4,20 @@
 
 # Type Alias: EnsureEmptyDirectoryOptions
 
-> **EnsureEmptyDirectoryOptions**: `object`
+> **EnsureEmptyDirectoryOptions** = `object`
 
 Defined in:
-[ensureEmptyDirectory.ts:9](https://github.com/jakubmazanec/tools/blob/dcfb3b06be051bf99e23e7e35174b07af0f0fddd/packages/fs-utils/source/ensureEmptyDirectory.ts#L9)
+[ensureEmptyDirectory.ts:9](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/fs-utils/source/ensureEmptyDirectory.ts#L9)
 
 [ensureEmptyDirectory](../functions/ensureEmptyDirectory.md) options parameter.
 
-## Type declaration
+## Properties
 
 ### allowGit?
 
 > `optional` **allowGit**: `boolean`
+
+Defined in:
+[ensureEmptyDirectory.ts:11](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/fs-utils/source/ensureEmptyDirectory.ts#L11)
 
 Allows presence of a `.git` directory

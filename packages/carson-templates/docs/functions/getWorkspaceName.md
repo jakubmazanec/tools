@@ -7,13 +7,13 @@
 > **getWorkspaceName**(`workspace`): `string`
 
 Defined in:
-[packages/carson-templates/source/getWorkspaceName.ts:6](https://github.com/jakubmazanec/tools/blob/dcfb3b06be051bf99e23e7e35174b07af0f0fddd/packages/carson-templates/source/getWorkspaceName.ts#L6)
+[packages/carson-templates/source/getWorkspaceName.ts:6](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/carson-templates/source/getWorkspaceName.ts#L6)
 
 ## Parameters
 
 ### workspace
 
-`Workspace` | `Workspace`\<`false`\>
+`Workspace`\<`true`\> | `Workspace`\<`false`\>
 
 ## Returns
 

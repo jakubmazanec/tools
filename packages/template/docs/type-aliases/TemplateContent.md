@@ -4,9 +4,9 @@
 
 # Type Alias: TemplateContent
 
-> **TemplateContent**: `string`
+> **TemplateContent** = `string`
 
 Defined in:
-[packages/template/source/TemplateContent.ts:4](https://github.com/jakubmazanec/tools/blob/dcfb3b06be051bf99e23e7e35174b07af0f0fddd/packages/template/source/TemplateContent.ts#L4)
+[packages/template/source/TemplateContent.ts:4](https://github.com/jakubmazanec/tools/blob/74fa88a6249b3d486436ae7655f4962bc4a86e11/packages/template/source/TemplateContent.ts#L4)
 
 Type representing a template content.
