@@ -21,7 +21,7 @@ It cannot be required from a CommonJS module.
 
 #### Prerequisites
 
-- Node.js 22 or later
+- Node.js 24 or later
 - TypeScript 5 or later
 <!-- prerequisites -->
 
