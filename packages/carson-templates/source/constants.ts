@@ -151,7 +151,6 @@ export const DEPENDENCY_VERSIONS: Record<string, string> = {
   '@testing-library/jest-dom': '^6.0.0',
   '@testing-library/react': '^16.0.0',
   '@types/lodash': '^4.0.0',
-  '@types/node': '^22.0.0',
   '@types/react': '^19.0.0',
   '@types/react-dom': '^19.0.0',
   '@vitest/coverage-v8': '^3.0.0',
@@ -181,8 +180,9 @@ export const DEPENDENCY_VERSIONS: Record<string, string> = {
   vite: '^6.0.0',
   vitest: '^3.0.0',
 
-  node: '^22.13.0',
-  npm: '^10.9.0',
+  node: '^24.1.0',
+  '@types/node': '^22.0.0',
+  npm: '^11.3.0',
 };
 
 // commands
