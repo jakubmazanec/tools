@@ -27,7 +27,7 @@
     "document": "del-cli docs && typedoc --options typedoc.config.cjs",
     "format": "prettier . --write --ignore-unknown",
     "lint": "eslint .",
-    "start": "node --loader ts-node/esm/transpile-only --inspect src/run.ts",
+    "start": "tsx source/run.ts",
     "test": "del-cli coverage && vitest run --coverage --passWithNoTests",
     "typecheck": "tsc --project tsconfig.typecheck.json"
   },
@@ -68,16 +68,16 @@
     "del-cli": "^6.0.0",
     "esbuild": "^0.24.2",
     "eslint": "^9.19.0",
-    "ink": "^5.1.0",
+    "ink": "^6.0.0",
     "react": "^19.0.0",
-    "ts-node": "^10.9.2",
+    "tsx": "^4.19.2",
     "typedoc": "^0.28.4",
     "typedoc-plugin-markdown": "^4.6.3",
     "typescript": "^5.7.3",
     "vitest": "^3.0.4"
   },
   "peerDependencies": {
-    "ink": "5.x",
+    "ink": "6.x",
     "react": "19.x"
   },
   "packageManager": "npm@11.3.0",
