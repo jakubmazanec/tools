@@ -8,7 +8,7 @@
 > J\> ? `J` : `R` : `never`
 
 Defined in:
-[packages/ts-utils/source/types/ReturnType.ts:20](https://github.com/jakubmazanec/tools/blob/a9ba87d349a220bbed24d161794f90a6ba6009e5/packages/ts-utils/source/types/ReturnType.ts#L20)
+[packages/ts-utils/source/types/ReturnType.ts:20](https://github.com/jakubmazanec/tools/blob/acfa246dbb1035f65efb7fa114167a3cbefca108/packages/ts-utils/source/types/ReturnType.ts#L20)
 
 Constructs a type consisting of the return type of function `T`. Similarly like built-in
 `ReturnType` utility type, but works also on nullable and other types, and if you use it with async

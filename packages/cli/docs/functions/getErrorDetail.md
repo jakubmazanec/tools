@@ -7,7 +7,7 @@
 > **getErrorDetail**(`error`): [`ErrorDetail`](../type-aliases/ErrorDetail.md)
 
 Defined in:
-[cli/source/ui/getErrorDetail.ts:10](https://github.com/jakubmazanec/tools/blob/a9ba87d349a220bbed24d161794f90a6ba6009e5/packages/cli/source/ui/getErrorDetail.ts#L10)
+[cli/source/ui/getErrorDetail.ts:10](https://github.com/jakubmazanec/tools/blob/acfa246dbb1035f65efb7fa114167a3cbefca108/packages/cli/source/ui/getErrorDetail.ts#L10)
 
 Creates detailed information about an error.
 

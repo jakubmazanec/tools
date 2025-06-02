@@ -16,7 +16,7 @@
 > `value?`: `V`; \}
 
 Defined in:
-[packages/ui/source/components/Listbox.tsx:46](https://github.com/jakubmazanec/tools/blob/a9ba87d349a220bbed24d161794f90a6ba6009e5/packages/ui/source/components/Listbox.tsx#L46)
+[packages/ui/source/components/Listbox.tsx:46](https://github.com/jakubmazanec/tools/blob/acfa246dbb1035f65efb7fa114167a3cbefca108/packages/ui/source/components/Listbox.tsx#L46)
 
 ## Type Parameters
 

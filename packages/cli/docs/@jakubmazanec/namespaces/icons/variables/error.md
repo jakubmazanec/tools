@@ -7,4 +7,4 @@
 > `const` **error**: `string`
 
 Defined in:
-[cli/source/ui/icons.ts:9](https://github.com/jakubmazanec/tools/blob/a9ba87d349a220bbed24d161794f90a6ba6009e5/packages/cli/source/ui/icons.ts#L9)
+[cli/source/ui/icons.ts:9](https://github.com/jakubmazanec/tools/blob/acfa246dbb1035f65efb7fa114167a3cbefca108/packages/cli/source/ui/icons.ts#L9)

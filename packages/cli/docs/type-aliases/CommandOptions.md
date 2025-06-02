@@ -7,7 +7,7 @@
 > **CommandOptions**\<`B`, `C`, `D`, `E`\> = `object`
 
 Defined in:
-[cli/source/program/CommandOptions.ts:6](https://github.com/jakubmazanec/tools/blob/a9ba87d349a220bbed24d161794f90a6ba6009e5/packages/cli/source/program/CommandOptions.ts#L6)
+[cli/source/program/CommandOptions.ts:6](https://github.com/jakubmazanec/tools/blob/acfa246dbb1035f65efb7fa114167a3cbefca108/packages/cli/source/program/CommandOptions.ts#L6)
 
 [Command constructor](../classes/Command.md#constructor) options parameter.
 
@@ -36,7 +36,7 @@ Defined in:
 > `optional` **allowUnknownOptions**: `D`
 
 Defined in:
-[cli/source/program/CommandOptions.ts:15](https://github.com/jakubmazanec/tools/blob/a9ba87d349a220bbed24d161794f90a6ba6009e5/packages/cli/source/program/CommandOptions.ts#L15)
+[cli/source/program/CommandOptions.ts:15](https://github.com/jakubmazanec/tools/blob/acfa246dbb1035f65efb7fa114167a3cbefca108/packages/cli/source/program/CommandOptions.ts#L15)
 
 ---
 
@@ -45,7 +45,7 @@ Defined in:
 > `optional` **allowUnknownParameters**: `E`
 
 Defined in:
-[cli/source/program/CommandOptions.ts:16](https://github.com/jakubmazanec/tools/blob/a9ba87d349a220bbed24d161794f90a6ba6009e5/packages/cli/source/program/CommandOptions.ts#L16)
+[cli/source/program/CommandOptions.ts:16](https://github.com/jakubmazanec/tools/blob/acfa246dbb1035f65efb7fa114167a3cbefca108/packages/cli/source/program/CommandOptions.ts#L16)
 
 ---
 
@@ -54,7 +54,7 @@ Defined in:
 > `optional` **description**: `string`
 
 Defined in:
-[cli/source/program/CommandOptions.ts:12](https://github.com/jakubmazanec/tools/blob/a9ba87d349a220bbed24d161794f90a6ba6009e5/packages/cli/source/program/CommandOptions.ts#L12)
+[cli/source/program/CommandOptions.ts:12](https://github.com/jakubmazanec/tools/blob/acfa246dbb1035f65efb7fa114167a3cbefca108/packages/cli/source/program/CommandOptions.ts#L12)
 
 ---
 
@@ -63,7 +63,7 @@ Defined in:
 > `optional` **options**: `C`
 
 Defined in:
-[cli/source/program/CommandOptions.ts:14](https://github.com/jakubmazanec/tools/blob/a9ba87d349a220bbed24d161794f90a6ba6009e5/packages/cli/source/program/CommandOptions.ts#L14)
+[cli/source/program/CommandOptions.ts:14](https://github.com/jakubmazanec/tools/blob/acfa246dbb1035f65efb7fa114167a3cbefca108/packages/cli/source/program/CommandOptions.ts#L14)
 
 ---
 
@@ -72,4 +72,4 @@ Defined in:
 > `optional` **parameters**: `B`
 
 Defined in:
-[cli/source/program/CommandOptions.ts:13](https://github.com/jakubmazanec/tools/blob/a9ba87d349a220bbed24d161794f90a6ba6009e5/packages/cli/source/program/CommandOptions.ts#L13)
+[cli/source/program/CommandOptions.ts:13](https://github.com/jakubmazanec/tools/blob/acfa246dbb1035f65efb7fa114167a3cbefca108/packages/cli/source/program/CommandOptions.ts#L13)

@@ -7,7 +7,7 @@
 > **WorkspaceFindAndReadOptions** = `object`
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceFindAndReadOptions.ts:4](https://github.com/jakubmazanec/tools/blob/a9ba87d349a220bbed24d161794f90a6ba6009e5/packages/carson/source/workspace/WorkspaceFindAndReadOptions.ts#L4)
+[packages/carson/source/workspace/WorkspaceFindAndReadOptions.ts:4](https://github.com/jakubmazanec/tools/blob/acfa246dbb1035f65efb7fa114167a3cbefca108/packages/carson/source/workspace/WorkspaceFindAndReadOptions.ts#L4)
 
 [Workspace.findAndRead](../classes/Workspace.md#findandread) options parameter.
 
@@ -18,4 +18,4 @@ Defined in:
 > `optional` **throwIfNotFound**: `boolean`
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceFindAndReadOptions.ts:5](https://github.com/jakubmazanec/tools/blob/a9ba87d349a220bbed24d161794f90a6ba6009e5/packages/carson/source/workspace/WorkspaceFindAndReadOptions.ts#L5)
+[packages/carson/source/workspace/WorkspaceFindAndReadOptions.ts:5](https://github.com/jakubmazanec/tools/blob/acfa246dbb1035f65efb7fa114167a3cbefca108/packages/carson/source/workspace/WorkspaceFindAndReadOptions.ts#L5)
