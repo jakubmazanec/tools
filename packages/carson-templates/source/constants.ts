@@ -183,6 +183,8 @@ export const DEPENDENCY_VERSIONS: Record<string, string> = {
   node: '^24.1.0',
   '@types/node': '^22.0.0',
   npm: '^11.3.0',
+
+  gel: '^6.7.0',
 };
 
 // commands

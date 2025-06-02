@@ -52,10 +52,10 @@ ENV VITE_APP_URL=$VITE_APP_URL
 
 if (project.config.deployment?.dbInstance) {
 -%>
-ARG EDGEDB_INSTANCE
-ENV EDGEDB_INSTANCE=$EDGEDB_INSTANCE
-ARG EDGEDB_BRANCH
-ENV EDGEDB_BRANCH=$EDGEDB_BRANCH
+ARG GEL_INSTANCE
+ENV GEL_INSTANCE=$GEL_INSTANCE
+ARG GEL_BRANCH
+ENV GEL_BRANCH=$GEL_BRANCH
 <%
 }
 -%>
@@ -77,7 +77,7 @@ COPY --link . .
 <%
 if (project.config.deployment?.dbInstance) {
 -%>
-RUN --mount=type=secret,id=EDGEDB_SECRET_KEY EDGEDB_SECRET_KEY="$(cat /run/secrets/EDGEDB_SECRET_KEY)" npm run build
+RUN --mount=type=secret,id=GEL_SECRET_KEY GEL_SECRET_KEY="$(cat /run/secrets/GEL_SECRET_KEY)" npm run build
 <%
 } else {
 -%>

@@ -23,7 +23,7 @@ for (let project of workspace.projects) {
     }
 
     if (project.config.deployment?.dbInstance) {
-      lines.push(`!${project.relativePath}/edgedb.toml`);
+      lines.push(`!${project.relativePath}/gel.toml`);
     }
   } else {
     lines.push(`!${project.relativePath}/${BUILD_DIRECTORY}/**`);

@@ -21,7 +21,7 @@ let tsconfig = lodash.merge(
   project.config.overrides?.tsconfig ?? {},
 );
 
-// TODO: when EdgeDB client supports `exactOptionalPropertyTypes: true`, remove this line
+// TODO: when Gel client supports `exactOptionalPropertyTypes: true`, remove this line
 if (project.config.deployment?.dbInstance) {
   tsconfig.compilerOptions.exactOptionalPropertyTypes = false;
 }

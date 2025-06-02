@@ -83,7 +83,7 @@ if (workspace.projects.some((project) => project.config.deployment?.appName)) {
 if (workspace.projects.some((project) => project.config.deployment?.dbInstance)) {
 -%>
 
-      - uses: edgedb/setup-edgedb@v1
+      - uses: geldata/setup-gel@v1
         with:
           server-version: none
 <%
@@ -119,9 +119,9 @@ for (let project of workspace.projects) {
         run: |
           npm run test -- --filter=<%- project.name %>
         env:
-          EDGEDB_INSTANCE: <%- project.config.deployment.dbInstance %>
-          EDGEDB_BRANCH: <%- workspace.packageJson.name %>-${{ github.head_ref }}
-          EDGEDB_SECRET_KEY: ${{ secrets.<%- lodash.snakeCase(project.config.deployment.dbInstance).toUpperCase() %>_EDGEDB_TOKEN }}
+          GEL_INSTANCE: <%- project.config.deployment.dbInstance %>
+          GEL_BRANCH: <%- workspace.packageJson.name %>-${{ github.head_ref }}
+          GEL_SECRET_KEY: ${{ secrets.<%- lodash.snakeCase(project.config.deployment.dbInstance).toUpperCase() %>_GEL_TOKEN }}
 <%
   }
 }
@@ -171,12 +171,12 @@ for (let project of workspace.projects) {
 
       - name: Deploy <%- project.name %>
         run: |
-          npm run deploy --workspace <%- project.name %> -- --app <%- project.config.deployment?.appName %>-unstable --build-arg "VITE_APP_URL=$VITE_APP_URL" --build-arg "EDGEDB_INSTANCE=$EDGEDB_INSTANCE" --build-arg "EDGEDB_BRANCH=$EDGEDB_BRANCH" --build-secret "EDGEDB_SECRET_KEY=$EDGEDB_SECRET_KEY"
+          npm run deploy --workspace <%- project.name %> -- --app <%- project.config.deployment?.appName %>-unstable --build-arg "VITE_APP_URL=$VITE_APP_URL" --build-arg "GEL_INSTANCE=$GEL_INSTANCE" --build-arg "GEL_BRANCH=$GEL_BRANCH" --build-secret "GEL_SECRET_KEY=$GEL_SECRET_KEY"
         env:
           VITE_APP_URL: <%- getAppUrl(project, 'unstable') %>
-          EDGEDB_INSTANCE: <%- project.config.deployment.dbInstance %>
-          EDGEDB_BRANCH: <%- workspace.packageJson.name %>-${{ github.head_ref }}
-          EDGEDB_SECRET_KEY: ${{ secrets.<%- lodash.snakeCase(project.config.deployment.dbInstance).toUpperCase() %>_EDGEDB_TOKEN }}
+          GEL_INSTANCE: <%- project.config.deployment.dbInstance %>
+          GEL_BRANCH: <%- workspace.packageJson.name %>-${{ github.head_ref }}
+          GEL_SECRET_KEY: ${{ secrets.<%- lodash.snakeCase(project.config.deployment.dbInstance).toUpperCase() %>_GEL_TOKEN }}
           FLY_ACCESS_TOKEN: ${{ secrets.FLY_TOKEN }}
           FLY_API_TOKEN: ${{ secrets.FLY_TOKEN }}
 <%

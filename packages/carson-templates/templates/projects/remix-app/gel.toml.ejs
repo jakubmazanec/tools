@@ -1,0 +1,7 @@
+---
+to: 'gel.toml'
+if: <%- Boolean(project.config.deployment?.dbInstance) %>
+strategy: overwrite
+---
+[instance]
+server-version = "<%- semver.major(semver.minVersion(DEPENDENCY_VERSIONS.gel)) %>.<%- semver.minor(semver.minVersion(DEPENDENCY_VERSIONS.gel)) %>"
