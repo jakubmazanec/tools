@@ -1,6 +1,6 @@
-import {useArgs} from '@storybook/preview-api';
-import {type Meta, type StoryObj} from '@storybook/react';
+import {type Meta, type StoryObj} from '@storybook/react-vite';
 import _ from 'lodash';
+import {useArgs} from 'storybook/preview-api';
 
 import {createColumnHelper, DataTable, formatDateTime, formatNumber} from '../source/main.js';
 import {data, type Person} from './data.js';

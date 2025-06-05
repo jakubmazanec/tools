@@ -5,8 +5,8 @@
  * Run `npx carson update workspace` to regenerate.
  */
 
-import {useArgs} from '@storybook/preview-api';
-import {type Preview} from '@storybook/react';
+import {type Preview} from '@storybook/react-vite';
+import {useArgs} from 'storybook/preview-api';
 
 import {defaultTheme, ThemeProvider} from '../source/main.js';
 
