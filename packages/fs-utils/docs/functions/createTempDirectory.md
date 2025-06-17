@@ -7,7 +7,7 @@
 > **createTempDirectory**(`prefix?`): `Promise`\<`string`\>
 
 Defined in:
-[createTempDirectory.ts:11](https://github.com/jakubmazanec/tools/blob/acfa246dbb1035f65efb7fa114167a3cbefca108/packages/fs-utils/source/createTempDirectory.ts#L11)
+[createTempDirectory.ts:11](https://github.com/jakubmazanec/tools/blob/d956cf350ae3e6bad1df754a19dfbabb088c1451/packages/fs-utils/source/createTempDirectory.ts#L11)
 
 Creates a unique temporary directory in the operating system's default directory for temporary
 files. The name of the directory is random, but can be prefixed with a custom string.

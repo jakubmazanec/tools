@@ -11,7 +11,7 @@
 > : `ParametersConfigToArgumentsParameters`\<`NonNullable`\<`O`\[`"parameters"`\]\>\>
 
 Defined in:
-[args/source/ArgumentsParameters.ts:141](https://github.com/jakubmazanec/tools/blob/acfa246dbb1035f65efb7fa114167a3cbefca108/packages/args/source/ArgumentsParameters.ts#L141)
+[args/source/ArgumentsParameters.ts:141](https://github.com/jakubmazanec/tools/blob/d956cf350ae3e6bad1df754a19dfbabb088c1451/packages/args/source/ArgumentsParameters.ts#L141)
 
 Parsed parameters.
 

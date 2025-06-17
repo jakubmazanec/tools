@@ -11,6 +11,6 @@
 > `"U"` \| `"v"` \| `"V"` \| `"w"` \| `"W"` \| `"x"` \| `"X"` \| `"y"` \| `"Y"` \| `"z"` \| `"Z"`
 
 Defined in:
-[args/source/ShortOptionName.ts:2](https://github.com/jakubmazanec/tools/blob/acfa246dbb1035f65efb7fa114167a3cbefca108/packages/args/source/ShortOptionName.ts#L2)
+[args/source/ShortOptionName.ts:2](https://github.com/jakubmazanec/tools/blob/d956cf350ae3e6bad1df754a19dfbabb088c1451/packages/args/source/ShortOptionName.ts#L2)
 
 Short option name.

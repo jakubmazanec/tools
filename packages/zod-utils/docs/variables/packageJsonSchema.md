@@ -166,4 +166,4 @@
 > `string`[]; \}; \}\>
 
 Defined in:
-[packages/zod-utils/source/types/PackageJson.ts:151](https://github.com/jakubmazanec/tools/blob/acfa246dbb1035f65efb7fa114167a3cbefca108/packages/zod-utils/source/types/PackageJson.ts#L151)
+[packages/zod-utils/source/types/PackageJson.ts:151](https://github.com/jakubmazanec/tools/blob/d956cf350ae3e6bad1df754a19dfbabb088c1451/packages/zod-utils/source/types/PackageJson.ts#L151)

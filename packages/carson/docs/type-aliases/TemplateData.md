@@ -8,4 +8,4 @@
 > [`templateDataSchema`](../variables/templateDataSchema.md)\>
 
 Defined in:
-[packages/carson/source/template/TemplateData.ts:15](https://github.com/jakubmazanec/tools/blob/acfa246dbb1035f65efb7fa114167a3cbefca108/packages/carson/source/template/TemplateData.ts#L15)
+[packages/carson/source/template/TemplateData.ts:15](https://github.com/jakubmazanec/tools/blob/d956cf350ae3e6bad1df754a19dfbabb088c1451/packages/carson/source/template/TemplateData.ts#L15)

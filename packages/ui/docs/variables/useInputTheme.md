@@ -7,7 +7,7 @@
 > `const` **useInputTheme**: `object` & (`themeProps`) => `object`
 
 Defined in:
-[packages/ui/source/components/Input.tsx:22](https://github.com/jakubmazanec/tools/blob/acfa246dbb1035f65efb7fa114167a3cbefca108/packages/ui/source/components/Input.tsx#L22)
+[packages/ui/source/components/Input.tsx:22](https://github.com/jakubmazanec/tools/blob/d956cf350ae3e6bad1df754a19dfbabb088c1451/packages/ui/source/components/Input.tsx#L22)
 
 ## Type declaration
 

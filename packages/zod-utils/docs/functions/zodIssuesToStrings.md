@@ -7,7 +7,7 @@
 > **zodIssuesToStrings**(`zodIssues`): `string`[]
 
 Defined in:
-[packages/zod-utils/source/utils/zodIssuesToString.ts:50](https://github.com/jakubmazanec/tools/blob/acfa246dbb1035f65efb7fa114167a3cbefca108/packages/zod-utils/source/utils/zodIssuesToString.ts#L50)
+[packages/zod-utils/source/utils/zodIssuesToString.ts:50](https://github.com/jakubmazanec/tools/blob/d956cf350ae3e6bad1df754a19dfbabb088c1451/packages/zod-utils/source/utils/zodIssuesToString.ts#L50)
 
 ## Parameters
 
