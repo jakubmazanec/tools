@@ -279,7 +279,7 @@ export function DataTableHeader({
         <Button
           aria-label="Resize"
           // className="absolute right-1 top-2.5 cursor-col-resize"
-          className="absolute right-1 top-1/2 -mt-2.5 cursor-col-resize"
+          className="absolute top-1/2 right-1 -mt-2.5 cursor-col-resize"
           size="small"
           variant="invisible"
           onDoubleClick={handleWidthReset}

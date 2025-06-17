@@ -6,6 +6,7 @@
  * Run `npx carson update workspace` to regenerate.
  */
 
+import tailwindcss from '@tailwindcss/vite';
 import _ from 'lodash';
 import {defineConfig} from 'vitest/config';
 
@@ -19,6 +20,7 @@ export default defineConfig(
           include: ['source/**'],
         },
       },
+      plugins: [tailwindcss()],
     },
     {},
   ),

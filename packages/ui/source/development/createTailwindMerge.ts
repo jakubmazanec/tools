@@ -2,31 +2,24 @@ import {extendTailwindMerge, twMerge} from 'tailwind-merge';
 import {type Config as TailwindConfig} from 'tailwindcss';
 
 const THEME_SCALES = [
-  'colors',
+  'color',
+  'font',
+  'text',
+  'weight',
+  'tracking',
+  'leading',
+  'breakpoint',
+  'container',
   'spacing',
+  'radius',
+  'shadow',
+  'shadow',
+  'shadow',
   'blur',
-  'brightness',
-  'borderColor',
-  'borderRadius',
-  'borderSpacing',
-  'borderWidth',
-  'contrast',
-  'grayscale',
-  'hueRotate',
-  'invert',
-  'gap',
-  'gradientColorStops',
-  'gradientColorStopPositions',
-  'inset',
-  'margin',
-  'opacity',
-  'padding',
-  'saturate',
-  'scale',
-  'sepia',
-  'skew',
-  'space',
-  'translate',
+  'perspective',
+  'aspect',
+  'ease',
+  'animate',
 ];
 
 export function createTailwindMerge(tailwindConfig: TailwindConfig) {
@@ -59,9 +52,7 @@ export function createTailwindMerge(tailwindConfig: TailwindConfig) {
           typeof tailwindConfigScale[key] === 'object'
         ) {
           combinedKeys.push(
-            ...Object.keys(tailwindConfigScale[key])
-              .filter((value) => value !== 'DEFAULT')
-              .map((value) => `${key}-${value}`),
+            ...Object.keys(tailwindConfigScale[key]).map((value) => `${key}-${value}`),
           );
         } else {
           combinedKeys.push(key);
@@ -84,9 +75,7 @@ export function createTailwindMerge(tailwindConfig: TailwindConfig) {
           typeof tailwindConfigScale[key] === 'object'
         ) {
           combinedKeys.push(
-            ...Object.keys(tailwindConfigScale[key])
-              .filter((value) => value !== 'DEFAULT')
-              .map((value) => `${key}-${value}`),
+            ...Object.keys(tailwindConfigScale[key]).map((value) => `${key}-${value}`),
           );
         } else {
           combinedKeys.push(key);

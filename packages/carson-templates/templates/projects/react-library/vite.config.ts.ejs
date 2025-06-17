@@ -10,6 +10,7 @@ strategy: overwrite
  * Run `npx carson update workspace` to regenerate.
  */
 
+import tailwindcss from '@tailwindcss/vite';
 import _ from 'lodash';
 import {defineConfig} from 'vitest/config';
 
@@ -23,6 +24,7 @@ export default defineConfig(
           include: ['<%- SOURCE_DIRECTORY %>/**'],
         },
       },
+      plugins: [tailwindcss()],
     },
     <%- JSON.stringify(project.config.overrides?.viteConfig ?? {}, null, 2) %>,
   ),

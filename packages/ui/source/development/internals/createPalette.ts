@@ -40,10 +40,10 @@ export function createPalette<const N extends string>({
 
       if (existingSwatch) {
         Object.assign(palette, {
-          [existingSwatch.stop]: createDisplayColor(existingSwatch.hex, true),
+          [existingSwatch.stop]: createDisplayColor(existingSwatch.hex, false),
         });
       } else {
-        Object.assign(palette, {[newSwatch.stop]: createDisplayColor(newSwatch.hex, true)});
+        Object.assign(palette, {[newSwatch.stop]: createDisplayColor(newSwatch.hex, false)});
       }
     });
 

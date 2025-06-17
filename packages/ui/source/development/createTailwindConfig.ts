@@ -1,11 +1,10 @@
-import {type Config as TailwindConfig} from 'tailwindcss';
+import {type Config as BaseTailwindConfig} from 'tailwindcss';
+import plugin from 'tailwindcss/plugin';
 
 import {DEFAULT_STOP, type DEFAULT_STOPS} from './internals/constants.js';
 import {createPalette} from './internals/createPalette.js';
-import {resolveModule} from './internals/resolveModule.js';
 
 let defaultCreateTailwindConfigOptions = {
-  content: ['./{.storybook,app,source,stories,tests}/**/*.{js,jsx,ts,tsx,mdx}', '@jakubmazanec/ui'],
   colors: {
     gray: '#6c6e79',
     neutral: '#6c6e79', // copy of "gray"
@@ -69,11 +68,17 @@ export type CreateTailwindConfigOptions = {
   >;
 };
 
+export type TailwindConfig = {
+  theme: BaseTailwindConfig['theme'];
+  // TODO: find another solution; following is needed because of this: https://github.com/tailwindlabs/tailwindcss/issues/18237
+  plugins: BaseTailwindConfig['plugins'];
+};
+
 export function createTailwindConfig({
   content,
   colors,
 }: CreateTailwindConfigOptions = defaultCreateTailwindConfigOptions): TailwindConfig {
-  let themeColors = {
+  let themeColors: Record<string, Record<string, string> | string> = {
     transparent: 'transparent',
     current: 'currentColor',
     white: '#fff',
@@ -119,71 +124,64 @@ export function createTailwindConfig({
     }
   }
 
-  let resolvedContent = [];
+  // TODO: find another solution; following is needed because of this: https://github.com/tailwindlabs/tailwindcss/issues/18237
+  let root: Record<string, Record<string, string> | string> = {
+    '--radius-none': '0',
+    '--radius-0_5': '0.125rem',
+    '--radius-1': '0.25rem',
+    '--radius-1_5': '0.375rem',
+    '--radius-2': '0.5rem',
+    '--radius-2_5': '0.625rem',
+    '--radius-3': '0.75rem',
+    '--radius-4': '1rem',
+    '--radius-full': '9999px',
+    '--font-sans':
+      'InterVariable, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+  };
 
-  for (let contentPath of content ?? []) {
-    try {
-      if (contentPath.startsWith('.') || contentPath.startsWith('/')) {
-        resolvedContent.push(contentPath);
-      } else {
-        resolvedContent.push(`${resolveModule(contentPath)}/**`);
+  for (let [colorName, colorValue] of Object.entries(themeColors)) {
+    if (typeof colorValue === 'string') {
+      let variableName = `--color-${colorName}`;
+      let variableValue = colorValue;
+
+      root[variableName] = variableValue;
+      themeColors[colorName] = `var(${variableName})`;
+    } else if (typeof colorValue === 'object') {
+      for (let [shadeName, shadeValue] of Object.entries(colorValue)) {
+        let variableName = `--color-${colorName}-${shadeName}`;
+        let variableValue = shadeValue;
+
+        root[variableName] = variableValue;
+        (themeColors[colorName] as Record<string, string>)[shadeName] = `var(${variableName})`; // type assertion is ok, we know the shape of `themeColors`
       }
-    } catch {
-      // no-op, because we're catching error caused by `createRequire` not being a function in a browser environment
     }
   }
 
   return {
-    content: resolvedContent,
     theme: {
       colors: themeColors,
-      borderRadius: {
-        none: '0',
-        DEFAULT: '0.25rem',
-        '0.5': '0.125rem',
-        '1': '0.25rem',
-        '1.5': '0.375rem',
-        '2': '0.5rem',
-        '2.5': '0.625rem',
-        '3': '0.75rem',
-        '4': '1rem',
-        full: '9999px',
+      radius: {
+        none: 'var(--radius-none)',
+        '0.5': 'var(--radius-0_5)',
+        '1': 'var(--radius-1)',
+        '1.5': 'var(--radius-1_5)',
+        '2': 'var(--radius-2)',
+        '2.5': 'var(--radius-2_5)',
+        '3': 'var(--radius-3)',
+        '4': 'var(--radius-4)',
+        full: 'var(--radius-full)',
       },
-      extend: {
-        spacing: {
-          13: '3.25rem',
-          15: '3.75rem',
-          17: '4.25rem',
-          18: '4.5rem',
-          19: '4.75rem',
-          21: '5.25rem',
-          22: '5.5rem',
-          23: '5.75rem',
-          25: '6.25rem',
-          26: '6.5rem',
-          27: '6.75rem',
-          29: '6.25rem',
-          30: '7.5rem',
-          34: '8.5rem',
-          38: '9.5rem',
-          40: '10rem',
-        },
-        fontFamily: {
-          sans: [
-            'InterVariable',
-            'ui-sans-serif',
-            'system-ui',
-            'sans-serif',
-            '"Apple Color Emoji"',
-            '"Segoe UI Emoji"',
-            '"Segoe UI Symbol"',
-            '"Noto Color Emoji"',
-          ],
-        },
+      font: {
+        sans: 'var(--font-sans)',
       },
     },
-    future: {
-      hoverOnlyWhenSupported: true,
-    },
+    // TODO: find another solution; following is needed because of this: https://github.com/tailwindlabs/tailwindcss/issues/18237
+    plugins: [
+      plugin(({addBase}) => {
+        addBase({
+          ':root': root,
+        });
+      }),
+    ],
   };
 }
