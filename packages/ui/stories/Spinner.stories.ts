@@ -1,4 +1,4 @@
-import {type Meta, type StoryObj} from '@storybook/react';
+import {type Meta, type StoryObj} from '@storybook/react-vite';
 
 import {Spinner} from '../source/main.js';
 

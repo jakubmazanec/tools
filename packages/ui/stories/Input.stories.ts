@@ -1,5 +1,5 @@
 import {MagnifyingGlassIcon} from '@heroicons/react/24/solid';
-import {type Meta, type StoryObj} from '@storybook/react';
+import {type Meta, type StoryObj} from '@storybook/react-vite';
 
 import {Input} from '../source/main.js';
 

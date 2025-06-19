@@ -12,18 +12,10 @@ import _ from 'lodash';
 const config: StorybookConfig = _.merge(
   {
     stories: ['../stories/**/*.mdx', '../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
-    addons: [
-      '@chromatic-com/storybook',
-      '@storybook/addon-essentials',
-      '@storybook/addon-interactions',
-      '@storybook/addon-links',
-    ],
+    addons: ['@chromatic-com/storybook', '@storybook/addon-docs', '@storybook/addon-links'],
     framework: {
       name: '@storybook/react-vite',
       options: {},
-    },
-    docs: {
-      autodocs: 'tag',
     },
   } satisfies StorybookConfig,
   {
