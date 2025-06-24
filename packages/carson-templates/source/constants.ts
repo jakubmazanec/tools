@@ -155,7 +155,7 @@ export const DEPENDENCY_VERSIONS: Record<string, string> = {
   'del-cli': '^6.0.0',
   esbuild: '^0.24.0',
   eslint: '^9.0.0',
-  'happy-dom': '^16.0.0',
+  'happy-dom': '^18.0.0',
   isbot: '^5.0.0',
   lodash: '^4.0.0',
   'patch-package': '^8.0.0',
