@@ -57,7 +57,7 @@
     "typescript": "^5.7.3",
     "vitest": "^3.0.4"
   },
-  "packageManager": "npm@11.4.2",
+  "packageManager": "npm@11.3.0",
   "engines": {
     "node": "^24.1.0"
   }
