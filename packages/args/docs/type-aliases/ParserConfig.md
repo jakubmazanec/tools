@@ -7,7 +7,7 @@
 > **ParserConfig** = `object`
 
 Defined in:
-[args/source/ParserConfig.ts:6](https://github.com/jakubmazanec/tools/blob/d956cf350ae3e6bad1df754a19dfbabb088c1451/packages/args/source/ParserConfig.ts#L6)
+[args/source/ParserConfig.ts:6](https://github.com/jakubmazanec/tools/blob/a1a5edf56256b0aa4e209cc73bc7a07f5d7fc236/packages/args/source/ParserConfig.ts#L6)
 
 Parser configuration specifies how the command line arguments should be parsed.
 
@@ -18,7 +18,7 @@ Parser configuration specifies how the command line arguments should be parsed.
 > `optional` **allowUnknownOptions**: `boolean`
 
 Defined in:
-[args/source/ParserConfig.ts:17](https://github.com/jakubmazanec/tools/blob/d956cf350ae3e6bad1df754a19dfbabb088c1451/packages/args/source/ParserConfig.ts#L17)
+[args/source/ParserConfig.ts:17](https://github.com/jakubmazanec/tools/blob/a1a5edf56256b0aa4e209cc73bc7a07f5d7fc236/packages/args/source/ParserConfig.ts#L17)
 
 Allow parsing unknown options.
 
@@ -29,7 +29,7 @@ Allow parsing unknown options.
 > `optional` **allowUnknownParameters**: `boolean`
 
 Defined in:
-[args/source/ParserConfig.ts:20](https://github.com/jakubmazanec/tools/blob/d956cf350ae3e6bad1df754a19dfbabb088c1451/packages/args/source/ParserConfig.ts#L20)
+[args/source/ParserConfig.ts:20](https://github.com/jakubmazanec/tools/blob/a1a5edf56256b0aa4e209cc73bc7a07f5d7fc236/packages/args/source/ParserConfig.ts#L20)
 
 Allow parsing unknown parameters.
 
@@ -40,7 +40,7 @@ Allow parsing unknown parameters.
 > `optional` **commands**: [`CommandsConfig`](CommandsConfig.md)
 
 Defined in:
-[args/source/ParserConfig.ts:8](https://github.com/jakubmazanec/tools/blob/d956cf350ae3e6bad1df754a19dfbabb088c1451/packages/args/source/ParserConfig.ts#L8)
+[args/source/ParserConfig.ts:8](https://github.com/jakubmazanec/tools/blob/a1a5edf56256b0aa4e209cc73bc7a07f5d7fc236/packages/args/source/ParserConfig.ts#L8)
 
 Commands configuration.
 
@@ -51,7 +51,7 @@ Commands configuration.
 > `optional` **options**: [`OptionsConfig`](OptionsConfig.md)
 
 Defined in:
-[args/source/ParserConfig.ts:14](https://github.com/jakubmazanec/tools/blob/d956cf350ae3e6bad1df754a19dfbabb088c1451/packages/args/source/ParserConfig.ts#L14)
+[args/source/ParserConfig.ts:14](https://github.com/jakubmazanec/tools/blob/a1a5edf56256b0aa4e209cc73bc7a07f5d7fc236/packages/args/source/ParserConfig.ts#L14)
 
 Options configuration.
 
@@ -62,6 +62,6 @@ Options configuration.
 > `optional` **parameters**: [`ParametersConfig`](ParametersConfig.md)
 
 Defined in:
-[args/source/ParserConfig.ts:11](https://github.com/jakubmazanec/tools/blob/d956cf350ae3e6bad1df754a19dfbabb088c1451/packages/args/source/ParserConfig.ts#L11)
+[args/source/ParserConfig.ts:11](https://github.com/jakubmazanec/tools/blob/a1a5edf56256b0aa4e209cc73bc7a07f5d7fc236/packages/args/source/ParserConfig.ts#L11)
 
 Parameters configuration.
