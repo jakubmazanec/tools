@@ -30,7 +30,7 @@
     "@jakubmazanec/eslint-config": "^4.1.0",
     "@types/lodash": "^4.17.15",
     "@types/node": "^22.15.21",
-    "@vitest/coverage-v8": "^3.0.4",
+    "@vitest/coverage-v8": "^3.2.4",
     "concurrently": "^9.1.2",
     "del-cli": "^6.0.0",
     "esbuild": "^0.24.2",
@@ -41,7 +41,7 @@
     "typedoc": "^0.28.4",
     "typedoc-plugin-markdown": "^4.6.3",
     "typescript": "^5.7.3",
-    "vitest": "^3.0.4"
+    "vitest": "^3.2.4"
   },
   "packageManager": "npm@11.3.0",
   "engines": {
