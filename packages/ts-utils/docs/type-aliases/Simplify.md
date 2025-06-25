@@ -7,7 +7,7 @@
 > **Simplify**\<`T`\> = `{ [KeyType in keyof T]: T[KeyType] }`
 
 Defined in:
-[packages/ts-utils/source/types/Simplify.ts:6](https://github.com/jakubmazanec/tools/blob/d956cf350ae3e6bad1df754a19dfbabb088c1451/packages/ts-utils/source/types/Simplify.ts#L6)
+[packages/ts-utils/source/types/Simplify.ts:6](https://github.com/jakubmazanec/tools/blob/5907d31a071e860d7db8b8a00f698d18fe23e18a/packages/ts-utils/source/types/Simplify.ts#L6)
 
 Maps all keys of type `T` to a new object type. Useful for converting interfaces to types or showing
 better hints from the language server.

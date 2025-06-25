@@ -8,6 +8,6 @@
 > [`templateVariablesSchema`](../variables/templateVariablesSchema.md)\>
 
 Defined in:
-[packages/template/source/TemplateVariables.ts:14](https://github.com/jakubmazanec/tools/blob/d956cf350ae3e6bad1df754a19dfbabb088c1451/packages/template/source/TemplateVariables.ts#L14)
+[packages/template/source/TemplateVariables.ts:14](https://github.com/jakubmazanec/tools/blob/5907d31a071e860d7db8b8a00f698d18fe23e18a/packages/template/source/TemplateVariables.ts#L14)
 
 Type of `variables`` property of [TemplateAttributes](TemplateAttributes.md).

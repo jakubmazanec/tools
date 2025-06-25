@@ -8,4 +8,4 @@
 > [`dataTableFacetingSchema`](../variables/dataTableFacetingSchema.md)\>
 
 Defined in:
-[packages/ui/source/components/data-table/DataTableFaceting.ts:12](https://github.com/jakubmazanec/tools/blob/d956cf350ae3e6bad1df754a19dfbabb088c1451/packages/ui/source/components/data-table/DataTableFaceting.ts#L12)
+[packages/ui/source/components/data-table/DataTableFaceting.ts:12](https://github.com/jakubmazanec/tools/blob/5907d31a071e860d7db8b8a00f698d18fe23e18a/packages/ui/source/components/data-table/DataTableFaceting.ts#L12)
