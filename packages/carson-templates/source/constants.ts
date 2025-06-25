@@ -148,7 +148,6 @@ export const DEPENDENCY_VERSIONS: Record<string, string> = {
   '@types/react': '^19.0.0',
   '@types/react-dom': '^19.0.0',
   '@vitest/coverage-v8': '^3.0.0',
-  autoprefixer: '^10.0.0',
   chromatic: '^13.0.0',
   concurrently: '^9.0.0',
   'cross-env': '^7.0.0',
