@@ -56,7 +56,7 @@
     "esbuild": "^0.25.5",
     "eslint": "^9.29.0",
     "prettier": "^3.6.0",
-    "prettier-plugin-packagejson": "^2.5.15",
+    "prettier-plugin-packagejson": "^2.5.16",
     "tsx": "^4.20.3",
     "typescript": "^5.8.3"
   },
