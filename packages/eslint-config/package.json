@@ -17,7 +17,7 @@
     "source"
   ],
   "scripts": {
-    "build": "del-cli build tsconfig.tsbuildinfo && esbuild \"source/**/*\" --platform=node --target=node24.1 --outdir=build --sourcemap && tsc",
+    "build": "del-cli build tsconfig.tsbuildinfo && esbuild \"source/**/*\" --platform=node --target=node24.3 --outdir=build --sourcemap && tsc",
     "check-rules": "tsx tools/check-rules/main.ts",
     "clean": "del-cli coverage build *.tsbuildinfo",
     "format": "prettier . --write --ignore-unknown",
@@ -51,7 +51,7 @@
     "@types/confusing-browser-globals": "^1.0.3",
     "@types/eslint-config-prettier": "^6.11.3",
     "@types/eslint-plugin-jsx-a11y": "^6.10.0",
-    "@types/node": "^22.15.21",
+    "@types/node": "^24.0.4",
     "del-cli": "^6.0.0",
     "esbuild": "^0.25.5",
     "eslint": "^9.29.0",
@@ -72,6 +72,7 @@
   },
   "packageManager": "npm@11.3.0",
   "engines": {
-    "node": "^24.1.0"
+    "node": "^24.3.0",
+    "npm": "^11.3.0"
   }
 }

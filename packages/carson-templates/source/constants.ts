@@ -174,15 +174,13 @@ export const DEPENDENCY_VERSIONS: Record<string, string> = {
   vite: '^6.0.0',
   vitest: '^3.0.0',
 
-  node: '^24.1.0',
-  '@types/node': '^22.0.0',
-  npm: '^11.3.0',
+  node: '^24.0.0',
+  '@types/node': '^24.0.0',
+  npm: '^11.0.0',
 
   gel: '^6.7.0',
 };
 
 // commands
-export const BUILD_TO_ESM_COMMAND = `esbuild "${SOURCE_DIRECTORY}/**/*" --platform=node --target=node${semver.major(semver.minVersion(DEPENDENCY_VERSIONS.node!)!)}.${semver.minor(semver.minVersion(DEPENDENCY_VERSIONS.node!)!)} --outdir=${BUILD_DIRECTORY} --sourcemap`;
-export const BUILD_TO_CJS_COMMAND = `esbuild "${SOURCE_DIRECTORY}/**/*" --platform=node --target=node${semver.major(semver.minVersion(DEPENDENCY_VERSIONS.node!)!)}.${semver.minor(semver.minVersion(DEPENDENCY_VERSIONS.node!)!)} --format=cjs --outdir=${BUILD_DIRECTORY} --sourcemap`;
 export const FORMAT_COMMAND = 'prettier . --write --ignore-unknown';
 export const TEST_COMMAND = 'vitest run --coverage --passWithNoTests';

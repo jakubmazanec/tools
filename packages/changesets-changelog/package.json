@@ -17,7 +17,7 @@
     "source"
   ],
   "scripts": {
-    "build": "del-cli build tsconfig.tsbuildinfo && esbuild \"source/**/*\" --platform=node --target=node24.1 --format=cjs --outdir=build --sourcemap && tsc",
+    "build": "del-cli build tsconfig.tsbuildinfo && esbuild \"source/**/*\" --platform=node --target=node24.3 --format=cjs --outdir=build --sourcemap && tsc",
     "clean": "del-cli coverage build *.tsbuildinfo",
     "format": "prettier . --write --ignore-unknown",
     "lint": "eslint .",
@@ -33,7 +33,7 @@
     "@changesets/types": "^6.1.0",
     "@jakubmazanec/eslint-config": "^4.1.0",
     "@types/lodash": "^4.17.18",
-    "@types/node": "^22.15.21",
+    "@types/node": "^24.0.4",
     "@vitest/coverage-v8": "^3.2.4",
     "del-cli": "^6.0.0",
     "esbuild": "^0.25.5",
@@ -46,6 +46,7 @@
   },
   "packageManager": "npm@11.3.0",
   "engines": {
-    "node": "^24.1.0"
+    "node": "^24.3.0",
+    "npm": "^11.3.0"
   }
 }

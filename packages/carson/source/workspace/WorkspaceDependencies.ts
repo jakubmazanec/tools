@@ -88,6 +88,7 @@ export class WorkspaceDependencies<M extends boolean = true> extends Array<Works
       for (let [dependencyName, dependencyVersion] of Object.entries({
         ...workspace.packageJson?.dependencies,
         ...workspace.packageJson?.devDependencies,
+        ...(workspace.packageJson?.engines as Record<string, string>),
       })) {
         let exactDependencyVersion =
           semver.validRange(dependencyVersion) ?
@@ -109,9 +110,10 @@ export class WorkspaceDependencies<M extends boolean = true> extends Array<Works
 
     for (let project of workspace.projects) {
       if (!options?.includeOnlyDevDependencies) {
-        for (let [dependencyName, dependencyVersion] of Object.entries(
-          project.packageJson.dependencies ?? {},
-        )) {
+        for (let [dependencyName, dependencyVersion] of Object.entries({
+          ...project.packageJson.dependencies,
+          ...(workspace.packageJson?.engines as Record<string, string>),
+        })) {
           let exactDependencyVersion =
             semver.validRange(dependencyVersion) ?
               (semver.minVersion(dependencyVersion)?.format() ??
@@ -141,9 +143,9 @@ export class WorkspaceDependencies<M extends boolean = true> extends Array<Works
       }
 
       if (options?.includeDevDependencies || options?.includeOnlyDevDependencies) {
-        for (let [dependencyName, dependencyVersion] of Object.entries(
-          project.packageJson.devDependencies ?? {},
-        )) {
+        for (let [dependencyName, dependencyVersion] of Object.entries({
+          ...project.packageJson.devDependencies,
+        })) {
           let exactDependencyVersion =
             semver.validRange(dependencyVersion) ?
               (semver.minVersion(dependencyVersion)?.format() ??

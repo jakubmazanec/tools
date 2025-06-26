@@ -4,5 +4,8 @@
   ],
   "devDependencies": {
     "del-cli": "^4.0.1"
+  },
+  "engines": {
+    "node": "^24.0.0"
   }
 }

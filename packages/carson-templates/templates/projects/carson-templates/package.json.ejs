@@ -33,7 +33,7 @@ let packageJson = {
   },
   files: [BUILD_DIRECTORY, SOURCE_DIRECTORY, 'templates'],
   scripts: {
-    build: `del-cli ${BUILD_DIRECTORY} tsconfig.tsbuildinfo && ${BUILD_TO_ESM_COMMAND} && tsc`,
+    build: `del-cli ${BUILD_DIRECTORY} tsconfig.tsbuildinfo && ${getBuildToEsmCommand(workspace)} && tsc`,
     clean: `del-cli coverage ${BUILD_DIRECTORY} *.tsbuildinfo`,
     document: 'del-cli docs && typedoc --options typedoc.config.cjs',
       format: FORMAT_COMMAND,
@@ -42,10 +42,8 @@ let packageJson = {
     typecheck: 'tsc --project tsconfig.typecheck.json',
   },
   devDependencies: getDependencies(developmentDependencies, workspace),
-  packageManager: `npm@${semver.minVersion(DEPENDENCY_VERSIONS.npm)}`,
-  engines: {
-    node: DEPENDENCY_VERSIONS.node,
-  },
+    packageManager: `npm@${semver.minVersion(getDependencies(['npm'], workspace)['npm'])}`,
+    engines: getDependencies(['node', 'npm'], workspace),
 };
 -%>
 <%- JSON.stringify(packageJson) %>

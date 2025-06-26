@@ -43,6 +43,23 @@ describe('WorkspaceDependencies', () => {
           ],
         },
         {
+          name: 'node',
+          versions: ['^24.0.0'],
+          exactVersions: ['24.0.0'],
+          projects: [
+            {
+              exactVersion: '24.0.0',
+              name: '@jakubmazanec/bar',
+              version: '^24.0.0',
+            },
+            {
+              exactVersion: '24.0.0',
+              name: '@jakubmazanec/foo',
+              version: '^24.0.0',
+            },
+          ],
+        },
+        {
           name: '@jakubmazanec/bar',
           versions: ['^1.0.0'],
           exactVersions: ['1.0.0'],
@@ -99,6 +116,23 @@ describe('WorkspaceDependencies', () => {
           ],
         },
         {
+          name: 'node',
+          versions: ['^24.0.0'],
+          exactVersions: ['24.0.0'],
+          projects: [
+            {
+              exactVersion: '24.0.0',
+              name: '@jakubmazanec/bar',
+              version: '^24.0.0',
+            },
+            {
+              exactVersion: '24.0.0',
+              name: '@jakubmazanec/foo',
+              version: '^24.0.0',
+            },
+          ],
+        },
+        {
           name: '@types/react',
           versions: ['17.0.43', '^17.0.43'],
           exactVersions: ['17.0.43'],
@@ -141,9 +175,10 @@ describe('WorkspaceDependencies', () => {
       });
 
       expect(workspaceDependencies.getVersions()).toEqual({
-        react: ['17.0.2', '^17.0.2'],
         '@jakubmazanec/bar': ['^1.0.0'],
         '@types/react': ['17.0.43', '^17.0.43'],
+        node: ['^24.0.0'],
+        react: ['17.0.2', '^17.0.2'],
       });
     });
 
@@ -156,9 +191,10 @@ describe('WorkspaceDependencies', () => {
       });
 
       expect(workspaceDependencies.getVersions({useExactVersions: true})).toEqual({
-        react: ['17.0.2'],
         '@jakubmazanec/bar': ['1.0.0'],
         '@types/react': ['17.0.43'],
+        node: ['24.0.0'],
+        react: ['17.0.2'],
       });
     });
   });

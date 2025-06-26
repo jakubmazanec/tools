@@ -21,9 +21,9 @@
     "source"
   ],
   "scripts": {
-    "build": "del-cli build tsconfig.tsbuildinfo && esbuild \"source/**/*\" --platform=node --target=node24.1 --outdir=build --sourcemap && tsc",
+    "build": "del-cli build tsconfig.tsbuildinfo && esbuild \"source/**/*\" --platform=node --target=node24.3 --outdir=build --sourcemap && tsc",
     "clean": "del-cli coverage build *.tsbuildinfo",
-    "develop": "concurrently \"esbuild \"source/**/*\" --platform=node --target=node24.1 --outdir=build --sourcemap --watch\" \"tsc --watch\"",
+    "develop": "concurrently \"esbuild \"source/**/*\" --platform=node --target=node24.3 --outdir=build --sourcemap --watch\" \"tsc --watch\"",
     "document": "del-cli docs && typedoc --options typedoc.config.cjs",
     "format": "prettier . --write --ignore-unknown",
     "lint": "eslint .",
@@ -59,7 +59,7 @@
     "@types/fs-extra": "^11.0.4",
     "@types/lodash": "^4.17.18",
     "@types/micromatch": "^4.0.9",
-    "@types/node": "^22.15.21",
+    "@types/node": "^24.0.4",
     "@types/react": "^19.1.8",
     "@types/semver": "^7.7.0",
     "@types/zen-observable": "^0.8.7",
@@ -82,6 +82,7 @@
   },
   "packageManager": "npm@11.3.0",
   "engines": {
-    "node": "^24.1.0"
+    "node": "^24.3.0",
+    "npm": "^11.3.0"
   }
 }
