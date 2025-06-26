@@ -59,9 +59,9 @@ let packageJson = lodash.merge(
     },
     files,
     scripts: {
-      build: `del-cli ${BUILD_DIRECTORY} tsconfig.tsbuildinfo && ${BUILD_TO_ESM_COMMAND} --loader:.woff2=copy && tsc && storybook build`,
+      build: `del-cli ${BUILD_DIRECTORY} tsconfig.tsbuildinfo && ${getBuildToEsmCommand(workspace)} --loader:.woff2=copy && tsc && storybook build`,
       clean: `del-cli coverage ${BUILD_DIRECTORY} *.tsbuildinfo`,
-      develop: `concurrently "${BUILD_TO_ESM_COMMAND} --loader:.woff2=copy --watch" "tsc --watch" "storybook dev -p 6006 --no-open"`,
+      develop: `concurrently "${getBuildToEsmCommand(workspace)} --loader:.woff2=copy --watch" "tsc --watch" "storybook dev -p 6006 --no-open"`,
       document: 'del-cli docs && typedoc --options typedoc.config.cjs',
       format: FORMAT_COMMAND,
       lint: 'eslint .',
@@ -73,10 +73,8 @@ let packageJson = lodash.merge(
       react: `${semver.major(semver.minVersion(DEPENDENCY_VERSIONS['react']))}.x`,
       'react-dom': `${semver.major(semver.minVersion(DEPENDENCY_VERSIONS['react-dom']))}.x`,
     },
-    packageManager: `npm@${semver.minVersion(DEPENDENCY_VERSIONS.npm)}`,
-    engines: {
-      node: DEPENDENCY_VERSIONS.node,
-    },
+    packageManager: `npm@${semver.minVersion(getDependencies(['npm'], workspace)['npm'])}`,
+    engines: getDependencies(['node', 'npm'], workspace),
   },
   project.config.overrides?.packageJson ?? {},
 );

@@ -8,5 +8,8 @@
     "foo": "http://asdf.com/asdf.tar.gz",
     "qux": "file:../dyl",
     "til": "latest"
+  },
+  "engines": {
+    "node": "^24.0.0"
   }
 }

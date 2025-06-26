@@ -36,10 +36,8 @@ let packageJson = lodash.merge(
       uninstall: 'del-cli ./**/node_modules ./package-lock.json',
     },
     devDependencies: getDependencies(developmentDependencies, workspace),
-    packageManager: `npm@${semver.minVersion(DEPENDENCY_VERSIONS.npm)}`,
-    engines: {
-      node: DEPENDENCY_VERSIONS.node,
-    },
+    packageManager: `npm@${semver.minVersion(getDependencies(['npm'], workspace)['npm'])}`,
+    engines: getDependencies(['node', 'npm'], workspace),
   },
   workspace.config.overrides?.packageJson ?? {},
 );

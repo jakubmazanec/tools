@@ -338,6 +338,9 @@ describe('Workspace', () => {
                 qux: 'file:../dyl',
                 til: 'latest',
               },
+              engines: {
+                node: '^24.0.0',
+              },
             },
             errors: [],
           },
@@ -593,6 +596,9 @@ describe('Workspace', () => {
               },
               name: '@jakubmazanec/bar',
               version: '1.0.0',
+              engines: {
+                node: '^24.0.0',
+              },
             },
             errors: [],
           },
@@ -613,6 +619,9 @@ describe('Workspace', () => {
               },
               name: '@jakubmazanec/foo',
               version: '1.0.0',
+              engines: {
+                node: '^24.0.0',
+              },
             },
             errors: [],
           },
@@ -625,6 +634,9 @@ describe('Workspace', () => {
           devDependencies: {
             'del-cli': '^4.0.1',
           },
+          engines: {
+            node: '^24.0.0',
+          },
         },
         allDependencies: [
           {
@@ -632,6 +644,23 @@ describe('Workspace', () => {
             name: 'del-cli',
             projects: [],
             versions: ['^4.0.1'],
+          },
+          {
+            name: 'node',
+            versions: ['^24.0.0'],
+            exactVersions: ['24.0.0'],
+            projects: [
+              {
+                exactVersion: '24.0.0',
+                name: '@jakubmazanec/bar',
+                version: '^24.0.0',
+              },
+              {
+                exactVersion: '24.0.0',
+                name: '@jakubmazanec/foo',
+                version: '^24.0.0',
+              },
+            ],
           },
           {
             exactVersions: ['17.0.2'],

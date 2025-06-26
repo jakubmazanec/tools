@@ -1,5 +1,7 @@
 export * from './constants.js';
 export * from './getAppUrl.js';
+export * from './getBuildToCjsCommand.js';
+export * from './getBuildToEsmCommand.js';
 export * from './getDependencies.js';
 export * from './getDevelopmentBranch.js';
 export * from './getMainBranch.js';
