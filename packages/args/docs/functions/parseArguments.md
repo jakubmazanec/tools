@@ -8,7 +8,7 @@
 > [`Arguments`](../type-aliases/Arguments.md)\<`O`\>
 
 Defined in:
-[args/source/parseArguments.ts:46](https://github.com/jakubmazanec/tools/blob/5907d31a071e860d7db8b8a00f698d18fe23e18a/packages/args/source/parseArguments.ts#L46)
+[args/source/parseArguments.ts:46](https://github.com/jakubmazanec/tools/blob/6fe16df773d5da14c29261ea934e72b3f99fabb7/packages/args/source/parseArguments.ts#L46)
 
 Parses a list of command line arguments into an arguments object. Based on provided parser config,
 raw arguments can be parsed as commands, options and parameters.

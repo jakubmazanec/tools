@@ -17,8 +17,6 @@
 - [APP_PORT](variables/APP_PORT.md)
 - [AUTHOR](variables/AUTHOR.md)
 - [BUILD_DIRECTORY](variables/BUILD_DIRECTORY.md)
-- [BUILD_TO_CJS_COMMAND](variables/BUILD_TO_CJS_COMMAND.md)
-- [BUILD_TO_ESM_COMMAND](variables/BUILD_TO_ESM_COMMAND.md)
 - [CARSON_PACKAGE_NAME](variables/CARSON_PACKAGE_NAME.md)
 - [CHANGELOG_PACKAGE_NAME](variables/CHANGELOG_PACKAGE_NAME.md)
 - [DEPENDENCY_VERSIONS](variables/DEPENDENCY_VERSIONS.md)
@@ -41,6 +39,8 @@
 ## Functions
 
 - [getAppUrl](functions/getAppUrl.md)
+- [getBuildToCjsCommand](functions/getBuildToCjsCommand.md)
+- [getBuildToEsmCommand](functions/getBuildToEsmCommand.md)
 - [getDependencies](functions/getDependencies.md)
 - [getDevelopmentBranch](functions/getDevelopmentBranch.md)
 - [getMainBranch](functions/getMainBranch.md)

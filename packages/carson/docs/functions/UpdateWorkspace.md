@@ -7,7 +7,7 @@
 > **UpdateWorkspace**(`__namedParameters`): `Element`
 
 Defined in:
-[packages/carson/source/commands/update-workspace/UpdateWorkspace.tsx:15](https://github.com/jakubmazanec/tools/blob/5907d31a071e860d7db8b8a00f698d18fe23e18a/packages/carson/source/commands/update-workspace/UpdateWorkspace.tsx#L15)
+[packages/carson/source/commands/update-workspace/UpdateWorkspace.tsx:15](https://github.com/jakubmazanec/tools/blob/6fe16df773d5da14c29261ea934e72b3f99fabb7/packages/carson/source/commands/update-workspace/UpdateWorkspace.tsx#L15)
 
 ## Parameters
 

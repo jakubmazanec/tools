@@ -7,7 +7,7 @@
 > `const` **useSpinnerTheme**: `object` & (`themeProps`) => `object`
 
 Defined in:
-[packages/ui/source/components/Spinner.tsx:9](https://github.com/jakubmazanec/tools/blob/5907d31a071e860d7db8b8a00f698d18fe23e18a/packages/ui/source/components/Spinner.tsx#L9)
+[packages/ui/source/components/Spinner.tsx:9](https://github.com/jakubmazanec/tools/blob/6fe16df773d5da14c29261ea934e72b3f99fabb7/packages/ui/source/components/Spinner.tsx#L9)
 
 ## Type declaration
 

@@ -9,7 +9,7 @@
 > `ComponentRef`\<`T`\> & `object`
 
 Defined in:
-[packages/ui/source/components/Radio.tsx:21](https://github.com/jakubmazanec/tools/blob/5907d31a071e860d7db8b8a00f698d18fe23e18a/packages/ui/source/components/Radio.tsx#L21)
+[packages/ui/source/components/Radio.tsx:21](https://github.com/jakubmazanec/tools/blob/6fe16df773d5da14c29261ea934e72b3f99fabb7/packages/ui/source/components/Radio.tsx#L21)
 
 ## Type declaration
 
