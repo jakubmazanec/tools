@@ -1,5 +1,65 @@
 # @jakubmazanec/changesets-changelog
 
+## 2.0.11
+
+### Patch Changes
+
+- [#352](https://github.com/jakubmazanec/tools/pull/352)
+  [`21460a4`](https://github.com/jakubmazanec/tools/commit/21460a41f8344225ef44c74686003bbfb450883c)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@changesets/parse` updated to
+  version `^0.4.1`.
+
+- [#353](https://github.com/jakubmazanec/tools/pull/353)
+  [`a6ba9aa`](https://github.com/jakubmazanec/tools/commit/a6ba9aae3a335a90ad85cda8c41be4df6766663e)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@changesets/types` updated to
+  version `^6.1.0`.
+
+- [#366](https://github.com/jakubmazanec/tools/pull/366)
+  [`6086ceb`](https://github.com/jakubmazanec/tools/commit/6086cebb7940c388e039ca6713a28f152d08014d)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `eslint` updated to version
+  `^9.29.0`.
+
+- [#393](https://github.com/jakubmazanec/tools/pull/393)
+  [`f3257d7`](https://github.com/jakubmazanec/tools/commit/f3257d7b00224208efb1ff6ed5dac9aaa6b9c9bb)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `typescript` updated to version
+  `^5.8.3`.
+
+- [#375](https://github.com/jakubmazanec/tools/pull/375)
+  [`7f269e9`](https://github.com/jakubmazanec/tools/commit/7f269e98b20ecab6ec429481474d4b03487573d6)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `prettier` updated to version
+  `^3.6.0`.
+
+- [#382](https://github.com/jakubmazanec/tools/pull/382)
+  [`e608655`](https://github.com/jakubmazanec/tools/commit/e608655e96137dbc5370400f8cade5486062dce8)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `dotenv` updated to version
+  `^16.5.0`.
+
+- [#367](https://github.com/jakubmazanec/tools/pull/367)
+  [`6372acf`](https://github.com/jakubmazanec/tools/commit/6372acf98d0483392b5551d455db01333dd16513)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `prettier-plugin-packagejson` updated
+  to version `^2.5.15`.
+
+- [#381](https://github.com/jakubmazanec/tools/pull/381)
+  [`b9108ae`](https://github.com/jakubmazanec/tools/commit/b9108ae066b5386f81724b44433dd973e89c40f3)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@types/lodash` updated to version
+  `^4.17.18`.
+
+- [#389](https://github.com/jakubmazanec/tools/pull/389)
+  [`2eb0e70`](https://github.com/jakubmazanec/tools/commit/2eb0e7005f043b04b4eac45853f948da4bca7605)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `esbuild` updated to version
+  `^0.25.5`.
+
+- [#339](https://github.com/jakubmazanec/tools/pull/339)
+  [`f67e061`](https://github.com/jakubmazanec/tools/commit/f67e061cd4661baff61ffabfeef9dcbdaa86ec0e)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@vitest/coverage-v8` updated to
+  version `^3.2.4`. Dependency `vitest` updated to version `^3.2.4`.
+
+- [#347](https://github.com/jakubmazanec/tools/pull/347)
+  [`74fa88a`](https://github.com/jakubmazanec/tools/commit/74fa88a6249b3d486436ae7655f4962bc4a86e11)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Dependency `@types/node` updated to version
+  `^22.15.21`. Dependency `node` updated to version `^24.1.0`. Dependency `npm` updated to
+  version`^11.3.0`.
+
 ## 2.0.10
 
 ### Patch Changes

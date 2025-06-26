@@ -1,5 +1,155 @@
 # @jakubmazanec/carson-templates
 
+## 6.0.0
+
+### Major Changes
+
+- [#377](https://github.com/jakubmazanec/tools/pull/377)
+  [`312a589`](https://github.com/jakubmazanec/tools/commit/312a589f41219114787d26d1fcb89e9355e86b22)
+  ([@renovate](https://github.com/apps/renovate)) – BREAKING: Templates `projects/react-library` and
+  `workspace` were updated to use `chromatic` v13. This may require manual update of projects that
+  use these templates.
+
+- [#349](https://github.com/jakubmazanec/tools/pull/349)
+  [`d956cf3`](https://github.com/jakubmazanec/tools/commit/d956cf350ae3e6bad1df754a19dfbabb088c1451)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – BREAKING: Templates `projects/react-library`
+  and `projects/remix-app` were updated to use Tailwind CSS v4. This may require manual update of
+  projects that use these templates (see https://tailwindcss.com/docs/upgrade-guide).
+
+- [#351](https://github.com/jakubmazanec/tools/pull/351)
+  [`1f9bc7e`](https://github.com/jakubmazanec/tools/commit/1f9bc7ee8cde2afd235f456de0badfebd898a7be)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – BREAKING: Template `projects/react-library`
+  was updated to use Storybook v9. This may require manual update of projects that use this template
+  (see https://storybook.js.org/docs/migration-guide).
+
+- [#347](https://github.com/jakubmazanec/tools/pull/347)
+  [`74fa88a`](https://github.com/jakubmazanec/tools/commit/74fa88a6249b3d486436ae7655f4962bc4a86e11)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – BREAKING: All templates were updated to use
+  Node.js v24.
+
+- [`3aaeabe`](https://github.com/jakubmazanec/tools/commit/3aaeabe8cd727dfb036f6b979751527e3daa20bc)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – BREAKING: EdgeDB was migrated to Gel in the
+  This will require manual update of projects that use EdgeDB (see
+  https://docs.geldata.com/resources/upgrading). The `projects/remix-app` and `workspace` templates
+  are affected.
+
+- [#347](https://github.com/jakubmazanec/tools/pull/347)
+  [`74fa88a`](https://github.com/jakubmazanec/tools/commit/74fa88a6249b3d486436ae7655f4962bc4a86e11)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – BREAKING: All templates were updated to use
+  TypeDoc v0.28.
+
+- [#379](https://github.com/jakubmazanec/tools/pull/379)
+  [`e3ac874`](https://github.com/jakubmazanec/tools/commit/e3ac8747021da2e3ed0d918036b9c89137cea6c1)
+  ([@renovate](https://github.com/apps/renovate)) – BREAKING: Templates `projects/react-library` and
+  `projects/remix-app` were updated to use `happy-dom` v18. This may require manual update of
+  projects that use these templates.
+
+### Minor Changes
+
+- [`3aaeabe`](https://github.com/jakubmazanec/tools/commit/3aaeabe8cd727dfb036f6b979751527e3daa20bc)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Gel version is now handled similarly to other
+  dependencies versions.
+
+### Patch Changes
+
+- [#366](https://github.com/jakubmazanec/tools/pull/366)
+  [`6086ceb`](https://github.com/jakubmazanec/tools/commit/6086cebb7940c388e039ca6713a28f152d08014d)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `eslint` updated to version
+  `^9.29.0`.
+
+- [#393](https://github.com/jakubmazanec/tools/pull/393)
+  [`f3257d7`](https://github.com/jakubmazanec/tools/commit/f3257d7b00224208efb1ff6ed5dac9aaa6b9c9bb)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `typescript` updated to version
+  `^5.8.3`.
+
+- [#344](https://github.com/jakubmazanec/tools/pull/344)
+  [`2f74b9a`](https://github.com/jakubmazanec/tools/commit/2f74b9ad6eec105af13d63d12dfcb7853ce520ba)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `typedoc` updated to version
+  `^0.28.4`.
+
+- [#383](https://github.com/jakubmazanec/tools/pull/383)
+  [`59ab094`](https://github.com/jakubmazanec/tools/commit/59ab0945161ae01efbd899366fee1c2935125316)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `execa` updated to version `^9.6.0`.
+
+- [#375](https://github.com/jakubmazanec/tools/pull/375)
+  [`7f269e9`](https://github.com/jakubmazanec/tools/commit/7f269e98b20ecab6ec429481474d4b03487573d6)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `prettier` updated to version
+  `^3.6.0`.
+
+- [#342](https://github.com/jakubmazanec/tools/pull/342)
+  [`99c1cb0`](https://github.com/jakubmazanec/tools/commit/99c1cb03860819ee0f5434cf77d0e33d4c348fdd)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `semver` updated to version `^7.7.2`.
+  Dependency `@types/semver` updated to version `^7.7.0`.
+
+- [#367](https://github.com/jakubmazanec/tools/pull/367)
+  [`6372acf`](https://github.com/jakubmazanec/tools/commit/6372acf98d0483392b5551d455db01333dd16513)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `prettier-plugin-packagejson` updated
+  to version `^2.5.15`.
+
+- [#381](https://github.com/jakubmazanec/tools/pull/381)
+  [`b9108ae`](https://github.com/jakubmazanec/tools/commit/b9108ae066b5386f81724b44433dd973e89c40f3)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@types/lodash` updated to version
+  `^4.17.18`.
+
+- [#389](https://github.com/jakubmazanec/tools/pull/389)
+  [`2eb0e70`](https://github.com/jakubmazanec/tools/commit/2eb0e7005f043b04b4eac45853f948da4bca7605)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `esbuild` updated to version
+  `^0.25.5`.
+
+- [#345](https://github.com/jakubmazanec/tools/pull/345)
+  [`d1512ad`](https://github.com/jakubmazanec/tools/commit/d1512ad4199bc4c3b8ee4163abd721ecc7780e9c)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `typedoc-plugin-markdown` updated to
+  version `^4.6.3`.
+
+- [#374](https://github.com/jakubmazanec/tools/pull/374)
+  [`8083959`](https://github.com/jakubmazanec/tools/commit/80839595eab3defb1140fa728d06460b9bfd90ea)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `typedoc` updated to version
+  `^0.28.5`.
+
+- [#370](https://github.com/jakubmazanec/tools/pull/370)
+  [`9e4dd2a`](https://github.com/jakubmazanec/tools/commit/9e4dd2a1c1636c6543490c10903ceaddaa562e54)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `typedoc-plugin-markdown` updated to
+  version `^4.7.0`.
+
+- [#339](https://github.com/jakubmazanec/tools/pull/339)
+  [`f67e061`](https://github.com/jakubmazanec/tools/commit/f67e061cd4661baff61ffabfeef9dcbdaa86ec0e)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@vitest/coverage-v8` updated to
+  version `^3.2.4`. Dependency `vitest` updated to version `^3.2.4`.
+
+- [#347](https://github.com/jakubmazanec/tools/pull/347)
+  [`74fa88a`](https://github.com/jakubmazanec/tools/commit/74fa88a6249b3d486436ae7655f4962bc4a86e11)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Dependency `@types/node` updated to version
+  `^22.15.21`. Dependency `node` updated to version `^24.1.0`. Dependency `npm` updated to
+  version`^11.3.0`.
+
+- [#349](https://github.com/jakubmazanec/tools/pull/349)
+  [`d956cf3`](https://github.com/jakubmazanec/tools/commit/d956cf350ae3e6bad1df754a19dfbabb088c1451)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixed task `develop` in the template
+  `project/react-library` that was missing a WOFF file format loader setting.
+- Updated dependencies
+  [[`5be8df4`](https://github.com/jakubmazanec/tools/commit/5be8df4be0a7be01545baa85f5d5b182544e4937),
+  [`b4f66e4`](https://github.com/jakubmazanec/tools/commit/b4f66e46ca4315cfd5ada551144119326e98091a),
+  [`e912e86`](https://github.com/jakubmazanec/tools/commit/e912e86a048582c396d09ca162410543c238ba7f),
+  [`6086ceb`](https://github.com/jakubmazanec/tools/commit/6086cebb7940c388e039ca6713a28f152d08014d),
+  [`f3257d7`](https://github.com/jakubmazanec/tools/commit/f3257d7b00224208efb1ff6ed5dac9aaa6b9c9bb),
+  [`2f74b9a`](https://github.com/jakubmazanec/tools/commit/2f74b9ad6eec105af13d63d12dfcb7853ce520ba),
+  [`16b1924`](https://github.com/jakubmazanec/tools/commit/16b192487f1474308211ab65f122fca5a2bc46f2),
+  [`3c4d1e8`](https://github.com/jakubmazanec/tools/commit/3c4d1e89a53bb66e5ae58945c427066224bac967),
+  [`7f269e9`](https://github.com/jakubmazanec/tools/commit/7f269e98b20ecab6ec429481474d4b03487573d6),
+  [`f425232`](https://github.com/jakubmazanec/tools/commit/f425232b9fae72132572a898e0b2a7986f248441),
+  [`99c1cb0`](https://github.com/jakubmazanec/tools/commit/99c1cb03860819ee0f5434cf77d0e33d4c348fdd),
+  [`9d522bc`](https://github.com/jakubmazanec/tools/commit/9d522bcfce3e8d130fb1809bc0f1455a009d3c58),
+  [`5be8df4`](https://github.com/jakubmazanec/tools/commit/5be8df4be0a7be01545baa85f5d5b182544e4937),
+  [`6372acf`](https://github.com/jakubmazanec/tools/commit/6372acf98d0483392b5551d455db01333dd16513),
+  [`b9108ae`](https://github.com/jakubmazanec/tools/commit/b9108ae066b5386f81724b44433dd973e89c40f3),
+  [`2eb0e70`](https://github.com/jakubmazanec/tools/commit/2eb0e7005f043b04b4eac45853f948da4bca7605),
+  [`d1512ad`](https://github.com/jakubmazanec/tools/commit/d1512ad4199bc4c3b8ee4163abd721ecc7780e9c),
+  [`8083959`](https://github.com/jakubmazanec/tools/commit/80839595eab3defb1140fa728d06460b9bfd90ea),
+  [`9e4dd2a`](https://github.com/jakubmazanec/tools/commit/9e4dd2a1c1636c6543490c10903ceaddaa562e54),
+  [`f67e061`](https://github.com/jakubmazanec/tools/commit/f67e061cd4661baff61ffabfeef9dcbdaa86ec0e),
+  [`74fa88a`](https://github.com/jakubmazanec/tools/commit/74fa88a6249b3d486436ae7655f4962bc4a86e11)]:
+  - @jakubmazanec/carson@3.0.0
+
 ## 5.0.2
 
 ### Patch Changes

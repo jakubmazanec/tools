@@ -1,6 +1,6 @@
 {
   "name": "@jakubmazanec/eslint-config",
-  "version": "4.1.5",
+  "version": "4.1.6",
   "description": "ESLint config for TypeScript projects.",
   "repository": {
     "type": "git",
