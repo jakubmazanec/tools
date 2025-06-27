@@ -1,6 +1,6 @@
 {
   "name": "@jakubmazanec/cli",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "TypeScript-first library for building CLIs.",
   "repository": {
     "type": "git",

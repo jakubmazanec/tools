@@ -1,5 +1,19 @@
 # @jakubmazanec/carson
 
+## 3.0.1
+
+### Patch Changes
+
+- [#405](https://github.com/jakubmazanec/tools/pull/405)
+  [`6fe16df`](https://github.com/jakubmazanec/tools/commit/6fe16df773d5da14c29261ea934e72b3f99fabb7)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Dependency `@types/node` updated to version
+  `^24.0.3`. Dependency `node` updated to version `^24.3.0`.
+
+- [#405](https://github.com/jakubmazanec/tools/pull/405)
+  [`6fe16df`](https://github.com/jakubmazanec/tools/commit/6fe16df773d5da14c29261ea934e72b3f99fabb7)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Workspace dependencies handling has been
+  fixed; `engines` field of package.json files is now also processed as a list of dependencies.
+
 ## 3.0.0
 
 ### Major Changes
