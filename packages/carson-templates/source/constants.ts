@@ -150,7 +150,7 @@ export const DEPENDENCY_VERSIONS: Record<string, string> = {
   '@vitest/coverage-v8': '^3.0.0',
   chromatic: '^13.0.0',
   concurrently: '^9.0.0',
-  'cross-env': '^7.0.0',
+  'cross-env': '^10.0.0',
   'del-cli': '^6.0.0',
   esbuild: '^0.24.0',
   eslint: '^9.0.0',
