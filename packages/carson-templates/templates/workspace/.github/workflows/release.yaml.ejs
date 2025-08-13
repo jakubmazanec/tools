@@ -54,7 +54,7 @@ jobs:
       contents: read
       id-token: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           token: ${{ secrets.PAT }}
           fetch-depth: 0
@@ -276,7 +276,7 @@ for (let project of workspace.projects) {
       contents: read
       id-token: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           token: ${{ secrets.PAT }}
           fetch-depth: 0
