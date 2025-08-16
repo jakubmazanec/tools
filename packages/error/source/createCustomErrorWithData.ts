@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any -- needed */
-import {type AnyZodObject, type z} from 'zod';
+import {type z, type ZodObject} from 'zod';
 
 import {INTERNAL_ERROR_MESSAGES, UNKNOWN_ERROR} from './constants.js';
 import {createErrorMessage} from './internals.js';
@@ -18,7 +18,7 @@ import {
  * @param errorData Runtime representation of the `ErrorData` type parameter; can be either a class expression, or a Zod schema.
  * @return Class that implements {@link CustomErrorWithData}.
  */
-export function createCustomErrorWithData<ErrorCode extends string, ErrorData extends AnyZodObject>(
+export function createCustomErrorWithData<ErrorCode extends string, ErrorData extends ZodObject>(
   errorName: string,
   errorMessages: ErrorMessages<ErrorCode>,
   errorData: ErrorData,

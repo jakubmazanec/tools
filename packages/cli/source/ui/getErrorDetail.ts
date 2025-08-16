@@ -1,6 +1,5 @@
 import {ParsingError, ValidationError} from '@jakubmazanec/args';
-import {zodIssuesToStrings} from '@jakubmazanec/zod-utils';
-import {ZodError} from 'zod';
+import {prettifyError, ZodError} from 'zod';
 
 import {type ErrorDetail} from './ErrorDetail.js';
 
@@ -51,7 +50,7 @@ export function getErrorDetail(error: unknown): ErrorDetail {
   if (error instanceof ZodError) {
     let errorDetail: ErrorDetail = {
       label: 'Error',
-      description: zodIssuesToStrings(error.issues).join('\n'),
+      description: prettifyError(error),
     };
 
     return errorDetail;

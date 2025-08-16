@@ -4,8 +4,8 @@ import * as z from 'zod';
  * Zod schema for {@link TemplateAttributesVariables}.
  */
 export const templateVariablesSchema = z.union([
-  z.record(z.unknown()),
-  z.array(z.record(z.unknown())),
+  z.record(z.string(), z.unknown()),
+  z.array(z.record(z.string(), z.unknown())),
 ]);
 
 /**

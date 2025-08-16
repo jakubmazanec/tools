@@ -35,7 +35,7 @@
     "lodash.omit": "^4.5.0",
     "prettier": "^3.6.0",
     "yaml": "^2.8.0",
-    "zod": "^3.25.67"
+    "zod": "^4.0.17"
   },
   "devDependencies": {
     "@jakubmazanec/eslint-config": "^4.1.0",
