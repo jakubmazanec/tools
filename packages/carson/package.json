@@ -70,7 +70,7 @@
     "eslint": "^9.33.0",
     "ink": "^6.2.0",
     "react": "^19.1.1",
-    "tsx": "^4.20.3",
+    "tsx": "^4.20.4",
     "typedoc": "^0.28.5",
     "typedoc-plugin-markdown": "^4.7.0",
     "typescript": "^5.9.2",
