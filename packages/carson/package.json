@@ -71,7 +71,7 @@
     "ink": "^6.2.0",
     "react": "^19.1.1",
     "tsx": "^4.20.4",
-    "typedoc": "^0.28.5",
+    "typedoc": "^0.28.10",
     "typedoc-plugin-markdown": "^4.8.1",
     "typescript": "^5.9.2",
     "vitest": "^3.2.4"
