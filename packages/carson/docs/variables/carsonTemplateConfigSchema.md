@@ -5,8 +5,7 @@
 # Variable: carsonTemplateConfigSchema
 
 > `const` **carsonTemplateConfigSchema**: `ZodObject`\<\{ `autoEject`:
-> `ZodOptional`\<`ZodBoolean`\>; \}, `"strict"`, `ZodTypeAny`, \{ `autoEject?`: `boolean`; \}, \{
-> `autoEject?`: `boolean`; \}\>
+> `ZodOptional`\<`ZodBoolean`\>; \}, `$strict`\>
 
 Defined in:
-[packages/carson/source/template/CarsonTemplateConfig.ts:3](https://github.com/jakubmazanec/tools/blob/6fe16df773d5da14c29261ea934e72b3f99fabb7/packages/carson/source/template/CarsonTemplateConfig.ts#L3)
+[packages/carson/source/template/CarsonTemplateConfig.ts:3](https://github.com/jakubmazanec/tools/blob/026d472564678641afd0039e9c07d936f221ca46/packages/carson/source/template/CarsonTemplateConfig.ts#L3)

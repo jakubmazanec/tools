@@ -7,7 +7,7 @@
 > **FormRow**\<`C`\>(`__namedParameters`): `null` \| `Element`
 
 Defined in:
-[cli/source/ui/form/FormRow.tsx:43](https://github.com/jakubmazanec/tools/blob/6fe16df773d5da14c29261ea934e72b3f99fabb7/packages/cli/source/ui/form/FormRow.tsx#L43)
+[packages/cli/source/ui/form/FormRow.tsx:43](https://github.com/jakubmazanec/tools/blob/026d472564678641afd0039e9c07d936f221ca46/packages/cli/source/ui/form/FormRow.tsx#L43)
 
 Form row component.
 

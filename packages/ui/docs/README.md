@@ -69,6 +69,7 @@
 - [Theme](type-aliases/Theme.md)
 - [ThemeProviderProps](type-aliases/ThemeProviderProps.md)
 - [UseFormOptions](type-aliases/UseFormOptions.md)
+- [UseFormReturn](type-aliases/UseFormReturn.md)
 - [WithLocaleOrLocales](type-aliases/WithLocaleOrLocales.md)
 
 ## Variables

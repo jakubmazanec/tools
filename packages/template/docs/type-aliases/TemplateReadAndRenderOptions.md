@@ -7,17 +7,17 @@
 > **TemplateReadAndRenderOptions**\<`A`, `D`\> = `object`
 
 Defined in:
-[packages/template/source/Template.ts:50](https://github.com/jakubmazanec/tools/blob/6fe16df773d5da14c29261ea934e72b3f99fabb7/packages/template/source/Template.ts#L50)
+[packages/template/source/Template.ts:50](https://github.com/jakubmazanec/tools/blob/026d472564678641afd0039e9c07d936f221ca46/packages/template/source/Template.ts#L50)
 
 ## Type Parameters
 
 ### A
 
-`A` _extends_ `AnyZodObject` \| `undefined` = `undefined`
+`A` _extends_ `ZodObject` \| `undefined` = `undefined`
 
 ### D
 
-`D` _extends_ `AnyZodObject` \| `undefined` = `undefined`
+`D` _extends_ `ZodObject` \| `undefined` = `undefined`
 
 ## Properties
 
@@ -26,7 +26,7 @@ Defined in:
 > `optional` **attributesSchema**: `A`
 
 Defined in:
-[packages/template/source/Template.ts:61](https://github.com/jakubmazanec/tools/blob/6fe16df773d5da14c29261ea934e72b3f99fabb7/packages/template/source/Template.ts#L61)
+[packages/template/source/Template.ts:61](https://github.com/jakubmazanec/tools/blob/026d472564678641afd0039e9c07d936f221ca46/packages/template/source/Template.ts#L61)
 
 Zod schema for custom template attributes.
 
@@ -37,7 +37,7 @@ Zod schema for custom template attributes.
 > `optional` **dataSchema**: `D`
 
 Defined in:
-[packages/template/source/Template.ts:64](https://github.com/jakubmazanec/tools/blob/6fe16df773d5da14c29261ea934e72b3f99fabb7/packages/template/source/Template.ts#L64)
+[packages/template/source/Template.ts:64](https://github.com/jakubmazanec/tools/blob/026d472564678641afd0039e9c07d936f221ca46/packages/template/source/Template.ts#L64)
 
 Zod schema for template data.
 
@@ -48,7 +48,7 @@ Zod schema for template data.
 > `optional` **disablePrettier**: `boolean`
 
 Defined in:
-[packages/template/source/Template.ts:58](https://github.com/jakubmazanec/tools/blob/6fe16df773d5da14c29261ea934e72b3f99fabb7/packages/template/source/Template.ts#L58)
+[packages/template/source/Template.ts:58](https://github.com/jakubmazanec/tools/blob/026d472564678641afd0039e9c07d936f221ca46/packages/template/source/Template.ts#L58)
 
 Disable formatting the rendered template using Prettier.
 
@@ -59,6 +59,6 @@ Disable formatting the rendered template using Prettier.
 > `optional` **prettierOptions**: `prettier.Options`
 
 Defined in:
-[packages/template/source/Template.ts:55](https://github.com/jakubmazanec/tools/blob/6fe16df773d5da14c29261ea934e72b3f99fabb7/packages/template/source/Template.ts#L55)
+[packages/template/source/Template.ts:55](https://github.com/jakubmazanec/tools/blob/026d472564678641afd0039e9c07d936f221ca46/packages/template/source/Template.ts#L55)
 
 Prettier options.

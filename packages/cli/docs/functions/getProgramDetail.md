@@ -7,7 +7,7 @@
 > **getProgramDetail**(`packageJson`): [`ProgramDetail`](../type-aliases/ProgramDetail.md)
 
 Defined in:
-[cli/source/program/getProgramDetail.ts:8](https://github.com/jakubmazanec/tools/blob/6fe16df773d5da14c29261ea934e72b3f99fabb7/packages/cli/source/program/getProgramDetail.ts#L8)
+[packages/cli/source/program/getProgramDetail.ts:8](https://github.com/jakubmazanec/tools/blob/026d472564678641afd0039e9c07d936f221ca46/packages/cli/source/program/getProgramDetail.ts#L8)
 
 Creates detailed information about a Program.
 
@@ -114,8 +114,8 @@ Creates detailed information about a Program.
 
 #### funding?
 
-`string` \| \{ `type?`: `string`; `url`: `string`; \} \| (`string` \| \{ `type?`: `string`; `url`:
-`string`; \})[]
+`string` \| (`string` \| \{ `type?`: `string`; `url`: `string`; \})[] \| \{ `type?`: `string`;
+`url`: `string`; \}
 
 #### homepage?
 
@@ -207,7 +207,7 @@ Creates detailed information about a Program.
 
 #### type?
 
-`"commonjs"` \| `"module"`
+`"module"` \| `"commonjs"`
 
 #### types?
 

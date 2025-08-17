@@ -30,4 +30,3 @@
 - [readFile](functions/readFile.md)
 - [readJson](functions/readJson.md)
 - [readPackageJson](functions/readPackageJson.md)
-- [zodIssuesToStrings](functions/zodIssuesToStrings.md)

@@ -17,7 +17,7 @@
 > fallbackPolling?: "fixedPollingInterval" \| "priorityPollingInterval" \| "dynamicPriorityPolling"
 > \| "fixedInterval" \| "priorityInterval" \| "dynamicPriority" \| "fixedChunkSize";
 > forceConsistentCasingInFileNames?: boolean; generateCpuProfile?: string; importHelpers?: boolean;
-> importsNotUsedAsValues?: "preserve" \| "remove" \| "error"; incremental?: boolean;
+> importsNotUsedAsValues?: "error" \| "preserve" \| "remove"; incremental?: boolean;
 > inlineSourceMap?: boolean; inlineSources?: boolean; isolatedModules?: boolean; jsx?:
 > "react-native" \| "preserve" \| "react" \| "react-jsx" \| "react-jsxdev"; jsxFactory?: string;
 > jsxFragmentFactory?: string; jsxImportSource?: string; keyofStringsOnly?: boolean; lib?: ("esnext"
@@ -75,7 +75,7 @@
 > enable?: boolean; exclude?: string\[\]; include?: string\[\] \} \}
 
 Defined in:
-[packages/zod-utils/source/utils/isTsconfigJson.ts:3](https://github.com/jakubmazanec/tools/blob/6fe16df773d5da14c29261ea934e72b3f99fabb7/packages/zod-utils/source/utils/isTsconfigJson.ts#L3)
+[packages/zod-utils/source/utils/isTsconfigJson.ts:3](https://github.com/jakubmazanec/tools/blob/026d472564678641afd0039e9c07d936f221ca46/packages/zod-utils/source/utils/isTsconfigJson.ts#L3)
 
 ## Parameters
 
@@ -98,7 +98,7 @@ experimentalDecorators?: boolean; explainFiles?: boolean; extendedDiagnostics?: 
 fallbackPolling?: "fixedPollingInterval" \| "priorityPollingInterval" \| "dynamicPriorityPolling" \|
 "fixedInterval" \| "priorityInterval" \| "dynamicPriority" \| "fixedChunkSize";
 forceConsistentCasingInFileNames?: boolean; generateCpuProfile?: string; importHelpers?: boolean;
-importsNotUsedAsValues?: "preserve" \| "remove" \| "error"; incremental?: boolean; inlineSourceMap?:
+importsNotUsedAsValues?: "error" \| "preserve" \| "remove"; incremental?: boolean; inlineSourceMap?:
 boolean; inlineSources?: boolean; isolatedModules?: boolean; jsx?: "react-native" \| "preserve" \|
 "react" \| "react-jsx" \| "react-jsxdev"; jsxFactory?: string; jsxFragmentFactory?: string;
 jsxImportSource?: string; keyofStringsOnly?: boolean; lib?: ("esnext" \| "ES6" \| "ES2015" \|

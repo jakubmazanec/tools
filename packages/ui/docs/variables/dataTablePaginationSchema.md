@@ -5,11 +5,8 @@
 # Variable: dataTablePaginationSchema
 
 > `const` **dataTablePaginationSchema**: `ZodObject`\<\{ `page`: `ZodNumber`; `pageCount`:
-> `ZodNumber`; `pageSize`: `ZodUnion`\<\[`ZodLiteral`\<`10`\>, `ZodLiteral`\<`25`\>,
-> `ZodLiteral`\<`50`\>, `ZodLiteral`\<`75`\>, `ZodLiteral`\<`100`\>\]\>; \}, `"strip"`,
-> `ZodTypeAny`, \{ `page`: `number`; `pageCount`: `number`; `pageSize`: `10` \| `25` \| `50` \| `75`
-> \| `100`; \}, \{ `page`: `number`; `pageCount`: `number`; `pageSize`: `10` \| `25` \| `50` \| `75`
-> \| `100`; \}\>
+> `ZodNumber`; `pageSize`: `ZodUnion`\<readonly \[`ZodLiteral`\<`10`\>, `ZodLiteral`\<`25`\>,
+> `ZodLiteral`\<`50`\>, `ZodLiteral`\<`75`\>, `ZodLiteral`\<`100`\>\]\>; \}, `$strip`\>
 
 Defined in:
-[packages/ui/source/components/data-table/DataTablePagination.ts:5](https://github.com/jakubmazanec/tools/blob/6fe16df773d5da14c29261ea934e72b3f99fabb7/packages/ui/source/components/data-table/DataTablePagination.ts#L5)
+[packages/ui/source/components/data-table/DataTablePagination.ts:5](https://github.com/jakubmazanec/tools/blob/026d472564678641afd0039e9c07d936f221ca46/packages/ui/source/components/data-table/DataTablePagination.ts#L5)

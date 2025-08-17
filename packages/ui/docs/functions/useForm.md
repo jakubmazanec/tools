@@ -4,16 +4,17 @@
 
 # Function: useForm()
 
-> **useForm**\<`S`\>(`__namedParameters`): `object`
+> **useForm**\<`S`\>(`__namedParameters`):
+> [`UseFormReturn`](../type-aliases/UseFormReturn.md)\<`S`\>
 
 Defined in:
-[packages/ui/source/components/useForm.ts:10](https://github.com/jakubmazanec/tools/blob/6fe16df773d5da14c29261ea934e72b3f99fabb7/packages/ui/source/components/useForm.ts#L10)
+[packages/ui/source/components/useForm.ts:15](https://github.com/jakubmazanec/tools/blob/026d472564678641afd0039e9c07d936f221ca46/packages/ui/source/components/useForm.ts#L15)
 
 ## Type Parameters
 
 ### S
 
-`S` _extends_ `ZodTypeAny`
+`S` _extends_ `ZodObject`\<`$ZodLooseShape`, `$strip`\>
 
 ## Parameters
 
@@ -23,13 +24,4 @@ Defined in:
 
 ## Returns
 
-`object`
-
-### fields
-
-> **fields**: `Required`\<\{ \[Key in string \| number \| symbol\]:
-> FieldMetadata\<Combine\<input\<S\>\>\[Key\], input\<S\>, string\[\]\> \}\>
-
-### form
-
-> **form**: `FormMetadata`\<`input`\<`S`\>, `string`[]\>
+[`UseFormReturn`](../type-aliases/UseFormReturn.md)\<`S`\>

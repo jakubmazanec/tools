@@ -4,10 +4,10 @@
 
 # Variable: templateVariablesSchema
 
-> `const` **templateVariablesSchema**: `ZodUnion`\<\[`ZodRecord`\<`ZodString`, `ZodUnknown`\>,
-> `ZodArray`\<`ZodRecord`\<`ZodString`, `ZodUnknown`\>, `"many"`\>\]\>
+> `const` **templateVariablesSchema**: `ZodUnion`\<readonly \[`ZodRecord`\<`ZodString`,
+> `ZodUnknown`\>, `ZodArray`\<`ZodRecord`\<`ZodString`, `ZodUnknown`\>\>\]\>
 
 Defined in:
-[packages/template/source/TemplateVariables.ts:6](https://github.com/jakubmazanec/tools/blob/6fe16df773d5da14c29261ea934e72b3f99fabb7/packages/template/source/TemplateVariables.ts#L6)
+[packages/template/source/TemplateVariables.ts:6](https://github.com/jakubmazanec/tools/blob/026d472564678641afd0039e9c07d936f221ca46/packages/template/source/TemplateVariables.ts#L6)
 
 Zod schema for [TemplateAttributesVariables](../type-aliases/TemplateAttributesVariables.md).

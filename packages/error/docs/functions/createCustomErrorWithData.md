@@ -9,10 +9,10 @@
 > **createCustomErrorWithData**\<`ErrorCode`, `ErrorData`\>(`errorName`, `errorMessages`,
 > `errorData`): (`code`, `options?`) =>
 > [`CustomErrorWithData`](../type-aliases/CustomErrorWithData.md)\<`"UNKNOWN_ERROR"` \| `ErrorCode`,
-> `TypeOf`\<`ErrorData`\>\>
+> `output`\<`ErrorData`\>\>
 
 Defined in:
-[createCustomErrorWithData.ts:21](https://github.com/jakubmazanec/tools/blob/6fe16df773d5da14c29261ea934e72b3f99fabb7/packages/error/source/createCustomErrorWithData.ts#L21)
+[createCustomErrorWithData.ts:21](https://github.com/jakubmazanec/tools/blob/026d472564678641afd0039e9c07d936f221ca46/packages/error/source/createCustomErrorWithData.ts#L21)
 
 Function for creating custom error classes. Such custom error class properly subclasses built-in
 `Error`, simplifies generating error messages via predefined error codes and allows attaching custom
@@ -26,7 +26,7 @@ data to the error instance.
 
 #### ErrorData
 
-`ErrorData` _extends_ `AnyZodObject`
+`ErrorData` _extends_ `ZodObject`\<`$ZodLooseShape`, `$strip`\>
 
 ### Parameters
 
@@ -55,7 +55,7 @@ Class that implements [CustomErrorWithData](../type-aliases/CustomErrorWithData.
 
 > **new createCustomErrorWithData**(`code`, `options?`):
 > [`CustomErrorWithData`](../type-aliases/CustomErrorWithData.md)\<`"UNKNOWN_ERROR"` \| `ErrorCode`,
-> `TypeOf`\<`ErrorData`\>\>
+> `output`\<`ErrorData`\>\>
 
 #### Parameters
 
@@ -65,12 +65,12 @@ Class that implements [CustomErrorWithData](../type-aliases/CustomErrorWithData.
 
 ##### options?
 
-[`CustomErrorWithDataOptions`](../type-aliases/CustomErrorWithDataOptions.md)\<`TypeOf`\<`ErrorData`\>\>
+[`CustomErrorWithDataOptions`](../type-aliases/CustomErrorWithDataOptions.md)\<`output`\<`ErrorData`\>\>
 
 #### Returns
 
 [`CustomErrorWithData`](../type-aliases/CustomErrorWithData.md)\<`"UNKNOWN_ERROR"` \| `ErrorCode`,
-`TypeOf`\<`ErrorData`\>\>
+`output`\<`ErrorData`\>\>
 
 ## Call Signature
 
@@ -80,7 +80,7 @@ Class that implements [CustomErrorWithData](../type-aliases/CustomErrorWithData.
 > `InstanceType`\<`ErrorData`\>\>
 
 Defined in:
-[createCustomErrorWithData.ts:29](https://github.com/jakubmazanec/tools/blob/6fe16df773d5da14c29261ea934e72b3f99fabb7/packages/error/source/createCustomErrorWithData.ts#L29)
+[createCustomErrorWithData.ts:29](https://github.com/jakubmazanec/tools/blob/026d472564678641afd0039e9c07d936f221ca46/packages/error/source/createCustomErrorWithData.ts#L29)
 
 Function for creating custom error classes. Such custom error class properly subclasses built-in
 `Error`, simplifies generating error messages via predefined error codes and allows attaching custom

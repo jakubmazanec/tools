@@ -7,7 +7,7 @@
 > **ApplyTemplateRendersOptions** = `object`
 
 Defined in:
-[packages/carson/source/template/applyTemplateRenders.ts:20](https://github.com/jakubmazanec/tools/blob/6fe16df773d5da14c29261ea934e72b3f99fabb7/packages/carson/source/template/applyTemplateRenders.ts#L20)
+[packages/carson/source/template/applyTemplateRenders.ts:20](https://github.com/jakubmazanec/tools/blob/026d472564678641afd0039e9c07d936f221ca46/packages/carson/source/template/applyTemplateRenders.ts#L20)
 
 ## Properties
 
@@ -16,7 +16,7 @@ Defined in:
 > **ignoreStrategies**: `string`[]
 
 Defined in:
-[packages/carson/source/template/applyTemplateRenders.ts:24](https://github.com/jakubmazanec/tools/blob/6fe16df773d5da14c29261ea934e72b3f99fabb7/packages/carson/source/template/applyTemplateRenders.ts#L24)
+[packages/carson/source/template/applyTemplateRenders.ts:24](https://github.com/jakubmazanec/tools/blob/026d472564678641afd0039e9c07d936f221ca46/packages/carson/source/template/applyTemplateRenders.ts#L24)
 
 ---
 
@@ -25,7 +25,7 @@ Defined in:
 > `optional` **snapshotPath**: `string`
 
 Defined in:
-[packages/carson/source/template/applyTemplateRenders.ts:23](https://github.com/jakubmazanec/tools/blob/6fe16df773d5da14c29261ea934e72b3f99fabb7/packages/carson/source/template/applyTemplateRenders.ts#L23)
+[packages/carson/source/template/applyTemplateRenders.ts:23](https://github.com/jakubmazanec/tools/blob/026d472564678641afd0039e9c07d936f221ca46/packages/carson/source/template/applyTemplateRenders.ts#L23)
 
 ---
 
@@ -34,7 +34,7 @@ Defined in:
 > **targetPath**: `string`
 
 Defined in:
-[packages/carson/source/template/applyTemplateRenders.ts:22](https://github.com/jakubmazanec/tools/blob/6fe16df773d5da14c29261ea934e72b3f99fabb7/packages/carson/source/template/applyTemplateRenders.ts#L22)
+[packages/carson/source/template/applyTemplateRenders.ts:22](https://github.com/jakubmazanec/tools/blob/026d472564678641afd0039e9c07d936f221ca46/packages/carson/source/template/applyTemplateRenders.ts#L22)
 
 ---
 
@@ -43,4 +43,4 @@ Defined in:
 > **templateRenders**: [`TemplateRenders`](TemplateRenders.md)
 
 Defined in:
-[packages/carson/source/template/applyTemplateRenders.ts:21](https://github.com/jakubmazanec/tools/blob/6fe16df773d5da14c29261ea934e72b3f99fabb7/packages/carson/source/template/applyTemplateRenders.ts#L21)
+[packages/carson/source/template/applyTemplateRenders.ts:21](https://github.com/jakubmazanec/tools/blob/026d472564678641afd0039e9c07d936f221ca46/packages/carson/source/template/applyTemplateRenders.ts#L21)

@@ -4,16 +4,16 @@
 
 # Function: is()
 
-> **is**\<`S`\>(`value`, `schema`): `value is TypeOf<S>`
+> **is**\<`S`\>(`value`, `schema`): `value is output<S>`
 
 Defined in:
-[packages/zod-utils/source/utils/is.ts:3](https://github.com/jakubmazanec/tools/blob/6fe16df773d5da14c29261ea934e72b3f99fabb7/packages/zod-utils/source/utils/is.ts#L3)
+[packages/zod-utils/source/utils/is.ts:3](https://github.com/jakubmazanec/tools/blob/026d472564678641afd0039e9c07d936f221ca46/packages/zod-utils/source/utils/is.ts#L3)
 
 ## Type Parameters
 
 ### S
 
-`S` _extends_ `ZodTypeAny`
+`S` _extends_ `ZodType`\<`unknown`, `unknown`, `$ZodTypeInternals`\<`unknown`, `unknown`\>\>
 
 ## Parameters
 
@@ -27,4 +27,4 @@ Defined in:
 
 ## Returns
 
-`value is TypeOf<S>`
+`value is output<S>`

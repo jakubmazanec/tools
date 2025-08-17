@@ -5,18 +5,18 @@
 # Function: readJson()
 
 > **readJson**\<`S`, `O`\>(`path`, `schema`, `options?`): `Promise`\<`O` _extends_ `undefined` ?
-> `TypeOf`\<`S`\> \| `ZodError`\<`TypeOf`\<`S`\>\> :
-> `If`\<`NonNullable`\<`O`\>\[`"throwOnZodError"`\], `true`, `TypeOf`\<`S`\>, `TypeOf`\<`S`\> \|
-> `ZodError`\<`TypeOf`\<`S`\>\>\>\>
+> `output`\<`S`\> \| `ZodError`\<`output`\<`S`\>\> :
+> `If`\<`NonNullable`\<`O`\>\[`"throwOnZodError"`\], `true`, `output`\<`S`\>, `output`\<`S`\> \|
+> `ZodError`\<`output`\<`S`\>\>\>\>
 
 Defined in:
-[packages/zod-utils/source/utils/readJson.ts:12](https://github.com/jakubmazanec/tools/blob/6fe16df773d5da14c29261ea934e72b3f99fabb7/packages/zod-utils/source/utils/readJson.ts#L12)
+[packages/zod-utils/source/utils/readJson.ts:12](https://github.com/jakubmazanec/tools/blob/026d472564678641afd0039e9c07d936f221ca46/packages/zod-utils/source/utils/readJson.ts#L12)
 
 ## Type Parameters
 
 ### S
 
-`S` _extends_ `ZodTypeAny`
+`S` _extends_ `ZodType`\<`unknown`, `unknown`, `$ZodTypeInternals`\<`unknown`, `unknown`\>\>
 
 ### O
 
@@ -38,6 +38,6 @@ Defined in:
 
 ## Returns
 
-`Promise`\<`O` _extends_ `undefined` ? `TypeOf`\<`S`\> \| `ZodError`\<`TypeOf`\<`S`\>\> :
-`If`\<`NonNullable`\<`O`\>\[`"throwOnZodError"`\], `true`, `TypeOf`\<`S`\>, `TypeOf`\<`S`\> \|
-`ZodError`\<`TypeOf`\<`S`\>\>\>\>
+`Promise`\<`O` _extends_ `undefined` ? `output`\<`S`\> \| `ZodError`\<`output`\<`S`\>\> :
+`If`\<`NonNullable`\<`O`\>\[`"throwOnZodError"`\], `true`, `output`\<`S`\>, `output`\<`S`\> \|
+`ZodError`\<`output`\<`S`\>\>\>\>
