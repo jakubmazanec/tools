@@ -29,7 +29,7 @@
   "dependencies": {
     "@jakubmazanec/error": "^3.0.0",
     "ejs": "^3.1.10",
-    "fs-extra": "^11.3.0",
+    "fs-extra": "^11.3.1",
     "gray-matter": "^4.0.3",
     "lodash.merge": "^4.6.2",
     "lodash.omit": "^4.5.0",
