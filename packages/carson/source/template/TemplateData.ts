@@ -8,7 +8,7 @@ export const templateDataSchema = z
   .object({
     workspace: z.instanceof(Workspace).optional(),
     project: z.instanceof(Project).optional(),
-    args: z.record(z.unknown()).optional(),
+    args: z.record(z.string(), z.unknown()).optional(),
   })
   .strict();
 

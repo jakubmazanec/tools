@@ -174,7 +174,7 @@ let pluginSchema = z
     name: z.string().optional(),
   })
   .strict()
-  .and(z.record(z.unknown()));
+  .and(z.record(z.string(), z.unknown()));
 
 let importsNotUsedAsValuesSchema = z.enum(['remove', 'preserve', 'error']);
 
@@ -276,7 +276,7 @@ let compilerOptionsSchema = z
     noUnusedParameters: z.boolean().optional(),
     outDir: z.string().optional(),
     outFile: z.string().optional(),
-    paths: z.record(z.string().array()).optional(),
+    paths: z.record(z.string(), z.string().array()).optional(),
     plugins: pluginSchema.array().optional(),
     preserveConstEnums: z.boolean().optional(),
     preserveSymlinks: z.boolean().optional(),

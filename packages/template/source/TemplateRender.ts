@@ -9,8 +9,8 @@ import {type TemplateAttributes} from './TemplateAttributes.js';
  * @typeParam D Type of Zod schema used to define the type of template data.
  */
 export type TemplateRender<
-  A extends z.AnyZodObject | undefined = undefined,
-  D extends z.AnyZodObject | undefined = undefined,
+  A extends z.ZodObject | undefined = undefined,
+  D extends z.ZodObject | undefined = undefined,
 > = {
   /** Rendered template attributes. They created from the `to` and `variables` attributes, and from all of the custom template attributes.
    */

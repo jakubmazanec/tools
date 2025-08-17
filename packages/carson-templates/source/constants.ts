@@ -150,7 +150,7 @@ export const DEPENDENCY_VERSIONS: Record<string, string> = {
   '@vitest/coverage-v8': '^3.0.0',
   chromatic: '^13.0.0',
   concurrently: '^9.0.0',
-  'cross-env': '^7.0.0',
+  'cross-env': '^10.0.0',
   'del-cli': '^6.0.0',
   esbuild: '^0.24.0',
   eslint: '^9.0.0',
@@ -171,7 +171,7 @@ export const DEPENDENCY_VERSIONS: Record<string, string> = {
   typedoc: '^0.28.0',
   'typedoc-plugin-markdown': '^4.0.0',
   typescript: '^5.0.0',
-  vite: '^6.0.0',
+  vite: '^7.0.0',
   vitest: '^3.0.0',
 
   node: '^24.0.0',

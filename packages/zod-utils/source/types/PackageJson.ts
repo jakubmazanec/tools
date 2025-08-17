@@ -28,7 +28,7 @@ const packageJsonPublishConfigSchema = z.intersection(
     registry: z.string().optional(),
     tag: z.string().optional(),
   }),
-  z.record(z.unknown()),
+  z.record(z.string(), z.unknown()),
 );
 
 const packageJsonPersonSchema = z.union([
@@ -64,7 +64,7 @@ const packageJsonDirectoryLocationsSchema = z
   .strict();
 
 const packageJsonScriptsSchema = z.intersection(
-  z.record(z.string()),
+  z.record(z.string(), z.string()),
   z.object({
     prepublish: z.string().optional(),
     prepare: z.string().optional(),
@@ -97,7 +97,7 @@ const packageJsonScriptsSchema = z.intersection(
   }),
 );
 
-const packageJsonDependenciesSchema = z.record(z.string());
+const packageJsonDependenciesSchema = z.record(z.string(), z.string());
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars -- needed
 const packageJsonExportConditionSchema = z.union([
@@ -118,7 +118,7 @@ const packageJsonExportConditionSchema = z.union([
 
 type PackageJsonExportCondition = z.infer<typeof packageJsonExportConditionSchema>;
 
-const packageJsonExportsSchema: z.ZodSchema<PackageJsonExports> = z.lazy(() =>
+const packageJsonExportsSchema: z.ZodType<PackageJsonExports> = z.lazy(() =>
   z.union([
     z.string().array(),
     z.string(),
@@ -134,7 +134,7 @@ const packageJsonExportsSchema: z.ZodSchema<PackageJsonExports> = z.lazy(() =>
       'react-native': z.union([packageJsonExportsSchema, z.null()]).optional(),
       require: z.union([packageJsonExportsSchema, z.null()]).optional(),
     }),
-    z.record(z.union([packageJsonExportsSchema, z.null()])),
+    z.record(z.string(), z.union([packageJsonExportsSchema, z.null()])),
   ]),
 );
 
@@ -163,7 +163,7 @@ export const packageJsonSchema = z.object({
   type: z.union([z.literal('commonjs'), z.literal('module')]).optional(),
   main: z.string().optional(),
   exports: packageJsonExportsSchema.optional(),
-  bin: z.union([z.record(z.string()), z.string()]).optional(),
+  bin: z.union([z.record(z.string(), z.string()), z.string()]).optional(),
   man: z.union([z.string().array(), z.string()]).optional(),
   directories: packageJsonDirectoryLocationsSchema.optional(),
   repository: z
@@ -179,13 +179,14 @@ export const packageJsonSchema = z.object({
     ])
     .optional(),
   scripts: packageJsonScriptsSchema.optional(),
-  config: z.record(z.unknown()).optional(),
+  config: z.record(z.string(), z.unknown()).optional(),
   dependencies: packageJsonDependenciesSchema.optional(),
   devDependencies: packageJsonDependenciesSchema.optional(),
   optionalDependencies: packageJsonDependenciesSchema.optional(),
   peerDependencies: packageJsonDependenciesSchema.optional(),
   peerDependenciesMeta: z
     .record(
+      z.string(),
       z.object({
         optional: z.boolean(),
       }),
@@ -194,14 +195,22 @@ export const packageJsonSchema = z.object({
   bundledDependencies: packageJsonBundledDependenciesSchema,
   bundleDependencies: packageJsonBundledDependenciesSchema,
   overrides: z
-    .record(z.union([z.string(), z.record(z.union([z.string(), z.record(z.unknown())]))]))
+    .record(
+      z.string(),
+      z.union([
+        z.string(),
+        z.record(z.string(), z.union([z.string(), z.record(z.string(), z.unknown())])),
+      ]),
+    )
     .optional(),
 
   funding: z.union([packageJsonFundingSchema.array(), packageJsonFundingSchema]).optional(),
 
   module: z.string().optional(),
-  esnext: z.union([z.string(), z.record(z.string())]).optional(),
-  browser: z.union([z.string(), z.record(z.union([z.string(), z.literal(false)]))]).optional(),
+  esnext: z.union([z.string(), z.record(z.string(), z.string())]).optional(),
+  browser: z
+    .union([z.string(), z.record(z.string(), z.union([z.string(), z.literal(false)]))])
+    .optional(),
   sideEffects: z.union([z.string().array(), z.boolean()]).optional(),
 
   engines: z
@@ -210,7 +219,7 @@ export const packageJsonSchema = z.object({
         node: z.string().optional(),
         npm: z.string().optional(),
       }),
-      z.record(z.string()),
+      z.record(z.string(), z.string()),
     )
     .optional(),
 

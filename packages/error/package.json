@@ -27,7 +27,7 @@
     "typecheck": "tsc --project tsconfig.typecheck.json"
   },
   "dependencies": {
-    "zod": "^3.25.67"
+    "zod": "^4.0.17"
   },
   "devDependencies": {
     "@jakubmazanec/eslint-config": "^4.1.0",

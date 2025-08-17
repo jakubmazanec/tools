@@ -6,7 +6,7 @@ import omit from 'lodash.omit';
 import path from 'node:path';
 import prettier from 'prettier';
 import yaml from 'yaml';
-import {type AnyZodObject, type z} from 'zod';
+import {type z, type ZodObject} from 'zod';
 
 import {NO_INFERRED_PARSER_REGEXP} from './constants.js';
 import {type TemplateAttributes, templateAttributesSchema} from './TemplateAttributes.js';
@@ -16,8 +16,8 @@ import {type TemplateRender} from './TemplateRender.js';
 import {type TemplateRenders} from './TemplateRenders.js';
 
 export type TemplateOptions<
-  A extends AnyZodObject | undefined = undefined,
-  D extends AnyZodObject | undefined = undefined,
+  A extends ZodObject | undefined = undefined,
+  D extends ZodObject | undefined = undefined,
 > = {
   /** Template path. */
   path?: string;
@@ -37,8 +37,8 @@ export type TemplateOptions<
 };
 
 export type TemplateReadOptions<
-  A extends AnyZodObject | undefined = undefined,
-  D extends AnyZodObject | undefined = undefined,
+  A extends ZodObject | undefined = undefined,
+  D extends ZodObject | undefined = undefined,
 > = {
   /** Zod schema for custom template attributes. */
   attributesSchema?: A | undefined;
@@ -48,8 +48,8 @@ export type TemplateReadOptions<
 };
 
 export type TemplateReadAndRenderOptions<
-  A extends AnyZodObject | undefined = undefined,
-  D extends AnyZodObject | undefined = undefined,
+  A extends ZodObject | undefined = undefined,
+  D extends ZodObject | undefined = undefined,
 > = {
   /** Prettier options.  */
   prettierOptions?: prettier.Options | undefined;
@@ -91,8 +91,8 @@ export type TemplateRenderOptions = {
  * @typeParam D A Zod schema type used to define the template datatype.
  */
 export class Template<
-  A extends AnyZodObject | undefined = undefined,
-  D extends AnyZodObject | undefined = undefined,
+  A extends ZodObject | undefined = undefined,
+  D extends ZodObject | undefined = undefined,
 > {
   /** Template path. */
   path?: string;
@@ -108,10 +108,10 @@ export class Template<
   private readonly fn: TemplateFunction;
 
   /** Zod schema for custom template attributes. */
-  readonly attributesSchema: A extends AnyZodObject ? A : null;
+  readonly attributesSchema: A extends ZodObject ? A : null;
 
   /** Zod schema for template data. */
-  readonly dataSchema: D extends AnyZodObject ? D : null;
+  readonly dataSchema: D extends ZodObject ? D : null;
 
   constructor({
     path: templatePath,
@@ -129,15 +129,15 @@ export class Template<
     this.fn = ejs.compile(this.content);
 
     if (attributesSchema) {
-      this.attributesSchema = attributesSchema as A extends AnyZodObject ? A : null;
+      this.attributesSchema = attributesSchema as A extends ZodObject ? A : null;
     } else {
-      this.attributesSchema = null as A extends AnyZodObject ? A : null;
+      this.attributesSchema = null as A extends ZodObject ? A : null;
     }
 
     if (dataSchema) {
-      this.dataSchema = dataSchema as D extends AnyZodObject ? D : null;
+      this.dataSchema = dataSchema as D extends ZodObject ? D : null;
     } else {
-      this.dataSchema = null as D extends AnyZodObject ? D : null;
+      this.dataSchema = null as D extends ZodObject ? D : null;
     }
   }
 
@@ -147,8 +147,8 @@ export class Template<
    * @param templatePath Path to the template file.
    */
   static async read<
-    A extends AnyZodObject | undefined = undefined,
-    D extends AnyZodObject | undefined = undefined,
+    A extends ZodObject | undefined = undefined,
+    D extends ZodObject | undefined = undefined,
   >(templatePath: string, options?: TemplateReadOptions<A, D>): Promise<Template<A, D>> {
     let {data: rawAttributes, content} = matter(await fs.readFile(templatePath, 'utf8'));
 
@@ -204,8 +204,8 @@ export class Template<
    * @return Template renders.
    */
   static async readAndRender<
-    A extends AnyZodObject | undefined = undefined,
-    D extends AnyZodObject | undefined = undefined,
+    A extends ZodObject | undefined = undefined,
+    D extends ZodObject | undefined = undefined,
   >(
     templatePath: string,
     data: D extends undefined ? null : z.infer<NonNullable<D>>,
