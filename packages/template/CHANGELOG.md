@@ -1,5 +1,63 @@
 # @jakubmazanec/template
 
+## 2.0.15
+
+### Patch Changes
+
+- [#408](https://github.com/jakubmazanec/tools/pull/408)
+  [`026d472`](https://github.com/jakubmazanec/tools/commit/026d472564678641afd0039e9c07d936f221ca46)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Dependency `zod` updated to version
+  `^4.0.17`.
+
+- [#424](https://github.com/jakubmazanec/tools/pull/424)
+  [`d62b87e`](https://github.com/jakubmazanec/tools/commit/d62b87e9d923eda583aa7d28a2f3fedd82be9ddd)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `eslint` updated to version
+  `^9.33.0`.
+
+- [#406](https://github.com/jakubmazanec/tools/pull/406)
+  [`879d785`](https://github.com/jakubmazanec/tools/commit/879d785db5f1680ca6b497ebbbd259ceafd618fb)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `prettier-plugin-packagejson` updated
+  to version `^2.5.19`.
+
+- [#402](https://github.com/jakubmazanec/tools/pull/402)
+  [`6af0161`](https://github.com/jakubmazanec/tools/commit/6af0161fc627ff2e75bb4de95c18da3890947495)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@types/lodash` updated to version
+  `^4.17.20`.
+
+- [#419](https://github.com/jakubmazanec/tools/pull/419)
+  [`bbb1651`](https://github.com/jakubmazanec/tools/commit/bbb16516ae4aa8eb0aabc98f4fda41213357c0ba)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `fs-extra` updated to version
+  `^11.3.1`.
+
+- [#417](https://github.com/jakubmazanec/tools/pull/417)
+  [`4ce9d49`](https://github.com/jakubmazanec/tools/commit/4ce9d49c833a5718f1c4f31ab7aa5b8c1f9e8ba5)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `esbuild` updated to version
+  `^0.25.9`.
+
+- [#414](https://github.com/jakubmazanec/tools/pull/414)
+  [`5fd250b`](https://github.com/jakubmazanec/tools/commit/5fd250b883bdcf432e7c390f2ae91e004b6092e8)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Dependency `typescript` updated to version
+  `^5.9.2`.
+
+- [#432](https://github.com/jakubmazanec/tools/pull/432)
+  [`4f43368`](https://github.com/jakubmazanec/tools/commit/4f433684698b6433fdaa5ad23b02df694cbbd811)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `yaml` updated to version `^2.8.1`.
+
+- [#435](https://github.com/jakubmazanec/tools/pull/435)
+  [`dccfe8e`](https://github.com/jakubmazanec/tools/commit/dccfe8e5cee218e88ff4db59e4bf460975897c58)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `typedoc` updated to version
+  `^0.28.10`.
+
+- [#441](https://github.com/jakubmazanec/tools/pull/441)
+  [`f3ad917`](https://github.com/jakubmazanec/tools/commit/f3ad917f3b4d0fcb8ec6fdce0df255ec12944fae)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `typedoc-plugin-markdown` updated to
+  version `^4.8.1`.
+
+- [#400](https://github.com/jakubmazanec/tools/pull/400)
+  [`802092b`](https://github.com/jakubmazanec/tools/commit/802092b52ace7803f01bcba48751b35130ec8a7f)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `prettier` updated to version
+  `^3.6.2`.
+
 ## 2.0.14
 
 ### Patch Changes

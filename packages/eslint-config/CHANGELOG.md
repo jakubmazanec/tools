@@ -1,5 +1,83 @@
 # @jakubmazanec/eslint-config
 
+## 4.1.8
+
+### Patch Changes
+
+- [#424](https://github.com/jakubmazanec/tools/pull/424)
+  [`d62b87e`](https://github.com/jakubmazanec/tools/commit/d62b87e9d923eda583aa7d28a2f3fedd82be9ddd)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `eslint` updated to version
+  `^9.33.0`.
+
+- [#403](https://github.com/jakubmazanec/tools/pull/403)
+  [`6beeddd`](https://github.com/jakubmazanec/tools/commit/6beeddde4dab8287303d0e7857dddec40d602d98)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `eslint-import-resolver-typescript`
+  updated to version `^4.4.4`.
+
+- [#406](https://github.com/jakubmazanec/tools/pull/406)
+  [`879d785`](https://github.com/jakubmazanec/tools/commit/879d785db5f1680ca6b497ebbbd259ceafd618fb)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `prettier-plugin-packagejson` updated
+  to version `^2.5.19`.
+
+- [#401](https://github.com/jakubmazanec/tools/pull/401)
+  [`ecb1c8a`](https://github.com/jakubmazanec/tools/commit/ecb1c8a5ba18aebb0a34a0c16c3c22ca44676b08)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `eslint-plugin-prettier` updated to
+  version `^5.5.4`.
+
+- [#418](https://github.com/jakubmazanec/tools/pull/418)
+  [`c84e406`](https://github.com/jakubmazanec/tools/commit/c84e4064aeee715b6d910ba300644f2e0c6c9ab0)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `eslint-config-prettier` updated to
+  version `^10.1.8`.
+
+- [#430](https://github.com/jakubmazanec/tools/pull/430)
+  [`9eeb709`](https://github.com/jakubmazanec/tools/commit/9eeb7090eaf1962c0c71420ca4a2e91e27cf526b)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `tsx` updated to version `^4.20.4`.
+
+- [#417](https://github.com/jakubmazanec/tools/pull/417)
+  [`4ce9d49`](https://github.com/jakubmazanec/tools/commit/4ce9d49c833a5718f1c4f31ab7aa5b8c1f9e8ba5)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `esbuild` updated to version
+  `^0.25.9`.
+
+- [#414](https://github.com/jakubmazanec/tools/pull/414)
+  [`5fd250b`](https://github.com/jakubmazanec/tools/commit/5fd250b883bdcf432e7c390f2ae91e004b6092e8)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Dependency `typescript` updated to version
+  `^5.9.2`.
+
+- [#425](https://github.com/jakubmazanec/tools/pull/425)
+  [`7ff764d`](https://github.com/jakubmazanec/tools/commit/7ff764d530ffd97f5e926e580d5cb20f9d226a27)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `eslint-plugin-n` updated to version
+  `^17.21.3`.
+
+- [#426](https://github.com/jakubmazanec/tools/pull/426)
+  [`5439722`](https://github.com/jakubmazanec/tools/commit/543972255af249371219af8e598eab5e8ab57c7c)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `eslint-plugin-testing-library`
+  updated to version `^7.6.6`.
+
+- [#423](https://github.com/jakubmazanec/tools/pull/423)
+  [`cf0b598`](https://github.com/jakubmazanec/tools/commit/cf0b598157e5fe7cd51943de9caf086d4916632b)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@vitest/eslint-plugin` updated to
+  version `^1.3.4`.
+
+- [#437](https://github.com/jakubmazanec/tools/pull/437)
+  [`3e82bb4`](https://github.com/jakubmazanec/tools/commit/3e82bb49667aa32a84fddaa38b7c2beb86bb8664)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@stylistic/eslint-plugin` updated to
+  version `^5.2.3`.
+
+- [#427](https://github.com/jakubmazanec/tools/pull/427)
+  [`5e3f985`](https://github.com/jakubmazanec/tools/commit/5e3f985f12c37201d417436cd768806d0ad820e8)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `eslint-plugin-unicorn` updated to
+  version `^60.0.0`.
+
+- [#410](https://github.com/jakubmazanec/tools/pull/410)
+  [`763b1f3`](https://github.com/jakubmazanec/tools/commit/763b1f3886be44b2cc65eebf797b96529405a777)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@typescript-eslint/eslint-plugin`
+  updated to version `^8.39.1`. Dependency `@typescript-eslint/parser` updated to version `^8.39.1`.
+
+- [#400](https://github.com/jakubmazanec/tools/pull/400)
+  [`802092b`](https://github.com/jakubmazanec/tools/commit/802092b52ace7803f01bcba48751b35130ec8a7f)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `prettier` updated to version
+  `^3.6.2`.
+
 ## 4.1.7
 
 ### Patch Changes
