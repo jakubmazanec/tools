@@ -10,7 +10,7 @@
 > `"REPEATED_OPTION_NAME"` \| `"INVALID_OPTION_ARITY"` \| `"UNKNOWN_ERROR"`\>
 
 Defined in:
-[args/source/ValidationError.ts:6](https://github.com/jakubmazanec/tools/blob/c36a857a499e2c0c4f38fc4405cb987b357adf10/packages/args/source/ValidationError.ts#L6)
+[args/source/ValidationError.ts:6](https://github.com/jakubmazanec/tools/blob/dccfe8e5cee218e88ff4db59e4bf460975897c58/packages/args/source/ValidationError.ts#L6)
 
 A subclass of `Error` that indicates a validation issue.
 

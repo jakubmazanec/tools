@@ -7,7 +7,7 @@
 > **TemplateRenderOptions** = `object`
 
 Defined in:
-[packages/template/source/Template.ts:67](https://github.com/jakubmazanec/tools/blob/c36a857a499e2c0c4f38fc4405cb987b357adf10/packages/template/source/Template.ts#L67)
+[packages/template/source/Template.ts:67](https://github.com/jakubmazanec/tools/blob/dccfe8e5cee218e88ff4db59e4bf460975897c58/packages/template/source/Template.ts#L67)
 
 ## Properties
 
@@ -16,7 +16,7 @@ Defined in:
 > `optional` **disablePrettier**: `boolean`
 
 Defined in:
-[packages/template/source/Template.ts:72](https://github.com/jakubmazanec/tools/blob/c36a857a499e2c0c4f38fc4405cb987b357adf10/packages/template/source/Template.ts#L72)
+[packages/template/source/Template.ts:72](https://github.com/jakubmazanec/tools/blob/dccfe8e5cee218e88ff4db59e4bf460975897c58/packages/template/source/Template.ts#L72)
 
 Disable formatting the rendered template using Prettier.
 
@@ -27,6 +27,6 @@ Disable formatting the rendered template using Prettier.
 > `optional` **prettierOptions**: `prettier.Options`
 
 Defined in:
-[packages/template/source/Template.ts:69](https://github.com/jakubmazanec/tools/blob/c36a857a499e2c0c4f38fc4405cb987b357adf10/packages/template/source/Template.ts#L69)
+[packages/template/source/Template.ts:69](https://github.com/jakubmazanec/tools/blob/dccfe8e5cee218e88ff4db59e4bf460975897c58/packages/template/source/Template.ts#L69)
 
 Prettier options.

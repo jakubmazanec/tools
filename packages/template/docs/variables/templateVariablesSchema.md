@@ -8,6 +8,6 @@
 > `ZodUnknown`\>, `ZodArray`\<`ZodRecord`\<`ZodString`, `ZodUnknown`\>\>\]\>
 
 Defined in:
-[packages/template/source/TemplateVariables.ts:6](https://github.com/jakubmazanec/tools/blob/c36a857a499e2c0c4f38fc4405cb987b357adf10/packages/template/source/TemplateVariables.ts#L6)
+[packages/template/source/TemplateVariables.ts:6](https://github.com/jakubmazanec/tools/blob/dccfe8e5cee218e88ff4db59e4bf460975897c58/packages/template/source/TemplateVariables.ts#L6)
 
 Zod schema for [TemplateAttributesVariables](../type-aliases/TemplateAttributesVariables.md).
