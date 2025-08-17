@@ -27,7 +27,7 @@
     "typecheck": "tsc --project tsconfig.typecheck.json"
   },
   "dependencies": {
-    "fs-extra": "^11.3.0"
+    "fs-extra": "^11.3.1"
   },
   "devDependencies": {
     "@jakubmazanec/eslint-config": "^4.1.0",
