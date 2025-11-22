@@ -119,6 +119,7 @@ export const Example = {
       lastName: 'left',
       firstName: 'left',
     },
+    showRowSummaryOnClick: true,
     onPaginationChange: (...args) => {
       console.log('onPagination...', ...args);
     },

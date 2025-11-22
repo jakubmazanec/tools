@@ -70,8 +70,8 @@ export function Radio<
 
 export const radioTheme: ComponentTheme<typeof useRadioTheme> = {
   classNames: {
-    root: 'group/radio inline-block size-5',
-    icon: 'flex justify-content justify-item size-5 *:rounded-full *:bg-white *:border-2 *:border-neutral-100 *:hover:border-neutral-200 *:shadow-inner *:transition-colors *:text-transparent *:hover:text-neutral-100 group-data-[checked]/radio:*:bg-neutral-950 group-data-[checked]/radio:*:border-neutral-950 group-data-[checked]/radio:*:text-white',
+    root: 'group/radio inline-block size-5 rounded-full',
+    icon: 'flex justify-content justify-item size-5 *:rounded-full *:bg-white *:border-2 *:border-neutral-100 *:hover:border-neutral-200 *:shadow-inner *:transition-colors *:text-transparent *:hover:text-neutral-100 group-data-[checked]/radio:*:bg-neutral-950 group-data-[checked]/radio:*:border-neutral-950 group-data-[checked]/radio:*:text-white group-data-[checked]/radio:*:hover:border-neutral-950',
   },
   variants: {
     disabled: {

@@ -9,3 +9,8 @@
 @import '../source/styles.css';
 
 @config './tailwindConfig.ts';
+
+/* TODO: is there a better way? Maybe https://storybook.js.org/docs/9/addons/writing-presets#ui-configuration ? */
+#storybook-root {
+  width: 100% !important;
+}

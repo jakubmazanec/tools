@@ -134,87 +134,89 @@ export const DataTablePagination = memo(
     );
 
     return (
-      <Container align="center" justify="center">
-        <Container spacing="small">
-          <Button
-            aria-label="First page"
-            disabled={isFirstPage}
-            variant="outline"
-            onClick={handleFirstPageClick}
-          >
-            <Icon name="ChevronDoubleLeft" />
-          </Button>
-          <Button
-            aria-label="Previous page"
-            disabled={isFirstPage}
-            variant="outline"
-            onClick={handlePreviousPageClick}
-          >
-            <Icon name="ChevronLeft" />
-          </Button>
+      <div>
+        <Container align="center" className="flex-wrap" justify="center" spacing="small">
+          <Container spacing="small">
+            <Button
+              aria-label="First page"
+              disabled={isFirstPage}
+              variant="outline"
+              onClick={handleFirstPageClick}
+            >
+              <Icon name="ChevronDoubleLeft" />
+            </Button>
+            <Button
+              aria-label="Previous page"
+              disabled={isFirstPage}
+              variant="outline"
+              onClick={handlePreviousPageClick}
+            >
+              <Icon name="ChevronLeft" />
+            </Button>
 
-          {pageCount <= MAX_PAGE_BUTTONS_COUNT ?
-            Array.from({length: pageCount}).map((_, index) => (
-              <DataTablePageButton
-                // eslint-disable-next-line react/no-array-index-key -- needed, there is no other value
-                key={index}
-                isSelected={page === index + 1}
-                page={index + 1}
-                onClick={handlePageClick}
-              />
-            ))
+            {pageCount <= MAX_PAGE_BUTTONS_COUNT ?
+              Array.from({length: pageCount}).map((_, index) => (
+                <DataTablePageButton
+                  // eslint-disable-next-line react/no-array-index-key -- needed, there is no other value
+                  key={index}
+                  isSelected={page === index + 1}
+                  page={index + 1}
+                  onClick={handlePageClick}
+                />
+              ))
+            : null}
+
+            <Button
+              aria-label="Next page"
+              disabled={isLastPage}
+              variant="outline"
+              onClick={handleNextPageClick}
+            >
+              <Icon name="ChevronRight" />
+            </Button>
+            <Button
+              aria-label="Last page"
+              disabled={isLastPage}
+              variant="outline"
+              onClick={handleLastPageClick}
+            >
+              <Icon name="ChevronDoubleRight" />
+            </Button>
+          </Container>
+          {pageCount > MAX_PAGE_BUTTONS_COUNT ?
+            <Container spacing="extra-small">
+              <Text>
+                Page {page} of {pageCount}
+              </Text>
+            </Container>
           : null}
-
-          <Button
-            aria-label="Next page"
-            disabled={isLastPage}
-            variant="outline"
-            onClick={handleNextPageClick}
-          >
-            <Icon name="ChevronRight" />
-          </Button>
-          <Button
-            aria-label="Last page"
-            disabled={isLastPage}
-            variant="outline"
-            onClick={handleLastPageClick}
-          >
-            <Icon name="ChevronDoubleRight" />
-          </Button>
-        </Container>
-        {pageCount > MAX_PAGE_BUTTONS_COUNT ?
-          <Container spacing="extra-small">
-            <Text>
-              Page {page} of {pageCount}
-            </Text>
+          {pageCount > MAX_PAGE_BUTTONS_COUNT ?
+            <Container align="center" spacing="extra-small">
+              <Text>Go to page:</Text>
+              <Input
+                className="w-12"
+                defaultValue={page}
+                pattern="[0-9]*"
+                type="text"
+                onChange={handlePageChange}
+              />
+            </Container>
+          : null}
+          <Container>
+            <Listbox
+              className="w-auto min-w-min"
+              value={String(pageSize)}
+              onChange={handlePageSizeChange}
+            >
+              {PAGE_SIZES.map((pageSize) => (
+                <ListboxOption key={pageSize} value={String(pageSize)}>
+                  Show {pageSize}
+                </ListboxOption>
+              ))}
+            </Listbox>
           </Container>
-        : null}
-        {pageCount > MAX_PAGE_BUTTONS_COUNT ?
-          <Container align="center" spacing="extra-small">
-            <Text>Go to page:</Text>
-            <Input
-              className="w-12"
-              defaultValue={page}
-              pattern="[0-9]*"
-              type="text"
-              onChange={handlePageChange}
-            />
-          </Container>
-        : null}
-        <Container>
-          <Listbox
-            className="w-auto min-w-min"
-            value={String(pageSize)}
-            onChange={handlePageSizeChange}
-          >
-            {PAGE_SIZES.map((pageSize) => (
-              <ListboxOption key={pageSize} value={String(pageSize)}>
-                Show {pageSize}
-              </ListboxOption>
-            ))}
-          </Listbox>
         </Container>
-      </Container>
+      </div>
     );
   },
 );

@@ -14,7 +14,7 @@ export const Default = {
 } satisfies StoryObj<typeof meta>;
 
 export const Disabled = {
-  args: {disabled: true},
+  args: {disabled: true, checked: true},
 } satisfies StoryObj<typeof meta>;
 
 export const Indeterminate = {

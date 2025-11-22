@@ -68,7 +68,7 @@ export function ListboxOption<
 
 export const listboxOptionTheme: ComponentTheme<typeof useListboxOptionTheme> = {
   classNames: {
-    root: 'group/option p-1 pr-6 rounded-1 hover:bg-neutral-50 data-[active]:bg-neutral-50 text-sm transition-colors',
+    root: 'group/option p-1 pr-6 rounded-1 hover:bg-neutral-50 data-[active]:bg-neutral-50 text-sm transition-colors relative',
     icon: 'hidden group-data-[selected]/option:block right-1 top-1 text-neutral-500',
   },
   variants: {

@@ -1,10 +1,10 @@
 import {type Config as BaseTailwindConfig} from 'tailwindcss';
 import plugin from 'tailwindcss/plugin';
 
-import {DEFAULT_STOP, type DEFAULT_STOPS} from './internals/constants.js';
-import {createPalette} from './internals/createPalette.js';
+import {createTailwindThemeColors} from './internals.js';
+import {type DEFAULT_STOPS} from './internals/constants.js';
 
-let defaultCreateTailwindConfigOptions = {
+export const defaultCreateTailwindConfigOptions = {
   colors: {
     gray: '#6c6e79',
     neutral: '#6c6e79', // copy of "gray"
@@ -55,7 +55,6 @@ let defaultCreateTailwindConfigOptions = {
 } satisfies CreateTailwindConfigOptions;
 
 export type CreateTailwindConfigOptions = {
-  content?: string[] | undefined;
   colors?: Record<
     string,
     | {hex: string; hueShift?: number; saturationShift?: number}
@@ -75,65 +74,20 @@ export type TailwindConfig = {
 };
 
 export function createTailwindConfig({
-  content,
   colors,
 }: CreateTailwindConfigOptions = defaultCreateTailwindConfigOptions): TailwindConfig {
-  let themeColors: Record<string, Record<string, string> | string> = {
-    transparent: 'transparent',
-    current: 'currentColor',
-    white: '#fff',
-    black: '#000',
-  };
-
-  for (let [name, color] of Object.entries(colors ?? {})) {
-    if (typeof color === 'string') {
-      themeColors = {
-        ...themeColors,
-        ...createPalette({
-          name,
-          swatches: [
-            {
-              hex: color,
-              stop: DEFAULT_STOP,
-            },
-          ],
-          hueShift: 0,
-          saturationShift: 0,
-        }),
-      };
-    } else if ('swatches' in color) {
-      themeColors = {
-        ...themeColors,
-        ...createPalette({
-          name,
-          swatches: color.swatches,
-          hueShift: color.hueShift ?? 0,
-          saturationShift: color.saturationShift ?? 0,
-        }),
-      };
-    } else if ('hex' in color) {
-      themeColors = {
-        ...themeColors,
-        ...createPalette({
-          name,
-          swatches: [{hex: color.hex, stop: DEFAULT_STOP}],
-          hueShift: color.hueShift ?? 0,
-          saturationShift: color.saturationShift ?? 0,
-        }),
-      };
-    }
-  }
+  let themeColors = createTailwindThemeColors(colors);
 
   // TODO: find another solution; following is needed because of this: https://github.com/tailwindlabs/tailwindcss/issues/18237
   let root: Record<string, Record<string, string> | string> = {
     '--radius-none': '0',
-    '--radius-0_5': '0.125rem',
-    '--radius-1': '0.25rem',
-    '--radius-1_5': '0.375rem',
-    '--radius-2': '0.5rem',
-    '--radius-2_5': '0.625rem',
-    '--radius-3': '0.75rem',
-    '--radius-4': '1rem',
+    '--radius-0_5': '2px',
+    '--radius-1': '4px',
+    '--radius-1_5': '6px',
+    '--radius-2': '8px',
+    '--radius-2_5': '10px',
+    '--radius-3': '12px',
+    '--radius-4': '16px',
     '--radius-full': '9999px',
     '--font-sans':
       'InterVariable, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',

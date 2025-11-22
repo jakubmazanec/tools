@@ -78,7 +78,11 @@ export function Button<T extends ElementType = typeof BUTTON_ELEMENT>({
   let enhancedChildren = Children.map(children, (child) => {
     if (isValidElement(child) && (child.type === Icon || child.type === Spinner)) {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
-      return cloneElement<any>(child, {'data-icon': ''});
+      return cloneElement<any>(child, {'data-slot': 'icon'});
+    }
+
+    if (!isValidElement(child) && typeof child === 'string') {
+      return <span data-slot="text">{child}</span>;
     }
 
     return child;
@@ -96,7 +100,7 @@ export function Button<T extends ElementType = typeof BUTTON_ELEMENT>({
 
 export const buttonTheme: ComponentTheme<typeof useButtonTheme> = {
   className:
-    'rounded-2 flex items-center justify-center text-nowrap font-sans font-medium text-sm transition-colors',
+    'rounded-2 inline-flex items-center justify-center text-nowrap font-sans font-medium text-sm transition-colors',
   variants: {
     variant: {
       solid: 'text-white bg-neutral-900 hover:bg-neutral-800',
@@ -105,9 +109,12 @@ export const buttonTheme: ComponentTheme<typeof useButtonTheme> = {
       invisible: 'cursor-default text-neutral-200 hover:text-neutral-600 select-none',
     },
     size: {
-      small: 'text-sm leading-6 px-2.5 h-8 min-w-8 gap-x-2',
-      medium: 'leading-6 px-2.5 h-9 min-w-9 gap-x-2',
-      large: 'text-lg leading-6 px-3 h-10 min-w-10 gap-x-2',
+      small:
+        'text-sm leading-6 px-2.5 h-8 min-w-8 gap-x-1 *:first:data-[slot=icon]:-ml-2 *:last:data-[slot=icon]:-mr-2',
+      medium:
+        'leading-6 px-2.5 h-9 min-w-9 gap-x-1 *:first:data-[slot=icon]:-ml-1.5 *:last:data-[slot=icon]:-mr-1.5',
+      large:
+        'text-lg leading-6 px-3 h-10 min-w-10 gap-x-1 *:first:data-[slot=icon]:-ml-1 *:last:data-[slot=icon]:-mr-1',
     },
     disabled: {
       true: '',

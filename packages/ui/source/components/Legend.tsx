@@ -42,5 +42,5 @@ export function Legend<T extends ElementType = typeof LEGEND_ELEMENT>({
 }
 
 export const legendTheme: ComponentTheme<typeof useLegendTheme> = {
-  className: 'font-sans font-semibold text-sm',
+  className: 'font-sans font-medium text-sm',
 };

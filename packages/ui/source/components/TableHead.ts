@@ -43,5 +43,5 @@ export function TableHead<T extends ElementType = typeof TABLE_HEAD_ELEMENT>({
 }
 
 export const tableHeadTheme: ComponentTheme<typeof useTableHeadTheme> = {
-  className: 'font-sans border-b-2 border-neutral-100',
+  className: 'font-sans border-t-2 border-b-2 border-neutral-100',
 };

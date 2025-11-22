@@ -14,6 +14,7 @@ export * from './components/Error.js';
 export * from './components/Field.js';
 export * from './components/Fieldset.js';
 export * from './components/Form.js';
+export * from './components/Heading.js';
 export * from './components/Icon.js';
 export * from './components/Input.js';
 export * from './components/Label.js';
