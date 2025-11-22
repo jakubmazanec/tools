@@ -7,7 +7,7 @@
 > **DialogPanel**\<`T`\>(`__namedParameters`): `Element`
 
 Defined in:
-[packages/ui/source/components/DialogPanel.tsx:27](https://github.com/jakubmazanec/tools/blob/dccfe8e5cee218e88ff4db59e4bf460975897c58/packages/ui/source/components/DialogPanel.tsx#L27)
+[packages/ui/source/components/DialogPanel.tsx:27](https://github.com/jakubmazanec/tools/blob/696a64976703690d44032efe8c4d5be5f9236fc7/packages/ui/source/components/DialogPanel.tsx#L27)
 
 ## Type Parameters
 

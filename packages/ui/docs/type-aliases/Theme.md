@@ -27,23 +27,25 @@
 > `ComponentTheme`\<_typeof_ [`useFieldTheme`](../variables/useFieldTheme.md), \{
 > `outputComponentName`: `true`; \}\> & `ComponentTheme`\<_typeof_
 > [`useFormTheme`](../variables/useFormTheme.md), \{ `outputComponentName`: `true`; \}\> &
-> `ComponentTheme`\<_typeof_ [`useIconTheme`](../variables/useIconTheme.md), \{
+> `ComponentTheme`\<_typeof_ [`useHeadingTheme`](../variables/useHeadingTheme.md), \{
 > `outputComponentName`: `true`; \}\> & `ComponentTheme`\<_typeof_
-> [`useInputTheme`](../variables/useInputTheme.md), \{ `outputComponentName`: `true`; \}\> &
-> `ComponentTheme`\<_typeof_ [`useLabelTheme`](../variables/useLabelTheme.md), \{
+> [`useIconTheme`](../variables/useIconTheme.md), \{ `outputComponentName`: `true`; \}\> &
+> `ComponentTheme`\<_typeof_ [`useInputTheme`](../variables/useInputTheme.md), \{
 > `outputComponentName`: `true`; \}\> & `ComponentTheme`\<_typeof_
-> [`useLegendTheme`](../variables/useLegendTheme.md), \{ `outputComponentName`: `true`; \}\> &
-> `ComponentTheme`\<_typeof_ [`useListboxOptionTheme`](../variables/useListboxOptionTheme.md), \{
+> [`useLabelTheme`](../variables/useLabelTheme.md), \{ `outputComponentName`: `true`; \}\> &
+> `ComponentTheme`\<_typeof_ [`useLegendTheme`](../variables/useLegendTheme.md), \{
 > `outputComponentName`: `true`; \}\> & `ComponentTheme`\<_typeof_
-> [`useListboxTheme`](../variables/useListboxTheme.md), \{ `outputComponentName`: `true`; \}\> &
-> `ComponentTheme`\<_typeof_ [`useMenuButtonTheme`](../variables/useMenuButtonTheme.md), \{
+> [`useListboxOptionTheme`](../variables/useListboxOptionTheme.md), \{ `outputComponentName`:
+> `true`; \}\> & `ComponentTheme`\<_typeof_ [`useListboxTheme`](../variables/useListboxTheme.md), \{
 > `outputComponentName`: `true`; \}\> & `ComponentTheme`\<_typeof_
-> [`useMenuHeadingTheme`](../variables/useMenuHeadingTheme.md), \{ `outputComponentName`: `true`;
-> \}\> & `ComponentTheme`\<_typeof_ [`useMenuItemsTheme`](../variables/useMenuItemsTheme.md), \{
+> [`useMenuButtonTheme`](../variables/useMenuButtonTheme.md), \{ `outputComponentName`: `true`; \}\>
+> & `ComponentTheme`\<_typeof_ [`useMenuHeadingTheme`](../variables/useMenuHeadingTheme.md), \{
 > `outputComponentName`: `true`; \}\> & `ComponentTheme`\<_typeof_
-> [`useMenuItemTheme`](../variables/useMenuItemTheme.md), \{ `outputComponentName`: `true`; \}\> &
-> `ComponentTheme`\<_typeof_ [`useMenuSectionTheme`](../variables/useMenuSectionTheme.md), \{
+> [`useMenuItemsTheme`](../variables/useMenuItemsTheme.md), \{ `outputComponentName`: `true`; \}\> &
+> `ComponentTheme`\<_typeof_ [`useMenuItemTheme`](../variables/useMenuItemTheme.md), \{
 > `outputComponentName`: `true`; \}\> & `ComponentTheme`\<_typeof_
+> [`useMenuSectionTheme`](../variables/useMenuSectionTheme.md), \{ `outputComponentName`: `true`;
+> \}\> & `ComponentTheme`\<_typeof_
 > [`useMenuSeparatorTheme`](../variables/useMenuSeparatorTheme.md), \{ `outputComponentName`:
 > `true`; \}\> & `ComponentTheme`\<_typeof_ [`useMenuTheme`](../variables/useMenuTheme.md), \{
 > `outputComponentName`: `true`; \}\> & `ComponentTheme`\<_typeof_
@@ -79,4 +81,4 @@
 > `object`\>
 
 Defined in:
-[packages/ui/source/theme/Theme.ts:52](https://github.com/jakubmazanec/tools/blob/dccfe8e5cee218e88ff4db59e4bf460975897c58/packages/ui/source/theme/Theme.ts#L52)
+[packages/ui/source/theme/Theme.ts:53](https://github.com/jakubmazanec/tools/blob/696a64976703690d44032efe8c4d5be5f9236fc7/packages/ui/source/theme/Theme.ts#L53)

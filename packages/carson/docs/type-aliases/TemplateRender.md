@@ -9,7 +9,7 @@
 > [`templateDataSchema`](../variables/templateDataSchema.md)\> & `object`
 
 Defined in:
-[packages/carson/source/template/TemplateRender.ts:9](https://github.com/jakubmazanec/tools/blob/dccfe8e5cee218e88ff4db59e4bf460975897c58/packages/carson/source/template/TemplateRender.ts#L9)
+[packages/carson/source/template/TemplateRender.ts:9](https://github.com/jakubmazanec/tools/blob/696a64976703690d44032efe8c4d5be5f9236fc7/packages/carson/source/template/TemplateRender.ts#L9)
 
 A result of rendering a Carson template file.
 

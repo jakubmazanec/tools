@@ -7,7 +7,7 @@
 > **ComboboxItem**\<`V`\> = `object`
 
 Defined in:
-[packages/ui/source/components/Combobox.tsx:39](https://github.com/jakubmazanec/tools/blob/dccfe8e5cee218e88ff4db59e4bf460975897c58/packages/ui/source/components/Combobox.tsx#L39)
+[packages/ui/source/components/Combobox.tsx:39](https://github.com/jakubmazanec/tools/blob/696a64976703690d44032efe8c4d5be5f9236fc7/packages/ui/source/components/Combobox.tsx#L39)
 
 ## Type Parameters
 
@@ -22,7 +22,7 @@ Defined in:
 > **label**: `string`
 
 Defined in:
-[packages/ui/source/components/Combobox.tsx:41](https://github.com/jakubmazanec/tools/blob/dccfe8e5cee218e88ff4db59e4bf460975897c58/packages/ui/source/components/Combobox.tsx#L41)
+[packages/ui/source/components/Combobox.tsx:41](https://github.com/jakubmazanec/tools/blob/696a64976703690d44032efe8c4d5be5f9236fc7/packages/ui/source/components/Combobox.tsx#L41)
 
 ---
 
@@ -31,4 +31,4 @@ Defined in:
 > **value**: `V`
 
 Defined in:
-[packages/ui/source/components/Combobox.tsx:40](https://github.com/jakubmazanec/tools/blob/dccfe8e5cee218e88ff4db59e4bf460975897c58/packages/ui/source/components/Combobox.tsx#L40)
+[packages/ui/source/components/Combobox.tsx:40](https://github.com/jakubmazanec/tools/blob/696a64976703690d44032efe8c4d5be5f9236fc7/packages/ui/source/components/Combobox.tsx#L40)

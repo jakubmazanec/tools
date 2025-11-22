@@ -7,6 +7,6 @@
 > **CommandConfig** = `string`
 
 Defined in:
-[args/source/CommandConfig.ts:2](https://github.com/jakubmazanec/tools/blob/dccfe8e5cee218e88ff4db59e4bf460975897c58/packages/args/source/CommandConfig.ts#L2)
+[args/source/CommandConfig.ts:2](https://github.com/jakubmazanec/tools/blob/696a64976703690d44032efe8c4d5be5f9236fc7/packages/args/source/CommandConfig.ts#L2)
 
 Parser's command configuration.
