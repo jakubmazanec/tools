@@ -1,5 +1,46 @@
 # @jakubmazanec/ui
 
+## 0.5.0
+
+### Minor Changes
+
+- [#450](https://github.com/jakubmazanec/tools/pull/450)
+  [`696a649`](https://github.com/jakubmazanec/tools/commit/696a64976703690d44032efe8c4d5be5f9236fc7)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Added new component `Heading`.
+
+- [#450](https://github.com/jakubmazanec/tools/pull/450)
+  [`696a649`](https://github.com/jakubmazanec/tools/commit/696a64976703690d44032efe8c4d5be5f9236fc7)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – New option `showRowSummaryOnClick` for
+  `DataTable` component that shows a modal window with the row's data after clicking on the row.
+
+- [#450](https://github.com/jakubmazanec/tools/pull/450)
+  [`696a649`](https://github.com/jakubmazanec/tools/commit/696a64976703690d44032efe8c4d5be5f9236fc7)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – `DataTable` was redesigned for better UX.
+
+- [#450](https://github.com/jakubmazanec/tools/pull/450)
+  [`696a649`](https://github.com/jakubmazanec/tools/commit/696a64976703690d44032efe8c4d5be5f9236fc7)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Updated styles of components `Button`,
+  `Checkbox`, `Combobox`, `DialogPanel`, `DialogTitle`, `Icon`, `Input`, `Legend`, `ListboxOption`,
+  `Radio`, `Spinner`, `TableHeader`, `TableHeader` and `Textarea`. Components now also may receive
+  `data-slot` attribute when necessary (e.g. when `Icon` is a direct child of `Button`).
+
+### Patch Changes
+
+- [#450](https://github.com/jakubmazanec/tools/pull/450)
+  [`696a649`](https://github.com/jakubmazanec/tools/commit/696a64976703690d44032efe8c4d5be5f9236fc7)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Styles for packages's Storybook were fixed
+  for better previews of components that are wider than user's viewport.
+
+- [#450](https://github.com/jakubmazanec/tools/pull/450)
+  [`696a649`](https://github.com/jakubmazanec/tools/commit/696a64976703690d44032efe8c4d5be5f9236fc7)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Internals of `createTailwindConfig` were
+  refactored.
+
+- [#450](https://github.com/jakubmazanec/tools/pull/450)
+  [`696a649`](https://github.com/jakubmazanec/tools/commit/696a64976703690d44032efe8c4d5be5f9236fc7)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Units for `border-radius` in the default
+  theme were changed to `px` to align with `--spacing`.
+
 ## 0.4.2
 
 ### Patch Changes
