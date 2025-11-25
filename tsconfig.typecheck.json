@@ -11,5 +11,5 @@
   "compilerOptions": {
     "composite": false
   },
-  "include": ["./*.ts"]
+  "include": ["./*", "./tools/**/*"]
 }

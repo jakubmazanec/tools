@@ -9,10 +9,14 @@ let developmentDependencies = [
   TEMPLATE_PACKAGE_NAME,
   '@changesets/cli',
   '@types/node',
+  '@types/semver',
   'del-cli',
+  'execa',
+  'lodash',
   'patch-package',
   'prettier',
   'prettier-plugin-packagejson',
+  'semver',
   'turbo',
   'typescript',
 ].filter((dependency) => {
@@ -55,8 +59,3 @@ if (workspace.projects.find((project) => project.name === TEMPLATE_PACKAGE_NAME)
 packageJson.scripts.prepare += ' && carson update workspace';
 -%>
 <%- JSON.stringify(packageJson) %>
-
-
-
-
-
