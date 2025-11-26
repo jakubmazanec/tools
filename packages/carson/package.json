@@ -52,7 +52,7 @@
     "simple-git": "^3.28.0",
     "yaml": "^2.8.1",
     "zen-observable": "^0.10.0",
-    "zod": "^4.0.17"
+    "zod": "^4.1.13"
   },
   "devDependencies": {
     "@jakubmazanec/eslint-config": "^4.1.0",
