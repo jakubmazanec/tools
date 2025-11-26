@@ -50,7 +50,7 @@
   "devDependencies": {
     "@types/confusing-browser-globals": "^1.0.3",
     "@types/eslint-config-prettier": "^6.11.3",
-    "@types/eslint-plugin-jsx-a11y": "^6.10.0",
+    "@types/eslint-plugin-jsx-a11y": "^6.10.1",
     "@types/node": "^24.0.4",
     "del-cli": "^6.0.0",
     "esbuild": "^0.27.0",
