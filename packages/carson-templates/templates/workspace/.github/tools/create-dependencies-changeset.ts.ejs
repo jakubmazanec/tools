@@ -24,7 +24,7 @@ type ProjectDependencyBumps = Map<string, string>;
 type DependencyBumps = Map<string, ProjectDependencyBumps>;
 
 /**
- * A function that returns all proejcts that use Carson.
+ * A function that returns all projects that use Carson.
  */
 async function getProjectsWithCarson(dir = process.cwd(), result: string[] = []) {
   let entries = await fs.readdir(dir, {withFileTypes: true});
@@ -76,8 +76,8 @@ async function checkCarsonTemplatesPackage(dependencyBumps: DependencyBumps) {
         let newMajorVersion = semver.major(semver.minVersion(bump)!);
         let oldMajorVersion = semver.major(semver.minVersion(result[0])!);
 
+        // Node.js is a special case, because it isn't specified in `dependencies` field
         if (newMajorVersion > oldMajorVersion || dependencyName === 'node') {
-          // Node.js is a special case, because it isn't specified in `dependencies` field
           throw new Error(
             `Bumping major version of dependency "${dependencyName}" that is handled by Carson, update of the Carson template package is needed!`,
           );
