@@ -7,7 +7,7 @@
 > **StringFormValue** = `object`
 
 Defined in:
-[packages/cli/source/ui/form/FormValue.ts:3](https://github.com/jakubmazanec/tools/blob/696a64976703690d44032efe8c4d5be5f9236fc7/packages/cli/source/ui/form/FormValue.ts#L3)
+[packages/cli/source/ui/form/FormValue.ts:3](https://github.com/jakubmazanec/tools/blob/a079c38394d5df8b5048ba81c0c9138a6876bff6/packages/cli/source/ui/form/FormValue.ts#L3)
 
 ## Properties
 
@@ -16,7 +16,7 @@ Defined in:
 > **isComplete**: `boolean`
 
 Defined in:
-[packages/cli/source/ui/form/FormValue.ts:3](https://github.com/jakubmazanec/tools/blob/696a64976703690d44032efe8c4d5be5f9236fc7/packages/cli/source/ui/form/FormValue.ts#L3)
+[packages/cli/source/ui/form/FormValue.ts:3](https://github.com/jakubmazanec/tools/blob/a079c38394d5df8b5048ba81c0c9138a6876bff6/packages/cli/source/ui/form/FormValue.ts#L3)
 
 ---
 
@@ -25,4 +25,4 @@ Defined in:
 > **value**: `string`
 
 Defined in:
-[packages/cli/source/ui/form/FormValue.ts:3](https://github.com/jakubmazanec/tools/blob/696a64976703690d44032efe8c4d5be5f9236fc7/packages/cli/source/ui/form/FormValue.ts#L3)
+[packages/cli/source/ui/form/FormValue.ts:3](https://github.com/jakubmazanec/tools/blob/a079c38394d5df8b5048ba81c0c9138a6876bff6/packages/cli/source/ui/form/FormValue.ts#L3)

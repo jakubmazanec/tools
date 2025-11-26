@@ -5,7 +5,7 @@
 # Class: Template\<A, D\>
 
 Defined in:
-[packages/template/source/Template.ts:93](https://github.com/jakubmazanec/tools/blob/696a64976703690d44032efe8c4d5be5f9236fc7/packages/template/source/Template.ts#L93)
+[packages/template/source/Template.ts:93](https://github.com/jakubmazanec/tools/blob/a079c38394d5df8b5048ba81c0c9138a6876bff6/packages/template/source/Template.ts#L93)
 
 The `Template` object stores all information about a template and has methods for reading and
 rendering.
@@ -43,7 +43,7 @@ A Zod schema type used to define the template datatype.
 > **new Template**\<`A`, `D`\>(`__namedParameters`): `Template`\<`A`, `D`\>
 
 Defined in:
-[packages/template/source/Template.ts:116](https://github.com/jakubmazanec/tools/blob/696a64976703690d44032efe8c4d5be5f9236fc7/packages/template/source/Template.ts#L116)
+[packages/template/source/Template.ts:116](https://github.com/jakubmazanec/tools/blob/a079c38394d5df8b5048ba81c0c9138a6876bff6/packages/template/source/Template.ts#L116)
 
 #### Parameters
 
@@ -63,7 +63,7 @@ Defined in:
 > `output`\<`NonNullable`\<`A`\>\>
 
 Defined in:
-[packages/template/source/Template.ts:104](https://github.com/jakubmazanec/tools/blob/696a64976703690d44032efe8c4d5be5f9236fc7/packages/template/source/Template.ts#L104)
+[packages/template/source/Template.ts:104](https://github.com/jakubmazanec/tools/blob/a079c38394d5df8b5048ba81c0c9138a6876bff6/packages/template/source/Template.ts#L104)
 
 Template attributes. These control how the template is rendered. Some attributes can be written in
 [EJS](https://ejs.co/) and are rendered before the template content is rendered. It is expected that
@@ -82,7 +82,7 @@ Each variable that is a string is also rendered.
 > `A`\<`A`\> : `null`
 
 Defined in:
-[packages/template/source/Template.ts:111](https://github.com/jakubmazanec/tools/blob/696a64976703690d44032efe8c4d5be5f9236fc7/packages/template/source/Template.ts#L111)
+[packages/template/source/Template.ts:111](https://github.com/jakubmazanec/tools/blob/a079c38394d5df8b5048ba81c0c9138a6876bff6/packages/template/source/Template.ts#L111)
 
 Zod schema for custom template attributes.
 
@@ -93,7 +93,7 @@ Zod schema for custom template attributes.
 > `readonly` **content**: `string`
 
 Defined in:
-[packages/template/source/Template.ts:101](https://github.com/jakubmazanec/tools/blob/696a64976703690d44032efe8c4d5be5f9236fc7/packages/template/source/Template.ts#L101)
+[packages/template/source/Template.ts:101](https://github.com/jakubmazanec/tools/blob/a079c38394d5df8b5048ba81c0c9138a6876bff6/packages/template/source/Template.ts#L101)
 
 Template content. Templates are written in [EJS](https://ejs.co/).
 
@@ -105,7 +105,7 @@ Template content. Templates are written in [EJS](https://ejs.co/).
 > `null`
 
 Defined in:
-[packages/template/source/Template.ts:114](https://github.com/jakubmazanec/tools/blob/696a64976703690d44032efe8c4d5be5f9236fc7/packages/template/source/Template.ts#L114)
+[packages/template/source/Template.ts:114](https://github.com/jakubmazanec/tools/blob/a079c38394d5df8b5048ba81c0c9138a6876bff6/packages/template/source/Template.ts#L114)
 
 Zod schema for template data.
 
@@ -116,7 +116,7 @@ Zod schema for template data.
 > `optional` **path**: `string`
 
 Defined in:
-[packages/template/source/Template.ts:98](https://github.com/jakubmazanec/tools/blob/696a64976703690d44032efe8c4d5be5f9236fc7/packages/template/source/Template.ts#L98)
+[packages/template/source/Template.ts:98](https://github.com/jakubmazanec/tools/blob/a079c38394d5df8b5048ba81c0c9138a6876bff6/packages/template/source/Template.ts#L98)
 
 Template path.
 
@@ -128,7 +128,7 @@ Template path.
 > `Promise`\<[`TemplateRenders`](../type-aliases/TemplateRenders.md)\<`A`, `D`\>\>
 
 Defined in:
-[packages/template/source/Template.ts:232](https://github.com/jakubmazanec/tools/blob/696a64976703690d44032efe8c4d5be5f9236fc7/packages/template/source/Template.ts#L232)
+[packages/template/source/Template.ts:232](https://github.com/jakubmazanec/tools/blob/a079c38394d5df8b5048ba81c0c9138a6876bff6/packages/template/source/Template.ts#L232)
 
 Renders the template using data.
 
@@ -159,7 +159,7 @@ Template renders.
 > `static` **read**\<`A`, `D`\>(`templatePath`, `options?`): `Promise`\<`Template`\<`A`, `D`\>\>
 
 Defined in:
-[packages/template/source/Template.ts:149](https://github.com/jakubmazanec/tools/blob/696a64976703690d44032efe8c4d5be5f9236fc7/packages/template/source/Template.ts#L149)
+[packages/template/source/Template.ts:149](https://github.com/jakubmazanec/tools/blob/a079c38394d5df8b5048ba81c0c9138a6876bff6/packages/template/source/Template.ts#L149)
 
 Reads a template from a file.
 
@@ -197,7 +197,7 @@ Path to the template file.
 > `Promise`\<[`TemplateRenders`](../type-aliases/TemplateRenders.md)\<`A`, `D`\>\>
 
 Defined in:
-[packages/template/source/Template.ts:206](https://github.com/jakubmazanec/tools/blob/696a64976703690d44032efe8c4d5be5f9236fc7/packages/template/source/Template.ts#L206)
+[packages/template/source/Template.ts:206](https://github.com/jakubmazanec/tools/blob/a079c38394d5df8b5048ba81c0c9138a6876bff6/packages/template/source/Template.ts#L206)
 
 Reads a template from a file and then renders it.
 
