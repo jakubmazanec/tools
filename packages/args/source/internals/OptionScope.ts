@@ -1,4 +1,4 @@
-import camelCase from 'lodash.camelcase';
+import _ from 'lodash';
 
 import {type OptionConfig} from '../OptionConfig.js';
 import {type OptionsConfig} from '../OptionsConfig.js';
@@ -20,7 +20,7 @@ export class OptionScope {
 
     // Convert option to camel case
     if (this.name.includes('-')) {
-      this.name = camelCase(this.name);
+      this.name = _.camelCase(this.name);
     }
 
     let optionConfig = optionsConfig[this.name];
