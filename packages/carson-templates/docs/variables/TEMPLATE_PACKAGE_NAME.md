@@ -8,4 +8,4 @@
 > `'@jakubmazanec/carson-templates'`
 
 Defined in:
-[packages/carson-templates/source/constants.ts:14](https://github.com/jakubmazanec/tools/blob/7aa93b359ab172f9914ed248f1dc0e99ce6babe7/packages/carson-templates/source/constants.ts#L14)
+[packages/carson-templates/source/constants.ts:14](https://github.com/jakubmazanec/tools/blob/e3906ac2943abeadc19b5add1f3702fecb8f15db/packages/carson-templates/source/constants.ts#L14)

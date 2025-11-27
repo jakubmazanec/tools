@@ -7,7 +7,7 @@
 > `const` **TSCONFIG_COMPILER_OPTIONS**: `object`
 
 Defined in:
-[packages/carson-templates/source/constants.ts:50](https://github.com/jakubmazanec/tools/blob/7aa93b359ab172f9914ed248f1dc0e99ce6babe7/packages/carson-templates/source/constants.ts#L50)
+[packages/carson-templates/source/constants.ts:50](https://github.com/jakubmazanec/tools/blob/e3906ac2943abeadc19b5add1f3702fecb8f15db/packages/carson-templates/source/constants.ts#L50)
 
 ## Type Declaration
 

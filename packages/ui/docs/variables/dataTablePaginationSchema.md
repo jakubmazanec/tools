@@ -9,4 +9,4 @@
 > `ZodLiteral`\<`50`\>, `ZodLiteral`\<`75`\>, `ZodLiteral`\<`100`\>\]\>; \}, `$strip`\>
 
 Defined in:
-[packages/ui/source/components/data-table/DataTablePagination.ts:5](https://github.com/jakubmazanec/tools/blob/7aa93b359ab172f9914ed248f1dc0e99ce6babe7/packages/ui/source/components/data-table/DataTablePagination.ts#L5)
+[packages/ui/source/components/data-table/DataTablePagination.ts:5](https://github.com/jakubmazanec/tools/blob/e3906ac2943abeadc19b5add1f3702fecb8f15db/packages/ui/source/components/data-table/DataTablePagination.ts#L5)

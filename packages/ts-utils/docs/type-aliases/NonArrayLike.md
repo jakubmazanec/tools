@@ -7,7 +7,7 @@
 > **NonArrayLike**\<`T`\> = `T` _extends_ `ArrayLike`\<`any`\> ? `never` : `T`
 
 Defined in:
-[packages/ts-utils/source/types/NonArrayLike.ts:3](https://github.com/jakubmazanec/tools/blob/7aa93b359ab172f9914ed248f1dc0e99ce6babe7/packages/ts-utils/source/types/NonArrayLike.ts#L3)
+[packages/ts-utils/source/types/NonArrayLike.ts:3](https://github.com/jakubmazanec/tools/blob/e3906ac2943abeadc19b5add1f3702fecb8f15db/packages/ts-utils/source/types/NonArrayLike.ts#L3)
 
 ## Type Parameters
 

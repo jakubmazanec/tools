@@ -8,6 +8,6 @@
 > [`workspaceConfigSchema`](../variables/workspaceConfigSchema.md)\>
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceConfig.ts:13](https://github.com/jakubmazanec/tools/blob/7aa93b359ab172f9914ed248f1dc0e99ce6babe7/packages/carson/source/workspace/WorkspaceConfig.ts#L13)
+[packages/carson/source/workspace/WorkspaceConfig.ts:13](https://github.com/jakubmazanec/tools/blob/e3906ac2943abeadc19b5add1f3702fecb8f15db/packages/carson/source/workspace/WorkspaceConfig.ts#L13)
 
 A workspace configuration.
