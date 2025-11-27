@@ -4,11 +4,11 @@
 
 # Function: useFieldName()
 
-> **useFieldName**(): `undefined` \| `FieldName`\<`any`\>
+> **useFieldName**(): `FieldName`\<`any`\> \| `undefined`
 
 Defined in:
-[packages/ui/source/components/useFieldName.ts:5](https://github.com/jakubmazanec/tools/blob/a079c38394d5df8b5048ba81c0c9138a6876bff6/packages/ui/source/components/useFieldName.ts#L5)
+[packages/ui/source/components/useFieldName.ts:5](https://github.com/jakubmazanec/tools/blob/a43a55b9d27b3a4029e3bc382a396be44e1cf999/packages/ui/source/components/useFieldName.ts#L5)
 
 ## Returns
 
-`undefined` \| `FieldName`\<`any`\>
+`FieldName`\<`any`\> \| `undefined`

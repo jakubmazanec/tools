@@ -4,7 +4,7 @@
 
 # Function: minVersion()
 
-> **minVersion**(`range`, `optionsOrLoose?`): `null` \| [`SemVer`](../classes/SemVer.md)
+> **minVersion**(`range`, `optionsOrLoose?`): [`SemVer`](../classes/SemVer.md) \| `null`
 
 Defined in: node_modules/@types/semver/ranges/min-version.d.ts:8
 
@@ -22,4 +22,4 @@ Return the lowest version that can possibly match the given range.
 
 ## Returns
 
-`null` \| [`SemVer`](../classes/SemVer.md)
+[`SemVer`](../classes/SemVer.md) \| `null`

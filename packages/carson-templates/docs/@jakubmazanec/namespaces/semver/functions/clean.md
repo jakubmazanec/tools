@@ -4,7 +4,7 @@
 
 # Function: clean()
 
-> **clean**(`version`, `optionsOrLoose?`): `null` \| `string`
+> **clean**(`version`, `optionsOrLoose?`): `string` \| `null`
 
 Defined in: node_modules/@types/semver/functions/clean.d.ts:6
 
@@ -23,4 +23,4 @@ null if version is invalid.
 
 ## Returns
 
-`null` \| `string`
+`string` \| `null`

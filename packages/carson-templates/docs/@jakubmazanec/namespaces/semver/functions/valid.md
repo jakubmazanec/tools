@@ -4,7 +4,7 @@
 
 # Function: valid()
 
-> **valid**(`version`, `optionsOrLoose?`): `null` \| `string`
+> **valid**(`version`, `optionsOrLoose?`): `string` \| `null`
 
 Defined in: node_modules/@types/semver/functions/valid.d.ts:6
 
@@ -14,7 +14,7 @@ Return the parsed version as a string, or null if it's not valid.
 
 ### version
 
-`undefined` | `null` | `string` | [`SemVer`](../classes/SemVer.md)
+`string` | [`SemVer`](../classes/SemVer.md) | `null` | `undefined`
 
 ### optionsOrLoose?
 
@@ -22,4 +22,4 @@ Return the parsed version as a string, or null if it's not valid.
 
 ## Returns
 
-`null` \| `string`
+`string` \| `null`

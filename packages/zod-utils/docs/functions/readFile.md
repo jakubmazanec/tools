@@ -10,7 +10,7 @@
 > `ZodError`\<`output`\<`S`\>\>\>\>
 
 Defined in:
-[packages/zod-utils/source/utils/readFile.ts:11](https://github.com/jakubmazanec/tools/blob/a079c38394d5df8b5048ba81c0c9138a6876bff6/packages/zod-utils/source/utils/readFile.ts#L11)
+[packages/zod-utils/source/utils/readFile.ts:11](https://github.com/jakubmazanec/tools/blob/a43a55b9d27b3a4029e3bc382a396be44e1cf999/packages/zod-utils/source/utils/readFile.ts#L11)
 
 ## Type Parameters
 
@@ -20,7 +20,7 @@ Defined in:
 
 ### O
 
-`O` _extends_ `undefined` \| [`ReadFileOptions`](../interfaces/ReadFileOptions.md) = `undefined`
+`O` _extends_ [`ReadFileOptions`](../interfaces/ReadFileOptions.md) \| `undefined` = `undefined`
 
 ## Parameters
 

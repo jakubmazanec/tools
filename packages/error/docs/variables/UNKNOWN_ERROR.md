@@ -7,6 +7,6 @@
 > `const` **UNKNOWN_ERROR**: `"UNKNOWN_ERROR"` = `'UNKNOWN_ERROR'`
 
 Defined in:
-[constants.ts:6](https://github.com/jakubmazanec/tools/blob/a079c38394d5df8b5048ba81c0c9138a6876bff6/packages/error/source/constants.ts#L6)
+[constants.ts:6](https://github.com/jakubmazanec/tools/blob/a43a55b9d27b3a4029e3bc382a396be44e1cf999/packages/error/source/constants.ts#L6)
 
 Code for an unknown error. You should never use nor encounter this error code.

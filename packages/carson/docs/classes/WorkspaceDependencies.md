@@ -5,7 +5,7 @@
 # Class: WorkspaceDependencies\<M\>
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceDependencies.ts:13](https://github.com/jakubmazanec/tools/blob/a079c38394d5df8b5048ba81c0c9138a6876bff6/packages/carson/source/workspace/WorkspaceDependencies.ts#L13)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:13](https://github.com/jakubmazanec/tools/blob/a43a55b9d27b3a4029e3bc382a396be44e1cf999/packages/carson/source/workspace/WorkspaceDependencies.ts#L13)
 
 A collection of WorkspaceDependency \| workspace dependencies that are installed in
 [a workspace](Workspace.md).
@@ -31,7 +31,7 @@ A collection of WorkspaceDependency \| workspace dependencies that are installed
 > **new WorkspaceDependencies**\<`M`\>(...`args`): `WorkspaceDependencies`\<`M`\>
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceDependencies.ts:17](https://github.com/jakubmazanec/tools/blob/a079c38394d5df8b5048ba81c0c9138a6876bff6/packages/carson/source/workspace/WorkspaceDependencies.ts#L17)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:17](https://github.com/jakubmazanec/tools/blob/a43a55b9d27b3a4029e3bc382a396be44e1cf999/packages/carson/source/workspace/WorkspaceDependencies.ts#L17)
 
 #### Parameters
 
@@ -60,7 +60,7 @@ statement.
 
 #### Index Signature
 
-\[`key`: `number`\]: `undefined` \| `boolean`
+\[`key`: `number`\]: `boolean` \| `undefined`
 
 #### \[iterator\]?
 
@@ -258,7 +258,7 @@ array.
 > **workspace**: [`Workspace`](Workspace.md)\<`M`\>
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceDependencies.ts:15](https://github.com/jakubmazanec/tools/blob/a079c38394d5df8b5048ba81c0c9138a6876bff6/packages/carson/source/workspace/WorkspaceDependencies.ts#L15)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:15](https://github.com/jakubmazanec/tools/blob/a43a55b9d27b3a4029e3bc382a396be44e1cf999/packages/carson/source/workspace/WorkspaceDependencies.ts#L15)
 
 The workspace the dependencies are installed in.
 
@@ -296,7 +296,7 @@ Iterator
 
 ### at()
 
-> **at**(`index`): `undefined` \| `WorkspaceDependency`
+> **at**(`index`): `WorkspaceDependency` \| `undefined`
 
 Defined in: node_modules/typescript/lib/lib.es2022.array.d.ts:24
 
@@ -312,7 +312,7 @@ The zero-based index of the desired code unit. A negative index will count back 
 
 #### Returns
 
-`undefined` \| `WorkspaceDependency`
+`WorkspaceDependency` \| `undefined`
 
 #### Inherited from
 
@@ -624,7 +624,7 @@ undefined is used as the this value.
 
 #### Call Signature
 
-> **find**\<`S`\>(`predicate`, `thisArg?`): `undefined` \| `S`
+> **find**\<`S`\>(`predicate`, `thisArg?`): `S` \| `undefined`
 
 Defined in: node_modules/typescript/lib/lib.es2015.core.d.ts:29
 
@@ -656,7 +656,7 @@ provided, undefined is used instead.
 
 ##### Returns
 
-`undefined` \| `S`
+`S` \| `undefined`
 
 ##### Inherited from
 
@@ -664,7 +664,7 @@ provided, undefined is used instead.
 
 #### Call Signature
 
-> **find**(`predicate`, `thisArg?`): `undefined` \| `WorkspaceDependency`
+> **find**(`predicate`, `thisArg?`): `WorkspaceDependency` \| `undefined`
 
 Defined in: node_modules/typescript/lib/lib.es2015.core.d.ts:30
 
@@ -680,7 +680,7 @@ Defined in: node_modules/typescript/lib/lib.es2015.core.d.ts:30
 
 ##### Returns
 
-`undefined` \| `WorkspaceDependency`
+`WorkspaceDependency` \| `undefined`
 
 ##### Inherited from
 
@@ -727,7 +727,7 @@ provided, undefined is used instead.
 
 #### Call Signature
 
-> **findLast**\<`S`\>(`predicate`, `thisArg?`): `undefined` \| `S`
+> **findLast**\<`S`\>(`predicate`, `thisArg?`): `S` \| `undefined`
 
 Defined in: node_modules/typescript/lib/lib.es2023.array.d.ts:29
 
@@ -758,7 +758,7 @@ provided, undefined is used instead.
 
 ##### Returns
 
-`undefined` \| `S`
+`S` \| `undefined`
 
 ##### Inherited from
 
@@ -766,7 +766,7 @@ provided, undefined is used instead.
 
 #### Call Signature
 
-> **findLast**(`predicate`, `thisArg?`): `undefined` \| `WorkspaceDependency`
+> **findLast**(`predicate`, `thisArg?`): `WorkspaceDependency` \| `undefined`
 
 Defined in: node_modules/typescript/lib/lib.es2023.array.d.ts:30
 
@@ -782,7 +782,7 @@ Defined in: node_modules/typescript/lib/lib.es2023.array.d.ts:30
 
 ##### Returns
 
-`undefined` \| `WorkspaceDependency`
+`WorkspaceDependency` \| `undefined`
 
 ##### Inherited from
 
@@ -950,7 +950,7 @@ undefined is used as the this value.
 > **getVersions**(`options?`): `Record`\<`string`, `string`[]\>
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceDependencies.ts:187](https://github.com/jakubmazanec/tools/blob/a079c38394d5df8b5048ba81c0c9138a6876bff6/packages/carson/source/workspace/WorkspaceDependencies.ts#L187)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:187](https://github.com/jakubmazanec/tools/blob/a43a55b9d27b3a4029e3bc382a396be44e1cf999/packages/carson/source/workspace/WorkspaceDependencies.ts#L187)
 
 Creates map of all dependnecies and their installed version.
 
@@ -1156,7 +1156,7 @@ undefined is used as the this value.
 
 ### pop()
 
-> **pop**(): `undefined` \| `WorkspaceDependency`
+> **pop**(): `WorkspaceDependency` \| `undefined`
 
 Defined in: node_modules/typescript/lib/lib.es5.d.ts:1342
 
@@ -1165,7 +1165,7 @@ and the array is not modified.
 
 #### Returns
 
-`undefined` \| `WorkspaceDependency`
+`WorkspaceDependency` \| `undefined`
 
 #### Inherited from
 
@@ -1178,7 +1178,7 @@ and the array is not modified.
 > **push**(...`newWorkspaceDependencies`): `number`
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceDependencies.ts:38](https://github.com/jakubmazanec/tools/blob/a079c38394d5df8b5048ba81c0c9138a6876bff6/packages/carson/source/workspace/WorkspaceDependencies.ts#L38)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:38](https://github.com/jakubmazanec/tools/blob/a43a55b9d27b3a4029e3bc382a396be44e1cf999/packages/carson/source/workspace/WorkspaceDependencies.ts#L38)
 
 Adds one or more new dependencies.
 
@@ -1413,7 +1413,7 @@ the same array.
 
 ### shift()
 
-> **shift**(): `undefined` \| `WorkspaceDependency`
+> **shift**(): `WorkspaceDependency` \| `undefined`
 
 Defined in: node_modules/typescript/lib/lib.es5.d.ts:1374
 
@@ -1422,7 +1422,7 @@ and the array is not modified.
 
 #### Returns
 
-`undefined` \| `WorkspaceDependency`
+`WorkspaceDependency` \| `undefined`
 
 #### Inherited from
 
@@ -2043,7 +2043,7 @@ Value of 'this' used to invoke the mapfn.
 > `static` **fromWorkspace**\<`M`\>(`workspace`, `options?`): `WorkspaceDependencies`\<`M`\>
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceDependencies.ts:81](https://github.com/jakubmazanec/tools/blob/a079c38394d5df8b5048ba81c0c9138a6876bff6/packages/carson/source/workspace/WorkspaceDependencies.ts#L81)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:81](https://github.com/jakubmazanec/tools/blob/a43a55b9d27b3a4029e3bc382a396be44e1cf999/packages/carson/source/workspace/WorkspaceDependencies.ts#L81)
 
 Creates new WorkspaceDependencies instance from a [Workspace](Workspace.md) instance and its
 dependencies.

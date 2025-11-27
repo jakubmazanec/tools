@@ -4,7 +4,7 @@
 
 # Type Alias: IdentifierBase
 
-> **IdentifierBase** = `"0"` \| `"1"`
+> **IdentifierBase** = `"0"` \| `"1"` \| `false`
 
 Defined in: node_modules/@types/semver/functions/inc.d.ts:6
 

@@ -4,22 +4,87 @@
 
 # Function: parse()
 
-> **parse**(`version`, `optionsOrLoose?`): `null` \| [`SemVer`](../classes/SemVer.md)
+## Call Signature
 
-Defined in: node_modules/@types/semver/functions/parse.d.ts:7
+> **parse**(`version?`): [`SemVer`](../classes/SemVer.md) \| `null`
 
-Return the parsed version as a SemVer object, or null if it's not valid.
+Defined in: node_modules/@types/semver/functions/parse.d.ts:11
 
-## Parameters
+Return the parsed version as a `SemVer` object.
 
-### version
+In case `version` is invalid, the function will
 
-`undefined` | `null` | `string` | [`SemVer`](../classes/SemVer.md)
+- throw if `throwErrors` is `true`.
+- return `null` otherwise.
 
-### optionsOrLoose?
+### Parameters
+
+#### version?
+
+`string` | [`SemVer`](../classes/SemVer.md) | `null`
+
+### Returns
+
+[`SemVer`](../classes/SemVer.md) \| `null`
+
+## Call Signature
+
+> **parse**(`version`, `optionsOrLoose`, `throwErrors`): [`SemVer`](../classes/SemVer.md)
+
+Defined in: node_modules/@types/semver/functions/parse.d.ts:12
+
+Return the parsed version as a `SemVer` object.
+
+In case `version` is invalid, the function will
+
+- throw if `throwErrors` is `true`.
+- return `null` otherwise.
+
+### Parameters
+
+#### version
+
+`string` | [`SemVer`](../classes/SemVer.md) | `null` | `undefined`
+
+#### optionsOrLoose
 
 `boolean` | [`Options`](../interfaces/Options.md)
 
-## Returns
+#### throwErrors
 
-`null` \| [`SemVer`](../classes/SemVer.md)
+`true`
+
+### Returns
+
+[`SemVer`](../classes/SemVer.md)
+
+## Call Signature
+
+> **parse**(`version`, `optionsOrLoose`, `throwErrors?`): [`SemVer`](../classes/SemVer.md) \| `null`
+
+Defined in: node_modules/@types/semver/functions/parse.d.ts:17
+
+Return the parsed version as a `SemVer` object.
+
+In case `version` is invalid, the function will
+
+- throw if `throwErrors` is `true`.
+- return `null` otherwise.
+
+### Parameters
+
+#### version
+
+`string` | [`SemVer`](../classes/SemVer.md) | `null` | `undefined`
+
+#### optionsOrLoose
+
+`boolean` | [`Options`](../interfaces/Options.md)
+
+#### throwErrors?
+
+`boolean`
+
+### Returns
+
+[`SemVer`](../classes/SemVer.md) \| `null`

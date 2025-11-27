@@ -6,7 +6,8 @@
 
 ## Call Signature
 
-> **inc**(`version`, `release`, `optionsOrLoose?`, `identifier?`): `null` \| `string`
+> **inc**(`version`, `release`, `optionsOrLoose?`, `identifier?`, `identifierBase?`): `string` \|
+> `null`
 
 Defined in: node_modules/@types/semver/functions/inc.d.ts:12
 
@@ -31,15 +32,19 @@ prepatch, or prerelease), or null if it's not valid.
 
 `string`
 
+#### identifierBase?
+
+[`IdentifierBase`](../namespaces/inc/type-aliases/IdentifierBase.md)
+
 ### Returns
 
-`null` \| `string`
+`string` \| `null`
 
 ## Call Signature
 
-> **inc**(`version`, `release`, `identifier?`, `identifierBase?`): `null` \| `string`
+> **inc**(`version`, `release`, `identifier`, `identifierBase?`): `string` \| `null`
 
-Defined in: node_modules/@types/semver/functions/inc.d.ts:18
+Defined in: node_modules/@types/semver/functions/inc.d.ts:19
 
 Return the version incremented by the release type (major, premajor, minor, preminor, patch,
 prepatch, or prerelease), or null if it's not valid.
@@ -54,14 +59,14 @@ prepatch, or prerelease), or null if it's not valid.
 
 [`ReleaseType`](../type-aliases/ReleaseType.md)
 
-#### identifier?
+#### identifier
 
 `string`
 
 #### identifierBase?
 
-`false` | [`IdentifierBase`](../namespaces/inc/type-aliases/IdentifierBase.md)
+[`IdentifierBase`](../namespaces/inc/type-aliases/IdentifierBase.md)
 
 ### Returns
 
-`null` \| `string`
+`string` \| `null`

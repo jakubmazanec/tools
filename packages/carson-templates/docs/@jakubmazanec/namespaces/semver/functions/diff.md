@@ -4,7 +4,7 @@
 
 # Function: diff()
 
-> **diff**(`v1`, `v2`): `null` \| [`ReleaseType`](../type-aliases/ReleaseType.md)
+> **diff**(`v1`, `v2`): [`ReleaseType`](../type-aliases/ReleaseType.md) \| `null`
 
 Defined in: node_modules/@types/semver/functions/diff.d.ts:7
 
@@ -23,4 +23,4 @@ patch, prepatch, or prerelease), or null if the versions are the same.
 
 ## Returns
 
-`null` \| [`ReleaseType`](../type-aliases/ReleaseType.md)
+[`ReleaseType`](../type-aliases/ReleaseType.md) \| `null`

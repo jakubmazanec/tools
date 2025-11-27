@@ -7,7 +7,7 @@
 > **UpdateWorkspaceAndProjectsOptions** = `object`
 
 Defined in:
-[packages/carson/source/commands/update-workspace/runUpdateWorkspace.ts:7](https://github.com/jakubmazanec/tools/blob/a079c38394d5df8b5048ba81c0c9138a6876bff6/packages/carson/source/commands/update-workspace/runUpdateWorkspace.ts#L7)
+[packages/carson/source/commands/update-workspace/runUpdateWorkspace.ts:7](https://github.com/jakubmazanec/tools/blob/a43a55b9d27b3a4029e3bc382a396be44e1cf999/packages/carson/source/commands/update-workspace/runUpdateWorkspace.ts#L7)
 
 ## Properties
 
@@ -17,7 +17,7 @@ Defined in:
 > [`updateWorkspaceCommand`](../variables/updateWorkspaceCommand.md)\>
 
 Defined in:
-[packages/carson/source/commands/update-workspace/runUpdateWorkspace.ts:9](https://github.com/jakubmazanec/tools/blob/a079c38394d5df8b5048ba81c0c9138a6876bff6/packages/carson/source/commands/update-workspace/runUpdateWorkspace.ts#L9)
+[packages/carson/source/commands/update-workspace/runUpdateWorkspace.ts:9](https://github.com/jakubmazanec/tools/blob/a43a55b9d27b3a4029e3bc382a396be44e1cf999/packages/carson/source/commands/update-workspace/runUpdateWorkspace.ts#L9)
 
 ---
 
@@ -27,4 +27,4 @@ Defined in:
 > [`Workspace`](../classes/Workspace.md)\<`false`\>
 
 Defined in:
-[packages/carson/source/commands/update-workspace/runUpdateWorkspace.ts:8](https://github.com/jakubmazanec/tools/blob/a079c38394d5df8b5048ba81c0c9138a6876bff6/packages/carson/source/commands/update-workspace/runUpdateWorkspace.ts#L8)
+[packages/carson/source/commands/update-workspace/runUpdateWorkspace.ts:8](https://github.com/jakubmazanec/tools/blob/a43a55b9d27b3a4029e3bc382a396be44e1cf999/packages/carson/source/commands/update-workspace/runUpdateWorkspace.ts#L8)

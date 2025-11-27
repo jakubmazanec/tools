@@ -4,7 +4,7 @@
 
 # Function: validRange()
 
-> **validRange**(`range`, `optionsOrLoose?`): `null` \| `string`
+> **validRange**(`range`, `optionsOrLoose?`): `string` \| `null`
 
 Defined in: node_modules/@types/semver/ranges/valid.d.ts:7
 
@@ -14,7 +14,7 @@ Return the valid range or null if it's not valid
 
 ### range
 
-`undefined` | `null` | `string` | [`Range`](../classes/Range.md)
+`string` | [`Range`](../classes/Range.md) | `null` | `undefined`
 
 ### optionsOrLoose?
 
@@ -22,4 +22,4 @@ Return the valid range or null if it's not valid
 
 ## Returns
 
-`null` \| `string`
+`string` \| `null`

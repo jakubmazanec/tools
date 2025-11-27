@@ -7,7 +7,7 @@
 > **CommandAction**\<`A`, `B`, `C`, `D`, `E`\> = (`parsedArgs`, `program`) => `Promise`\<`void`\>
 
 Defined in:
-[packages/cli/source/program/CommandAction.ts:8](https://github.com/jakubmazanec/tools/blob/a079c38394d5df8b5048ba81c0c9138a6876bff6/packages/cli/source/program/CommandAction.ts#L8)
+[packages/cli/source/program/CommandAction.ts:8](https://github.com/jakubmazanec/tools/blob/a43a55b9d27b3a4029e3bc382a396be44e1cf999/packages/cli/source/program/CommandAction.ts#L8)
 
 Command action.
 

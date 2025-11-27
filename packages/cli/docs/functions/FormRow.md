@@ -4,10 +4,10 @@
 
 # Function: FormRow()
 
-> **FormRow**\<`C`\>(`__namedParameters`): `null` \| `Element`
+> **FormRow**\<`C`\>(`__namedParameters`): `Element` \| `null`
 
 Defined in:
-[packages/cli/source/ui/form/FormRow.tsx:43](https://github.com/jakubmazanec/tools/blob/a079c38394d5df8b5048ba81c0c9138a6876bff6/packages/cli/source/ui/form/FormRow.tsx#L43)
+[packages/cli/source/ui/form/FormRow.tsx:43](https://github.com/jakubmazanec/tools/blob/a43a55b9d27b3a4029e3bc382a396be44e1cf999/packages/cli/source/ui/form/FormRow.tsx#L43)
 
 Form row component.
 
@@ -25,4 +25,4 @@ Form row component.
 
 ## Returns
 
-`null` \| `Element`
+`Element` \| `null`

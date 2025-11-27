@@ -4,7 +4,7 @@
 
 # Function: coerce()
 
-> **coerce**(`version`, `options?`): `null` \| [`SemVer`](../classes/SemVer.md)
+> **coerce**(`version`, `options?`): [`SemVer`](../classes/SemVer.md) \| `null`
 
 Defined in: node_modules/@types/semver/functions/coerce.d.ts:7
 
@@ -14,7 +14,7 @@ Coerces a string to SemVer if possible
 
 ### version
 
-`undefined` | `null` | `string` | `number` | [`SemVer`](../classes/SemVer.md)
+`string` | `number` | [`SemVer`](../classes/SemVer.md) | `null` | `undefined`
 
 ### options?
 
@@ -22,4 +22,4 @@ Coerces a string to SemVer if possible
 
 ## Returns
 
-`null` \| [`SemVer`](../classes/SemVer.md)
+[`SemVer`](../classes/SemVer.md) \| `null`

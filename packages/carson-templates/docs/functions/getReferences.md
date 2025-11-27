@@ -7,7 +7,7 @@
 > **getReferences**(`workspace`, `project`): `object`[]
 
 Defined in:
-[packages/carson-templates/source/getReferences.ts:3](https://github.com/jakubmazanec/tools/blob/a079c38394d5df8b5048ba81c0c9138a6876bff6/packages/carson-templates/source/getReferences.ts#L3)
+[packages/carson-templates/source/getReferences.ts:3](https://github.com/jakubmazanec/tools/blob/a43a55b9d27b3a4029e3bc382a396be44e1cf999/packages/carson-templates/source/getReferences.ts#L3)
 
 ## Parameters
 
