@@ -11,6 +11,7 @@
 
   "enabledManagers": ["npm", "nodenv", "nvm", "github-actions"],
   "rangeStrategy": "bump",
+  "minimumReleaseAge": "14 days",
 
   "packageRules": [
     {
