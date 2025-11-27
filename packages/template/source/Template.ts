@@ -1,8 +1,7 @@
 import ejs from 'ejs';
 import fs from 'fs-extra';
 import matter from 'gray-matter';
-import merge from 'lodash.merge';
-import omit from 'lodash.omit';
+import _ from 'lodash';
 import path from 'node:path';
 import prettier from 'prettier';
 import yaml from 'yaml';
@@ -160,7 +159,7 @@ export class Template<
       ); // you can point to any template, but it will be parsed with the same options, including attribute or data schema
 
       // attributes are recursively merged
-      rawAttributes = merge(extendedTemplate.attributes, rawAttributes);
+      rawAttributes = _.merge(extendedTemplate.attributes, rawAttributes);
 
       // if content is empty, use content from the extended template
       if (!content.trim()) {
@@ -238,7 +237,7 @@ export class Template<
     for (let variables of Array.isArray(this.attributes.variables) ?
       this.attributes.variables
     : [this.attributes.variables]) {
-      let renderedAttributes = omit(this.attributes, ['if']);
+      let renderedAttributes = _.omit(this.attributes, ['if']);
       let renderedVariables = variables;
 
       if (renderedVariables) {
