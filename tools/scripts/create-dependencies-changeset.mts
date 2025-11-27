@@ -20,7 +20,7 @@ type ProjectDependencyBumps = Map<string, string>;
 type DependencyBumps = Map<string, ProjectDependencyBumps>;
 
 /**
- * A function that returns all proejcts that use Carson.
+ * A function that returns all projects that use Carson.
  */
 async function getProjectsWithCarson(dir = process.cwd(), result: string[] = []) {
   let entries = await fs.readdir(dir, {withFileTypes: true});
@@ -72,8 +72,8 @@ async function checkCarsonTemplatesPackage(dependencyBumps: DependencyBumps) {
         let newMajorVersion = semver.major(semver.minVersion(bump)!);
         let oldMajorVersion = semver.major(semver.minVersion(result[0])!);
 
+        // Node.js is a special case, because it isn't specified in `dependencies` field
         if (newMajorVersion > oldMajorVersion || dependencyName === 'node') {
-          // Node.js is a special case, because it isn't specified in `dependencies` field
           throw new Error(
             `Bumping major version of dependency "${dependencyName}" that is handled by Carson, update of the Carson template package is needed!`,
           );
@@ -169,37 +169,31 @@ async function getDependencyBumps(files: string[]): Promise<DependencyBumps> {
   return bumps;
 }
 
-let {stdout: diffOutput} = await $`git diff --name-only HEAD~1`;
-let diffLines = diffOutput.split('\n');
+let {stdout: diff} = await $`git diff --name-only HEAD~1`;
+let files = diff.split('\n').filter((file) => file.endsWith('package.json'));
+let {stdout: shortHash} = await $`git rev-parse --short HEAD`;
+let getChangesetName = (suffix?: string) =>
+  suffix === undefined ?
+    `.changeset/dependencies-update-${shortHash.trim()}.md`
+  : `.changeset/dependencies-update-${shortHash.trim()}-${suffix.replaceAll('/', '-')}.md`;
 
-if (diffLines.some((diffLine) => diffLine.startsWith('.changeset'))) {
-  console.log('Changeset already exists!');
+let dependencyBumps = await getDependencyBumps(files);
+
+console.log('Dependecy bumps:', dependencyBumps);
+
+if (dependencyBumps.get(WORKSPACE_PLACEHOLDER_NAME)?.has(TEMPLATE_PACKAGE_NAME)) {
+  await createChangesetForCarsonTemplates(getChangesetName, dependencyBumps);
+} else if (
+  dependencyBumps.size === 0 ||
+  (dependencyBumps.size === 1 && dependencyBumps.has(WORKSPACE_PLACEHOLDER_NAME))
+) {
+  console.log('No package.json changes to projects, creating empty changeset...');
+
+  await fs.writeFile(getChangesetName(), '---\n---\n');
+  await checkCarsonTemplatesPackage(dependencyBumps);
 } else {
-  let files = diffLines.filter((file) => file.endsWith('package.json'));
-  let {stdout: shortHash} = await $`git rev-parse --short HEAD`;
-  let getChangesetName = (suffix?: string) =>
-    suffix === undefined ?
-      `.changeset/dependencies-update-${shortHash.trim()}.md`
-    : `.changeset/dependencies-update-${shortHash.trim()}-${suffix.replaceAll('/', '-')}.md`;
-
-  let dependencyBumps = await getDependencyBumps(files);
-
-  console.log('Dependecy bumps:', dependencyBumps);
-
-  if (dependencyBumps.get(WORKSPACE_PLACEHOLDER_NAME)?.has(TEMPLATE_PACKAGE_NAME)) {
-    await createChangesetForCarsonTemplates(getChangesetName, dependencyBumps);
-  } else if (
-    dependencyBumps.size === 0 ||
-    (dependencyBumps.size === 1 && dependencyBumps.has(WORKSPACE_PLACEHOLDER_NAME))
-  ) {
-    console.log('No package.json changes to projects, creating empty changeset...');
-
-    await fs.writeFile(getChangesetName(), '---\n---\n');
-    await checkCarsonTemplatesPackage(dependencyBumps);
-  } else {
-    await createChangeset(getChangesetName, dependencyBumps);
-    await checkCarsonTemplatesPackage(dependencyBumps);
-  }
+  await createChangeset(getChangesetName, dependencyBumps);
+  await checkCarsonTemplatesPackage(dependencyBumps);
 }
 
 console.log('Done!');
