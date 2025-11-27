@@ -1,5 +1,80 @@
 # @jakubmazanec/carson
 
+## 3.0.3
+
+### Patch Changes
+
+- [#444](https://github.com/jakubmazanec/tools/pull/444)
+  [`8c8f9b7`](https://github.com/jakubmazanec/tools/commit/8c8f9b79a321363da00531dc31912842ab088c0e)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `ink` updated to version `^6.5.1`.
+
+- [#452](https://github.com/jakubmazanec/tools/pull/452)
+  [`196a2fb`](https://github.com/jakubmazanec/tools/commit/196a2fb11870a95affb4033e06c6cdbc00061118)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `zod` updated to version `^4.1.13`.
+
+- [#409](https://github.com/jakubmazanec/tools/pull/409)
+  [`3d5444f`](https://github.com/jakubmazanec/tools/commit/3d5444f2e85069f3293198b2bd72419f78988bca)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `typescript` updated to version
+  `^5.9.3`.
+
+- [#448](https://github.com/jakubmazanec/tools/pull/448)
+  [`fc63d2f`](https://github.com/jakubmazanec/tools/commit/fc63d2fffb01281c79884d2d14442d28795668d2)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `tsx` updated to version `^4.20.6`.
+
+- [#458](https://github.com/jakubmazanec/tools/pull/458)
+  [`3599899`](https://github.com/jakubmazanec/tools/commit/35998995eb657577f364be4e6c8a071b2c237772)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `fs-extra` updated to version
+  `^11.3.2`.
+
+- [#469](https://github.com/jakubmazanec/tools/pull/469)
+  [`c7dea4b`](https://github.com/jakubmazanec/tools/commit/c7dea4b1089e9820fd10a60413ce16e79c37917f)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@types/lodash` updated to version
+  `^4.17.21`.
+
+- [#467](https://github.com/jakubmazanec/tools/pull/467)
+  [`a60fefe`](https://github.com/jakubmazanec/tools/commit/a60fefe04f4709426b6d336476f2660b27f2da27)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `typedoc-plugin-markdown` updated to
+  version `^4.9.0`.
+
+- [#461](https://github.com/jakubmazanec/tools/pull/461)
+  [`e4d20f4`](https://github.com/jakubmazanec/tools/commit/e4d20f4a10b6fda52653a09fc87f44aaa713a428)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `esbuild` updated to version
+  `^0.27.0`.
+
+- [#456](https://github.com/jakubmazanec/tools/pull/456)
+  [`31b7daf`](https://github.com/jakubmazanec/tools/commit/31b7daf65ed98129801f42763c69e014cbf635d7)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `chalk` updated to version `^5.6.2`.
+
+- [#457](https://github.com/jakubmazanec/tools/pull/457)
+  [`b60ad69`](https://github.com/jakubmazanec/tools/commit/b60ad69885ab34eec89a792303dbf7ca1864ef87)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `concurrently` updated to version
+  `^9.2.1`.
+
+- [#462](https://github.com/jakubmazanec/tools/pull/462)
+  [`48c1db6`](https://github.com/jakubmazanec/tools/commit/48c1db614df944a87b7193cae89ad6494c3ab702)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `simple-git` updated to version
+  `^3.30.0`.
+
+- [#465](https://github.com/jakubmazanec/tools/pull/465)
+  [`62ad9b6`](https://github.com/jakubmazanec/tools/commit/62ad9b6c5844b63d7e003185c83fadc48d094937)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `typedoc` updated to version
+  `^0.28.14`.
+
+- [#447](https://github.com/jakubmazanec/tools/pull/447)
+  [`902f603`](https://github.com/jakubmazanec/tools/commit/902f603ee1e656b786a2ed5080f621ebdc35ad9d)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@types/react` updated to version
+  `^19.2.7`. Dependency `react` updated to version `^19.2.0`.
+
+- [#470](https://github.com/jakubmazanec/tools/pull/470)
+  [`4b8cc38`](https://github.com/jakubmazanec/tools/commit/4b8cc382f8fac1f491d8c514ff238b61a4c56f74)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@types/micromatch` updated to
+  version `^4.0.10`.
+
+- [#464](https://github.com/jakubmazanec/tools/pull/464)
+  [`2269912`](https://github.com/jakubmazanec/tools/commit/2269912083a1b6607e48e1bbc0eb9d718a087b0e)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `semver` updated to version `^7.7.3`.
+  Dependency `@types/semver` updated to version `^7.7.1`.
+
 ## 3.0.2
 
 ### Patch Changes

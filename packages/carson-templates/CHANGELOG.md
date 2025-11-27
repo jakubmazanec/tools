@@ -1,5 +1,63 @@
 # @jakubmazanec/carson-templates
 
+## 7.1.0
+
+### Minor Changes
+
+- [#483](https://github.com/jakubmazanec/tools/pull/483)
+  [`7aa93b3`](https://github.com/jakubmazanec/tools/commit/7aa93b359ab172f9914ed248f1dc0e99ce6babe7)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Renovate bot setting `minimumReleaseAge` set
+  to 14 days to reduce supply chain security risks.
+
+- [#482](https://github.com/jakubmazanec/tools/pull/482)
+  [`a43a55b`](https://github.com/jakubmazanec/tools/commit/a43a55b9d27b3a4029e3bc382a396be44e1cf999)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – New script `create-templates-changeset.mts`
+  for creating changeset was added; it's intended to be run manually when updating dependencies that
+  are handled by this package. Script for creating changeset when updating dependencies was also
+  slightly updated so the two are aligned.
+
+- [`a079c38`](https://github.com/jakubmazanec/tools/commit/a079c38394d5df8b5048ba81c0c9138a6876bff6)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Script that generates changesets for packages
+  that had their dependencies changed is now located in `tools/scripts` directory, so it can be
+  called manually.
+
+### Patch Changes
+
+- [#409](https://github.com/jakubmazanec/tools/pull/409)
+  [`3d5444f`](https://github.com/jakubmazanec/tools/commit/3d5444f2e85069f3293198b2bd72419f78988bca)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `typescript` updated to version
+  `^5.9.3`.
+
+- [#458](https://github.com/jakubmazanec/tools/pull/458)
+  [`3599899`](https://github.com/jakubmazanec/tools/commit/35998995eb657577f364be4e6c8a071b2c237772)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `fs-extra` updated to version
+  `^11.3.2`.
+
+- [#469](https://github.com/jakubmazanec/tools/pull/469)
+  [`c7dea4b`](https://github.com/jakubmazanec/tools/commit/c7dea4b1089e9820fd10a60413ce16e79c37917f)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@types/lodash` updated to version
+  `^4.17.21`.
+
+- [#467](https://github.com/jakubmazanec/tools/pull/467)
+  [`a60fefe`](https://github.com/jakubmazanec/tools/commit/a60fefe04f4709426b6d336476f2660b27f2da27)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `typedoc-plugin-markdown` updated to
+  version `^4.9.0`.
+
+- [#461](https://github.com/jakubmazanec/tools/pull/461)
+  [`e4d20f4`](https://github.com/jakubmazanec/tools/commit/e4d20f4a10b6fda52653a09fc87f44aaa713a428)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `esbuild` updated to version
+  `^0.27.0`.
+
+- [#465](https://github.com/jakubmazanec/tools/pull/465)
+  [`62ad9b6`](https://github.com/jakubmazanec/tools/commit/62ad9b6c5844b63d7e003185c83fadc48d094937)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `typedoc` updated to version
+  `^0.28.14`.
+
+- [#464](https://github.com/jakubmazanec/tools/pull/464)
+  [`2269912`](https://github.com/jakubmazanec/tools/commit/2269912083a1b6607e48e1bbc0eb9d718a087b0e)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `semver` updated to version `^7.7.3`.
+  Dependency `@types/semver` updated to version `^7.7.1`.
+
 ## 7.0.0
 
 ### Major Changes

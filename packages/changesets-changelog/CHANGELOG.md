@@ -1,5 +1,29 @@
 # @jakubmazanec/changesets-changelog
 
+## 2.0.14
+
+### Patch Changes
+
+- [#409](https://github.com/jakubmazanec/tools/pull/409)
+  [`3d5444f`](https://github.com/jakubmazanec/tools/commit/3d5444f2e85069f3293198b2bd72419f78988bca)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `typescript` updated to version
+  `^5.9.3`.
+
+- [#469](https://github.com/jakubmazanec/tools/pull/469)
+  [`c7dea4b`](https://github.com/jakubmazanec/tools/commit/c7dea4b1089e9820fd10a60413ce16e79c37917f)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@types/lodash` updated to version
+  `^4.17.21`.
+
+- [#461](https://github.com/jakubmazanec/tools/pull/461)
+  [`e4d20f4`](https://github.com/jakubmazanec/tools/commit/e4d20f4a10b6fda52653a09fc87f44aaa713a428)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `esbuild` updated to version
+  `^0.27.0`.
+
+- [#453](https://github.com/jakubmazanec/tools/pull/453)
+  [`7b8ff2f`](https://github.com/jakubmazanec/tools/commit/7b8ff2f7ec0583e1ebac016761040252a94ec2db)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `dotenv` updated to version
+  `^17.2.3`.
+
 ## 2.0.13
 
 ### Patch Changes

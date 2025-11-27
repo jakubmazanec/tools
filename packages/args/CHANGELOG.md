@@ -1,5 +1,39 @@
 # @jakubmazanec/args
 
+## 2.0.15
+
+### Patch Changes
+
+- [#409](https://github.com/jakubmazanec/tools/pull/409)
+  [`3d5444f`](https://github.com/jakubmazanec/tools/commit/3d5444f2e85069f3293198b2bd72419f78988bca)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `typescript` updated to version
+  `^5.9.3`.
+
+- [#469](https://github.com/jakubmazanec/tools/pull/469)
+  [`c7dea4b`](https://github.com/jakubmazanec/tools/commit/c7dea4b1089e9820fd10a60413ce16e79c37917f)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@types/lodash` updated to version
+  `^4.17.21`.
+
+- [#467](https://github.com/jakubmazanec/tools/pull/467)
+  [`a60fefe`](https://github.com/jakubmazanec/tools/commit/a60fefe04f4709426b6d336476f2660b27f2da27)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `typedoc-plugin-markdown` updated to
+  version `^4.9.0`.
+
+- [#461](https://github.com/jakubmazanec/tools/pull/461)
+  [`e4d20f4`](https://github.com/jakubmazanec/tools/commit/e4d20f4a10b6fda52653a09fc87f44aaa713a428)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `esbuild` updated to version
+  `^0.27.0`.
+
+- [#457](https://github.com/jakubmazanec/tools/pull/457)
+  [`b60ad69`](https://github.com/jakubmazanec/tools/commit/b60ad69885ab34eec89a792303dbf7ca1864ef87)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `concurrently` updated to version
+  `^9.2.1`.
+
+- [#465](https://github.com/jakubmazanec/tools/pull/465)
+  [`62ad9b6`](https://github.com/jakubmazanec/tools/commit/62ad9b6c5844b63d7e003185c83fadc48d094937)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `typedoc` updated to version
+  `^0.28.14`.
+
 ## 2.0.14
 
 ### Patch Changes

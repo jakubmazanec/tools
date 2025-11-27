@@ -1,5 +1,28 @@
 # @jakubmazanec/eslint-config
 
+## 4.1.9
+
+### Patch Changes
+
+- [#409](https://github.com/jakubmazanec/tools/pull/409)
+  [`3d5444f`](https://github.com/jakubmazanec/tools/commit/3d5444f2e85069f3293198b2bd72419f78988bca)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `typescript` updated to version
+  `^5.9.3`.
+
+- [#448](https://github.com/jakubmazanec/tools/pull/448)
+  [`fc63d2f`](https://github.com/jakubmazanec/tools/commit/fc63d2fffb01281c79884d2d14442d28795668d2)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `tsx` updated to version `^4.20.6`.
+
+- [#461](https://github.com/jakubmazanec/tools/pull/461)
+  [`e4d20f4`](https://github.com/jakubmazanec/tools/commit/e4d20f4a10b6fda52653a09fc87f44aaa713a428)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `esbuild` updated to version
+  `^0.27.0`.
+
+- [#420](https://github.com/jakubmazanec/tools/pull/420)
+  [`7528182`](https://github.com/jakubmazanec/tools/commit/75281827637d0b17ccbaec323c358970a4db484f)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `globals` updated to version
+  `^16.5.0`.
+
 ## 4.1.8
 
 ### Patch Changes

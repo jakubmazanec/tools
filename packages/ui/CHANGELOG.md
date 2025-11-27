@@ -1,5 +1,103 @@
 # @jakubmazanec/ui
 
+## 0.5.1
+
+### Patch Changes
+
+- [#445](https://github.com/jakubmazanec/tools/pull/445)
+  [`e508e3a`](https://github.com/jakubmazanec/tools/commit/e508e3a5fdbdfe5de2c7ef9af7c96b964ae80acf)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@chromatic-com/storybook` updated to
+  version `^4.1.3`.
+
+- [#477](https://github.com/jakubmazanec/tools/pull/477)
+  [`48b955a`](https://github.com/jakubmazanec/tools/commit/48b955a978f491aa2a7d2def59b691f3e9a6ff94)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `tailwind-merge` updated to version
+  `^3.4.0`.
+
+- [#455](https://github.com/jakubmazanec/tools/pull/455)
+  [`cb0e9ff`](https://github.com/jakubmazanec/tools/commit/cb0e9ffbf988a56d607bd3d8b832aaf421360c72)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@headlessui/react` updated to
+  version `^2.2.9`.
+
+- [#452](https://github.com/jakubmazanec/tools/pull/452)
+  [`196a2fb`](https://github.com/jakubmazanec/tools/commit/196a2fb11870a95affb4033e06c6cdbc00061118)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `zod` updated to version `^4.1.13`.
+
+- [#409](https://github.com/jakubmazanec/tools/pull/409)
+  [`3d5444f`](https://github.com/jakubmazanec/tools/commit/3d5444f2e85069f3293198b2bd72419f78988bca)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `typescript` updated to version
+  `^5.9.3`.
+
+- [#475](https://github.com/jakubmazanec/tools/pull/475)
+  [`ad19354`](https://github.com/jakubmazanec/tools/commit/ad193549d59013a75a977891c4632cd652e97dc9)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@conform-to/zod` updated to version
+  `^1.13.3`.
+
+- [#476](https://github.com/jakubmazanec/tools/pull/476)
+  [`b021569`](https://github.com/jakubmazanec/tools/commit/b02156972c9749d84ac8190dff89419ac8c64bf3)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `chromatic` updated to version
+  `^13.3.4`.
+
+- [#448](https://github.com/jakubmazanec/tools/pull/448)
+  [`fc63d2f`](https://github.com/jakubmazanec/tools/commit/fc63d2fffb01281c79884d2d14442d28795668d2)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `tsx` updated to version `^4.20.6`.
+
+- [#468](https://github.com/jakubmazanec/tools/pull/468)
+  [`eab6622`](https://github.com/jakubmazanec/tools/commit/eab6622d066a7ced7efedc35b41414a06d5f879e)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@types/culori` updated to version
+  `^4.0.1`.
+
+- [#469](https://github.com/jakubmazanec/tools/pull/469)
+  [`c7dea4b`](https://github.com/jakubmazanec/tools/commit/c7dea4b1089e9820fd10a60413ce16e79c37917f)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@types/lodash` updated to version
+  `^4.17.21`.
+
+- [#478](https://github.com/jakubmazanec/tools/pull/478)
+  [`3cda696`](https://github.com/jakubmazanec/tools/commit/3cda696f9a77af310d2b58649b996bfc24089f73)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@tailwindcss/vite` updated to
+  version `^4.1.17`. Dependency `tailwindcss` updated to version `^4.1.17`.
+
+- [#467](https://github.com/jakubmazanec/tools/pull/467)
+  [`a60fefe`](https://github.com/jakubmazanec/tools/commit/a60fefe04f4709426b6d336476f2660b27f2da27)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `typedoc-plugin-markdown` updated to
+  version `^4.9.0`.
+
+- [#461](https://github.com/jakubmazanec/tools/pull/461)
+  [`e4d20f4`](https://github.com/jakubmazanec/tools/commit/e4d20f4a10b6fda52653a09fc87f44aaa713a428)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `esbuild` updated to version
+  `^0.27.0`.
+
+- [#446](https://github.com/jakubmazanec/tools/pull/446)
+  [`9977422`](https://github.com/jakubmazanec/tools/commit/997742278efd716e0ab42d5ae3230c960dde6f83)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@testing-library/jest-dom` updated
+  to version `^6.9.1`.
+
+- [#457](https://github.com/jakubmazanec/tools/pull/457)
+  [`b60ad69`](https://github.com/jakubmazanec/tools/commit/b60ad69885ab34eec89a792303dbf7ca1864ef87)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `concurrently` updated to version
+  `^9.2.1`.
+
+- [#465](https://github.com/jakubmazanec/tools/pull/465)
+  [`62ad9b6`](https://github.com/jakubmazanec/tools/commit/62ad9b6c5844b63d7e003185c83fadc48d094937)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `typedoc` updated to version
+  `^0.28.14`.
+
+- [#447](https://github.com/jakubmazanec/tools/pull/447)
+  [`902f603`](https://github.com/jakubmazanec/tools/commit/902f603ee1e656b786a2ed5080f621ebdc35ad9d)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@types/react` updated to version
+  `^19.2.7`. Dependency `@types/react-dom` updated to version `^19.2.3`. Dependency `react` updated
+  to version `^19.2.0`. Dependency `react-dom` updated to version `^19.2.0`.
+
+- [#474](https://github.com/jakubmazanec/tools/pull/474)
+  [`fc912a6`](https://github.com/jakubmazanec/tools/commit/fc912a6712c91d35480dbde7c59f5af9a697a668)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@conform-to/react` updated to
+  version `^1.13.3`.
+
+- [#466](https://github.com/jakubmazanec/tools/pull/466)
+  [`880f960`](https://github.com/jakubmazanec/tools/commit/880f9604580cad0a2f910deeff32b80074cedfd8)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `prettier-plugin-tailwindcss` updated
+  to version `^0.7.1`.
+
 ## 0.5.0
 
 ### Minor Changes
