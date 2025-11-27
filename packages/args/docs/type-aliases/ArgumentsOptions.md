@@ -9,7 +9,7 @@
 > `OptionsConfigToArgumentsOptions`\<`NonNullable`\<`O`\[`"options"`\]\>\>
 
 Defined in:
-[args/source/ArgumentsOptions.ts:79](https://github.com/jakubmazanec/tools/blob/a43a55b9d27b3a4029e3bc382a396be44e1cf999/packages/args/source/ArgumentsOptions.ts#L79)
+[args/source/ArgumentsOptions.ts:79](https://github.com/jakubmazanec/tools/blob/7aa93b359ab172f9914ed248f1dc0e99ce6babe7/packages/args/source/ArgumentsOptions.ts#L79)
 
 Parsed options.
 

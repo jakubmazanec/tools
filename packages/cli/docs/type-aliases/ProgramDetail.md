@@ -7,7 +7,7 @@
 > **ProgramDetail** = `object`
 
 Defined in:
-[packages/cli/source/program/ProgramDetail.ts:4](https://github.com/jakubmazanec/tools/blob/a43a55b9d27b3a4029e3bc382a396be44e1cf999/packages/cli/source/program/ProgramDetail.ts#L4)
+[packages/cli/source/program/ProgramDetail.ts:4](https://github.com/jakubmazanec/tools/blob/7aa93b359ab172f9914ed248f1dc0e99ce6babe7/packages/cli/source/program/ProgramDetail.ts#L4)
 
 Detailed program information.
 
@@ -18,7 +18,7 @@ Detailed program information.
 > `optional` **bin**: `string`
 
 Defined in:
-[packages/cli/source/program/ProgramDetail.ts:8](https://github.com/jakubmazanec/tools/blob/a43a55b9d27b3a4029e3bc382a396be44e1cf999/packages/cli/source/program/ProgramDetail.ts#L8)
+[packages/cli/source/program/ProgramDetail.ts:8](https://github.com/jakubmazanec/tools/blob/7aa93b359ab172f9914ed248f1dc0e99ce6babe7/packages/cli/source/program/ProgramDetail.ts#L8)
 
 ---
 
@@ -27,7 +27,7 @@ Defined in:
 > `optional` **description**: `string`
 
 Defined in:
-[packages/cli/source/program/ProgramDetail.ts:7](https://github.com/jakubmazanec/tools/blob/a43a55b9d27b3a4029e3bc382a396be44e1cf999/packages/cli/source/program/ProgramDetail.ts#L7)
+[packages/cli/source/program/ProgramDetail.ts:7](https://github.com/jakubmazanec/tools/blob/7aa93b359ab172f9914ed248f1dc0e99ce6babe7/packages/cli/source/program/ProgramDetail.ts#L7)
 
 ---
 
@@ -36,7 +36,7 @@ Defined in:
 > `optional` **name**: `string`
 
 Defined in:
-[packages/cli/source/program/ProgramDetail.ts:5](https://github.com/jakubmazanec/tools/blob/a43a55b9d27b3a4029e3bc382a396be44e1cf999/packages/cli/source/program/ProgramDetail.ts#L5)
+[packages/cli/source/program/ProgramDetail.ts:5](https://github.com/jakubmazanec/tools/blob/7aa93b359ab172f9914ed248f1dc0e99ce6babe7/packages/cli/source/program/ProgramDetail.ts#L5)
 
 ---
 
@@ -45,4 +45,4 @@ Defined in:
 > `optional` **version**: `string`
 
 Defined in:
-[packages/cli/source/program/ProgramDetail.ts:6](https://github.com/jakubmazanec/tools/blob/a43a55b9d27b3a4029e3bc382a396be44e1cf999/packages/cli/source/program/ProgramDetail.ts#L6)
+[packages/cli/source/program/ProgramDetail.ts:6](https://github.com/jakubmazanec/tools/blob/7aa93b359ab172f9914ed248f1dc0e99ce6babe7/packages/cli/source/program/ProgramDetail.ts#L6)

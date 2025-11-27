@@ -7,7 +7,7 @@
 > **WorkspaceRepository** = `object`
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceRepository.ts:4](https://github.com/jakubmazanec/tools/blob/a43a55b9d27b3a4029e3bc382a396be44e1cf999/packages/carson/source/workspace/WorkspaceRepository.ts#L4)
+[packages/carson/source/workspace/WorkspaceRepository.ts:4](https://github.com/jakubmazanec/tools/blob/7aa93b359ab172f9914ed248f1dc0e99ce6babe7/packages/carson/source/workspace/WorkspaceRepository.ts#L4)
 
 A workspace repository.
 
@@ -18,7 +18,7 @@ A workspace repository.
 > **branches**: `string`[]
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceRepository.ts:5](https://github.com/jakubmazanec/tools/blob/a43a55b9d27b3a4029e3bc382a396be44e1cf999/packages/carson/source/workspace/WorkspaceRepository.ts#L5)
+[packages/carson/source/workspace/WorkspaceRepository.ts:5](https://github.com/jakubmazanec/tools/blob/7aa93b359ab172f9914ed248f1dc0e99ce6babe7/packages/carson/source/workspace/WorkspaceRepository.ts#L5)
 
 ---
 
@@ -27,4 +27,4 @@ Defined in:
 > `optional` **url**: `string`
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceRepository.ts:6](https://github.com/jakubmazanec/tools/blob/a43a55b9d27b3a4029e3bc382a396be44e1cf999/packages/carson/source/workspace/WorkspaceRepository.ts#L6)
+[packages/carson/source/workspace/WorkspaceRepository.ts:6](https://github.com/jakubmazanec/tools/blob/7aa93b359ab172f9914ed248f1dc0e99ce6babe7/packages/carson/source/workspace/WorkspaceRepository.ts#L6)

@@ -7,7 +7,7 @@
 > **TemplateOptions**\<`A`, `D`\> = `object`
 
 Defined in:
-[packages/template/source/Template.ts:18](https://github.com/jakubmazanec/tools/blob/a43a55b9d27b3a4029e3bc382a396be44e1cf999/packages/template/source/Template.ts#L18)
+[packages/template/source/Template.ts:18](https://github.com/jakubmazanec/tools/blob/7aa93b359ab172f9914ed248f1dc0e99ce6babe7/packages/template/source/Template.ts#L18)
 
 ## Type Parameters
 
@@ -27,7 +27,7 @@ Defined in:
 > [`TemplateAttributes`](TemplateAttributes.md) & `z.infer`\<`NonNullable`\<`A`\>\>
 
 Defined in:
-[packages/template/source/Template.ts:29](https://github.com/jakubmazanec/tools/blob/a43a55b9d27b3a4029e3bc382a396be44e1cf999/packages/template/source/Template.ts#L29)
+[packages/template/source/Template.ts:29](https://github.com/jakubmazanec/tools/blob/7aa93b359ab172f9914ed248f1dc0e99ce6babe7/packages/template/source/Template.ts#L29)
 
 Template attributes.
 
@@ -38,7 +38,7 @@ Template attributes.
 > `optional` **attributesSchema**: `A`
 
 Defined in:
-[packages/template/source/Template.ts:33](https://github.com/jakubmazanec/tools/blob/a43a55b9d27b3a4029e3bc382a396be44e1cf999/packages/template/source/Template.ts#L33)
+[packages/template/source/Template.ts:33](https://github.com/jakubmazanec/tools/blob/7aa93b359ab172f9914ed248f1dc0e99ce6babe7/packages/template/source/Template.ts#L33)
 
 Zod schema for custom template attributes.
 
@@ -49,7 +49,7 @@ Zod schema for custom template attributes.
 > **content**: `string`
 
 Defined in:
-[packages/template/source/Template.ts:26](https://github.com/jakubmazanec/tools/blob/a43a55b9d27b3a4029e3bc382a396be44e1cf999/packages/template/source/Template.ts#L26)
+[packages/template/source/Template.ts:26](https://github.com/jakubmazanec/tools/blob/7aa93b359ab172f9914ed248f1dc0e99ce6babe7/packages/template/source/Template.ts#L26)
 
 Template content.
 
@@ -60,7 +60,7 @@ Template content.
 > `optional` **dataSchema**: `D`
 
 Defined in:
-[packages/template/source/Template.ts:36](https://github.com/jakubmazanec/tools/blob/a43a55b9d27b3a4029e3bc382a396be44e1cf999/packages/template/source/Template.ts#L36)
+[packages/template/source/Template.ts:36](https://github.com/jakubmazanec/tools/blob/7aa93b359ab172f9914ed248f1dc0e99ce6babe7/packages/template/source/Template.ts#L36)
 
 Zod schema for template data.
 
@@ -71,6 +71,6 @@ Zod schema for template data.
 > `optional` **path**: `string`
 
 Defined in:
-[packages/template/source/Template.ts:23](https://github.com/jakubmazanec/tools/blob/a43a55b9d27b3a4029e3bc382a396be44e1cf999/packages/template/source/Template.ts#L23)
+[packages/template/source/Template.ts:23](https://github.com/jakubmazanec/tools/blob/7aa93b359ab172f9914ed248f1dc0e99ce6babe7/packages/template/source/Template.ts#L23)
 
 Template path.

@@ -7,7 +7,7 @@
 > **ListboxItem**\<`V`\> = `object`
 
 Defined in:
-[packages/ui/source/components/Listbox.tsx:41](https://github.com/jakubmazanec/tools/blob/a43a55b9d27b3a4029e3bc382a396be44e1cf999/packages/ui/source/components/Listbox.tsx#L41)
+[packages/ui/source/components/Listbox.tsx:41](https://github.com/jakubmazanec/tools/blob/7aa93b359ab172f9914ed248f1dc0e99ce6babe7/packages/ui/source/components/Listbox.tsx#L41)
 
 ## Type Parameters
 
@@ -22,7 +22,7 @@ Defined in:
 > **label**: `string`
 
 Defined in:
-[packages/ui/source/components/Listbox.tsx:43](https://github.com/jakubmazanec/tools/blob/a43a55b9d27b3a4029e3bc382a396be44e1cf999/packages/ui/source/components/Listbox.tsx#L43)
+[packages/ui/source/components/Listbox.tsx:43](https://github.com/jakubmazanec/tools/blob/7aa93b359ab172f9914ed248f1dc0e99ce6babe7/packages/ui/source/components/Listbox.tsx#L43)
 
 ---
 
@@ -31,4 +31,4 @@ Defined in:
 > **value**: `V`
 
 Defined in:
-[packages/ui/source/components/Listbox.tsx:42](https://github.com/jakubmazanec/tools/blob/a43a55b9d27b3a4029e3bc382a396be44e1cf999/packages/ui/source/components/Listbox.tsx#L42)
+[packages/ui/source/components/Listbox.tsx:42](https://github.com/jakubmazanec/tools/blob/7aa93b359ab172f9914ed248f1dc0e99ce6babe7/packages/ui/source/components/Listbox.tsx#L42)
