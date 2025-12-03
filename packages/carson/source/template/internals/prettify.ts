@@ -12,7 +12,7 @@ export async function prettify(content: string, targetPath: string) {
     prettifiedContent = await prettier.format(content, {
       ...prettierOptions,
       filepath: targetPath,
-      plugins: [packageJsonPrettierPlugin as Plugin],
+      plugins: [...(prettierOptions?.plugins ?? []), packageJsonPrettierPlugin as Plugin],
     });
   } catch (error: unknown) {
     if (!NO_INFERRED_PARSER.test((error as Error).message)) {
