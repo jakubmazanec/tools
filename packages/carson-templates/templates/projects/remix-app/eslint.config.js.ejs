@@ -26,4 +26,5 @@ export default [
   {
     ignores: <%- JSON.stringify(lintIgnores, null, 2) %>,
   },
+  <%- project.config.overrides?.eslintConfig ? JSON.stringify(project.config.overrides.eslintConfig, null, 2) : '' %>
 ];

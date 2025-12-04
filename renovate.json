@@ -8,11 +8,9 @@
     "replacements:all",
     "workarounds:all"
   ],
-
   "enabledManagers": ["npm", "nodenv", "nvm", "github-actions"],
   "rangeStrategy": "bump",
   "minimumReleaseAge": "14 days",
-
   "packageRules": [
     {
       "matchUpdateTypes": ["major", "minor", "patch"],
