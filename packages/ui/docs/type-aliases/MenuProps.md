@@ -8,7 +8,7 @@
 > & `ComponentPropsWithoutRef`\<`T`\> & `ComponentRef`\<`T`\> & `PropsWithChildren` & `object`
 
 Defined in:
-[packages/ui/source/components/Menu.tsx:21](https://github.com/jakubmazanec/tools/blob/e3906ac2943abeadc19b5add1f3702fecb8f15db/packages/ui/source/components/Menu.tsx#L21)
+[packages/ui/source/components/Menu.tsx:21](https://github.com/jakubmazanec/tools/blob/0d1758bcb42c893a94f97bc67b33fc22961e7001/packages/ui/source/components/Menu.tsx#L21)
 
 ## Type Declaration
 

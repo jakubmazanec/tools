@@ -7,7 +7,7 @@
 > **Help**(`__namedParameters`): `Element`
 
 Defined in:
-[packages/cli/source/ui/Help.tsx:20](https://github.com/jakubmazanec/tools/blob/e3906ac2943abeadc19b5add1f3702fecb8f15db/packages/cli/source/ui/Help.tsx#L20)
+[packages/cli/source/ui/Help.tsx:20](https://github.com/jakubmazanec/tools/blob/0d1758bcb42c893a94f97bc67b33fc22961e7001/packages/cli/source/ui/Help.tsx#L20)
 
 A component that renders help information.
 

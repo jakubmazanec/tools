@@ -7,7 +7,7 @@
 > **CreateProjectOptions** = `object`
 
 Defined in:
-[packages/carson/source/commands/create-project/runCreateProject.ts:7](https://github.com/jakubmazanec/tools/blob/e3906ac2943abeadc19b5add1f3702fecb8f15db/packages/carson/source/commands/create-project/runCreateProject.ts#L7)
+[packages/carson/source/commands/create-project/runCreateProject.ts:7](https://github.com/jakubmazanec/tools/blob/0d1758bcb42c893a94f97bc67b33fc22961e7001/packages/carson/source/commands/create-project/runCreateProject.ts#L7)
 
 ## Properties
 
@@ -17,7 +17,7 @@ Defined in:
 > [`createProjectCommand`](../variables/createProjectCommand.md)\>
 
 Defined in:
-[packages/carson/source/commands/create-project/runCreateProject.ts:12](https://github.com/jakubmazanec/tools/blob/e3906ac2943abeadc19b5add1f3702fecb8f15db/packages/carson/source/commands/create-project/runCreateProject.ts#L12)
+[packages/carson/source/commands/create-project/runCreateProject.ts:12](https://github.com/jakubmazanec/tools/blob/0d1758bcb42c893a94f97bc67b33fc22961e7001/packages/carson/source/commands/create-project/runCreateProject.ts#L12)
 
 ---
 
@@ -26,7 +26,7 @@ Defined in:
 > **projectName**: `string`
 
 Defined in:
-[packages/carson/source/commands/create-project/runCreateProject.ts:9](https://github.com/jakubmazanec/tools/blob/e3906ac2943abeadc19b5add1f3702fecb8f15db/packages/carson/source/commands/create-project/runCreateProject.ts#L9)
+[packages/carson/source/commands/create-project/runCreateProject.ts:9](https://github.com/jakubmazanec/tools/blob/0d1758bcb42c893a94f97bc67b33fc22961e7001/packages/carson/source/commands/create-project/runCreateProject.ts#L9)
 
 ---
 
@@ -35,7 +35,7 @@ Defined in:
 > **projectPath**: `string`
 
 Defined in:
-[packages/carson/source/commands/create-project/runCreateProject.ts:8](https://github.com/jakubmazanec/tools/blob/e3906ac2943abeadc19b5add1f3702fecb8f15db/packages/carson/source/commands/create-project/runCreateProject.ts#L8)
+[packages/carson/source/commands/create-project/runCreateProject.ts:8](https://github.com/jakubmazanec/tools/blob/0d1758bcb42c893a94f97bc67b33fc22961e7001/packages/carson/source/commands/create-project/runCreateProject.ts#L8)
 
 ---
 
@@ -44,7 +44,7 @@ Defined in:
 > **templateId**: `string`
 
 Defined in:
-[packages/carson/source/commands/create-project/runCreateProject.ts:10](https://github.com/jakubmazanec/tools/blob/e3906ac2943abeadc19b5add1f3702fecb8f15db/packages/carson/source/commands/create-project/runCreateProject.ts#L10)
+[packages/carson/source/commands/create-project/runCreateProject.ts:10](https://github.com/jakubmazanec/tools/blob/0d1758bcb42c893a94f97bc67b33fc22961e7001/packages/carson/source/commands/create-project/runCreateProject.ts#L10)
 
 ---
 
@@ -54,4 +54,4 @@ Defined in:
 > [`Workspace`](../classes/Workspace.md)\<`false`\>
 
 Defined in:
-[packages/carson/source/commands/create-project/runCreateProject.ts:11](https://github.com/jakubmazanec/tools/blob/e3906ac2943abeadc19b5add1f3702fecb8f15db/packages/carson/source/commands/create-project/runCreateProject.ts#L11)
+[packages/carson/source/commands/create-project/runCreateProject.ts:11](https://github.com/jakubmazanec/tools/blob/0d1758bcb42c893a94f97bc67b33fc22961e7001/packages/carson/source/commands/create-project/runCreateProject.ts#L11)
