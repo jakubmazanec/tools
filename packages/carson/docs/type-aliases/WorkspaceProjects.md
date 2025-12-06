@@ -7,7 +7,7 @@
 > **WorkspaceProjects**\<`M`\> = [`Project`](../classes/Project.md)\<`M`\>[]
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceProjects.ts:6](https://github.com/jakubmazanec/tools/blob/0d1758bcb42c893a94f97bc67b33fc22961e7001/packages/carson/source/workspace/WorkspaceProjects.ts#L6)
+[packages/carson/source/workspace/WorkspaceProjects.ts:6](https://github.com/jakubmazanec/tools/blob/4b0540484b6010d133c2a5e92e51cdd4ed82edb4/packages/carson/source/workspace/WorkspaceProjects.ts#L6)
 
 Type alias for [Workspace.projects](../classes/Workspace.md#projects) property.
 

@@ -5,7 +5,7 @@
 # Class: AssertionError
 
 Defined in:
-[packages/ts-utils/source/utils/assert.ts:4](https://github.com/jakubmazanec/tools/blob/0d1758bcb42c893a94f97bc67b33fc22961e7001/packages/ts-utils/source/utils/assert.ts#L4)
+[packages/ts-utils/source/utils/assert.ts:4](https://github.com/jakubmazanec/tools/blob/4b0540484b6010d133c2a5e92e51cdd4ed82edb4/packages/ts-utils/source/utils/assert.ts#L4)
 
 A subclass of `Error` that indicates an assertion failure.
 
@@ -20,7 +20,7 @@ A subclass of `Error` that indicates an assertion failure.
 > **new AssertionError**(`message?`): `AssertionError`
 
 Defined in:
-[packages/ts-utils/source/utils/assert.ts:8](https://github.com/jakubmazanec/tools/blob/0d1758bcb42c893a94f97bc67b33fc22961e7001/packages/ts-utils/source/utils/assert.ts#L8)
+[packages/ts-utils/source/utils/assert.ts:8](https://github.com/jakubmazanec/tools/blob/4b0540484b6010d133c2a5e92e51cdd4ed82edb4/packages/ts-utils/source/utils/assert.ts#L8)
 
 #### Parameters
 
