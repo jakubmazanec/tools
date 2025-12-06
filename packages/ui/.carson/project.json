@@ -13,6 +13,14 @@
         "exactOptionalPropertyTypes": false
       }
     },
+    "tsdownConfig": {
+      "entry": ["source/main.ts", "source/development.ts"],
+      "copy": [
+        "source/styles.css",
+        "source/inter-variable-italic.woff2",
+        "source/inter-variable.woff2"
+      ]
+    },
     "storybookConfig": {
       "stories": [
         "../stories/Introduction.mdx",

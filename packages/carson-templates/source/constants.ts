@@ -157,7 +157,6 @@ export const DEPENDENCY_VERSIONS: Record<string, string> = {
   concurrently: '^10.0.0',
   'cross-env': '^10.0.0',
   'del-cli': '^8.0.0',
-  esbuild: '^0.28.0',
   eslint: '^9.0.0',
   execa: '^10.0.0',
   isbot: '^5.0.0',
@@ -174,6 +173,7 @@ export const DEPENDENCY_VERSIONS: Record<string, string> = {
   storybook: '^10.0.0',
   tailwindcss: '^4.0.0',
   '@tailwindcss/vite': '^4.0.0',
+  tsdown: '^0.22.0',
   tsx: '^4.0.0',
   turbo: '^2.0.0',
   typedoc: '^0.28.0',
@@ -195,5 +195,6 @@ export const TEST_GLOB = 'tests/**/*.test.?(c|m)[jt]s?(x)';
 export const BROWSER_TEST_GLOB = 'tests/**/*.browser.test.?(c|m)[jt]s?(x)';
 
 // commands
+export const BUILD_COMMAND = 'tsdown';
 export const FORMAT_COMMAND = 'prettier . --write --ignore-unknown';
 export const TEST_COMMAND = 'vitest run --coverage --passWithNoTests';
