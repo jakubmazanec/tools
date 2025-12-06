@@ -5,6 +5,7 @@
  *
  * Run `npx carson update workspace` to regenerate.
  */
+
 import main, {nodejs, prettier} from '@jakubmazanec/eslint-config';
 
 export default [

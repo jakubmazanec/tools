@@ -9,6 +9,7 @@ strategy: overwrite
  *
  * Run `npx carson update workspace` to regenerate.
  */
+
 import main, {nodejs, prettier} from '@jakubmazanec/eslint-config';
 
 export default [
@@ -18,4 +19,5 @@ export default [
   {
     ignores: <%- JSON.stringify(LINT_IGNORES, null, 2) %>,
   },
+  <%- project.config.overrides?.eslintConfig ? JSON.stringify(project.config.overrides.eslintConfig, null, 2) : '' %>
 ];

@@ -3,14 +3,17 @@ to: 'tsconfig.json'
 strategy: overwrite
 ---
 <%
-let tsconfig = {
-  compilerOptions: {
-    ...TSCONFIG_COMPILER_OPTIONS,
+let tsconfig = lodash.merge(
+  {
+    compilerOptions: {
+      ...TSCONFIG_COMPILER_OPTIONS,
       noEmit: true,
       rootDir: '.',
+    },
+    include: ['./*', './tools/**/*'],
   },
-  include: ['./*', './tools/**/*'],
-};
+  workspace.config.overrides?.tsconfig ?? {},
+);
 -%>
 //
 // DO NOT EDIT!

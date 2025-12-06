@@ -24,4 +24,5 @@ export default [
       '@typescript-eslint/naming-convention': 'off',
     },
   },
+  <%- project.config.overrides?.eslintConfig ? JSON.stringify(project.config.overrides.eslintConfig, null, 2) : '' %>
 ];
