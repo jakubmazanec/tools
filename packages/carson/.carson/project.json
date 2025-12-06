@@ -1,3 +1,8 @@
 {
-  "template": "@jakubmazanec/carson-templates:projects/library"
+  "template": "@jakubmazanec/carson-templates:projects/library",
+  "overrides": {
+    "tsdownConfig": {
+      "entry": ["source/main.ts", "source/run.ts"]
+    }
+  }
 }
