@@ -3,54 +3,57 @@ to: 'turbo.json'
 strategy: overwrite
 ---
 <%
-let turboConfig = {
-  $schema: 'https://turborepo.org/schema.json',
-  tasks: {
-    build: {
-      dependsOn: ['^build', 'codegen'],
-      outputs: [`${BUILD_DIRECTORY}/**`],
+let turboConfig = lodash.merge(
+  {
+    $schema: 'https://turborepo.org/schema.json',
+    tasks: {
+      build: {
+        dependsOn: ['^build', 'codegen'],
+        outputs: [`${BUILD_DIRECTORY}/**`],
+      },
+      clean: {
+        cache: false,
+      },
+      codegen: {
+        cache: false,
+      },
+      develop: {
+        dependsOn: ['^build', 'codegen'],
+        cache: false,
+        persistent: true,
+      },
+      document: {
+        dependsOn: ['^build', 'codegen'],
+        outputs: ['docs/**'],
+      },
+      format: {
+        cache: false,
+      },
+      lint: {
+        dependsOn: ['^build', 'codegen'],
+        outputs: [],
+      },
+      test: {
+        dependsOn: ['^build', 'codegen', 'typecheck', 'lint'],
+        outputs: ['coverage/**'],
+      },
+      typecheck: {
+        dependsOn: ['^build', 'codegen'],
+        outputs: [],
+      },
     },
-    clean: {
-      cache: false,
-    },
-    codegen: {
-      cache: false,
-    },
-    develop: {
-      dependsOn: ['^build', 'codegen'],
-      cache: false,
-      persistent: true,
-    },
-    document: {
-      dependsOn: ['^build', 'codegen'],
-      outputs: ['docs/**'],
-    },
-    format: {
-      cache: false,
-    },
-    lint: {
-      dependsOn: ['^build', 'codegen'],
-      outputs: [],
-    },
-    test: {
-      dependsOn: ['^build', 'codegen', 'typecheck', 'lint'],
-      outputs: ['coverage/**'],
-    },
-    typecheck: {
-      dependsOn: ['^build', 'codegen'],
-      outputs: [],
-    },
+    globalEnv: ['CI'],
+    globalDependencies: [
+      '.editorconfig',
+      '.prettierignore',
+      'eslint.config.js',
+      'prettier.config.cjs',
+      'tsconfig.json',
+      'tsconfig.typecheck.json',
+    ],
   },
-  globalEnv: ['CI'],
-  globalDependencies: [
-    '.editorconfig',
-    '.prettierignore',
-    'eslint.config.js',
-    'prettier.config.cjs',
-    'tsconfig.json',
-    'tsconfig.typecheck.json',
-  ],
-};
+  workspace.config.overrides?.turbo ?? {},
+);
 
 if (workspace.projects.some((project) => project.config.deployment?.appName)) {
   turboConfig.globalEnv.push('VITE_APP_URL');

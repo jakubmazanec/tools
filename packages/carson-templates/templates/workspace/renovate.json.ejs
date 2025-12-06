@@ -2,33 +2,41 @@
 to: 'renovate.json'
 strategy: overwrite
 ---
-{
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    ":dependencyDashboard",
-    ":ignoreModulesAndTests",
-    "group:monorepos",
-    "group:recommended",
-    "replacements:all",
-    "workarounds:all"
-  ],
+<%
+let renovateConfig = lodash.merge(
+  {
+    $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+    extends: [
+      ':dependencyDashboard',
+      ':ignoreModulesAndTests',
+      'group:monorepos',
+      'group:recommended',
+      'replacements:all',
+      'workarounds:all',
+    ],
 
-  "enabledManagers": ["npm", "nodenv", "nvm", "github-actions"],
-  "rangeStrategy": "bump",
-  "minimumReleaseAge": "14 days",
+    enabledManagers: ['npm', 'nodenv', 'nvm', 'github-actions'],
+    rangeStrategy: 'bump',
+    minimumReleaseAge: '14 days',
 
-  "packageRules": [
-    {
-      "matchUpdateTypes": ["major", "minor", "patch"],
-      "matchDepTypes": ["devDependencies"]
-    },
-    {
-      "matchDepTypes": ["peerDependencies"],
-      "rangeStrategy": "replace"
-    },
-    {
-      "matchDepTypes": ["overrides"],
-      "enabled": false
-    }
-  ]
-}
+    packageRules: [
+      {
+        matchUpdateTypes: ['major', 'minor', 'patch'],
+        matchDepTypes: ['devDependencies'],
+      },
+      {
+        matchDepTypes: ['peerDependencies'],
+        rangeStrategy: 'replace',
+      },
+      {
+        matchDepTypes: ['overrides'],
+        enabled: false,
+      },
+    ],
+  },
+  workspace.config.overrides?.renovate ?? {},
+);
+-%>
+<%- JSON.stringify(renovateConfig, null, 2) %>
+
+

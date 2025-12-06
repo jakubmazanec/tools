@@ -3,10 +3,13 @@ to: 'prettier.config.cjs'
 strategy: overwrite
 ---
 <%
-let prettierConfig = {
-  ...PRETTIER_OPTIONS,
-  plugins: ['prettier-plugin-packagejson', 'prettier-plugin-tailwindcss'],
-};
+let prettierConfig = lodash.merge(
+  {
+    ...PRETTIER_OPTIONS,
+    plugins: ['prettier-plugin-packagejson', 'prettier-plugin-tailwindcss'],
+  },
+  project.config.overrides?.prettierConfig ?? {},
+);
 -%>
 /**
  * DO NOT EDIT!
