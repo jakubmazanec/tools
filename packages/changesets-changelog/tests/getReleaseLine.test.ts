@@ -1,7 +1,7 @@
 import {describe, expect, test, vitest} from 'vitest';
 
-import {getReleaseLine} from '../source/getReleaseLine';
-import {createGetReleaseLineArgs} from './utils/createGetReleaseLineArgs';
+import {getReleaseLine} from '../source/getReleaseLine.js';
+import {createGetReleaseLineArgs} from './utils/createGetReleaseLineArgs.js';
 
 function getMockGithubData() {
   return {
