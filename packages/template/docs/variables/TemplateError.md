@@ -8,7 +8,7 @@
 > \| `"FAILED_FORMAT"` \| `"FAILED_RENDER"` \| `"UNKNOWN_ERROR"`, `TemplateErrorData`\>
 
 Defined in:
-[packages/template/source/TemplateError.ts:9](https://github.com/jakubmazanec/tools/blob/4b0540484b6010d133c2a5e92e51cdd4ed82edb4/packages/template/source/TemplateError.ts#L9)
+[packages/template/source/TemplateError.ts:9](https://github.com/jakubmazanec/tools/blob/d5dfa457a1ee09ed9e5ceb4c7d1c5e6b457dfa51/packages/template/source/TemplateError.ts#L9)
 
 A subclass of `Error` that indicates a template failure.
 

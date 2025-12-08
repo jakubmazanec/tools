@@ -7,4 +7,4 @@
 > `const` **info**: `string`
 
 Defined in:
-[packages/cli/source/ui/icons.ts:6](https://github.com/jakubmazanec/tools/blob/4b0540484b6010d133c2a5e92e51cdd4ed82edb4/packages/cli/source/ui/icons.ts#L6)
+[packages/cli/source/ui/icons.ts:6](https://github.com/jakubmazanec/tools/blob/d5dfa457a1ee09ed9e5ceb4c7d1c5e6b457dfa51/packages/cli/source/ui/icons.ts#L6)

@@ -13,7 +13,7 @@
 > `onChange?`: (`value`) => `void`; `value?`: `V`; \}
 
 Defined in:
-[packages/ui/source/components/RadioGroup.tsx:26](https://github.com/jakubmazanec/tools/blob/4b0540484b6010d133c2a5e92e51cdd4ed82edb4/packages/ui/source/components/RadioGroup.tsx#L26)
+[packages/ui/source/components/RadioGroup.tsx:26](https://github.com/jakubmazanec/tools/blob/d5dfa457a1ee09ed9e5ceb4c7d1c5e6b457dfa51/packages/ui/source/components/RadioGroup.tsx#L26)
 
 ## Type Parameters
 

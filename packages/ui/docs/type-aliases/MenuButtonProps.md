@@ -9,7 +9,7 @@
 > `ComponentRef`\<`T`\> & `PropsWithChildren` & `object`
 
 Defined in:
-[packages/ui/source/components/MenuButton.tsx:23](https://github.com/jakubmazanec/tools/blob/4b0540484b6010d133c2a5e92e51cdd4ed82edb4/packages/ui/source/components/MenuButton.tsx#L23)
+[packages/ui/source/components/MenuButton.tsx:23](https://github.com/jakubmazanec/tools/blob/d5dfa457a1ee09ed9e5ceb4c7d1c5e6b457dfa51/packages/ui/source/components/MenuButton.tsx#L23)
 
 ## Type Declaration
 

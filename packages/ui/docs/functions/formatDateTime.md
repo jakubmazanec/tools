@@ -7,7 +7,7 @@
 > **formatDateTime**(`value`, `options`): `string`
 
 Defined in:
-[packages/ui/source/utilities/formatDateTime.ts:6](https://github.com/jakubmazanec/tools/blob/4b0540484b6010d133c2a5e92e51cdd4ed82edb4/packages/ui/source/utilities/formatDateTime.ts#L6)
+[packages/ui/source/utilities/formatDateTime.ts:6](https://github.com/jakubmazanec/tools/blob/d5dfa457a1ee09ed9e5ceb4c7d1c5e6b457dfa51/packages/ui/source/utilities/formatDateTime.ts#L6)
 
 ## Parameters
 

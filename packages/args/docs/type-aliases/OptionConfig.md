@@ -11,6 +11,6 @@
 > \| [`StringsOptionConfig`](StringsOptionConfig.md)
 
 Defined in:
-[args/source/OptionConfig.ts:272](https://github.com/jakubmazanec/tools/blob/4b0540484b6010d133c2a5e92e51cdd4ed82edb4/packages/args/source/OptionConfig.ts#L272)
+[args/source/OptionConfig.ts:272](https://github.com/jakubmazanec/tools/blob/d5dfa457a1ee09ed9e5ceb4c7d1c5e6b457dfa51/packages/args/source/OptionConfig.ts#L272)
 
 Parser's option configuration.

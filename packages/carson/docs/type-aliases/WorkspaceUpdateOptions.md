@@ -7,7 +7,7 @@
 > **WorkspaceUpdateOptions** = `object`
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceUpdateOptions.ts:4](https://github.com/jakubmazanec/tools/blob/4b0540484b6010d133c2a5e92e51cdd4ed82edb4/packages/carson/source/workspace/WorkspaceUpdateOptions.ts#L4)
+[packages/carson/source/workspace/WorkspaceUpdateOptions.ts:4](https://github.com/jakubmazanec/tools/blob/d5dfa457a1ee09ed9e5ceb4c7d1c5e6b457dfa51/packages/carson/source/workspace/WorkspaceUpdateOptions.ts#L4)
 
 [Workspace.update](../classes/Workspace.md#update) options parameter.
 
@@ -18,4 +18,4 @@ Defined in:
 > **args**: `Record`\<`string`, `unknown`\>
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceUpdateOptions.ts:5](https://github.com/jakubmazanec/tools/blob/4b0540484b6010d133c2a5e92e51cdd4ed82edb4/packages/carson/source/workspace/WorkspaceUpdateOptions.ts#L5)
+[packages/carson/source/workspace/WorkspaceUpdateOptions.ts:5](https://github.com/jakubmazanec/tools/blob/d5dfa457a1ee09ed9e5ceb4c7d1c5e6b457dfa51/packages/carson/source/workspace/WorkspaceUpdateOptions.ts#L5)
