@@ -24,7 +24,6 @@ describe.each([
     workspaceTemplateId: '@jakubmazanec/carson-templates:workspace',
     projectTemplateIds: [
       '@jakubmazanec/carson-templates:projects/carson-templates',
-      '@jakubmazanec/carson-templates:projects/eslint-config',
       '@jakubmazanec/carson-templates:projects/library',
       '@jakubmazanec/carson-templates:projects/remix-app',
     ],
