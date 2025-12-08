@@ -27,9 +27,11 @@ let developmentDependencies = [
   'typedoc-plugin-markdown',
   'typescript',
   'vitest',
-].filter((dependency) => {
-  return !Object.keys(project.packageJson.dependencies ?? {}).some((key) => key === dependency); // if the project package.json already contains dependency, we don't need to add it
-});
+]
+  .filter((dependency) => dependency !== project.name)
+  .filter((dependency) => {
+    return !Object.keys(project.packageJson.dependencies ?? {}).some((key) => key === dependency); // if the project package.json already contains dependency, we don't need to add it
+  });
 
 let packageJson = lodash.merge(
   {
