@@ -27,9 +27,4 @@ export default [
       'public/**',
     ],
   },
-  {
-    rules: {
-      '@typescript-eslint/naming-convention': 'off',
-    },
-  },
 ];
