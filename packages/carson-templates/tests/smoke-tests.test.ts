@@ -23,8 +23,9 @@ describe.each([
     label: '#1',
     workspaceTemplateId: '@jakubmazanec/carson-templates:workspace',
     projectTemplateIds: [
-      '@jakubmazanec/carson-templates:projects/library',
       '@jakubmazanec/carson-templates:projects/app',
+      '@jakubmazanec/carson-templates:projects/library',
+      '@jakubmazanec/carson-templates:projects/react-library',
     ],
   },
 ])('Smoke tests $label', ({label, workspaceTemplateId, projectTemplateIds}) => {
