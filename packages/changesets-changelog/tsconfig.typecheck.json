@@ -11,9 +11,8 @@
   "compilerOptions": {
     "composite": false,
     "emitDeclarationOnly": false,
-    "exactOptionalPropertyTypes": false,
     "noEmit": true,
     "rootDir": "."
   },
-  "include": ["./source/**/*", "./tests/**/*", "./*"]
+  "include": ["./source/**/*", "./tests/**/*", "./tools/**/*", "./*"]
 }

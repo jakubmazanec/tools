@@ -5,6 +5,10 @@ strategy: merge
 <%
 let files = [BUILD_DIRECTORY, SOURCE_DIRECTORY];
 
+if (project.name === TEMPLATE_PACKAGE_NAME) {
+  files.push('templates');
+}
+
 if (project.packageJson.bin) {
   files.push('bin');
 }
@@ -27,9 +31,20 @@ let developmentDependencies = [
   'typedoc-plugin-markdown',
   'typescript',
   'vitest',
-].filter((dependency) => {
-  return !Object.keys(project.packageJson.dependencies ?? {}).some((key) => key === dependency); // if the project package.json already contains dependency, we don't need to add it
-});
+]
+  .filter((dependency) => dependency !== project.name)
+  .filter((dependency) => {
+    return !Object.keys(project.packageJson.dependencies ?? {}).some((key) => key === dependency); // if the project package.json already contains dependency, we don't need to add it
+  });
+
+let exports = `./${BUILD_DIRECTORY}/main.js`;
+
+if (project.name === TEMPLATE_PACKAGE_NAME) {
+  exports = {
+    '.': `./${BUILD_DIRECTORY}/main.js`,
+    './package.json': './package.json',
+  };
+}
 
 let packageJson = lodash.merge(
   {
@@ -38,7 +53,7 @@ let packageJson = lodash.merge(
       directory: project.relativePath,
     },
     type: 'module',
-    exports: `./${BUILD_DIRECTORY}/main.js`,
+    exports,
     files,
     scripts: {
       build: `del-cli ${BUILD_DIRECTORY} tsconfig.tsbuildinfo && ${getBuildToEsmCommand(workspace)} && tsc`,

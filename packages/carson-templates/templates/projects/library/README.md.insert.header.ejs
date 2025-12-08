@@ -1,3 +1,12 @@
 ---
-extends: '../../README.md.insert.header.ejs'
+to: 'README.md'
+strategy: [insert, header]
 ---
+
+<div align="center">
+
+# <%- project.name -%>
+
+<%- project.packageJson.description -%>
+
+</div>
