@@ -23,6 +23,7 @@
   "scripts": {
     "build": "del-cli build tsconfig.tsbuildinfo && esbuild \"source/**/*\" --platform=node --target=node24.3 --outdir=build --sourcemap && tsc",
     "clean": "del-cli coverage build *.tsbuildinfo",
+    "develop": "concurrently \"esbuild \"source/**/*\" --platform=node --target=node24.3 --outdir=build --sourcemap --watch\" \"tsc --watch\"",
     "document": "del-cli docs && typedoc --options typedoc.config.cjs",
     "format": "prettier . --write --ignore-unknown",
     "lint": "eslint .",
@@ -43,6 +44,7 @@
     "@types/semver": "^7.7.1",
     "@types/zen-observable": "^0.8.7",
     "@vitest/coverage-v8": "^3.2.4",
+    "concurrently": "^9.2.1",
     "del-cli": "^6.0.0",
     "esbuild": "^0.27.0",
     "eslint": "^9.33.0",
