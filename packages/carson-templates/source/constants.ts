@@ -153,7 +153,6 @@ export const DEPENDENCY_VERSIONS: Record<string, string> = {
   concurrently: '^9.0.0',
   'cross-env': '^10.0.0',
   'del-cli': '^6.0.0',
-  esbuild: '^0.24.0',
   eslint: '^9.0.0',
   execa: '^9.0.0',
   'happy-dom': '^18.0.0',
@@ -170,6 +169,7 @@ export const DEPENDENCY_VERSIONS: Record<string, string> = {
   storybook: '^9.0.0',
   tailwindcss: '^4.0.0',
   '@tailwindcss/vite': '^4.0.0',
+  tsdown: '^0.17.0',
   tsx: '^4.0.0',
   turbo: '^2.0.0',
   typedoc: '^0.28.0',
@@ -186,5 +186,6 @@ export const DEPENDENCY_VERSIONS: Record<string, string> = {
 };
 
 // commands
+export const BUILD_COMMAND = 'tsdown';
 export const FORMAT_COMMAND = 'prettier . --write --ignore-unknown';
 export const TEST_COMMAND = 'vitest run --coverage --passWithNoTests';
