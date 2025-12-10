@@ -7,7 +7,7 @@
 > **isEmptyDirectory**(`path`): `Promise`\<`boolean`\>
 
 Defined in:
-[isEmptyDirectory.ts:9](https://github.com/jakubmazanec/tools/blob/0facf018610de1abfab16bb462f482af92e0cf97/packages/fs-utils/source/isEmptyDirectory.ts#L9)
+[isEmptyDirectory.ts:9](https://github.com/jakubmazanec/tools/blob/c44e406c009b539e4c3453159f89e12e639a9c18/packages/fs-utils/source/isEmptyDirectory.ts#L9)
 
 Checks if a path is an empty directory.
 

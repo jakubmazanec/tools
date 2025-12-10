@@ -10,6 +10,6 @@
 > `ZodArray`\<`ZodRecord`\<`ZodString`, `ZodUnknown`\>\>\]\>\>; \}, `$strict`\>
 
 Defined in:
-[packages/template/source/TemplateAttributes.ts:8](https://github.com/jakubmazanec/tools/blob/0facf018610de1abfab16bb462f482af92e0cf97/packages/template/source/TemplateAttributes.ts#L8)
+[packages/template/source/TemplateAttributes.ts:8](https://github.com/jakubmazanec/tools/blob/c44e406c009b539e4c3453159f89e12e639a9c18/packages/template/source/TemplateAttributes.ts#L8)
 
 Zod schema for [TemplateAttributes](../type-aliases/TemplateAttributes.md).
