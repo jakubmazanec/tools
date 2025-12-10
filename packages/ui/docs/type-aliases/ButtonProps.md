@@ -9,7 +9,7 @@
 > `Omit`\<`ComponentPropsWithoutRef`\<`T`\>, `"type"`\> & `object`
 
 Defined in:
-[packages/ui/source/components/Button.tsx:29](https://github.com/jakubmazanec/tools/blob/c44e406c009b539e4c3453159f89e12e639a9c18/packages/ui/source/components/Button.tsx#L29)
+[packages/ui/source/components/Button.tsx:29](https://github.com/jakubmazanec/tools/blob/41b90f78a6cdd100265d6cc83fa0c8987adba075/packages/ui/source/components/Button.tsx#L29)
 
 ## Type Declaration
 

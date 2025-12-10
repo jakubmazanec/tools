@@ -12,7 +12,7 @@
 > `"PROJECT_GLOBS_MISMATCH"`, `WorkspaceErrorData`\>
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceError.ts:7](https://github.com/jakubmazanec/tools/blob/c44e406c009b539e4c3453159f89e12e639a9c18/packages/carson/source/workspace/WorkspaceError.ts#L7)
+[packages/carson/source/workspace/WorkspaceError.ts:7](https://github.com/jakubmazanec/tools/blob/41b90f78a6cdd100265d6cc83fa0c8987adba075/packages/carson/source/workspace/WorkspaceError.ts#L7)
 
 A subclass of `Error` that indicates a workspace failure.
 
