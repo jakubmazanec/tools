@@ -43,12 +43,8 @@ async function checkCarsonTemplatesPackage(
 
       if (result?.[0]) {
         let newMajorVersion = semver.major(semver.minVersion(bump)!);
-        let oldMajorVersion = semver.major(semver.minVersion(result[0])!);
 
-        // Node.js is a special case, because it isn't specified in `dependencies` field
-        if (newMajorVersion > oldMajorVersion || dependencyName === 'node') {
-          templatesBump.set(dependencyName, `${newMajorVersion}`);
-        }
+        templatesBump.set(dependencyName, `${newMajorVersion}`);
       }
     }
   }
