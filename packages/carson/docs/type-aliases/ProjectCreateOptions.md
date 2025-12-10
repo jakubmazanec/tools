@@ -7,7 +7,7 @@
 > **ProjectCreateOptions**\<`M`\> = `object`
 
 Defined in:
-[packages/carson/source/workspace/ProjectCreateOptions.ts:6](https://github.com/jakubmazanec/tools/blob/db0bf84472e7335ce80a73176c6b844cbee1d751/packages/carson/source/workspace/ProjectCreateOptions.ts#L6)
+[packages/carson/source/workspace/ProjectCreateOptions.ts:6](https://github.com/jakubmazanec/tools/blob/0facf018610de1abfab16bb462f482af92e0cf97/packages/carson/source/workspace/ProjectCreateOptions.ts#L6)
 
 [Project.create](../classes/Project.md#create) options parameter.
 
@@ -24,7 +24,7 @@ Defined in:
 > **args**: `Record`\<`string`, `unknown`\>
 
 Defined in:
-[packages/carson/source/workspace/ProjectCreateOptions.ts:11](https://github.com/jakubmazanec/tools/blob/db0bf84472e7335ce80a73176c6b844cbee1d751/packages/carson/source/workspace/ProjectCreateOptions.ts#L11)
+[packages/carson/source/workspace/ProjectCreateOptions.ts:11](https://github.com/jakubmazanec/tools/blob/0facf018610de1abfab16bb462f482af92e0cf97/packages/carson/source/workspace/ProjectCreateOptions.ts#L11)
 
 ---
 
@@ -33,7 +33,7 @@ Defined in:
 > **projectName**: `string`
 
 Defined in:
-[packages/carson/source/workspace/ProjectCreateOptions.ts:10](https://github.com/jakubmazanec/tools/blob/db0bf84472e7335ce80a73176c6b844cbee1d751/packages/carson/source/workspace/ProjectCreateOptions.ts#L10)
+[packages/carson/source/workspace/ProjectCreateOptions.ts:10](https://github.com/jakubmazanec/tools/blob/0facf018610de1abfab16bb462f482af92e0cf97/packages/carson/source/workspace/ProjectCreateOptions.ts#L10)
 
 ---
 
@@ -42,7 +42,7 @@ Defined in:
 > **projectPath**: `string`
 
 Defined in:
-[packages/carson/source/workspace/ProjectCreateOptions.ts:9](https://github.com/jakubmazanec/tools/blob/db0bf84472e7335ce80a73176c6b844cbee1d751/packages/carson/source/workspace/ProjectCreateOptions.ts#L9)
+[packages/carson/source/workspace/ProjectCreateOptions.ts:9](https://github.com/jakubmazanec/tools/blob/0facf018610de1abfab16bb462f482af92e0cf97/packages/carson/source/workspace/ProjectCreateOptions.ts#L9)
 
 ---
 
@@ -51,7 +51,7 @@ Defined in:
 > **templateId**: `string`
 
 Defined in:
-[packages/carson/source/workspace/ProjectCreateOptions.ts:7](https://github.com/jakubmazanec/tools/blob/db0bf84472e7335ce80a73176c6b844cbee1d751/packages/carson/source/workspace/ProjectCreateOptions.ts#L7)
+[packages/carson/source/workspace/ProjectCreateOptions.ts:7](https://github.com/jakubmazanec/tools/blob/0facf018610de1abfab16bb462f482af92e0cf97/packages/carson/source/workspace/ProjectCreateOptions.ts#L7)
 
 ---
 
@@ -60,4 +60,4 @@ Defined in:
 > **workspace**: [`Workspace`](../classes/Workspace.md)\<`M`\>
 
 Defined in:
-[packages/carson/source/workspace/ProjectCreateOptions.ts:8](https://github.com/jakubmazanec/tools/blob/db0bf84472e7335ce80a73176c6b844cbee1d751/packages/carson/source/workspace/ProjectCreateOptions.ts#L8)
+[packages/carson/source/workspace/ProjectCreateOptions.ts:8](https://github.com/jakubmazanec/tools/blob/0facf018610de1abfab16bb462f482af92e0cf97/packages/carson/source/workspace/ProjectCreateOptions.ts#L8)

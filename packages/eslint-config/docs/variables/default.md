@@ -7,4 +7,4 @@
 > `const` **default**: `eslint.Linter.Config`[]
 
 Defined in:
-[main.ts:46](https://github.com/jakubmazanec/tools/blob/db0bf84472e7335ce80a73176c6b844cbee1d751/packages/eslint-config/source/configs/main.ts#L46)
+[main.ts:46](https://github.com/jakubmazanec/tools/blob/0facf018610de1abfab16bb462f482af92e0cf97/packages/eslint-config/source/configs/main.ts#L46)
