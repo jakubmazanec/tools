@@ -8,4 +8,4 @@
 > [`useMenuHeadingTheme`](useMenuHeadingTheme.md)\>
 
 Defined in:
-[packages/ui/source/components/MenuHeading.tsx:47](https://github.com/jakubmazanec/tools/blob/cedf3fa4c7fbc7289e929b659f60d71a93d3854d/packages/ui/source/components/MenuHeading.tsx#L47)
+[packages/ui/source/components/MenuHeading.tsx:47](https://github.com/jakubmazanec/tools/blob/db0bf84472e7335ce80a73176c6b844cbee1d751/packages/ui/source/components/MenuHeading.tsx#L47)
