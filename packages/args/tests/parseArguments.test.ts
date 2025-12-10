@@ -1,5 +1,4 @@
-import {type IsEqual} from '@jakubmazanec/ts-utils';
-import {describe, expect, test} from 'vitest';
+import {describe, expect, expectTypeOf, test} from 'vitest';
 
 import {parseArguments} from '../source/parseArguments.js';
 import {ParsingError} from '../source/ParsingError.js';
@@ -10,27 +9,21 @@ import {validate} from './validate.js';
 describe('parseArgs()', () => {
   describe('correct typings', () => {
     test('no errors (#1)', () => {
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars -- needed
       let result = parseArguments([], {
         commands: ['do stuff', 'undo stuff'],
       });
-      let isTypeCorrect: IsEqual<
-        typeof result,
-        {
-          readonly command: 'do stuff' | 'undo stuff' | undefined;
-          readonly parameters: null;
-          readonly options: null;
-          readonly unknownOptions: null;
-          readonly rest: string[];
-          readonly errors: Error[];
-        }
-      > = true;
 
-      expect(isTypeCorrect).toBeTruthy(); // this test is only for typechecking
+      expectTypeOf(result).toEqualTypeOf<{
+        readonly command: 'do stuff' | 'undo stuff' | undefined;
+        readonly parameters: null;
+        readonly options: null;
+        readonly unknownOptions: null;
+        readonly rest: string[];
+        readonly errors: Error[];
+      }>();
     });
 
     test('no errors (#2)', () => {
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars -- needed
       let result = parseArguments([], {
         parameters: [
           {
@@ -49,23 +42,18 @@ describe('parseArgs()', () => {
           },
         ],
       });
-      let isTypeCorrect: IsEqual<
-        typeof result,
-        {
-          readonly command: null;
-          readonly parameters: readonly [boolean | undefined, boolean | undefined, boolean];
-          readonly options: null;
-          readonly unknownOptions: null;
-          readonly rest: string[];
-          readonly errors: Error[];
-        }
-      > = true;
 
-      expect(isTypeCorrect).toBeTruthy(); // this test is only for typechecking
+      expectTypeOf(result).toEqualTypeOf<{
+        readonly command: null;
+        readonly parameters: readonly [boolean | undefined, boolean | undefined, boolean];
+        readonly options: null;
+        readonly unknownOptions: null;
+        readonly rest: string[];
+        readonly errors: Error[];
+      }>();
     });
 
     test('no errors (#3)', () => {
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars -- needed
       let result = parseArguments([], {
         parameters: [
           {
@@ -101,30 +89,25 @@ describe('parseArgs()', () => {
           },
         ],
       });
-      let isTypeCorrect: IsEqual<
-        typeof result,
-        {
-          readonly command: null;
-          readonly parameters: readonly [
-            number | undefined,
-            number | undefined,
-            number,
-            42 | 47 | undefined,
-            42 | 47 | undefined,
-            42 | 47,
-          ];
-          readonly options: null;
-          readonly unknownOptions: null;
-          readonly rest: string[];
-          readonly errors: Error[];
-        }
-      > = true;
 
-      expect(isTypeCorrect).toBeTruthy(); // this test is only for typechecking
+      expectTypeOf(result).toEqualTypeOf<{
+        readonly command: null;
+        readonly parameters: readonly [
+          number | undefined,
+          number | undefined,
+          number,
+          42 | 47 | undefined,
+          42 | 47 | undefined,
+          42 | 47,
+        ];
+        readonly options: null;
+        readonly unknownOptions: null;
+        readonly rest: string[];
+        readonly errors: Error[];
+      }>();
     });
 
     test('no errors (#4)', () => {
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars -- needed
       let result = parseArguments([], {
         parameters: [
           {
@@ -160,30 +143,25 @@ describe('parseArgs()', () => {
           },
         ],
       });
-      let isTypeCorrect: IsEqual<
-        typeof result,
-        {
-          readonly command: null;
-          readonly parameters: readonly [
-            string | undefined,
-            string | undefined,
-            string,
-            'bar' | 'foo' | undefined,
-            'bar' | 'foo' | undefined,
-            'bar' | 'foo',
-          ];
-          readonly options: null;
-          readonly unknownOptions: null;
-          readonly rest: string[];
-          readonly errors: Error[];
-        }
-      > = true;
 
-      expect(isTypeCorrect).toBeTruthy(); // this test is only for typechecking
+      expectTypeOf(result).toEqualTypeOf<{
+        readonly command: null;
+        readonly parameters: readonly [
+          string | undefined,
+          string | undefined,
+          string,
+          'bar' | 'foo' | undefined,
+          'bar' | 'foo' | undefined,
+          'bar' | 'foo',
+        ];
+        readonly options: null;
+        readonly unknownOptions: null;
+        readonly rest: string[];
+        readonly errors: Error[];
+      }>();
     });
 
     test('no errors (#5)', () => {
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars -- needed
       let result = parseArguments([], {
         options: {
           booleanOption1: {
@@ -373,55 +351,50 @@ describe('parseArgs()', () => {
         },
       });
 
-      let isTypeCorrect: IsEqual<
-        typeof result,
-        {
-          readonly command: null;
-          readonly parameters: null;
-          readonly options: {
-            readonly booleanOption1: boolean | undefined;
-            readonly booleanOption2: boolean;
-            readonly booleanOption3: boolean | undefined;
-            readonly booleanOption4: boolean[] | undefined;
-            readonly booleanOption5: boolean[];
-            readonly booleanOption6: boolean[] | undefined;
+      expectTypeOf(result).toEqualTypeOf<{
+        readonly command: null;
+        readonly parameters: null;
+        readonly options: {
+          readonly booleanOption1: boolean | undefined;
+          readonly booleanOption2: boolean;
+          readonly booleanOption3: boolean | undefined;
+          readonly booleanOption4: boolean[] | undefined;
+          readonly booleanOption5: boolean[];
+          readonly booleanOption6: boolean[] | undefined;
 
-            readonly numberOption1: number | undefined;
-            readonly numberOption2: number;
-            readonly numberOption3: number | undefined;
-            readonly numberOption4: number[] | undefined;
-            readonly numberOption5: number[];
-            readonly numberOption6: number[] | undefined;
-            readonly numberOption7: 42 | 47 | undefined;
-            readonly numberOption8: 42 | 47;
-            readonly numberOption9: 42 | 47 | undefined;
-            readonly numberOption10: Array<42 | 47> | undefined;
-            readonly numberOption11: Array<42 | 47>;
-            readonly numberOption12: Array<42 | 47> | undefined;
-            readonly numberOption13: number | undefined;
-            readonly numberOption14: number;
-            readonly numberOption15: number | undefined;
+          readonly numberOption1: number | undefined;
+          readonly numberOption2: number;
+          readonly numberOption3: number | undefined;
+          readonly numberOption4: number[] | undefined;
+          readonly numberOption5: number[];
+          readonly numberOption6: number[] | undefined;
+          readonly numberOption7: 42 | 47 | undefined;
+          readonly numberOption8: 42 | 47;
+          readonly numberOption9: 42 | 47 | undefined;
+          readonly numberOption10: Array<42 | 47> | undefined;
+          readonly numberOption11: Array<42 | 47>;
+          readonly numberOption12: Array<42 | 47> | undefined;
+          readonly numberOption13: number | undefined;
+          readonly numberOption14: number;
+          readonly numberOption15: number | undefined;
 
-            readonly stringOption1: string | undefined;
-            readonly stringOption2: string;
-            readonly stringOption3: string | undefined;
-            readonly stringOption4: string[] | undefined;
-            readonly stringOption5: string[];
-            readonly stringOption6: string[] | undefined;
-            readonly stringOption7: 'bar' | 'foo' | undefined;
-            readonly stringOption8: 'bar' | 'foo';
-            readonly stringOption9: 'bar' | 'foo' | undefined;
-            readonly stringOption10: Array<'bar' | 'foo'> | undefined;
-            readonly stringOption11: Array<'bar' | 'foo'>;
-            readonly stringOption12: Array<'bar' | 'foo'> | undefined;
-          };
-          readonly unknownOptions: null;
-          readonly rest: string[];
-          readonly errors: Error[];
-        }
-      > = true;
-
-      expect(isTypeCorrect).toBeTruthy(); // this test is only for typechecking
+          readonly stringOption1: string | undefined;
+          readonly stringOption2: string;
+          readonly stringOption3: string | undefined;
+          readonly stringOption4: string[] | undefined;
+          readonly stringOption5: string[];
+          readonly stringOption6: string[] | undefined;
+          readonly stringOption7: 'bar' | 'foo' | undefined;
+          readonly stringOption8: 'bar' | 'foo';
+          readonly stringOption9: 'bar' | 'foo' | undefined;
+          readonly stringOption10: Array<'bar' | 'foo'> | undefined;
+          readonly stringOption11: Array<'bar' | 'foo'>;
+          readonly stringOption12: Array<'bar' | 'foo'> | undefined;
+        };
+        readonly unknownOptions: null;
+        readonly rest: string[];
+        readonly errors: Error[];
+      }>();
     });
 
     test('expected errors', () => {
