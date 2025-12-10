@@ -10,6 +10,7 @@
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "composite": true,
+    "erasableSyntaxOnly": true,
     "exactOptionalPropertyTypes": false,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,

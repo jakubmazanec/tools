@@ -50,6 +50,7 @@ export const ECMASCRIPT_VERSION = 2024;
 export const TSCONFIG_COMPILER_OPTIONS = {
   allowSyntheticDefaultImports: true,
   composite: true,
+  erasableSyntaxOnly: true,
   exactOptionalPropertyTypes: true,
   forceConsistentCasingInFileNames: true,
   isolatedModules: true,
