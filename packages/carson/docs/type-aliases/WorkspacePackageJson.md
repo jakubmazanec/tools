@@ -7,7 +7,7 @@
 > **WorkspacePackageJson**\<`M`\> = `M` _extends_ `true` ? `PackageJson` : `null`
 
 Defined in:
-[packages/carson/source/workspace/WorkspacePackageJson.ts:6](https://github.com/jakubmazanec/tools/blob/d5dfa457a1ee09ed9e5ceb4c7d1c5e6b457dfa51/packages/carson/source/workspace/WorkspacePackageJson.ts#L6)
+[packages/carson/source/workspace/WorkspacePackageJson.ts:6](https://github.com/jakubmazanec/tools/blob/cedf3fa4c7fbc7289e929b659f60d71a93d3854d/packages/carson/source/workspace/WorkspacePackageJson.ts#L6)
 
 Type alias for [Workspace.packageJson](../classes/Workspace.md#packagejson) property.
 

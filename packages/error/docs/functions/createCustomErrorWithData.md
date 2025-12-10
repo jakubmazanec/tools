@@ -12,7 +12,7 @@
 > `output`\<`ErrorData`\>\>
 
 Defined in:
-[createCustomErrorWithData.ts:21](https://github.com/jakubmazanec/tools/blob/d5dfa457a1ee09ed9e5ceb4c7d1c5e6b457dfa51/packages/error/source/createCustomErrorWithData.ts#L21)
+[createCustomErrorWithData.ts:21](https://github.com/jakubmazanec/tools/blob/cedf3fa4c7fbc7289e929b659f60d71a93d3854d/packages/error/source/createCustomErrorWithData.ts#L21)
 
 Function for creating custom error classes. Such custom error class properly subclasses built-in
 `Error`, simplifies generating error messages via predefined error codes and allows attaching custom
@@ -80,7 +80,7 @@ Class that implements [CustomErrorWithData](../type-aliases/CustomErrorWithData.
 > `InstanceType`\<`ErrorData`\>\>
 
 Defined in:
-[createCustomErrorWithData.ts:29](https://github.com/jakubmazanec/tools/blob/d5dfa457a1ee09ed9e5ceb4c7d1c5e6b457dfa51/packages/error/source/createCustomErrorWithData.ts#L29)
+[createCustomErrorWithData.ts:29](https://github.com/jakubmazanec/tools/blob/cedf3fa4c7fbc7289e929b659f60d71a93d3854d/packages/error/source/createCustomErrorWithData.ts#L29)
 
 Function for creating custom error classes. Such custom error class properly subclasses built-in
 `Error`, simplifies generating error messages via predefined error codes and allows attaching custom

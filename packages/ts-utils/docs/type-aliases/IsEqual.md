@@ -8,7 +8,7 @@
 > _extends_ `U` ? `1` : `2` ? `true` : `false`
 
 Defined in:
-[packages/ts-utils/source/types/IsEqual.ts:15](https://github.com/jakubmazanec/tools/blob/d5dfa457a1ee09ed9e5ceb4c7d1c5e6b457dfa51/packages/ts-utils/source/types/IsEqual.ts#L15)
+[packages/ts-utils/source/types/IsEqual.ts:15](https://github.com/jakubmazanec/tools/blob/cedf3fa4c7fbc7289e929b659f60d71a93d3854d/packages/ts-utils/source/types/IsEqual.ts#L15)
 
 Allows you to test if two types are the same:
 
