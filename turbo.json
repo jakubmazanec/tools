@@ -36,13 +36,5 @@
       "outputs": []
     }
   },
-  "globalEnv": ["CI"],
-  "globalDependencies": [
-    ".editorconfig",
-    ".prettierignore",
-    "eslint.config.js",
-    "prettier.config.cjs",
-    "tsconfig.json",
-    "tsconfig.typecheck.json"
-  ]
+  "globalEnv": ["CI"]
 }
