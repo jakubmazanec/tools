@@ -56,8 +56,10 @@ export type DeepPartial<T> =
 /**
  * Helper type for {@link DeepPartial}.
  */
-interface DeepPartialMap<KeyType, ValueType>
-  extends Map<DeepPartial<KeyType>, DeepPartial<ValueType>> {}
+interface DeepPartialMap<KeyType, ValueType> extends Map<
+  DeepPartial<KeyType>,
+  DeepPartial<ValueType>
+> {}
 
 /**
  * Helper type for {@link DeepPartial}.
@@ -67,8 +69,10 @@ interface DeepPartialSet<T> extends Set<DeepPartial<T>> {}
 /**
  * Helper type for {@link DeepPartial}.
  */
-interface DeepPartialReadonlyMap<KeyType, ValueType>
-  extends ReadonlyMap<DeepPartial<KeyType>, DeepPartial<ValueType>> {}
+interface DeepPartialReadonlyMap<KeyType, ValueType> extends ReadonlyMap<
+  DeepPartial<KeyType>,
+  DeepPartial<ValueType>
+> {}
 
 /**
  * Helper type for {@link DeepPartial}.
