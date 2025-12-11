@@ -7,7 +7,7 @@
 > **TemplateReadAndRenderOptions**\<`A`, `D`\> = `object`
 
 Defined in:
-[packages/template/source/Template.ts:49](https://github.com/jakubmazanec/tools/blob/41b90f78a6cdd100265d6cc83fa0c8987adba075/packages/template/source/Template.ts#L49)
+[packages/template/source/Template.ts:49](https://github.com/jakubmazanec/tools/blob/9041b493988a4f48f72a1cda839ea48fba933ec4/packages/template/source/Template.ts#L49)
 
 ## Type Parameters
 
@@ -26,7 +26,7 @@ Defined in:
 > `optional` **attributesSchema**: `A`
 
 Defined in:
-[packages/template/source/Template.ts:60](https://github.com/jakubmazanec/tools/blob/41b90f78a6cdd100265d6cc83fa0c8987adba075/packages/template/source/Template.ts#L60)
+[packages/template/source/Template.ts:60](https://github.com/jakubmazanec/tools/blob/9041b493988a4f48f72a1cda839ea48fba933ec4/packages/template/source/Template.ts#L60)
 
 Zod schema for custom template attributes.
 
@@ -37,7 +37,7 @@ Zod schema for custom template attributes.
 > `optional` **dataSchema**: `D`
 
 Defined in:
-[packages/template/source/Template.ts:63](https://github.com/jakubmazanec/tools/blob/41b90f78a6cdd100265d6cc83fa0c8987adba075/packages/template/source/Template.ts#L63)
+[packages/template/source/Template.ts:63](https://github.com/jakubmazanec/tools/blob/9041b493988a4f48f72a1cda839ea48fba933ec4/packages/template/source/Template.ts#L63)
 
 Zod schema for template data.
 
@@ -48,7 +48,7 @@ Zod schema for template data.
 > `optional` **disablePrettier**: `boolean`
 
 Defined in:
-[packages/template/source/Template.ts:57](https://github.com/jakubmazanec/tools/blob/41b90f78a6cdd100265d6cc83fa0c8987adba075/packages/template/source/Template.ts#L57)
+[packages/template/source/Template.ts:57](https://github.com/jakubmazanec/tools/blob/9041b493988a4f48f72a1cda839ea48fba933ec4/packages/template/source/Template.ts#L57)
 
 Disable formatting the rendered template using Prettier.
 
@@ -59,6 +59,6 @@ Disable formatting the rendered template using Prettier.
 > `optional` **prettierOptions**: `prettier.Options`
 
 Defined in:
-[packages/template/source/Template.ts:54](https://github.com/jakubmazanec/tools/blob/41b90f78a6cdd100265d6cc83fa0c8987adba075/packages/template/source/Template.ts#L54)
+[packages/template/source/Template.ts:54](https://github.com/jakubmazanec/tools/blob/9041b493988a4f48f72a1cda839ea48fba933ec4/packages/template/source/Template.ts#L54)
 
 Prettier options.
