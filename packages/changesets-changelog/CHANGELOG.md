@@ -1,5 +1,48 @@
 # @jakubmazanec/changesets-changelog
 
+## 2.0.15
+
+### Patch Changes
+
+- [#490](https://github.com/jakubmazanec/tools/pull/490)
+  [`cedf3fa`](https://github.com/jakubmazanec/tools/commit/cedf3fa4c7fbc7289e929b659f60d71a93d3854d)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – TypeScript config updated.
+
+- [#497](https://github.com/jakubmazanec/tools/pull/497)
+  [`9041b49`](https://github.com/jakubmazanec/tools/commit/9041b493988a4f48f72a1cda839ea48fba933ec4)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@vitest/coverage-v8` updated to
+  version `^4.0.14`. Dependency `vitest` updated to version `^4.0.14`.
+
+- [#499](https://github.com/jakubmazanec/tools/pull/499)
+  [`c54d11c`](https://github.com/jakubmazanec/tools/commit/c54d11cc86076f3244deb038a58057d4b5861cb2)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@changesets/parse` updated to
+  version `^0.4.2`.
+
+- [#494](https://github.com/jakubmazanec/tools/pull/494)
+  [`029d198`](https://github.com/jakubmazanec/tools/commit/029d1987c7ebd56b26172daa3089dce294d4df51)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `del-cli` updated to version
+  `^7.0.0`.
+
+- [#500](https://github.com/jakubmazanec/tools/pull/500)
+  [`f46c6ab`](https://github.com/jakubmazanec/tools/commit/f46c6ab8babcd948550000c281c2f30bc29e3ace)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@changesets/get-github-info` updated
+  to version `0.7.0`.
+
+- [#501](https://github.com/jakubmazanec/tools/pull/501)
+  [`3256267`](https://github.com/jakubmazanec/tools/commit/3256267f4bb471abba10073885239bb2e754d828)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `prettier` updated to version
+  `^3.7.1`.
+
+- [#488](https://github.com/jakubmazanec/tools/pull/488)
+  [`d5dfa45`](https://github.com/jakubmazanec/tools/commit/d5dfa457a1ee09ed9e5ceb4c7d1c5e6b457dfa51)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Carson template changed to
+  `projects/library`.
+
+- [#488](https://github.com/jakubmazanec/tools/pull/488)
+  [`d5dfa45`](https://github.com/jakubmazanec/tools/commit/d5dfa457a1ee09ed9e5ceb4c7d1c5e6b457dfa51)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Added directory `tools` to the TypeScript
+  config so it's typechecked.
+
 ## 2.0.14
 
 ### Patch Changes

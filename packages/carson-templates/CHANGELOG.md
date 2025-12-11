@@ -1,5 +1,144 @@
 # @jakubmazanec/carson-templates
 
+## 8.0.0
+
+### Major Changes
+
+- [#488](https://github.com/jakubmazanec/tools/pull/488)
+  [`d5dfa45`](https://github.com/jakubmazanec/tools/commit/d5dfa457a1ee09ed9e5ceb4c7d1c5e6b457dfa51)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – BREAKING: Removed template
+  `projects/changesets-changelog`. Use `projects/library` template instead.
+
+- [#488](https://github.com/jakubmazanec/tools/pull/488)
+  [`d5dfa45`](https://github.com/jakubmazanec/tools/commit/d5dfa457a1ee09ed9e5ceb4c7d1c5e6b457dfa51)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – BREAKING: Renamed template
+  `projects/remix-app` to `projects/app`.
+
+- [#490](https://github.com/jakubmazanec/tools/pull/490)
+  [`cedf3fa`](https://github.com/jakubmazanec/tools/commit/cedf3fa4c7fbc7289e929b659f60d71a93d3854d)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – BREAKING: TypeScript option
+  `erasableSyntaxOnly` enabled in all templates.
+
+- [#488](https://github.com/jakubmazanec/tools/pull/488)
+  [`d5dfa45`](https://github.com/jakubmazanec/tools/commit/d5dfa457a1ee09ed9e5ceb4c7d1c5e6b457dfa51)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – BREAKING: Removed template
+  `projects/eslint-config`. Use `projects/library` template instead.
+
+- [#497](https://github.com/jakubmazanec/tools/pull/497)
+  [`9041b49`](https://github.com/jakubmazanec/tools/commit/9041b493988a4f48f72a1cda839ea48fba933ec4)
+  ([@renovate](https://github.com/apps/renovate)) – BREAKING: All project templates updated to use
+  Vitest v4. This may require manual update (see https://vitest.dev/guide/migration.html#vitest-4).
+
+- [#494](https://github.com/jakubmazanec/tools/pull/494)
+  [`029d198`](https://github.com/jakubmazanec/tools/commit/029d1987c7ebd56b26172daa3089dce294d4df51)
+  ([@renovate](https://github.com/apps/renovate)) – All templates were updated to use `del-cli` v7.
+
+- [#496](https://github.com/jakubmazanec/tools/pull/496)
+  [`31bca05`](https://github.com/jakubmazanec/tools/commit/31bca05d20b96ac407ff7252104d961a12c2d1a7)
+  ([@renovate](https://github.com/apps/renovate)) – BREAKING: Templates were updated to use
+  Storybook v10. This may require manual update of projects that use Storybook (see
+  https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#from-version-9x-to-1000).
+
+- [#495](https://github.com/jakubmazanec/tools/pull/495)
+  [`ff36159`](https://github.com/jakubmazanec/tools/commit/ff36159936e498bc04e5676de2500cb03cbaacce)
+  ([@renovate](https://github.com/apps/renovate)) – BREAKING: Templates `projects/app` and
+  `projects/react-library` updated to use `happy-dom` v20.
+
+- [#488](https://github.com/jakubmazanec/tools/pull/488)
+  [`d5dfa45`](https://github.com/jakubmazanec/tools/commit/d5dfa457a1ee09ed9e5ceb4c7d1c5e6b457dfa51)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – BREAKING: Removed template
+  `projects/carson-templates`. Use `projects/library` template instead.
+
+### Minor Changes
+
+- [#487](https://github.com/jakubmazanec/tools/pull/487)
+  [`4b05404`](https://github.com/jakubmazanec/tools/commit/4b0540484b6010d133c2a5e92e51cdd4ed82edb4)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Allow specifying custom TypeScript and
+  Turborepo configs (using `overrides.tsconfig` or `overrides.turbo` workspace option) in the
+  `workspace` template.
+
+- [#487](https://github.com/jakubmazanec/tools/pull/487)
+  [`4b05404`](https://github.com/jakubmazanec/tools/commit/4b0540484b6010d133c2a5e92e51cdd4ed82edb4)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Allow specifying custom ESLint and Prettier
+  configs (using `overrides.eslintConfig` or `overrides.prettierConfig` workspace or project option)
+  in all templates.
+
+- [#487](https://github.com/jakubmazanec/tools/pull/487)
+  [`4b05404`](https://github.com/jakubmazanec/tools/commit/4b0540484b6010d133c2a5e92e51cdd4ed82edb4)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Allow specifying custom TypeDoc config (using
+  `overrides.typedocConfig` project option) in all project templates.
+
+- [#488](https://github.com/jakubmazanec/tools/pull/488)
+  [`d5dfa45`](https://github.com/jakubmazanec/tools/commit/d5dfa457a1ee09ed9e5ceb4c7d1c5e6b457dfa51)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Added support for typechecking directory
+  `tools` to the `projects/library` template.
+
+### Patch Changes
+
+- [#490](https://github.com/jakubmazanec/tools/pull/490)
+  [`cedf3fa`](https://github.com/jakubmazanec/tools/commit/cedf3fa4c7fbc7289e929b659f60d71a93d3854d)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – TypeScript config updated.
+
+- [#497](https://github.com/jakubmazanec/tools/pull/497)
+  [`9041b49`](https://github.com/jakubmazanec/tools/commit/9041b493988a4f48f72a1cda839ea48fba933ec4)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@vitest/coverage-v8` updated to
+  version `^4.0.14`. Dependency `vitest` updated to version `^4.0.14`.
+
+- [#494](https://github.com/jakubmazanec/tools/pull/494)
+  [`029d198`](https://github.com/jakubmazanec/tools/commit/029d1987c7ebd56b26172daa3089dce294d4df51)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `del-cli` updated to version
+  `^7.0.0`.
+
+- [#501](https://github.com/jakubmazanec/tools/pull/501)
+  [`3256267`](https://github.com/jakubmazanec/tools/commit/3256267f4bb471abba10073885239bb2e754d828)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `prettier` updated to version
+  `^3.7.1`.
+
+- [#488](https://github.com/jakubmazanec/tools/pull/488)
+  [`d5dfa45`](https://github.com/jakubmazanec/tools/commit/d5dfa457a1ee09ed9e5ceb4c7d1c5e6b457dfa51)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Carson template changed to
+  `projects/library`.
+
+- [#488](https://github.com/jakubmazanec/tools/pull/488)
+  [`d5dfa45`](https://github.com/jakubmazanec/tools/commit/d5dfa457a1ee09ed9e5ceb4c7d1c5e6b457dfa51)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixed how `package.json` file is generated in
+  the `projects/library` template.
+
+- [#493](https://github.com/jakubmazanec/tools/pull/493)
+  [`c44e406`](https://github.com/jakubmazanec/tools/commit/c44e406c009b539e4c3453159f89e12e639a9c18)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixed `Dockerfile` so it produces smaller
+  images in the `projects/app` template.
+
+- [#487](https://github.com/jakubmazanec/tools/pull/487)
+  [`4b05404`](https://github.com/jakubmazanec/tools/commit/4b0540484b6010d133c2a5e92e51cdd4ed82edb4)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixed scripts for generating changesets in
+  the `workspace` template.
+
+- [#488](https://github.com/jakubmazanec/tools/pull/488)
+  [`d5dfa45`](https://github.com/jakubmazanec/tools/commit/d5dfa457a1ee09ed9e5ceb4c7d1c5e6b457dfa51)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Refactored template files for better internal
+  modularity and extending.
+
+- [#498](https://github.com/jakubmazanec/tools/pull/498)
+  [`41b90f7`](https://github.com/jakubmazanec/tools/commit/41b90f78a6cdd100265d6cc83fa0c8987adba075)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixed script for creating changesets in the
+  `workspace` template.
+
+- [#488](https://github.com/jakubmazanec/tools/pull/488)
+  [`d5dfa45`](https://github.com/jakubmazanec/tools/commit/d5dfa457a1ee09ed9e5ceb4c7d1c5e6b457dfa51)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Added directory `tools` to the TypeScript
+  config so it's typechecked.
+
+- [#491](https://github.com/jakubmazanec/tools/pull/491)
+  [`db0bf84`](https://github.com/jakubmazanec/tools/commit/db0bf84472e7335ce80a73176c6b844cbee1d751)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixed incorrrect Turborepo global
+  dependencies in the `workspace` template.
+
+- [#487](https://github.com/jakubmazanec/tools/pull/487)
+  [`4b05404`](https://github.com/jakubmazanec/tools/commit/4b0540484b6010d133c2a5e92e51cdd4ed82edb4)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixed overriding of React Router config in
+  the `projects/remix-app` template.
+
 ## 7.1.0
 
 ### Minor Changes

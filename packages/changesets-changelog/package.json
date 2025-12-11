@@ -1,6 +1,6 @@
 {
   "name": "@jakubmazanec/changesets-changelog",
-  "version": "2.0.14",
+  "version": "2.0.15",
   "description": "Changelog for projects using Changesets.",
   "repository": {
     "type": "git",
