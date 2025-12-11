@@ -157,7 +157,7 @@ export const DEPENDENCY_VERSIONS: Record<string, string> = {
   esbuild: '^0.24.0',
   eslint: '^9.0.0',
   execa: '^9.0.0',
-  'happy-dom': '^18.0.0',
+  'happy-dom': '^20.0.0',
   isbot: '^5.0.0',
   lodash: '^4.0.0',
   'patch-package': '^8.0.0',
