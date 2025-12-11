@@ -40,7 +40,7 @@
     "del-cli": "^7.0.0",
     "esbuild": "^0.27.0",
     "eslint": "^9.33.0",
-    "prettier": "^3.6.2",
+    "prettier": "^3.7.1",
     "prettier-plugin-packagejson": "^2.5.19",
     "typedoc": "^0.28.14",
     "typedoc-plugin-markdown": "^4.9.0",
