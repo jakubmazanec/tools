@@ -1,6 +1,6 @@
 {
   "name": "@jakubmazanec/error",
-  "version": "3.0.16",
+  "version": "3.0.17",
   "description": "Collection of utilities for creating and handling errors.",
   "repository": {
     "type": "git",

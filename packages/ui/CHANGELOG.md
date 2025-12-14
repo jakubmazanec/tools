@@ -1,5 +1,36 @@
 # @jakubmazanec/ui
 
+## 0.5.3
+
+### Patch Changes
+
+- [#508](https://github.com/jakubmazanec/tools/pull/508)
+  [`75ad0cb`](https://github.com/jakubmazanec/tools/commit/75ad0cbdc7ed03a223a7149f16a54b86c95f200b)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `prettier-plugin-packagejson` updated
+  to version `^2.5.20`.
+
+- [#509](https://github.com/jakubmazanec/tools/pull/509)
+  [`3771579`](https://github.com/jakubmazanec/tools/commit/3771579705132654a04ffef9492ab0a63ea1b2eb)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `typedoc` updated to version
+  `^0.28.15`.
+
+- [#507](https://github.com/jakubmazanec/tools/pull/507)
+  [`aa41f4b`](https://github.com/jakubmazanec/tools/commit/aa41f4b8a503830bb6198ebf70de9e7844bc2c44)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `prettier` updated to version
+  `^3.7.3`.
+
+- [#503](https://github.com/jakubmazanec/tools/pull/503)
+  [`7a9407a`](https://github.com/jakubmazanec/tools/commit/7a9407a212ef24330be64e4a2e8c14ee7a8dd7d4)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@storybook/addon-docs` updated to
+  version `^10.1.1`. Dependency `@storybook/addon-links` updated to version `^10.1.1`. Dependency
+  `@storybook/react-vite` updated to version `^10.1.1`. Dependency `storybook` updated to version
+  `^10.1.1`.
+
+- [#506](https://github.com/jakubmazanec/tools/pull/506)
+  [`ad2cfc4`](https://github.com/jakubmazanec/tools/commit/ad2cfc465666ea47d0d4ecf07dca82a216ab87de)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `happy-dom` updated to version
+  `^20.0.11`.
+
 ## 0.5.2
 
 ### Patch Changes

@@ -1,5 +1,33 @@
 # @jakubmazanec/carson-templates
 
+## 8.0.1
+
+### Patch Changes
+
+- [#508](https://github.com/jakubmazanec/tools/pull/508)
+  [`75ad0cb`](https://github.com/jakubmazanec/tools/commit/75ad0cbdc7ed03a223a7149f16a54b86c95f200b)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `prettier-plugin-packagejson` updated
+  to version `^2.5.20`.
+
+- [#509](https://github.com/jakubmazanec/tools/pull/509)
+  [`3771579`](https://github.com/jakubmazanec/tools/commit/3771579705132654a04ffef9492ab0a63ea1b2eb)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `typedoc` updated to version
+  `^0.28.15`.
+
+- [#507](https://github.com/jakubmazanec/tools/pull/507)
+  [`aa41f4b`](https://github.com/jakubmazanec/tools/commit/aa41f4b8a503830bb6198ebf70de9e7844bc2c44)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `prettier` updated to version
+  `^3.7.3`.
+
+- [#505](https://github.com/jakubmazanec/tools/pull/505)
+  [`d3b7be1`](https://github.com/jakubmazanec/tools/commit/d3b7be10c5769d220acd27cb8a08e94b40da18eb)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `execa` updated to version `^9.6.1`.
+
+- [#504](https://github.com/jakubmazanec/tools/pull/504)
+  [`4777836`](https://github.com/jakubmazanec/tools/commit/4777836d3bb6bdca3f71a21721d597411191d954)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixed TypeScript config in the `projects/app`
+  template.
+
 ## 8.0.0
 
 ### Major Changes

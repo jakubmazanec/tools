@@ -1,5 +1,24 @@
 # @jakubmazanec/changesets-changelog
 
+## 2.0.16
+
+### Patch Changes
+
+- [#508](https://github.com/jakubmazanec/tools/pull/508)
+  [`75ad0cb`](https://github.com/jakubmazanec/tools/commit/75ad0cbdc7ed03a223a7149f16a54b86c95f200b)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `prettier-plugin-packagejson` updated
+  to version `^2.5.20`.
+
+- [#509](https://github.com/jakubmazanec/tools/pull/509)
+  [`3771579`](https://github.com/jakubmazanec/tools/commit/3771579705132654a04ffef9492ab0a63ea1b2eb)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `typedoc` updated to version
+  `^0.28.15`.
+
+- [#507](https://github.com/jakubmazanec/tools/pull/507)
+  [`aa41f4b`](https://github.com/jakubmazanec/tools/commit/aa41f4b8a503830bb6198ebf70de9e7844bc2c44)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `prettier` updated to version
+  `^3.7.3`.
+
 ## 2.0.15
 
 ### Patch Changes
