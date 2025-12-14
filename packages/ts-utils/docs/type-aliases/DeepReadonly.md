@@ -10,7 +10,7 @@
 > `DeepReadonlyObject`\<`T`\> : `unknown`
 
 Defined in:
-[packages/ts-utils/source/types/DeepReadonly.ts:22](https://github.com/jakubmazanec/tools/blob/4777836d3bb6bdca3f71a21721d597411191d954/packages/ts-utils/source/types/DeepReadonly.ts#L22)
+[packages/ts-utils/source/types/DeepReadonly.ts:22](https://github.com/jakubmazanec/tools/blob/aa41f4b8a503830bb6198ebf70de9e7844bc2c44/packages/ts-utils/source/types/DeepReadonly.ts#L22)
 
 Same as built-in `Readonly`, but works recursively:
 

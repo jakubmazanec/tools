@@ -7,7 +7,7 @@
 > **useProgram**(): `object`
 
 Defined in:
-[packages/cli/source/ui/useProgram.ts:10](https://github.com/jakubmazanec/tools/blob/4777836d3bb6bdca3f71a21721d597411191d954/packages/cli/source/ui/useProgram.ts#L10)
+[packages/cli/source/ui/useProgram.ts:10](https://github.com/jakubmazanec/tools/blob/aa41f4b8a503830bb6198ebf70de9e7844bc2c44/packages/cli/source/ui/useProgram.ts#L10)
 
 A React hook for accessing [Program](../classes/Program.md) instance and `exit` function that is
 used for showing an error (via an error boundary) and exiting.

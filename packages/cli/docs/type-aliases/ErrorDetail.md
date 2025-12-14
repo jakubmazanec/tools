@@ -7,7 +7,7 @@
 > **ErrorDetail** = `object`
 
 Defined in:
-[packages/cli/source/ui/ErrorDetail.ts:4](https://github.com/jakubmazanec/tools/blob/4777836d3bb6bdca3f71a21721d597411191d954/packages/cli/source/ui/ErrorDetail.ts#L4)
+[packages/cli/source/ui/ErrorDetail.ts:4](https://github.com/jakubmazanec/tools/blob/aa41f4b8a503830bb6198ebf70de9e7844bc2c44/packages/cli/source/ui/ErrorDetail.ts#L4)
 
 Detailed error information.
 
@@ -18,7 +18,7 @@ Detailed error information.
 > `optional` **cause**: `object`
 
 Defined in:
-[packages/cli/source/ui/ErrorDetail.ts:8](https://github.com/jakubmazanec/tools/blob/4777836d3bb6bdca3f71a21721d597411191d954/packages/cli/source/ui/ErrorDetail.ts#L8)
+[packages/cli/source/ui/ErrorDetail.ts:8](https://github.com/jakubmazanec/tools/blob/aa41f4b8a503830bb6198ebf70de9e7844bc2c44/packages/cli/source/ui/ErrorDetail.ts#L8)
 
 #### description?
 
@@ -35,7 +35,7 @@ Defined in:
 > `optional` **description**: `string`
 
 Defined in:
-[packages/cli/source/ui/ErrorDetail.ts:6](https://github.com/jakubmazanec/tools/blob/4777836d3bb6bdca3f71a21721d597411191d954/packages/cli/source/ui/ErrorDetail.ts#L6)
+[packages/cli/source/ui/ErrorDetail.ts:6](https://github.com/jakubmazanec/tools/blob/aa41f4b8a503830bb6198ebf70de9e7844bc2c44/packages/cli/source/ui/ErrorDetail.ts#L6)
 
 ---
 
@@ -44,7 +44,7 @@ Defined in:
 > **label**: `string`
 
 Defined in:
-[packages/cli/source/ui/ErrorDetail.ts:5](https://github.com/jakubmazanec/tools/blob/4777836d3bb6bdca3f71a21721d597411191d954/packages/cli/source/ui/ErrorDetail.ts#L5)
+[packages/cli/source/ui/ErrorDetail.ts:5](https://github.com/jakubmazanec/tools/blob/aa41f4b8a503830bb6198ebf70de9e7844bc2c44/packages/cli/source/ui/ErrorDetail.ts#L5)
 
 ---
 
@@ -53,4 +53,4 @@ Defined in:
 > `optional` **stack**: `string`
 
 Defined in:
-[packages/cli/source/ui/ErrorDetail.ts:7](https://github.com/jakubmazanec/tools/blob/4777836d3bb6bdca3f71a21721d597411191d954/packages/cli/source/ui/ErrorDetail.ts#L7)
+[packages/cli/source/ui/ErrorDetail.ts:7](https://github.com/jakubmazanec/tools/blob/aa41f4b8a503830bb6198ebf70de9e7844bc2c44/packages/cli/source/ui/ErrorDetail.ts#L7)

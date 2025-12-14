@@ -7,4 +7,4 @@
 > **CreateProjectStatus** = `string`
 
 Defined in:
-[packages/carson/source/commands/create-project/runCreateProject.ts:15](https://github.com/jakubmazanec/tools/blob/4777836d3bb6bdca3f71a21721d597411191d954/packages/carson/source/commands/create-project/runCreateProject.ts#L15)
+[packages/carson/source/commands/create-project/runCreateProject.ts:15](https://github.com/jakubmazanec/tools/blob/aa41f4b8a503830bb6198ebf70de9e7844bc2c44/packages/carson/source/commands/create-project/runCreateProject.ts#L15)

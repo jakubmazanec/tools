@@ -7,7 +7,7 @@
 > **NonArray**\<`T`\> = `T` _extends_ `any`[] ? `never` : `T`
 
 Defined in:
-[packages/ts-utils/source/types/NonArray.ts:3](https://github.com/jakubmazanec/tools/blob/4777836d3bb6bdca3f71a21721d597411191d954/packages/ts-utils/source/types/NonArray.ts#L3)
+[packages/ts-utils/source/types/NonArray.ts:3](https://github.com/jakubmazanec/tools/blob/aa41f4b8a503830bb6198ebf70de9e7844bc2c44/packages/ts-utils/source/types/NonArray.ts#L3)
 
 ## Type Parameters
 
