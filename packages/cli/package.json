@@ -52,7 +52,7 @@
     "eslint": "^9.33.0",
     "ink": "^6.5.1",
     "ink-testing-library": "^4.0.0",
-    "prettier": "^3.7.1",
+    "prettier": "^3.7.3",
     "prettier-plugin-packagejson": "^2.5.20",
     "react": "^19.2.0",
     "typedoc": "^0.28.15",
