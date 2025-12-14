@@ -8,6 +8,6 @@
 > [`projectConfigSchema`](../variables/projectConfigSchema.md)\>
 
 Defined in:
-[packages/carson/source/workspace/ProjectConfig.ts:12](https://github.com/jakubmazanec/tools/blob/9041b493988a4f48f72a1cda839ea48fba933ec4/packages/carson/source/workspace/ProjectConfig.ts#L12)
+[packages/carson/source/workspace/ProjectConfig.ts:12](https://github.com/jakubmazanec/tools/blob/4777836d3bb6bdca3f71a21721d597411191d954/packages/carson/source/workspace/ProjectConfig.ts#L12)
 
 A project configuration.

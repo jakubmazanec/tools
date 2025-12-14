@@ -7,7 +7,7 @@
 > **ProgramStreams** = `object`
 
 Defined in:
-[packages/cli/source/program/ProgramStreams.ts:4](https://github.com/jakubmazanec/tools/blob/9041b493988a4f48f72a1cda839ea48fba933ec4/packages/cli/source/program/ProgramStreams.ts#L4)
+[packages/cli/source/program/ProgramStreams.ts:4](https://github.com/jakubmazanec/tools/blob/4777836d3bb6bdca3f71a21721d597411191d954/packages/cli/source/program/ProgramStreams.ts#L4)
 
 [Program](../classes/Program.md) streams;
 
@@ -18,7 +18,7 @@ Defined in:
 > **stderr**: `NodeJS.WriteStream`
 
 Defined in:
-[packages/cli/source/program/ProgramStreams.ts:5](https://github.com/jakubmazanec/tools/blob/9041b493988a4f48f72a1cda839ea48fba933ec4/packages/cli/source/program/ProgramStreams.ts#L5)
+[packages/cli/source/program/ProgramStreams.ts:5](https://github.com/jakubmazanec/tools/blob/4777836d3bb6bdca3f71a21721d597411191d954/packages/cli/source/program/ProgramStreams.ts#L5)
 
 ---
 
@@ -27,7 +27,7 @@ Defined in:
 > **stdin**: `NodeJS.ReadStream`
 
 Defined in:
-[packages/cli/source/program/ProgramStreams.ts:6](https://github.com/jakubmazanec/tools/blob/9041b493988a4f48f72a1cda839ea48fba933ec4/packages/cli/source/program/ProgramStreams.ts#L6)
+[packages/cli/source/program/ProgramStreams.ts:6](https://github.com/jakubmazanec/tools/blob/4777836d3bb6bdca3f71a21721d597411191d954/packages/cli/source/program/ProgramStreams.ts#L6)
 
 ---
 
@@ -36,4 +36,4 @@ Defined in:
 > **stdout**: `NodeJS.WriteStream`
 
 Defined in:
-[packages/cli/source/program/ProgramStreams.ts:7](https://github.com/jakubmazanec/tools/blob/9041b493988a4f48f72a1cda839ea48fba933ec4/packages/cli/source/program/ProgramStreams.ts#L7)
+[packages/cli/source/program/ProgramStreams.ts:7](https://github.com/jakubmazanec/tools/blob/4777836d3bb6bdca3f71a21721d597411191d954/packages/cli/source/program/ProgramStreams.ts#L7)

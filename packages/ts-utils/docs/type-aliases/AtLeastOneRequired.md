@@ -8,7 +8,7 @@
 > `{ [K in P]-?: Partial<Pick<T, Exclude<P, K>>> & Required<Pick<T, K>> }`\[`P`\]
 
 Defined in:
-[packages/ts-utils/source/types/AtLeastOneRequired.ts:34](https://github.com/jakubmazanec/tools/blob/9041b493988a4f48f72a1cda839ea48fba933ec4/packages/ts-utils/source/types/AtLeastOneRequired.ts#L34)
+[packages/ts-utils/source/types/AtLeastOneRequired.ts:34](https://github.com/jakubmazanec/tools/blob/4777836d3bb6bdca3f71a21721d597411191d954/packages/ts-utils/source/types/AtLeastOneRequired.ts#L34)
 
 Constructs new type from `T` so that at least one property from the set of properties `P` is
 required:

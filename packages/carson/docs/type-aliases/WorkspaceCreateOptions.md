@@ -7,7 +7,7 @@
 > **WorkspaceCreateOptions** = `object`
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceCreateOptions.ts:4](https://github.com/jakubmazanec/tools/blob/9041b493988a4f48f72a1cda839ea48fba933ec4/packages/carson/source/workspace/WorkspaceCreateOptions.ts#L4)
+[packages/carson/source/workspace/WorkspaceCreateOptions.ts:4](https://github.com/jakubmazanec/tools/blob/4777836d3bb6bdca3f71a21721d597411191d954/packages/carson/source/workspace/WorkspaceCreateOptions.ts#L4)
 
 [Workspace.create](../classes/Workspace.md#create) options parameter.
 
@@ -18,7 +18,7 @@ Defined in:
 > **args**: `Record`\<`string`, `unknown`\>
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceCreateOptions.ts:7](https://github.com/jakubmazanec/tools/blob/9041b493988a4f48f72a1cda839ea48fba933ec4/packages/carson/source/workspace/WorkspaceCreateOptions.ts#L7)
+[packages/carson/source/workspace/WorkspaceCreateOptions.ts:7](https://github.com/jakubmazanec/tools/blob/4777836d3bb6bdca3f71a21721d597411191d954/packages/carson/source/workspace/WorkspaceCreateOptions.ts#L7)
 
 ---
 
@@ -27,7 +27,7 @@ Defined in:
 > **path**: `string`
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceCreateOptions.ts:5](https://github.com/jakubmazanec/tools/blob/9041b493988a4f48f72a1cda839ea48fba933ec4/packages/carson/source/workspace/WorkspaceCreateOptions.ts#L5)
+[packages/carson/source/workspace/WorkspaceCreateOptions.ts:5](https://github.com/jakubmazanec/tools/blob/4777836d3bb6bdca3f71a21721d597411191d954/packages/carson/source/workspace/WorkspaceCreateOptions.ts#L5)
 
 ---
 
@@ -36,4 +36,4 @@ Defined in:
 > **templateId**: `string`
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceCreateOptions.ts:6](https://github.com/jakubmazanec/tools/blob/9041b493988a4f48f72a1cda839ea48fba933ec4/packages/carson/source/workspace/WorkspaceCreateOptions.ts#L6)
+[packages/carson/source/workspace/WorkspaceCreateOptions.ts:6](https://github.com/jakubmazanec/tools/blob/4777836d3bb6bdca3f71a21721d597411191d954/packages/carson/source/workspace/WorkspaceCreateOptions.ts#L6)

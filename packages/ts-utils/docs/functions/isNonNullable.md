@@ -7,7 +7,7 @@
 > **isNonNullable**\<`T`\>(`value`): `value is NonNullable<T>`
 
 Defined in:
-[packages/ts-utils/source/utils/isNonNullable.ts:18](https://github.com/jakubmazanec/tools/blob/9041b493988a4f48f72a1cda839ea48fba933ec4/packages/ts-utils/source/utils/isNonNullable.ts#L18)
+[packages/ts-utils/source/utils/isNonNullable.ts:18](https://github.com/jakubmazanec/tools/blob/4777836d3bb6bdca3f71a21721d597411191d954/packages/ts-utils/source/utils/isNonNullable.ts#L18)
 
 A type guard that checks whether variable is not `null` or `undefined`:
 

@@ -7,6 +7,6 @@
 > **LongOptionName** = `string`
 
 Defined in:
-[args/source/LongOptionName.ts:2](https://github.com/jakubmazanec/tools/blob/9041b493988a4f48f72a1cda839ea48fba933ec4/packages/args/source/LongOptionName.ts#L2)
+[args/source/LongOptionName.ts:2](https://github.com/jakubmazanec/tools/blob/4777836d3bb6bdca3f71a21721d597411191d954/packages/args/source/LongOptionName.ts#L2)
 
 Long option name.
