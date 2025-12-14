@@ -48,7 +48,7 @@
     "del-cli": "^7.0.0",
     "esbuild": "^0.27.0",
     "eslint": "^9.33.0",
-    "execa": "^9.6.0",
+    "execa": "^9.6.1",
     "fast-glob": "^3.3.3",
     "fs-extra": "^11.3.2",
     "prettier": "^3.7.1",
