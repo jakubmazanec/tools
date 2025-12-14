@@ -3,18 +3,15 @@ to: 'tsconfig.typecheck.json'
 strategy: overwrite
 ---
 <%
-let tsconfig = lodash.merge(
-  {
-    extends: './tsconfig.json',
-    compilerOptions: {
-      composite: false,
-    },
-    include: project.config.deployment?.dbInstance
-      ? ['./.react-router/types/**/*', `./${SOURCE_DIRECTORY}/**/*`, './dbschema/**/*', './tests/**/*', './*']
-      : ['./.react-router/types/**/*', `./${SOURCE_DIRECTORY}/**/*`, './tests/**/*', './*'],
+let tsconfig = {
+  extends: './tsconfig.json',
+  compilerOptions: {
+    composite: false,
   },
-  project.config.overrides?.tsconfig ?? {},
-);
+  include: project.config.deployment?.dbInstance
+    ? ['./.react-router/types/**/*', `./${SOURCE_DIRECTORY}/**/*`, './dbschema/**/*', './tests/**/*', './*']
+    : ['./.react-router/types/**/*', `./${SOURCE_DIRECTORY}/**/*`, './tests/**/*', './*'],
+};
 -%>
 //
 // DO NOT EDIT!
