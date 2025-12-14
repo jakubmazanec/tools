@@ -41,7 +41,7 @@
     "lodash": "^4.17.21",
     "prettier": "^3.7.1",
     "prettier-plugin-packagejson": "^2.5.19",
-    "typedoc": "^0.28.14",
+    "typedoc": "^0.28.15",
     "typedoc-plugin-markdown": "^4.9.0",
     "typescript": "^5.9.3",
     "vitest": "^4.0.14",

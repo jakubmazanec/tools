@@ -78,7 +78,7 @@
     "storybook": "^10.1.1",
     "tailwindcss": "^4.1.17",
     "tsx": "^4.20.6",
-    "typedoc": "^0.28.14",
+    "typedoc": "^0.28.15",
     "typedoc-plugin-markdown": "^4.9.0",
     "typescript": "^5.9.3",
     "vitest": "^4.0.14"
