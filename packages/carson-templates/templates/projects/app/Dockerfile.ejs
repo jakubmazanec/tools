@@ -50,10 +50,10 @@ ENV VITE_APP_URL=$VITE_APP_URL
 <%
 }
 
-if (project.config.deployment?.dbInstance) {
+if (project.config.deployment?.gel) {
 -%>
-ARG GEL_INSTANCE
-ENV GEL_INSTANCE=$GEL_INSTANCE
+ARG GEL_DSN
+ENV GEL_DSN=$GEL_DSN
 ARG GEL_BRANCH
 ENV GEL_BRANCH=$GEL_BRANCH
 <%
@@ -75,9 +75,9 @@ COPY --link . .
 
 # Build
 <%
-if (project.config.deployment?.dbInstance) {
+if (project.config.deployment?.gel) {
 -%>
-RUN --mount=type=secret,id=GEL_SECRET_KEY GEL_SECRET_KEY="$(cat /run/secrets/GEL_SECRET_KEY)" npm run build
+RUN --mount=type=secret,id=GEL_PASSWORD GEL_PASSWORD="$(cat /run/secrets/GEL_PASSWORD)" npm run build
 <%
 } else {
 -%>

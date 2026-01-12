@@ -6,7 +6,7 @@ strategy: overwrite
 let appsWithDb = [];
 
 for (let project of workspace.projects) {
-  if (project.config.deployment?.dbInstance) {
+  if (project.config.deployment?.gel) {
     appsWithDb.push(project.name);
   }
 }
@@ -61,7 +61,7 @@ jobs:
           node-version: <%- semver.major(semver.minVersion(DEPENDENCY_VERSIONS.node)) %>
 
 <%
-if (workspace.projects.some((project) => project.config.deployment?.dbInstance)) {
+if (workspace.projects.some((project) => project.config.deployment?.gel)) {
 -%>
 
       - uses: geldata/setup-gel@v1
@@ -93,16 +93,16 @@ if (workspace.projects.some((project) => project.config.deployment?.dbInstance))
 
 <%
 for (let project of workspace.projects) {
-  if (project.config.deployment?.dbInstance) {
+  if (project.config.deployment?.gel) {
 -%>
 
       - name: Test "<%- project.name %>"
         run: |
           npm run test -- --filter=<%- project.name %>
         env:
-          GEL_INSTANCE: <%- project.config.deployment.dbInstance %>
+          GEL_DSN: <%- project.config.deployment.gel %>
           GEL_BRANCH: <%- workspace.packageJson.name %>-${{ github.head_ref }}
-          GEL_SECRET_KEY: ${{ secrets.<%- lodash.snakeCase(project.config.deployment.dbInstance).toUpperCase() %>_GEL_TOKEN }}
+          GEL_PASSWORD: ${{ secrets.<%- lodash.snakeCase(project.name).toUpperCase() %>_GEL_PASSWORD }}
 <%
   }
 }

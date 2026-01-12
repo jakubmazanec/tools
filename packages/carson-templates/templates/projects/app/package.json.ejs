@@ -70,8 +70,8 @@ if (project.config.deployment?.appName) {
   packageJson.scripts.deploy = `flyctl deploy ../.. --config ${project.relativePath}/fly.toml`;
 }
 
-if (project.config.deployment?.dbInstance) {
-  packageJson.scripts.codegen += ' && del-cli dbschema/edgeql-js dbschema/interfaces.* && generate edgeql-js --force-overwrite --target mts && generate interfaces --force-overwrite';
+if (project.config.deployment?.gel) {
+  packageJson.scripts.codegen += ' && del-cli dbschema/edgeql-js dbschema/interfaces.* && cross-env GEL_CLIENT_TLS_SECURITY=insecure generate edgeql-js --force-overwrite --target mts && cross-env GEL_CLIENT_TLS_SECURITY=insecure generate interfaces --force-overwrite';
 }
 -%>
 <%- JSON.stringify(packageJson) %>
