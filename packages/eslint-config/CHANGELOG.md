@@ -1,5 +1,14 @@
 # @jakubmazanec/eslint-config
 
+## 4.1.12
+
+### Patch Changes
+
+- [#513](https://github.com/jakubmazanec/tools/pull/513)
+  [`bd92628`](https://github.com/jakubmazanec/tools/commit/bd926289f8896bd739814e1e3def4d003168427f)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Configs `nodejs` and `prettier` were fixed so
+  they are usable independently from `main` config.
+
 ## 4.1.11
 
 ### Patch Changes
