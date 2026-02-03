@@ -8,7 +8,7 @@
 > & `ComponentPropsWithoutRef`\<`T`\> & `ComponentRef`\<`T`\> & `PropsWithChildren` & `object`
 
 Defined in:
-[packages/ui/source/components/Form.tsx:21](https://github.com/jakubmazanec/tools/blob/aa41f4b8a503830bb6198ebf70de9e7844bc2c44/packages/ui/source/components/Form.tsx#L21)
+[packages/ui/source/components/Form.tsx:21](https://github.com/jakubmazanec/tools/blob/bd926289f8896bd739814e1e3def4d003168427f/packages/ui/source/components/Form.tsx#L21)
 
 ## Type Declaration
 

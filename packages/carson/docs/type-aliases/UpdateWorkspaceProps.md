@@ -7,7 +7,7 @@
 > **UpdateWorkspaceProps** = `object`
 
 Defined in:
-[packages/carson/source/commands/update-workspace/UpdateWorkspace.tsx:10](https://github.com/jakubmazanec/tools/blob/aa41f4b8a503830bb6198ebf70de9e7844bc2c44/packages/carson/source/commands/update-workspace/UpdateWorkspace.tsx#L10)
+[packages/carson/source/commands/update-workspace/UpdateWorkspace.tsx:10](https://github.com/jakubmazanec/tools/blob/bd926289f8896bd739814e1e3def4d003168427f/packages/carson/source/commands/update-workspace/UpdateWorkspace.tsx#L10)
 
 ## Properties
 
@@ -17,7 +17,7 @@ Defined in:
 > [`updateWorkspaceCommand`](../variables/updateWorkspaceCommand.md)\>
 
 Defined in:
-[packages/carson/source/commands/update-workspace/UpdateWorkspace.tsx:11](https://github.com/jakubmazanec/tools/blob/aa41f4b8a503830bb6198ebf70de9e7844bc2c44/packages/carson/source/commands/update-workspace/UpdateWorkspace.tsx#L11)
+[packages/carson/source/commands/update-workspace/UpdateWorkspace.tsx:11](https://github.com/jakubmazanec/tools/blob/bd926289f8896bd739814e1e3def4d003168427f/packages/carson/source/commands/update-workspace/UpdateWorkspace.tsx#L11)
 
 ---
 
@@ -27,4 +27,4 @@ Defined in:
 > [`Workspace`](../classes/Workspace.md)\<`false`\>
 
 Defined in:
-[packages/carson/source/commands/update-workspace/UpdateWorkspace.tsx:12](https://github.com/jakubmazanec/tools/blob/aa41f4b8a503830bb6198ebf70de9e7844bc2c44/packages/carson/source/commands/update-workspace/UpdateWorkspace.tsx#L12)
+[packages/carson/source/commands/update-workspace/UpdateWorkspace.tsx:12](https://github.com/jakubmazanec/tools/blob/bd926289f8896bd739814e1e3def4d003168427f/packages/carson/source/commands/update-workspace/UpdateWorkspace.tsx#L12)
