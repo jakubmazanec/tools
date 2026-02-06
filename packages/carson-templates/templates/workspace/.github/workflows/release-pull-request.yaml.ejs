@@ -11,7 +11,7 @@ for (let project of workspace.projects) {
     apps.push(project.name);
   }
 
-  if (project.config.deployment?.dbInstance) {
+  if (project.config.deployment?.gel) {
     appsWithDb.push(project.name);
   }
 }
@@ -80,7 +80,7 @@ if (workspace.projects.some((project) => project.config.deployment?.appName)) {
 <%
 }
 
-if (workspace.projects.some((project) => project.config.deployment?.dbInstance)) {
+if (workspace.projects.some((project) => project.config.deployment?.gel)) {
 -%>
 
       - uses: geldata/setup-gel@v1
@@ -112,16 +112,16 @@ if (workspace.projects.some((project) => project.config.deployment?.dbInstance))
 
 <%
 for (let project of workspace.projects) {
-  if (project.config.deployment?.dbInstance) {
+  if (project.config.deployment?.gel) {
 -%>
 
       - name: Test "<%- project.name %>"
         run: |
           npm run test -- --filter=<%- project.name %>
         env:
-          GEL_INSTANCE: <%- project.config.deployment.dbInstance %>
+          GEL_DSN: <%- project.config.deployment.gel %>
           GEL_BRANCH: <%- workspace.packageJson.name %>-${{ github.head_ref }}
-          GEL_SECRET_KEY: ${{ secrets.<%- lodash.snakeCase(project.config.deployment.dbInstance).toUpperCase() %>_GEL_TOKEN }}
+          GEL_PASSWORD: ${{ secrets.<%- lodash.snakeCase(project.name).toUpperCase() %>_GEL_PASSWORD }}
 <%
   }
 }
@@ -166,17 +166,17 @@ for (let project of workspace.projects) {
           NPM_CONFIG_PROVENANCE: 'true' # must be string, not boolean
 <%
 for (let project of workspace.projects) {
-  if (project.config.deployment?.appName && project.config.deployment?.dbInstance) {
+  if (project.config.deployment?.appName && project.config.deployment?.gel) {
 -%>
 
       - name: Deploy <%- project.name %>
         run: |
-          npm run deploy --workspace <%- project.name %> -- --app <%- project.config.deployment?.appName %>-unstable --build-arg "VITE_APP_URL=$VITE_APP_URL" --build-arg "GEL_INSTANCE=$GEL_INSTANCE" --build-arg "GEL_BRANCH=$GEL_BRANCH" --build-secret "GEL_SECRET_KEY=$GEL_SECRET_KEY"
+          npm run deploy --workspace <%- project.name %> -- --app <%- project.config.deployment?.appName %>-unstable --build-arg "VITE_APP_URL=$VITE_APP_URL" --build-arg "GEL_DSN=$GEL_DSN" --build-arg "GEL_BRANCH=$GEL_BRANCH" --build-secret "GEL_PASSWORD=$GEL_PASSWORD"
         env:
           VITE_APP_URL: <%- getAppUrl(project, 'unstable') %>
-          GEL_INSTANCE: <%- project.config.deployment.dbInstance %>
+          GEL_DSN: <%- project.config.deployment.gel %>
           GEL_BRANCH: <%- workspace.packageJson.name %>-${{ github.head_ref }}
-          GEL_SECRET_KEY: ${{ secrets.<%- lodash.snakeCase(project.config.deployment.dbInstance).toUpperCase() %>_GEL_TOKEN }}
+          GEL_PASSWORD: ${{ secrets.<%- lodash.snakeCase(project.name).toUpperCase() %>_GEL_PASSWORD }}
           FLY_ACCESS_TOKEN: ${{ secrets.FLY_TOKEN }}
           FLY_API_TOKEN: ${{ secrets.FLY_TOKEN }}
 <%
