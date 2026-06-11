@@ -73,6 +73,9 @@ RUN npm ci --include=dev --ignore-scripts
 # Copy the workspace
 COPY --link . .
 
+# Apply dependency patches
+RUN npx patch-package
+
 # Build
 <%
 if (project.config.deployment?.dbInstance) {
