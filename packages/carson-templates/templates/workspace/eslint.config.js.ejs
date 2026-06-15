@@ -19,5 +19,5 @@ export default [
   {
     ignores: <%- JSON.stringify(LINT_IGNORES, null, 2) %>,
   },
-  <%- workspace.config.overrides?.eslintConfig ? JSON.stringify(workspace.config.overrides.eslintConfig, null, 2) : '' %>
+  <%- workspace.config.overrides?.eslintConfig ? (Array.isArray(workspace.config.overrides.eslintConfig) ? `...${JSON.stringify(workspace.config.overrides.eslintConfig, null, 2)},` : `${JSON.stringify(workspace.config.overrides.eslintConfig, null, 2)},`) : '' %>
 ];
