@@ -9,7 +9,7 @@
 > `Lowercase`\<`NonNullable`\<`O`\[`"commands"`\]\>\[`number`\]\> \| `undefined`
 
 Defined in:
-[args/source/ArgumentsCommand.ts:4](https://github.com/jakubmazanec/tools/blob/bd926289f8896bd739814e1e3def4d003168427f/packages/args/source/ArgumentsCommand.ts#L4)
+[args/source/ArgumentsCommand.ts:4](https://github.com/jakubmazanec/tools/blob/fa579a85ee619f77fd89ff1454d0cea4bd783e08/packages/args/source/ArgumentsCommand.ts#L4)
 
 Parsed command.
 

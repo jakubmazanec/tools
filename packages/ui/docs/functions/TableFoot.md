@@ -8,7 +8,7 @@
 > `JSXElementConstructor`\<`any`\>\>
 
 Defined in:
-[packages/ui/source/components/TableFoot.ts:28](https://github.com/jakubmazanec/tools/blob/bd926289f8896bd739814e1e3def4d003168427f/packages/ui/source/components/TableFoot.ts#L28)
+[packages/ui/source/components/TableFoot.ts:28](https://github.com/jakubmazanec/tools/blob/fa579a85ee619f77fd89ff1454d0cea4bd783e08/packages/ui/source/components/TableFoot.ts#L28)
 
 ## Type Parameters
 

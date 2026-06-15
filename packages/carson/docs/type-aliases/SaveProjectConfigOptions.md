@@ -7,7 +7,7 @@
 > **SaveProjectConfigOptions** = `object`
 
 Defined in:
-[packages/carson/source/workspace/saveProjectConfig.ts:11](https://github.com/jakubmazanec/tools/blob/bd926289f8896bd739814e1e3def4d003168427f/packages/carson/source/workspace/saveProjectConfig.ts#L11)
+[packages/carson/source/workspace/saveProjectConfig.ts:11](https://github.com/jakubmazanec/tools/blob/fa579a85ee619f77fd89ff1454d0cea4bd783e08/packages/carson/source/workspace/saveProjectConfig.ts#L11)
 
 [saveProjectConfig](../functions/saveProjectConfig.md) options parameter.
 
@@ -18,7 +18,7 @@ Defined in:
 > **projectConfig**: [`ProjectConfig`](ProjectConfig.md)
 
 Defined in:
-[packages/carson/source/workspace/saveProjectConfig.ts:13](https://github.com/jakubmazanec/tools/blob/bd926289f8896bd739814e1e3def4d003168427f/packages/carson/source/workspace/saveProjectConfig.ts#L13)
+[packages/carson/source/workspace/saveProjectConfig.ts:13](https://github.com/jakubmazanec/tools/blob/fa579a85ee619f77fd89ff1454d0cea4bd783e08/packages/carson/source/workspace/saveProjectConfig.ts#L13)
 
 ---
 
@@ -27,4 +27,4 @@ Defined in:
 > **projectPath**: `string`
 
 Defined in:
-[packages/carson/source/workspace/saveProjectConfig.ts:12](https://github.com/jakubmazanec/tools/blob/bd926289f8896bd739814e1e3def4d003168427f/packages/carson/source/workspace/saveProjectConfig.ts#L12)
+[packages/carson/source/workspace/saveProjectConfig.ts:12](https://github.com/jakubmazanec/tools/blob/fa579a85ee619f77fd89ff1454d0cea4bd783e08/packages/carson/source/workspace/saveProjectConfig.ts#L12)

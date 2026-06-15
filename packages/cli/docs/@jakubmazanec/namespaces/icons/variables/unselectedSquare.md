@@ -7,4 +7,4 @@
 > `const` **unselectedSquare**: `string`
 
 Defined in:
-[packages/cli/source/ui/icons.ts:10](https://github.com/jakubmazanec/tools/blob/bd926289f8896bd739814e1e3def4d003168427f/packages/cli/source/ui/icons.ts#L10)
+[packages/cli/source/ui/icons.ts:10](https://github.com/jakubmazanec/tools/blob/fa579a85ee619f77fd89ff1454d0cea4bd783e08/packages/cli/source/ui/icons.ts#L10)

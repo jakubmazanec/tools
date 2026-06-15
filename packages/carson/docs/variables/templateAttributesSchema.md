@@ -10,4 +10,4 @@
 > `ZodString`\], `null`\>\]\>; \}, `$strict`\>
 
 Defined in:
-[packages/carson/source/template/TemplateAttributes.ts:13](https://github.com/jakubmazanec/tools/blob/bd926289f8896bd739814e1e3def4d003168427f/packages/carson/source/template/TemplateAttributes.ts#L13)
+[packages/carson/source/template/TemplateAttributes.ts:13](https://github.com/jakubmazanec/tools/blob/fa579a85ee619f77fd89ff1454d0cea4bd783e08/packages/carson/source/template/TemplateAttributes.ts#L13)

@@ -7,7 +7,7 @@
 > **Writable**\<`T`\> = `{ -readonly [K in keyof T]: T[K] }`
 
 Defined in:
-[packages/ts-utils/source/types/Writable.ts:4](https://github.com/jakubmazanec/tools/blob/bd926289f8896bd739814e1e3def4d003168427f/packages/ts-utils/source/types/Writable.ts#L4)
+[packages/ts-utils/source/types/Writable.ts:4](https://github.com/jakubmazanec/tools/blob/fa579a85ee619f77fd89ff1454d0cea4bd783e08/packages/ts-utils/source/types/Writable.ts#L4)
 
 Create a new type that removes `readonly` from object types's keys. Inverse of Readonly\<T\>.
 
