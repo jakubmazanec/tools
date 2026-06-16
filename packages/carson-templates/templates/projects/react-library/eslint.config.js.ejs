@@ -19,5 +19,5 @@ export default [
   {
     ignores: <%- JSON.stringify([...LINT_IGNORES, STORYBOOK_BUILD_DIRECTORY, '!.storybook/'].sort(), null, 2) %>,
   },
-  <%- project.config.overrides?.eslintConfig ? (Array.isArray(project.config.overrides.eslintConfig) ? `...${JSON.stringify(project.config.overrides.eslintConfig, null, 2)},` : `${JSON.stringify(project.config.overrides.eslintConfig, null, 2)},`) : '' %>
+  <%- project.config.overrides?.eslintConfig ? [project.config.overrides.eslintConfig].flat().map((eslintConfig) => JSON.stringify(eslintConfig, null, 2)).join(',\n  ') : '' %>
 ];
