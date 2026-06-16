@@ -81,4 +81,4 @@
 > `object`\>
 
 Defined in:
-[packages/ui/source/theme/Theme.ts:53](https://github.com/jakubmazanec/tools/blob/fa579a85ee619f77fd89ff1454d0cea4bd783e08/packages/ui/source/theme/Theme.ts#L53)
+[packages/ui/source/theme/Theme.ts:53](https://github.com/jakubmazanec/tools/blob/b0bb0183149e2989c9979a7ef92189054e923365/packages/ui/source/theme/Theme.ts#L53)
