@@ -1,5 +1,22 @@
 # @jakubmazanec/carson-templates
 
+## 8.1.0
+
+### Minor Changes
+
+- [#516](https://github.com/jakubmazanec/tools/pull/516)
+  [`b0bb018`](https://github.com/jakubmazanec/tools/commit/b0bb0183149e2989c9979a7ef92189054e923365)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – ESLint config override
+  (`overrides.eslintConfig` in a project or a workspace config) now accepts also an array for
+  allowing specifying multiple ESLint config overrides, in all templates.
+
+### Patch Changes
+
+- [#515](https://github.com/jakubmazanec/tools/pull/515)
+  [`fa579a8`](https://github.com/jakubmazanec/tools/commit/fa579a85ee619f77fd89ff1454d0cea4bd783e08)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixed Dockerfile in `project/app` template.
+  Dockerfile now applies `patch-package` patches.
+
 ## 8.0.1
 
 ### Patch Changes
