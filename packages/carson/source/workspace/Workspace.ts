@@ -96,7 +96,7 @@ export class Workspace<M extends boolean = true> {
         this.projectGlobs = [] as string[] as WorkspaceProjectGlobs<M>;
       }
 
-      this.projects = [] as Array<Project<M>> as WorkspaceProjects<M>;
+      this.projects = [] as Array<Project<M>>;
 
       let {projects} = options as WorkspaceOptions<true>;
 
@@ -117,7 +117,7 @@ export class Workspace<M extends boolean = true> {
       this.isMultiProject = false as M;
       this.projectGlobs = null as M extends true ? string[] : null;
       this.packageJson = null as M extends true ? PackageJson : null;
-      this.projects = [] as Array<Project<M>> as WorkspaceProjects<M>;
+      this.projects = [] as Array<Project<M>>;
 
       let {projects} = options as WorkspaceOptions<false>;
 
@@ -146,7 +146,7 @@ export class Workspace<M extends boolean = true> {
 
     // add missing project globs
     if (this.isMultiProject && !(this.projectGlobs as string[]).length) {
-      let packageJsonWorkspaces = getPackageJsonWorkspaces(this.packageJson as PackageJson);
+      let packageJsonWorkspaces = getPackageJsonWorkspaces(this.packageJson);
 
       if (packageJsonWorkspaces) {
         this.projectGlobs = [...packageJsonWorkspaces] as M extends true ? string[] : null;
