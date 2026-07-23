@@ -1,5 +1,5 @@
 import typescriptEslintParser from '@typescript-eslint/parser';
-import {type default as eslint, type ESLint} from 'eslint';
+import {type default as eslint} from 'eslint';
 import nEslintPlugin from 'eslint-plugin-n';
 import globals from 'globals';
 
@@ -45,9 +45,8 @@ export const nodejs: eslint.Linter.Config[] = [
         ...globals.node,
       },
     },
-    // TODO: fix the type essertion
     plugins: {
-      node: nEslintPlugin as ESLint.Plugin,
+      node: nEslintPlugin,
     },
     settings: {
       node: {
