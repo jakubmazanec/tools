@@ -38,22 +38,14 @@ export function createComponentTheme<
     let hasElements = Boolean(themeDefinition?.elements);
 
     if (!hasElements) {
-      return createUseComponentThemeReturn(
-        componentTheme as
-          | ComponentTheme<{variants: ComponentThemeDefinitionVariants}>
-          | ComponentTheme<undefined>,
-        cx,
-        themeProps,
-      );
+      return createUseComponentThemeReturn(componentTheme, cx, themeProps);
     }
 
     let getClassNames: Record<string, (...args: ClassName[]) => string> = {};
 
     for (let element of themeDefinition?.elements ?? []) {
       getClassNames[element] = createUseComponentThemeReturn(
-        componentTheme as
-          | ComponentTheme<{variants: ComponentThemeDefinitionVariants}>
-          | ComponentTheme<undefined>,
+        componentTheme,
         cx,
         themeProps,
         element,

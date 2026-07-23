@@ -52,7 +52,7 @@ export function createUseComponentThemeReturn(
         let selector = themeProps[cvKey as keyof typeof themeProps];
 
         if (Array.isArray(cvSelector)) {
-          if (!cvSelector.includes(selector as string)) {
+          if (!cvSelector.includes(selector)) {
             matchesAllSelectors = false;
 
             break;

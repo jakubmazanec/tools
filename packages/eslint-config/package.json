@@ -30,8 +30,8 @@
   "dependencies": {
     "@eslint-community/eslint-plugin-eslint-comments": "^4.7.2",
     "@stylistic/eslint-plugin": "^5.10.0",
-    "@typescript-eslint/eslint-plugin": "^8.39.1",
-    "@typescript-eslint/parser": "^8.39.1",
+    "@typescript-eslint/eslint-plugin": "^8.63.0",
+    "@typescript-eslint/parser": "^8.63.0",
     "@vitest/eslint-plugin": "^1.6.22",
     "confusing-browser-globals": "^1.0.11",
     "eslint-config-prettier": "^10.1.8",

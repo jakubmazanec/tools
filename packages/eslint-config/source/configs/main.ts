@@ -67,17 +67,17 @@ export const main: eslint.Linter.Config[] = [
     },
     // TODO: fix the type essertions
     plugins: {
-      '@stylistic/js': stylisticEslintPlugin as ESLint.Plugin,
+      '@stylistic/js': stylisticEslintPlugin,
       'eslint-comments': commentsEslintPlugin as ESLint.Plugin,
       import: importEslintPlugin as ESLint.Plugin,
-      'jsx-a11y': a11yEslintPlugin as ESLint.Plugin, // type assertions needed because of `exactOptionalPropertyTypes: true`
+      'jsx-a11y': a11yEslintPlugin,
       promise: promiseEslintPlugin as ESLint.Plugin,
-      react: reactEslintPlugin as unknown as ESLint.Plugin,
+      react: reactEslintPlugin,
       'react-hooks': reactHooksEslintPlugin as ESLint.Plugin,
-      unicorn: unicornEslintPlugin as ESLint.Plugin, // type assertions needed because of `exactOptionalPropertyTypes: true`
+      unicorn: unicornEslintPlugin,
       security: securityEslintPlugin as ESLint.Plugin,
       'react-compiler': reactCompilerEslintPlugin as ESLint.Plugin,
-      perfectionist: perfectionistEslintPlugin as unknown as ESLint.Plugin,
+      perfectionist: perfectionistEslintPlugin,
     },
 
     settings: {
@@ -131,7 +131,7 @@ export const main: eslint.Linter.Config[] = [
     },
     // TODO: fix the type essertions
     plugins: {
-      vitest: vitestEslintPlugin as unknown as ESLint.Plugin,
+      vitest: vitestEslintPlugin,
       'testing-library': testingLibraryEslintPlugin as ESLint.Plugin,
     },
     settings: {
