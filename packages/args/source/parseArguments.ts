@@ -186,8 +186,7 @@ export function parseArguments<const O extends ParserConfig>(
           optionScope = null;
         }
       } else if (
-        optionScope &&
-        optionScope.config.type === 'boolean' &&
+        optionScope?.config.type === 'boolean' &&
         !optionScope.config.multiple &&
         (isFalseString(arg) || isTrueString(arg))
       ) {
