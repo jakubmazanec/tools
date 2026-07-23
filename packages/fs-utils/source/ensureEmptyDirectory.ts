@@ -37,7 +37,7 @@ export async function ensureEmptyDirectory(
       throw new Error(`Directory "${targetPath}" can contain only ".git" directory.`);
     }
 
-    if (!(await fs.stat(path.join(targetPath, files[0] as string))).isDirectory()) {
+    if (!(await fs.stat(path.join(targetPath, files[0]))).isDirectory()) {
       throw new Error(`Directory "${targetPath}" can contain only ".git" directory.`);
     }
   }
