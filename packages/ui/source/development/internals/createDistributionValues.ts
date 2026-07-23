@@ -4,7 +4,7 @@ const MIN = 0;
 const MAX = 100;
 
 export function createDistributionValues(lightness: number, stop: number = DEFAULT_STOP) {
-  let stops: number[] = [...DEFAULT_STOPS].sort() as unknown as number[];
+  let stops: number[] = [...DEFAULT_STOPS].sort();
   let newValues = [
     {stop: 0, value: MAX},
     {stop, value: lightness},
