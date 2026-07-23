@@ -2,7 +2,7 @@ import {describe, expect, test} from 'vitest';
 
 import {getProgramDetail} from '../../source/program/getProgramDetail.js';
 
-describe('getProgramDetail', () => {
+describe(getProgramDetail, () => {
   test('works', () => {
     let programDetail = getProgramDetail({
       name: 'App',

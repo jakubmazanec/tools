@@ -23,7 +23,6 @@ import {type ParameterConfig} from './ParameterConfig.js';
 import {type ParserConfig} from './ParserConfig.js';
 import {ParsingError} from './ParsingError.js';
 
-/* eslint-disable no-param-reassign -- we need to add properties to the `parsedOption` object */
 function commitOptionScope(optionScope: OptionScope, parsedOptions: Record<string, unknown>) {
   let optionValue = optionScope.getValue();
 
@@ -33,7 +32,6 @@ function commitOptionScope(optionScope: OptionScope, parsedOptions: Record<strin
     optionScope.config.validate(parsedOptions[optionScope.name] as never); // type assertion needed to make TypeScript happy
   }
 }
-/* eslint-enable no-param-reassign */
 
 /**
  * Parses a list of command line arguments into an arguments object. Based on provided parser config, raw arguments can be parsed as commands, options and parameters.

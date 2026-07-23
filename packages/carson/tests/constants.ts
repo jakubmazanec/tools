@@ -1,7 +1,6 @@
 import path from 'node:path';
-import url from 'node:url';
 
-let directory = path.dirname(url.fileURLToPath(import.meta.url));
+let directory = import.meta.dirname;
 
 export const TESTS_PATH = path.resolve(directory);
 export const TEST_WORKSPACES_PATH = path.resolve(directory, './test-workspaces');

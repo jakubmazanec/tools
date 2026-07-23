@@ -1,4 +1,5 @@
 import commentsEslintPlugin from '@eslint-community/eslint-plugin-eslint-comments';
+import {disableAutofix} from '@morev/eslint-disable-autofix';
 import stylisticEslintPlugin from '@stylistic/eslint-plugin';
 import typescriptEslintPlugin from '@typescript-eslint/eslint-plugin';
 import typescriptEslintParser from '@typescript-eslint/parser';
@@ -9,7 +10,6 @@ import a11yEslintPlugin from 'eslint-plugin-jsx-a11y';
 import perfectionistEslintPlugin from 'eslint-plugin-perfectionist';
 import promiseEslintPlugin from 'eslint-plugin-promise';
 import reactEslintPlugin from 'eslint-plugin-react';
-import reactCompilerEslintPlugin from 'eslint-plugin-react-compiler';
 import reactHooksEslintPlugin from 'eslint-plugin-react-hooks';
 import securityEslintPlugin from 'eslint-plugin-security';
 import testingLibraryEslintPlugin from 'eslint-plugin-testing-library';
@@ -32,7 +32,6 @@ import {
   importRules,
   perfectionistRules,
   promiseRules,
-  reactCompilerRules,
   reactHooksRules,
   reactRules,
   securityRules,
@@ -43,7 +42,7 @@ import {
   vitestRules,
 } from '../rules.js';
 
-export const main: eslint.Linter.Config[] = [
+export const main: eslint.Linter.Config[] = disableAutofix([
   {
     linterOptions: {
       reportUnusedDisableDirectives: 'error',
@@ -76,7 +75,6 @@ export const main: eslint.Linter.Config[] = [
       'react-hooks': reactHooksEslintPlugin as ESLint.Plugin,
       unicorn: unicornEslintPlugin,
       security: securityEslintPlugin as ESLint.Plugin,
-      'react-compiler': reactCompilerEslintPlugin as ESLint.Plugin,
       perfectionist: perfectionistEslintPlugin,
     },
 
@@ -110,7 +108,6 @@ export const main: eslint.Linter.Config[] = [
       ...importRules,
       ...perfectionistRules,
       ...promiseRules,
-      ...reactCompilerRules,
       ...reactHooksRules,
       ...reactRules,
       ...securityRules,
@@ -209,4 +206,4 @@ export const main: eslint.Linter.Config[] = [
       '@typescript-eslint/no-floating-promises': 'off', // requires Promise-like values to be handled appropriately
     },
   },
-];
+] satisfies eslint.Linter.Config[]);

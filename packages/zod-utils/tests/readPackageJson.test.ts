@@ -3,7 +3,7 @@ import {ZodError} from 'zod';
 
 import {readPackageJson} from '../source/main.js';
 
-describe('readPackageJson', () => {
+describe(readPackageJson, () => {
   describe('when trying to read non-existent file', () => {
     test('should throw if `throwOnZodError` is `true`', async () => {
       await expect(readPackageJson('non-existent file', {throwOnZodError: true})).rejects.toThrow(

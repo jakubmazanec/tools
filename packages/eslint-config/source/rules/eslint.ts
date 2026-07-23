@@ -124,21 +124,7 @@ export const eslintRules: eslint.Linter.Config['rules'] = {
   'no-object-constructor': 'error', // disallow calls to the Object constructor without an argument
   'no-octal': 'error', // disallow octal literals
   'no-octal-escape': 'error', // disallow octal escape sequences in string literals
-  'no-param-reassign': [
-    'error',
-    {
-      props: true,
-      ignorePropertyModificationsFor: [
-        'accumulator',
-        'error',
-        'context',
-        'request',
-        'response',
-        '$scope',
-        'staticContext',
-      ],
-    },
-  ], // disallow reassigning function parameters
+  'no-param-reassign': ['error'], // disallow reassigning function parameters
   'no-plusplus': ['error', {allowForLoopAfterthoughts: true}], // disallow the unary operators `++` and `--`
   'no-promise-executor-return': 'error', // disallow returning values from Promise executor functions
   'no-proto': 'error', // disallow the use of the __proto__ property
@@ -237,6 +223,7 @@ export const eslintRules: eslint.Linter.Config['rules'] = {
   'no-underscore-dangle': 'error', // disallow dangling underscores in identifiers
   'no-unexpected-multiline': 'warn', // disallow confusing multiline expressions
   'no-unmodified-loop-condition': 'warn', // disallow unmodified loop conditions
+  'no-unassigned-vars': 'error', // disallow `let` or `var` variables that are read but never assigned
   'no-unneeded-ternary': ['error', {defaultAssignment: false}], // disallow ternary operators when simpler alternatives exist
   'no-unreachable': 'error', // disallow unreachable code after return, throw, continue, and break statements
   'no-unreachable-loop': 'warn', // disallow loops with a body that allows only one iteration
@@ -286,6 +273,7 @@ export const eslintRules: eslint.Linter.Config['rules'] = {
   'prefer-promise-reject-errors': 'error', // require using Error objects as Promise rejection reasons
   'prefer-regex-literals': 'error', // disallow use of the RegExp constructor in favor of regular expression literals
   'prefer-rest-params': 'error', // require rest parameters instead of arguments
+  'preserve-caught-error': ['error', {requireCatchParameter: true}], // disallow losing originally caught error when re-throwing custom errors
   'prefer-spread': 'error', // require spread operators instead of .apply()
   'prefer-template': 'error', // require template literals instead of string concatenation
   radix: 'error', // enforce the consistent use of the radix argument when using parseInt()

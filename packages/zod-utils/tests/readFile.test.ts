@@ -7,7 +7,7 @@ let fooSchema = z.object({
   foo: z.boolean(),
 });
 
-describe('readFile', () => {
+describe(readFile, () => {
   describe('when trying to read non-existent file', () => {
     test('should throw if `throwOnZodError` is `true`', async () => {
       await expect(

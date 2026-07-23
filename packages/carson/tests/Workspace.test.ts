@@ -7,12 +7,14 @@ import {type WorkspaceOptionsProject} from '../source/workspace/WorkspaceOptions
 import {TEST_WORKSPACES_PATH} from './constants.js';
 
 // we need to mock `isRootPath` so it considers directory with test workspaces as the file system root
-vitest.mock('@jakubmazanec/fs-utils', async (importOriginal) => {
+vitest.mock(import('@jakubmazanec/fs-utils'), async (importOriginal) => {
   const originalModule = await importOriginal<typeof import('@jakubmazanec/fs-utils')>();
 
   return {
     ...originalModule,
-    isRootPath: vitest.fn().mockImplementation((value) => value === TEST_WORKSPACES_PATH),
+    isRootPath: vitest
+      .fn<(value: string) => boolean>()
+      .mockImplementation((value) => value === TEST_WORKSPACES_PATH),
   };
 });
 
@@ -26,7 +28,7 @@ describe('Workspace', () => {
       });
 
       expect(workspace.path).toBe(TEST_WORKSPACES_PATH);
-      expect(workspace.isMultiProject).toBeFalsy();
+      expect(workspace.isMultiProject).toBe(false);
       expect(workspace.projectGlobs).toBeNull();
       expect(
         workspace.projects.map(({workspace, ...rest}) => ({
@@ -57,7 +59,7 @@ describe('Workspace', () => {
       });
 
       expect(workspace.path).toBe(TEST_WORKSPACES_PATH);
-      expect(workspace.isMultiProject).toBeFalsy();
+      expect(workspace.isMultiProject).toBe(false);
       expect(workspace.projectGlobs).toBeNull();
       expect(
         workspace.projects.map(({workspace, ...rest}) => ({
@@ -112,7 +114,7 @@ describe('Workspace', () => {
       });
 
       expect(workspace.path).toBe(TEST_WORKSPACES_PATH);
-      expect(workspace.isMultiProject).toBeTruthy();
+      expect(workspace.isMultiProject).toBe(true);
       expect(workspace.projectGlobs).toEqual([]);
       expect(workspace.projects).toEqual([]);
       expect(workspace.config).toEqual({});
@@ -130,7 +132,7 @@ describe('Workspace', () => {
       });
 
       expect(workspace.path).toBe(TEST_WORKSPACES_PATH);
-      expect(workspace.isMultiProject).toBeTruthy();
+      expect(workspace.isMultiProject).toBe(true);
       expect(workspace.projectGlobs).toEqual(['./packages/*']);
       expect(workspace.projects).toEqual([]);
       expect(workspace.config).toEqual({});
@@ -156,7 +158,7 @@ describe('Workspace', () => {
       });
 
       expect(workspace.path).toBe(TEST_WORKSPACES_PATH);
-      expect(workspace.isMultiProject).toBeTruthy();
+      expect(workspace.isMultiProject).toBe(true);
       expect(workspace.projectGlobs).toEqual([]);
       expect(
         workspace.projects.map(({workspace, ...rest}) => ({

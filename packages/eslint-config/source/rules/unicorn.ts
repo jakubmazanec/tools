@@ -9,6 +9,8 @@ export const unicornRules: eslint.Linter.Config['rules'] = {
   // eslint-plugin-unicorn rules
   'unicorn/better-regex': 'warn', // improve regexes by making them shorter, consistent, and safer
   'unicorn/catch-error-name': 'warn', // enforce a specific parameter name in catch clauses
+  'unicorn/consistent-assert': 'error', // prefer assert.ok() over assert()
+  'unicorn/consistent-date-clone': 'error', // prefer passing Date directly to the constructor when cloning
   'unicorn/consistent-destructuring': 'error', // use destructured variables over properties
   'unicorn/consistent-empty-array-spread': 'error', // prefer consistent types when spreading a ternary in an array literal
   'unicorn/consistent-existence-index-check': 'off', // enforce consistent style for element existence checks with indexOf(), lastIndexOf(), findIndex(), and findLastIndex()
@@ -20,7 +22,10 @@ export const unicornRules: eslint.Linter.Config['rules'] = {
   'unicorn/expiring-todo-comments': [
     'warn',
     {
-      terms: ['todo:', 'fixme:', 'debug:'],
+      allowWarningComments: false,
+      // the bracketed terms match the conditioned form, e.g. `TODO [2100-01-01]: …`; the colon
+      // terms never match it, so without them no expiration condition is ever evaluated
+      terms: ['todo:', 'fixme:', 'debug:', 'todo [', 'fixme [', 'debug ['],
     },
   ], // add expiration conditions to to do comments
   'unicorn/explicit-length-check': 'off', // enforce explicitly comparing the length property of a value
@@ -28,12 +33,13 @@ export const unicornRules: eslint.Linter.Config['rules'] = {
   'unicorn/import-style': 'warn', // enforce specific import styles per module
   'unicorn/new-for-builtins': 'warn', // enforce the use of new for all builtins, except String, Number, Boolean, Symbol and BigInt
   'unicorn/no-abusive-eslint-disable': 'off', // enforce specifying rules to disable in eslint-disable comments
+  'unicorn/no-accessor-recursion': 'error', // disallow recursive access to this within getters and setters
   'unicorn/no-anonymous-default-export': 'error', // disallow anonymous functions and classes as the default export
   'unicorn/no-array-callback-reference': 'off', // prevent passing a function reference directly to iterator methods
   'unicorn/no-array-for-each': 'off', // prefer for…of over Array#forEach(…)
   'unicorn/no-array-method-this-argument': 'error', // disallow using the this argument in array methods
-  'unicorn/no-array-push-push': 'error', // enforce combining multiple Array#push() into one call
   'unicorn/no-array-reduce': 'off', // disallow Array#reduce() and Array#reduceRight()
+  'unicorn/no-array-reverse': 'off', // prefer Array#toReversed() over Array#reverse()
   'unicorn/no-await-expression-member': 'off', // forbid member access from await expression
   'unicorn/no-await-in-promise-methods': 'error', // disallow using await in Promise method parameters
   'unicorn/no-console-spaces': 'off', // do not use leading/trailing space between console.log parameters
@@ -41,13 +47,13 @@ export const unicornRules: eslint.Linter.Config['rules'] = {
   'unicorn/no-empty-file': 'warn', // disallow empty files
   'unicorn/no-for-loop': 'warn', // Do not use a for loop that can be replaced with a for-of loop
   'unicorn/no-hex-escape': 'warn', // enforce the use of Unicode escapes instead of hexadecimal escapes
-  'unicorn/no-instanceof-array': 'error', // require Array.isArray() instead of instanceof Array
+  'unicorn/no-instanceof-builtins': 'error', // disallow instanceof with built-in objects
   'unicorn/no-invalid-fetch-options': 'off', // disallow invalid options in fetch() and new Request()
   'unicorn/no-invalid-remove-event-listener': 'error', // prevent calling EventTarget#removeEventListener() with the result of an expression
   'unicorn/no-keyword-prefix': 'off', // disallow identifiers starting with new or class
-  'unicorn/no-length-as-slice-end': 'error', // disallow using .length as the end argument of {Array,String,TypedArray}#slice()
   'unicorn/no-lonely-if': 'error', // disallow if statements as the only statement in if blocks without else
   'unicorn/no-magic-array-flat-depth': 'error', // disallow a magic number as the depth argument in Array#flat(…)
+  'unicorn/no-named-default': 'error', // disallow named usage of default import and export
   'unicorn/no-negated-condition': 'error', // disallow negated conditions
   'unicorn/no-negation-in-equality-check': 'error', // disallow negated expression in equality check
   'unicorn/no-nested-ternary': 'error', // disallow nested ternary expressions
@@ -61,11 +67,15 @@ export const unicornRules: eslint.Linter.Config['rules'] = {
   'unicorn/no-thenable': 'error', // disallow then property
   'unicorn/no-this-assignment': 'off', // disallow assigning this to a variable
   'unicorn/no-typeof-undefined': 'error', // disallow comparing undefined using typeof
+  'unicorn/no-unnecessary-array-flat-depth': 'error', // disallow using 1 as the depth argument of Array#flat()
+  'unicorn/no-unnecessary-array-splice-count': 'error', // disallow using .length or Infinity as the deleteCount or skipCount argument of Array#{splice,toSpliced}()
   'unicorn/no-unnecessary-await': 'error', // disallow awaiting non-promise values
   'unicorn/no-unnecessary-polyfills': 'error', // enforce the use of built-in methods instead of unnecessary polyfills
+  'unicorn/no-unnecessary-slice-end': 'error', // disallow using .length or Infinity as the end argument of {Array,String,TypedArray}#slice()
   'unicorn/no-unreadable-array-destructuring': 'warn', // disallow unreadable array destructuring
   'unicorn/no-unreadable-iife': 'off', // disallow unreadable IIFEs
   'unicorn/no-unused-properties': 'off', // disallow unused object properties
+  'unicorn/no-useless-error-capture-stack-trace': 'error', // disallow unnecessary Error.captureStackTrace(…)
   'unicorn/no-useless-fallback-in-spread': 'error', // forbid useless fallback when spreading in object literals
   'unicorn/no-useless-length-check': 'off', // disallow useless array length check
   'unicorn/no-useless-promise-resolve-reject': 'error', // disallow returning/yielding Promise.resolve/reject() in async functions or promise callbacks
@@ -83,16 +93,18 @@ export const unicornRules: eslint.Linter.Config['rules'] = {
   'unicorn/prefer-array-some': 'warn', // prefer .some(…) over .find(…)
   'unicorn/prefer-at': 'warn', // prefer .at() method for index access and String#charAt()
   'unicorn/prefer-blob-reading-methods': 'error', // prefer Blob#arrayBuffer() over FileReader#readAsArrayBuffer(…) and Blob#text() over FileReader#readAsText(…)
+  'unicorn/prefer-class-fields': 'error', // prefer class field declarations over this assignments in constructors
   'unicorn/prefer-code-point': 'warn', // prefer String#codePointAt(…) over String#charCodeAt(…) and String.fromCodePoint(…) over String.fromCharCode(…)
   'unicorn/prefer-date-now': 'warn', // prefer Date.now() to get the number of milliseconds since the Unix Epoch
   'unicorn/prefer-default-parameters': 'error', // prefer default parameters over reassignment
-  'unicorn/prefer-dom-node-append': 'warn', // prefer Node#append() over Node#appendChild()
+  'no-autofix/unicorn/prefer-dom-node-append': 'warn', // prefer Node#append() over Node#appendChild()
   'unicorn/prefer-dom-node-dataset': 'warn', // prefer using .dataset on DOM elements over .setAttribute(…)
-  'unicorn/prefer-dom-node-remove': 'warn', // prefer childNode.remove() over parentNode.removeChild(childNode)
+  'no-autofix/unicorn/prefer-dom-node-remove': 'warn', // prefer childNode.remove() over parentNode.removeChild(childNode)
   'unicorn/prefer-dom-node-text-content': 'warn', // prefer .textContent over .innerText
   'unicorn/prefer-event-target': 'warn', // prefer EventTarget over EventEmitter
   'unicorn/prefer-export-from': ['error', {ignoreUsedVariables: true}], // prefer export…from when re-exporting
   'unicorn/prefer-global-this': 'warn', // prefer globalThis over window, self, and global
+  'unicorn/prefer-import-meta-properties': 'error', // prefer import.meta.{dirname,filename} over legacy techniques for getting file paths
   'unicorn/prefer-includes': 'off', // prefer .includes() over .indexOf() when checking for existence or non-existence
   'unicorn/prefer-json-parse-buffer': 'off', // prefer reading a JSON file as a buffer
   'unicorn/prefer-keyboard-event-key': 'warn', // prefer KeyboardEvent#key over KeyboardEvent#keyCode
@@ -115,6 +127,7 @@ export const unicornRules: eslint.Linter.Config['rules'] = {
   // Autofix can be breaking
   'unicorn/prefer-set-has': 'error', // prefer Set#has() over Array#includes() when checking for existence or non-existence
   'unicorn/prefer-set-size': 'error', // prefer using Set#size instead of Array#length
+  'unicorn/prefer-single-call': 'error', // enforce combining multiple Array#push(), Element#classList.{add,remove}(), and importScripts() into one call
   'unicorn/prefer-spread': 'error', // prefer the spread operator over Array.from()
   'unicorn/prefer-string-raw': 'warn', // prefer using the String.raw tag to avoid escaping \
   'unicorn/prefer-string-replace-all': 'warn', // prefer String#replaceAll() over regex searches with the global flag
@@ -129,6 +142,7 @@ export const unicornRules: eslint.Linter.Config['rules'] = {
   'unicorn/prevent-abbreviations': 'off', // Prevent abbreviations
   'unicorn/relative-url-style': 'off', // enforce consistent relative URL style
   'unicorn/require-array-join-separator': 'error', // enforce using the separator argument with Array#join()
+  'unicorn/require-module-specifiers': 'error', // require non-empty specifier list in import and export statements
   'unicorn/require-number-to-fixed-digits-argument': 'error', // enforce using the digits argument with Number#toFixed()
   'unicorn/require-post-message-target-origin': 'error', // enforce using the targetOrigin argument with window.postMessage()
   'unicorn/string-content': 'off', // enforce better string content

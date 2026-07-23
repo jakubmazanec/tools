@@ -4,7 +4,7 @@ export const securityRules: eslint.Linter.Config['rules'] = {
   // eslint-plugin-security rules
   'security/detect-bidi-characters': 'warn', // detects trojan source attacks that employ unicode bidi attacks to inject malicious code
   'security/detect-buffer-noassert': 'warn', // detects calls to "buffer" with "noAssert" flag set
-  'security/detect-child-process': 'warn', // d Detects instances of "child_process" & non-literal "exec()" calls
+  'security/detect-child-process': 'warn', // detects instances of "child_process" & non-literal "exec()" calls
   'security/detect-disable-mustache-escape': 'warn', // detects "object.escapeMarkup = false", which can be used with some template engines to disable escaping of HTML entities
   'security/detect-eval-with-expression': 'warn', // dDetects "eval(variable)" which can allow an attacker to run arbitrary code inside your process
   'security/detect-new-buffer': 'warn', // detects instances of new Buffer(argument) where argument is any non-literal value

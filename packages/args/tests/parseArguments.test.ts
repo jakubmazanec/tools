@@ -448,7 +448,7 @@ describe('parseArgs()', () => {
         },
       });
 
-      expect(true).toBeTruthy(); // this test is only for typechecking
+      expect(true).toBe(true); // this test is only for typechecking
     });
 
     test('runtime types correspond (#1)', () => {
@@ -470,7 +470,7 @@ describe('parseArgs()', () => {
         errors: [],
       });
       expect(result.parameters).toHaveLength(1);
-      expect(typeof result.parameters[0]).toBe('undefined');
+      expect(result.parameters[0]).toBeTypeOf('undefined');
     });
 
     test('runtime types correspond (#2)', () => {
@@ -492,10 +492,10 @@ describe('parseArgs()', () => {
         errors: [],
       });
       expect(result.parameters).toHaveLength(3);
-      expect(typeof result.parameters[0]).toBe('string');
-      expect(typeof result.parameters[1]).toBe('string');
-      expect(typeof result.parameters[2]).toBe('string');
-      expect(typeof result.parameters[3]).toBe('undefined');
+      expect(result.parameters[0]).toBeTypeOf('string');
+      expect(result.parameters[1]).toBeTypeOf('string');
+      expect(result.parameters[2]).toBeTypeOf('string');
+      expect(result.parameters[3]).toBeTypeOf('undefined');
     });
 
     test('runtime types correspond (#3)', () => {
@@ -518,8 +518,8 @@ describe('parseArgs()', () => {
         errors: [],
       });
       expect(result.parameters).toHaveLength(1);
-      expect(typeof result.parameters[0]).toBe('string');
-      expect(typeof result.parameters[1]).toBe('undefined');
+      expect(result.parameters[0]).toBeTypeOf('string');
+      expect(result.parameters[1]).toBeTypeOf('undefined');
     });
   });
 

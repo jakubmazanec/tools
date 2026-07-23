@@ -5,7 +5,7 @@ import {describe, expect, test} from 'vitest';
 
 import {Header} from '../../source/ui/Header.js';
 
-describe.todo('Header', () => {
+describe.todo(Header, () => {
   test('works', () => {
     let {lastFrame} = render(
       <Header icon="!">

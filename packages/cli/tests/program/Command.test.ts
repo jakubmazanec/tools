@@ -5,7 +5,7 @@ import {describe, expect, test} from 'vitest';
 import {type Program} from '../../source/program.js';
 import {Command} from '../../source/program/Command.js';
 
-describe('Command', () => {
+describe(Command, () => {
   describe('correct typings', () => {
     test('no errors', () => {
       // eslint-disable-next-line @typescript-eslint/no-unused-vars -- needed
@@ -50,7 +50,7 @@ describe('Command', () => {
         }
       > = true;
 
-      expect(isTypeCorrect).toBeTruthy(); // this test is only for typechecking
+      expect(isTypeCorrect).toBe(true); // this test is only for typechecking
     });
 
     test('runtime types correspond', () => {

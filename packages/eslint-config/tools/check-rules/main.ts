@@ -52,7 +52,9 @@ let usedRules = [
   ...unicornRules,
   ...securityRules,
   ...perfectionistRules,
-].sort();
+]
+  .map((ruleName) => ruleName.replace(/^no-autofix\//, ''))
+  .sort();
 
 let missingRules: string[] = [];
 

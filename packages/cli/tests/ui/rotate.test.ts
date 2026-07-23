@@ -2,7 +2,7 @@ import {describe, expect, test} from 'vitest';
 
 import {rotate} from '../../source/ui/internals/rotate.js';
 
-describe('rotate', () => {
+describe(rotate, () => {
   test('works', () => {
     let result = rotate([1, 2, 3, 4, 5], 2);
 

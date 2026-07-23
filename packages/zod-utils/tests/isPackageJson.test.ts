@@ -2,7 +2,7 @@ import {describe, expect, test} from 'vitest';
 
 import {isPackageJson} from '../source/main.js';
 
-describe('isPackageJson', () => {
+describe(isPackageJson, () => {
   test.each([
     {value: {}, expectedResult: true},
     {value: {name: 'foo'}, expectedResult: true},
