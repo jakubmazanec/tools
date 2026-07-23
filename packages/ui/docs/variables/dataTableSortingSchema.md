@@ -9,4 +9,4 @@
 > \}\>; \}, `$strip`\>\]\>
 
 Defined in:
-[packages/ui/source/components/data-table/DataTableSorting.ts:3](https://github.com/jakubmazanec/tools/blob/b0bb0183149e2989c9979a7ef92189054e923365/packages/ui/source/components/data-table/DataTableSorting.ts#L3)
+[packages/ui/source/components/data-table/DataTableSorting.ts:3](https://github.com/jakubmazanec/tools/blob/4caca122f7df724dd38b9145434835e55c95c009/packages/ui/source/components/data-table/DataTableSorting.ts#L3)

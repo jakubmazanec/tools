@@ -7,7 +7,7 @@
 > **GetReleaseLineChangeset** = `NewChangeset` & `object`
 
 Defined in:
-[getReleaseLine.ts:4](https://github.com/jakubmazanec/tools/blob/b0bb0183149e2989c9979a7ef92189054e923365/packages/changesets-changelog/source/getReleaseLine.ts#L4)
+[getReleaseLine.ts:4](https://github.com/jakubmazanec/tools/blob/4caca122f7df724dd38b9145434835e55c95c009/packages/changesets-changelog/source/getReleaseLine.ts#L4)
 
 ## Type Declaration
 

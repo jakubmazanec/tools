@@ -8,7 +8,7 @@
 > [`UseFormReturn`](../type-aliases/UseFormReturn.md)\<`S`\>
 
 Defined in:
-[packages/ui/source/components/useForm.ts:15](https://github.com/jakubmazanec/tools/blob/b0bb0183149e2989c9979a7ef92189054e923365/packages/ui/source/components/useForm.ts#L15)
+[packages/ui/source/components/useForm.ts:15](https://github.com/jakubmazanec/tools/blob/4caca122f7df724dd38b9145434835e55c95c009/packages/ui/source/components/useForm.ts#L15)
 
 ## Type Parameters
 

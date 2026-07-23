@@ -7,7 +7,7 @@
 > **FormValues**\<`C`\> = `{ [P in keyof C["rows"]]: FormValue<C["rows"][P]> }`
 
 Defined in:
-[packages/cli/source/ui/form/FormValues.ts:7](https://github.com/jakubmazanec/tools/blob/b0bb0183149e2989c9979a7ef92189054e923365/packages/cli/source/ui/form/FormValues.ts#L7)
+[packages/cli/source/ui/form/FormValues.ts:7](https://github.com/jakubmazanec/tools/blob/4caca122f7df724dd38b9145434835e55c95c009/packages/cli/source/ui/form/FormValues.ts#L7)
 
 Form values.
 
