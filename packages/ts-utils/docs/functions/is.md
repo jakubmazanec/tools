@@ -7,7 +7,7 @@
 > **is**\<`T`\>(`value`, `isMatched`): `value is T`
 
 Defined in:
-[packages/ts-utils/source/utils/is.ts:28](https://github.com/jakubmazanec/tools/blob/4caca122f7df724dd38b9145434835e55c95c009/packages/ts-utils/source/utils/is.ts#L28)
+[packages/ts-utils/source/utils/is.ts:28](https://github.com/jakubmazanec/tools/blob/7441ffcfad8f129b2f4cf6e101871743ca3f52ab/packages/ts-utils/source/utils/is.ts#L28)
 
 A generic type guard. If `isMatched` is `true`, TypeScript assumes `value` is of type `T`. You can
 use it to narrow types:

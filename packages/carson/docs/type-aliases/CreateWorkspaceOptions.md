@@ -7,7 +7,7 @@
 > **CreateWorkspaceOptions** = `object`
 
 Defined in:
-[packages/carson/source/commands/create-workspace/runCreateWorkspace.ts:7](https://github.com/jakubmazanec/tools/blob/4caca122f7df724dd38b9145434835e55c95c009/packages/carson/source/commands/create-workspace/runCreateWorkspace.ts#L7)
+[packages/carson/source/commands/create-workspace/runCreateWorkspace.ts:7](https://github.com/jakubmazanec/tools/blob/7441ffcfad8f129b2f4cf6e101871743ca3f52ab/packages/carson/source/commands/create-workspace/runCreateWorkspace.ts#L7)
 
 ## Properties
 
@@ -17,7 +17,7 @@ Defined in:
 > [`createWorkspaceCommand`](../variables/createWorkspaceCommand.md)\>
 
 Defined in:
-[packages/carson/source/commands/create-workspace/runCreateWorkspace.ts:10](https://github.com/jakubmazanec/tools/blob/4caca122f7df724dd38b9145434835e55c95c009/packages/carson/source/commands/create-workspace/runCreateWorkspace.ts#L10)
+[packages/carson/source/commands/create-workspace/runCreateWorkspace.ts:10](https://github.com/jakubmazanec/tools/blob/7441ffcfad8f129b2f4cf6e101871743ca3f52ab/packages/carson/source/commands/create-workspace/runCreateWorkspace.ts#L10)
 
 ---
 
@@ -26,7 +26,7 @@ Defined in:
 > **templateId**: `string`
 
 Defined in:
-[packages/carson/source/commands/create-workspace/runCreateWorkspace.ts:9](https://github.com/jakubmazanec/tools/blob/4caca122f7df724dd38b9145434835e55c95c009/packages/carson/source/commands/create-workspace/runCreateWorkspace.ts#L9)
+[packages/carson/source/commands/create-workspace/runCreateWorkspace.ts:9](https://github.com/jakubmazanec/tools/blob/7441ffcfad8f129b2f4cf6e101871743ca3f52ab/packages/carson/source/commands/create-workspace/runCreateWorkspace.ts#L9)
 
 ---
 
@@ -35,4 +35,4 @@ Defined in:
 > **workspacePath**: `string`
 
 Defined in:
-[packages/carson/source/commands/create-workspace/runCreateWorkspace.ts:8](https://github.com/jakubmazanec/tools/blob/4caca122f7df724dd38b9145434835e55c95c009/packages/carson/source/commands/create-workspace/runCreateWorkspace.ts#L8)
+[packages/carson/source/commands/create-workspace/runCreateWorkspace.ts:8](https://github.com/jakubmazanec/tools/blob/7441ffcfad8f129b2f4cf6e101871743ca3f52ab/packages/carson/source/commands/create-workspace/runCreateWorkspace.ts#L8)

@@ -7,7 +7,7 @@
 > **ErrorMessages**\<`ErrorCode`\> = `Record`\<`ErrorCode`, `string`\>
 
 Defined in:
-[types/ErrorMessages.ts:4](https://github.com/jakubmazanec/tools/blob/4caca122f7df724dd38b9145434835e55c95c009/packages/error/source/types/ErrorMessages.ts#L4)
+[types/ErrorMessages.ts:4](https://github.com/jakubmazanec/tools/blob/7441ffcfad8f129b2f4cf6e101871743ca3f52ab/packages/error/source/types/ErrorMessages.ts#L4)
 
 Object type whose property keys are `ErrorCode` and whose property values are `string`.
 

@@ -7,7 +7,7 @@
 > **pathToPosixPath**(`value`): `string`
 
 Defined in:
-[pathToPosixPath.ts:9](https://github.com/jakubmazanec/tools/blob/4caca122f7df724dd38b9145434835e55c95c009/packages/fs-utils/source/pathToPosixPath.ts#L9)
+[pathToPosixPath.ts:9](https://github.com/jakubmazanec/tools/blob/7441ffcfad8f129b2f4cf6e101871743ca3f52ab/packages/fs-utils/source/pathToPosixPath.ts#L9)
 
 Converts path to POSIX path.
 

@@ -8,7 +8,7 @@
 > `Record`\<`string`, `unknown`\> : `null`
 
 Defined in:
-[args/source/ArgumentsUnknownOptions.ts:4](https://github.com/jakubmazanec/tools/blob/4caca122f7df724dd38b9145434835e55c95c009/packages/args/source/ArgumentsUnknownOptions.ts#L4)
+[args/source/ArgumentsUnknownOptions.ts:4](https://github.com/jakubmazanec/tools/blob/7441ffcfad8f129b2f4cf6e101871743ca3f52ab/packages/args/source/ArgumentsUnknownOptions.ts#L4)
 
 Unknown options. Unknown options are always parsed as strings.
 
