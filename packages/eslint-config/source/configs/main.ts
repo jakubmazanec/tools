@@ -131,7 +131,7 @@ export const main: eslint.Linter.Config[] = [
     },
     // TODO: fix the type essertions
     plugins: {
-      vitest: vitestEslintPlugin as unknown as ESLint.Plugin,
+      vitest: vitestEslintPlugin,
       'testing-library': testingLibraryEslintPlugin as ESLint.Plugin,
     },
     settings: {
