@@ -19,6 +19,7 @@ export const promiseRules: eslint.Linter.Config['rules'] = {
     },
   ], // avoid wrapping values in Promise.resolve or Promise.reject when not needed
   'promise/param-names': 'error', // enforce consistent param names and ordering when creating new promises
+  'promise/prefer-catch': 'error', // prefer `catch` to `then(a, b)`/`then(null, b)` for handling errors
   'promise/prefer-await-to-callbacks': 'off', // prefer async/await to the callback pattern
   'promise/prefer-await-to-then': 'off', // prefer await to then() for reading Promise values
   'promise/spec-only': 'error', // disallow use of non-standard Promise static methods

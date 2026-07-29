@@ -6,7 +6,7 @@ import {Command} from '../../source/program/Command.js';
 import {Program} from '../../source/program/Program.js';
 import {Help} from '../../source/ui/Help.js';
 
-describe.todo('Help', () => {
+describe.todo(Help, () => {
   test('works', async () => {
     let program = await Program.create({
       name: 'App',

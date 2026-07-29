@@ -6,7 +6,6 @@ export * from './rules/nodejs.js';
 export * from './rules/perfectionist.js';
 export * from './rules/prettier.js';
 export * from './rules/promise.js';
-export * from './rules/react-compiler.js';
 export * from './rules/react-hooks.js';
 export * from './rules/react.js';
 export * from './rules/security.js';

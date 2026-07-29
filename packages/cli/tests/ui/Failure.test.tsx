@@ -5,7 +5,7 @@ import {describe, expect, test} from 'vitest';
 import {Failure} from '../../source/ui/Failure.js';
 import {getErrorDetail} from '../../source/ui/getErrorDetail.js';
 
-describe.todo('Failure', () => {
+describe.todo(Failure, () => {
   test('works', () => {
     let error = new Error('Invalid foo!');
     let errorDetail = getErrorDetail(error);

@@ -23,6 +23,7 @@ export const nodejsRules: eslint.Linter.Config['rules'] = {
   'node/no-restricted-import': 'off', // disallow specified modules when loaded by import declarations
   'node/no-restricted-require': 'off', // disallow specified modules when loaded by require
   'node/no-sync': 'warn', // disallow synchronous methods
+  'node/no-top-level-await': 'off', // disallow top-level `await` in published modules
   'node/no-unpublished-bin': 'off', // disallow bin files that npm ignores
   'node/no-unpublished-import': 'off', // disallow import declarations which import private modules
   'node/no-unpublished-require': 'off', // disallow require() expressions which import private modules
@@ -30,10 +31,12 @@ export const nodejsRules: eslint.Linter.Config['rules'] = {
   'node/no-unsupported-features/es-syntax': ['off', {ignores: []}], // disallow unsupported ECMAScript syntax on the specified version
   'node/no-unsupported-features/node-builtins': ['off', {ignores: []}], // disallow unsupported Node.js built-in APIs on the specified version
   'node/prefer-global/buffer': 'warn', // enforce either Buffer or require("buffer").Buffer
+  'node/prefer-global/crypto': 'off', // enforce either `crypto` or `require("crypto").webcrypto`
   'node/prefer-global/console': 'warn', // enforce either console or require("console")
   'node/prefer-global/process': 'warn', // enforce either process or require("process")
   'node/prefer-global/text-decoder': 'warn', // enforce either TextDecoder or require("util").TextDecoder
   'node/prefer-global/text-encoder': 'warn', // enforce either TextEncoder or require("util").TextEncoder
+  'node/prefer-global/timers': 'off', // enforce either global timer functions or `require("timers")`
   'node/prefer-global/url': 'warn', // enforce either URL or require("url").URL
   'node/prefer-global/url-search-params': 'warn', // enforce either URLSearchParams or require("url").URLSearchParams
   'node/prefer-promises/dns': 'error', // enforce require("dns").promises

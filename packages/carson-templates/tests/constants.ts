@@ -1,7 +1,6 @@
 import path from 'node:path';
-import url from 'node:url';
 
-let directory = path.dirname(url.fileURLToPath(import.meta.url));
+let directory = import.meta.dirname;
 
 export const TEMPLATES_PATH = path.resolve(directory, '../templates');
 export const NPMRC_PATH = path.resolve(directory, '../../../.npmrc');

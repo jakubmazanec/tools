@@ -7,7 +7,7 @@ import {TextInput} from '../../source/ui/form/TextInput.js';
 import {DELETE, ENTER, LEFT_ARROW, NOOP, RIGHT_ARROW, SHIFT_PLUS_TAB, TAB} from '../constants.js';
 import {sleep} from '../sleep.js';
 
-describe.todo('TextInput', () => {
+describe.todo(TextInput, () => {
   test('empty string', () => {
     let {lastFrame} = render(<TextInput label="Test" value="" onChange={NOOP} />);
 
@@ -151,7 +151,7 @@ describe.todo('TextInput', () => {
   });
 
   test('onSubmit', async () => {
-    let onSubmit = vitest.fn();
+    let onSubmit = vitest.fn<(value: string) => void>();
 
     function App() {
       let [value, setValue] = useState('');

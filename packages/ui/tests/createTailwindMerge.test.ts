@@ -2,7 +2,7 @@ import {describe, expect, test} from 'vitest';
 
 import {createTailwindConfig, createTailwindMerge} from '../source/development.js';
 
-describe('createTailwindMerge', () => {
+describe(createTailwindMerge, () => {
   test('works', () => {
     let merge = createTailwindMerge(createTailwindConfig());
 

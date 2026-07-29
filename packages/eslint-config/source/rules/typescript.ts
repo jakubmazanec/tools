@@ -23,6 +23,7 @@ export const typescriptRules: eslint.Linter.Config['rules'] = {
   'no-undef': 'off', // disallow the use of undeclared variables unless mentioned in /* global */ comments
   'no-underscore-dangle': 'off', // disallow dangling underscores in identifiers
   'no-unused-expressions': 'off', // disallow unused expressions
+  'no-unused-private-class-members': 'off', // disallow unused private class members
   'no-unused-vars': 'off', // disallow unused variables
   'no-use-before-define': 'off', // disallow the use of variables before they are defined
   'no-useless-constructor': 'off', // disallow unnecessary constructors
@@ -199,7 +200,7 @@ export const typescriptRules: eslint.Linter.Config['rules'] = {
       leadingUnderscore: 'allow',
       trailingUnderscore: 'forbid',
       filter: {
-        regex: String.raw`(^(\^|&|\$|\/|\\|:|!).*)|(^\d+$)|(^__typename$)|(^__html$)|(^x-tenant-context$)|(^accept-language$)`, // don't check: 1) properties starting with symbol ^, &, $, /, \, :, or !, 2) GraphQL specific property `__typename`, 3) React specific property `__html`, 4) HTTP request headers
+        regex: String.raw`(^(\^|&|\$|\/|\\|:|!).*)|(^\d+$)|(^__typename$)|(^__html$)|(^x-tenant-context$)|(^accept-language$)|(^data-component)`, // don't check: 1) properties starting with symbol ^, &, $, /, \, :, or !, 2) GraphQL specific property `__typename`, 3) React specific property `__html`, 4) HTTP request headers, 5) Custom UI-related property
         match: false,
       },
     },
@@ -246,7 +247,6 @@ export const typescriptRules: eslint.Linter.Config['rules'] = {
   ], // disallows explicit type declarations for variables or parameters initialized to a number, string, or boolean
   '@typescript-eslint/no-invalid-this': 'warn', // disallow this keywords outside of classes or class-like objects
   '@typescript-eslint/no-invalid-void-type': 'warn', // disallows usage of void type outside of generic or return types
-  '@typescript-eslint/no-loop-func': 'warn', // disallow function declarations that contain unsafe references inside loop statements
   '@typescript-eslint/no-magic-numbers': 'off', // disallows magic numbers
   '@typescript-eslint/no-meaningless-void-operator': [
     'error',
@@ -255,6 +255,7 @@ export const typescriptRules: eslint.Linter.Config['rules'] = {
     },
   ], // disallow the void operator except when used to discard a value
   '@typescript-eslint/no-misused-new': 'error', // enforce valid definition of new and constructor
+  '@typescript-eslint/no-misused-spread': 'error', // disallow using the spread operator when it might cause unexpected behavior
   '@typescript-eslint/no-misused-promises': [
     'error',
     {
@@ -292,6 +293,7 @@ export const typescriptRules: eslint.Linter.Config['rules'] = {
   '@typescript-eslint/no-unnecessary-template-expression': 'error', // disallow unnecessary template expressions
   '@typescript-eslint/no-unnecessary-type-arguments': 'error', // warns if an explicitly specified type argument is the default for that type parameter
   '@typescript-eslint/no-unnecessary-type-assertion': 'error', // warns if a type assertion does not change the type of an expression
+  '@typescript-eslint/no-unnecessary-type-conversion': 'off', // disallow conversion idioms when they do not change the type or value of the expression
   '@typescript-eslint/no-unnecessary-type-constraint': 'warn', // disallows unnecessary constraints on generic types
   '@typescript-eslint/no-unnecessary-type-parameters': 'off', // disallow type parameters that aren't used multiple times
   '@typescript-eslint/no-unsafe-argument': 'error', // disallows calling an function with an any type value
@@ -300,6 +302,7 @@ export const typescriptRules: eslint.Linter.Config['rules'] = {
   '@typescript-eslint/no-unsafe-declaration-merging': 'error', // disallows unsafe declaration merging
   '@typescript-eslint/no-unsafe-enum-comparison': 'error', // disallow comparing an enum value with a non-enum value
   '@typescript-eslint/no-unused-expressions': 'error', // disallow unused expressions
+  '@typescript-eslint/no-unused-private-class-members': 'error', // disallow unused private class members
   '@typescript-eslint/no-unsafe-function-type': 'error', // disallow using the unsafe built-in Function type
   '@typescript-eslint/no-unsafe-member-access': 'error', // disallows member access on any typed variables
   '@typescript-eslint/no-unsafe-return': 'error', // disallows returning any from a function
@@ -317,6 +320,7 @@ export const typescriptRules: eslint.Linter.Config['rules'] = {
     },
   ], // disallow the use of variables before they are defined
   '@typescript-eslint/no-useless-constructor': 'warn', // disallow unnecessary constructors
+  '@typescript-eslint/no-useless-default-assignment': 'error', // disallow default values that will never be used
   '@typescript-eslint/no-useless-empty-export': 'error', // disallow empty exports that don't change anything in a module file
   '@typescript-eslint/no-wrapper-object-types': 'error', // disallow using confusing built-in primitive class wrappers
   '@typescript-eslint/non-nullable-type-assertion-style': 'off', // prefers a non-null assertion over explicit type cast when possible
@@ -364,12 +368,12 @@ export const typescriptRules: eslint.Linter.Config['rules'] = {
       allowNullableString: true,
     },
   ], // restricts the types allowed in boolean expressions
+  '@typescript-eslint/strict-void-return': 'error', // disallow passing a value-returning function in a position accepting a void function
   '@typescript-eslint/switch-exhaustiveness-check': 'error', // exhaustiveness checking in switch with union type
   '@typescript-eslint/triple-slash-reference': [
     'error',
     {path: 'never', types: 'never', lib: 'never'},
   ], // sets preference level for triple slash directives versus ES6-style import declarations
-  '@typescript-eslint/typedef': 'off', // requires type annotations to exist
   '@typescript-eslint/unbound-method': 'off', // enforces unbound methods are called with their expected scope
   '@typescript-eslint/unified-signatures': 'error', // warns for any two overloads that could be unified into one by using a union or an optional/rest parameter
   '@typescript-eslint/use-unknown-in-catch-callback-variable': 'warn', // enforce typing arguments in Promise rejection callbacks as unknown

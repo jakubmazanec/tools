@@ -3,9 +3,9 @@ import {describe, expect, test, vitest} from 'vitest';
 import {Command} from '../../source/program/Command.js';
 import {Program} from '../../source/program/Program.js';
 
-describe('Program', () => {
+describe(Program, () => {
   test('works', async () => {
-    let action = vitest.fn(async () => {});
+    let action = vitest.fn<() => Promise<void>>(async () => {});
     let program = await Program.create({
       name: 'App',
       version: '1.0.0',

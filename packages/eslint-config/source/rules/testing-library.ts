@@ -16,6 +16,7 @@ export const testingLibraryRules: eslint.Linter.Config['rules'] = {
   'testing-library/no-node-access': 'error', // disallow direct Node access
   'testing-library/no-promise-in-fire-event': 'error', // disallow the use of promises passed to a fireEvent method
   'testing-library/no-render-in-lifecycle': 'error', // disallow the use of render in testing frameworks setup functions
+  'testing-library/no-test-id-queries': 'off', // ensure no `data-testid` queries are used
   'testing-library/no-unnecessary-act': 'error', // disallow wrapping Testing Library utils or empty callbacks in act
   'testing-library/no-wait-for-multiple-assertions': 'warn', // disallow the use of multiple expect inside waitFor
   'testing-library/no-wait-for-side-effects': 'warn', // disallow the use of side effects inside waitFor
@@ -27,6 +28,7 @@ export const testingLibraryRules: eslint.Linter.Config['rules'] = {
   'testing-library/prefer-query-by-disappearance': 'warn', // suggest using queryBy* queries when waiting for disappearance
   'testing-library/prefer-query-matchers': 'off', // ensure the configured get*/query* query is used with the corresponding matchers
   'testing-library/prefer-user-event': 'warn', // suggest using userEvent library instead of fireEvent for simulating user interaction
+  'testing-library/prefer-user-event-setup': 'error', // suggest using userEvent with setup() instead of direct methods
   'testing-library/prefer-screen-queries': 'off', // suggest using screen while using queries
   'testing-library/render-result-naming-convention': 'warn', // enforce a valid naming for return value from render
 };

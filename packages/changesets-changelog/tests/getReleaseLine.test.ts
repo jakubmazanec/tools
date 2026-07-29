@@ -16,7 +16,7 @@ function getMockGithubData() {
 // eslint-disable-next-line vitest/require-hook -- needed
 let mockGithubData = getMockGithubData();
 
-vitest.mock('@changesets/get-github-info', () => {
+vitest.mock(import('@changesets/get-github-info'), () => {
   let {user, pull, commit, repository} = getMockGithubData();
   let links = {
     user: `[@${user}](https://github.com/${user})`,

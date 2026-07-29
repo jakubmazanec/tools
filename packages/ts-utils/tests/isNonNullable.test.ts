@@ -2,7 +2,7 @@ import {describe, expect, test} from 'vitest';
 
 import {isNonNullable} from '../source/main.js';
 
-describe('isNonNullable', () => {
+describe(isNonNullable, () => {
   test.each([
     {value: undefined, expectedResult: false},
     {value: null, expectedResult: false},

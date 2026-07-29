@@ -5,7 +5,7 @@ import {z} from 'zod';
 import {Template} from '../source/Template.js';
 import {TEST_TEMPLATES_DIRECTORY_PATH} from './constants.js';
 
-describe('Template', () => {
+describe(Template, () => {
   describe('rendering', () => {
     test.each([
       {

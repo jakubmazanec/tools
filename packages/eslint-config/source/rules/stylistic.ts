@@ -16,7 +16,8 @@ export const stylisticRules: eslint.Linter.Config['rules'] = {
   '@stylistic/js/computed-property-spacing': 'off', // enforce consistent spacing inside computed property brackets
   '@stylistic/js/dot-location': 'off', // enforce consistent newlines before and after dots
   '@stylistic/js/eol-last': 'off', // require or disallow newline at the end of files
-  '@stylistic/js/func-call-spacing': 'off', // require or disallow spacing between function identifiers and their invocations. Alias of `function-call-spacing`
+  '@stylistic/js/exp-jsx-props-style': 'off', // enforce consistent line break styles for JSX props
+  '@stylistic/js/exp-list-style': 'off', // enforce consistent spacing and line break styles inside brackets
   '@stylistic/js/function-call-argument-newline': 'off', // enforce line breaks between arguments of a function call
   '@stylistic/js/jsx-function-call-newline': 'off', // enforce line breaks before and after JSX elements when they are used as arguments to a function
   '@stylistic/js/function-call-spacing': 'off', // require or disallow spacing between function identifiers and their invocations
@@ -38,10 +39,8 @@ export const stylisticRules: eslint.Linter.Config['rules'] = {
   '@stylistic/js/jsx-newline': 'off', // require or prevent a new line after jsx elements and expressions.
   '@stylistic/js/jsx-one-expression-per-line': 'off', // require one JSX element per line
   '@stylistic/js/jsx-pascal-case': 'off', // enforce PascalCase for user-defined JSX components
-  '@stylistic/js/jsx-props-no-multi-spaces': 'off', // disallow multiple spaces between inline JSX props
   '@stylistic/js/jsx-quotes': 'off', // enforce the consistent use of either double or single quotes in JSX attributes
   '@stylistic/js/jsx-self-closing-comp': 'off', // disallow extra closing tags for components without children
-  '@stylistic/js/jsx-sort-props': 'off', // s  enforce props alphabetical sorting
   '@stylistic/js/jsx-tag-spacing': 'off', // enforce whitespace in and around the JSX opening and closing brackets
   '@stylistic/js/jsx-wrap-multilines': 'off', // disallow missing parentheses around multiline JSX
   '@stylistic/js/key-spacing': 'off', // enforce consistent spacing between keys and values in object literal properties

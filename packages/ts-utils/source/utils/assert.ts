@@ -2,13 +2,13 @@
  * A subclass of `Error` that indicates an assertion  failure.
  */
 export class AssertionError extends Error {
+  override name = 'AssertionError';
+
   /**
    * @param message Message added to the default error message
    */
   constructor(message?: string) {
     super(`Wrong assertion encountered${message ? `: "${message}"` : ''}!`);
-
-    this.name = 'AssertionError';
   }
 }
 

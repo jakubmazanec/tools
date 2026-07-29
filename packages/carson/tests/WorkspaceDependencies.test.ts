@@ -4,7 +4,7 @@ import {describe, expect, test} from 'vitest';
 import {Workspace, WorkspaceDependencies} from '../source/workspace.js';
 import {TEST_WORKSPACES_PATH} from './constants.js';
 
-describe('WorkspaceDependencies', () => {
+describe(WorkspaceDependencies, () => {
   describe('new WorkspaceDependencies()', () => {
     test('works', async () => {
       let workspace = await Workspace.read(TEST_WORKSPACES_PATH);

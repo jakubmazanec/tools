@@ -12,6 +12,7 @@ export const importRules: eslint.Linter.Config['rules'] = {
   'import/default': 'off', // ensure a default export is present, given a default import
   'import/dynamic-import-chunkname': 'off', // enforce a leading comment with the webpackChunkName for dynamic imports
   'import/no-empty-named-blocks': 'error', // forbid empty named import blocks
+  'import/enforce-node-protocol-usage': ['error', 'always'], // enforce either using, or omitting, the `node:` protocol when importing Node.js builtin modules
   'import/export': 'error', // report any invalid exports, i.e. re-export of the same name
   'import/exports-last': 'off', // ensure all exports appear after other statements
   'import/extensions': 'off', // ensure consistent use of file extension within the import path

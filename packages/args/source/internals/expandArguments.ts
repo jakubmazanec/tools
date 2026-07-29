@@ -12,6 +12,7 @@ export function expandArguments(argv: Argv): Argv {
 
   for (let arg of argv) {
     if (isShortOptionsGroup(arg)) {
+      // eslint-disable-next-line @typescript-eslint/no-misused-spread -- ok in the context of strings that are arguments
       expandedArguments.push(...[...arg].slice(1).map((value) => `-${value}`));
     } else {
       expandedArguments.push(arg);

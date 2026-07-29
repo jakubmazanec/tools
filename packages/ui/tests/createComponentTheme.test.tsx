@@ -4,7 +4,7 @@ import {afterEach, describe, expect, test} from 'vitest';
 import {defaultTheme, type Theme, ThemeProvider} from '../source/main.js';
 import {type ComponentProps, createComponentTheme} from '../source/theme/internals.js';
 
-describe('createComponentTheme', () => {
+describe(createComponentTheme, () => {
   afterEach(cleanup);
 
   describe('no elements', () => {

@@ -5,7 +5,7 @@ import {is} from '../source/main.js';
 const isNull = (value: unknown) => value === null;
 const isString = (value: unknown) => typeof value === 'string';
 
-describe('is', () => {
+describe(is, () => {
   test('helps with type narrowing', () => {
     const maybeString = 'foo' as number | string;
     const maybeNumber = 42 as number | string;
