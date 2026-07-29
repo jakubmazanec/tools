@@ -11,6 +11,7 @@ if (project.packageJson.bin) {
 
 files.sort();
 
+let hasBrowserTests = hasProjectBrowserTests(project);
 let developmentDependencies = [
   LINTER_CONFIG_PACKAGE_NAME,
   '@chromatic-com/storybook',
@@ -18,20 +19,19 @@ let developmentDependencies = [
   '@storybook/addon-links',
   '@storybook/react-vite',
   '@tailwindcss/vite',
-  '@testing-library/jest-dom',
-  '@testing-library/react',
   '@types/lodash',
   '@types/node',
   '@types/react',
   '@types/react-dom',
+  '@vitest/browser-playwright',
   '@vitest/coverage-v8',
   'chromatic',
   'concurrently',
   'del-cli',
   'esbuild',
   'eslint',
-  'happy-dom',
   'lodash',
+  'playwright',
   'prettier',
   'prettier-plugin-packagejson',
   'prettier-plugin-tailwindcss',
@@ -43,8 +43,17 @@ let developmentDependencies = [
   'typedoc-plugin-markdown',
   'typescript',
   'vitest',
+  'vitest-browser-react',
 ].filter((dependency) => {
-  return !Object.keys(project.packageJson.dependencies ?? {}).some((key) => key === dependency); // if the project package.json already contains dependency, we don't need to add it
+  // Browser mode dependencies are included only if the project that actually needs them.
+  if (
+    !hasBrowserTests &&
+    ['@vitest/browser-playwright', 'playwright', 'vitest-browser-react'].includes(dependency)
+  ) {
+    return false;
+  }
+
+  return !Object.keys(project.packageJson.dependencies ?? {}).some((key) => key === dependency); // If the project package.json already contains dependency, we don't need to add it.
 });
 let packageJson = lodash.merge(
   {

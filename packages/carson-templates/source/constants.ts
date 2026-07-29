@@ -143,12 +143,11 @@ export const DEPENDENCY_VERSIONS: Record<string, string> = {
   '@storybook/addon-links': '^10.0.0',
   '@storybook/addon-docs': '^10.0.0',
   '@storybook/react-vite': '^10.0.0',
-  '@testing-library/jest-dom': '^6.0.0',
-  '@testing-library/react': '^16.0.0',
   '@types/lodash': '^4.0.0',
   '@types/react': '^19.0.0',
   '@types/semver': '^7.0.0',
   '@types/react-dom': '^19.0.0',
+  '@vitest/browser-playwright': '^4.0.0',
   '@vitest/coverage-v8': '^4.0.0',
   chromatic: '^18.0.0',
   concurrently: '^9.0.0',
@@ -157,10 +156,10 @@ export const DEPENDENCY_VERSIONS: Record<string, string> = {
   esbuild: '^0.24.0',
   eslint: '^9.0.0',
   execa: '^9.0.0',
-  'happy-dom': '^20.0.0',
   isbot: '^5.0.0',
   lodash: '^4.0.0',
   'patch-package': '^8.0.0',
+  playwright: '^1.60.0',
   prettier: '^3.0.0',
   'prettier-plugin-packagejson': '^2.0.0',
   'prettier-plugin-tailwindcss': '^0.6.0',
@@ -178,6 +177,7 @@ export const DEPENDENCY_VERSIONS: Record<string, string> = {
   typescript: '^5.0.0',
   vite: '^7.0.0',
   vitest: '^4.0.0',
+  'vitest-browser-react': '^2.0.0',
 
   node: '^24.0.0',
   '@types/node': '^24.0.0',
@@ -185,6 +185,10 @@ export const DEPENDENCY_VERSIONS: Record<string, string> = {
 
   gel: '^6.7.0',
 };
+
+// tests
+export const TEST_GLOB = 'tests/**/*.test.?(c|m)[jt]s?(x)';
+export const BROWSER_TEST_GLOB = 'tests/**/*.browser.test.?(c|m)[jt]s?(x)';
 
 // commands
 export const FORMAT_COMMAND = 'prettier . --write --ignore-unknown';

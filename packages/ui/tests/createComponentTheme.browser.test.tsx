@@ -1,12 +1,11 @@
-import {cleanup, render} from '@testing-library/react';
-import {afterEach, describe, expect, test} from 'vitest';
+import {describe, expect, test} from 'vitest';
+import {render} from 'vitest-browser-react';
+import {page} from 'vitest/browser';
 
 import {defaultTheme, type Theme, ThemeProvider} from '../source/main.js';
 import {type ComponentProps, createComponentTheme} from '../source/theme/internals.js';
 
 describe(createComponentTheme, () => {
-  afterEach(cleanup);
-
   describe('no elements', () => {
     let useTheme = createComponentTheme('Button', {
       variants: {
@@ -73,8 +72,8 @@ describe(createComponentTheme, () => {
         'bg-primary-50 text-white opacity-50 h-4 p-2',
       ],
     ])('%o', (options, expected) => {
-      test(`returns ${expected}`, () => {
-        let {getByTestId} = render(
+      test(`returns ${expected}`, async () => {
+        await render(
           <ThemeProvider
             theme={{Button: componentTheme, merge: defaultTheme.merge} as unknown as Theme}
           >
@@ -82,7 +81,7 @@ describe(createComponentTheme, () => {
           </ThemeProvider>,
         );
 
-        expect(getByTestId('root').className).toBe(expected);
+        expect(page.getByTestId('root').element().className).toBe(expected);
       });
     });
   });
@@ -221,8 +220,8 @@ describe(createComponentTheme, () => {
         ],
       ],
     ])('%o', (options, [root, icon]) => {
-      test(`returns ${root} and ${icon}`, () => {
-        let {getByTestId} = render(
+      test(`returns ${root} and ${icon}`, async () => {
+        await render(
           <ThemeProvider
             theme={{Button: componentTheme, merge: defaultTheme.merge} as unknown as Theme}
           >
@@ -230,8 +229,8 @@ describe(createComponentTheme, () => {
           </ThemeProvider>,
         );
 
-        expect(getByTestId('root').className).toBe(root);
-        expect(getByTestId('icon').className).toBe(icon);
+        expect(page.getByTestId('root').element().className).toBe(root);
+        expect(page.getByTestId('icon').element().className).toBe(icon);
       });
     });
   });

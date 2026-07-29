@@ -121,6 +121,15 @@ for (let project of workspace.projects) {
 }
 -%>
 
+<%
+if (getProjectsWithBrowserTests(workspace).length) {
+-%>
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+
+<%
+}
+-%>
       - name: Test
         run: npm test <%- appsWithDbFilter %>
 
@@ -343,6 +352,15 @@ for (let project of workspace.projects) {
 }
 -%>
 
+<%
+if (getProjectsWithBrowserTests(workspace).length) {
+-%>
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+
+<%
+}
+-%>
       - name: Test
         run: npm test <%- appsWithDbFilter %>
 
