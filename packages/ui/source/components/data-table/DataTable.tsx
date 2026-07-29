@@ -327,7 +327,7 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D, any>>>
           onFiltering={onFiltersChange}
         />
       )}
-      <div className="w-full overflow-x-scroll overflow-y-visible [scrollbar-width:thin]">
+      <div className="w-full [scrollbar-width:thin] overflow-x-scroll overflow-y-visible">
         <Table
           style={{
             width: table.getCenterTotalSize(),
