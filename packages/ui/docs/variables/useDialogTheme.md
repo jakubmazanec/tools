@@ -7,7 +7,7 @@
 > `const` **useDialogTheme**: `object` & () => `object`
 
 Defined in:
-[packages/ui/source/components/Dialog.tsx:21](https://github.com/jakubmazanec/tools/blob/7441ffcfad8f129b2f4cf6e101871743ca3f52ab/packages/ui/source/components/Dialog.tsx#L21)
+[packages/ui/source/components/Dialog.tsx:21](https://github.com/jakubmazanec/tools/blob/7dee2e77a2efff2dbabcfc784ffaf6227143b7cb/packages/ui/source/components/Dialog.tsx#L21)
 
 ## Type Declaration
 

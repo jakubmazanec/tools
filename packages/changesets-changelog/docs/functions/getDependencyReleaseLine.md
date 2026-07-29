@@ -8,7 +8,7 @@
 > `Promise`\<`string`\>
 
 Defined in:
-[getDependencyReleaseLine.ts:4](https://github.com/jakubmazanec/tools/blob/7441ffcfad8f129b2f4cf6e101871743ca3f52ab/packages/changesets-changelog/source/getDependencyReleaseLine.ts#L4)
+[getDependencyReleaseLine.ts:4](https://github.com/jakubmazanec/tools/blob/7dee2e77a2efff2dbabcfc784ffaf6227143b7cb/packages/changesets-changelog/source/getDependencyReleaseLine.ts#L4)
 
 ## Parameters
 

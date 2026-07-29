@@ -7,4 +7,4 @@
 > `const` **success**: `string`
 
 Defined in:
-[packages/cli/source/ui/icons.ts:7](https://github.com/jakubmazanec/tools/blob/7441ffcfad8f129b2f4cf6e101871743ca3f52ab/packages/cli/source/ui/icons.ts#L7)
+[packages/cli/source/ui/icons.ts:7](https://github.com/jakubmazanec/tools/blob/7dee2e77a2efff2dbabcfc784ffaf6227143b7cb/packages/cli/source/ui/icons.ts#L7)

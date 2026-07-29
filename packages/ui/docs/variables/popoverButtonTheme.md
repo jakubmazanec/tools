@@ -8,4 +8,4 @@
 > [`usePopoverButtonTheme`](usePopoverButtonTheme.md)\>
 
 Defined in:
-[packages/ui/source/components/PopoverButton.tsx:58](https://github.com/jakubmazanec/tools/blob/7441ffcfad8f129b2f4cf6e101871743ca3f52ab/packages/ui/source/components/PopoverButton.tsx#L58)
+[packages/ui/source/components/PopoverButton.tsx:58](https://github.com/jakubmazanec/tools/blob/7dee2e77a2efff2dbabcfc784ffaf6227143b7cb/packages/ui/source/components/PopoverButton.tsx#L58)

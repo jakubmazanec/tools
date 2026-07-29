@@ -10,7 +10,7 @@
 > `ZodError`\<`output`\<`S`\>\>\>\>
 
 Defined in:
-[packages/zod-utils/source/utils/readFile.ts:11](https://github.com/jakubmazanec/tools/blob/7441ffcfad8f129b2f4cf6e101871743ca3f52ab/packages/zod-utils/source/utils/readFile.ts#L11)
+[packages/zod-utils/source/utils/readFile.ts:11](https://github.com/jakubmazanec/tools/blob/7dee2e77a2efff2dbabcfc784ffaf6227143b7cb/packages/zod-utils/source/utils/readFile.ts#L11)
 
 ## Type Parameters
 

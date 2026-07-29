@@ -8,4 +8,4 @@
 > `$catchall`\<`ZodUnknown`\>\>
 
 Defined in:
-[packages/carson/source/workspace/ProjectConfig.ts:3](https://github.com/jakubmazanec/tools/blob/7441ffcfad8f129b2f4cf6e101871743ca3f52ab/packages/carson/source/workspace/ProjectConfig.ts#L3)
+[packages/carson/source/workspace/ProjectConfig.ts:3](https://github.com/jakubmazanec/tools/blob/7dee2e77a2efff2dbabcfc784ffaf6227143b7cb/packages/carson/source/workspace/ProjectConfig.ts#L3)

@@ -8,6 +8,6 @@
 > [`templateAttributesSchema`](../variables/templateAttributesSchema.md)\>
 
 Defined in:
-[packages/template/source/TemplateAttributes.ts:20](https://github.com/jakubmazanec/tools/blob/7441ffcfad8f129b2f4cf6e101871743ca3f52ab/packages/template/source/TemplateAttributes.ts#L20)
+[packages/template/source/TemplateAttributes.ts:20](https://github.com/jakubmazanec/tools/blob/7dee2e77a2efff2dbabcfc784ffaf6227143b7cb/packages/template/source/TemplateAttributes.ts#L20)
 
 Type representing template attributes.
