@@ -5,11 +5,11 @@ import {
   type ListboxProps as HeadlessListboxProps,
 } from '@headlessui/react';
 import {
-  type ChangeEvent,
   Children,
   type ComponentPropsWithoutRef,
   type ElementType,
   Fragment,
+  type InputEvent,
   type KeyboardEvent,
   type PropsWithChildren,
   type ReactNode,
@@ -134,8 +134,8 @@ export function Listbox<
     [showFilter],
   );
 
-  let handleQueryChange = useCallback((event: ChangeEvent<HTMLInputElement>) => {
-    setQuery(event.target.value);
+  let handleQueryChange = useCallback((event: InputEvent<HTMLInputElement>) => {
+    setQuery(event.currentTarget.value);
   }, []);
 
   if (items && children) {
