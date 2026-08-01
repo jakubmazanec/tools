@@ -150,7 +150,7 @@ export const DEPENDENCY_VERSIONS: Record<string, string> = {
   '@types/semver': '^7.0.0',
   '@types/react-dom': '^19.0.0',
   '@vitest/coverage-v8': '^4.0.0',
-  chromatic: '^13.0.0',
+  chromatic: '^18.0.0',
   concurrently: '^9.0.0',
   'cross-env': '^10.0.0',
   'del-cli': '^7.0.0',
