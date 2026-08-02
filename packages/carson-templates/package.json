@@ -52,7 +52,7 @@
     "fast-glob": "^3.3.3",
     "fs-extra": "^11.3.6",
     "prettier": "^3.9.5",
-    "prettier-plugin-packagejson": "^2.5.20",
+    "prettier-plugin-packagejson": "^2.5.22",
     "typedoc": "^0.28.20",
     "typedoc-plugin-markdown": "^4.12.0",
     "typescript": "^5.9.3",
