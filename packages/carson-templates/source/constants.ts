@@ -3,6 +3,9 @@ import {createRequire} from 'node:module';
 import semver from 'semver';
 
 export const AUTHOR = 'Jakub Mazanec <jakub@mazanec.dev>';
+export const BOT_NAME = 'Bot';
+export const BOT_EMAIL = 'bot@mazanec.dev';
+export const BOT = `${BOT_NAME} <${BOT_EMAIL}>`;
 
 export const BUILD_DIRECTORY = 'build';
 export const STORYBOOK_BUILD_DIRECTORY = 'storybook-static';
@@ -153,7 +156,7 @@ export const DEPENDENCY_VERSIONS: Record<string, string> = {
   concurrently: '^9.0.0',
   'cross-env': '^10.0.0',
   'del-cli': '^7.0.0',
-  esbuild: '^0.24.0',
+  esbuild: '^0.28.0',
   eslint: '^9.0.0',
   execa: '^9.0.0',
   isbot: '^5.0.0',
@@ -162,7 +165,7 @@ export const DEPENDENCY_VERSIONS: Record<string, string> = {
   playwright: '^1.60.0',
   prettier: '^3.0.0',
   'prettier-plugin-packagejson': '^2.0.0',
-  'prettier-plugin-tailwindcss': '^0.6.0',
+  'prettier-plugin-tailwindcss': '^0.8.0',
   react: '^19.0.0',
   'react-dom': '^19.0.0',
   'react-router': '^7.0.0',
