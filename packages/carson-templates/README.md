@@ -4,7 +4,6 @@
 # @jakubmazanec/carson-templates
 
 Collection of Carson templates.
-
 </div>
 <!-- header -->
 
@@ -20,6 +19,7 @@ npm install @jakubmazanec/carson-templates
 
 - Node.js 24 or later
 - TypeScript 5 or later
+
 <!-- prerequisites -->
 
 ## Usage

@@ -4,7 +4,6 @@
 # @jakubmazanec/template
 
 TypeScript-first library for working with templates using EJS and Zod.
-
 </div>
 <!-- header -->
 
@@ -23,6 +22,7 @@ It cannot be required from a CommonJS module.
 
 - Node.js 24 or later
 - TypeScript 5 or later
+
 <!-- prerequisites -->
 
 ## Usage

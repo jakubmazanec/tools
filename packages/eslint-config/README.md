@@ -4,7 +4,6 @@
 # @jakubmazanec/eslint-config
 
 ESLint config for TypeScript projects.
-
 </div>
 <!-- header -->
 
@@ -20,6 +19,7 @@ npm install @jakubmazanec/eslint-config
 
 - Node.js 24 or later
 - TypeScript 5 or later
+
 <!-- prerequisites -->
 
 ## Usage
