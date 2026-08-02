@@ -7,7 +7,7 @@
 > **isRootPath**(`value`): `boolean`
 
 Defined in:
-[isRootPath.ts:9](https://github.com/jakubmazanec/tools/blob/7dee2e77a2efff2dbabcfc784ffaf6227143b7cb/packages/fs-utils/source/isRootPath.ts#L9)
+[isRootPath.ts:9](https://github.com/jakubmazanec/tools/blob/be2163f84cbbba1501692fb862cbb16c273cf74c/packages/fs-utils/source/isRootPath.ts#L9)
 
 Checks if a path is a file system root path.
 

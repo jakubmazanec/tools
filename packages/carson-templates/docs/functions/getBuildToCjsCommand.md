@@ -7,7 +7,7 @@
 > **getBuildToCjsCommand**(`workspace`): `string`
 
 Defined in:
-[packages/carson-templates/source/getBuildToCjsCommand.ts:6](https://github.com/jakubmazanec/tools/blob/7dee2e77a2efff2dbabcfc784ffaf6227143b7cb/packages/carson-templates/source/getBuildToCjsCommand.ts#L6)
+[packages/carson-templates/source/getBuildToCjsCommand.ts:6](https://github.com/jakubmazanec/tools/blob/be2163f84cbbba1501692fb862cbb16c273cf74c/packages/carson-templates/source/getBuildToCjsCommand.ts#L6)
 
 ## Parameters
 

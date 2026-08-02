@@ -13,4 +13,4 @@
 > `validate?`: (`value`) => `void`; \}
 
 Defined in:
-[args/source/ParameterConfig.ts:64](https://github.com/jakubmazanec/tools/blob/7dee2e77a2efff2dbabcfc784ffaf6227143b7cb/packages/args/source/ParameterConfig.ts#L64)
+[args/source/ParameterConfig.ts:64](https://github.com/jakubmazanec/tools/blob/be2163f84cbbba1501692fb862cbb16c273cf74c/packages/args/source/ParameterConfig.ts#L64)

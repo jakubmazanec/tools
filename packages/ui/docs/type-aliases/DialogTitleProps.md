@@ -9,7 +9,7 @@
 > & `ComponentRef`\<`T`\> & `PropsWithChildren` & `object`
 
 Defined in:
-[packages/ui/source/components/DialogTitle.tsx:16](https://github.com/jakubmazanec/tools/blob/7dee2e77a2efff2dbabcfc784ffaf6227143b7cb/packages/ui/source/components/DialogTitle.tsx#L16)
+[packages/ui/source/components/DialogTitle.tsx:16](https://github.com/jakubmazanec/tools/blob/be2163f84cbbba1501692fb862cbb16c273cf74c/packages/ui/source/components/DialogTitle.tsx#L16)
 
 ## Type Declaration
 

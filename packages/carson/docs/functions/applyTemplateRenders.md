@@ -7,7 +7,7 @@
 > **applyTemplateRenders**(`__namedParameters`): `Promise`\<`void`\>
 
 Defined in:
-[packages/carson/source/template/applyTemplateRenders.ts:30](https://github.com/jakubmazanec/tools/blob/7dee2e77a2efff2dbabcfc784ffaf6227143b7cb/packages/carson/source/template/applyTemplateRenders.ts#L30)
+[packages/carson/source/template/applyTemplateRenders.ts:30](https://github.com/jakubmazanec/tools/blob/be2163f84cbbba1501692fb862cbb16c273cf74c/packages/carson/source/template/applyTemplateRenders.ts#L30)
 
 Applies rendered Carson template to a specified path, i.e. creates and updates files based on the
 result of rendering each Carson template file.

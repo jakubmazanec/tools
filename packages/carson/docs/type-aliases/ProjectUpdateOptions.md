@@ -7,7 +7,7 @@
 > **ProjectUpdateOptions** = `object`
 
 Defined in:
-[packages/carson/source/workspace/ProjectUpdateOptions.ts:4](https://github.com/jakubmazanec/tools/blob/7dee2e77a2efff2dbabcfc784ffaf6227143b7cb/packages/carson/source/workspace/ProjectUpdateOptions.ts#L4)
+[packages/carson/source/workspace/ProjectUpdateOptions.ts:4](https://github.com/jakubmazanec/tools/blob/be2163f84cbbba1501692fb862cbb16c273cf74c/packages/carson/source/workspace/ProjectUpdateOptions.ts#L4)
 
 [Project.update](../classes/Project.md#update) options parameter.
 
@@ -18,4 +18,4 @@ Defined in:
 > **args**: `Record`\<`string`, `unknown`\>
 
 Defined in:
-[packages/carson/source/workspace/ProjectUpdateOptions.ts:5](https://github.com/jakubmazanec/tools/blob/7dee2e77a2efff2dbabcfc784ffaf6227143b7cb/packages/carson/source/workspace/ProjectUpdateOptions.ts#L5)
+[packages/carson/source/workspace/ProjectUpdateOptions.ts:5](https://github.com/jakubmazanec/tools/blob/be2163f84cbbba1501692fb862cbb16c273cf74c/packages/carson/source/workspace/ProjectUpdateOptions.ts#L5)
