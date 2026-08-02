@@ -7,7 +7,7 @@
 > **ProgramCreateOptions** = `object`
 
 Defined in:
-[cli/source/program/ProgramCreateOptions.ts:7](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/cli/source/program/ProgramCreateOptions.ts#L7)
+[cli/source/program/ProgramCreateOptions.ts:7](https://github.com/jakubmazanec/tools/blob/2c78f29cf23098fa3ebc299e5eb40d65134b033e/packages/cli/source/program/ProgramCreateOptions.ts#L7)
 
 [Program.create](../classes/Program.md#create) options parameter.
 
@@ -18,7 +18,7 @@ Defined in:
 > `optional` **bin?**: `string`
 
 Defined in:
-[cli/source/program/ProgramCreateOptions.ts:21](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/cli/source/program/ProgramCreateOptions.ts#L21)
+[cli/source/program/ProgramCreateOptions.ts:21](https://github.com/jakubmazanec/tools/blob/2c78f29cf23098fa3ebc299e5eb40d65134b033e/packages/cli/source/program/ProgramCreateOptions.ts#L21)
 
 Program executable name.
 
@@ -29,7 +29,7 @@ Program executable name.
 > `optional` **checkForUpdate?**: `boolean`
 
 Defined in:
-[cli/source/program/ProgramCreateOptions.ts:27](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/cli/source/program/ProgramCreateOptions.ts#L27)
+[cli/source/program/ProgramCreateOptions.ts:27](https://github.com/jakubmazanec/tools/blob/2c78f29cf23098fa3ebc299e5eb40d65134b033e/packages/cli/source/program/ProgramCreateOptions.ts#L27)
 
 Perform check whether a newer version of the program is available.
 
@@ -40,7 +40,7 @@ Perform check whether a newer version of the program is available.
 > `optional` **description?**: `string`
 
 Defined in:
-[cli/source/program/ProgramCreateOptions.ts:18](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/cli/source/program/ProgramCreateOptions.ts#L18)
+[cli/source/program/ProgramCreateOptions.ts:18](https://github.com/jakubmazanec/tools/blob/2c78f29cf23098fa3ebc299e5eb40d65134b033e/packages/cli/source/program/ProgramCreateOptions.ts#L18)
 
 Program description.
 
@@ -51,7 +51,7 @@ Program description.
 > `optional` **displayName?**: `string`
 
 Defined in:
-[cli/source/program/ProgramCreateOptions.ts:12](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/cli/source/program/ProgramCreateOptions.ts#L12)
+[cli/source/program/ProgramCreateOptions.ts:12](https://github.com/jakubmazanec/tools/blob/2c78f29cf23098fa3ebc299e5eb40d65134b033e/packages/cli/source/program/ProgramCreateOptions.ts#L12)
 
 More readable program name.
 
@@ -62,7 +62,7 @@ More readable program name.
 > `optional` **ErrorBoundaryFallbackComponent?**: `ComponentType`\<`FallbackProps`>\>
 
 Defined in:
-[cli/source/program/ProgramCreateOptions.ts:24](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/cli/source/program/ProgramCreateOptions.ts#L24)
+[cli/source/program/ProgramCreateOptions.ts:24](https://github.com/jakubmazanec/tools/blob/2c78f29cf23098fa3ebc299e5eb40d65134b033e/packages/cli/source/program/ProgramCreateOptions.ts#L24)
 
 Custom error boundary fallback component
 
@@ -73,7 +73,7 @@ Custom error boundary fallback component
 > `optional` **name?**: `string`
 
 Defined in:
-[cli/source/program/ProgramCreateOptions.ts:9](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/cli/source/program/ProgramCreateOptions.ts#L9)
+[cli/source/program/ProgramCreateOptions.ts:9](https://github.com/jakubmazanec/tools/blob/2c78f29cf23098fa3ebc299e5eb40d65134b033e/packages/cli/source/program/ProgramCreateOptions.ts#L9)
 
 Program name.
 
@@ -84,6 +84,6 @@ Program name.
 > `optional` **version?**: `string`
 
 Defined in:
-[cli/source/program/ProgramCreateOptions.ts:15](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/cli/source/program/ProgramCreateOptions.ts#L15)
+[cli/source/program/ProgramCreateOptions.ts:15](https://github.com/jakubmazanec/tools/blob/2c78f29cf23098fa3ebc299e5eb40d65134b033e/packages/cli/source/program/ProgramCreateOptions.ts#L15)
 
 Program version.

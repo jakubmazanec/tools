@@ -7,7 +7,7 @@
 > **ThemeProviderProps** = `object`
 
 Defined in:
-[packages/ui/source/theme/ThemeProvider.tsx:6](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/ui/source/theme/ThemeProvider.tsx#L6)
+[packages/ui/source/theme/ThemeProvider.tsx:6](https://github.com/jakubmazanec/tools/blob/2c78f29cf23098fa3ebc299e5eb40d65134b033e/packages/ui/source/theme/ThemeProvider.tsx#L6)
 
 ## Properties
 
@@ -16,4 +16,4 @@ Defined in:
 > **theme**: [`Theme`](Theme.md)
 
 Defined in:
-[packages/ui/source/theme/ThemeProvider.tsx:7](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/ui/source/theme/ThemeProvider.tsx#L7)
+[packages/ui/source/theme/ThemeProvider.tsx:7](https://github.com/jakubmazanec/tools/blob/2c78f29cf23098fa3ebc299e5eb40d65134b033e/packages/ui/source/theme/ThemeProvider.tsx#L7)

@@ -7,7 +7,7 @@
 > **If**\<`X`, `Y`, `T`, `F`> \> = `X` _extends_ `Y` ? `T` : `F`
 
 Defined in:
-[packages/ts-utils/source/types/If.ts:15](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/ts-utils/source/types/If.ts#L15)
+[packages/ts-utils/source/types/If.ts:15](https://github.com/jakubmazanec/tools/blob/2c78f29cf23098fa3ebc299e5eb40d65134b033e/packages/ts-utils/source/types/If.ts#L15)
 
 `If<X, Y, T, F>` is shorthand for conditional type `X extends Y ? T : F`:
 

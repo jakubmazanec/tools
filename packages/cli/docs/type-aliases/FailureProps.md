@@ -7,7 +7,7 @@
 > **FailureProps** = `BoxProps` & `object`
 
 Defined in:
-[cli/source/ui/Failure.tsx:12](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/cli/source/ui/Failure.tsx#L12)
+[cli/source/ui/Failure.tsx:12](https://github.com/jakubmazanec/tools/blob/2c78f29cf23098fa3ebc299e5eb40d65134b033e/packages/cli/source/ui/Failure.tsx#L12)
 
 [Failure](../functions/Failure.md) component props.
 
@@ -15,7 +15,7 @@ Defined in:
 
 ### error
 
-> **error**: `Error`
+> **error**: `unknown`
 
 Error that describes a failure state. Function [getErrorDetail](../functions/getErrorDetail.md) is
 used for getting all the information from the error; you can use it to implement own retrieval logic

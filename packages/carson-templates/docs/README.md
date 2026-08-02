@@ -16,6 +16,7 @@
 
 - [APP\_PORT](variables/APP_PORT.md)
 - [AUTHOR](variables/AUTHOR.md)
+- [BROWSER\_TEST\_GLOB](variables/BROWSER_TEST_GLOB.md)
 - [BUILD\_DIRECTORY](variables/BUILD_DIRECTORY.md)
 - [CARSON\_PACKAGE\_NAME](variables/CARSON_PACKAGE_NAME.md)
 - [CHANGELOG\_PACKAGE\_NAME](variables/CHANGELOG_PACKAGE_NAME.md)
@@ -33,6 +34,7 @@
 - [STORYBOOK\_BUILD\_DIRECTORY](variables/STORYBOOK_BUILD_DIRECTORY.md)
 - [TEMPLATE\_PACKAGE\_NAME](variables/TEMPLATE_PACKAGE_NAME.md)
 - [TEST\_COMMAND](variables/TEST_COMMAND.md)
+- [TEST\_GLOB](variables/TEST_GLOB.md)
 - [TSCONFIG\_COMPILER\_OPTIONS](variables/TSCONFIG_COMPILER_OPTIONS.md)
 - [TYPEDOC\_CONFIG](variables/TYPEDOC_CONFIG.md)
 
@@ -44,5 +46,7 @@
 - [getDependencies](functions/getDependencies.md)
 - [getDevelopmentBranch](functions/getDevelopmentBranch.md)
 - [getMainBranch](functions/getMainBranch.md)
+- [getProjectsWithBrowserTests](functions/getProjectsWithBrowserTests.md)
 - [getReferences](functions/getReferences.md)
 - [getWorkspaceName](functions/getWorkspaceName.md)
+- [hasProjectBrowserTests](functions/hasProjectBrowserTests.md)

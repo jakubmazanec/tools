@@ -7,7 +7,7 @@
 > **ErrorDetail** = `object`
 
 Defined in:
-[cli/source/ui/ErrorDetail.ts:4](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/cli/source/ui/ErrorDetail.ts#L4)
+[cli/source/ui/ErrorDetail.ts:4](https://github.com/jakubmazanec/tools/blob/2c78f29cf23098fa3ebc299e5eb40d65134b033e/packages/cli/source/ui/ErrorDetail.ts#L4)
 
 Detailed error information.
 
@@ -18,7 +18,7 @@ Detailed error information.
 > `optional` **cause?**: `object`
 
 Defined in:
-[cli/source/ui/ErrorDetail.ts:8](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/cli/source/ui/ErrorDetail.ts#L8)
+[cli/source/ui/ErrorDetail.ts:8](https://github.com/jakubmazanec/tools/blob/2c78f29cf23098fa3ebc299e5eb40d65134b033e/packages/cli/source/ui/ErrorDetail.ts#L8)
 
 #### description?
 
@@ -35,7 +35,7 @@ Defined in:
 > `optional` **description?**: `string`
 
 Defined in:
-[cli/source/ui/ErrorDetail.ts:6](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/cli/source/ui/ErrorDetail.ts#L6)
+[cli/source/ui/ErrorDetail.ts:6](https://github.com/jakubmazanec/tools/blob/2c78f29cf23098fa3ebc299e5eb40d65134b033e/packages/cli/source/ui/ErrorDetail.ts#L6)
 
 ---
 
@@ -44,7 +44,7 @@ Defined in:
 > **label**: `string`
 
 Defined in:
-[cli/source/ui/ErrorDetail.ts:5](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/cli/source/ui/ErrorDetail.ts#L5)
+[cli/source/ui/ErrorDetail.ts:5](https://github.com/jakubmazanec/tools/blob/2c78f29cf23098fa3ebc299e5eb40d65134b033e/packages/cli/source/ui/ErrorDetail.ts#L5)
 
 ---
 
@@ -53,4 +53,4 @@ Defined in:
 > `optional` **stack?**: `string`
 
 Defined in:
-[cli/source/ui/ErrorDetail.ts:7](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/cli/source/ui/ErrorDetail.ts#L7)
+[cli/source/ui/ErrorDetail.ts:7](https://github.com/jakubmazanec/tools/blob/2c78f29cf23098fa3ebc299e5eb40d65134b033e/packages/cli/source/ui/ErrorDetail.ts#L7)

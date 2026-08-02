@@ -34,7 +34,7 @@
 > packages?: string\[\] \} \}
 
 Defined in:
-[utils/isPackageJson.ts:3](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/zod-utils/source/utils/isPackageJson.ts#L3)
+[utils/isPackageJson.ts:3](https://github.com/jakubmazanec/tools/blob/2c78f29cf23098fa3ebc299e5eb40d65134b033e/packages/zod-utils/source/utils/isPackageJson.ts#L3)
 
 ## Parameters
 

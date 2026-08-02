@@ -7,7 +7,7 @@
 > **CustomErrorWithData**\<`ErrorCode`, `ErrorData`> \> = `Error` & `object`
 
 Defined in:
-[types/CustomErrorWithData.ts:6](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/error/source/types/CustomErrorWithData.ts#L6)
+[types/CustomErrorWithData.ts:6](https://github.com/jakubmazanec/tools/blob/2c78f29cf23098fa3ebc299e5eb40d65134b033e/packages/error/source/types/CustomErrorWithData.ts#L6)
 
 Type representing custom error that can have an arbitrary data attached.
 

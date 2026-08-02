@@ -5,7 +5,7 @@
 # Class: AssertionError
 
 Defined in:
-[packages/ts-utils/source/utils/assert.ts:4](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/ts-utils/source/utils/assert.ts#L4)
+[packages/ts-utils/source/utils/assert.ts:4](https://github.com/jakubmazanec/tools/blob/2c78f29cf23098fa3ebc299e5eb40d65134b033e/packages/ts-utils/source/utils/assert.ts#L4)
 
 A subclass of `Error` that indicates an assertion failure.
 
@@ -20,7 +20,7 @@ A subclass of `Error` that indicates an assertion failure.
 > **new AssertionError**(`message?`): `AssertionError`
 
 Defined in:
-[packages/ts-utils/source/utils/assert.ts:10](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/ts-utils/source/utils/assert.ts#L10)
+[packages/ts-utils/source/utils/assert.ts:10](https://github.com/jakubmazanec/tools/blob/2c78f29cf23098fa3ebc299e5eb40d65134b033e/packages/ts-utils/source/utils/assert.ts#L10)
 
 #### Parameters
 
@@ -69,7 +69,7 @@ Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1077
 > **name**: `string` = `'AssertionError'`
 
 Defined in:
-[packages/ts-utils/source/utils/assert.ts:5](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/ts-utils/source/utils/assert.ts#L5)
+[packages/ts-utils/source/utils/assert.ts:5](https://github.com/jakubmazanec/tools/blob/2c78f29cf23098fa3ebc299e5eb40d65134b033e/packages/ts-utils/source/utils/assert.ts#L5)
 
 #### Overrides
 

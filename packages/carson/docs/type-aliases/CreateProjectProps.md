@@ -7,7 +7,7 @@
 > **CreateProjectProps** = `object`
 
 Defined in:
-[packages/carson/source/commands/create-project/CreateProject.tsx:15](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/carson/source/commands/create-project/CreateProject.tsx#L15)
+[packages/carson/source/commands/create-project/CreateProject.tsx:15](https://github.com/jakubmazanec/tools/blob/2c78f29cf23098fa3ebc299e5eb40d65134b033e/packages/carson/source/commands/create-project/CreateProject.tsx#L15)
 
 ## Properties
 
@@ -17,7 +17,7 @@ Defined in:
 > [`createProjectCommand`](../variables/createProjectCommand.md)>\>
 
 Defined in:
-[packages/carson/source/commands/create-project/CreateProject.tsx:16](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/carson/source/commands/create-project/CreateProject.tsx#L16)
+[packages/carson/source/commands/create-project/CreateProject.tsx:16](https://github.com/jakubmazanec/tools/blob/2c78f29cf23098fa3ebc299e5eb40d65134b033e/packages/carson/source/commands/create-project/CreateProject.tsx#L16)
 
 ---
 
@@ -27,4 +27,4 @@ Defined in:
 > [`Workspace`](../classes/Workspace.md)\<`false`>\>
 
 Defined in:
-[packages/carson/source/commands/create-project/CreateProject.tsx:17](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/carson/source/commands/create-project/CreateProject.tsx#L17)
+[packages/carson/source/commands/create-project/CreateProject.tsx:17](https://github.com/jakubmazanec/tools/blob/2c78f29cf23098fa3ebc299e5eb40d65134b033e/packages/carson/source/commands/create-project/CreateProject.tsx#L17)
