@@ -18,7 +18,7 @@ prepatch, or prerelease), or null if it's not valid.
 
 #### version
 
-`string` | [`SemVer`](../classes/SemVer.md)
+`string` \| [`SemVer`](../classes/SemVer.md)
 
 #### release
 
@@ -26,7 +26,7 @@ prepatch, or prerelease), or null if it's not valid.
 
 #### optionsOrLoose?
 
-`boolean` | [`Options`](../interfaces/Options.md)
+`boolean` \| [`Options`](../interfaces/Options.md)
 
 #### identifier?
 
@@ -53,7 +53,7 @@ prepatch, or prerelease), or null if it's not valid.
 
 #### version
 
-`string` | [`SemVer`](../classes/SemVer.md)
+`string` \| [`SemVer`](../classes/SemVer.md)
 
 #### release
 

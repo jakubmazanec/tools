@@ -18,11 +18,11 @@ Defined in: node_modules/@types/semver/classes/comparator.d.ts:5
 
 ##### comp
 
-`string` | `Comparator`
+`string` \| `Comparator`
 
 ##### optionsOrLoose?
 
-`boolean` | [`Options`](../interfaces/Options.md)
+`boolean` \| [`Options`](../interfaces/Options.md)
 
 #### Returns
 
@@ -84,7 +84,7 @@ Defined in: node_modules/@types/semver/classes/comparator.d.ts:14
 
 ##### optionsOrLoose?
 
-`boolean` | [`Options`](../interfaces/Options.md)
+`boolean` \| [`Options`](../interfaces/Options.md)
 
 #### Returns
 
@@ -120,7 +120,7 @@ Defined in: node_modules/@types/semver/classes/comparator.d.ts:13
 
 ##### version
 
-`string` | [`SemVer`](SemVer.md)
+`string` \| [`SemVer`](SemVer.md)
 
 #### Returns
 

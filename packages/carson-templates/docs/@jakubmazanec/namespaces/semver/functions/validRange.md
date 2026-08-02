@@ -14,11 +14,11 @@ Return the valid range or null if it's not valid
 
 ### range
 
-`string` | [`Range`](../classes/Range.md) | `null` | `undefined`
+`string` \| [`Range`](../classes/Range.md) \| `null` \| `undefined`
 
 ### optionsOrLoose?
 
-`boolean` | [`RangeOptions`](../interfaces/RangeOptions.md)
+`boolean` \| [`RangeOptions`](../interfaces/RangeOptions.md)
 
 ## Returns
 

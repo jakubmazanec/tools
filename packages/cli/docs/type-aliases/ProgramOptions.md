@@ -7,7 +7,7 @@
 > **ProgramOptions** = `object`
 
 Defined in:
-[packages/cli/source/program/ProgramOptions.ts:7](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/cli/source/program/ProgramOptions.ts#L7)
+[cli/source/program/ProgramOptions.ts:7](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/cli/source/program/ProgramOptions.ts#L7)
 
 Program.constructor \| Program constructor options parameter.
 
@@ -15,10 +15,10 @@ Program.constructor \| Program constructor options parameter.
 
 ### bin?
 
-> `optional` **bin**: `string`
+> `optional` **bin?**: `string`
 
 Defined in:
-[packages/cli/source/program/ProgramOptions.ts:24](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/cli/source/program/ProgramOptions.ts#L24)
+[cli/source/program/ProgramOptions.ts:24](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/cli/source/program/ProgramOptions.ts#L24)
 
 Program executable name.
 
@@ -26,10 +26,10 @@ Program executable name.
 
 ### checkForUpdate?
 
-> `optional` **checkForUpdate**: `boolean`
+> `optional` **checkForUpdate?**: `boolean`
 
 Defined in:
-[packages/cli/source/program/ProgramOptions.ts:30](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/cli/source/program/ProgramOptions.ts#L30)
+[cli/source/program/ProgramOptions.ts:30](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/cli/source/program/ProgramOptions.ts#L30)
 
 Perform check whether a newer version of the program is available.
 
@@ -37,10 +37,10 @@ Perform check whether a newer version of the program is available.
 
 ### description?
 
-> `optional` **description**: `string`
+> `optional` **description?**: `string`
 
 Defined in:
-[packages/cli/source/program/ProgramOptions.ts:21](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/cli/source/program/ProgramOptions.ts#L21)
+[cli/source/program/ProgramOptions.ts:21](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/cli/source/program/ProgramOptions.ts#L21)
 
 Program description.
 
@@ -48,10 +48,10 @@ Program description.
 
 ### displayName?
 
-> `optional` **displayName**: `string`
+> `optional` **displayName?**: `string`
 
 Defined in:
-[packages/cli/source/program/ProgramOptions.ts:12](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/cli/source/program/ProgramOptions.ts#L12)
+[cli/source/program/ProgramOptions.ts:12](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/cli/source/program/ProgramOptions.ts#L12)
 
 More readable program name.
 
@@ -59,10 +59,10 @@ More readable program name.
 
 ### ErrorBoundaryFallbackComponent?
 
-> `optional` **ErrorBoundaryFallbackComponent**: `ComponentType`\<`FallbackProps`\>
+> `optional` **ErrorBoundaryFallbackComponent?**: `ComponentType`\<`FallbackProps`\>
 
 Defined in:
-[packages/cli/source/program/ProgramOptions.ts:27](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/cli/source/program/ProgramOptions.ts#L27)
+[cli/source/program/ProgramOptions.ts:27](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/cli/source/program/ProgramOptions.ts#L27)
 
 Custom error boundary fallback component
 
@@ -70,10 +70,10 @@ Custom error boundary fallback component
 
 ### latestVersion?
 
-> `optional` **latestVersion**: `string`
+> `optional` **latestVersion?**: `string`
 
 Defined in:
-[packages/cli/source/program/ProgramOptions.ts:18](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/cli/source/program/ProgramOptions.ts#L18)
+[cli/source/program/ProgramOptions.ts:18](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/cli/source/program/ProgramOptions.ts#L18)
 
 Program latest version.
 
@@ -81,10 +81,10 @@ Program latest version.
 
 ### name?
 
-> `optional` **name**: `string`
+> `optional` **name?**: `string`
 
 Defined in:
-[packages/cli/source/program/ProgramOptions.ts:9](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/cli/source/program/ProgramOptions.ts#L9)
+[cli/source/program/ProgramOptions.ts:9](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/cli/source/program/ProgramOptions.ts#L9)
 
 Program name.
 
@@ -92,9 +92,9 @@ Program name.
 
 ### version?
 
-> `optional` **version**: `string`
+> `optional` **version?**: `string`
 
 Defined in:
-[packages/cli/source/program/ProgramOptions.ts:15](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/cli/source/program/ProgramOptions.ts#L15)
+[cli/source/program/ProgramOptions.ts:15](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/cli/source/program/ProgramOptions.ts#L15)
 
 Program version.

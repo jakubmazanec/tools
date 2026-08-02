@@ -7,7 +7,7 @@
 > **FailureProps** = `BoxProps` & `object`
 
 Defined in:
-[packages/cli/source/ui/Failure.tsx:12](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/cli/source/ui/Failure.tsx#L12)
+[cli/source/ui/Failure.tsx:12](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/cli/source/ui/Failure.tsx#L12)
 
 [Failure](../functions/Failure.md) component props.
 
@@ -23,6 +23,6 @@ and pass the result as `errorDetail` prop.
 
 ### errorDetail?
 
-> `optional` **errorDetail**: [`ErrorDetail`](ErrorDetail.md)
+> `optional` **errorDetail?**: [`ErrorDetail`](ErrorDetail.md)
 
 Information about the failure state. Overrides information retireved from `error` prop.

@@ -14,11 +14,11 @@ Mostly just for testing and legacy API reasons
 
 ### range
 
-`string` | [`Range`](../classes/Range.md)
+`string` \| [`Range`](../classes/Range.md)
 
 ### optionsOrLoose?
 
-`boolean` | [`Options`](../interfaces/Options.md)
+`boolean` \| [`Options`](../interfaces/Options.md)
 
 ## Returns
 

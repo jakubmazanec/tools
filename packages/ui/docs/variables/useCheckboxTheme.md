@@ -7,7 +7,7 @@
 > `const` **useCheckboxTheme**: `object` & (`themeProps`) => `object`
 
 Defined in:
-[packages/ui/source/components/Checkbox.tsx:18](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/ui/source/components/Checkbox.tsx#L18)
+[packages/ui/source/components/Checkbox.tsx:18](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/ui/source/components/Checkbox.tsx#L18)
 
 ## Type Declaration
 

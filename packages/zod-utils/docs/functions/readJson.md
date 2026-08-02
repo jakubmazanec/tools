@@ -10,7 +10,7 @@
 > `ZodError`\<`output`\<`S`\>\>\>\>
 
 Defined in:
-[packages/zod-utils/source/utils/readJson.ts:12](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/zod-utils/source/utils/readJson.ts#L12)
+[utils/readJson.ts:12](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/zod-utils/source/utils/readJson.ts#L12)
 
 ## Type Parameters
 
@@ -26,7 +26,7 @@ Defined in:
 
 ### path
 
-`FileHandle` | `PathLike`
+`FileHandle` \| `PathLike`
 
 ### schema
 

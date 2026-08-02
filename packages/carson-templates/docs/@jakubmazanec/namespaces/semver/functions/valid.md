@@ -14,11 +14,11 @@ Return the parsed version as a string, or null if it's not valid.
 
 ### version
 
-`string` | [`SemVer`](../classes/SemVer.md) | `null` | `undefined`
+`string` \| [`SemVer`](../classes/SemVer.md) \| `null` \| `undefined`
 
 ### optionsOrLoose?
 
-`boolean` | [`Options`](../interfaces/Options.md)
+`boolean` \| [`Options`](../interfaces/Options.md)
 
 ## Returns
 

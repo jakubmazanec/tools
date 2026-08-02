@@ -14,7 +14,7 @@ Defined in: node_modules/@types/semver/index.d.ts:110
 
 ### includePrerelease?
 
-> `optional` **includePrerelease**: `boolean`
+> `optional` **includePrerelease?**: `boolean`
 
 Defined in: node_modules/@types/semver/index.d.ts:111
 
@@ -22,7 +22,7 @@ Defined in: node_modules/@types/semver/index.d.ts:111
 
 ### loose?
 
-> `optional` **loose**: `boolean`
+> `optional` **loose?**: `boolean`
 
 Defined in: node_modules/@types/semver/index.d.ts:107
 

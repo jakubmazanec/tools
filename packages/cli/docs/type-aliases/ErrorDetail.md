@@ -7,7 +7,7 @@
 > **ErrorDetail** = `object`
 
 Defined in:
-[packages/cli/source/ui/ErrorDetail.ts:4](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/cli/source/ui/ErrorDetail.ts#L4)
+[cli/source/ui/ErrorDetail.ts:4](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/cli/source/ui/ErrorDetail.ts#L4)
 
 Detailed error information.
 
@@ -15,27 +15,27 @@ Detailed error information.
 
 ### cause?
 
-> `optional` **cause**: `object`
+> `optional` **cause?**: `object`
 
 Defined in:
-[packages/cli/source/ui/ErrorDetail.ts:8](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/cli/source/ui/ErrorDetail.ts#L8)
+[cli/source/ui/ErrorDetail.ts:8](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/cli/source/ui/ErrorDetail.ts#L8)
 
 #### description?
 
-> `optional` **description**: `string`
+> `optional` **description?**: `string`
 
 #### stack?
 
-> `optional` **stack**: `string`
+> `optional` **stack?**: `string`
 
 ---
 
 ### description?
 
-> `optional` **description**: `string`
+> `optional` **description?**: `string`
 
 Defined in:
-[packages/cli/source/ui/ErrorDetail.ts:6](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/cli/source/ui/ErrorDetail.ts#L6)
+[cli/source/ui/ErrorDetail.ts:6](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/cli/source/ui/ErrorDetail.ts#L6)
 
 ---
 
@@ -44,13 +44,13 @@ Defined in:
 > **label**: `string`
 
 Defined in:
-[packages/cli/source/ui/ErrorDetail.ts:5](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/cli/source/ui/ErrorDetail.ts#L5)
+[cli/source/ui/ErrorDetail.ts:5](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/cli/source/ui/ErrorDetail.ts#L5)
 
 ---
 
 ### stack?
 
-> `optional` **stack**: `string`
+> `optional` **stack?**: `string`
 
 Defined in:
-[packages/cli/source/ui/ErrorDetail.ts:7](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/cli/source/ui/ErrorDetail.ts#L7)
+[cli/source/ui/ErrorDetail.ts:7](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/cli/source/ui/ErrorDetail.ts#L7)

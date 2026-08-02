@@ -5,7 +5,7 @@
 # Class: Project\<M\>
 
 Defined in:
-[packages/carson/source/workspace/Project.ts:29](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/carson/source/workspace/Project.ts#L29)
+[packages/carson/source/workspace/Project.ts:29](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/carson/source/workspace/Project.ts#L29)
 
 Project represent a self-contained piece of software (e.g. a package, or an app) that is part of a
 [Workspace](Workspace.md). Currently only Node.js projects are supported.
@@ -25,7 +25,7 @@ If true, the project belongs to a multi-project workspace.
 > **new Project**\<`M`\>(`__namedParameters`): `Project`\<`M`\>
 
 Defined in:
-[packages/carson/source/workspace/Project.ts:51](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/carson/source/workspace/Project.ts#L51)
+[packages/carson/source/workspace/Project.ts:51](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/carson/source/workspace/Project.ts#L51)
 
 #### Parameters
 
@@ -44,7 +44,7 @@ Defined in:
 > **config**: `object`
 
 Defined in:
-[packages/carson/source/workspace/Project.ts:40](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/carson/source/workspace/Project.ts#L40)
+[packages/carson/source/workspace/Project.ts:40](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/carson/source/workspace/Project.ts#L40)
 
 Project configuration; if it's not found, the default is an empty object.
 
@@ -54,7 +54,7 @@ Project configuration; if it's not found, the default is an empty object.
 
 #### template?
 
-> `optional` **template**: `string`
+> `optional` **template?**: `string`
 
 ---
 
@@ -65,7 +65,7 @@ Project configuration; if it's not found, the default is an empty object.
 > `"UNKNOWN_ERROR"`, `ProjectErrorData`\>[] = `[]`
 
 Defined in:
-[packages/carson/source/workspace/Project.ts:49](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/carson/source/workspace/Project.ts#L49)
+[packages/carson/source/workspace/Project.ts:49](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/carson/source/workspace/Project.ts#L49)
 
 Errors found during reading from the file system.
 
@@ -73,10 +73,10 @@ Errors found during reading from the file system.
 
 ### name?
 
-> `optional` **name**: `string`
+> `optional` **name?**: `string`
 
 Defined in:
-[packages/carson/source/workspace/Project.ts:31](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/carson/source/workspace/Project.ts#L31)
+[packages/carson/source/workspace/Project.ts:31](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/carson/source/workspace/Project.ts#L31)
 
 Project name.
 
@@ -87,360 +87,360 @@ Project name.
 > **packageJson**: `object`
 
 Defined in:
-[packages/carson/source/workspace/Project.ts:43](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/carson/source/workspace/Project.ts#L43)
+[packages/carson/source/workspace/Project.ts:43](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/carson/source/workspace/Project.ts#L43)
 
 Parsed project `package.json` file; if it's not found, the default is an empty object.
 
 #### author?
 
-> `optional` **author**: `string` \| \{ `email?`: `string`; `name`: `string`; `url?`: `string`; \}
+> `optional` **author?**: `string` \| \{ `email?`: `string`; `name`: `string`; `url?`: `string`; \}
 
 #### bin?
 
-> `optional` **bin**: `string` \| `Record`\<`string`, `string`\>
+> `optional` **bin?**: `string` \| `Record`\<`string`, `string`\>
 
 #### browser?
 
-> `optional` **browser**: `string` \| `Record`\<`string`, `string` \| `false`\>
+> `optional` **browser?**: `string` \| `Record`\<`string`, `string` \| `false`\>
 
 #### bugs?
 
-> `optional` **bugs**: `string` \| \{ `email?`: `string`; `url?`: `string`; \}
+> `optional` **bugs?**: `string` \| \{ `email?`: `string`; `url?`: `string`; \}
 
 #### bundledDependencies?
 
-> `optional` **bundledDependencies**: `boolean` \| `string`[]
+> `optional` **bundledDependencies?**: `boolean` \| `string`[]
 
 #### bundleDependencies?
 
-> `optional` **bundleDependencies**: `boolean` \| `string`[]
+> `optional` **bundleDependencies?**: `boolean` \| `string`[]
 
 #### config?
 
-> `optional` **config**: `Record`\<`string`, `unknown`\>
+> `optional` **config?**: `Record`\<`string`, `unknown`\>
 
 #### contributors?
 
-> `optional` **contributors**: (`string` \| \{ `email?`: `string`; `name`: `string`; `url?`:
+> `optional` **contributors?**: (`string` \| \{ `email?`: `string`; `name`: `string`; `url?`:
 > `string`; \})[]
 
 #### cpu?
 
-> `optional` **cpu**: `string`[]
+> `optional` **cpu?**: `string`[]
 
 #### dependencies?
 
-> `optional` **dependencies**: `Record`\<`string`, `string`\>
+> `optional` **dependencies?**: `Record`\<`string`, `string`\>
 
 #### description?
 
-> `optional` **description**: `string`
+> `optional` **description?**: `string`
 
 #### devDependencies?
 
-> `optional` **devDependencies**: `Record`\<`string`, `string`\>
+> `optional` **devDependencies?**: `Record`\<`string`, `string`\>
 
 #### directories?
 
-> `optional` **directories**: `object`
+> `optional` **directories?**: `object`
 
 ##### directories.bin?
 
-> `optional` **bin**: `string`
+> `optional` **bin?**: `string`
 
 ##### directories.doc?
 
-> `optional` **doc**: `string`
+> `optional` **doc?**: `string`
 
 ##### directories.example?
 
-> `optional` **example**: `string`
+> `optional` **example?**: `string`
 
 ##### directories.lib?
 
-> `optional` **lib**: `string`
+> `optional` **lib?**: `string`
 
 ##### directories.man?
 
-> `optional` **man**: `string`
+> `optional` **man?**: `string`
 
 ##### directories.v?
 
-> `optional` **v**: `string`
+> `optional` **v?**: `string`
 
 #### engines?
 
-> `optional` **engines**: `object` & `Record`\<`string`, `string`\>
+> `optional` **engines?**: `object` & `Record`\<`string`, `string`\>
 
 ##### Type Declaration
 
 ###### node?
 
-> `optional` **node**: `string`
+> `optional` **node?**: `string`
 
 ###### npm?
 
-> `optional` **npm**: `string`
+> `optional` **npm?**: `string`
 
 #### esnext?
 
-> `optional` **esnext**: `string` \| `Record`\<`string`, `string`\>
+> `optional` **esnext?**: `string` \| `Record`\<`string`, `string`\>
 
 #### exports?
 
-> `optional` **exports**: `PackageJsonExports`
+> `optional` **exports?**: `PackageJsonExports`
 
 #### files?
 
-> `optional` **files**: `string`[]
+> `optional` **files?**: `string`[]
 
 #### flat?
 
-> `optional` **flat**: `boolean`
+> `optional` **flat?**: `boolean`
 
 #### funding?
 
-> `optional` **funding**: `string` \| (`string` \| \{ `type?`: `string`; `url`: `string`; \})[] \|
+> `optional` **funding?**: `string` \| (`string` \| \{ `type?`: `string`; `url`: `string`; \})[] \|
 > \{ `type?`: `string`; `url`: `string`; \}
 
 #### homepage?
 
-> `optional` **homepage**: `string`
+> `optional` **homepage?**: `string`
 
 #### keywords?
 
-> `optional` **keywords**: `string`[]
+> `optional` **keywords?**: `string`[]
 
 #### license?
 
-> `optional` **license**: `string`
+> `optional` **license?**: `string`
 
 #### main?
 
-> `optional` **main**: `string`
+> `optional` **main?**: `string`
 
 #### maintainers?
 
-> `optional` **maintainers**: (`string` \| \{ `email?`: `string`; `name`: `string`; `url?`:
+> `optional` **maintainers?**: (`string` \| \{ `email?`: `string`; `name`: `string`; `url?`:
 > `string`; \})[]
 
 #### man?
 
-> `optional` **man**: `string` \| `string`[]
+> `optional` **man?**: `string` \| `string`[]
 
 #### module?
 
-> `optional` **module**: `string`
+> `optional` **module?**: `string`
 
 #### name?
 
-> `optional` **name**: `string`
+> `optional` **name?**: `string`
 
 #### optionalDependencies?
 
-> `optional` **optionalDependencies**: `Record`\<`string`, `string`\>
+> `optional` **optionalDependencies?**: `Record`\<`string`, `string`\>
 
 #### os?
 
-> `optional` **os**: `string`[]
+> `optional` **os?**: `string`[]
 
 #### overrides?
 
-> `optional` **overrides**: `Record`\<`string`, `string` \| `Record`\<`string`, `string` \|
+> `optional` **overrides?**: `Record`\<`string`, `string` \| `Record`\<`string`, `string` \|
 > `Record`\<`string`, `unknown`\>\>\>
 
 #### packageManager?
 
-> `optional` **packageManager**: `string`
+> `optional` **packageManager?**: `string`
 
 #### peerDependencies?
 
-> `optional` **peerDependencies**: `Record`\<`string`, `string`\>
+> `optional` **peerDependencies?**: `Record`\<`string`, `string`\>
 
 #### peerDependenciesMeta?
 
-> `optional` **peerDependenciesMeta**: `Record`\<`string`, \{ `optional`: `boolean`; \}\>
+> `optional` **peerDependenciesMeta?**: `Record`\<`string`, \{ `optional`: `boolean`; \}\>
 
 #### preferGlobal?
 
-> `optional` **preferGlobal**: `boolean`
+> `optional` **preferGlobal?**: `boolean`
 
 #### private?
 
-> `optional` **private**: `boolean`
+> `optional` **private?**: `boolean`
 
 #### publishConfig?
 
-> `optional` **publishConfig**: `object` & `Record`\<`string`, `unknown`\>
+> `optional` **publishConfig?**: `object` & `Record`\<`string`, `unknown`\>
 
 ##### Type Declaration
 
 ###### access?
 
-> `optional` **access**: `"public"` \| `"restricted"`
+> `optional` **access?**: `"public"` \| `"restricted"`
 
 ###### registry?
 
-> `optional` **registry**: `string`
+> `optional` **registry?**: `string`
 
 ###### tag?
 
-> `optional` **tag**: `string`
+> `optional` **tag?**: `string`
 
 #### repository?
 
-> `optional` **repository**: `string` \| \{ `directory?`: `string`; `type`: `string`; `url`:
+> `optional` **repository?**: `string` \| \{ `directory?`: `string`; `type`: `string`; `url`:
 > `string`; \}
 
 #### resolutions?
 
-> `optional` **resolutions**: `Record`\<`string`, `string`\>
+> `optional` **resolutions?**: `Record`\<`string`, `string`\>
 
 #### scripts?
 
-> `optional` **scripts**: `Record`\<`string`, `string`\> & `object`
+> `optional` **scripts?**: `Record`\<`string`, `string`\> & `object`
 
 ##### Type Declaration
 
 ###### install?
 
-> `optional` **install**: `string`
+> `optional` **install?**: `string`
 
 ###### postinstall?
 
-> `optional` **postinstall**: `string`
+> `optional` **postinstall?**: `string`
 
 ###### postpack?
 
-> `optional` **postpack**: `string`
+> `optional` **postpack?**: `string`
 
 ###### postpublish?
 
-> `optional` **postpublish**: `string`
+> `optional` **postpublish?**: `string`
 
 ###### postrestart?
 
-> `optional` **postrestart**: `string`
+> `optional` **postrestart?**: `string`
 
 ###### poststart?
 
-> `optional` **poststart**: `string`
+> `optional` **poststart?**: `string`
 
 ###### poststop?
 
-> `optional` **poststop**: `string`
+> `optional` **poststop?**: `string`
 
 ###### posttest?
 
-> `optional` **posttest**: `string`
+> `optional` **posttest?**: `string`
 
 ###### postuninstall?
 
-> `optional` **postuninstall**: `string`
+> `optional` **postuninstall?**: `string`
 
 ###### postversion?
 
-> `optional` **postversion**: `string`
+> `optional` **postversion?**: `string`
 
 ###### preinstall?
 
-> `optional` **preinstall**: `string`
+> `optional` **preinstall?**: `string`
 
 ###### prepack?
 
-> `optional` **prepack**: `string`
+> `optional` **prepack?**: `string`
 
 ###### prepare?
 
-> `optional` **prepare**: `string`
+> `optional` **prepare?**: `string`
 
 ###### prepublish?
 
-> `optional` **prepublish**: `string`
+> `optional` **prepublish?**: `string`
 
 ###### prepublishOnly?
 
-> `optional` **prepublishOnly**: `string`
+> `optional` **prepublishOnly?**: `string`
 
 ###### prerestart?
 
-> `optional` **prerestart**: `string`
+> `optional` **prerestart?**: `string`
 
 ###### prestart?
 
-> `optional` **prestart**: `string`
+> `optional` **prestart?**: `string`
 
 ###### prestop?
 
-> `optional` **prestop**: `string`
+> `optional` **prestop?**: `string`
 
 ###### pretest?
 
-> `optional` **pretest**: `string`
+> `optional` **pretest?**: `string`
 
 ###### preuninstall?
 
-> `optional` **preuninstall**: `string`
+> `optional` **preuninstall?**: `string`
 
 ###### preversion?
 
-> `optional` **preversion**: `string`
+> `optional` **preversion?**: `string`
 
 ###### publish?
 
-> `optional` **publish**: `string`
+> `optional` **publish?**: `string`
 
 ###### restart?
 
-> `optional` **restart**: `string`
+> `optional` **restart?**: `string`
 
 ###### start?
 
-> `optional` **start**: `string`
+> `optional` **start?**: `string`
 
 ###### stop?
 
-> `optional` **stop**: `string`
+> `optional` **stop?**: `string`
 
 ###### test?
 
-> `optional` **test**: `string`
+> `optional` **test?**: `string`
 
 ###### uninstall?
 
-> `optional` **uninstall**: `string`
+> `optional` **uninstall?**: `string`
 
 ###### version?
 
-> `optional` **version**: `string`
+> `optional` **version?**: `string`
 
 #### sideEffects?
 
-> `optional` **sideEffects**: `boolean` \| `string`[]
+> `optional` **sideEffects?**: `boolean` \| `string`[]
 
 #### source?
 
-> `optional` **source**: `string`
+> `optional` **source?**: `string`
 
 #### type?
 
-> `optional` **type**: `"module"` \| `"commonjs"`
+> `optional` **type?**: `"module"` \| `"commonjs"`
 
 #### types?
 
-> `optional` **types**: `string`
+> `optional` **types?**: `string`
 
 #### typings?
 
-> `optional` **typings**: `string`
+> `optional` **typings?**: `string`
 
 #### version?
 
-> `optional` **version**: `string`
+> `optional` **version?**: `string`
 
 #### workspaces?
 
-> `optional` **workspaces**: `string`[] \| \{ `nohoist?`: `string`[]; `packages?`: `string`[]; \}
+> `optional` **workspaces?**: `string`[] \| \{ `nohoist?`: `string`[]; `packages?`: `string`[]; \}
 
 ---
 
@@ -449,7 +449,7 @@ Parsed project `package.json` file; if it's not found, the default is an empty o
 > **path**: `string`
 
 Defined in:
-[packages/carson/source/workspace/Project.ts:34](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/carson/source/workspace/Project.ts#L34)
+[packages/carson/source/workspace/Project.ts:34](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/carson/source/workspace/Project.ts#L34)
 
 Project path.
 
@@ -460,7 +460,7 @@ Project path.
 > **relativePath**: `string`
 
 Defined in:
-[packages/carson/source/workspace/Project.ts:37](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/carson/source/workspace/Project.ts#L37)
+[packages/carson/source/workspace/Project.ts:37](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/carson/source/workspace/Project.ts#L37)
 
 Project path relative to workspace path.
 
@@ -471,7 +471,7 @@ Project path relative to workspace path.
 > **workspace**: [`Workspace`](Workspace.md)\<`M`\>
 
 Defined in:
-[packages/carson/source/workspace/Project.ts:46](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/carson/source/workspace/Project.ts#L46)
+[packages/carson/source/workspace/Project.ts:46](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/carson/source/workspace/Project.ts#L46)
 
 Parent [Workspace](Workspace.md) instance.
 
@@ -482,7 +482,7 @@ Parent [Workspace](Workspace.md) instance.
 > **read**(): `Promise`\<`Project`\<`M`\>\>
 
 Defined in:
-[packages/carson/source/workspace/Project.ts:164](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/carson/source/workspace/Project.ts#L164)
+[packages/carson/source/workspace/Project.ts:164](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/carson/source/workspace/Project.ts#L164)
 
 #### Returns
 
@@ -495,7 +495,7 @@ Defined in:
 > **update**(`__namedParameters`): `Promise`\<`Project`\<`M`\>\>
 
 Defined in:
-[packages/carson/source/workspace/Project.ts:245](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/carson/source/workspace/Project.ts#L245)
+[packages/carson/source/workspace/Project.ts:245](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/carson/source/workspace/Project.ts#L245)
 
 #### Parameters
 
@@ -514,7 +514,7 @@ Defined in:
 > `static` **create**\<`M`\>(`__namedParameters`): `Promise`\<`Project`\<`M`\>\>
 
 Defined in:
-[packages/carson/source/workspace/Project.ts:91](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/carson/source/workspace/Project.ts#L91)
+[packages/carson/source/workspace/Project.ts:91](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/carson/source/workspace/Project.ts#L91)
 
 #### Type Parameters
 
@@ -539,7 +539,7 @@ Defined in:
 > `static` **read**\<`M`\>(`projectPath`, `workspace`): `Promise`\<`Project`\<`M`\>\>
 
 Defined in:
-[packages/carson/source/workspace/Project.ts:150](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/carson/source/workspace/Project.ts#L150)
+[packages/carson/source/workspace/Project.ts:150](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/carson/source/workspace/Project.ts#L150)
 
 #### Type Parameters
 

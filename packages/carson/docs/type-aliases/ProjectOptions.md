@@ -7,7 +7,7 @@
 > **ProjectOptions**\<`M`\> = `object`
 
 Defined in:
-[packages/carson/source/workspace/ProjectOptions.ts:10](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/carson/source/workspace/ProjectOptions.ts#L10)
+[packages/carson/source/workspace/ProjectOptions.ts:10](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/carson/source/workspace/ProjectOptions.ts#L10)
 
 [Project constructor](../classes/Project.md#constructor) options parameter.
 
@@ -21,37 +21,38 @@ Defined in:
 
 ### config?
 
-> `optional` **config**: [`ProjectConfig`](ProjectConfig.md)
+> `optional` **config?**: [`ProjectConfig`](ProjectConfig.md)
 
 Defined in:
-[packages/carson/source/workspace/ProjectOptions.ts:13](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/carson/source/workspace/ProjectOptions.ts#L13)
+[packages/carson/source/workspace/ProjectOptions.ts:13](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/carson/source/workspace/ProjectOptions.ts#L13)
 
 ---
 
 ### errors?
 
-> `optional` **errors**: `InstanceType`\<_typeof_ [`ProjectError`](../variables/ProjectError.md)\>[]
+> `optional` **errors?**: `InstanceType`\<_typeof_
+> [`ProjectError`](../variables/ProjectError.md)\>[]
 
 Defined in:
-[packages/carson/source/workspace/ProjectOptions.ts:16](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/carson/source/workspace/ProjectOptions.ts#L16)
+[packages/carson/source/workspace/ProjectOptions.ts:16](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/carson/source/workspace/ProjectOptions.ts#L16)
 
 ---
 
 ### name?
 
-> `optional` **name**: `string`
+> `optional` **name?**: `string`
 
 Defined in:
-[packages/carson/source/workspace/ProjectOptions.ts:12](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/carson/source/workspace/ProjectOptions.ts#L12)
+[packages/carson/source/workspace/ProjectOptions.ts:12](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/carson/source/workspace/ProjectOptions.ts#L12)
 
 ---
 
 ### packageJson?
 
-> `optional` **packageJson**: `PackageJson`
+> `optional` **packageJson?**: `PackageJson`
 
 Defined in:
-[packages/carson/source/workspace/ProjectOptions.ts:14](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/carson/source/workspace/ProjectOptions.ts#L14)
+[packages/carson/source/workspace/ProjectOptions.ts:14](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/carson/source/workspace/ProjectOptions.ts#L14)
 
 ---
 
@@ -60,7 +61,7 @@ Defined in:
 > **path**: `string`
 
 Defined in:
-[packages/carson/source/workspace/ProjectOptions.ts:11](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/carson/source/workspace/ProjectOptions.ts#L11)
+[packages/carson/source/workspace/ProjectOptions.ts:11](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/carson/source/workspace/ProjectOptions.ts#L11)
 
 ---
 
@@ -69,4 +70,4 @@ Defined in:
 > **workspace**: [`Workspace`](../classes/Workspace.md)\<`M`\>
 
 Defined in:
-[packages/carson/source/workspace/ProjectOptions.ts:15](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/carson/source/workspace/ProjectOptions.ts#L15)
+[packages/carson/source/workspace/ProjectOptions.ts:15](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/carson/source/workspace/ProjectOptions.ts#L15)

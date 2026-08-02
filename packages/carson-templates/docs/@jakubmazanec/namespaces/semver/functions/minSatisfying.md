@@ -24,11 +24,11 @@ readonly `T`[]
 
 ### range
 
-`string` | [`Range`](../classes/Range.md)
+`string` \| [`Range`](../classes/Range.md)
 
 ### optionsOrLoose?
 
-`boolean` | [`RangeOptions`](../interfaces/RangeOptions.md)
+`boolean` \| [`RangeOptions`](../interfaces/RangeOptions.md)
 
 ## Returns
 

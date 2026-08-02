@@ -19,7 +19,7 @@ null if version is invalid.
 
 ### optionsOrLoose?
 
-`boolean` | [`Options`](../interfaces/Options.md)
+`boolean` \| [`Options`](../interfaces/Options.md)
 
 ## Returns
 

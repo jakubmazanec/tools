@@ -9,25 +9,25 @@
 > `ComponentPropsWithoutRef`\<`T`\> & `ComponentRef`\<`T`\> & `PropsWithChildren` & `object`
 
 Defined in:
-[packages/ui/source/components/PopoverPanel.tsx:19](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/ui/source/components/PopoverPanel.tsx#L19)
+[packages/ui/source/components/PopoverPanel.tsx:19](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/ui/source/components/PopoverPanel.tsx#L19)
 
 ## Type Declaration
 
 ### anchor?
 
-> `optional` **anchor**: `HeadlessPopoverPanelProps`\[`"anchor"`\]
+> `optional` **anchor?**: `HeadlessPopoverPanelProps`\[`"anchor"`\]
 
 ### as?
 
-> `optional` **as**: `T`
+> `optional` **as?**: `T`
 
 ### className?
 
-> `optional` **className**: `string`
+> `optional` **className?**: `string`
 
 ### static?
 
-> `optional` **static**: `boolean`
+> `optional` **static?**: `boolean`
 
 ## Type Parameters
 

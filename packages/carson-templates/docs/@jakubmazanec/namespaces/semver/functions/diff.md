@@ -15,11 +15,11 @@ patch, prepatch, or prerelease), or null if the versions are the same.
 
 ### v1
 
-`string` | [`SemVer`](../classes/SemVer.md)
+`string` \| [`SemVer`](../classes/SemVer.md)
 
 ### v2
 
-`string` | [`SemVer`](../classes/SemVer.md)
+`string` \| [`SemVer`](../classes/SemVer.md)
 
 ## Returns
 

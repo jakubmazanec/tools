@@ -21,7 +21,7 @@ In case `version` is invalid, the function will
 
 #### version?
 
-`string` | [`SemVer`](../classes/SemVer.md) | `null`
+`string` \| [`SemVer`](../classes/SemVer.md) \| `null`
 
 ### Returns
 
@@ -44,11 +44,11 @@ In case `version` is invalid, the function will
 
 #### version
 
-`string` | [`SemVer`](../classes/SemVer.md) | `null` | `undefined`
+`string` \| [`SemVer`](../classes/SemVer.md) \| `null` \| `undefined`
 
 #### optionsOrLoose
 
-`boolean` | [`Options`](../interfaces/Options.md)
+`boolean` \| [`Options`](../interfaces/Options.md)
 
 #### throwErrors
 
@@ -75,11 +75,11 @@ In case `version` is invalid, the function will
 
 #### version
 
-`string` | [`SemVer`](../classes/SemVer.md) | `null` | `undefined`
+`string` \| [`SemVer`](../classes/SemVer.md) \| `null` \| `undefined`
 
 #### optionsOrLoose
 
-`boolean` | [`Options`](../interfaces/Options.md)
+`boolean` \| [`Options`](../interfaces/Options.md)
 
 #### throwErrors?
 

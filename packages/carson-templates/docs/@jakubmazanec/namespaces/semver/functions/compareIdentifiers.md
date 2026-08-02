@@ -16,11 +16,11 @@ Sorts in ascending order when passed to `Array.sort()`.
 
 ### a
 
-`string` | `null` | `undefined`
+`string` \| `null` \| `undefined`
 
 ### b
 
-`string` | `null` | `undefined`
+`string` \| `null` \| `undefined`
 
 ## Returns
 

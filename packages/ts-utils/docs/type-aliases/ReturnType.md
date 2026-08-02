@@ -8,7 +8,7 @@
 > J\> ? `J` : `R` : `never`
 
 Defined in:
-[packages/ts-utils/source/types/ReturnType.ts:20](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/ts-utils/source/types/ReturnType.ts#L20)
+[packages/ts-utils/source/types/ReturnType.ts:20](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/ts-utils/source/types/ReturnType.ts#L20)
 
 Constructs a type consisting of the return type of function `T`. Similarly like built-in
 `ReturnType` utility type, but works also on nullable and other types, and if you use it with async
@@ -28,6 +28,6 @@ type Result = ReturnType<typeof foo.get>; // `typeof Result` is `string`
 
 ### T
 
-`T` _extends_ (...`args`) => `any` \| `""` \| `false` \| `null` \| `undefined`
+`T` _extends_ ((...`args`) => `any`) \| `""` \| `false` \| `null` \| `undefined`
 
 Base for the new type

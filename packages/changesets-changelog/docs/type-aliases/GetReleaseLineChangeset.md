@@ -7,10 +7,10 @@
 > **GetReleaseLineChangeset** = `NewChangeset` & `object`
 
 Defined in:
-[getReleaseLine.ts:4](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/changesets-changelog/source/getReleaseLine.ts#L4)
+[getReleaseLine.ts:4](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/changesets-changelog/source/getReleaseLine.ts#L4)
 
 ## Type Declaration
 
 ### commit?
 
-> `optional` **commit**: `string`
+> `optional` **commit?**: `string`

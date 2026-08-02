@@ -22,7 +22,7 @@ provided range is shorter in string-length than the generated range, then that i
 
 ### range
 
-`string` | [`Range`](../classes/Range.md)
+`string` \| [`Range`](../classes/Range.md)
 
 ### options?
 

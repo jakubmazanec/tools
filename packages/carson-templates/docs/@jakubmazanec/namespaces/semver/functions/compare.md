@@ -17,15 +17,15 @@ Sorts in ascending order when passed to `Array.sort()`.
 
 ### v1
 
-`string` | [`SemVer`](../classes/SemVer.md)
+`string` \| [`SemVer`](../classes/SemVer.md)
 
 ### v2
 
-`string` | [`SemVer`](../classes/SemVer.md)
+`string` \| [`SemVer`](../classes/SemVer.md)
 
 ### optionsOrLoose?
 
-`boolean` | [`Options`](../interfaces/Options.md)
+`boolean` \| [`Options`](../interfaces/Options.md)
 
 ## Returns
 

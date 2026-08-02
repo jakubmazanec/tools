@@ -5,7 +5,7 @@
 # Class: AssertionError
 
 Defined in:
-[packages/ts-utils/source/utils/assert.ts:4](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/ts-utils/source/utils/assert.ts#L4)
+[packages/ts-utils/source/utils/assert.ts:4](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/ts-utils/source/utils/assert.ts#L4)
 
 A subclass of `Error` that indicates an assertion failure.
 
@@ -20,7 +20,7 @@ A subclass of `Error` that indicates an assertion failure.
 > **new AssertionError**(`message?`): `AssertionError`
 
 Defined in:
-[packages/ts-utils/source/utils/assert.ts:10](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/ts-utils/source/utils/assert.ts#L10)
+[packages/ts-utils/source/utils/assert.ts:10](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/ts-utils/source/utils/assert.ts#L10)
 
 #### Parameters
 
@@ -42,7 +42,7 @@ Message added to the default error message
 
 ### cause?
 
-> `optional` **cause**: `unknown`
+> `optional` **cause?**: `unknown`
 
 Defined in: node_modules/typescript/lib/lib.es2022.error.d.ts:26
 
@@ -69,7 +69,7 @@ Defined in: node_modules/typescript/lib/lib.es5.d.ts:1077
 > **name**: `string` = `'AssertionError'`
 
 Defined in:
-[packages/ts-utils/source/utils/assert.ts:5](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/ts-utils/source/utils/assert.ts#L5)
+[packages/ts-utils/source/utils/assert.ts:5](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/ts-utils/source/utils/assert.ts#L5)
 
 #### Overrides
 
@@ -79,7 +79,7 @@ Defined in:
 
 ### stack?
 
-> `optional` **stack**: `string`
+> `optional` **stack?**: `string`
 
 Defined in: node_modules/typescript/lib/lib.es5.d.ts:1078
 

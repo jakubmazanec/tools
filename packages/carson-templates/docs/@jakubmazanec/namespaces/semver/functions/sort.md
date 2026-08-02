@@ -24,7 +24,7 @@ Sorts an array of semver entries in ascending order using `compareBuild()`.
 
 ### optionsOrLoose?
 
-`boolean` | [`Options`](../interfaces/Options.md)
+`boolean` \| [`Options`](../interfaces/Options.md)
 
 ## Returns
 

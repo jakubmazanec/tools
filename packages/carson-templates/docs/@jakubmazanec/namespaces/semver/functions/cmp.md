@@ -16,7 +16,7 @@ comparison string is provided.
 
 ### v1
 
-`string` | [`SemVer`](../classes/SemVer.md)
+`string` \| [`SemVer`](../classes/SemVer.md)
 
 ### operator
 
@@ -24,11 +24,11 @@ comparison string is provided.
 
 ### v2
 
-`string` | [`SemVer`](../classes/SemVer.md)
+`string` \| [`SemVer`](../classes/SemVer.md)
 
 ### optionsOrLoose?
 
-`boolean` | [`Options`](../interfaces/Options.md)
+`boolean` \| [`Options`](../interfaces/Options.md)
 
 ## Returns
 

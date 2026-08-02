@@ -14,11 +14,11 @@ Returns an array of prerelease components, or null if none exist.
 
 ### version
 
-`string` | [`SemVer`](../classes/SemVer.md)
+`string` \| [`SemVer`](../classes/SemVer.md)
 
 ### optionsOrLoose?
 
-`boolean` | [`Options`](../interfaces/Options.md)
+`boolean` \| [`Options`](../interfaces/Options.md)
 
 ## Returns
 

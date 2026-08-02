@@ -14,15 +14,15 @@ Return true if any of the ranges comparators intersect
 
 ### range1
 
-`string` | [`Range`](../classes/Range.md)
+`string` \| [`Range`](../classes/Range.md)
 
 ### range2
 
-`string` | [`Range`](../classes/Range.md)
+`string` \| [`Range`](../classes/Range.md)
 
 ### optionsOrLoose?
 
-`boolean` | [`RangeOptions`](../interfaces/RangeOptions.md)
+`boolean` \| [`RangeOptions`](../interfaces/RangeOptions.md)
 
 ## Returns
 

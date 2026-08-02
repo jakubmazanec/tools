@@ -5,7 +5,7 @@
 # Class: Command\<A, B, C, D, E\>
 
 Defined in:
-[packages/cli/source/program/Command.ts:16](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/cli/source/program/Command.ts#L16)
+[cli/source/program/Command.ts:16](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/cli/source/program/Command.ts#L16)
 
 Command encapsulates piece of a CLI's logic and is executed when [Program](Program.md) instance
 parses that command from the command line arguments.
@@ -40,7 +40,7 @@ parses that command from the command line arguments.
 > `D`, `E`\>
 
 Defined in:
-[packages/cli/source/program/Command.ts:36](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/cli/source/program/Command.ts#L36)
+[cli/source/program/Command.ts:36](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/cli/source/program/Command.ts#L36)
 
 #### Parameters
 
@@ -75,7 +75,7 @@ Additionl command options.
 > `readonly` **allowUnknownOptions**: `D`
 
 Defined in:
-[packages/cli/source/program/Command.ts:27](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/cli/source/program/Command.ts#L27)
+[cli/source/program/Command.ts:27](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/cli/source/program/Command.ts#L27)
 
 ---
 
@@ -84,16 +84,16 @@ Defined in:
 > `readonly` **allowUnknownParameters**: `E`
 
 Defined in:
-[packages/cli/source/program/Command.ts:28](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/cli/source/program/Command.ts#L28)
+[cli/source/program/Command.ts:28](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/cli/source/program/Command.ts#L28)
 
 ---
 
 ### description?
 
-> `readonly` `optional` **description**: `string`
+> `readonly` `optional` **description?**: `string`
 
 Defined in:
-[packages/cli/source/program/Command.ts:24](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/cli/source/program/Command.ts#L24)
+[cli/source/program/Command.ts:24](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/cli/source/program/Command.ts#L24)
 
 ---
 
@@ -102,25 +102,25 @@ Defined in:
 > `readonly` **name**: `A`
 
 Defined in:
-[packages/cli/source/program/Command.ts:23](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/cli/source/program/Command.ts#L23)
+[cli/source/program/Command.ts:23](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/cli/source/program/Command.ts#L23)
 
 ---
 
 ### options
 
-> `readonly` **options**: `C` _extends_ `OptionsConfig` ? `C`\<`C`\> : `null`
+> `readonly` **options**: `C` _extends_ `OptionsConfig` ? `C` : `null`
 
 Defined in:
-[packages/cli/source/program/Command.ts:26](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/cli/source/program/Command.ts#L26)
+[cli/source/program/Command.ts:26](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/cli/source/program/Command.ts#L26)
 
 ---
 
 ### parameters
 
-> `readonly` **parameters**: `B` _extends_ `ParametersConfig` ? `B`\<`B`\> : `null`
+> `readonly` **parameters**: `B` _extends_ `ParametersConfig` ? `B` : `null`
 
 Defined in:
-[packages/cli/source/program/Command.ts:25](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/cli/source/program/Command.ts#L25)
+[cli/source/program/Command.ts:25](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/cli/source/program/Command.ts#L25)
 
 ## Methods
 
@@ -130,7 +130,7 @@ Defined in:
 > `E`; `commands`: readonly \[`A`\]; `options`: `C`; `parameters`: `B`; \}\>
 
 Defined in:
-[packages/cli/source/program/Command.ts:82](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/cli/source/program/Command.ts#L82)
+[cli/source/program/Command.ts:82](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/cli/source/program/Command.ts#L82)
 
 Parses a list of command line arguments into an arguments object. Parser is pre-configured based on
 this command.
@@ -153,7 +153,7 @@ this command.
 > **run**(`parsedArgs`, `program`): `Promise`\<`void`\>
 
 Defined in:
-[packages/cli/source/program/Command.ts:107](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/cli/source/program/Command.ts#L107)
+[cli/source/program/Command.ts:107](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/cli/source/program/Command.ts#L107)
 
 Executes command action with provided parsed arguments and [Program](Program.md) instance.
 

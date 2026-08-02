@@ -14,7 +14,7 @@ Coerces a string to SemVer if possible
 
 ### version
 
-`string` | `number` | [`SemVer`](../classes/SemVer.md) | `null` | `undefined`
+`string` \| `number` \| [`SemVer`](../classes/SemVer.md) \| `null` \| `undefined`
 
 ### options?
 

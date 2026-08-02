@@ -14,11 +14,11 @@ Return the lowest version that can possibly match the given range.
 
 ### range
 
-`string` | [`Range`](../classes/Range.md)
+`string` \| [`Range`](../classes/Range.md)
 
 ### optionsOrLoose?
 
-`boolean` | [`Options`](../interfaces/Options.md)
+`boolean` \| [`Options`](../interfaces/Options.md)
 
 ## Returns
 

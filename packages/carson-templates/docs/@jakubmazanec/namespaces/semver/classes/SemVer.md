@@ -18,11 +18,11 @@ Defined in: node_modules/@types/semver/classes/semver.d.ts:5
 
 ##### version
 
-`string` | `SemVer`
+`string` \| `SemVer`
 
 ##### optionsOrLoose?
 
-`boolean` | [`RangeOptions`](../interfaces/RangeOptions.md)
+`boolean` \| [`RangeOptions`](../interfaces/RangeOptions.md)
 
 #### Returns
 
@@ -115,7 +115,7 @@ string).
 
 ##### other
 
-`string` | `SemVer`
+`string` \| `SemVer`
 
 #### Returns
 
@@ -139,7 +139,7 @@ Compares the build identifier of two versions.
 
 ##### other
 
-`string` | `SemVer`
+`string` \| `SemVer`
 
 #### Returns
 
@@ -163,7 +163,7 @@ Compares the release portion of two versions.
 
 ##### other
 
-`string` | `SemVer`
+`string` \| `SemVer`
 
 #### Returns
 
@@ -187,7 +187,7 @@ Compares the prerelease portion of two versions.
 
 ##### other
 
-`string` | `SemVer`
+`string` \| `SemVer`
 
 #### Returns
 

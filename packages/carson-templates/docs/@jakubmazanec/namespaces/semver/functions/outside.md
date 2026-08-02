@@ -16,19 +16,19 @@ ltr.)
 
 ### version
 
-`string` | [`SemVer`](../classes/SemVer.md)
+`string` \| [`SemVer`](../classes/SemVer.md)
 
 ### range
 
-`string` | [`Range`](../classes/Range.md)
+`string` \| [`Range`](../classes/Range.md)
 
 ### hilo
 
-`">"` | `"<"`
+`">"` \| `"<"`
 
 ### optionsOrLoose?
 
-`boolean` | [`RangeOptions`](../interfaces/RangeOptions.md)
+`boolean` \| [`RangeOptions`](../interfaces/RangeOptions.md)
 
 ## Returns
 

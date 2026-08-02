@@ -5,7 +5,7 @@
 # Class: WorkspaceDependencies\<M\>
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceDependencies.ts:13](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/carson/source/workspace/WorkspaceDependencies.ts#L13)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:13](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/carson/source/workspace/WorkspaceDependencies.ts#L13)
 
 A collection of WorkspaceDependency \| workspace dependencies that are installed in
 [a workspace](Workspace.md).
@@ -22,7 +22,7 @@ A collection of WorkspaceDependency \| workspace dependencies that are installed
 
 ## Indexable
 
-\[`n`: `number`\]: `WorkspaceDependency`
+> \[`n`: `number`\]: `WorkspaceDependency`
 
 ## Constructors
 
@@ -31,7 +31,7 @@ A collection of WorkspaceDependency \| workspace dependencies that are installed
 > **new WorkspaceDependencies**\<`M`\>(...`args`): `WorkspaceDependencies`\<`M`\>
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceDependencies.ts:17](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/carson/source/workspace/WorkspaceDependencies.ts#L17)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:17](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/carson/source/workspace/WorkspaceDependencies.ts#L17)
 
 #### Parameters
 
@@ -64,173 +64,173 @@ statement.
 
 #### \[iterator\]?
 
-> `optional` **\[iterator\]**: `boolean`
+> `optional` **\[iterator\]?**: `boolean`
 
 #### \[unscopables\]?
 
-> `readonly` `optional` **\[unscopables\]**: `boolean`
+> `readonly` `optional` **\[unscopables\]?**: `boolean`
 
 Is an object whose properties have the value 'true' when they will be absent when used in a 'with'
 statement.
 
 #### at?
 
-> `optional` **at**: `boolean`
+> `optional` **at?**: `boolean`
 
 #### concat?
 
-> `optional` **concat**: `boolean`
+> `optional` **concat?**: `boolean`
 
 #### copyWithin?
 
-> `optional` **copyWithin**: `boolean`
+> `optional` **copyWithin?**: `boolean`
 
 #### entries?
 
-> `optional` **entries**: `boolean`
+> `optional` **entries?**: `boolean`
 
 #### every?
 
-> `optional` **every**: `boolean`
+> `optional` **every?**: `boolean`
 
 #### fill?
 
-> `optional` **fill**: `boolean`
+> `optional` **fill?**: `boolean`
 
 #### filter?
 
-> `optional` **filter**: `boolean`
+> `optional` **filter?**: `boolean`
 
 #### find?
 
-> `optional` **find**: `boolean`
+> `optional` **find?**: `boolean`
 
 #### findIndex?
 
-> `optional` **findIndex**: `boolean`
+> `optional` **findIndex?**: `boolean`
 
 #### findLast?
 
-> `optional` **findLast**: `boolean`
+> `optional` **findLast?**: `boolean`
 
 #### findLastIndex?
 
-> `optional` **findLastIndex**: `boolean`
+> `optional` **findLastIndex?**: `boolean`
 
 #### flat?
 
-> `optional` **flat**: `boolean`
+> `optional` **flat?**: `boolean`
 
 #### flatMap?
 
-> `optional` **flatMap**: `boolean`
+> `optional` **flatMap?**: `boolean`
 
 #### forEach?
 
-> `optional` **forEach**: `boolean`
+> `optional` **forEach?**: `boolean`
 
 #### includes?
 
-> `optional` **includes**: `boolean`
+> `optional` **includes?**: `boolean`
 
 #### indexOf?
 
-> `optional` **indexOf**: `boolean`
+> `optional` **indexOf?**: `boolean`
 
 #### join?
 
-> `optional` **join**: `boolean`
+> `optional` **join?**: `boolean`
 
 #### keys?
 
-> `optional` **keys**: `boolean`
+> `optional` **keys?**: `boolean`
 
 #### lastIndexOf?
 
-> `optional` **lastIndexOf**: `boolean`
+> `optional` **lastIndexOf?**: `boolean`
 
 #### length?
 
-> `optional` **length**: `boolean`
+> `optional` **length?**: `boolean`
 
 Gets or sets the length of the array. This is a number one higher than the highest index in the
 array.
 
 #### map?
 
-> `optional` **map**: `boolean`
+> `optional` **map?**: `boolean`
 
 #### pop?
 
-> `optional` **pop**: `boolean`
+> `optional` **pop?**: `boolean`
 
 #### push?
 
-> `optional` **push**: `boolean`
+> `optional` **push?**: `boolean`
 
 #### reduce?
 
-> `optional` **reduce**: `boolean`
+> `optional` **reduce?**: `boolean`
 
 #### reduceRight?
 
-> `optional` **reduceRight**: `boolean`
+> `optional` **reduceRight?**: `boolean`
 
 #### reverse?
 
-> `optional` **reverse**: `boolean`
+> `optional` **reverse?**: `boolean`
 
 #### shift?
 
-> `optional` **shift**: `boolean`
+> `optional` **shift?**: `boolean`
 
 #### slice?
 
-> `optional` **slice**: `boolean`
+> `optional` **slice?**: `boolean`
 
 #### some?
 
-> `optional` **some**: `boolean`
+> `optional` **some?**: `boolean`
 
 #### sort?
 
-> `optional` **sort**: `boolean`
+> `optional` **sort?**: `boolean`
 
 #### splice?
 
-> `optional` **splice**: `boolean`
+> `optional` **splice?**: `boolean`
 
 #### toLocaleString?
 
-> `optional` **toLocaleString**: `boolean`
+> `optional` **toLocaleString?**: `boolean`
 
 #### toReversed?
 
-> `optional` **toReversed**: `boolean`
+> `optional` **toReversed?**: `boolean`
 
 #### toSorted?
 
-> `optional` **toSorted**: `boolean`
+> `optional` **toSorted?**: `boolean`
 
 #### toSpliced?
 
-> `optional` **toSpliced**: `boolean`
+> `optional` **toSpliced?**: `boolean`
 
 #### toString?
 
-> `optional` **toString**: `boolean`
+> `optional` **toString?**: `boolean`
 
 #### unshift?
 
-> `optional` **unshift**: `boolean`
+> `optional` **unshift?**: `boolean`
 
 #### values?
 
-> `optional` **values**: `boolean`
+> `optional` **values?**: `boolean`
 
 #### with?
 
-> `optional` **with**: `boolean`
+> `optional` **with?**: `boolean`
 
 #### Inherited from
 
@@ -258,7 +258,7 @@ array.
 > **workspace**: [`Workspace`](Workspace.md)\<`M`\>
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceDependencies.ts:15](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/carson/source/workspace/WorkspaceDependencies.ts#L15)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:15](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/carson/source/workspace/WorkspaceDependencies.ts#L15)
 
 The workspace the dependencies are installed in.
 
@@ -950,7 +950,7 @@ undefined is used as the this value.
 > **getVersions**(`options?`): `Record`\<`string`, `string`[]\>
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceDependencies.ts:187](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/carson/source/workspace/WorkspaceDependencies.ts#L187)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:187](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/carson/source/workspace/WorkspaceDependencies.ts#L187)
 
 Creates map of all dependnecies and their installed version.
 
@@ -1178,7 +1178,7 @@ and the array is not modified.
 > **push**(...`newWorkspaceDependencies`): `number`
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceDependencies.ts:38](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/carson/source/workspace/WorkspaceDependencies.ts#L38)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:38](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/carson/source/workspace/WorkspaceDependencies.ts#L38)
 
 Adds one or more new dependencies.
 
@@ -1643,7 +1643,7 @@ Defined in: node_modules/typescript/lib/lib.es2015.core.d.ts:64
 
 ###### locales
 
-`string` | `string`[]
+`string` \| `string`[]
 
 ###### options?
 
@@ -1978,9 +1978,9 @@ Creates an array from an iterable object.
 
 ###### iterable
 
-An iterable object to convert to an array.
+`Iterable`\<`T`, `any`, `any`\> \| `ArrayLike`\<`T`\>
 
-`Iterable`\<`T`, `any`, `any`\> | `ArrayLike`\<`T`\>
+An iterable object to convert to an array.
 
 ##### Returns
 
@@ -2012,9 +2012,9 @@ Creates an array from an iterable object.
 
 ###### iterable
 
-An iterable object to convert to an array.
+`Iterable`\<`T`, `any`, `any`\> \| `ArrayLike`\<`T`\>
 
-`Iterable`\<`T`, `any`, `any`\> | `ArrayLike`\<`T`\>
+An iterable object to convert to an array.
 
 ###### mapfn
 
@@ -2043,7 +2043,7 @@ Value of 'this' used to invoke the mapfn.
 > `static` **fromWorkspace**\<`M`\>(`workspace`, `options?`): `WorkspaceDependencies`\<`M`\>
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceDependencies.ts:81](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/carson/source/workspace/WorkspaceDependencies.ts#L81)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:81](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/carson/source/workspace/WorkspaceDependencies.ts#L81)
 
 Creates new WorkspaceDependencies instance from a [Workspace](Workspace.md) instance and its
 dependencies.

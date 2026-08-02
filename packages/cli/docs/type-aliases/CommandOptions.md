@@ -7,7 +7,7 @@
 > **CommandOptions**\<`B`, `C`, `D`, `E`\> = `object`
 
 Defined in:
-[packages/cli/source/program/CommandOptions.ts:6](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/cli/source/program/CommandOptions.ts#L6)
+[cli/source/program/CommandOptions.ts:6](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/cli/source/program/CommandOptions.ts#L6)
 
 [Command constructor](../classes/Command.md#constructor) options parameter.
 
@@ -33,43 +33,43 @@ Defined in:
 
 ### allowUnknownOptions?
 
-> `optional` **allowUnknownOptions**: `D`
+> `optional` **allowUnknownOptions?**: `D`
 
 Defined in:
-[packages/cli/source/program/CommandOptions.ts:15](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/cli/source/program/CommandOptions.ts#L15)
+[cli/source/program/CommandOptions.ts:15](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/cli/source/program/CommandOptions.ts#L15)
 
 ---
 
 ### allowUnknownParameters?
 
-> `optional` **allowUnknownParameters**: `E`
+> `optional` **allowUnknownParameters?**: `E`
 
 Defined in:
-[packages/cli/source/program/CommandOptions.ts:16](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/cli/source/program/CommandOptions.ts#L16)
+[cli/source/program/CommandOptions.ts:16](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/cli/source/program/CommandOptions.ts#L16)
 
 ---
 
 ### description?
 
-> `optional` **description**: `string`
+> `optional` **description?**: `string`
 
 Defined in:
-[packages/cli/source/program/CommandOptions.ts:12](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/cli/source/program/CommandOptions.ts#L12)
+[cli/source/program/CommandOptions.ts:12](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/cli/source/program/CommandOptions.ts#L12)
 
 ---
 
 ### options?
 
-> `optional` **options**: `C`
+> `optional` **options?**: `C`
 
 Defined in:
-[packages/cli/source/program/CommandOptions.ts:14](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/cli/source/program/CommandOptions.ts#L14)
+[cli/source/program/CommandOptions.ts:14](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/cli/source/program/CommandOptions.ts#L14)
 
 ---
 
 ### parameters?
 
-> `optional` **parameters**: `B`
+> `optional` **parameters?**: `B`
 
 Defined in:
-[packages/cli/source/program/CommandOptions.ts:13](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/cli/source/program/CommandOptions.ts#L13)
+[cli/source/program/CommandOptions.ts:13](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/cli/source/program/CommandOptions.ts#L13)

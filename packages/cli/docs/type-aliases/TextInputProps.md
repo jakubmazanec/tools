@@ -7,7 +7,7 @@
 > **TextInputProps** = `BoxProps` & `object`
 
 Defined in:
-[packages/cli/source/ui/form/TextInput.tsx:11](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/cli/source/ui/form/TextInput.tsx#L11)
+[cli/source/ui/form/TextInput.tsx:11](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/cli/source/ui/form/TextInput.tsx#L11)
 
 Text input component props.
 
@@ -15,14 +15,14 @@ Text input component props.
 
 ### focus?
 
-> `optional` **focus**: `boolean`
+> `optional` **focus?**: `boolean`
 
 Should component listen to Listen to user's input? Useful in case there are multiple input
 components at the same time and input must be handled only by a specific component.
 
 ### isComplete?
 
-> `optional` **isComplete**: `boolean`
+> `optional` **isComplete?**: `boolean`
 
 Indicates whether value has been accepted. Component then doesn't accept more input.
 
@@ -34,11 +34,11 @@ Text to display as a label.
 
 ### mask?
 
-> `optional` **mask**: `string`
+> `optional` **mask?**: `string`
 
 Replace all chars and mask the value. Useful for password inputs.
 
-### onChange()
+### onChange
 
 > **onChange**: (`value`) => `void`
 
@@ -54,9 +54,9 @@ Handler function that is called when value changes.
 
 `void`
 
-### onSubmit()?
+### onSubmit?
 
-> `optional` **onSubmit**: (`value`) => `void`
+> `optional` **onSubmit?**: (`value`) => `void`
 
 Handler function that is called when enter is pressed.
 
@@ -72,19 +72,19 @@ Handler function that is called when enter is pressed.
 
 ### placeholder?
 
-> `optional` **placeholder**: `string`
+> `optional` **placeholder?**: `string`
 
 Text to display when `value` is empty.
 
 ### showCursor?
 
-> `optional` **showCursor**: `boolean`
+> `optional` **showCursor?**: `boolean`
 
 Show cursor and allow navigation using arrow keys.
 
-### validate()?
+### validate?
 
-> `optional` **validate**: (`value`) => `void`
+> `optional` **validate?**: (`value`) => `void`
 
 Validation function that is called when value changes. If this function throws an error
 

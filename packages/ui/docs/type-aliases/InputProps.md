@@ -9,29 +9,29 @@
 > `ComponentRef`\<`T`\> & `object`
 
 Defined in:
-[packages/ui/source/components/Input.tsx:31](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/ui/source/components/Input.tsx#L31)
+[packages/ui/source/components/Input.tsx:31](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/ui/source/components/Input.tsx#L31)
 
 ## Type Declaration
 
 ### as?
 
-> `optional` **as**: `T`
+> `optional` **as?**: `T`
 
 ### className?
 
-> `optional` **className**: `string`
+> `optional` **className?**: `string`
 
 ### icon?
 
-> `optional` **icon**: `ComponentType`\<`object`\> \| `string`
+> `optional` **icon?**: `ComponentType`\<`object`\> \| `string`
 
 ### name?
 
-> `optional` **name**: `string`
+> `optional` **name?**: `string`
 
 ### showClearButton?
 
-> `optional` **showClearButton**: `boolean`
+> `optional` **showClearButton?**: `boolean`
 
 ## Type Parameters
 

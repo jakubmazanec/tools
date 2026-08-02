@@ -14,11 +14,11 @@ Short for compare(v1, v2, { loose: true })
 
 ### v1
 
-`string` | [`SemVer`](../classes/SemVer.md)
+`string` \| [`SemVer`](../classes/SemVer.md)
 
 ### v2
 
-`string` | [`SemVer`](../classes/SemVer.md)
+`string` \| [`SemVer`](../classes/SemVer.md)
 
 ## Returns
 

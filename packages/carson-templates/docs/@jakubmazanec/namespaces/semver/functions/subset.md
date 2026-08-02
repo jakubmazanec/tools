@@ -14,11 +14,11 @@ Return true if the subRange range is entirely contained by the superRange range.
 
 ### sub
 
-`string` | [`Range`](../classes/Range.md)
+`string` \| [`Range`](../classes/Range.md)
 
 ### dom
 
-`string` | [`Range`](../classes/Range.md)
+`string` \| [`Range`](../classes/Range.md)
 
 ### options?
 

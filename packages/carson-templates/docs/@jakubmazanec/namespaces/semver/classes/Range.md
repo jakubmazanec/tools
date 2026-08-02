@@ -18,11 +18,11 @@ Defined in: node_modules/@types/semver/classes/range.d.ts:6
 
 ##### range
 
-`string` | `Range`
+`string` \| `Range`
 
 ##### optionsOrLoose?
 
-`boolean` | [`RangeOptions`](../interfaces/RangeOptions.md)
+`boolean` \| [`RangeOptions`](../interfaces/RangeOptions.md)
 
 #### Returns
 
@@ -116,7 +116,7 @@ Defined in: node_modules/@types/semver/classes/range.d.ts:19
 
 ##### optionsOrLoose?
 
-`boolean` | [`Options`](../interfaces/Options.md)
+`boolean` \| [`Options`](../interfaces/Options.md)
 
 #### Returns
 
@@ -152,7 +152,7 @@ Defined in: node_modules/@types/semver/classes/range.d.ts:18
 
 ##### version
 
-`string` | [`SemVer`](SemVer.md)
+`string` \| [`SemVer`](SemVer.md)
 
 #### Returns
 

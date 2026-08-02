@@ -2,12 +2,12 @@
 
 ---
 
-# Type Alias: CommandAction()\<A, B, C, D, E\>
+# Type Alias: CommandAction\<A, B, C, D, E\>
 
 > **CommandAction**\<`A`, `B`, `C`, `D`, `E`\> = (`parsedArgs`, `program`) => `Promise`\<`void`\>
 
 Defined in:
-[packages/cli/source/program/CommandAction.ts:8](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/cli/source/program/CommandAction.ts#L8)
+[cli/source/program/CommandAction.ts:8](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/cli/source/program/CommandAction.ts#L8)
 
 Command action.
 

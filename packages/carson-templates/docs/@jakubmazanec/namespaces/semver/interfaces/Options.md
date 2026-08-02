@@ -15,6 +15,6 @@ Defined in: node_modules/@types/semver/index.d.ts:106
 
 ### loose?
 
-> `optional` **loose**: `boolean`
+> `optional` **loose?**: `boolean`
 
 Defined in: node_modules/@types/semver/index.d.ts:107
