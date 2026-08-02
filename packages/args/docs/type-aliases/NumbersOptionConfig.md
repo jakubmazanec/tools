@@ -16,4 +16,4 @@
 > `validate?`: (`value`) => `void`; \}
 
 Defined in:
-[args/source/OptionConfig.ts:116](https://github.com/jakubmazanec/tools/blob/be2163f84cbbba1501692fb862cbb16c273cf74c/packages/args/source/OptionConfig.ts#L116)
+[args/source/OptionConfig.ts:116](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/args/source/OptionConfig.ts#L116)

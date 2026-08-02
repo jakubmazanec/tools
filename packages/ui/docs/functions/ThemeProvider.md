@@ -7,7 +7,7 @@
 > **ThemeProvider**(`__namedParameters`): `Element`
 
 Defined in:
-[packages/ui/source/theme/ThemeProvider.tsx:10](https://github.com/jakubmazanec/tools/blob/be2163f84cbbba1501692fb862cbb16c273cf74c/packages/ui/source/theme/ThemeProvider.tsx#L10)
+[packages/ui/source/theme/ThemeProvider.tsx:10](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/ui/source/theme/ThemeProvider.tsx#L10)
 
 ## Parameters
 

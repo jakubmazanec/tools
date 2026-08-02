@@ -16,7 +16,7 @@
 > `value?`: `V`; `virtual?`: `boolean`; \}
 
 Defined in:
-[packages/ui/source/components/Combobox.tsx:44](https://github.com/jakubmazanec/tools/blob/be2163f84cbbba1501692fb862cbb16c273cf74c/packages/ui/source/components/Combobox.tsx#L44)
+[packages/ui/source/components/Combobox.tsx:44](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/ui/source/components/Combobox.tsx#L44)
 
 ## Type Parameters
 

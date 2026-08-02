@@ -10,4 +10,4 @@
 > `void`; \}; \}; \}\>
 
 Defined in:
-[packages/carson/source/commands/create-project/CreateProjectInput.ts:6](https://github.com/jakubmazanec/tools/blob/be2163f84cbbba1501692fb862cbb16c273cf74c/packages/carson/source/commands/create-project/CreateProjectInput.ts#L6)
+[packages/carson/source/commands/create-project/CreateProjectInput.ts:6](https://github.com/jakubmazanec/tools/blob/0018407a6ea0364965f5bcbc4da5bac8342dfad4/packages/carson/source/commands/create-project/CreateProjectInput.ts#L6)
