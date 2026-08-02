@@ -59,7 +59,7 @@
     "concurrently": "^9.2.4",
     "del-cli": "^7.0.0",
     "esbuild": "^0.27.0",
-    "eslint": "^9.39.4",
+    "eslint": "^9.39.5",
     "lodash": "^4.18.1",
     "prettier": "^3.7.3",
     "prettier-plugin-packagejson": "^2.5.20",
