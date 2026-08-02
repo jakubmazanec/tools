@@ -33,7 +33,7 @@
     "gray-matter": "^4.0.3",
     "lodash": "^4.18.1",
     "prettier": "^3.7.3",
-    "yaml": "^2.8.2",
+    "yaml": "^2.9.0",
     "zod": "^4.4.3"
   },
   "devDependencies": {
