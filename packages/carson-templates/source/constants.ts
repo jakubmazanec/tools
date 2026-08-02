@@ -135,7 +135,7 @@ export const DEPENDENCY_VERSIONS: Record<string, string> = {
   [LINTER_CONFIG_PACKAGE_NAME]: '^4.0.0',
 
   '@changesets/cli': '^2.0.0',
-  '@chromatic-com/storybook': '^4.0.0',
+  '@chromatic-com/storybook': '^5.0.0',
   '@react-router/dev': '^7.0.0',
   '@react-router/fs-routes': '^7.0.0',
   '@react-router/node': '^7.0.0',
