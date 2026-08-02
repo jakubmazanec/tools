@@ -4,10 +4,10 @@
 
 # Function: ComboboxOption()
 
-> **ComboboxOption**\<`T`, `V`\>(`__namedParameters`): `Element`
+> **ComboboxOption**\<`T`, `V`>\>(`__namedParameters`): `Element`
 
 Defined in:
-[packages/ui/source/components/ComboboxOption.tsx:34](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/ui/source/components/ComboboxOption.tsx#L34)
+[packages/ui/source/components/ComboboxOption.tsx:34](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/ui/source/components/ComboboxOption.tsx#L34)
 
 ## Type Parameters
 

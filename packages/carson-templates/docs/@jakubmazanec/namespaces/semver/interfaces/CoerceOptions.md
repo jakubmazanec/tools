@@ -4,7 +4,7 @@
 
 # Interface: CoerceOptions
 
-Defined in: node_modules/@types/semver/index.d.ts:113
+Defined in: node\_modules/@types/semver/index.d.ts:113
 
 ## Extends
 
@@ -16,7 +16,7 @@ Defined in: node_modules/@types/semver/index.d.ts:113
 
 > `optional` **includePrerelease?**: `boolean`
 
-Defined in: node_modules/@types/semver/index.d.ts:122
+Defined in: node\_modules/@types/semver/index.d.ts:122
 
 If the `options.includePrerelease` flag is set, then the `coerce` result will contain prerelease and
 build parts of a version. For example, `1.2.3.4-rc.1+rev.2` will preserve prerelease `rc.1` and
@@ -38,7 +38,7 @@ false;
 
 > `optional` **loose?**: `boolean`
 
-Defined in: node_modules/@types/semver/index.d.ts:107
+Defined in: node\_modules/@types/semver/index.d.ts:107
 
 #### Inherited from
 
@@ -50,7 +50,7 @@ Defined in: node_modules/@types/semver/index.d.ts:107
 
 > `optional` **rtl?**: `boolean`
 
-Defined in: node_modules/@types/semver/index.d.ts:133
+Defined in: node\_modules/@types/semver/index.d.ts:133
 
 If the `options.rtl` flag is set, then `coerce` will return the right-most coercible tuple that does
 not share an ending index with a longer coercible tuple. For example, `1.2.3.4` will return `2.3.4`

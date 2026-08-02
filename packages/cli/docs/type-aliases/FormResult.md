@@ -4,10 +4,10 @@
 
 # Type Alias: FormResult\<F\>
 
-> **FormResult**\<`F`\> = [`FormValues`](FormValues.md)\<`F`\[`"config"`\]\>
+> **FormResult**\<`F`> \> = [`FormValues`](FormValues.md)\<`F`\[`"config"`\]\>
 
 Defined in:
-[cli/source/ui/form/FormResult.ts:8](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/cli/source/ui/form/FormResult.ts#L8)
+[cli/source/ui/form/FormResult.ts:8](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/cli/source/ui/form/FormResult.ts#L8)
 
 Form result. It is the value of all form rows after the last one is accepted.
 

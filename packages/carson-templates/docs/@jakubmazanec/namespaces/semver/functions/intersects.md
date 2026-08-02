@@ -6,7 +6,7 @@
 
 > **intersects**(`range1`, `range2`, `optionsOrLoose?`): `boolean`
 
-Defined in: node_modules/@types/semver/ranges/intersects.d.ts:7
+Defined in: node\_modules/@types/semver/ranges/intersects.d.ts:7
 
 Return true if any of the ranges comparators intersect
 

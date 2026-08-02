@@ -2,8 +2,8 @@
 
 ---
 
-# Variable: RELEASE_TYPES
+# Variable: RELEASE\_TYPES
 
-> `const` **RELEASE_TYPES**: [`ReleaseType`](../type-aliases/ReleaseType.md)[]
+> `const` **RELEASE\_TYPES**: [`ReleaseType`](../type-aliases/ReleaseType.md)[]
 
-Defined in: node_modules/@types/semver/index.d.ts:102
+Defined in: node\_modules/@types/semver/index.d.ts:102

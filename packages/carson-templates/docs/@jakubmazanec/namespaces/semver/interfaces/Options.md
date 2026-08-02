@@ -4,7 +4,7 @@
 
 # Interface: Options
 
-Defined in: node_modules/@types/semver/index.d.ts:106
+Defined in: node\_modules/@types/semver/index.d.ts:106
 
 ## Extended by
 
@@ -17,4 +17,4 @@ Defined in: node_modules/@types/semver/index.d.ts:106
 
 > `optional` **loose?**: `boolean`
 
-Defined in: node_modules/@types/semver/index.d.ts:107
+Defined in: node\_modules/@types/semver/index.d.ts:107

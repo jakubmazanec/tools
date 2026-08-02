@@ -6,7 +6,7 @@
 
 > **patch**(`version`, `optionsOrLoose?`): `number`
 
-Defined in: node_modules/@types/semver/functions/patch.d.ts:7
+Defined in: node\_modules/@types/semver/functions/patch.d.ts:7
 
 Return the patch version number.
 

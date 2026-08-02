@@ -6,7 +6,7 @@
 
 > **satisfies**(`version`, `range`, `optionsOrLoose?`): `boolean`
 
-Defined in: node_modules/@types/semver/functions/satisfies.d.ts:8
+Defined in: node\_modules/@types/semver/functions/satisfies.d.ts:8
 
 Return true if the version satisfies the range.
 

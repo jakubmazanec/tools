@@ -4,9 +4,9 @@
 
 # Function: maxSatisfying()
 
-> **maxSatisfying**\<`T`\>(`versions`, `range`, `optionsOrLoose?`): `T` \| `null`
+> **maxSatisfying**\<`T`>\>(`versions`, `range`, `optionsOrLoose?`): `T` \| `null`
 
-Defined in: node_modules/@types/semver/ranges/max-satisfying.d.ts:8
+Defined in: node\_modules/@types/semver/ranges/max-satisfying.d.ts:8
 
 Return the highest version in the list that satisfies the range, or null if none of them do.
 

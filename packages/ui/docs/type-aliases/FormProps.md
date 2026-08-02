@@ -4,11 +4,12 @@
 
 # Type Alias: FormProps\<T\>
 
-> **FormProps**\<`T`\> = `ComponentProps`\<_typeof_ [`useFormTheme`](../variables/useFormTheme.md)\>
-> & `ComponentPropsWithoutRef`\<`T`\> & `ComponentRef`\<`T`\> & `PropsWithChildren` & `object`
+> **FormProps**\<`T`> \> = `ComponentProps`\<_typeof_
+> [`useFormTheme`](../variables/useFormTheme.md)> \> & `ComponentPropsWithoutRef`\<`T`> \> &
+> `ComponentRef`\<`T`> \> & `PropsWithChildren` & `object`
 
 Defined in:
-[packages/ui/source/components/Form.tsx:21](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/ui/source/components/Form.tsx#L21)
+[packages/ui/source/components/Form.tsx:21](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/ui/source/components/Form.tsx#L21)
 
 ## Type Declaration
 
@@ -22,7 +23,7 @@ Defined in:
 
 ### form?
 
-> `optional` **form?**: `FormMetadata`\<`any`, `any`\>
+> `optional` **form?**: `FormMetadata`\<`any`, `any`>\>
 
 ## Type Parameters
 

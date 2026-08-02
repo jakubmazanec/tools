@@ -2,9 +2,9 @@
 
 ---
 
-# Variable: BUILD_DIRECTORY
+# Variable: BUILD\_DIRECTORY
 
-> `const` **BUILD_DIRECTORY**: `"build"` = `'build'`
+> `const` **BUILD\_DIRECTORY**: `"build"` = `'build'`
 
 Defined in:
-[packages/carson-templates/source/constants.ts:7](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/carson-templates/source/constants.ts#L7)
+[packages/carson-templates/source/constants.ts:7](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/carson-templates/source/constants.ts#L7)

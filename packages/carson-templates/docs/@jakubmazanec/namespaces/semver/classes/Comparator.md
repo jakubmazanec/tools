@@ -4,7 +4,7 @@
 
 # Class: Comparator
 
-Defined in: node_modules/@types/semver/classes/comparator.d.ts:4
+Defined in: node\_modules/@types/semver/classes/comparator.d.ts:4
 
 ## Constructors
 
@@ -12,7 +12,7 @@ Defined in: node_modules/@types/semver/classes/comparator.d.ts:4
 
 > **new Comparator**(`comp`, `optionsOrLoose?`): `Comparator`
 
-Defined in: node_modules/@types/semver/classes/comparator.d.ts:5
+Defined in: node\_modules/@types/semver/classes/comparator.d.ts:5
 
 #### Parameters
 
@@ -34,7 +34,7 @@ Defined in: node_modules/@types/semver/classes/comparator.d.ts:5
 
 > **loose**: `boolean`
 
-Defined in: node_modules/@types/semver/classes/comparator.d.ts:10
+Defined in: node\_modules/@types/semver/classes/comparator.d.ts:10
 
 ---
 
@@ -42,7 +42,7 @@ Defined in: node_modules/@types/semver/classes/comparator.d.ts:10
 
 > **operator**: `""` \| `"="` \| `">"` \| `">="` \| `"<"` \| `"<="`
 
-Defined in: node_modules/@types/semver/classes/comparator.d.ts:8
+Defined in: node\_modules/@types/semver/classes/comparator.d.ts:8
 
 ---
 
@@ -50,7 +50,7 @@ Defined in: node_modules/@types/semver/classes/comparator.d.ts:8
 
 > **options**: [`Options`](../interfaces/Options.md)
 
-Defined in: node_modules/@types/semver/classes/comparator.d.ts:11
+Defined in: node\_modules/@types/semver/classes/comparator.d.ts:11
 
 ---
 
@@ -58,7 +58,7 @@ Defined in: node_modules/@types/semver/classes/comparator.d.ts:11
 
 > **semver**: [`SemVer`](SemVer.md)
 
-Defined in: node_modules/@types/semver/classes/comparator.d.ts:7
+Defined in: node\_modules/@types/semver/classes/comparator.d.ts:7
 
 ---
 
@@ -66,7 +66,7 @@ Defined in: node_modules/@types/semver/classes/comparator.d.ts:7
 
 > **value**: `string`
 
-Defined in: node_modules/@types/semver/classes/comparator.d.ts:9
+Defined in: node\_modules/@types/semver/classes/comparator.d.ts:9
 
 ## Methods
 
@@ -74,7 +74,7 @@ Defined in: node_modules/@types/semver/classes/comparator.d.ts:9
 
 > **intersects**(`comp`, `optionsOrLoose?`): `boolean`
 
-Defined in: node_modules/@types/semver/classes/comparator.d.ts:14
+Defined in: node\_modules/@types/semver/classes/comparator.d.ts:14
 
 #### Parameters
 
@@ -96,7 +96,7 @@ Defined in: node_modules/@types/semver/classes/comparator.d.ts:14
 
 > **parse**(`comp`): `void`
 
-Defined in: node_modules/@types/semver/classes/comparator.d.ts:12
+Defined in: node\_modules/@types/semver/classes/comparator.d.ts:12
 
 #### Parameters
 
@@ -114,7 +114,7 @@ Defined in: node_modules/@types/semver/classes/comparator.d.ts:12
 
 > **test**(`version`): `boolean`
 
-Defined in: node_modules/@types/semver/classes/comparator.d.ts:13
+Defined in: node\_modules/@types/semver/classes/comparator.d.ts:13
 
 #### Parameters
 

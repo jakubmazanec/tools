@@ -7,4 +7,4 @@
 > **Operator** = `"==="` \| `"!=="` \| `""` \| `"="` \| `"=="` \| `"!="` \| `">"` \| `">="` \| `"<"`
 > \| `"<="`
 
-Defined in: node_modules/@types/semver/index.d.ts:136
+Defined in: node\_modules/@types/semver/index.d.ts:136

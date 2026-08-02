@@ -4,10 +4,10 @@
 
 # Type Alias: TemplateRender\<A, D\>
 
-> **TemplateRender**\<`A`, `D`\> = `object`
+> **TemplateRender**\<`A`, `D`> \> = `object`
 
 Defined in:
-[template/source/TemplateRender.ts:11](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/template/source/TemplateRender.ts#L11)
+[template/source/TemplateRender.ts:11](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/template/source/TemplateRender.ts#L11)
 
 An object type representing the result of a template render.
 
@@ -30,11 +30,11 @@ Type of Zod schema used to define the type of template data.
 ### attributes
 
 > **attributes**: `A` _extends_ `undefined` ? `Omit`\<[`TemplateAttributes`](TemplateAttributes.md),
-> `"if"`\> : `Omit`\<[`TemplateAttributes`](TemplateAttributes.md), `"if"`\> &
-> `z.infer`\<`NonNullable`\<`A`\>\>
+> `"if"`> \> : `Omit`\<[`TemplateAttributes`](TemplateAttributes.md), `"if"`> \> &
+> `z.infer`\<`NonNullable`\<`A`>>\>\>
 
 Defined in:
-[template/source/TemplateRender.ts:17](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/template/source/TemplateRender.ts#L17)
+[template/source/TemplateRender.ts:17](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/template/source/TemplateRender.ts#L17)
 
 Rendered template attributes. They created from the `to` and `variables` attributes, and from all of
 the custom template attributes.
@@ -46,7 +46,7 @@ the custom template attributes.
 > **content**: `string`
 
 Defined in:
-[template/source/TemplateRender.ts:24](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/template/source/TemplateRender.ts#L24)
+[template/source/TemplateRender.ts:24](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/template/source/TemplateRender.ts#L24)
 
 Rendered template content.
 
@@ -54,9 +54,9 @@ Rendered template content.
 
 ### data
 
-> **data**: `D` _extends_ `undefined` ? `null` : `z.infer`\<`NonNullable`\<`D`\>\>
+> **data**: `D` _extends_ `undefined` ? `null` : `z.infer`\<`NonNullable`\<`D`>>\>\>
 
 Defined in:
-[template/source/TemplateRender.ts:21](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/template/source/TemplateRender.ts#L21)
+[template/source/TemplateRender.ts:21](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/template/source/TemplateRender.ts#L21)
 
 Data used to render the template.

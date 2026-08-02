@@ -4,13 +4,13 @@
 
 # Function: readFile()
 
-> **readFile**\<`S`, `O`\>(`path`, `schema`, `options?`): `Promise`\<`O` _extends_ `undefined` ?
-> `output`\<`S`\> \| `ZodError`\<`output`\<`S`\>\> :
-> `If`\<`NonNullable`\<`O`\>\[`"throwOnZodError"`\], `true`, `output`\<`S`\>, `output`\<`S`\> \|
-> `ZodError`\<`output`\<`S`\>\>\>\>
+> **readFile**\<`S`, `O`>\>(`path`, `schema`, `options?`): `Promise`\<`O` _extends_ `undefined` ?
+> `output`\<`S`> \> \| `ZodError`\<`output`\<`S`>> \>\> :
+> `If`\<`NonNullable`\<`O`>\>\[`"throwOnZodError"`\], `true`, `output`\<`S`>\>, `output`\<`S`> \> \|
+> `ZodError`\<`output`\<`S`>>>>\>\>\>\>
 
 Defined in:
-[utils/readFile.ts:11](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/zod-utils/source/utils/readFile.ts#L11)
+[utils/readFile.ts:11](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/zod-utils/source/utils/readFile.ts#L11)
 
 ## Type Parameters
 

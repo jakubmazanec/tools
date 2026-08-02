@@ -4,12 +4,12 @@
 
 # Type Alias: TableHeaderProps\<T\>
 
-> **TableHeaderProps**\<`T`\> = `ComponentProps`\<_typeof_
-> [`useTableHeaderTheme`](../variables/useTableHeaderTheme.md)\> & `ComponentPropsWithoutRef`\<`T`\>
-> & `ComponentRef`\<`T`\> & `PropsWithChildren` & `object`
+> **TableHeaderProps**\<`T`> \> = `ComponentProps`\<_typeof_
+> [`useTableHeaderTheme`](../variables/useTableHeaderTheme.md)> \> &
+> `ComponentPropsWithoutRef`\<`T`> \> & `ComponentRef`\<`T`> \> & `PropsWithChildren` & `object`
 
 Defined in:
-[packages/ui/source/components/TableHeader.ts:19](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/ui/source/components/TableHeader.ts#L19)
+[packages/ui/source/components/TableHeader.ts:19](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/ui/source/components/TableHeader.ts#L19)
 
 ## Type Declaration
 

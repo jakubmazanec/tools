@@ -6,7 +6,7 @@
 
 > **compareLoose**(`v1`, `v2`): `-1` \| `0` \| `1`
 
-Defined in: node_modules/@types/semver/functions/compare-loose.d.ts:6
+Defined in: node\_modules/@types/semver/functions/compare-loose.d.ts:6
 
 Short for compare(v1, v2, { loose: true })
 

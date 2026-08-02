@@ -2,10 +2,10 @@
 
 ---
 
-# Variable: TEMPLATE_PACKAGE_NAME
+# Variable: TEMPLATE\_PACKAGE\_NAME
 
-> `const` **TEMPLATE_PACKAGE_NAME**: `"@jakubmazanec/carson-templates"` =
+> `const` **TEMPLATE\_PACKAGE\_NAME**: `"@jakubmazanec/carson-templates"` =
 > `'@jakubmazanec/carson-templates'`
 
 Defined in:
-[packages/carson-templates/source/constants.ts:14](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/carson-templates/source/constants.ts#L14)
+[packages/carson-templates/source/constants.ts:14](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/carson-templates/source/constants.ts#L14)

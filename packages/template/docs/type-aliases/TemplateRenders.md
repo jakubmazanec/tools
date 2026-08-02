@@ -4,10 +4,10 @@
 
 # Type Alias: TemplateRenders\<A, D\>
 
-> **TemplateRenders**\<`A`, `D`\> = [`TemplateRender`](TemplateRender.md)\<`A`, `D`\>[]
+> **TemplateRenders**\<`A`, `D`> \> = [`TemplateRender`](TemplateRender.md)\<`A`, `D`>\>[]
 
 Defined in:
-[template/source/TemplateRenders.ts:5](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/template/source/TemplateRenders.ts#L5)
+[template/source/TemplateRenders.ts:5](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/template/source/TemplateRenders.ts#L5)
 
 ## Type Parameters
 

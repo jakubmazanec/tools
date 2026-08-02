@@ -4,10 +4,10 @@
 
 # Function: findExistingDirectory()
 
-> **findExistingDirectory**(`searchPath`): `Promise`\<`string`\>
+> **findExistingDirectory**(`searchPath`): `Promise`\<`string`>\>
 
 Defined in:
-[findExistingDirectory.ts:15](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/fs-utils/source/findExistingDirectory.ts#L15)
+[findExistingDirectory.ts:15](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/fs-utils/source/findExistingDirectory.ts#L15)
 
 Travels up the file system tree from a starting path and returns path of the first existing
 directory.

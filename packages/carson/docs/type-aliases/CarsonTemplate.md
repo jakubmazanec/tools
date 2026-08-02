@@ -7,7 +7,7 @@
 > **CarsonTemplate** = `object`
 
 Defined in:
-[packages/carson/source/template/CarsonTemplate.ts:10](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/carson/source/template/CarsonTemplate.ts#L10)
+[packages/carson/source/template/CarsonTemplate.ts:10](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/carson/source/template/CarsonTemplate.ts#L10)
 
 Carson template.
 
@@ -18,7 +18,7 @@ Carson template.
 > **config**: [`CarsonTemplateConfig`](CarsonTemplateConfig.md)
 
 Defined in:
-[packages/carson/source/template/CarsonTemplate.ts:18](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/carson/source/template/CarsonTemplate.ts#L18)
+[packages/carson/source/template/CarsonTemplate.ts:18](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/carson/source/template/CarsonTemplate.ts#L18)
 
 Carson template config.
 
@@ -28,10 +28,10 @@ Carson template config.
 
 > **files**: `Template`\<_typeof_
 > [`templateAttributesSchema`](../variables/templateAttributesSchema.md), _typeof_
-> [`templateDataSchema`](../variables/templateDataSchema.md)\>[]
+> [`templateDataSchema`](../variables/templateDataSchema.md)>\>[]
 
 Defined in:
-[packages/carson/source/template/CarsonTemplate.ts:21](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/carson/source/template/CarsonTemplate.ts#L21)
+[packages/carson/source/template/CarsonTemplate.ts:21](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/carson/source/template/CarsonTemplate.ts#L21)
 
 Carson template files, actually instances of Template.
 
@@ -42,7 +42,7 @@ Carson template files, actually instances of Template.
 > **id**: `string`
 
 Defined in:
-[packages/carson/source/template/CarsonTemplate.ts:12](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/carson/source/template/CarsonTemplate.ts#L12)
+[packages/carson/source/template/CarsonTemplate.ts:12](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/carson/source/template/CarsonTemplate.ts#L12)
 
 Carson template ID.
 
@@ -53,6 +53,6 @@ Carson template ID.
 > **name**: `string`
 
 Defined in:
-[packages/carson/source/template/CarsonTemplate.ts:15](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/carson/source/template/CarsonTemplate.ts#L15)
+[packages/carson/source/template/CarsonTemplate.ts:15](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/carson/source/template/CarsonTemplate.ts#L15)
 
 Carson template name.

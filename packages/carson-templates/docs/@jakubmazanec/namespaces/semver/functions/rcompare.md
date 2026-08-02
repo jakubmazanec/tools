@@ -6,7 +6,7 @@
 
 > **rcompare**(`v1`, `v2`, `optionsOrLoose?`): `-1` \| `0` \| `1`
 
-Defined in: node_modules/@types/semver/functions/rcompare.d.ts:9
+Defined in: node\_modules/@types/semver/functions/rcompare.d.ts:9
 
 The reverse of compare.
 

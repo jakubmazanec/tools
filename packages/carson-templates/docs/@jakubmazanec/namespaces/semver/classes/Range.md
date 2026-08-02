@@ -4,7 +4,7 @@
 
 # Class: Range
 
-Defined in: node_modules/@types/semver/classes/range.d.ts:5
+Defined in: node\_modules/@types/semver/classes/range.d.ts:5
 
 ## Constructors
 
@@ -12,7 +12,7 @@ Defined in: node_modules/@types/semver/classes/range.d.ts:5
 
 > **new Range**(`range`, `optionsOrLoose?`): `Range`
 
-Defined in: node_modules/@types/semver/classes/range.d.ts:6
+Defined in: node\_modules/@types/semver/classes/range.d.ts:6
 
 #### Parameters
 
@@ -34,7 +34,7 @@ Defined in: node_modules/@types/semver/classes/range.d.ts:6
 
 > **includePrerelease**: `boolean`
 
-Defined in: node_modules/@types/semver/classes/range.d.ts:12
+Defined in: node\_modules/@types/semver/classes/range.d.ts:12
 
 ---
 
@@ -42,7 +42,7 @@ Defined in: node_modules/@types/semver/classes/range.d.ts:12
 
 > **loose**: `boolean`
 
-Defined in: node_modules/@types/semver/classes/range.d.ts:10
+Defined in: node\_modules/@types/semver/classes/range.d.ts:10
 
 ---
 
@@ -50,7 +50,7 @@ Defined in: node_modules/@types/semver/classes/range.d.ts:10
 
 > **options**: [`Options`](../interfaces/Options.md)
 
-Defined in: node_modules/@types/semver/classes/range.d.ts:11
+Defined in: node\_modules/@types/semver/classes/range.d.ts:11
 
 ---
 
@@ -58,7 +58,7 @@ Defined in: node_modules/@types/semver/classes/range.d.ts:11
 
 > **range**: `string`
 
-Defined in: node_modules/@types/semver/classes/range.d.ts:8
+Defined in: node\_modules/@types/semver/classes/range.d.ts:8
 
 ---
 
@@ -66,7 +66,7 @@ Defined in: node_modules/@types/semver/classes/range.d.ts:8
 
 > **raw**: `string`
 
-Defined in: node_modules/@types/semver/classes/range.d.ts:9
+Defined in: node\_modules/@types/semver/classes/range.d.ts:9
 
 ---
 
@@ -74,7 +74,7 @@ Defined in: node_modules/@types/semver/classes/range.d.ts:9
 
 > **set**: readonly readonly [`Comparator`](Comparator.md)[][]
 
-Defined in: node_modules/@types/semver/classes/range.d.ts:16
+Defined in: node\_modules/@types/semver/classes/range.d.ts:16
 
 ## Methods
 
@@ -82,7 +82,7 @@ Defined in: node_modules/@types/semver/classes/range.d.ts:16
 
 > **format**(): `string`
 
-Defined in: node_modules/@types/semver/classes/range.d.ts:13
+Defined in: node\_modules/@types/semver/classes/range.d.ts:13
 
 #### Returns
 
@@ -94,7 +94,7 @@ Defined in: node_modules/@types/semver/classes/range.d.ts:13
 
 > **inspect**(): `string`
 
-Defined in: node_modules/@types/semver/classes/range.d.ts:14
+Defined in: node\_modules/@types/semver/classes/range.d.ts:14
 
 #### Returns
 
@@ -106,7 +106,7 @@ Defined in: node_modules/@types/semver/classes/range.d.ts:14
 
 > **intersects**(`range`, `optionsOrLoose?`): `boolean`
 
-Defined in: node_modules/@types/semver/classes/range.d.ts:19
+Defined in: node\_modules/@types/semver/classes/range.d.ts:19
 
 #### Parameters
 
@@ -128,7 +128,7 @@ Defined in: node_modules/@types/semver/classes/range.d.ts:19
 
 > **parseRange**(`range`): readonly [`Comparator`](Comparator.md)[]
 
-Defined in: node_modules/@types/semver/classes/range.d.ts:17
+Defined in: node\_modules/@types/semver/classes/range.d.ts:17
 
 #### Parameters
 
@@ -146,7 +146,7 @@ readonly [`Comparator`](Comparator.md)[]
 
 > **test**(`version`): `boolean`
 
-Defined in: node_modules/@types/semver/classes/range.d.ts:18
+Defined in: node\_modules/@types/semver/classes/range.d.ts:18
 
 #### Parameters
 

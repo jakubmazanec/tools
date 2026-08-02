@@ -4,11 +4,11 @@
 
 # Function: Icon()
 
-> **Icon**\<`T`\>(`__namedParameters`): `ReactElement`\<`any`, `string` \|
-> `JSXElementConstructor`\<`any`\>\>
+> **Icon**\<`T`>\>(`__namedParameters`): `ReactElement`\<`any`, `string` \|
+> `JSXElementConstructor`\<`any`>>\>\>
 
 Defined in:
-[packages/ui/source/components/Icon.tsx:37](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/ui/source/components/Icon.tsx#L37)
+[packages/ui/source/components/Icon.tsx:37](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/ui/source/components/Icon.tsx#L37)
 
 ## Type Parameters
 

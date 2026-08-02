@@ -4,12 +4,12 @@
 
 # Type Alias: MenuItemProps\<T\>
 
-> **MenuItemProps**\<`T`\> = `ComponentProps`\<_typeof_
-> [`useMenuItemTheme`](../variables/useMenuItemTheme.md)\> & `ComponentPropsWithoutRef`\<`T`\> &
-> `ComponentRef`\<`T`\> & `PropsWithChildren` & `object`
+> **MenuItemProps**\<`T`> \> = `ComponentProps`\<_typeof_
+> [`useMenuItemTheme`](../variables/useMenuItemTheme.md)> \> & `ComponentPropsWithoutRef`\<`T`> \> &
+> `ComponentRef`\<`T`> \> & `PropsWithChildren` & `object`
 
 Defined in:
-[packages/ui/source/components/MenuItem.tsx:23](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/ui/source/components/MenuItem.tsx#L23)
+[packages/ui/source/components/MenuItem.tsx:23](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/ui/source/components/MenuItem.tsx#L23)
 
 ## Type Declaration
 

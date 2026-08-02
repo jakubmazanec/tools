@@ -4,12 +4,12 @@
 
 # Type Alias: ButtonProps\<T\>
 
-> **ButtonProps**\<`T`\> = `ComponentProps`\<_typeof_
-> [`useButtonTheme`](../variables/useButtonTheme.md)\> & `ComponentRef`\<`T`\> &
-> `Omit`\<`ComponentPropsWithoutRef`\<`T`\>, `"type"`\> & `object`
+> **ButtonProps**\<`T`> \> = `ComponentProps`\<_typeof_
+> [`useButtonTheme`](../variables/useButtonTheme.md)> \> & `ComponentRef`\<`T`> \> &
+> `Omit`\<`ComponentPropsWithoutRef`\<`T`>\>, `"type"`> \> & `object`
 
 Defined in:
-[packages/ui/source/components/Button.tsx:29](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/ui/source/components/Button.tsx#L29)
+[packages/ui/source/components/Button.tsx:29](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/ui/source/components/Button.tsx#L29)
 
 ## Type Declaration
 

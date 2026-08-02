@@ -2,8 +2,8 @@
 
 ---
 
-# Variable: SEMVER_SPEC_VERSION
+# Variable: SEMVER\_SPEC\_VERSION
 
-> `const` **SEMVER_SPEC_VERSION**: `"2.0.0"`
+> `const` **SEMVER\_SPEC\_VERSION**: `"2.0.0"`
 
-Defined in: node_modules/@types/semver/index.d.ts:100
+Defined in: node\_modules/@types/semver/index.d.ts:100

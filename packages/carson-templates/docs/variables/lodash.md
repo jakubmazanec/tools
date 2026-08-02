@@ -6,4 +6,4 @@
 
 > `const` **lodash**: [`LoDashStatic`](../../index/interfaces/LoDashStatic.md)
 
-Defined in: node_modules/@types/lodash/index.d.ts:17
+Defined in: node\_modules/@types/lodash/index.d.ts:17

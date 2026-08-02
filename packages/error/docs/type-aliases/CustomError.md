@@ -4,10 +4,10 @@
 
 # Type Alias: CustomError\<ErrorCode\>
 
-> **CustomError**\<`ErrorCode`\> = `Error` & `object`
+> **CustomError**\<`ErrorCode`> \> = `Error` & `object`
 
 Defined in:
-[types/CustomError.ts:6](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/error/source/types/CustomError.ts#L6)
+[types/CustomError.ts:6](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/error/source/types/CustomError.ts#L6)
 
 Type representing custom error.
 

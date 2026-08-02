@@ -2,9 +2,9 @@
 
 ---
 
-# Variable: DEVELOPMENT_BRANCH_NAMES
+# Variable: DEVELOPMENT\_BRANCH\_NAMES
 
-> `const` **DEVELOPMENT_BRANCH_NAMES**: `Set`\<`string`\>
+> `const` **DEVELOPMENT\_BRANCH\_NAMES**: `Set`\<`string`>\>
 
 Defined in:
-[packages/carson-templates/source/constants.ts:19](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/carson-templates/source/constants.ts#L19)
+[packages/carson-templates/source/constants.ts:19](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/carson-templates/source/constants.ts#L19)

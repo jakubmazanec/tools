@@ -5,7 +5,7 @@
 # Class: WorkspaceDependencies\<M\>
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceDependencies.ts:13](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/carson/source/workspace/WorkspaceDependencies.ts#L13)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:13](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/carson/source/workspace/WorkspaceDependencies.ts#L13)
 
 A collection of WorkspaceDependency \| workspace dependencies that are installed in
 [a workspace](Workspace.md).
@@ -28,10 +28,10 @@ A collection of WorkspaceDependency \| workspace dependencies that are installed
 
 ### Constructor
 
-> **new WorkspaceDependencies**\<`M`\>(...`args`): `WorkspaceDependencies`\<`M`\>
+> **new WorkspaceDependencies**\<`M`>\>(...`args`): `WorkspaceDependencies`\<`M`>\>
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceDependencies.ts:17](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/carson/source/workspace/WorkspaceDependencies.ts#L17)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:17](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/carson/source/workspace/WorkspaceDependencies.ts#L17)
 
 #### Parameters
 
@@ -53,7 +53,7 @@ Defined in:
 
 > `readonly` **\[unscopables\]**: `object`
 
-Defined in: node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts:97
+Defined in: node\_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts:97
 
 Is an object whose properties have the value 'true' when they will be absent when used in a 'with'
 statement.
@@ -242,7 +242,7 @@ array.
 
 > **length**: `number`
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:1329
+Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1329
 
 Gets or sets the length of the array. This is a number one higher than the highest index in the
 array.
@@ -255,10 +255,10 @@ array.
 
 ### workspace
 
-> **workspace**: [`Workspace`](Workspace.md)\<`M`\>
+> **workspace**: [`Workspace`](Workspace.md)\<`M`>\>
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceDependencies.ts:15](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/carson/source/workspace/WorkspaceDependencies.ts#L15)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:15](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/carson/source/workspace/WorkspaceDependencies.ts#L15)
 
 The workspace the dependencies are installed in.
 
@@ -268,7 +268,7 @@ The workspace the dependencies are installed in.
 
 > `readonly` `static` **\[species\]**: `ArrayConstructor`
 
-Defined in: node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts:316
+Defined in: node\_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts:316
 
 #### Inherited from
 
@@ -278,9 +278,9 @@ Defined in: node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts:316
 
 ### \[iterator\]()
 
-> **\[iterator\]**(): `ArrayIterator`\<`WorkspaceDependency`\>
+> **\[iterator\]**(): `ArrayIterator`\<`WorkspaceDependency`>\>
 
-Defined in: node_modules/typescript/lib/lib.es2015.iterable.d.ts:78
+Defined in: node\_modules/typescript/lib/lib.es2015.iterable.d.ts:78
 
 Iterator
 
@@ -298,7 +298,7 @@ Iterator
 
 > **at**(`index`): `WorkspaceDependency` \| `undefined`
 
-Defined in: node_modules/typescript/lib/lib.es2022.array.d.ts:24
+Defined in: node\_modules/typescript/lib/lib.es2022.array.d.ts:24
 
 Returns the item located at the specified index.
 
@@ -326,7 +326,7 @@ The zero-based index of the desired code unit. A negative index will count back 
 
 > **concat**(...`items`): `WorkspaceDependency`[]
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:1353
+Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1353
 
 Combines two or more arrays. This method returns a new array without modifying any existing arrays.
 
@@ -350,7 +350,7 @@ Additional arrays and/or items to add to the end of the array.
 
 > **concat**(...`items`): `WorkspaceDependency`[]
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:1359
+Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1359
 
 Combines two or more arrays. This method returns a new array without modifying any existing arrays.
 
@@ -376,7 +376,7 @@ Additional arrays and/or items to add to the end of the array.
 
 > **copyWithin**(`target`, `start`, `end?`): `this`
 
-Defined in: node_modules/typescript/lib/lib.es2015.core.d.ts:62
+Defined in: node\_modules/typescript/lib/lib.es2015.core.d.ts:62
 
 Returns the this object after copying a section of the array identified by start and end to the same
 array starting at position target
@@ -416,7 +416,7 @@ If not specified, length of the this object is used as its default value.
 
 > **entries**(): `ArrayIterator`\<\[`number`, `WorkspaceDependency`\]\>
 
-Defined in: node_modules/typescript/lib/lib.es2015.iterable.d.ts:83
+Defined in: node\_modules/typescript/lib/lib.es2015.iterable.d.ts:83
 
 Returns an iterable of key, value pairs for every entry in the array
 
@@ -434,9 +434,9 @@ Returns an iterable of key, value pairs for every entry in the array
 
 #### Call Signature
 
-> **every**\<`S`\>(`predicate`, `thisArg?`): `this is S[]`
+> **every**\<`S`>\>(`predicate`, `thisArg?`): `this is S[]`
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:1440
+Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1440
 
 Determines whether all the members of an array satisfy the specified test.
 
@@ -475,7 +475,7 @@ undefined is used as the this value.
 
 > **every**(`predicate`, `thisArg?`): `boolean`
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:1449
+Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1449
 
 Determines whether all the members of an array satisfy the specified test.
 
@@ -510,7 +510,7 @@ undefined is used as the this value.
 
 > **fill**(`value`, `start?`, `end?`): `this`
 
-Defined in: node_modules/typescript/lib/lib.es2015.core.d.ts:51
+Defined in: node\_modules/typescript/lib/lib.es2015.core.d.ts:51
 
 Changes all array elements from `start` to `end` index to a static `value` and returns the modified
 array
@@ -550,9 +550,9 @@ index to stop filling the array at. If end is negative, it is treated as length+
 
 #### Call Signature
 
-> **filter**\<`S`\>(`predicate`, `thisArg?`): `S`[]
+> **filter**\<`S`>\>(`predicate`, `thisArg?`): `S`[]
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:1476
+Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1476
 
 Returns the elements of an array that meet the condition specified in a callback function.
 
@@ -590,7 +590,7 @@ undefined is used as the this value.
 
 > **filter**(`predicate`, `thisArg?`): `WorkspaceDependency`[]
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:1482
+Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1482
 
 Returns the elements of an array that meet the condition specified in a callback function.
 
@@ -624,9 +624,9 @@ undefined is used as the this value.
 
 #### Call Signature
 
-> **find**\<`S`\>(`predicate`, `thisArg?`): `S` \| `undefined`
+> **find**\<`S`>\>(`predicate`, `thisArg?`): `S` \| `undefined`
 
-Defined in: node_modules/typescript/lib/lib.es2015.core.d.ts:29
+Defined in: node\_modules/typescript/lib/lib.es2015.core.d.ts:29
 
 Returns the value of the first element in the array where predicate is true, and undefined
 otherwise.
@@ -666,7 +666,7 @@ provided, undefined is used instead.
 
 > **find**(`predicate`, `thisArg?`): `WorkspaceDependency` \| `undefined`
 
-Defined in: node_modules/typescript/lib/lib.es2015.core.d.ts:30
+Defined in: node\_modules/typescript/lib/lib.es2015.core.d.ts:30
 
 ##### Parameters
 
@@ -692,7 +692,7 @@ Defined in: node_modules/typescript/lib/lib.es2015.core.d.ts:30
 
 > **findIndex**(`predicate`, `thisArg?`): `number`
 
-Defined in: node_modules/typescript/lib/lib.es2015.core.d.ts:41
+Defined in: node\_modules/typescript/lib/lib.es2015.core.d.ts:41
 
 Returns the index of the first element in the array where predicate is true, and -1 otherwise.
 
@@ -727,9 +727,9 @@ provided, undefined is used instead.
 
 #### Call Signature
 
-> **findLast**\<`S`\>(`predicate`, `thisArg?`): `S` \| `undefined`
+> **findLast**\<`S`>\>(`predicate`, `thisArg?`): `S` \| `undefined`
 
-Defined in: node_modules/typescript/lib/lib.es2023.array.d.ts:29
+Defined in: node\_modules/typescript/lib/lib.es2023.array.d.ts:29
 
 Returns the value of the last element in the array where predicate is true, and undefined otherwise.
 
@@ -768,7 +768,7 @@ provided, undefined is used instead.
 
 > **findLast**(`predicate`, `thisArg?`): `WorkspaceDependency` \| `undefined`
 
-Defined in: node_modules/typescript/lib/lib.es2023.array.d.ts:30
+Defined in: node\_modules/typescript/lib/lib.es2023.array.d.ts:30
 
 ##### Parameters
 
@@ -794,7 +794,7 @@ Defined in: node_modules/typescript/lib/lib.es2023.array.d.ts:30
 
 > **findLastIndex**(`predicate`, `thisArg?`): `number`
 
-Defined in: node_modules/typescript/lib/lib.es2023.array.d.ts:41
+Defined in: node\_modules/typescript/lib/lib.es2023.array.d.ts:41
 
 Returns the index of the last element in the array where predicate is true, and -1 otherwise.
 
@@ -827,9 +827,9 @@ provided, undefined is used instead.
 
 ### flat()
 
-> **flat**\<`A`, `D`\>(`this`, `depth?`): `FlatArray`\<`A`, `D`\>[]
+> **flat**\<`A`, `D`>\>(`this`, `depth?`): `FlatArray`\<`A`, `D`>\>[]
 
-Defined in: node_modules/typescript/lib/lib.es2019.array.d.ts:75
+Defined in: node\_modules/typescript/lib/lib.es2019.array.d.ts:75
 
 Returns a new array with all sub-array elements concatenated into it recursively up to the specified
 depth.
@@ -868,9 +868,9 @@ The maximum recursion depth
 
 ### flatMap()
 
-> **flatMap**\<`U`, `This`\>(`callback`, `thisArg?`): `U`[]
+> **flatMap**\<`U`, `This`>\>(`callback`, `thisArg?`): `U`[]
 
-Defined in: node_modules/typescript/lib/lib.es2019.array.d.ts:64
+Defined in: node\_modules/typescript/lib/lib.es2019.array.d.ts:64
 
 Calls a defined callback function on each element of an array. Then, flattens the result into a new
 array. This is identical to a map followed by flat with depth 1.
@@ -915,7 +915,7 @@ undefined is used as the this value.
 
 > **forEach**(`callbackfn`, `thisArg?`): `void`
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:1464
+Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1464
 
 Performs the specified action for each element in an array.
 
@@ -950,7 +950,7 @@ undefined is used as the this value.
 > **getVersions**(`options?`): `Record`\<`string`, `string`[]\>
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceDependencies.ts:187](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/carson/source/workspace/WorkspaceDependencies.ts#L187)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:187](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/carson/source/workspace/WorkspaceDependencies.ts#L187)
 
 Creates map of all dependnecies and their installed version.
 
@@ -974,7 +974,7 @@ Object whose keys are dependency names and values are sorted versions.
 
 > **includes**(`searchElement`, `fromIndex?`): `boolean`
 
-Defined in: node_modules/typescript/lib/lib.es2016.array.include.d.ts:25
+Defined in: node\_modules/typescript/lib/lib.es2016.array.include.d.ts:25
 
 Determines whether an array includes a certain element, returning true or false as appropriate.
 
@@ -1006,7 +1006,7 @@ The position in this array at which to begin searching for searchElement.
 
 > **indexOf**(`searchElement`, `fromIndex?`): `number`
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:1425
+Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1425
 
 Returns the index of the first occurrence of a value in an array, or -1 if it is not present.
 
@@ -1038,7 +1038,7 @@ The array index at which to begin the search. If fromIndex is omitted, the searc
 
 > **join**(`separator?`): `string`
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:1364
+Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1364
 
 Adds all the elements of an array into a string, separated by the specified separator string.
 
@@ -1063,9 +1063,9 @@ omitted, the array elements are separated with a comma.
 
 ### keys()
 
-> **keys**(): `ArrayIterator`\<`number`\>
+> **keys**(): `ArrayIterator`\<`number`>\>
 
-Defined in: node_modules/typescript/lib/lib.es2015.iterable.d.ts:88
+Defined in: node\_modules/typescript/lib/lib.es2015.iterable.d.ts:88
 
 Returns an iterable of keys in the array
 
@@ -1083,7 +1083,7 @@ Returns an iterable of keys in the array
 
 > **lastIndexOf**(`searchElement`, `fromIndex?`): `number`
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:1431
+Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1431
 
 Returns the index of the last occurrence of a specified value in an array, or -1 if it is not
 present.
@@ -1115,9 +1115,9 @@ the last index in the array.
 
 ### map()
 
-> **map**\<`U`\>(`callbackfn`, `thisArg?`): `U`[]
+> **map**\<`U`>\>(`callbackfn`, `thisArg?`): `U`[]
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:1470
+Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1470
 
 Calls a defined callback function on each element of an array, and returns an array that contains
 the results.
@@ -1158,7 +1158,7 @@ undefined is used as the this value.
 
 > **pop**(): `WorkspaceDependency` \| `undefined`
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:1342
+Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1342
 
 Removes the last element from an array and returns it. If the array is empty, undefined is returned
 and the array is not modified.
@@ -1178,7 +1178,7 @@ and the array is not modified.
 > **push**(...`newWorkspaceDependencies`): `number`
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceDependencies.ts:38](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/carson/source/workspace/WorkspaceDependencies.ts#L38)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:38](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/carson/source/workspace/WorkspaceDependencies.ts#L38)
 
 Adds one or more new dependencies.
 
@@ -1208,7 +1208,7 @@ The new length of the collection.
 
 > **reduce**(`callbackfn`): `WorkspaceDependency`
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:1488
+Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1488
 
 Calls the specified callback function for all the elements in an array. The return value of the
 callback function is the accumulated result, and is provided as an argument in the next call to the
@@ -1235,7 +1235,7 @@ time for each element in the array.
 
 > **reduce**(`callbackfn`, `initialValue`): `WorkspaceDependency`
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:1489
+Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1489
 
 ##### Parameters
 
@@ -1257,9 +1257,9 @@ Defined in: node_modules/typescript/lib/lib.es5.d.ts:1489
 
 #### Call Signature
 
-> **reduce**\<`U`\>(`callbackfn`, `initialValue`): `U`
+> **reduce**\<`U`>\>(`callbackfn`, `initialValue`): `U`
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:1495
+Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1495
 
 Calls the specified callback function for all the elements in an array. The return value of the
 callback function is the accumulated result, and is provided as an argument in the next call to the
@@ -1303,7 +1303,7 @@ call to the callbackfn function provides this value as an argument instead of an
 
 > **reduceRight**(`callbackfn`): `WorkspaceDependency`
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:1501
+Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1501
 
 Calls the specified callback function for all the elements in an array, in descending order. The
 return value of the callback function is the accumulated result, and is provided as an argument in
@@ -1330,7 +1330,7 @@ one time for each element in the array.
 
 > **reduceRight**(`callbackfn`, `initialValue`): `WorkspaceDependency`
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:1502
+Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1502
 
 ##### Parameters
 
@@ -1352,9 +1352,9 @@ Defined in: node_modules/typescript/lib/lib.es5.d.ts:1502
 
 #### Call Signature
 
-> **reduceRight**\<`U`\>(`callbackfn`, `initialValue`): `U`
+> **reduceRight**\<`U`>\>(`callbackfn`, `initialValue`): `U`
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:1508
+Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1508
 
 Calls the specified callback function for all the elements in an array, in descending order. The
 return value of the callback function is the accumulated result, and is provided as an argument in
@@ -1396,7 +1396,7 @@ call to the callbackfn function provides this value as an argument instead of an
 
 > **reverse**(): `WorkspaceDependency`[]
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:1369
+Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1369
 
 Reverses the elements in an array in place. This method mutates the array and returns a reference to
 the same array.
@@ -1415,7 +1415,7 @@ the same array.
 
 > **shift**(): `WorkspaceDependency` \| `undefined`
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:1374
+Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1374
 
 Removes the first element from an array and returns it. If the array is empty, undefined is returned
 and the array is not modified.
@@ -1434,7 +1434,7 @@ and the array is not modified.
 
 > **slice**(`start?`, `end?`): `WorkspaceDependency`[]
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:1384
+Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1384
 
 Returns a copy of a section of an array. For both start and end, a negative index can be used to
 indicate an offset from the end of the array. For example, -2 refers to the second to last element
@@ -1470,7 +1470,7 @@ The end index of the specified portion of the array. This is exclusive of the el
 
 > **some**(`predicate`, `thisArg?`): `boolean`
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:1458
+Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1458
 
 Determines whether the specified callback function returns true for any element of an array.
 
@@ -1505,7 +1505,7 @@ undefined is used as the this value.
 
 > **sort**(`compareFn?`): `this`
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:1395
+Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1395
 
 Sorts an array in place. This method mutates the array and returns a reference to the same array.
 
@@ -1539,7 +1539,7 @@ otherwise. If omitted, the elements are sorted in ascending, UTF-16 code unit or
 
 > **splice**(`start`, `deleteCount?`): `WorkspaceDependency`[]
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:1404
+Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1404
 
 Removes elements from an array and, if necessary, inserts new elements in their place, returning the
 deleted elements.
@@ -1575,7 +1575,7 @@ An array containing the elements that were deleted.
 
 > **splice**(`start`, `deleteCount`, ...`items`): `WorkspaceDependency`[]
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:1414
+Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1414
 
 Removes elements from an array and, if necessary, inserts new elements in their place, returning the
 deleted elements.
@@ -1620,7 +1620,7 @@ An array containing the elements that were deleted.
 
 > **toLocaleString**(): `string`
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:1337
+Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1337
 
 Returns a string representation of an array. The elements are converted to string using their
 toLocaleString methods.
@@ -1637,7 +1637,7 @@ toLocaleString methods.
 
 > **toLocaleString**(`locales`, `options?`): `string`
 
-Defined in: node_modules/typescript/lib/lib.es2015.core.d.ts:64
+Defined in: node\_modules/typescript/lib/lib.es2015.core.d.ts:64
 
 ##### Parameters
 
@@ -1663,7 +1663,7 @@ Defined in: node_modules/typescript/lib/lib.es2015.core.d.ts:64
 
 > **toReversed**(): `WorkspaceDependency`[]
 
-Defined in: node_modules/typescript/lib/lib.es2023.array.d.ts:46
+Defined in: node\_modules/typescript/lib/lib.es2023.array.d.ts:46
 
 Returns a copy of an array with its elements reversed.
 
@@ -1681,7 +1681,7 @@ Returns a copy of an array with its elements reversed.
 
 > **toSorted**(`compareFn?`): `WorkspaceDependency`[]
 
-Defined in: node_modules/typescript/lib/lib.es2023.array.d.ts:57
+Defined in: node\_modules/typescript/lib/lib.es2023.array.d.ts:57
 
 Returns a copy of an array with its elements sorted.
 
@@ -1715,7 +1715,7 @@ otherwise. If omitted, the elements are sorted in ascending, UTF-16 code unit or
 
 > **toSpliced**(`start`, `deleteCount`, ...`items`): `WorkspaceDependency`[]
 
-Defined in: node_modules/typescript/lib/lib.es2023.array.d.ts:66
+Defined in: node\_modules/typescript/lib/lib.es2023.array.d.ts:66
 
 Copies an array and removes elements and, if necessary, inserts new elements in their place. Returns
 the copied array.
@@ -1754,7 +1754,7 @@ The copied array.
 
 > **toSpliced**(`start`, `deleteCount?`): `WorkspaceDependency`[]
 
-Defined in: node_modules/typescript/lib/lib.es2023.array.d.ts:74
+Defined in: node\_modules/typescript/lib/lib.es2023.array.d.ts:74
 
 Copies an array and removes elements while returning the remaining elements.
 
@@ -1788,7 +1788,7 @@ A copy of the original array with the remaining elements.
 
 > **toString**(): `string`
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:1333
+Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1333
 
 Returns a string representation of an array.
 
@@ -1806,7 +1806,7 @@ Returns a string representation of an array.
 
 > **unshift**(...`items`): `number`
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:1419
+Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1419
 
 Inserts new elements at the start of an array, and returns the new length of the array.
 
@@ -1830,9 +1830,9 @@ Elements to insert at the start of the array.
 
 ### values()
 
-> **values**(): `ArrayIterator`\<`WorkspaceDependency`\>
+> **values**(): `ArrayIterator`\<`WorkspaceDependency`>\>
 
-Defined in: node_modules/typescript/lib/lib.es2015.iterable.d.ts:93
+Defined in: node\_modules/typescript/lib/lib.es2015.iterable.d.ts:93
 
 Returns an iterable of values in the array
 
@@ -1850,7 +1850,7 @@ Returns an iterable of values in the array
 
 > **with**(`index`, `value`): `WorkspaceDependency`[]
 
-Defined in: node_modules/typescript/lib/lib.es2023.array.d.ts:85
+Defined in: node\_modules/typescript/lib/lib.es2023.array.d.ts:85
 
 Copies an array, then overwrites the value at the provided index with the given value. If the index
 is negative, then it replaces from the end of the array.
@@ -1886,9 +1886,9 @@ The copied array with the updated value.
 
 #### Call Signature
 
-> `static` **from**\<`T`\>(`arrayLike`): `T`[]
+> `static` **from**\<`T`>\>(`arrayLike`): `T`[]
 
-Defined in: node_modules/typescript/lib/lib.es2015.core.d.ts:72
+Defined in: node\_modules/typescript/lib/lib.es2015.core.d.ts:72
 
 Creates an array from an array-like object.
 
@@ -1916,9 +1916,9 @@ An array-like object to convert to an array.
 
 #### Call Signature
 
-> `static` **from**\<`T`, `U`\>(`arrayLike`, `mapfn`, `thisArg?`): `U`[]
+> `static` **from**\<`T`, `U`>\>(`arrayLike`, `mapfn`, `thisArg?`): `U`[]
 
-Defined in: node_modules/typescript/lib/lib.es2015.core.d.ts:80
+Defined in: node\_modules/typescript/lib/lib.es2015.core.d.ts:80
 
 Creates an array from an iterable object.
 
@@ -1962,9 +1962,9 @@ Value of 'this' used to invoke the mapfn.
 
 #### Call Signature
 
-> `static` **from**\<`T`\>(`iterable`): `T`[]
+> `static` **from**\<`T`>\>(`iterable`): `T`[]
 
-Defined in: node_modules/typescript/lib/lib.es2015.iterable.d.ts:101
+Defined in: node\_modules/typescript/lib/lib.es2015.iterable.d.ts:101
 
 Creates an array from an iterable object.
 
@@ -1992,9 +1992,9 @@ An iterable object to convert to an array.
 
 #### Call Signature
 
-> `static` **from**\<`T`, `U`\>(`iterable`, `mapfn`, `thisArg?`): `U`[]
+> `static` **from**\<`T`, `U`>\>(`iterable`, `mapfn`, `thisArg?`): `U`[]
 
-Defined in: node_modules/typescript/lib/lib.es2015.iterable.d.ts:109
+Defined in: node\_modules/typescript/lib/lib.es2015.iterable.d.ts:109
 
 Creates an array from an iterable object.
 
@@ -2040,10 +2040,10 @@ Value of 'this' used to invoke the mapfn.
 
 ### fromWorkspace()
 
-> `static` **fromWorkspace**\<`M`\>(`workspace`, `options?`): `WorkspaceDependencies`\<`M`\>
+> `static` **fromWorkspace**\<`M`>\>(`workspace`, `options?`): `WorkspaceDependencies`\<`M`>\>
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceDependencies.ts:81](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/carson/source/workspace/WorkspaceDependencies.ts#L81)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:81](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/carson/source/workspace/WorkspaceDependencies.ts#L81)
 
 Creates new WorkspaceDependencies instance from a [Workspace](Workspace.md) instance and its
 dependencies.
@@ -2080,7 +2080,7 @@ The new WorkspaceDependencies instance.
 
 > `static` **isArray**(`arg`): `arg is any[]`
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:1520
+Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1520
 
 #### Parameters
 
@@ -2100,9 +2100,9 @@ Defined in: node_modules/typescript/lib/lib.es5.d.ts:1520
 
 ### of()
 
-> `static` **of**\<`T`\>(...`items`): `T`[]
+> `static` **of**\<`T`>\>(...`items`): `T`[]
 
-Defined in: node_modules/typescript/lib/lib.es2015.core.d.ts:86
+Defined in: node\_modules/typescript/lib/lib.es2015.core.d.ts:86
 
 Returns a new array from a set of elements.
 

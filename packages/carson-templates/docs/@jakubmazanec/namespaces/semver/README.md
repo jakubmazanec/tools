@@ -27,8 +27,8 @@
 
 ## Variables
 
-- [RELEASE_TYPES](variables/RELEASE_TYPES.md)
-- [SEMVER_SPEC_VERSION](variables/SEMVER_SPEC_VERSION.md)
+- [RELEASE\_TYPES](variables/RELEASE_TYPES.md)
+- [SEMVER\_SPEC\_VERSION](variables/SEMVER_SPEC_VERSION.md)
 
 ## Functions
 

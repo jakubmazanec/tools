@@ -2,12 +2,12 @@
 
 ---
 
-# Variable: PRETTIER_OPTIONS
+# Variable: PRETTIER\_OPTIONS
 
-> `const` **PRETTIER_OPTIONS**: `object`
+> `const` **PRETTIER\_OPTIONS**: `object`
 
 Defined in:
-[packages/carson-templates/source/constants.ts:70](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/carson-templates/source/constants.ts#L70)
+[packages/carson-templates/source/constants.ts:70](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/carson-templates/source/constants.ts#L70)
 
 ## Type Declaration
 

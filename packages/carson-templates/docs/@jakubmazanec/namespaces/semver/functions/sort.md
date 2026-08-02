@@ -4,9 +4,9 @@
 
 # Function: sort()
 
-> **sort**\<`T`\>(`list`, `optionsOrLoose?`): `T`[]
+> **sort**\<`T`>\>(`list`, `optionsOrLoose?`): `T`[]
 
-Defined in: node_modules/@types/semver/functions/sort.d.ts:7
+Defined in: node\_modules/@types/semver/functions/sort.d.ts:7
 
 Sorts an array of semver entries in ascending order using `compareBuild()`.
 

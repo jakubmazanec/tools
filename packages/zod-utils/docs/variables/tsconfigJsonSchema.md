@@ -4,39 +4,40 @@
 
 # Variable: tsconfigJsonSchema
 
-> `const` **tsconfigJsonSchema**: `ZodObject`\<\{ `compileOnSave`: `ZodOptional`\<`ZodBoolean`\>;
-> `compilerOptions`: `ZodOptional`\<`ZodObject`\<\{ `allowJs`: `ZodOptional`\<`ZodBoolean`\>;
-> `allowSyntheticDefaultImports`: `ZodOptional`\<`ZodBoolean`\>; `allowUmdGlobalAccess`:
-> `ZodOptional`\<`ZodBoolean`\>; `allowUnreachableCode`: `ZodOptional`\<`ZodBoolean`\>;
-> `allowUnusedLabels`: `ZodOptional`\<`ZodBoolean`\>; `alwaysStrict`: `ZodOptional`\<`ZodBoolean`\>;
-> `assumeChangesOnlyAffectDirectDependencies`: `ZodOptional`\<`ZodBoolean`\>; `baseUrl`:
-> `ZodOptional`\<`ZodString`\>; `charset`: `ZodOptional`\<`ZodString`\>; `checkJs`:
-> `ZodOptional`\<`ZodBoolean`\>; `composite`: `ZodOptional`\<`ZodBoolean`\>; `declaration`:
-> `ZodOptional`\<`ZodBoolean`\>; `declarationDir`: `ZodOptional`\<`ZodString`\>; `declarationMap`:
-> `ZodOptional`\<`ZodBoolean`\>; `diagnostics`: `ZodOptional`\<`ZodBoolean`\>;
-> `disableReferencedProjectLoad`: `ZodOptional`\<`ZodBoolean`\>; `disableSizeLimit`:
-> `ZodOptional`\<`ZodBoolean`\>; `disableSolutionSearching`: `ZodOptional`\<`ZodBoolean`\>;
-> `disableSourceOfProjectReferenceRedirect`: `ZodOptional`\<`ZodBoolean`\>; `downlevelIteration`:
-> `ZodOptional`\<`ZodBoolean`\>; `emitBOM`: `ZodOptional`\<`ZodBoolean`\>; `emitDeclarationOnly`:
-> `ZodOptional`\<`ZodBoolean`\>; `emitDecoratorMetadata`: `ZodOptional`\<`ZodBoolean`\>;
-> `esModuleInterop`: `ZodOptional`\<`ZodBoolean`\>; `exactOptionalPropertyTypes`:
-> `ZodOptional`\<`ZodBoolean`\>; `experimentalDecorators`: `ZodOptional`\<`ZodBoolean`\>;
-> `explainFiles`: `ZodOptional`\<`ZodBoolean`\>; `extendedDiagnostics`:
-> `ZodOptional`\<`ZodBoolean`\>; `fallbackPolling`: `ZodOptional`\<`ZodEnum`\<\{ `dynamicPriority`:
-> `"dynamicPriority"`; `dynamicPriorityPolling`: `"dynamicPriorityPolling"`; `fixedChunkSize`:
-> `"fixedChunkSize"`; `fixedInterval`: `"fixedInterval"`; `fixedPollingInterval`:
-> `"fixedPollingInterval"`; `priorityInterval`: `"priorityInterval"`; `priorityPollingInterval`:
-> `"priorityPollingInterval"`; \}\>\>; `forceConsistentCasingInFileNames`:
-> `ZodOptional`\<`ZodBoolean`\>; `generateCpuProfile`: `ZodOptional`\<`ZodString`\>;
-> `importHelpers`: `ZodOptional`\<`ZodBoolean`\>; `importsNotUsedAsValues`:
-> `ZodOptional`\<`ZodEnum`\<\{ `error`: `"error"`; `preserve`: `"preserve"`; `remove`: `"remove"`;
-> \}\>\>; `incremental`: `ZodOptional`\<`ZodBoolean`\>; `inlineSourceMap`:
-> `ZodOptional`\<`ZodBoolean`\>; `inlineSources`: `ZodOptional`\<`ZodBoolean`\>; `isolatedModules`:
-> `ZodOptional`\<`ZodBoolean`\>; `jsx`: `ZodOptional`\<`ZodEnum`\<\{ `preserve`: `"preserve"`;
-> `react`: `"react"`; `react-jsx`: `"react-jsx"`; `react-jsxdev`: `"react-jsxdev"`; `react-native`:
-> `"react-native"`; \}\>\>; `jsxFactory`: `ZodOptional`\<`ZodString`\>; `jsxFragmentFactory`:
-> `ZodOptional`\<`ZodString`\>; `jsxImportSource`: `ZodOptional`\<`ZodString`\>; `keyofStringsOnly`:
-> `ZodOptional`\<`ZodBoolean`\>; `lib`: `ZodOptional`\<`ZodArray`\<`ZodEnum`\<\{ `dom`: `"dom"`;
+> `const` **tsconfigJsonSchema**: `ZodObject`\<\{ `compileOnSave`: `ZodOptional`\<`ZodBoolean`>\>;
+> `compilerOptions`: `ZodOptional`\<`ZodObject`\<\{ `allowJs`: `ZodOptional`\<`ZodBoolean`>\>;
+> `allowSyntheticDefaultImports`: `ZodOptional`\<`ZodBoolean`>\>; `allowUmdGlobalAccess`:
+> `ZodOptional`\<`ZodBoolean`>\>; `allowUnreachableCode`: `ZodOptional`\<`ZodBoolean`>\>;
+> `allowUnusedLabels`: `ZodOptional`\<`ZodBoolean`>\>; `alwaysStrict`:
+> `ZodOptional`\<`ZodBoolean`>\>; `assumeChangesOnlyAffectDirectDependencies`:
+> `ZodOptional`\<`ZodBoolean`>\>; `baseUrl`: `ZodOptional`\<`ZodString`>\>; `charset`:
+> `ZodOptional`\<`ZodString`>\>; `checkJs`: `ZodOptional`\<`ZodBoolean`>\>; `composite`:
+> `ZodOptional`\<`ZodBoolean`>\>; `declaration`: `ZodOptional`\<`ZodBoolean`>\>; `declarationDir`:
+> `ZodOptional`\<`ZodString`>\>; `declarationMap`: `ZodOptional`\<`ZodBoolean`>\>; `diagnostics`:
+> `ZodOptional`\<`ZodBoolean`>\>; `disableReferencedProjectLoad`: `ZodOptional`\<`ZodBoolean`>\>;
+> `disableSizeLimit`: `ZodOptional`\<`ZodBoolean`>\>; `disableSolutionSearching`:
+> `ZodOptional`\<`ZodBoolean`>\>; `disableSourceOfProjectReferenceRedirect`:
+> `ZodOptional`\<`ZodBoolean`>\>; `downlevelIteration`: `ZodOptional`\<`ZodBoolean`>\>; `emitBOM`:
+> `ZodOptional`\<`ZodBoolean`>\>; `emitDeclarationOnly`: `ZodOptional`\<`ZodBoolean`>\>;
+> `emitDecoratorMetadata`: `ZodOptional`\<`ZodBoolean`>\>; `esModuleInterop`:
+> `ZodOptional`\<`ZodBoolean`>\>; `exactOptionalPropertyTypes`: `ZodOptional`\<`ZodBoolean`>\>;
+> `experimentalDecorators`: `ZodOptional`\<`ZodBoolean`>\>; `explainFiles`:
+> `ZodOptional`\<`ZodBoolean`>\>; `extendedDiagnostics`: `ZodOptional`\<`ZodBoolean`>\>;
+> `fallbackPolling`: `ZodOptional`\<`ZodEnum`\<\{ `dynamicPriority`: `"dynamicPriority"`;
+> `dynamicPriorityPolling`: `"dynamicPriorityPolling"`; `fixedChunkSize`: `"fixedChunkSize"`;
+> `fixedInterval`: `"fixedInterval"`; `fixedPollingInterval`: `"fixedPollingInterval"`;
+> `priorityInterval`: `"priorityInterval"`; `priorityPollingInterval`: `"priorityPollingInterval"`;
+> \}\>\>; `forceConsistentCasingInFileNames`: `ZodOptional`\<`ZodBoolean`>\>; `generateCpuProfile`:
+> `ZodOptional`\<`ZodString`>\>; `importHelpers`: `ZodOptional`\<`ZodBoolean`>\>;
+> `importsNotUsedAsValues`: `ZodOptional`\<`ZodEnum`\<\{ `error`: `"error"`; `preserve`:
+> `"preserve"`; `remove`: `"remove"`; \}\>\>; `incremental`: `ZodOptional`\<`ZodBoolean`>\>;
+> `inlineSourceMap`: `ZodOptional`\<`ZodBoolean`>\>; `inlineSources`:
+> `ZodOptional`\<`ZodBoolean`>\>; `isolatedModules`: `ZodOptional`\<`ZodBoolean`>\>; `jsx`:
+> `ZodOptional`\<`ZodEnum`\<\{ `preserve`: `"preserve"`; `react`: `"react"`; `react-jsx`:
+> `"react-jsx"`; `react-jsxdev`: `"react-jsxdev"`; `react-native`: `"react-native"`; \}\>\>;
+> `jsxFactory`: `ZodOptional`\<`ZodString`>\>; `jsxFragmentFactory`: `ZodOptional`\<`ZodString`>\>;
+> `jsxImportSource`: `ZodOptional`\<`ZodString`>\>; `keyofStringsOnly`:
+> `ZodOptional`\<`ZodBoolean`>\>; `lib`: `ZodOptional`\<`ZodArray`\<`ZodEnum`\<\{ `dom`: `"dom"`;
 > `DOM`: `"DOM"`; `dom.iterable`: `"dom.iterable"`; `DOM.Iterable`: `"DOM.Iterable"`; `es2015`:
 > `"es2015"`; `ES2015`: `"ES2015"`; `es2015.collection`: `"es2015.collection"`; `ES2015.Collection`:
 > `"ES2015.Collection"`; `es2015.core`: `"es2015.core"`; `ES2015.Core`: `"ES2015.Core"`;
@@ -82,68 +83,69 @@
 > `ScriptHost`: `"ScriptHost"`; `webworker`: `"webworker"`; `WebWorker`: `"WebWorker"`;
 > `webworker.importscripts`: `"webworker.importscripts"`; `WebWorker.ImportScripts`:
 > `"WebWorker.ImportScripts"`; `webworker.iterable`: `"webworker.iterable"`; `WebWorker.Iterable`:
-> `"WebWorker.Iterable"`; \}\>\>\>; `listEmittedFiles`: `ZodOptional`\<`ZodBoolean`\>; `listFiles`:
-> `ZodOptional`\<`ZodBoolean`\>; `listFilesOnly`: `ZodOptional`\<`ZodBoolean`\>; `mapRoot`:
-> `ZodOptional`\<`ZodString`\>; `maxNodeModuleJsDepth`: `ZodOptional`\<`ZodNumber`\>; `module`:
+> `"WebWorker.Iterable"`; \}\>\>\>; `listEmittedFiles`: `ZodOptional`\<`ZodBoolean`>\>; `listFiles`:
+> `ZodOptional`\<`ZodBoolean`>\>; `listFilesOnly`: `ZodOptional`\<`ZodBoolean`>\>; `mapRoot`:
+> `ZodOptional`\<`ZodString`>\>; `maxNodeModuleJsDepth`: `ZodOptional`\<`ZodNumber`>\>; `module`:
 > `ZodOptional`\<`ZodEnum`\<\{ `amd`: `"amd"`; `AMD`: `"AMD"`; `commonjs`: `"commonjs"`; `CommonJS`:
 > `"CommonJS"`; `es2015`: `"es2015"`; `ES2015`: `"ES2015"`; `es2020`: `"es2020"`; `ES2020`:
 > `"ES2020"`; `es6`: `"es6"`; `ES6`: `"ES6"`; `esnext`: `"esnext"`; `ESNext`: `"ESNext"`; `none`:
 > `"none"`; `None`: `"None"`; `system`: `"system"`; `System`: `"System"`; `umd`: `"umd"`; `UMD`:
 > `"UMD"`; \}\>\>; `moduleResolution`: `ZodOptional`\<`ZodEnum`\<\{ `classic`: `"classic"`; `node`:
 > `"node"`; \}\>\>; `newLine`: `ZodOptional`\<`ZodEnum`\<\{ `crlf`: `"crlf"`; `CRLF`: `"CRLF"`;
-> `lf`: `"lf"`; `LF`: `"LF"`; \}\>\>; `noEmit`: `ZodOptional`\<`ZodBoolean`\>; `noEmitHelpers`:
-> `ZodOptional`\<`ZodBoolean`\>; `noEmitOnError`: `ZodOptional`\<`ZodBoolean`\>;
-> `noErrorTruncation`: `ZodOptional`\<`ZodBoolean`\>; `noFallthroughCasesInSwitch`:
-> `ZodOptional`\<`ZodBoolean`\>; `noImplicitAny`: `ZodOptional`\<`ZodBoolean`\>;
-> `noImplicitOverride`: `ZodOptional`\<`ZodBoolean`\>; `noImplicitReturns`:
-> `ZodOptional`\<`ZodBoolean`\>; `noImplicitThis`: `ZodOptional`\<`ZodBoolean`\>;
-> `noImplicitUseStrict`: `ZodOptional`\<`ZodBoolean`\>; `noLib`: `ZodOptional`\<`ZodBoolean`\>;
-> `noPropertyAccessFromIndexSignature`: `ZodOptional`\<`ZodBoolean`\>; `noResolve`:
-> `ZodOptional`\<`ZodBoolean`\>; `noStrictGenericChecks`: `ZodOptional`\<`ZodBoolean`\>;
-> `noUncheckedIndexedAccess`: `ZodOptional`\<`ZodBoolean`\>; `noUnusedLocals`:
-> `ZodOptional`\<`ZodBoolean`\>; `noUnusedParameters`: `ZodOptional`\<`ZodBoolean`\>; `outDir`:
-> `ZodOptional`\<`ZodString`\>; `outFile`: `ZodOptional`\<`ZodString`\>; `paths`:
-> `ZodOptional`\<`ZodRecord`\<`ZodString`, `ZodArray`\<`ZodString`\>\>\>; `plugins`:
+> `lf`: `"lf"`; `LF`: `"LF"`; \}\>\>; `noEmit`: `ZodOptional`\<`ZodBoolean`>\>; `noEmitHelpers`:
+> `ZodOptional`\<`ZodBoolean`>\>; `noEmitOnError`: `ZodOptional`\<`ZodBoolean`>\>;
+> `noErrorTruncation`: `ZodOptional`\<`ZodBoolean`>\>; `noFallthroughCasesInSwitch`:
+> `ZodOptional`\<`ZodBoolean`>\>; `noImplicitAny`: `ZodOptional`\<`ZodBoolean`>\>;
+> `noImplicitOverride`: `ZodOptional`\<`ZodBoolean`>\>; `noImplicitReturns`:
+> `ZodOptional`\<`ZodBoolean`>\>; `noImplicitThis`: `ZodOptional`\<`ZodBoolean`>\>;
+> `noImplicitUseStrict`: `ZodOptional`\<`ZodBoolean`>\>; `noLib`: `ZodOptional`\<`ZodBoolean`>\>;
+> `noPropertyAccessFromIndexSignature`: `ZodOptional`\<`ZodBoolean`>\>; `noResolve`:
+> `ZodOptional`\<`ZodBoolean`>\>; `noStrictGenericChecks`: `ZodOptional`\<`ZodBoolean`>\>;
+> `noUncheckedIndexedAccess`: `ZodOptional`\<`ZodBoolean`>\>; `noUnusedLocals`:
+> `ZodOptional`\<`ZodBoolean`>\>; `noUnusedParameters`: `ZodOptional`\<`ZodBoolean`>\>; `outDir`:
+> `ZodOptional`\<`ZodString`>\>; `outFile`: `ZodOptional`\<`ZodString`>\>; `paths`:
+> `ZodOptional`\<`ZodRecord`\<`ZodString`, `ZodArray`\<`ZodString`>>>\>\>\>; `plugins`:
 > `ZodOptional`\<`ZodArray`\<`ZodIntersection`\<`ZodObject`\<\{ `name`: `ZodOptional`\<...\>; \},
-> `$strict`\>, `ZodRecord`\<`ZodString`, `ZodUnknown`\>\>\>\>; `preserveConstEnums`:
-> `ZodOptional`\<`ZodBoolean`\>; `preserveSymlinks`: `ZodOptional`\<`ZodBoolean`\>;
-> `preserveWatchOutput`: `ZodOptional`\<`ZodBoolean`\>; `pretty`: `ZodOptional`\<`ZodBoolean`\>;
-> `reactNamespace`: `ZodOptional`\<`ZodString`\>; `removeComments`: `ZodOptional`\<`ZodBoolean`\>;
-> `resolveJsonModule`: `ZodOptional`\<`ZodBoolean`\>; `rootDir`: `ZodOptional`\<`ZodString`\>;
-> `rootDirs`: `ZodOptional`\<`ZodArray`\<`ZodString`\>\>; `skipDefaultLibCheck`:
-> `ZodOptional`\<`ZodBoolean`\>; `skipLibCheck`: `ZodOptional`\<`ZodBoolean`\>; `sourceMap`:
-> `ZodOptional`\<`ZodBoolean`\>; `sourceRoot`: `ZodOptional`\<`ZodString`\>; `strict`:
-> `ZodOptional`\<`ZodBoolean`\>; `strictBindCallApply`: `ZodOptional`\<`ZodBoolean`\>;
-> `strictFunctionTypes`: `ZodOptional`\<`ZodBoolean`\>; `strictNullChecks`:
-> `ZodOptional`\<`ZodBoolean`\>; `strictPropertyInitialization`: `ZodOptional`\<`ZodBoolean`\>;
-> `stripInternal`: `ZodOptional`\<`ZodBoolean`\>; `suppressExcessPropertyErrors`:
-> `ZodOptional`\<`ZodBoolean`\>; `suppressImplicitAnyIndexErrors`: `ZodOptional`\<`ZodBoolean`\>;
+> `$strict`>\>, `ZodRecord`\<`ZodString`, `ZodUnknown`>>>>\>\>\>\>; `preserveConstEnums`:
+> `ZodOptional`\<`ZodBoolean`>\>; `preserveSymlinks`: `ZodOptional`\<`ZodBoolean`>\>;
+> `preserveWatchOutput`: `ZodOptional`\<`ZodBoolean`>\>; `pretty`: `ZodOptional`\<`ZodBoolean`>\>;
+> `reactNamespace`: `ZodOptional`\<`ZodString`>\>; `removeComments`: `ZodOptional`\<`ZodBoolean`>\>;
+> `resolveJsonModule`: `ZodOptional`\<`ZodBoolean`>\>; `rootDir`: `ZodOptional`\<`ZodString`>\>;
+> `rootDirs`: `ZodOptional`\<`ZodArray`\<`ZodString`>>\>\>; `skipDefaultLibCheck`:
+> `ZodOptional`\<`ZodBoolean`>\>; `skipLibCheck`: `ZodOptional`\<`ZodBoolean`>\>; `sourceMap`:
+> `ZodOptional`\<`ZodBoolean`>\>; `sourceRoot`: `ZodOptional`\<`ZodString`>\>; `strict`:
+> `ZodOptional`\<`ZodBoolean`>\>; `strictBindCallApply`: `ZodOptional`\<`ZodBoolean`>\>;
+> `strictFunctionTypes`: `ZodOptional`\<`ZodBoolean`>\>; `strictNullChecks`:
+> `ZodOptional`\<`ZodBoolean`>\>; `strictPropertyInitialization`: `ZodOptional`\<`ZodBoolean`>\>;
+> `stripInternal`: `ZodOptional`\<`ZodBoolean`>\>; `suppressExcessPropertyErrors`:
+> `ZodOptional`\<`ZodBoolean`>\>; `suppressImplicitAnyIndexErrors`: `ZodOptional`\<`ZodBoolean`>\>;
 > `target`: `ZodOptional`\<`ZodEnum`\<\{ `es2015`: `"es2015"`; `ES2015`: `"ES2015"`; `es2016`:
 > `"es2016"`; `ES2016`: `"ES2016"`; `es2017`: `"es2017"`; `ES2017`: `"ES2017"`; `es2018`:
 > `"es2018"`; `ES2018`: `"ES2018"`; `es2019`: `"es2019"`; `ES2019`: `"ES2019"`; `es2020`:
 > `"es2020"`; `ES2020`: `"ES2020"`; `es2021`: `"es2021"`; `ES2021`: `"ES2021"`; `es3`: `"es3"`;
 > `ES3`: `"ES3"`; `es5`: `"es5"`; `ES5`: `"ES5"`; `es6`: `"es6"`; `ES6`: `"ES6"`; `esnext`:
-> `"esnext"`; `ESNext`: `"ESNext"`; \}\>\>; `traceResolution`: `ZodOptional`\<`ZodBoolean`\>;
-> `tsBuildInfoFile`: `ZodOptional`\<`ZodString`\>; `typeRoots`:
-> `ZodOptional`\<`ZodArray`\<`ZodString`\>\>; `types`: `ZodOptional`\<`ZodArray`\<`ZodString`\>\>;
-> `useDefineForClassFields`: `ZodOptional`\<`ZodBoolean`\>; `useUnknownInCatchVariables`:
-> `ZodOptional`\<`ZodBoolean`\>; `watch`: `ZodOptional`\<`ZodBoolean`\>; `watchDirectory`:
-> `ZodOptional`\<`ZodEnum`\<\{ `dynamicPriorityPolling`: `"dynamicPriorityPolling"`;
-> `fixedChunkSizePolling`: `"fixedChunkSizePolling"`; `fixedPollingInterval`:
-> `"fixedPollingInterval"`; `useFsEvents`: `"useFsEvents"`; \}\>\>; `watchFile`:
-> `ZodOptional`\<`ZodEnum`\<\{ `dynamicPriorityPolling`: `"dynamicPriorityPolling"`;
-> `fixedChunkSizePolling`: `"fixedChunkSizePolling"`; `fixedPollingInterval`:
-> `"fixedPollingInterval"`; `priorityPollingInterval`: `"priorityPollingInterval"`; `useFsEvents`:
-> `"useFsEvents"`; `useFsEventsOnParentDirectory`: `"useFsEventsOnParentDirectory"`; \}\>\>; \},
-> `$strict`\>\>; `exclude`: `ZodOptional`\<`ZodArray`\<`ZodString`\>\>; `extends`:
-> `ZodOptional`\<`ZodString`\>; `files`: `ZodOptional`\<`ZodArray`\<`ZodString`\>\>; `include`:
-> `ZodOptional`\<`ZodArray`\<`ZodString`\>\>; `references`:
-> `ZodOptional`\<`ZodArray`\<`ZodObject`\<\{ `circular`: `ZodOptional`\<`ZodBoolean`\>;
-> `originalPath`: `ZodOptional`\<`ZodString`\>; `path`: `ZodString`; `prepend`:
-> `ZodOptional`\<`ZodBoolean`\>; \}, `$strict`\>\>\>; `typeAcquisition`:
-> `ZodOptional`\<`ZodObject`\<\{ `enable`: `ZodOptional`\<`ZodBoolean`\>; `exclude`:
-> `ZodOptional`\<`ZodArray`\<`ZodString`\>\>; `include`: `ZodOptional`\<`ZodArray`\<`ZodString`\>\>;
-> \}, `$strict`\>\>; \}, `$strict`\>
+> `"esnext"`; `ESNext`: `"ESNext"`; \}\>\>; `traceResolution`: `ZodOptional`\<`ZodBoolean`>\>;
+> `tsBuildInfoFile`: `ZodOptional`\<`ZodString`>\>; `typeRoots`:
+> `ZodOptional`\<`ZodArray`\<`ZodString`>>\>\>; `types`:
+> `ZodOptional`\<`ZodArray`\<`ZodString`>>\>\>; `useDefineForClassFields`:
+> `ZodOptional`\<`ZodBoolean`>\>; `useUnknownInCatchVariables`: `ZodOptional`\<`ZodBoolean`>\>;
+> `watch`: `ZodOptional`\<`ZodBoolean`>\>; `watchDirectory`: `ZodOptional`\<`ZodEnum`\<\{
+> `dynamicPriorityPolling`: `"dynamicPriorityPolling"`; `fixedChunkSizePolling`:
+> `"fixedChunkSizePolling"`; `fixedPollingInterval`: `"fixedPollingInterval"`; `useFsEvents`:
+> `"useFsEvents"`; \}\>\>; `watchFile`: `ZodOptional`\<`ZodEnum`\<\{ `dynamicPriorityPolling`:
+> `"dynamicPriorityPolling"`; `fixedChunkSizePolling`: `"fixedChunkSizePolling"`;
+> `fixedPollingInterval`: `"fixedPollingInterval"`; `priorityPollingInterval`:
+> `"priorityPollingInterval"`; `useFsEvents`: `"useFsEvents"`; `useFsEventsOnParentDirectory`:
+> `"useFsEventsOnParentDirectory"`; \}\>\>; \}, `$strict`>>\>\>; `exclude`:
+> `ZodOptional`\<`ZodArray`\<`ZodString`>>\>\>; `extends`: `ZodOptional`\<`ZodString`>\>; `files`:
+> `ZodOptional`\<`ZodArray`\<`ZodString`>>\>\>; `include`:
+> `ZodOptional`\<`ZodArray`\<`ZodString`>>\>\>; `references`:
+> `ZodOptional`\<`ZodArray`\<`ZodObject`\<\{ `circular`: `ZodOptional`\<`ZodBoolean`>\>;
+> `originalPath`: `ZodOptional`\<`ZodString`>\>; `path`: `ZodString`; `prepend`:
+> `ZodOptional`\<`ZodBoolean`>\>; \}, `$strict`>>>\>\>\>; `typeAcquisition`:
+> `ZodOptional`\<`ZodObject`\<\{ `enable`: `ZodOptional`\<`ZodBoolean`>\>; `exclude`:
+> `ZodOptional`\<`ZodArray`\<`ZodString`>>\>\>; `include`:
+> `ZodOptional`\<`ZodArray`\<`ZodString`>>\>\>; \}, `$strict`>>\>\>; \}, `$strict`>\>
 
 Defined in:
-[types/TsconfigJson.ts:333](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/zod-utils/source/types/TsconfigJson.ts#L333)
+[types/TsconfigJson.ts:333](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/zod-utils/source/types/TsconfigJson.ts#L333)

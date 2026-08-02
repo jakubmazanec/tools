@@ -4,10 +4,10 @@
 
 # Function: ensureEmptyDirectory()
 
-> **ensureEmptyDirectory**(`targetPath`, `path?`): `Promise`\<`void`\>
+> **ensureEmptyDirectory**(`targetPath`, `path?`): `Promise`\<`void`>\>
 
 Defined in:
-[ensureEmptyDirectory.ts:19](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/fs-utils/source/ensureEmptyDirectory.ts#L19)
+[ensureEmptyDirectory.ts:19](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/fs-utils/source/ensureEmptyDirectory.ts#L19)
 
 Ensures that a path is actually an empty directory. If the path doesn't exist, the directory is
 created; if the path exists but isn't an ampty directory, error is thrown.

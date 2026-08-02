@@ -6,7 +6,7 @@
 
 > **validRange**(`range`, `optionsOrLoose?`): `string` \| `null`
 
-Defined in: node_modules/@types/semver/ranges/valid.d.ts:7
+Defined in: node\_modules/@types/semver/ranges/valid.d.ts:7
 
 Return the valid range or null if it's not valid
 

@@ -4,12 +4,12 @@
 
 # Type Alias: LabelProps\<T\>
 
-> **LabelProps**\<`T`\> = `ComponentProps`\<_typeof_
-> [`useLabelTheme`](../variables/useLabelTheme.md)\> & `ComponentPropsWithoutRef`\<`T`\> &
-> `ComponentRef`\<`T`\> & `PropsWithChildren` & `object`
+> **LabelProps**\<`T`> \> = `ComponentProps`\<_typeof_
+> [`useLabelTheme`](../variables/useLabelTheme.md)> \> & `ComponentPropsWithoutRef`\<`T`> \> &
+> `ComponentRef`\<`T`> \> & `PropsWithChildren` & `object`
 
 Defined in:
-[packages/ui/source/components/Label.tsx:16](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/ui/source/components/Label.tsx#L16)
+[packages/ui/source/components/Label.tsx:16](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/ui/source/components/Label.tsx#L16)
 
 ## Type Declaration
 

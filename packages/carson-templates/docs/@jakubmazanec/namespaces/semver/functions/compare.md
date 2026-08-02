@@ -6,7 +6,7 @@
 
 > **compare**(`v1`, `v2`, `optionsOrLoose?`): `-1` \| `0` \| `1`
 
-Defined in: node_modules/@types/semver/functions/compare.d.ts:14
+Defined in: node\_modules/@types/semver/functions/compare.d.ts:14
 
 Compares two versions excluding build identifiers (the bit after `+` in the semantic version
 string).

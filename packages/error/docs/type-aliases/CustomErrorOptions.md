@@ -7,7 +7,7 @@
 > **CustomErrorOptions** = `object`
 
 Defined in:
-[types/CustomErrorOptions.ts:4](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/error/source/types/CustomErrorOptions.ts#L4)
+[types/CustomErrorOptions.ts:4](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/error/source/types/CustomErrorOptions.ts#L4)
 
 Type representing options object used when instantianting class returned from
 [createCustomError](../functions/createCustomError.md).
@@ -19,7 +19,7 @@ Type representing options object used when instantianting class returned from
 > `optional` **cause?**: `unknown`
 
 Defined in:
-[types/CustomErrorOptions.ts:9](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/error/source/types/CustomErrorOptions.ts#L9)
+[types/CustomErrorOptions.ts:9](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/error/source/types/CustomErrorOptions.ts#L9)
 
 Used for setting `cause` property of an error instance that indicates the specific original cause of
 the error.
@@ -31,6 +31,6 @@ the error.
 > `optional` **messageParameters?**: `unknown`[]
 
 Defined in:
-[types/CustomErrorOptions.ts:6](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/error/source/types/CustomErrorOptions.ts#L6)
+[types/CustomErrorOptions.ts:6](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/error/source/types/CustomErrorOptions.ts#L6)
 
 Array of values that are used as parameters to generate the error message.

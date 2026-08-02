@@ -4,13 +4,13 @@
 
 # Function: readJson()
 
-> **readJson**\<`S`, `O`\>(`path`, `schema`, `options?`): `Promise`\<`O` _extends_ `undefined` ?
-> `output`\<`S`\> \| `ZodError`\<`output`\<`S`\>\> :
-> `If`\<`NonNullable`\<`O`\>\[`"throwOnZodError"`\], `true`, `output`\<`S`\>, `output`\<`S`\> \|
-> `ZodError`\<`output`\<`S`\>\>\>\>
+> **readJson**\<`S`, `O`>\>(`path`, `schema`, `options?`): `Promise`\<`O` _extends_ `undefined` ?
+> `output`\<`S`> \> \| `ZodError`\<`output`\<`S`>> \>\> :
+> `If`\<`NonNullable`\<`O`>\>\[`"throwOnZodError"`\], `true`, `output`\<`S`>\>, `output`\<`S`> \> \|
+> `ZodError`\<`output`\<`S`>>>>\>\>\>\>
 
 Defined in:
-[utils/readJson.ts:12](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/zod-utils/source/utils/readJson.ts#L12)
+[utils/readJson.ts:12](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/zod-utils/source/utils/readJson.ts#L12)
 
 ## Type Parameters
 

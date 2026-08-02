@@ -6,7 +6,7 @@
 
 > **compareIdentifiers**(`a`, `b`): `-1` \| `0` \| `1`
 
-Defined in: node_modules/@types/semver/internals/identifiers.d.ts:6
+Defined in: node\_modules/@types/semver/internals/identifiers.d.ts:6
 
 Compares two identifiers, must be numeric strings or truthy/falsy values.
 

@@ -4,11 +4,11 @@
 
 # Type Alias: IsEqual\<T, U\>
 
-> **IsEqual**\<`T`, `U`\> = \<`G`\>() => `G` _extends_ `T` ? `1` : `2` _extends_ \<`G`\>() => `G`
-> _extends_ `U` ? `1` : `2` ? `true` : `false`
+> **IsEqual**\<`T`, `U`> \> = \<`G`>\>() => `G` _extends_ `T` ? `1` : `2` _extends_ \<`G`>\>() =>
+> `G` _extends_ `U` ? `1` : `2` ? `true` : `false`
 
 Defined in:
-[packages/ts-utils/source/types/IsEqual.ts:15](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/ts-utils/source/types/IsEqual.ts#L15)
+[packages/ts-utils/source/types/IsEqual.ts:15](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/ts-utils/source/types/IsEqual.ts#L15)
 
 Allows you to test if two types are the same:
 

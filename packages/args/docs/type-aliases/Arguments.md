@@ -4,10 +4,10 @@
 
 # Type Alias: Arguments\<T\>
 
-> **Arguments**\<`T`\> = `object`
+> **Arguments**\<`T`> \> = `object`
 
 Defined in:
-[args/source/Arguments.ts:10](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/args/source/Arguments.ts#L10)
+[args/source/Arguments.ts:10](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/args/source/Arguments.ts#L10)
 
 Parsed arguments.
 
@@ -21,10 +21,10 @@ Parsed arguments.
 
 ### command
 
-> `readonly` **command**: [`ArgumentsCommand`](ArgumentsCommand.md)\<`T`\>
+> `readonly` **command**: [`ArgumentsCommand`](ArgumentsCommand.md)\<`T`>\>
 
 Defined in:
-[args/source/Arguments.ts:12](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/args/source/Arguments.ts#L12)
+[args/source/Arguments.ts:12](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/args/source/Arguments.ts#L12)
 
 Parsed command.
 
@@ -35,7 +35,7 @@ Parsed command.
 > `readonly` **errors**: `Error`[]
 
 Defined in:
-[args/source/Arguments.ts:27](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/args/source/Arguments.ts#L27)
+[args/source/Arguments.ts:27](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/args/source/Arguments.ts#L27)
 
 Parsing and validation rrors
 
@@ -43,10 +43,10 @@ Parsing and validation rrors
 
 ### options
 
-> `readonly` **options**: [`ArgumentsOptions`](ArgumentsOptions.md)\<`T`\>
+> `readonly` **options**: [`ArgumentsOptions`](ArgumentsOptions.md)\<`T`>\>
 
 Defined in:
-[args/source/Arguments.ts:18](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/args/source/Arguments.ts#L18)
+[args/source/Arguments.ts:18](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/args/source/Arguments.ts#L18)
 
 Parsed options.
 
@@ -54,10 +54,10 @@ Parsed options.
 
 ### parameters
 
-> `readonly` **parameters**: [`ArgumentsParameters`](ArgumentsParameters.md)\<`T`\>
+> `readonly` **parameters**: [`ArgumentsParameters`](ArgumentsParameters.md)\<`T`>\>
 
 Defined in:
-[args/source/Arguments.ts:15](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/args/source/Arguments.ts#L15)
+[args/source/Arguments.ts:15](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/args/source/Arguments.ts#L15)
 
 Parsed parameters.
 
@@ -68,7 +68,7 @@ Parsed parameters.
 > `readonly` **rest**: `string`[]
 
 Defined in:
-[args/source/Arguments.ts:24](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/args/source/Arguments.ts#L24)
+[args/source/Arguments.ts:24](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/args/source/Arguments.ts#L24)
 
 Arguments that appear after "--".
 
@@ -76,9 +76,9 @@ Arguments that appear after "--".
 
 ### unknownOptions
 
-> `readonly` **unknownOptions**: [`ArgumentsUnknownOptions`](ArgumentsUnknownOptions.md)\<`T`\>
+> `readonly` **unknownOptions**: [`ArgumentsUnknownOptions`](ArgumentsUnknownOptions.md)\<`T`>\>
 
 Defined in:
-[args/source/Arguments.ts:21](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/args/source/Arguments.ts#L21)
+[args/source/Arguments.ts:21](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/args/source/Arguments.ts#L21)
 
 Unconfigured options.

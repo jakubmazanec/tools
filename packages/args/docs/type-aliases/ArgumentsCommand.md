@@ -4,12 +4,12 @@
 
 # Type Alias: ArgumentsCommand\<O\>
 
-> **ArgumentsCommand**\<`O`\> = `Omit`\<`O`, `"commands"`\> _extends_ `O` ? `null` :
+> **ArgumentsCommand**\<`O`> \> = `Omit`\<`O`, `"commands"`> \> _extends_ `O` ? `null` :
 > `O`\[`"commands"`\] _extends_ `undefined` ? `null` :
 > `Lowercase`\<`NonNullable`\<`O`\[`"commands"`\]\>\[`number`\]\> \| `undefined`
 
 Defined in:
-[args/source/ArgumentsCommand.ts:4](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/args/source/ArgumentsCommand.ts#L4)
+[args/source/ArgumentsCommand.ts:4](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/args/source/ArgumentsCommand.ts#L4)
 
 Parsed command.
 

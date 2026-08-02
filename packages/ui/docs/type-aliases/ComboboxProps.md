@@ -4,19 +4,19 @@
 
 # Type Alias: ComboboxProps\<T, V\>
 
-> **ComboboxProps**\<`T`, `V`\> = `ComponentProps`\<_typeof_
-> [`useComboboxTheme`](../variables/useComboboxTheme.md)\> & `ComponentPropsWithoutRef`\<`T`\> &
-> `ComponentRef`\<`T`\> & `PropsWithChildren` & \{ `as?`: `T`; `className?`: `string`;
+> **ComboboxProps**\<`T`, `V`> \> = `ComponentProps`\<_typeof_
+> [`useComboboxTheme`](../variables/useComboboxTheme.md)> \> & `ComponentPropsWithoutRef`\<`T`> \> &
+> `ComponentRef`\<`T`> \> & `PropsWithChildren` & \{ `as?`: `T`; `className?`: `string`;
 > `customValue?`: `boolean`; `defaultValue?`: `V`[]; `immediate?`: `boolean`; `items?`:
-> [`ComboboxItem`](ComboboxItem.md)\<`V`\>[]; `multiple`: `true`; `name?`: `string`; `onChange?`:
+> [`ComboboxItem`](ComboboxItem.md)\<`V`>\>[]; `multiple`: `true`; `name?`: `string`; `onChange?`:
 > (`selectedValue`) => `void`; `placeholder?`: `string`; `value?`: `V`[]; `virtual?`: `boolean`; \}
 > \| \{ `as?`: `T`; `className?`: `string`; `customValue?`: `boolean`; `defaultValue?`: `V`;
-> `immediate?`: `boolean`; `items?`: [`ComboboxItem`](ComboboxItem.md)\<`V`\>[]; `multiple?`:
+> `immediate?`: `boolean`; `items?`: [`ComboboxItem`](ComboboxItem.md)\<`V`>\>[]; `multiple?`:
 > `false`; `name?`: `string`; `onChange?`: (`selectedValue`) => `void`; `placeholder?`: `string`;
 > `value?`: `V`; `virtual?`: `boolean`; \}
 
 Defined in:
-[packages/ui/source/components/Combobox.tsx:44](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/ui/source/components/Combobox.tsx#L44)
+[packages/ui/source/components/Combobox.tsx:44](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/ui/source/components/Combobox.tsx#L44)
 
 ## Type Parameters
 

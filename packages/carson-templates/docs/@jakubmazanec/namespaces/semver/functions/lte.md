@@ -6,7 +6,7 @@
 
 > **lte**(`v1`, `v2`, `optionsOrLoose?`): `boolean`
 
-Defined in: node_modules/@types/semver/functions/lte.d.ts:7
+Defined in: node\_modules/@types/semver/functions/lte.d.ts:7
 
 v1 <= v2
 

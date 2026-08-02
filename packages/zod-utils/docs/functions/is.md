@@ -4,10 +4,10 @@
 
 # Function: is()
 
-> **is**\<`S`\>(`value`, `schema`): `value is output<S>`
+> **is**\<`S`>\>(`value`, `schema`): `value is output<S>`
 
 Defined in:
-[utils/is.ts:3](https://github.com/jakubmazanec/tools/blob/9ecef3e76dffbf560225ef44fd71cd66cb494ce7/packages/zod-utils/source/utils/is.ts#L3)
+[utils/is.ts:3](https://github.com/jakubmazanec/tools/blob/0e76ad9b86b7520c69e60d244a7176f34e939745/packages/zod-utils/source/utils/is.ts#L3)
 
 ## Type Parameters
 

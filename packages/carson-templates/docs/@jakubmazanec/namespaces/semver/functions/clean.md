@@ -6,7 +6,7 @@
 
 > **clean**(`version`, `optionsOrLoose?`): `string` \| `null`
 
-Defined in: node_modules/@types/semver/functions/clean.d.ts:6
+Defined in: node\_modules/@types/semver/functions/clean.d.ts:6
 
 Returns cleaned (removed leading/trailing whitespace, remove '=v' prefix) and parsed version, or
 null if version is invalid.
