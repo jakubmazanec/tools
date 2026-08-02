@@ -32,7 +32,7 @@
   },
   "dependencies": {
     "lodash": "^4.18.1",
-    "semver": "^7.7.3"
+    "semver": "^7.8.5"
   },
   "devDependencies": {
     "@jakubmazanec/carson": "^3.0.0",
