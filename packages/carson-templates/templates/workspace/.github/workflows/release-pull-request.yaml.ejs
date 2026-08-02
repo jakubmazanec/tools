@@ -107,6 +107,15 @@ if (workspace.projects.some((project) => project.config.deployment?.dbInstance))
 
           git config --unset core.filemode
 
+<%
+if (getProjectsWithBrowserTests(workspace).length) {
+-%>
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+
+<%
+}
+-%>
       - name: Test
         run: npm test <%- appsWithDbFilter %>
 

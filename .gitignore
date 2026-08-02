@@ -251,6 +251,10 @@ storybook-static/
 ## React Router
 .react-router/
 
+## Vitest
+.vitest-attachments/
+.vitest-reports/
+
 
 # Project specific files
 

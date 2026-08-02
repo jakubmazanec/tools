@@ -7,20 +7,43 @@
  */
 
 import tailwindcss from '@tailwindcss/vite';
+import {playwright} from '@vitest/browser-playwright';
 import _ from 'lodash';
 import {defineConfig} from 'vitest/config';
 
 export default defineConfig(
   _.merge(
     {
+      plugins: [tailwindcss()],
       test: {
-        environment: 'happy-dom',
-        setupFiles: ['tests/setup.ts'],
         coverage: {
           include: ['source/**'],
         },
+        projects: [
+          {
+            extends: true as const,
+            test: {
+              name: 'unit',
+              environment: 'node',
+              include: ['tests/**/*.test.?(c|m)[jt]s?(x)'],
+              exclude: ['tests/**/*.browser.test.?(c|m)[jt]s?(x)'],
+            },
+          },
+          {
+            extends: true as const,
+            test: {
+              name: 'browser',
+              include: ['tests/**/*.browser.test.?(c|m)[jt]s?(x)'],
+              browser: {
+                enabled: true,
+                headless: true,
+                provider: playwright(),
+                instances: [{browser: 'chromium' as const}],
+              },
+            },
+          },
+        ],
       },
-      plugins: [tailwindcss()],
     },
     {},
   ),

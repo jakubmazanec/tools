@@ -63,13 +63,14 @@
     "@types/node": "^24.0.4",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
+    "@vitest/browser-playwright": "^4.1.10",
     "@vitest/coverage-v8": "^4.1.10",
     "chromatic": "^18.0.1",
     "concurrently": "^9.2.4",
     "del-cli": "^7.0.0",
     "esbuild": "^0.28.1",
     "eslint": "^9.39.4",
-    "happy-dom": "^20.0.11",
+    "playwright": "^1.62.0",
     "prettier": "^3.9.5",
     "prettier-plugin-packagejson": "^2.5.22",
     "prettier-plugin-tailwindcss": "^0.8.1",
@@ -81,7 +82,8 @@
     "typedoc": "^0.28.20",
     "typedoc-plugin-markdown": "^4.12.0",
     "typescript": "^5.9.3",
-    "vitest": "^4.1.10"
+    "vitest": "^4.1.10",
+    "vitest-browser-react": "^2.2.0"
   },
   "peerDependencies": {
     "react": "19.x",
