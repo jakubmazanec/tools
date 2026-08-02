@@ -4,7 +4,6 @@
 # @jakubmazanec/carson
 
 Tool for managing workspace and project configuration.
-
 </div>
 <!-- header -->
 
@@ -39,6 +38,7 @@ npm install @jakubmazanec/carson @jakubmazanec/carson-templates -g
 
 - Node.js 24 or later
 - TypeScript 5 or later
+
 <!-- prerequisites -->
 
 ## Usage

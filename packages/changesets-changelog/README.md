@@ -4,7 +4,6 @@
 # @jakubmazanec/changesets-changelog
 
 Changelog for projects using Changesets.
-
 </div>
 <!-- header -->
 
@@ -20,6 +19,7 @@ npm install @jakubmazanec/changesets-changelog
 
 - Node.js 24 or later
 - TypeScript 5 or later
+
 <!-- prerequisites -->
 
 ## Usage

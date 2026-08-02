@@ -4,7 +4,6 @@
 # @jakubmazanec/error
 
 Collection of utilities for creating and handling errors.
-
 </div>
 <!-- header -->
 
@@ -23,6 +22,7 @@ It cannot be required from a CommonJS module.
 
 - Node.js 24 or later
 - TypeScript 5 or later
+
 <!-- prerequisites -->
 
 ## Usage

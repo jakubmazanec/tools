@@ -335,9 +335,10 @@ export class Workspace<M extends boolean = true> {
     let singlePackageWorkspacePath: string | undefined;
     let multiPackageWorkspacePath: string | undefined;
 
-    while (
-      !(isRootPath(currentPath) || (singlePackageWorkspacePath && multiPackageWorkspacePath))
-    ) {
+    while (!(
+      isRootPath(currentPath) ||
+      (singlePackageWorkspacePath && multiPackageWorkspacePath)
+    )) {
       if (await containsWorkspace(currentPath)) {
         let packageJsonPath = path.join(currentPath, PACKAGE_JSON_FILENAME);
         let workspaceConfigPath = path.join(

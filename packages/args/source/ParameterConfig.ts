@@ -95,6 +95,4 @@ export type StringParameterConfig =
 
 /** Parser's parameter configuration. */
 export type ParameterConfig =
-  | BooleanParameterConfig
-  | NumberParameterConfig
-  | StringParameterConfig;
+  BooleanParameterConfig | NumberParameterConfig | StringParameterConfig;
