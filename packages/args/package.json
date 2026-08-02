@@ -29,7 +29,7 @@
   "dependencies": {
     "@jakubmazanec/error": "^3.0.0",
     "@jakubmazanec/ts-utils": "^3.0.0",
-    "lodash": "^4.17.21"
+    "lodash": "^4.18.1"
   },
   "devDependencies": {
     "@jakubmazanec/eslint-config": "^4.1.0",

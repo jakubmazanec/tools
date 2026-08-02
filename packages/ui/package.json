@@ -45,7 +45,7 @@
     "@tanstack/match-sorter-utils": "^8.19.4",
     "@tanstack/react-table": "^8.21.3",
     "culori": "^4.0.2",
-    "lodash": "^4.17.21",
+    "lodash": "^4.18.1",
     "tailwind-merge": "^3.6.0",
     "zod": "^4.1.13"
   },
