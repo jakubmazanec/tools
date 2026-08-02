@@ -43,7 +43,7 @@
     "@types/lodash": "^4.17.21",
     "@types/node": "^24.0.4",
     "@vitest/coverage-v8": "^4.0.14",
-    "concurrently": "^9.2.1",
+    "concurrently": "^9.2.4",
     "del-cli": "^7.0.0",
     "esbuild": "^0.27.0",
     "eslint": "^9.39.4",
