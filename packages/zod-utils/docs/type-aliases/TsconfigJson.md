@@ -8,4 +8,4 @@
 > [`tsconfigJsonSchema`](../variables/tsconfigJsonSchema.md)>\>
 
 Defined in:
-[types/TsconfigJson.ts:346](https://github.com/jakubmazanec/tools/blob/5440cb509cb4ec7a792c8768f79dc0266aab15d1/packages/zod-utils/source/types/TsconfigJson.ts#L346)
+[types/TsconfigJson.ts:346](https://github.com/jakubmazanec/tools/blob/4bb4454daaaf702c93958b48b20a6e9559a0e2b9/packages/zod-utils/source/types/TsconfigJson.ts#L346)

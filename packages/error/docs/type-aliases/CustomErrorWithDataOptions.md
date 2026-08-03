@@ -7,7 +7,7 @@
 > **CustomErrorWithDataOptions**\<`ErrorData`> \> = `object`
 
 Defined in:
-[types/CustomErrorWithDataOptions.ts:4](https://github.com/jakubmazanec/tools/blob/5440cb509cb4ec7a792c8768f79dc0266aab15d1/packages/error/source/types/CustomErrorWithDataOptions.ts#L4)
+[types/CustomErrorWithDataOptions.ts:4](https://github.com/jakubmazanec/tools/blob/4bb4454daaaf702c93958b48b20a6e9559a0e2b9/packages/error/source/types/CustomErrorWithDataOptions.ts#L4)
 
 Type representing options object used when instantianting class returned from
 [createCustomErrorWithData](../functions/createCustomErrorWithData.md).
@@ -25,7 +25,7 @@ Type representing options object used when instantianting class returned from
 > `optional` **cause?**: `unknown`
 
 Defined in:
-[types/CustomErrorWithDataOptions.ts:9](https://github.com/jakubmazanec/tools/blob/5440cb509cb4ec7a792c8768f79dc0266aab15d1/packages/error/source/types/CustomErrorWithDataOptions.ts#L9)
+[types/CustomErrorWithDataOptions.ts:9](https://github.com/jakubmazanec/tools/blob/4bb4454daaaf702c93958b48b20a6e9559a0e2b9/packages/error/source/types/CustomErrorWithDataOptions.ts#L9)
 
 Used for setting `cause` property of an error instance that indicates the specific original cause of
 the error.
@@ -37,7 +37,7 @@ the error.
 > `optional` **data?**: `ErrorData`
 
 Defined in:
-[types/CustomErrorWithDataOptions.ts:12](https://github.com/jakubmazanec/tools/blob/5440cb509cb4ec7a792c8768f79dc0266aab15d1/packages/error/source/types/CustomErrorWithDataOptions.ts#L12)
+[types/CustomErrorWithDataOptions.ts:12](https://github.com/jakubmazanec/tools/blob/4bb4454daaaf702c93958b48b20a6e9559a0e2b9/packages/error/source/types/CustomErrorWithDataOptions.ts#L12)
 
 Custom data that will be attached to the error instance.
 
@@ -48,6 +48,6 @@ Custom data that will be attached to the error instance.
 > `optional` **messageParameters?**: `unknown`[]
 
 Defined in:
-[types/CustomErrorWithDataOptions.ts:6](https://github.com/jakubmazanec/tools/blob/5440cb509cb4ec7a792c8768f79dc0266aab15d1/packages/error/source/types/CustomErrorWithDataOptions.ts#L6)
+[types/CustomErrorWithDataOptions.ts:6](https://github.com/jakubmazanec/tools/blob/4bb4454daaaf702c93958b48b20a6e9559a0e2b9/packages/error/source/types/CustomErrorWithDataOptions.ts#L6)
 
 Array of values that are used as parameters to generate the error message.
