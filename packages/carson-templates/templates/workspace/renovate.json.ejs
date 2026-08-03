@@ -9,6 +9,10 @@ let nonMajorGroup = {
   schedule: ['before 6am on monday'],
 };
 
+let hasTemplatesProject = workspace.projects.find(
+  (project) => project.name === TEMPLATE_PACKAGE_NAME,
+);
+
 let renovateConfig = lodash.merge(
   {
     $schema: 'https://docs.renovatebot.com/renovate-schema.json',
@@ -42,6 +46,13 @@ let renovateConfig = lodash.merge(
       {...nonMajorGroup, matchUpdateTypes: ['minor'], matchCurrentVersion: '>=1.0.0'},
     ],
   },
+  hasTemplatesProject ?
+    {
+      'github-actions': {
+        managerFilePatterns: [`/${hasTemplatesProject.relativePath}/templates/.+\\.ya?ml\\.ejs$/`],
+      },
+    }
+  : {},
   workspace.config.overrides?.renovate ?? {},
 );
 -%>
