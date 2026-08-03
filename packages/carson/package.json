@@ -21,9 +21,9 @@
     "source"
   ],
   "scripts": {
-    "build": "del-cli build tsconfig.tsbuildinfo && esbuild \"source/**/*\" --platform=node --target=node24.3 --outdir=build --sourcemap && tsc",
+    "build": "del-cli build tsconfig.tsbuildinfo && esbuild \"source/**/*\" --platform=node --target=node24.18 --outdir=build --sourcemap && tsc",
     "clean": "del-cli coverage build *.tsbuildinfo",
-    "develop": "concurrently \"esbuild \"source/**/*\" --platform=node --target=node24.3 --outdir=build --sourcemap --watch\" \"tsc --watch\"",
+    "develop": "concurrently \"esbuild \"source/**/*\" --platform=node --target=node24.18 --outdir=build --sourcemap --watch\" \"tsc --watch\"",
     "document": "del-cli docs && typedoc --options typedoc.config.cjs",
     "format": "prettier . --write --ignore-unknown",
     "lint": "eslint .",
