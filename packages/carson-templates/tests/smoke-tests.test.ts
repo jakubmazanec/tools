@@ -11,8 +11,8 @@ import fs from 'fs-extra';
 import path from 'node:path';
 import {describe, expect, test, vitest} from 'vitest';
 
-import {DEPENDENCY_VERSIONS} from '../source/main.js';
-import {NPMRC_PATH, ONLY_ONE_STAR_REGEXP} from './constants.js';
+import {DEPENDENCY_VERSIONS, LINTER_CONFIG_PACKAGE_NAME} from '../source/main.js';
+import {LINTER_CONFIG_PACKAGE_PATH, NPMRC_PATH, ONLY_ONE_STAR_REGEXP} from './constants.js';
 import {observableToPromise} from './observableToPromise.js';
 import {packageNameToDirectory} from './packageNameToDirectory.js';
 
@@ -139,8 +139,10 @@ describe.each([
         path.join(workspacePath, 'package.json'),
       )) as WorkspacePackageJson<true>;
 
+      // we also need to override the ESLint config package with the local workspace copy, because its new major version isn't published on the registry yet (it will be once this change is released), so the registry can't satisfy the templates' floor
       packageJson.overrides = {
         eslint: DEPENDENCY_VERSIONS.eslint!,
+        [LINTER_CONFIG_PACKAGE_NAME]: `file:${LINTER_CONFIG_PACKAGE_PATH.replaceAll('\\', '/')}`,
       };
 
       await fs.writeJson(path.join(workspacePath, 'package.json'), packageJson);
