@@ -37,5 +37,8 @@
       "matchUpdateTypes": ["minor"],
       "matchCurrentVersion": ">=1.0.0"
     }
-  ]
+  ],
+  "github-actions": {
+    "managerFilePatterns": ["/packages/carson-templates/templates/.+\\.ya?ml\\.ejs$/"]
+  }
 }
