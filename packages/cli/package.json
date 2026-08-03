@@ -50,7 +50,7 @@
     "del-cli": "^7.0.0",
     "esbuild": "^0.28.1",
     "eslint": "^9.39.4",
-    "ink": "^6.5.1",
+    "ink": "^7.1.1",
     "ink-testing-library": "^4.0.0",
     "prettier": "^3.9.5",
     "prettier-plugin-packagejson": "^2.5.22",
@@ -61,7 +61,7 @@
     "vitest": "^4.1.10"
   },
   "peerDependencies": {
-    "ink": "6.x",
+    "ink": "7.x",
     "react": "19.x"
   },
   "packageManager": "npm@11.3.0",
