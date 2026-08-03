@@ -42,15 +42,15 @@
     "@jakubmazanec/eslint-config": "^4.1.0",
     "@types/fs-extra": "^11.0.4",
     "@types/lodash": "^4.17.24",
-    "@types/node": "^24.0.4",
+    "@types/node": "^24.13.3",
     "@types/react": "^19.2.17",
     "@vitest/coverage-v8": "^4.1.10",
     "concurrently": "^9.2.4",
     "cross-env": "^10.1.0",
     "del-cli": "^7.0.0",
     "esbuild": "^0.28.1",
-    "eslint": "^9.39.4",
-    "ink": "^6.5.1",
+    "eslint": "^9.39.5",
+    "ink": "^6.8.0",
     "ink-testing-library": "^4.0.0",
     "prettier": "^3.9.5",
     "prettier-plugin-packagejson": "^2.5.22",
@@ -64,9 +64,9 @@
     "ink": "6.x",
     "react": "19.x"
   },
-  "packageManager": "npm@11.3.0",
+  "packageManager": "npm@11.18.0",
   "engines": {
-    "node": "^24.3.0",
-    "npm": "^11.3.0"
+    "node": "^24.18.0",
+    "npm": "^11.18.0"
   }
 }
