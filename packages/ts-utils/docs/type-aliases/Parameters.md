@@ -7,7 +7,7 @@
 > **Parameters**\<`T`> \> = `T` _extends_ (...`args`) => `any` ? `P` : `never`
 
 Defined in:
-[packages/ts-utils/source/types/Parameters.ts:19](https://github.com/jakubmazanec/tools/blob/2c78f29cf23098fa3ebc299e5eb40d65134b033e/packages/ts-utils/source/types/Parameters.ts#L19)
+[packages/ts-utils/source/types/Parameters.ts:19](https://github.com/jakubmazanec/tools/blob/5440cb509cb4ec7a792c8768f79dc0266aab15d1/packages/ts-utils/source/types/Parameters.ts#L19)
 
 Constructs a tuple type from the types used in the parameters of a function type `T`. Similarly like
 built-in `Parameters` utility type, but works also on nullable and other types.

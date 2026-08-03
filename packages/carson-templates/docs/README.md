@@ -16,6 +16,11 @@
 
 - [APP\_PORT](variables/APP_PORT.md)
 - [AUTHOR](variables/AUTHOR.md)
+- [AUTHOR\_EMAIL](variables/AUTHOR_EMAIL.md)
+- [AUTHOR\_NAME](variables/AUTHOR_NAME.md)
+- [BOT](variables/BOT.md)
+- [BOT\_EMAIL](variables/BOT_EMAIL.md)
+- [BOT\_NAME](variables/BOT_NAME.md)
 - [BROWSER\_TEST\_GLOB](variables/BROWSER_TEST_GLOB.md)
 - [BUILD\_DIRECTORY](variables/BUILD_DIRECTORY.md)
 - [CARSON\_PACKAGE\_NAME](variables/CARSON_PACKAGE_NAME.md)

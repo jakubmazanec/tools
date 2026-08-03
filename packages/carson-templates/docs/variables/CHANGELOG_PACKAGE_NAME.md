@@ -8,4 +8,4 @@
 > `'@jakubmazanec/changesets-changelog'`
 
 Defined in:
-[packages/carson-templates/source/constants.ts:16](https://github.com/jakubmazanec/tools/blob/2c78f29cf23098fa3ebc299e5eb40d65134b033e/packages/carson-templates/source/constants.ts#L16)
+[packages/carson-templates/source/constants.ts:21](https://github.com/jakubmazanec/tools/blob/5440cb509cb4ec7a792c8768f79dc0266aab15d1/packages/carson-templates/source/constants.ts#L21)
