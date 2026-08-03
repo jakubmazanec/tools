@@ -40,8 +40,8 @@ jobs:
 
       - name: Configure git
         run: |
-          git config user.email "bot@mazanec.dev"
-          git config user.name "Bot"
+          git config user.email "<%- BOT_EMAIL %>"
+          git config user.name "<%- BOT_NAME %>"
 
       - uses: actions/setup-node@v4
         with:

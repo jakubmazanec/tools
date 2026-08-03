@@ -3,6 +3,12 @@ to: 'renovate.json'
 strategy: overwrite
 ---
 <%
+let nonMajorGroup = {
+  matchPackageNames: [`!${CARSON_PACKAGE_NAME}`, `!${TEMPLATE_PACKAGE_NAME}`],
+  groupName: 'all non-major dependencies',
+  schedule: ['before 6am on monday'],
+};
+
 let renovateConfig = lodash.merge(
   {
     $schema: 'https://docs.renovatebot.com/renovate-schema.json',
@@ -32,6 +38,8 @@ let renovateConfig = lodash.merge(
         matchDepTypes: ['overrides'],
         enabled: false,
       },
+      {...nonMajorGroup, matchUpdateTypes: ['patch', 'pin', 'digest']},
+      {...nonMajorGroup, matchUpdateTypes: ['minor'], matchCurrentVersion: '>=1.0.0'},
     ],
   },
   workspace.config.overrides?.renovate ?? {},

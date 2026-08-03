@@ -73,11 +73,17 @@ async function checkCarsonTemplatesPackage(dependencyBumps: DependencyBumps) {
       let result = regexp.exec(constantsFile);
 
       if (result?.[0]) {
-        let newMajorVersion = semver.major(semver.minVersion(bump)!);
-        let oldMajorVersion = semver.major(semver.minVersion(result[0])!);
+        let newVersion = semver.minVersion(bump)!;
+        let oldVersion = semver.minVersion(result[0])!;
+        let newMajorVersion = semver.major(newVersion);
+        let oldMajorVersion = semver.major(oldVersion);
+        let newMinorVersion = semver.minor(newVersion);
+        let oldMinorVersion = semver.minor(oldVersion);
 
-        // Node.js is a special case, because it isn't specified in `dependencies` field
-        if (newMajorVersion > oldMajorVersion || dependencyName === 'node') {
+        if (
+          newMajorVersion > oldMajorVersion ||
+          (oldMajorVersion === 0 && newMinorVersion > oldMinorVersion)
+        ) {
           throw new Error(
             `Bumping major version of dependency "${dependencyName}" that is handled by Carson, update of the Carson template package is needed!`,
           );
