@@ -56,8 +56,6 @@
     "@storybook/addon-links": "^10.5.2",
     "@storybook/react-vite": "^10.5.2",
     "@tailwindcss/vite": "^4.3.3",
-    "@testing-library/jest-dom": "^6.9.1",
-    "@testing-library/react": "^16.3.0",
     "@types/culori": "^4.0.1",
     "@types/lodash": "^4.17.24",
     "@types/node": "^24.0.4",
