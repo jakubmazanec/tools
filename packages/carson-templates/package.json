@@ -41,7 +41,7 @@
     "@jakubmazanec/fs-utils": "^0.2.0",
     "@types/fs-extra": "^11.0.4",
     "@types/lodash": "^4.17.24",
-    "@types/node": "^24.0.4",
+    "@types/node": "^24.13.3",
     "@types/semver": "^7.7.1",
     "@types/zen-observable": "^0.8.7",
     "@vitest/coverage-v8": "^4.1.10",
@@ -64,7 +64,7 @@
   },
   "packageManager": "npm@11.3.0",
   "engines": {
-    "node": "^24.3.0",
+    "node": "^24.18.0",
     "npm": "^11.3.0"
   }
 }

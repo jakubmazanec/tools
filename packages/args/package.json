@@ -34,7 +34,7 @@
   "devDependencies": {
     "@jakubmazanec/eslint-config": "^4.1.0",
     "@types/lodash": "^4.17.24",
-    "@types/node": "^24.0.4",
+    "@types/node": "^24.13.3",
     "@vitest/coverage-v8": "^4.1.10",
     "concurrently": "^9.2.4",
     "del-cli": "^7.0.0",
@@ -49,7 +49,7 @@
   },
   "packageManager": "npm@11.3.0",
   "engines": {
-    "node": "^24.3.0",
+    "node": "^24.18.0",
     "npm": "^11.3.0"
   }
 }
