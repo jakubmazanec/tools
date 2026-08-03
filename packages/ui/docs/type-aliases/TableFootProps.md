@@ -9,7 +9,7 @@
 > & `ComponentRef`\<`T`> \> & `PropsWithChildren` & `object`
 
 Defined in:
-[packages/ui/source/components/TableFoot.ts:20](https://github.com/jakubmazanec/tools/blob/5440cb509cb4ec7a792c8768f79dc0266aab15d1/packages/ui/source/components/TableFoot.ts#L20)
+[packages/ui/source/components/TableFoot.ts:20](https://github.com/jakubmazanec/tools/blob/4bb4454daaaf702c93958b48b20a6e9559a0e2b9/packages/ui/source/components/TableFoot.ts#L20)
 
 ## Type Declaration
 

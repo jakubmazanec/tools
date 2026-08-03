@@ -7,7 +7,7 @@
 > **TemplateReadOptions**\<`A`, `D`> \> = `object`
 
 Defined in:
-[template/source/Template.ts:38](https://github.com/jakubmazanec/tools/blob/5440cb509cb4ec7a792c8768f79dc0266aab15d1/packages/template/source/Template.ts#L38)
+[template/source/Template.ts:38](https://github.com/jakubmazanec/tools/blob/4bb4454daaaf702c93958b48b20a6e9559a0e2b9/packages/template/source/Template.ts#L38)
 
 ## Type Parameters
 
@@ -26,7 +26,7 @@ Defined in:
 > `optional` **attributesSchema?**: `A`
 
 Defined in:
-[template/source/Template.ts:43](https://github.com/jakubmazanec/tools/blob/5440cb509cb4ec7a792c8768f79dc0266aab15d1/packages/template/source/Template.ts#L43)
+[template/source/Template.ts:43](https://github.com/jakubmazanec/tools/blob/4bb4454daaaf702c93958b48b20a6e9559a0e2b9/packages/template/source/Template.ts#L43)
 
 Zod schema for custom template attributes.
 
@@ -37,6 +37,6 @@ Zod schema for custom template attributes.
 > `optional` **dataSchema?**: `D`
 
 Defined in:
-[template/source/Template.ts:46](https://github.com/jakubmazanec/tools/blob/5440cb509cb4ec7a792c8768f79dc0266aab15d1/packages/template/source/Template.ts#L46)
+[template/source/Template.ts:46](https://github.com/jakubmazanec/tools/blob/4bb4454daaaf702c93958b48b20a6e9559a0e2b9/packages/template/source/Template.ts#L46)
 
 Zod schema for template data.
