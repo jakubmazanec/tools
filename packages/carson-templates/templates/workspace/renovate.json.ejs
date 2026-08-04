@@ -5,7 +5,7 @@ strategy: overwrite
 <%
 let nonMajorGroup = {
   matchPackageNames: [`!${CARSON_PACKAGE_NAME}`, `!${TEMPLATE_PACKAGE_NAME}`],
-  groupName: 'all non-major dependencies',
+  groupName: 'dependencies',
   schedule: ['before 6am on monday'],
 };
 
