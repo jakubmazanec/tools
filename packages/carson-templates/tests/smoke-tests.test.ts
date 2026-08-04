@@ -33,7 +33,7 @@ describe.each([
     let workspacePath = await createTempDirectory('carson-templates-test-');
     let errors: unknown[] = [];
 
-    // first we create a new workspace
+    // First we create a new workspace.
     try {
       await observableToPromise(
         runCreateWorkspace({
@@ -58,7 +58,7 @@ describe.each([
 
     let workspace = await Workspace.read(workspacePath);
 
-    // then we create all projects; be aware that if projectTemplateIds.length is greater than 1, workspace template must be for multi-project workspace
+    // Then we create all projects; be aware that if projectTemplateIds.length is greater than 1, workspace template must be for multi-project workspace.
     for (let [index, projectTemplateId] of projectTemplateIds.entries()) {
       let projectName = `project-${index}`;
       let possiblePaths =
@@ -105,7 +105,7 @@ describe.each([
       }
     }
 
-    // try updating the workspace
+    // Try updating the workspace.
     try {
       await observableToPromise(
         runUpdateWorkspace({
@@ -126,7 +126,7 @@ describe.each([
       errors.push(error);
     }
 
-    // try installing dependencies
+    // Try installing dependencies.
     try {
       await execa('git', ['init'], {cwd: workspacePath});
 
@@ -134,26 +134,25 @@ describe.each([
         await fs.copyFile(NPMRC_PATH, path.join(workspacePath, '.npmrc'));
       }
 
-      // we need to override the ESLint version, because when updating to its newer major version, the old ESLint config package is still installed with previous major version in its peer dependencies, which leads to failed `npm install`
       let packageJson = (await fs.readJson(
         path.join(workspacePath, 'package.json'),
       )) as WorkspacePackageJson<true>;
 
-      // we also need to override the ESLint config package with the local workspace copy, because its new major version isn't published on the registry yet (it will be once this change is released), so the registry can't satisfy the templates' floor
+      // We need to override the ESLint version, because when updating to its newer major version, the old ESLint config package is still installed with previous major version in its peer dependencies, which leads to failed `npm install`. We also need to override the ESLint config package with the local workspace copy, because its new major version isn't published on the registry yet.
       packageJson.overrides = {
         eslint: DEPENDENCY_VERSIONS.eslint!,
-        [LINTER_CONFIG_PACKAGE_NAME]: `file:${LINTER_CONFIG_PACKAGE_PATH.replaceAll('\\', '/')}`,
+        [LINTER_CONFIG_PACKAGE_NAME]: `file:${LINTER_CONFIG_PACKAGE_PATH}`,
       };
 
       await fs.writeJson(path.join(workspacePath, 'package.json'), packageJson);
 
-      // we disable scripts, so npm doesn't try to run Carson
+      // We disable scripts, so npm doesn't try to run Carson.
       await execa('npm', ['install', '--ignore-scripts'], {cwd: workspacePath});
     } catch (error) {
       errors.push(error);
     }
 
-    // try updating the workspace
+    // Try updating the workspace.
     try {
       await observableToPromise(
         runUpdateWorkspace({
@@ -174,7 +173,7 @@ describe.each([
       errors.push(error);
     }
 
-    // try building everything
+    // Try building everything.
     vitest.stubEnv('VITEST', '');
 
     try {
