@@ -26,13 +26,13 @@
     },
     {
       "matchPackageNames": ["!@jakubmazanec/carson", "!@jakubmazanec/carson-templates"],
-      "groupName": "all non-major dependencies",
+      "groupName": "dependencies",
       "schedule": ["before 6am on monday"],
       "matchUpdateTypes": ["patch", "pin", "digest"]
     },
     {
       "matchPackageNames": ["!@jakubmazanec/carson", "!@jakubmazanec/carson-templates"],
-      "groupName": "all non-major dependencies",
+      "groupName": "dependencies",
       "schedule": ["before 6am on monday"],
       "matchUpdateTypes": ["minor"],
       "matchCurrentVersion": ">=1.0.0"

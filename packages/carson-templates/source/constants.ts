@@ -179,7 +179,7 @@ export const DEPENDENCY_VERSIONS: Record<string, string> = {
   typedoc: '^0.28.0',
   'typedoc-plugin-markdown': '^4.0.0',
   typescript: '^6.0.0',
-  vite: '^7.0.0',
+  vite: '^8.0.0',
   vitest: '^4.0.0',
   'vitest-browser-react': '^2.0.0',
 
