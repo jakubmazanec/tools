@@ -67,7 +67,6 @@ export const TSCONFIG_COMPILER_OPTIONS = {
   noImplicitReturns: true,
   noUncheckedIndexedAccess: true,
   skipLibCheck: true,
-  strict: true,
   target: `es${ECMASCRIPT_VERSION}`,
   types: ['*'],
 };

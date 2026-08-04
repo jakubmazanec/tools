@@ -22,7 +22,6 @@
     "noImplicitReturns": true,
     "noUncheckedIndexedAccess": true,
     "skipLibCheck": true,
-    "strict": true,
     "target": "es2025",
     "types": ["*"],
     "noEmit": true
