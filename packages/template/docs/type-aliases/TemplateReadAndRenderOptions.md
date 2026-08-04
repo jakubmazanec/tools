@@ -7,7 +7,7 @@
 > **TemplateReadAndRenderOptions**\<`A`, `D`> \> = `object`
 
 Defined in:
-[template/source/Template.ts:49](https://github.com/jakubmazanec/tools/blob/4bb4454daaaf702c93958b48b20a6e9559a0e2b9/packages/template/source/Template.ts#L49)
+[template/source/Template.ts:49](https://github.com/jakubmazanec/tools/blob/36b99004a93b06a721cdb2d08a00e55c653d227d/packages/template/source/Template.ts#L49)
 
 ## Type Parameters
 
@@ -26,7 +26,7 @@ Defined in:
 > `optional` **attributesSchema?**: `A`
 
 Defined in:
-[template/source/Template.ts:60](https://github.com/jakubmazanec/tools/blob/4bb4454daaaf702c93958b48b20a6e9559a0e2b9/packages/template/source/Template.ts#L60)
+[template/source/Template.ts:60](https://github.com/jakubmazanec/tools/blob/36b99004a93b06a721cdb2d08a00e55c653d227d/packages/template/source/Template.ts#L60)
 
 Zod schema for custom template attributes.
 
@@ -37,7 +37,7 @@ Zod schema for custom template attributes.
 > `optional` **dataSchema?**: `D`
 
 Defined in:
-[template/source/Template.ts:63](https://github.com/jakubmazanec/tools/blob/4bb4454daaaf702c93958b48b20a6e9559a0e2b9/packages/template/source/Template.ts#L63)
+[template/source/Template.ts:63](https://github.com/jakubmazanec/tools/blob/36b99004a93b06a721cdb2d08a00e55c653d227d/packages/template/source/Template.ts#L63)
 
 Zod schema for template data.
 
@@ -48,7 +48,7 @@ Zod schema for template data.
 > `optional` **disablePrettier?**: `boolean`
 
 Defined in:
-[template/source/Template.ts:57](https://github.com/jakubmazanec/tools/blob/4bb4454daaaf702c93958b48b20a6e9559a0e2b9/packages/template/source/Template.ts#L57)
+[template/source/Template.ts:57](https://github.com/jakubmazanec/tools/blob/36b99004a93b06a721cdb2d08a00e55c653d227d/packages/template/source/Template.ts#L57)
 
 Disable formatting the rendered template using Prettier.
 
@@ -59,6 +59,6 @@ Disable formatting the rendered template using Prettier.
 > `optional` **prettierOptions?**: `prettier.Options`
 
 Defined in:
-[template/source/Template.ts:54](https://github.com/jakubmazanec/tools/blob/4bb4454daaaf702c93958b48b20a6e9559a0e2b9/packages/template/source/Template.ts#L54)
+[template/source/Template.ts:54](https://github.com/jakubmazanec/tools/blob/36b99004a93b06a721cdb2d08a00e55c653d227d/packages/template/source/Template.ts#L54)
 
 Prettier options.

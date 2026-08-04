@@ -10,7 +10,7 @@
 > `ZodError`\<`output`\<`S`>>>>\>\>\>\>
 
 Defined in:
-[utils/readJson.ts:12](https://github.com/jakubmazanec/tools/blob/4bb4454daaaf702c93958b48b20a6e9559a0e2b9/packages/zod-utils/source/utils/readJson.ts#L12)
+[utils/readJson.ts:12](https://github.com/jakubmazanec/tools/blob/36b99004a93b06a721cdb2d08a00e55c653d227d/packages/zod-utils/source/utils/readJson.ts#L12)
 
 ## Type Parameters
 

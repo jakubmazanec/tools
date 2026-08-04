@@ -7,7 +7,7 @@
 > **RenderCarsonTemplateOptions** = `object`
 
 Defined in:
-[packages/carson/source/template/renderCarsonTemplate.ts:12](https://github.com/jakubmazanec/tools/blob/4bb4454daaaf702c93958b48b20a6e9559a0e2b9/packages/carson/source/template/renderCarsonTemplate.ts#L12)
+[packages/carson/source/template/renderCarsonTemplate.ts:12](https://github.com/jakubmazanec/tools/blob/36b99004a93b06a721cdb2d08a00e55c653d227d/packages/carson/source/template/renderCarsonTemplate.ts#L12)
 
 ## Properties
 
@@ -16,7 +16,7 @@ Defined in:
 > **template**: [`CarsonTemplate`](CarsonTemplate.md)
 
 Defined in:
-[packages/carson/source/template/renderCarsonTemplate.ts:13](https://github.com/jakubmazanec/tools/blob/4bb4454daaaf702c93958b48b20a6e9559a0e2b9/packages/carson/source/template/renderCarsonTemplate.ts#L13)
+[packages/carson/source/template/renderCarsonTemplate.ts:13](https://github.com/jakubmazanec/tools/blob/36b99004a93b06a721cdb2d08a00e55c653d227d/packages/carson/source/template/renderCarsonTemplate.ts#L13)
 
 ---
 
@@ -25,4 +25,4 @@ Defined in:
 > **templateData**: [`TemplateData`](TemplateData.md)
 
 Defined in:
-[packages/carson/source/template/renderCarsonTemplate.ts:14](https://github.com/jakubmazanec/tools/blob/4bb4454daaaf702c93958b48b20a6e9559a0e2b9/packages/carson/source/template/renderCarsonTemplate.ts#L14)
+[packages/carson/source/template/renderCarsonTemplate.ts:14](https://github.com/jakubmazanec/tools/blob/36b99004a93b06a721cdb2d08a00e55c653d227d/packages/carson/source/template/renderCarsonTemplate.ts#L14)
