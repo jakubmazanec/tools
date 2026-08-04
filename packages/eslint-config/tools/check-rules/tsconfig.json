@@ -1,12 +1,11 @@
 {
   "compilerOptions": {
-    "allowSyntheticDefaultImports": true,
     "composite": false,
     "exactOptionalPropertyTypes": true,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
     "jsx": "react-jsx",
-    "lib": ["dom", "dom.iterable", "es2022"],
+    "lib": ["dom", "es2025"],
     "module": "node16",
     "moduleResolution": "node16",
     "noEmitOnError": false,
@@ -15,7 +14,8 @@
     "noUncheckedIndexedAccess": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "es2022",
+    "target": "es2025",
+    "types": ["*"],
     "noEmit": true
   },
   "include": ["./**/*"],

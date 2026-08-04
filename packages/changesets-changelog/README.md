@@ -18,7 +18,7 @@ npm install @jakubmazanec/changesets-changelog
 #### Prerequisites
 
 - Node.js 24 or later
-- TypeScript 5 or later
+- TypeScript 6 or later
 
 <!-- prerequisites -->
 

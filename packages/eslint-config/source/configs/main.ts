@@ -52,14 +52,14 @@ export const main: eslint.Linter.Config[] = disableAutofix([
     files: [`**/*.${JS_AND_TS_EXTENSIONS_GLOB_PART}`],
 
     languageOptions: {
-      ecmaVersion: 2024,
+      ecmaVersion: 2025,
       parserOptions: {
         ecmaFeatures: {jsx: true},
       },
       globals: {
         ...globals.builtin,
         ...globals.browser,
-        ...globals.es2024,
+        ...globals.es2025,
         ...globals.serviceworker,
         ...globals.worker,
       },

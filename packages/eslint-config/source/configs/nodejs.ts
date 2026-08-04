@@ -21,7 +21,7 @@ export const nodejs: eslint.Linter.Config[] = [
     files: [`**/*.${JS_EXTENSIONS_GLOB_PART}`],
 
     languageOptions: {
-      ecmaVersion: 2024,
+      ecmaVersion: 2025,
       parserOptions: {
         ecmaFeatures: {jsx: true},
       },

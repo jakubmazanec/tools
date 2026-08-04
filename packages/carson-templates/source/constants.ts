@@ -50,17 +50,16 @@ export const FORMAT_IGNORE_PATTERNS = [
   `${BUILD_DIRECTORY}/`,
 ].sort();
 
-export const ECMASCRIPT_VERSION = 2024;
+export const ECMASCRIPT_VERSION = 2025;
 
 export const TSCONFIG_COMPILER_OPTIONS = {
-  allowSyntheticDefaultImports: true,
   composite: true,
   erasableSyntaxOnly: true,
   exactOptionalPropertyTypes: true,
   forceConsistentCasingInFileNames: true,
   isolatedModules: true,
   jsx: 'react-jsx',
-  lib: ['dom', 'dom.iterable', `es${ECMASCRIPT_VERSION}`],
+  lib: ['dom', `es${ECMASCRIPT_VERSION}`],
   module: 'node16',
   moduleResolution: 'node16',
   noEmitOnError: true,
@@ -68,8 +67,8 @@ export const TSCONFIG_COMPILER_OPTIONS = {
   noImplicitReturns: true,
   noUncheckedIndexedAccess: true,
   skipLibCheck: true,
-  strict: true,
   target: `es${ECMASCRIPT_VERSION}`,
+  types: ['node'],
 };
 
 export const PRETTIER_OPTIONS = {
@@ -137,7 +136,7 @@ export const DEPENDENCY_VERSIONS: Record<string, string> = {
   [TEMPLATE_PACKAGE_NAME]:
     isTemplatesPackageVersionPrerelease ? templatesPackageVersion : `^${templatesPackageVersion}`,
   [CHANGELOG_PACKAGE_NAME]: '^2.0.0',
-  [LINTER_CONFIG_PACKAGE_NAME]: '^4.0.0',
+  [LINTER_CONFIG_PACKAGE_NAME]: '^5.0.0',
 
   '@changesets/cli': '^2.0.0',
   '@chromatic-com/storybook': '^5.0.0',
@@ -179,7 +178,7 @@ export const DEPENDENCY_VERSIONS: Record<string, string> = {
   turbo: '^2.0.0',
   typedoc: '^0.28.0',
   'typedoc-plugin-markdown': '^4.0.0',
-  typescript: '^5.0.0',
+  typescript: '^6.0.0',
   vite: '^7.0.0',
   vitest: '^4.0.0',
   'vitest-browser-react': '^2.0.0',
