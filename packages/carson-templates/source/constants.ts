@@ -68,7 +68,7 @@ export const TSCONFIG_COMPILER_OPTIONS = {
   noUncheckedIndexedAccess: true,
   skipLibCheck: true,
   target: `es${ECMASCRIPT_VERSION}`,
-  types: ['*'],
+  types: ['node'],
 };
 
 export const PRETTIER_OPTIONS = {

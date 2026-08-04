@@ -23,7 +23,7 @@
     "noUncheckedIndexedAccess": true,
     "skipLibCheck": true,
     "target": "es2025",
-    "types": ["*"],
+    "types": ["node"],
     "noEmit": true,
     "rootDir": "."
   },
