@@ -1,6 +1,6 @@
 {
   "name": "@jakubmazanec/cli",
-  "version": "0.5.5",
+  "version": "0.5.6",
   "description": "TypeScript-first library for building CLIs.",
   "repository": {
     "type": "git",
@@ -39,7 +39,7 @@
     "zod": "^4.4.3"
   },
   "devDependencies": {
-    "@jakubmazanec/eslint-config": "^4.1.0",
+    "@jakubmazanec/eslint-config": "^5.0.0",
     "@types/fs-extra": "^11.0.4",
     "@types/lodash": "^4.17.24",
     "@types/node": "^24.0.4",

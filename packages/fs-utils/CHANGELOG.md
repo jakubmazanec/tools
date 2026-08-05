@@ -1,5 +1,78 @@
 # @jakubmazanec/fs-utils
 
+## 0.2.18
+
+### Patch Changes
+
+- [#537](https://github.com/jakubmazanec/tools/pull/537)
+  [`9ecef3e`](https://github.com/jakubmazanec/tools/commit/9ecef3e76dffbf560225ef44fd71cd66cb494ce7)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@vitest/coverage-v8` updated to
+  version `^4.1.10`. Dependency `vitest` updated to version `^4.1.10`.
+
+- [#538](https://github.com/jakubmazanec/tools/pull/538)
+  [`1b0c892`](https://github.com/jakubmazanec/tools/commit/1b0c892b2b9cf19600584e24aefe4948ce95c13c)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `lodash` updated to version
+  `^4.18.1`.
+
+- [#574](https://github.com/jakubmazanec/tools/pull/574)
+  [`e76e108`](https://github.com/jakubmazanec/tools/commit/e76e10840037d628e1a94884befc65c7bae47009)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `concurrently` updated to version
+  `^10.0.3`.
+
+- [#481](https://github.com/jakubmazanec/tools/pull/481)
+  [`8c2daeb`](https://github.com/jakubmazanec/tools/commit/8c2daeb86248a261194e2f52023a7ff5ff19a0a4)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `eslint` updated to version
+  `^9.39.4`.
+
+- [#542](https://github.com/jakubmazanec/tools/pull/542)
+  [`de22572`](https://github.com/jakubmazanec/tools/commit/de2257212050cf93127b7273e4cd1f79569ad5e2)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `concurrently` updated to version
+  `^9.2.4`.
+
+- [#533](https://github.com/jakubmazanec/tools/pull/533)
+  [`450d5bc`](https://github.com/jakubmazanec/tools/commit/450d5bc3e46bfdbe1784772bf590847510ad2cb2)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@types/lodash` updated to version
+  `^4.17.24`.
+
+- [#556](https://github.com/jakubmazanec/tools/pull/556)
+  [`c79998e`](https://github.com/jakubmazanec/tools/commit/c79998eb9b51783ca4d785a461111aadcc9a29d7)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `prettier` updated to version
+  `^3.9.5`.
+
+- [#544](https://github.com/jakubmazanec/tools/pull/544)
+  [`0018407`](https://github.com/jakubmazanec/tools/commit/0018407a6ea0364965f5bcbc4da5bac8342dfad4)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `fs-extra` updated to version
+  `^11.3.6`.
+
+- [#553](https://github.com/jakubmazanec/tools/pull/553)
+  [`ff9023b`](https://github.com/jakubmazanec/tools/commit/ff9023b622f3c7246544d3ac26cf832aff53ec5e)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `typedoc` updated to version
+  `^0.28.20`.
+
+- [#562](https://github.com/jakubmazanec/tools/pull/562)
+  [`a82cc3f`](https://github.com/jakubmazanec/tools/commit/a82cc3f8693cd80998c17bd2792181e4c05d5831)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `esbuild` updated to version
+  `^0.28.1`.
+
+- [#584](https://github.com/jakubmazanec/tools/pull/584)
+  [`00f30d1`](https://github.com/jakubmazanec/tools/commit/00f30d188807669c99bfd516e2643c534d7e065c)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Dependency `typescript` updated to version
+  `^6.0.0`.
+
+- [#558](https://github.com/jakubmazanec/tools/pull/558)
+  [`122f5b6`](https://github.com/jakubmazanec/tools/commit/122f5b665b592b2ae1e0009a63cbad88e2ba2f9e)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `typedoc-plugin-markdown` updated to
+  version `^4.12.0`.
+
+- [#552](https://github.com/jakubmazanec/tools/pull/552)
+  [`0e76ad9`](https://github.com/jakubmazanec/tools/commit/0e76ad9b86b7520c69e60d244a7176f34e939745)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `prettier-plugin-packagejson` updated
+  to version `^2.5.22`.
+
+- [#532](https://github.com/jakubmazanec/tools/pull/532)
+  [`7dee2e7`](https://github.com/jakubmazanec/tools/commit/7dee2e77a2efff2dbabcfc784ffaf6227143b7cb)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – ESLint config updated.
+
 ## 0.2.17
 
 ### Patch Changes

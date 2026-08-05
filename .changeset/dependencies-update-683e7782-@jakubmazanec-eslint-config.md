@@ -1,4 +1,0 @@
----
-'@jakubmazanec/eslint-config': patch
----
-Dependency `@types/lodash` updated to version `^4.17.24`.

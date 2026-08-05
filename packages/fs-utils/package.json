@@ -1,6 +1,6 @@
 {
   "name": "@jakubmazanec/fs-utils",
-  "version": "0.2.17",
+  "version": "0.2.18",
   "description": "Collection of utilities for working with file system.",
   "repository": {
     "type": "git",
@@ -30,7 +30,7 @@
     "fs-extra": "^11.3.6"
   },
   "devDependencies": {
-    "@jakubmazanec/eslint-config": "^4.1.0",
+    "@jakubmazanec/eslint-config": "^5.0.0",
     "@types/fs-extra": "^11.0.4",
     "@types/lodash": "^4.17.24",
     "@types/node": "^24.0.4",

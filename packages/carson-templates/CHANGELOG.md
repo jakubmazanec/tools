@@ -1,5 +1,161 @@
 # @jakubmazanec/carson-templates
 
+## 9.0.0
+
+### Major Changes
+
+- [#541](https://github.com/jakubmazanec/tools/pull/541)
+  [`2c78f29`](https://github.com/jakubmazanec/tools/commit/2c78f29cf23098fa3ebc299e5eb40d65134b033e)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – BREAKING: Templates `projects/react-library`
+  and `projects/app` now use [Vitest Browser mode](https://vitest.dev/guide/browser/) instead of
+  `happy-dom`. Browser test must have filenames like `*.browser.test.*`. Browser mode support is
+  turned on when at least one such test file exists!
+
+- [`08b41c5`](https://github.com/jakubmazanec/tools/commit/08b41c5c3da312f0ed0bb25400982a3aa3e2f038)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – BREAKING: Template `workspace` now groups all
+  non-major dependency updates into a single Renovate pull request that refreshes weekly. Major
+  updates, minor updates of 0.x dependencies and updates of Carson packages keep their own pull
+  requests.
+
+- [#579](https://github.com/jakubmazanec/tools/pull/579)
+  [`96713b8`](https://github.com/jakubmazanec/tools/commit/96713b859d6120eb4b14fa264589567eef1fe00f)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – BREAKING: Template `workspace` now has better
+  Renovate bot config to handle versions used only in the Carson template files.
+
+- [#574](https://github.com/jakubmazanec/tools/pull/574)
+  [`e76e108`](https://github.com/jakubmazanec/tools/commit/e76e10840037d628e1a94884befc65c7bae47009)
+  ([@renovate](https://github.com/apps/renovate)) – Templates `projects/library` and
+  `projects/react-library` were updated to use `concurrently` v10.
+
+- [#586](https://github.com/jakubmazanec/tools/pull/586)
+  [`58225e9`](https://github.com/jakubmazanec/tools/commit/58225e9d3ad6348b685d0f2999c8be0390339cd4)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – BREAKING: Template `projects/app` was updated
+  to use React Router v8. This may require manual update of projects that use this template (see
+  https://reactrouter.com/upgrading/v7).
+
+- [#578](https://github.com/jakubmazanec/tools/pull/578)
+  [`812aa36`](https://github.com/jakubmazanec/tools/commit/812aa36428fd0a843ab71d021db63908b9da4ede)
+  ([@renovate](https://github.com/apps/renovate)) – BREAKING: Template `workspace` updated to use
+  `execa` v10. This may require manual update.
+
+- [#548](https://github.com/jakubmazanec/tools/pull/548)
+  [`030d3dc`](https://github.com/jakubmazanec/tools/commit/030d3dcd46f53418e059890a446da79a224a93da)
+  ([@renovate](https://github.com/apps/renovate)) – Template `projects/react-library` was updated to
+  use `@chromatic-com/storybook` v5.
+
+- [#584](https://github.com/jakubmazanec/tools/pull/584)
+  [`00f30d1`](https://github.com/jakubmazanec/tools/commit/00f30d188807669c99bfd516e2643c534d7e065c)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – BREAKING: All templates were updated to use
+  TypeScript v6, ES2025, and `@jakubmazanec/eslint-config` v5. This may require manual update (see
+  https://www.typescriptlang.org/docs/handbook/release-notes/typescript-6-0.html).
+
+- [#549](https://github.com/jakubmazanec/tools/pull/549)
+  [`76ad711`](https://github.com/jakubmazanec/tools/commit/76ad7112c72b458d131a6ae57ea2117d11fee5d3)
+  ([@renovate](https://github.com/apps/renovate)) – BREAKING: Templates `projects/react-library` and
+  `workspace` were updated to use `chromatic` v18. This may require manual update of projects that
+  use these templates.
+
+- [#585](https://github.com/jakubmazanec/tools/pull/585)
+  [`36b9900`](https://github.com/jakubmazanec/tools/commit/36b99004a93b06a721cdb2d08a00e55c653d227d)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – BREAKING: Template `projects/app` was updated
+  to use Vite v8. This may require manual update of projects that use this template (see
+  https://vite.dev/guide/migration.html).
+
+### Minor Changes
+
+- [#572](https://github.com/jakubmazanec/tools/pull/572)
+  [`2dc0cbd`](https://github.com/jakubmazanec/tools/commit/2dc0cbdcba055f55c406af26a31f03aa336ab641)
+  ([@renovate](https://github.com/apps/renovate)) – Template `workspace` updated to use
+  `actions/checkout` v7.
+
+- [#573](https://github.com/jakubmazanec/tools/pull/573)
+  [`3a9915a`](https://github.com/jakubmazanec/tools/commit/3a9915a255abc0c62cfa0132901286139a101954)
+  ([@renovate](https://github.com/apps/renovate)) – Template `workspace` updated to use
+  `actions/setup-node` v7.
+
+### Patch Changes
+
+- [#585](https://github.com/jakubmazanec/tools/pull/585)
+  [`36b9900`](https://github.com/jakubmazanec/tools/commit/36b99004a93b06a721cdb2d08a00e55c653d227d)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixed Renovate bot config.
+
+- [#537](https://github.com/jakubmazanec/tools/pull/537)
+  [`9ecef3e`](https://github.com/jakubmazanec/tools/commit/9ecef3e76dffbf560225ef44fd71cd66cb494ce7)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@vitest/coverage-v8` updated to
+  version `^4.1.10`. Dependency `vitest` updated to version `^4.1.10`.
+
+- [#538](https://github.com/jakubmazanec/tools/pull/538)
+  [`1b0c892`](https://github.com/jakubmazanec/tools/commit/1b0c892b2b9cf19600584e24aefe4948ce95c13c)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `lodash` updated to version
+  `^4.18.1`.
+
+- [#574](https://github.com/jakubmazanec/tools/pull/574)
+  [`e76e108`](https://github.com/jakubmazanec/tools/commit/e76e10840037d628e1a94884befc65c7bae47009)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `concurrently` updated to version
+  `^10.0.3`.
+
+- [#578](https://github.com/jakubmazanec/tools/pull/578)
+  [`812aa36`](https://github.com/jakubmazanec/tools/commit/812aa36428fd0a843ab71d021db63908b9da4ede)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `execa` updated to version `^10.0.0`.
+
+- [#481](https://github.com/jakubmazanec/tools/pull/481)
+  [`8c2daeb`](https://github.com/jakubmazanec/tools/commit/8c2daeb86248a261194e2f52023a7ff5ff19a0a4)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `eslint` updated to version
+  `^9.39.4`.
+
+- [#542](https://github.com/jakubmazanec/tools/pull/542)
+  [`de22572`](https://github.com/jakubmazanec/tools/commit/de2257212050cf93127b7273e4cd1f79569ad5e2)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `concurrently` updated to version
+  `^9.2.4`.
+
+- [#564](https://github.com/jakubmazanec/tools/pull/564)
+  [`df5133c`](https://github.com/jakubmazanec/tools/commit/df5133c42709c399208a2c272e4e4079c1db6f49)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `semver` updated to version `^7.8.5`.
+
+- [#533](https://github.com/jakubmazanec/tools/pull/533)
+  [`450d5bc`](https://github.com/jakubmazanec/tools/commit/450d5bc3e46bfdbe1784772bf590847510ad2cb2)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@types/lodash` updated to version
+  `^4.17.24`.
+
+- [#556](https://github.com/jakubmazanec/tools/pull/556)
+  [`c79998e`](https://github.com/jakubmazanec/tools/commit/c79998eb9b51783ca4d785a461111aadcc9a29d7)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `prettier` updated to version
+  `^3.9.5`.
+
+- [#544](https://github.com/jakubmazanec/tools/pull/544)
+  [`0018407`](https://github.com/jakubmazanec/tools/commit/0018407a6ea0364965f5bcbc4da5bac8342dfad4)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `fs-extra` updated to version
+  `^11.3.6`.
+
+- [#553](https://github.com/jakubmazanec/tools/pull/553)
+  [`ff9023b`](https://github.com/jakubmazanec/tools/commit/ff9023b622f3c7246544d3ac26cf832aff53ec5e)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `typedoc` updated to version
+  `^0.28.20`.
+
+- [#562](https://github.com/jakubmazanec/tools/pull/562)
+  [`a82cc3f`](https://github.com/jakubmazanec/tools/commit/a82cc3f8693cd80998c17bd2792181e4c05d5831)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `esbuild` updated to version
+  `^0.28.1`.
+
+- [#584](https://github.com/jakubmazanec/tools/pull/584)
+  [`00f30d1`](https://github.com/jakubmazanec/tools/commit/00f30d188807669c99bfd516e2643c534d7e065c)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Dependency `typescript` updated to version
+  `^6.0.0`.
+
+- [#558](https://github.com/jakubmazanec/tools/pull/558)
+  [`122f5b6`](https://github.com/jakubmazanec/tools/commit/122f5b665b592b2ae1e0009a63cbad88e2ba2f9e)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `typedoc-plugin-markdown` updated to
+  version `^4.12.0`.
+
+- [#552](https://github.com/jakubmazanec/tools/pull/552)
+  [`0e76ad9`](https://github.com/jakubmazanec/tools/commit/0e76ad9b86b7520c69e60d244a7176f34e939745)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `prettier-plugin-packagejson` updated
+  to version `^2.5.22`.
+
+- [#532](https://github.com/jakubmazanec/tools/pull/532)
+  [`7dee2e7`](https://github.com/jakubmazanec/tools/commit/7dee2e77a2efff2dbabcfc784ffaf6227143b7cb)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – ESLint config updated.
+
 ## 8.1.0
 
 ### Minor Changes
