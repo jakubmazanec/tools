@@ -8,7 +8,7 @@
 > `PromiseLike`\<infer J\> ? `J` : `R` : `never`
 
 Defined in:
-[packages/ts-utils/source/types/ReturnType.ts:20](https://github.com/jakubmazanec/tools/blob/36b99004a93b06a721cdb2d08a00e55c653d227d/packages/ts-utils/source/types/ReturnType.ts#L20)
+[packages/ts-utils/source/types/ReturnType.ts:20](https://github.com/jakubmazanec/tools/blob/58225e9d3ad6348b685d0f2999c8be0390339cd4/packages/ts-utils/source/types/ReturnType.ts#L20)
 
 Constructs a type consisting of the return type of function `T`. Similarly like built-in
 `ReturnType` utility type, but works also on nullable and other types, and if you use it with async

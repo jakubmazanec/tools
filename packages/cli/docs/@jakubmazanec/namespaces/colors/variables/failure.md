@@ -7,4 +7,4 @@
 > `const` **failure**: `"red"` = `'red'`
 
 Defined in:
-[cli/source/ui/colors.ts:13](https://github.com/jakubmazanec/tools/blob/36b99004a93b06a721cdb2d08a00e55c653d227d/packages/cli/source/ui/colors.ts#L13)
+[cli/source/ui/colors.ts:13](https://github.com/jakubmazanec/tools/blob/58225e9d3ad6348b685d0f2999c8be0390339cd4/packages/cli/source/ui/colors.ts#L13)

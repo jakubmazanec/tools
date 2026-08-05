@@ -7,7 +7,7 @@
 > **TemplateRender**\<`A`, `D`> \> = `object`
 
 Defined in:
-[template/source/TemplateRender.ts:11](https://github.com/jakubmazanec/tools/blob/36b99004a93b06a721cdb2d08a00e55c653d227d/packages/template/source/TemplateRender.ts#L11)
+[template/source/TemplateRender.ts:11](https://github.com/jakubmazanec/tools/blob/58225e9d3ad6348b685d0f2999c8be0390339cd4/packages/template/source/TemplateRender.ts#L11)
 
 An object type representing the result of a template render.
 
@@ -34,7 +34,7 @@ Type of Zod schema used to define the type of template data.
 > `z.infer`\<`NonNullable`\<`A`>>\>\>
 
 Defined in:
-[template/source/TemplateRender.ts:17](https://github.com/jakubmazanec/tools/blob/36b99004a93b06a721cdb2d08a00e55c653d227d/packages/template/source/TemplateRender.ts#L17)
+[template/source/TemplateRender.ts:17](https://github.com/jakubmazanec/tools/blob/58225e9d3ad6348b685d0f2999c8be0390339cd4/packages/template/source/TemplateRender.ts#L17)
 
 Rendered template attributes. They created from the `to` and `variables` attributes, and from all of
 the custom template attributes.
@@ -46,7 +46,7 @@ the custom template attributes.
 > **content**: `string`
 
 Defined in:
-[template/source/TemplateRender.ts:24](https://github.com/jakubmazanec/tools/blob/36b99004a93b06a721cdb2d08a00e55c653d227d/packages/template/source/TemplateRender.ts#L24)
+[template/source/TemplateRender.ts:24](https://github.com/jakubmazanec/tools/blob/58225e9d3ad6348b685d0f2999c8be0390339cd4/packages/template/source/TemplateRender.ts#L24)
 
 Rendered template content.
 
@@ -57,6 +57,6 @@ Rendered template content.
 > **data**: `D` _extends_ `undefined` ? `null` : `z.infer`\<`NonNullable`\<`D`>>\>\>
 
 Defined in:
-[template/source/TemplateRender.ts:21](https://github.com/jakubmazanec/tools/blob/36b99004a93b06a721cdb2d08a00e55c653d227d/packages/template/source/TemplateRender.ts#L21)
+[template/source/TemplateRender.ts:21](https://github.com/jakubmazanec/tools/blob/58225e9d3ad6348b685d0f2999c8be0390339cd4/packages/template/source/TemplateRender.ts#L21)
 
 Data used to render the template.

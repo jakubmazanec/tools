@@ -14,7 +14,7 @@
 > `DeepPartial`\<...\>[] : `DeepPartialObject`\<`T`> \> : `DeepPartialObject`\<`T`> \> : `unknown`
 
 Defined in:
-[packages/ts-utils/source/types/DeepPartial.ts:36](https://github.com/jakubmazanec/tools/blob/36b99004a93b06a721cdb2d08a00e55c653d227d/packages/ts-utils/source/types/DeepPartial.ts#L36)
+[packages/ts-utils/source/types/DeepPartial.ts:36](https://github.com/jakubmazanec/tools/blob/58225e9d3ad6348b685d0f2999c8be0390339cd4/packages/ts-utils/source/types/DeepPartial.ts#L36)
 
 Same as built-in `Partial`, but works recursively. Useful when 1) you have a config object to which
 you need to merge another object, which would be a deep partial of a default object, or 2) you need

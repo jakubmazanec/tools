@@ -7,6 +7,6 @@
 > **Argv** = `string`[]
 
 Defined in:
-[args/source/Argv.ts:2](https://github.com/jakubmazanec/tools/blob/36b99004a93b06a721cdb2d08a00e55c653d227d/packages/args/source/Argv.ts#L2)
+[args/source/Argv.ts:2](https://github.com/jakubmazanec/tools/blob/58225e9d3ad6348b685d0f2999c8be0390339cd4/packages/args/source/Argv.ts#L2)
 
 Unparsed arguments.
