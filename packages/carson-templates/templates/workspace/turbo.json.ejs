@@ -51,8 +51,8 @@ if (workspace.projects.some((project) => project.config.deployment?.appName)) {
   turboConfig.globalEnv.push('VITE_APP_URL');
 }
 
-if (workspace.projects.some((project) => project.config.deployment?.dbInstance)) {
-  turboConfig.globalEnv.push('GEL_INSTANCE', 'GEL_BRANCH', 'GEL_SECRET_KEY');
+if (workspace.projects.some((project) => project.config.deployment?.gel)) {
+  turboConfig.globalEnv.push('GEL_DSN', 'GEL_PASSWORD', 'GEL_BRANCH');
 }
 
 if (workspace.projects.find((project) => project.name === LINTER_CONFIG_PACKAGE_NAME)) {

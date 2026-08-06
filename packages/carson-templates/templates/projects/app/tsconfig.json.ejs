@@ -13,7 +13,7 @@ let tsconfig = lodash.merge(
       resolveJsonModule: true,
       rootDirs: ['.', './.react-router/types'],
     },
-    include: project.config.deployment?.dbInstance
+    include: project.config.deployment?.gel
       ? ['./.react-router/types/**/*', `./${SOURCE_DIRECTORY}/**/*`, './dbschema/**/*', './*']
       : ['./.react-router/types/**/*', `./${SOURCE_DIRECTORY}/**/*`, './*'],
     references: getReferences(workspace, project),
@@ -22,7 +22,7 @@ let tsconfig = lodash.merge(
 );
 
 // TODO: when Gel client supports `exactOptionalPropertyTypes: true`, remove this line
-if (project.config.deployment?.dbInstance) {
+if (project.config.deployment?.gel) {
   tsconfig.compilerOptions.exactOptionalPropertyTypes = false;
 }
 -%>

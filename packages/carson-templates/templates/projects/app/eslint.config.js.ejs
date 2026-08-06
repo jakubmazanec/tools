@@ -5,7 +5,7 @@ strategy: overwrite
 <%
 let lintIgnores = [...LINT_IGNORES, '.react-router/**'];
 
-if (project.config.deployment?.dbInstance) {
+if (project.config.deployment?.gel) {
   lintIgnores.push('dbschema/edgeql-js/**', 'dbschema/interfaces.*');
 }
 -%>

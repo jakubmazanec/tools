@@ -16,11 +16,8 @@ for (let project of workspace.projects) {
     lines.push(`!${project.relativePath}/tsconfig.json`);
     lines.push(`!${project.relativePath}/vite.config.ts`);
 
-    if (project.config.deployment?.dbInstance) {
+    if (project.config.deployment?.gel) {
       lines.push(`!${project.relativePath}/dbschema/**`);
-    }
-
-    if (project.config.deployment?.dbInstance) {
       lines.push(`!${project.relativePath}/gel.toml`);
     }
   } else {
