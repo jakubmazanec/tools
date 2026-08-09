@@ -35,13 +35,16 @@ export function Popover<T extends ElementType = typeof POPOVER_ELEMENT>({
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   let props: HeadlessPopoverProps<any> = filterProps({
     as,
-    ref,
     className: theme(null, className),
     'data-component': 'popover',
     ...rest,
   });
 
-  return <HeadlessPopover {...props}>{children}</HeadlessPopover>;
+  return (
+    <HeadlessPopover {...props} ref={ref}>
+      {children}
+    </HeadlessPopover>
+  );
 }
 
 export const popoverTheme: ComponentTheme<typeof usePopoverTheme> = {

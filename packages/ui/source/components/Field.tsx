@@ -48,7 +48,6 @@ export function Field<T extends ElementType = typeof FIELD_ELEMENT>({
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   let props: HeadlessFieldProps<any> = filterProps({
     as,
-    ref,
     className: theme(null, className),
     'data-component': 'field',
     ...rest,
@@ -57,7 +56,9 @@ export function Field<T extends ElementType = typeof FIELD_ELEMENT>({
   if (field) {
     return (
       <FieldContext value={field}>
-        <HeadlessField {...props}>{children}</HeadlessField>
+        <HeadlessField {...props} ref={ref}>
+          {children}
+        </HeadlessField>
       </FieldContext>
     );
   }
@@ -65,12 +66,18 @@ export function Field<T extends ElementType = typeof FIELD_ELEMENT>({
   if (name) {
     return (
       <FieldNameContext value={name}>
-        <HeadlessField {...props}>{children}</HeadlessField>
+        <HeadlessField {...props} ref={ref}>
+          {children}
+        </HeadlessField>
       </FieldNameContext>
     );
   }
 
-  return <HeadlessField {...props}>{children}</HeadlessField>;
+  return (
+    <HeadlessField {...props} ref={ref}>
+      {children}
+    </HeadlessField>
+  );
 }
 
 export const fieldTheme: ComponentTheme<typeof useFieldTheme> = {

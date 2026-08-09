@@ -54,7 +54,6 @@ export function Dialog<T extends ElementType = typeof DIALOG_ELEMENT>({
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   let props: HeadlessDialogProps<any> = filterProps({
     as,
-    ref,
     open,
     static: isStatic,
     transition: true,
@@ -64,7 +63,7 @@ export function Dialog<T extends ElementType = typeof DIALOG_ELEMENT>({
   });
 
   return (
-    <HeadlessDialog {...props}>
+    <HeadlessDialog {...props} ref={ref}>
       <HeadlessDialogBackdrop transition className={theme.backdrop('fixed inset-0')} />
       <div className={theme.root('fixed inset-0', className)}>{children}</div>
     </HeadlessDialog>

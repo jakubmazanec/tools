@@ -54,7 +54,6 @@ export function Button<T extends ElementType = typeof BUTTON_ELEMENT>({
   let theme = useButtonTheme({variant, size, disabled});
   let props: Record<string, unknown> = {
     as,
-    ref,
     className: theme(disabled ? 'pointer-events-none' : null, className),
     disabled: disabled || (submit && !idle),
     autoFocus,
@@ -71,7 +70,11 @@ export function Button<T extends ElementType = typeof BUTTON_ELEMENT>({
   }
 
   if (typeof children === 'function') {
-    return <HeadlessButton {...props}>{children}</HeadlessButton>;
+    return (
+      <HeadlessButton {...props} ref={ref}>
+        {children}
+      </HeadlessButton>
+    );
   }
 
   let enhancedChildren = Children.map(children, (child) => {
@@ -88,7 +91,7 @@ export function Button<T extends ElementType = typeof BUTTON_ELEMENT>({
   });
 
   return (
-    <HeadlessButton {...props}>
+    <HeadlessButton {...props} ref={ref}>
       {submit && !idle ?
         <Spinner data-icon />
       : null}

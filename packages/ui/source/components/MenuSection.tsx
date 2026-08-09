@@ -35,13 +35,16 @@ export function MenuSection<T extends ElementType = typeof MENU_SECTION_ELEMENT>
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   let props: HeadlessMenuSectionProps<any> = filterProps({
     as,
-    ref,
     className: theme(null, className),
     'data-component': 'menu-section',
     ...rest,
   });
 
-  return <HeadlessMenuSection {...props}>{children}</HeadlessMenuSection>;
+  return (
+    <HeadlessMenuSection {...props} ref={ref}>
+      {children}
+    </HeadlessMenuSection>
+  );
 }
 
 export const menuSectionTheme: ComponentTheme<typeof useMenuSectionTheme> = {

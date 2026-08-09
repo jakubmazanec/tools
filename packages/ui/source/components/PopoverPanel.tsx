@@ -39,7 +39,6 @@ export function PopoverPanel<T extends ElementType = typeof POPOVER_PANEL_ELEMEN
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   let props: HeadlessPopoverPanelProps<any> = filterProps({
     as,
-    ref,
     static: isStatic,
     anchor,
     className: theme(null, className),
@@ -48,7 +47,11 @@ export function PopoverPanel<T extends ElementType = typeof POPOVER_PANEL_ELEMEN
     ...rest,
   });
 
-  return <HeadlessPopoverPanel {...props}>{children}</HeadlessPopoverPanel>;
+  return (
+    <HeadlessPopoverPanel {...props} ref={ref}>
+      {children}
+    </HeadlessPopoverPanel>
+  );
 }
 
 export const popoverPanelTheme: ComponentTheme<typeof usePopoverPanelTheme> = {

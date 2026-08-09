@@ -44,7 +44,6 @@ export function PopoverButton<T extends ElementType = typeof POPOVER_BUTTON_ELEM
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   let props: HeadlessPopoverButtonProps<any> = filterProps({
     as,
-    ref,
     disabled,
     autoFocus,
     className: theme(null, className),
@@ -52,7 +51,11 @@ export function PopoverButton<T extends ElementType = typeof POPOVER_BUTTON_ELEM
     ...rest,
   });
 
-  return <HeadlessPopoverButton {...props}>{children}</HeadlessPopoverButton>;
+  return (
+    <HeadlessPopoverButton {...props} ref={ref}>
+      {children}
+    </HeadlessPopoverButton>
+  );
 }
 
 export const popoverButtonTheme: ComponentTheme<typeof usePopoverButtonTheme> = {

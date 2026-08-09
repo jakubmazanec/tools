@@ -35,13 +35,16 @@ export function Description<T extends ElementType = typeof DESCRIPTION_ELEMENT>(
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   let props: HeadlessDescriptionProps<any> = filterProps({
     as,
-    ref,
     className: theme(null, className),
     'data-component': 'description',
     ...rest,
   });
 
-  return <HeadlessDescription {...props}>{children}</HeadlessDescription>;
+  return (
+    <HeadlessDescription {...props} ref={ref}>
+      {children}
+    </HeadlessDescription>
+  );
 }
 
 export const descriptionTheme: ComponentTheme<typeof useDescriptionTheme> = {

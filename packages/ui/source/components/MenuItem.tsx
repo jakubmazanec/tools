@@ -40,14 +40,17 @@ export function MenuItem<T extends ElementType = typeof MENU_ITEM_ELEMENT>({
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   let props: HeadlessMenuItemProps<any> = filterProps({
     as,
-    ref,
     disabled,
     className: theme(null, className),
     'data-component': 'menu-item',
     ...rest,
   });
 
-  return <HeadlessMenuItem {...props}>{children}</HeadlessMenuItem>;
+  return (
+    <HeadlessMenuItem {...props} ref={ref}>
+      {children}
+    </HeadlessMenuItem>
+  );
 }
 
 export const menuItemTheme: ComponentTheme<typeof useMenuItemTheme> = {
