@@ -237,6 +237,7 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D, any>>>
     },
     [columnPinning, onColumnPinningChange],
   );
+  // eslint-disable-next-line react-hooks/incompatible-library -- TanStack Table's useReactTable is incompatible with memoization; this file is skipped by the compiler
   let table = useReactTable<D>({
     data,
     columns,
