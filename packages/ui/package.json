@@ -22,9 +22,9 @@
     "source"
   ],
   "scripts": {
-    "build": "del-cli build tsconfig.tsbuildinfo && esbuild \"source/**/*\" --platform=node --target=node26.13 --outdir=build --sourcemap --loader:.woff2=copy && tsc && storybook build",
+    "build": "del-cli build tsconfig.tsbuildinfo && tsdown && tsc && storybook build",
     "clean": "del-cli coverage build *.tsbuildinfo",
-    "develop": "concurrently \"esbuild \"source/**/*\" --platform=node --target=node26.13 --outdir=build --sourcemap --loader:.woff2=copy --watch\" \"tsc --watch\" \"storybook dev -p 6006 --no-open\"",
+    "develop": "concurrently \"tsdown --watch\" \"tsc --watch\" \"storybook dev -p 6006 --no-open\"",
     "document": "del-cli docs && typedoc --options typedoc.config.cjs",
     "format": "prettier . --write --ignore-unknown",
     "lint": "eslint . --quiet",
@@ -66,7 +66,6 @@
     "chromatic": "^18.13.6",
     "concurrently": "^10.0.6",
     "del-cli": "^8.0.1",
-    "esbuild": "^0.28.2",
     "eslint": "^9.39.5",
     "playwright": "^1.64.1",
     "prettier": "^3.9.10",
@@ -76,6 +75,7 @@
     "react-dom": "^19.3.1",
     "storybook": "^10.6.5",
     "tailwindcss": "^4.3.3",
+    "tsdown": "^0.22.0",
     "tsx": "^4.23.15",
     "typedoc": "^0.28.20",
     "typedoc-plugin-markdown": "^4.14.1",
