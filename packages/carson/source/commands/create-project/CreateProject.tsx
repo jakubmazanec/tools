@@ -2,7 +2,7 @@ import {colors, type CommandArguments, Header, icons, useProgram} from '@jakubma
 import chalk from 'chalk';
 import {Box, Text} from 'ink';
 import path from 'node:path';
-import {useEffect, useState} from 'react';
+import {useEffect, useRef, useState} from 'react';
 
 import {type Workspace} from '../../workspace.js';
 import {type CommandStatus, packageNameToDirectory} from '../internals.js';
@@ -18,8 +18,8 @@ export type CreateProjectProps = {
 };
 
 export function CreateProject({args, workspace}: CreateProjectProps) {
-  let [status, setStatus] = useState<CommandStatus>('not-started');
-  let [subscription, setSubscription] = useState<ZenObservable.Subscription | null>(null);
+  let [isFinished, setIsFinished] = useState(false);
+  let subscriptionRef = useRef<ZenObservable.Subscription | undefined>(undefined);
   let [jobs, setJobs] = useState<string[]>([]);
   let [createProjectInputResult, setCreateProjectInputResult] = useState<CreateProjectInputResult>(
     () => ({
@@ -29,15 +29,14 @@ export function CreateProject({args, workspace}: CreateProjectProps) {
     }),
   );
   let {exit} = useProgram();
+  let status: CommandStatus =
+    isFinished ? 'finished'
+    : Object.entries(createProjectInputResult).every(([, result]) => result.isComplete) ?
+      'in-progress'
+    : 'not-started';
 
   useEffect(() => {
-    if (Object.entries(createProjectInputResult).every(([, result]) => result.isComplete)) {
-      setStatus('in-progress');
-    }
-  }, [createProjectInputResult]);
-
-  useEffect(() => {
-    if (status === 'in-progress' && !subscription) {
+    if (status === 'in-progress' && !subscriptionRef.current) {
       let newSubscription = runCreateProject({
         projectPath: createProjectInputResult.projectPath.value,
         templateId: createProjectInputResult.templateId.value,
@@ -53,19 +52,19 @@ export function CreateProject({args, workspace}: CreateProjectProps) {
         },
         complete() {
           newSubscription.unsubscribe();
-          setStatus('finished');
+          setIsFinished(true);
         },
       });
 
-      setSubscription(newSubscription);
+      subscriptionRef.current = newSubscription;
     }
 
     return () => {
-      if (subscription) {
-        subscription.unsubscribe();
+      if (subscriptionRef.current) {
+        subscriptionRef.current.unsubscribe();
       }
     };
-  }, [args, createProjectInputResult, exit, status, subscription, workspace]);
+  }, [args, createProjectInputResult, exit, status, workspace]);
 
   let possiblePaths: Array<{value: string; label: string}> = [];
 

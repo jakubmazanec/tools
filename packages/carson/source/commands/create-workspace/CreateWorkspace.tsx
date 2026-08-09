@@ -2,7 +2,7 @@ import {colors, type CommandArguments, Header, icons, useProgram} from '@jakubma
 import chalk from 'chalk';
 import {Box, Text} from 'ink';
 import path from 'node:path';
-import {useEffect, useState} from 'react';
+import {useEffect, useRef, useState} from 'react';
 
 import {type CommandStatus} from '../internals.js';
 import {type createWorkspaceCommand} from './createWorkspaceCommand.js';
@@ -14,8 +14,8 @@ export type CreateWorkspaceProps = {
 };
 
 export function CreateWorkspace({args}: CreateWorkspaceProps) {
-  let [status, setStatus] = useState<CommandStatus>('not-started');
-  let [subscription, setSubscription] = useState<ZenObservable.Subscription | null>(null);
+  let [isFinished, setIsFinished] = useState(false);
+  let subscriptionRef = useRef<ZenObservable.Subscription | undefined>(undefined);
   let [jobs, setJobs] = useState<string[]>([]);
   let [createWorkspaceInputResult, setCreateWorkspaceInputResult] =
     useState<CreateWorkspaceInputResult>(() => ({
@@ -23,15 +23,14 @@ export function CreateWorkspace({args}: CreateWorkspaceProps) {
     }));
   let {exit} = useProgram();
   let workspacePath = path.resolve(process.cwd(), args.options.path ?? '');
+  let status: CommandStatus =
+    isFinished ? 'finished'
+    : Object.entries(createWorkspaceInputResult).every(([, result]) => result.isComplete) ?
+      'in-progress'
+    : 'not-started';
 
   useEffect(() => {
-    if (Object.entries(createWorkspaceInputResult).every(([, result]) => result.isComplete)) {
-      setStatus('in-progress');
-    }
-  }, [createWorkspaceInputResult]);
-
-  useEffect(() => {
-    if (status === 'in-progress' && !subscription) {
+    if (status === 'in-progress' && !subscriptionRef.current) {
       let newSubscription = runCreateWorkspace({
         workspacePath,
         templateId: createWorkspaceInputResult.templateId.value,
@@ -45,19 +44,19 @@ export function CreateWorkspace({args}: CreateWorkspaceProps) {
         },
         complete() {
           newSubscription.unsubscribe();
-          setStatus('finished');
+          setIsFinished(true);
         },
       });
 
-      setSubscription(newSubscription);
+      subscriptionRef.current = newSubscription;
     }
 
     return () => {
-      if (subscription) {
-        subscription.unsubscribe();
+      if (subscriptionRef.current) {
+        subscriptionRef.current.unsubscribe();
       }
     };
-  }, [createWorkspaceInputResult, status, subscription, args, exit, workspacePath]);
+  }, [createWorkspaceInputResult, status, args, exit, workspacePath]);
 
   return (
     <Box flexDirection="column">
