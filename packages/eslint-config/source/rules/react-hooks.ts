@@ -20,9 +20,7 @@ export const reactHooksRules: eslint.Linter.Config['rules'] = {
   'react-hooks/no-deriving-state-in-effects': 'error', // validates against deriving values from state in an effect
   'react-hooks/preserve-manual-memoization': 'error', // validates that existing manual memoization is preserved by the compiler
   'react-hooks/purity': 'error', // validates that components/hooks are pure
-  // TODO: re-enable once https://github.com/facebook/react/issues/34775 is fixed; the rule
-  // mis-infers any object that merely contains a ref, so forwarding a ref prop is reported
-  'react-hooks/refs': 'off', // validates correct usage of refs, not reading/writing during render
+  'react-hooks/refs': 'error', // validates correct usage of refs, not reading/writing during render
   'react-hooks/rule-suppression': 'off', // validates against suppression of other rules
   'react-hooks/set-state-in-effect': 'error', // validates against calling setState synchronously in an effect
   'react-hooks/set-state-in-render': 'error', // validates against setting state during render
