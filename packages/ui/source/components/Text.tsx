@@ -1,9 +1,4 @@
-import {
-  type ComponentPropsWithoutRef,
-  createElement,
-  type ElementType,
-  type PropsWithChildren,
-} from 'react';
+import {type ComponentPropsWithoutRef, type ElementType, type PropsWithChildren} from 'react';
 
 import {
   type ComponentProps,
@@ -38,13 +33,17 @@ export function Text<T extends ElementType = typeof TEXT_ELEMENT>({
 }: TextProps<T>) {
   let theme = useTextTheme({size});
   let props = {
-    ref,
     className: theme(null, className),
     'data-component': 'text',
     ...rest,
   };
+  let Tag: ElementType = Component;
 
-  return createElement(Component, props, children);
+  return (
+    <Tag {...props} ref={ref}>
+      {children}
+    </Tag>
+  );
 }
 
 export const textTheme: ComponentTheme<typeof useTextTheme> = {

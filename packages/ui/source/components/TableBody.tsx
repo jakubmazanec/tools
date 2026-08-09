@@ -1,9 +1,4 @@
-import {
-  type ComponentPropsWithoutRef,
-  createElement,
-  type ElementType,
-  type PropsWithChildren,
-} from 'react';
+import {type ComponentPropsWithoutRef, type ElementType, type PropsWithChildren} from 'react';
 
 import {
   type ComponentProps,
@@ -33,13 +28,17 @@ export function TableBody<T extends ElementType = typeof TABLE_BODY_ELEMENT>({
 }: TableBodyProps<T>) {
   let theme = useTableBodyTheme();
   let props = {
-    ref,
     className: theme(null, className),
     'data-component': 'table-body',
     ...rest,
   };
+  let Tag: ElementType = Component;
 
-  return createElement(Component, props, children);
+  return (
+    <Tag {...props} ref={ref}>
+      {children}
+    </Tag>
+  );
 }
 
 export const tableBodyTheme: ComponentTheme<typeof useTableBodyTheme> = {

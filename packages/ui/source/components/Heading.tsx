@@ -1,9 +1,4 @@
-import {
-  type ComponentPropsWithoutRef,
-  createElement,
-  type ElementType,
-  type PropsWithChildren,
-} from 'react';
+import {type ComponentPropsWithoutRef, type ElementType, type PropsWithChildren} from 'react';
 
 import {
   type ComponentProps,
@@ -38,13 +33,12 @@ export function Heading<T extends ElementType = typeof HEADING_ELEMENT>({
 }: HeadingProps<T>) {
   let theme = useHeadingTheme({size});
   let props = {
-    ref,
     className: theme(null, className),
     'data-component': 'heading',
     ...rest,
   };
   // TODO: is this ok typings-wise? Are types for <h1> and <h2> different?
-  let DefaultComponent = HEADING_ELEMENT;
+  let DefaultComponent: ElementType = HEADING_ELEMENT;
 
   if (size === 'small') {
     DefaultComponent = 'h3';
@@ -54,7 +48,13 @@ export function Heading<T extends ElementType = typeof HEADING_ELEMENT>({
     DefaultComponent = 'h2';
   }
 
-  return createElement(Component ?? DefaultComponent, props, children);
+  let ResolvedComponent: ElementType = Component ?? DefaultComponent;
+
+  return (
+    <ResolvedComponent {...props} ref={ref}>
+      {children}
+    </ResolvedComponent>
+  );
 }
 
 export const headingTheme: ComponentTheme<typeof useHeadingTheme> = {

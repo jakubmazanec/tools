@@ -1,9 +1,4 @@
-import {
-  type ComponentPropsWithoutRef,
-  createElement,
-  type ElementType,
-  type PropsWithChildren,
-} from 'react';
+import {type ComponentPropsWithoutRef, type ElementType, type PropsWithChildren} from 'react';
 
 import {
   type ComponentProps,
@@ -44,13 +39,17 @@ export function Container<T extends ElementType = typeof TEXT_ELEMENT>({
 }: ContainerProps<T>) {
   let theme = useContainerTheme({spacing, direction, justify, align});
   let props = {
-    ref,
     className: theme(null, className),
     'data-component': 'container',
     ...rest,
   };
+  let Tag: ElementType = Component;
 
-  return createElement(Component, props, children);
+  return (
+    <Tag {...props} ref={ref}>
+      {children}
+    </Tag>
+  );
 }
 
 export const containerTheme: ComponentTheme<typeof useContainerTheme> = {

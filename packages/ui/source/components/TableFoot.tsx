@@ -1,9 +1,4 @@
-import {
-  type ComponentPropsWithoutRef,
-  createElement,
-  type ElementType,
-  type PropsWithChildren,
-} from 'react';
+import {type ComponentPropsWithoutRef, type ElementType, type PropsWithChildren} from 'react';
 
 import {
   type ComponentProps,
@@ -34,13 +29,17 @@ export function TableFoot<T extends ElementType = typeof TABLE_FOOT_ELEMENT>({
 }: TableFootProps<T>) {
   let theme = useTableFootTheme();
   let props = filterProps({
-    ref,
     className: theme(null, className),
     'data-component': 'table-foot',
     ...rest,
   });
+  let Tag: ElementType = Component;
 
-  return createElement(Component, props, children);
+  return (
+    <Tag {...props} ref={ref}>
+      {children}
+    </Tag>
+  );
 }
 
 export const tableFootTheme: ComponentTheme<typeof useTableFootTheme> = {
