@@ -66,6 +66,7 @@ export function TextInput({
   });
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- cursor offset must track the value and focus props; restructuring risks cursor-position regressions in the interactive input
     setState((previousState) => {
       if (!focus || !showCursor) {
         return previousState;
