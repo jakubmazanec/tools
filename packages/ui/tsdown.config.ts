@@ -6,12 +6,25 @@
  * Run `npx carson update workspace` to regenerate.
  */
 
-import {defineConfig} from 'tsdown';
+import babel from '@rolldown/plugin-babel';
+import {reactCompilerPreset} from '@vitejs/plugin-react';
+import {defineConfig, mergeConfig} from 'tsdown';
 
-export default defineConfig({
-  entry: ['source/main.ts', 'source/development.ts'],
-  outDir: 'build',
-  platform: 'neutral',
-  unbundle: true,
-  copy: ['source/styles.css', 'source/inter-variable-italic.woff2', 'source/inter-variable.woff2'],
-});
+export default defineConfig(
+  mergeConfig(
+    {
+      entry: ['source/main.ts', 'source/development.ts'],
+      outDir: 'build',
+      platform: 'neutral',
+      unbundle: true,
+      copy: [
+        'source/styles.css',
+        'source/inter-variable-italic.woff2',
+        'source/inter-variable.woff2',
+      ],
+    },
+    {
+      plugins: [babel({presets: [reactCompilerPreset()]})],
+    },
+  ),
+);

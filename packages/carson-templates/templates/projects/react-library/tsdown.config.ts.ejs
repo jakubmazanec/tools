@@ -21,6 +21,12 @@ let tsdownConfig = lodash.merge(
  * Run `npx carson update workspace` to regenerate.
  */
 
-import {defineConfig} from 'tsdown';
+import babel from '@rolldown/plugin-babel';
+import {reactCompilerPreset} from '@vitejs/plugin-react';
+import {defineConfig, mergeConfig} from 'tsdown';
 
-export default defineConfig(<%- JSON.stringify(tsdownConfig, null, 2) %>);
+export default defineConfig(
+  mergeConfig(<%- JSON.stringify(tsdownConfig, null, 2) %>, {
+    plugins: [babel({presets: [reactCompilerPreset()]})],
+  }),
+);
