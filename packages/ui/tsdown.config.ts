@@ -16,6 +16,8 @@ export default defineConfig(
       entry: ['source/main.ts', 'source/development.ts'],
       outDir: 'build',
       platform: 'neutral',
+      plugins: [],
+      sourcemap: true,
       unbundle: true,
       copy: [
         'source/styles.css',

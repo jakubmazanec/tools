@@ -12,5 +12,6 @@ export default defineConfig({
   entry: ['source/main.ts'],
   outDir: 'build',
   platform: 'neutral',
+  sourcemap: true,
   unbundle: true,
 });

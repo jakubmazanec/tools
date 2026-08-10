@@ -8,6 +8,8 @@ let tsdownConfig = lodash.merge(
     entry: ['source/main.ts'],
     outDir: BUILD_DIRECTORY,
     platform: 'neutral',
+    plugins: [],
+    sourcemap: true,
     unbundle: true,
   },
   project.config.overrides?.tsdownConfig ?? {},
