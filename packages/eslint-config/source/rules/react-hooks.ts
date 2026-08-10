@@ -2,7 +2,7 @@ import type eslint from 'eslint';
 
 export const reactHooksRules: eslint.Linter.Config['rules'] = {
   // eslint-plugin-react-hooks rules
-  'react-hooks/exhaustive-deps': 'off', // superseded by react-hooks/exhaustive-effect-dependencies and react-hooks/memo-dependencies
+  'react-hooks/exhaustive-deps': 'error', // validates that effect dependencies are exhaustive
   'react-hooks/rules-of-hooks': 'off', // superseded by react-hooks/hooks
   'react-hooks/capitalized-calls': 'off', // validates against calling capitalized functions/methods instead of using JSX
   'react-hooks/config': 'error', // validates the compiler configuration options
