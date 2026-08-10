@@ -1,0 +1,4 @@
+---
+'@jakubmazanec/ui': patch
+---
+Dependency `@conform-to/react` updated to version `^1.20.1`. Dependency `@conform-to/zod` updated to version `^1.20.1`. Dependency `@storybook/addon-docs` updated to version `^10.5.4`. Dependency `@storybook/addon-links` updated to version `^10.5.4`. Dependency `@storybook/react-vite` updated to version `^10.5.4`. Dependency `@types/node` updated to version `^24.13.3`. Dependency `chromatic` updated to version `^18.1.0`. Dependency `concurrently` updated to version `^10.0.4`. Dependency `eslint` updated to version `^9.39.5`. Dependency `prettier` updated to version `^3.9.6`. Dependency `react` updated to version `^19.2.8`. Dependency `react-dom` updated to version `^19.2.8`. Dependency `storybook` updated to version `^10.5.4`. Dependency `typescript` updated to version `^6.0.3`. Dependency `node` updated to version `^24.18.0`. Dependency `npm` updated to version `^11.18.0`.
