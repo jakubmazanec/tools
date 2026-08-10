@@ -27,29 +27,29 @@
     "typecheck": "tsc --project tsconfig.typecheck.json"
   },
   "dependencies": {
-    "fs-extra": "^11.3.6"
+    "fs-extra": "^11.4.0"
   },
   "devDependencies": {
     "@jakubmazanec/eslint-config": "^5.0.0",
     "@types/fs-extra": "^11.0.4",
     "@types/lodash": "^4.17.24",
-    "@types/node": "^24.0.4",
+    "@types/node": "^24.13.3",
     "@vitest/coverage-v8": "^4.1.10",
-    "concurrently": "^10.0.3",
+    "concurrently": "^10.0.4",
     "del-cli": "^7.0.0",
     "esbuild": "^0.28.1",
-    "eslint": "^9.39.4",
+    "eslint": "^9.39.5",
     "lodash": "^4.18.1",
-    "prettier": "^3.9.5",
+    "prettier": "^3.9.6",
     "prettier-plugin-packagejson": "^2.5.22",
     "typedoc": "^0.28.20",
     "typedoc-plugin-markdown": "^4.12.0",
-    "typescript": "^6.0.0",
+    "typescript": "^6.0.3",
     "vitest": "^4.1.10"
   },
-  "packageManager": "npm@11.3.0",
+  "packageManager": "npm@11.18.0",
   "engines": {
-    "node": "^24.3.0",
-    "npm": "^11.3.0"
+    "node": "^24.18.0",
+    "npm": "^11.18.0"
   }
 }

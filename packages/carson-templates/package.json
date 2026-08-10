@@ -41,30 +41,30 @@
     "@jakubmazanec/fs-utils": "^0.2.0",
     "@types/fs-extra": "^11.0.4",
     "@types/lodash": "^4.17.24",
-    "@types/node": "^24.0.4",
+    "@types/node": "^24.13.3",
     "@types/semver": "^7.7.1",
     "@types/zen-observable": "^0.8.7",
     "@vitest/coverage-v8": "^4.1.10",
-    "concurrently": "^10.0.3",
+    "concurrently": "^10.0.4",
     "del-cli": "^7.0.0",
     "esbuild": "^0.28.1",
-    "eslint": "^9.39.4",
+    "eslint": "^9.39.5",
     "execa": "^10.0.0",
-    "fs-extra": "^11.3.6",
-    "prettier": "^3.9.5",
+    "fs-extra": "^11.4.0",
+    "prettier": "^3.9.6",
     "prettier-plugin-packagejson": "^2.5.22",
     "typedoc": "^0.28.20",
     "typedoc-plugin-markdown": "^4.12.0",
-    "typescript": "^6.0.0",
+    "typescript": "^6.0.3",
     "vitest": "^4.1.10",
     "zen-observable": "^0.10.0"
   },
   "peerDependencies": {
     "@jakubmazanec/carson": "^3.0.0"
   },
-  "packageManager": "npm@11.3.0",
+  "packageManager": "npm@11.18.0",
   "engines": {
-    "node": "^24.3.0",
-    "npm": "^11.3.0"
+    "node": "^24.18.0",
+    "npm": "^11.18.0"
   }
 }
