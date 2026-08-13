@@ -8,7 +8,8 @@ import {type WorkspaceDependenciesGetVersionsOptions} from './WorkspaceDependenc
 import {type WorkspaceDependency} from './WorkspaceDependency.js';
 
 /**
- * A collection of {@link WorkspaceDependency | workspace dependencies} that are installed in {@link Workspace | a workspace}.
+ * A collection of {@link WorkspaceDependency | workspace dependencies} that are installed in
+ * {@link Workspace | a workspace}.
  */
 export class WorkspaceDependencies<M extends boolean = true> extends Array<WorkspaceDependency> {
   /** The workspace the dependencies are installed in. */
@@ -72,7 +73,8 @@ export class WorkspaceDependencies<M extends boolean = true> extends Array<Works
   }
 
   /**
-   * Creates new {@link WorkspaceDependencies} instance from a {@link Workspace} instance and its dependencies.
+   * Creates new {@link WorkspaceDependencies} instance from a {@link Workspace} instance and its
+   * dependencies.
    *
    * @param workspace The workspace from which the dependnecies are taken.
    * @param options Options.

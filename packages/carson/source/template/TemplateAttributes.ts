@@ -1,6 +1,7 @@
 import {z} from 'zod';
 
-// TODO: add strategy 'none' so when you using template A that extends template B, you can overwrite template files to no-op
+// TODO: add strategy 'none' so when you using template A that extends template B, you can
+// overwrite template files to no-op
 let strategyTemplateAttributeSchema = z.union([
   z.literal('create'),
   z.literal('ensure'),

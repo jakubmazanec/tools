@@ -1,5 +1,6 @@
 /**
- * Simplifies JSON for usage in snapshots: string, number or boolean values are replaced with `null`.
+ * Simplifies JSON for usage in snapshots: string, number or boolean values are replaced with
+ * `null`.
  */
 export function simplify(a: unknown) {
   if (a === undefined || a == null) {

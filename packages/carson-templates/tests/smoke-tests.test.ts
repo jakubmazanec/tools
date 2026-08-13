@@ -58,7 +58,8 @@ describe.each([
 
     let workspace = await Workspace.read(workspacePath);
 
-    // Then we create all projects; be aware that if projectTemplateIds.length is greater than 1, workspace template must be for multi-project workspace.
+    // Then we create all projects; be aware that if projectTemplateIds.length is greater than 1,
+    // workspace template must be for multi-project workspace.
     for (let [index, projectTemplateId] of projectTemplateIds.entries()) {
       let projectName = `project-${index}`;
       let possiblePaths =
@@ -138,7 +139,11 @@ describe.each([
         path.join(workspacePath, 'package.json'),
       )) as WorkspacePackageJson<true>;
 
-      // We need to override the ESLint version, because when updating to its newer major version, the old ESLint config package is still installed with previous major version in its peer dependencies, which leads to failed `npm install`. We also need to override the ESLint config package with the local workspace copy, because its new major version isn't published on the registry yet.
+      // We need to override the ESLint version, because when updating to its newer major version,
+      // the old ESLint config package is still installed with previous major version in its peer
+      // dependencies, which leads to failed `npm install`. We also need to override the ESLint
+      // config package with the local workspace copy, because its new major version isn't published
+      // on the registry yet.
       packageJson.overrides = {
         eslint: DEPENDENCY_VERSIONS.eslint!,
         [LINTER_CONFIG_PACKAGE_NAME]: `file:${LINTER_CONFIG_PACKAGE_PATH}`,

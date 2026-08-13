@@ -34,7 +34,8 @@ function commitOptionScope(optionScope: OptionScope, parsedOptions: Record<strin
 }
 
 /**
- * Parses a list of command line arguments into an arguments object. Based on provided parser config, raw arguments can be parsed as commands, options and parameters.
+ * Parses a list of command line arguments into an arguments object. Based on provided parser
+ * config, raw arguments can be parsed as commands, options and parameters.
  *
  * @param argv Raw arguments to be parsed.
  * @param parserConfig Parser configuration.
@@ -188,7 +189,8 @@ export function parseArguments<const O extends ParserConfig>(
         !optionScope.config.multiple &&
         (isFalseString(arg) || isTrueString(arg))
       ) {
-        // we're adding value to a single boolean option only if the value is "false" or "true" string
+        // we're adding value to a single boolean option only if the value is "false" or "true"
+        // string
         optionScope.captureArg(arg);
 
         if (optionScope.isComplete()) {

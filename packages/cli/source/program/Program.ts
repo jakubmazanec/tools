@@ -16,7 +16,8 @@ import {type ProgramOptions} from './ProgramOptions.js';
 import {type ProgramStreams} from './ProgramStreams.js';
 
 /**
- * Program manages and executes {@link Command} instances attached to it based on parsing command line arguments.
+ * Program manages and executes {@link Command} instances attached to it based on parsing command
+ * line arguments.
  */
 export class Program {
   /** Program name. */

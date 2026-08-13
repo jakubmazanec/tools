@@ -8,7 +8,9 @@ export const vitestRules: eslint.Linter.Config['rules'] = {
   ], // enforce using .each consistently
   'vitest/consistent-test-filename': 'error', // forbidden .spec test file pattern
   'vitest/consistent-test-it': ['error', {fn: 'test', withinDescribe: 'test'}], // prefer test or it but not both
-  // TODO: drop the `no-autofix/` prefix once the upstream fixer is fixed. It drops `vi` from a multi-specifier `vitest` import without adding `vitest`, so the calls it rewrites to `vitest.…` reference an undefined identifier.
+  // TODO: drop the `no-autofix/` prefix once the upstream fixer is fixed. It drops `vi` from a
+  // multi-specifier `vitest` import without adding `vitest`, so the calls it rewrites to `vitest.…`
+  // reference an undefined identifier.
   'no-autofix/vitest/consistent-vitest-vi': ['error', {fn: 'vitest'}], // enforce using vitest consistently
   'vitest/expect-expect': 'error', // enforce having expectation in test body
   'vitest/hoisted-apis-on-top': 'error', // enforce hoisted APIs to be on top of the file

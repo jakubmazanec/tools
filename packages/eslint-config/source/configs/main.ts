@@ -5,6 +5,7 @@ import typescriptEslintPlugin from '@typescript-eslint/eslint-plugin';
 import typescriptEslintParser from '@typescript-eslint/parser';
 import vitestEslintPlugin from '@vitest/eslint-plugin';
 import {type default as eslint, type ESLint} from 'eslint';
+import commentLengthEslintPlugin from 'eslint-plugin-comment-length';
 import importEslintPlugin from 'eslint-plugin-import';
 import a11yEslintPlugin from 'eslint-plugin-jsx-a11y';
 import perfectionistEslintPlugin from 'eslint-plugin-perfectionist';
@@ -27,6 +28,7 @@ import {
 } from '../constants.js';
 import {
   a11yRules,
+  commentLengthRules,
   commentsRules,
   eslintRules,
   importRules,
@@ -67,6 +69,7 @@ export const main: eslint.Linter.Config[] = disableAutofix([
     // TODO: fix the type essertions
     plugins: {
       '@stylistic/js': stylisticEslintPlugin,
+      'comment-length': commentLengthEslintPlugin,
       'eslint-comments': commentsEslintPlugin as ESLint.Plugin,
       import: importEslintPlugin as ESLint.Plugin,
       'jsx-a11y': a11yEslintPlugin,
@@ -103,6 +106,7 @@ export const main: eslint.Linter.Config[] = disableAutofix([
 
     rules: {
       ...a11yRules,
+      ...commentLengthRules,
       ...commentsRules,
       ...eslintRules,
       ...importRules,

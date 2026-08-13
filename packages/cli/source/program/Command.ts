@@ -11,7 +11,8 @@ import {type CommandOptions} from './CommandOptions.js';
 import {type Program} from './Program.js';
 
 /**
- * Command encapsulates piece of a CLI's logic and is executed when {@link Program} instance parses that command from the command line arguments.
+ * Command encapsulates piece of a CLI's logic and is executed when {@link Program} instance parses
+ * that command from the command line arguments.
  */
 export class Command<
   A extends string,
@@ -77,7 +78,8 @@ export class Command<
   }
 
   /**
-   * Parses a list of command line arguments into an arguments object. Parser is pre-configured based on this command.
+   * Parses a list of command line arguments into an arguments object. Parser is pre-configured
+   * based on this command.
    */
   parseArguments(argv: Argv): Arguments<{
     commands: readonly [A];

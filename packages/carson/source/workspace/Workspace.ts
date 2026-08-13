@@ -41,7 +41,8 @@ import {type WorkspaceRepository} from './WorkspaceRepository.js';
 import {type WorkspaceUpdateOptions} from './WorkspaceUpdateOptions.js';
 
 /**
- * Workspace represent a directory, usually a git repository, that contains {@link Project} instances.
+ * Workspace represent a directory, usually a git repository, that contains {@link Project}
+ * instances.
  *
  * @typeParam M If true, the workspace is multi-project workspace (so-called "monorepo").
  */
@@ -61,7 +62,10 @@ export class Workspace<M extends boolean = true> {
   /** Workspace configuration; if it's not found, the default is an empty object. */
   config: WorkspaceConfig;
 
-  /** Parsed workspace `package.json` file (if the workspace contains multiple projects); if it's not found, the default is an empty object. */
+  /**
+   * Parsed workspace `package.json` file (if the workspace contains multiple projects); if it's
+   * not found, the default is an empty object.
+   */
   packageJson: WorkspacePackageJson<M>;
 
   /** Workspace git repository. */
@@ -164,7 +168,8 @@ export class Workspace<M extends boolean = true> {
    * @returns The new workspace.
    */
   static async create({args, path: workspacePath, templateId}: WorkspaceCreateOptions) {
-    // TODO: test that workspace returned by this method has the same value of isMultiProject when the same workspace is after its creation re-read with .read()
+    // TODO: test that workspace returned by this method has the same value of isMultiProject when
+    // the same workspace is after its creation re-read with .read()
     let workspace = new this({
       path: workspacePath,
       config: {
@@ -324,7 +329,8 @@ export class Workspace<M extends boolean = true> {
   }
 
   /**
-   * Traverses file system up from the search path and tries to find a directory that is a root of a workspace.
+   * Traverses file system up from the search path and tries to find a directory that is a root of
+   * a workspace.
    *
    * @param searchPath Search path.
    * @returns Workspace path, if found.

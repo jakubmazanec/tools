@@ -10,7 +10,11 @@ import * as icons from './icons.js';
  * {@link Failure} component props.
  */
 export type FailureProps = BoxProps & {
-  /** Error that describes a failure state. Function {@link getErrorDetail} is used for getting all the information from the error; you can use it to implement own retrieval logic and pass the result as `errorDetail` prop. */
+  /**
+   * Error that describes a failure state. Function {@link getErrorDetail} is used for getting all
+   * the information from the error; you can use it to implement own retrieval logic and pass the
+   * result as `errorDetail` prop.
+   */
   error: unknown;
 
   /** Information about the failure state. Overrides information retireved from `error` prop. */

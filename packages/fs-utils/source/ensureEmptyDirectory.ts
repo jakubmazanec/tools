@@ -12,7 +12,8 @@ export type EnsureEmptyDirectoryOptions = {
 };
 
 /**
- * Ensures that a path is actually an empty directory. If the path doesn't exist, the directory is created; if the path exists but isn't an ampty directory, error is thrown.
+ * Ensures that a path is actually an empty directory. If the path doesn't exist, the directory is
+ * created; if the path exists but isn't an ampty directory, error is thrown.
  *
  * @param path The target path.
  */
