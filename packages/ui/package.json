@@ -88,9 +88,9 @@
     "react-dom": "19.x",
     "tailwindcss": "4.x"
   },
-  "packageManager": "npm@11.3.0",
+  "packageManager": "npm@12.0.2",
   "engines": {
     "node": "^24.3.0",
-    "npm": "^11.3.0"
+    "npm": "^12.0.2"
   }
 }
