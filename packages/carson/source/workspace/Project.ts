@@ -22,7 +22,8 @@ import {saveProjectConfig} from './saveProjectConfig.js';
 import {type Workspace} from './Workspace.js';
 
 /**
- * Project represent a self-contained piece of software (e.g. a package, or an app) that is part of a {@link Workspace}. Currently only Node.js projects are supported.
+ * Project represent a self-contained piece of software (e.g. a package, or an app) that is part of
+ * a {@link Workspace}. Currently only Node.js projects are supported.
  *
  * @typeParam M If true, the project belongs to a multi-project workspace.
  */
@@ -56,7 +57,8 @@ export class Project<M extends boolean = true> {
     workspace,
     errors,
   }: ProjectOptions<M>) {
-    // TODO: check that this path and workspace path are correct, i.e. project path must always be inside of workspace path
+    // TODO: check that this path and workspace path are correct, i.e. project path must always be
+    // inside of workspace path
     this.path = projectPath;
 
     if (name) {
@@ -104,7 +106,8 @@ export class Project<M extends boolean = true> {
       workspace,
     });
 
-    // if the workspace is single-project, it shares a directory with the project, so we can't insist on it being an empty directory
+    // if the workspace is single-project, it shares a directory with the project, so we can't
+    // insist on it being an empty directory
     if (workspace.isMultiProject) {
       try {
         await ensureEmptyDirectory(project.path);

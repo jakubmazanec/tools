@@ -29,7 +29,8 @@ export function getDependencies(dependencies: string[], workspace: Workspace | W
       (dependency) => dependencyName === dependency.name,
     );
 
-    // if the dependency is already installed in the workspace, we might want to use that existing version
+    // if the dependency is already installed in the workspace, we might want to use that existing
+    // version
     if (installedDependency) {
       const version = [...installedDependency.exactVersions].sort().reverse()[0] as string;
 
@@ -42,7 +43,8 @@ export function getDependencies(dependencies: string[], workspace: Workspace | W
         }
       }
 
-      // we use existing version if its major version is equal or greater than major version recommended by the template
+      // we use existing version if its major version is equal or greater than major version
+      // recommended by the template
       if (getMajorVersion(version) >= getMajorVersion(dependencyVersion)) {
         if (semver.prerelease(version)?.length) {
           result[dependencyName] = version;

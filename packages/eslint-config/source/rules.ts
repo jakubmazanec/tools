@@ -1,4 +1,5 @@
 export * from './rules/a11y.js';
+export * from './rules/comment-length.js';
 export * from './rules/comments.js';
 export * from './rules/eslint.js';
 export * from './rules/import.js';

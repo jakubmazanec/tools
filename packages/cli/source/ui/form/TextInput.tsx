@@ -18,7 +18,10 @@ export type TextInputProps = BoxProps & {
   /** Value. */
   value: string;
 
-  /** Should component listen to Listen to user's input? Useful in case there are multiple input components at the same time and input must be handled only by a specific component. */
+  /**
+   * Should component listen to Listen to user's input? Useful in case there are multiple input
+   * components at the same time and input must be handled only by a specific component.
+   */
   focus?: boolean | undefined;
 
   /** Replace all chars and mask the value. Useful for password inputs. */

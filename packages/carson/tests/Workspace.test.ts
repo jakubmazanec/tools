@@ -6,7 +6,8 @@ import {WorkspaceError} from '../source/workspace/WorkspaceError.js';
 import {type WorkspaceOptionsProject} from '../source/workspace/WorkspaceOptionsProject.js';
 import {TEST_WORKSPACES_PATH} from './constants.js';
 
-// we need to mock `isRootPath` so it considers directory with test workspaces as the file system root
+// we need to mock `isRootPath` so it considers directory with test workspaces as the file system
+// root
 vitest.mock(import('@jakubmazanec/fs-utils'), async (importOriginal) => {
   const originalModule = await importOriginal<typeof import('@jakubmazanec/fs-utils')>();
 

@@ -5,7 +5,7 @@ export type WorkspaceDependencyProject = {
   /** Project name. */
   name: string;
 
-  /** SemVer version range of the dependency that is actually is actually required by the project. */
+  /** SemVer version range of the dependency that is actually required by the project. */
   version: string;
 
   /** Exact version of the dependency that is actually is actually required by the project. */

@@ -72,7 +72,8 @@ export type TemplateRenderOptions = {
 };
 
 /**
- * The `Template` object stores all information about a template and has methods for reading and rendering.
+ * The `Template` object stores all information about a template and has methods for reading and
+ * rendering.
  *
  * ```TypeScript
  * let template = new Template({

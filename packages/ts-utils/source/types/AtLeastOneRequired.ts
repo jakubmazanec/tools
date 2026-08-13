@@ -1,5 +1,6 @@
 /**
- * Constructs new type from `T` so that at least one property from the set of properties `P` is required:
+ * Constructs new type from `T` so that at least one property from the set of properties `P` is
+ * required:
  *
  * ```TypeScript
  * import { AtLeastOneRequired } from '@ori/ts-utils';

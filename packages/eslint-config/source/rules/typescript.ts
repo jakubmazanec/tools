@@ -100,7 +100,9 @@ export const typescriptRules: eslint.Linter.Config['rules'] = {
         match: false,
       },
     },
-    // variables and parameters must use camel case, pascal case or upper case with no leading and trailing underscores - exceptions are names that are only underscores (used e.g. for placeholder parameters)
+    // variables and parameters must use camel case, pascal case or upper case with no leading and
+    // trailing underscores - exceptions are names that are only underscores (used e.g. for
+    // placeholder parameters)
     {
       selector: 'variableLike',
       format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
@@ -118,7 +120,9 @@ export const typescriptRules: eslint.Linter.Config['rules'] = {
       leadingUnderscore: 'forbid',
       trailingUnderscore: 'forbid',
     },
-    /* TODO [@jakubmazanec]: enable this when we can discern things defined in external packages and other stuff - {
+    /* 
+     * TODO [@jakubmazanec]: enable this when we can discern things defined in external packages
+     * and other stuff - {
             selector: 'variable',
             types: ['boolean'],
             format: ['PascalCase'],
@@ -149,8 +153,8 @@ export const typescriptRules: eslint.Linter.Config['rules'] = {
             selector: 'property',
             types: ['boolean'],
             format: ['PascalCase'],
-            prefix: ['is', 'are', 'was', 'should', 'has', 'can', 'did', 'will', 'use', 'allow'],
-            leadingUnderscore: 'allow',
+     * prefix: ['is', 'are', 'was', 'should', 'has', 'can', 'did', 'will', 'use', 'allow'],
+     * leadingUnderscore: 'allow',
             trailingUnderscore: 'forbid',
           },
           {
@@ -193,7 +197,8 @@ export const typescriptRules: eslint.Linter.Config['rules'] = {
             leadingUnderscore: 'forbid',
             trailingUnderscore: 'forbid',
           }, */
-    // "member-like" (i.e. properties, methods, etc.) must use camel case, pascal case or upper case with only leading underscore allowed
+    // "member-like" (i.e. properties, methods, etc.) must use camel case, pascal case or upper
+    // case with only leading underscore allowed
     {
       selector: 'memberLike',
       format: ['camelCase', 'PascalCase', 'UPPER_CASE'],

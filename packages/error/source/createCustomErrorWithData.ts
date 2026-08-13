@@ -10,8 +10,9 @@ import {
 } from './types.js';
 
 /**
- * Function for creating custom error classes. Such custom error class properly subclasses built-in `Error`, simplifies
- * generating error messages via predefined error codes and allows attaching custom data to the error instance.
+ * Function for creating custom error classes. Such custom error class properly subclasses built-in
+ * `Error`, simplifies generating error messages via predefined error codes and allows attaching
+ * custom data to the error instance.
  *
  * @param errorName Error name.
  * @param errorMessages Object containing all possible error messages.
