@@ -13,6 +13,23 @@ for (let project of workspace.projects) {
 let copyFilesLines = ['COPY package-lock.json package.json /workspace/'];
 let currentProject = project;
 
+// `npm run build -- --filter=<app>` builds only the workspace projects the app depends on (transitively), so only those have a `build` directory in the build stage.
+let dependencyProjectNames = new Set([currentProject.name]);
+let previousSize = 0;
+
+while (dependencyProjectNames.size !== previousSize) {
+  previousSize = dependencyProjectNames.size;
+
+  for (let dependency of workspace.allDependencies) {
+    if (
+      workspace.projects.some((workspaceProject) => workspaceProject.name === dependency.name) &&
+      dependency.projects.some((dependencyProject) => dependencyProjectNames.has(dependencyProject.name))
+    ) {
+      dependencyProjectNames.add(dependency.name);
+    }
+  }
+}
+
 for (let project of workspace.projects) {
   if (project.config.deployment?.appName && project.name === currentProject.name) {
     copyFilesLines.push(`COPY --from=build /workspace/${project.relativePath}/build /workspace/${project.relativePath}/build`);
@@ -22,7 +39,10 @@ for (let project of workspace.projects) {
       copyFilesLines.push(`COPY --from=build /workspace/${project.relativePath}/bin /workspace/${project.relativePath}/bin`);
     }
 
-    copyFilesLines.push(`COPY --from=build /workspace/${project.relativePath}/build /workspace/${project.relativePath}/build`);
+    if (dependencyProjectNames.has(project.name)) {
+      copyFilesLines.push(`COPY --from=build /workspace/${project.relativePath}/build /workspace/${project.relativePath}/build`);
+    }
+
     copyFilesLines.push(`COPY --from=build /workspace/${project.relativePath}/package.json /workspace/${project.relativePath}/package.json`);
   }
 }
