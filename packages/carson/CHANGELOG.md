@@ -1,5 +1,24 @@
 # @jakubmazanec/carson
 
+## 3.0.7
+
+### Patch Changes
+
+- [#588](https://github.com/jakubmazanec/tools/pull/588)
+  [`cb8264c`](https://github.com/jakubmazanec/tools/commit/cb8264c831f1e3ca31cf4c8013393ebc056dc355)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `fs-extra` updated to version
+  `^11.4.1`. Dependency `prettier` updated to version `^3.9.9`. Dependency `yaml` updated to version
+  `^2.9.1`. Dependency `zod` updated to version `^4.6.5`. Dependency `@types/lodash` updated to
+  version `^4.17.25`. Dependency `@types/node` updated to version `^24.19.1`. Dependency
+  `@types/react` updated to version `^19.3.0`. Dependency `@types/semver` updated to version
+  `^7.8.0`. Dependency `@vitest/coverage-v8` updated to version `^4.1.11`. Dependency `concurrently`
+  updated to version `^10.0.6`. Dependency `esbuild` updated to version `^0.28.2`. Dependency
+  `eslint` updated to version `^9.39.5`. Dependency `ink` updated to version `^6.8.0`. Dependency
+  `react` updated to version `^19.3.0`. Dependency `tsx` updated to version `^4.23.15`. Dependency
+  `typedoc-plugin-markdown` updated to version `^4.13.1`. Dependency `typescript` updated to version
+  `^6.0.3`. Dependency `vitest` updated to version `^4.1.11`. Dependency `node` updated to version
+  `^24.21.0`. Dependency `npm` updated to version `^11.21.0`.
+
 ## 3.0.6
 
 ### Patch Changes

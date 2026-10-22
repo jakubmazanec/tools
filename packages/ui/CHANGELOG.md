@@ -1,5 +1,35 @@
 # @jakubmazanec/ui
 
+## 0.6.1
+
+### Patch Changes
+
+- [#588](https://github.com/jakubmazanec/tools/pull/588)
+  [`cb8264c`](https://github.com/jakubmazanec/tools/commit/cb8264c831f1e3ca31cf4c8013393ebc056dc355)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@conform-to/react` updated to
+  version `^1.21.1`. Dependency `@conform-to/zod` updated to version `^1.21.1`. Dependency
+  `tailwind-merge` updated to version `^3.7.0`. Dependency `zod` updated to version `^4.6.5`.
+  Dependency `@chromatic-com/storybook` updated to version `^5.4.0`. Dependency
+  `@storybook/addon-docs` updated to version `^10.6.1`. Dependency `@storybook/addon-links` updated
+  to version `^10.6.1`. Dependency `@storybook/react-vite` updated to version `^10.6.1`. Dependency
+  `@types/lodash` updated to version `^4.17.25`. Dependency `@types/node` updated to version
+  `^24.19.1`. Dependency `@types/react` updated to version `^19.3.0`. Dependency `@types/react-dom`
+  updated to version `^19.3.0`. Dependency `@vitest/browser-playwright` updated to version
+  `^4.1.11`. Dependency `@vitest/coverage-v8` updated to version `^4.1.11`. Dependency `chromatic`
+  updated to version `^18.11.0`. Dependency `concurrently` updated to version `^10.0.6`. Dependency
+  `esbuild` updated to version `^0.28.2`. Dependency `eslint` updated to version `^9.39.5`.
+  Dependency `playwright` updated to version `^1.64.0`. Dependency `prettier` updated to version
+  `^3.9.9`. Dependency `react` updated to version `^19.3.0`. Dependency `react-dom` updated to
+  version `^19.3.0`. Dependency `storybook` updated to version `^10.6.1`. Dependency `tsx` updated
+  to version `^4.23.15`. Dependency `typedoc-plugin-markdown` updated to version `^4.13.1`.
+  Dependency `typescript` updated to version `^6.0.3`. Dependency `vitest` updated to version
+  `^4.1.11`. Dependency `vitest-browser-react` updated to version `^2.3.0`. Dependency `node`
+  updated to version `^24.21.0`. Dependency `npm` updated to version `^11.21.0`.
+
+- [#595](https://github.com/jakubmazanec/tools/pull/595)
+  [`075aed4`](https://github.com/jakubmazanec/tools/commit/075aed44df8e2790730e6f177b80898b32adf0d6)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – `DataTable` search was fixed.
+
 ## 0.6.0
 
 ### Minor Changes
