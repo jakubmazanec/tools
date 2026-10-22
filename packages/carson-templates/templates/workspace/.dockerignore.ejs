@@ -24,8 +24,15 @@ for (let project of workspace.projects) {
       lines.push(`!${project.relativePath}/gel.toml`);
     }
   } else {
-    lines.push(`!${project.relativePath}/${BUILD_DIRECTORY}/**`);
+    lines.push(`!${project.relativePath}/${SOURCE_DIRECTORY}/**`);
     lines.push(`!${project.relativePath}/package.json`);
+    lines.push(`!${project.relativePath}/tsconfig.json`);
+
+    if (project.config.template?.includes('projects/react-library')) {
+      lines.push(`!${project.relativePath}/.storybook/**`);
+      lines.push(`!${project.relativePath}/stories/**`);
+      lines.push(`!${project.relativePath}/vite.config.ts`);
+    }
 
     if (project.packageJson.bin) {
       lines.push(`!${project.relativePath}/bin/**`);
