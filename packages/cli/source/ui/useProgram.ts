@@ -17,7 +17,7 @@ export function useProgram() {
       process.exitCode = 1;
 
       showBoundary(error);
-      appExit(error as Error);
+      appExit(error);
     },
     [appExit, showBoundary],
   );

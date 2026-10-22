@@ -17,7 +17,7 @@ export type CheckboxFieldProps = PropsWithChildren<
       | {
           className?: string | undefined;
           // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
-          field?: FieldMetadata<any, any> | undefined;
+          field?: FieldMetadata<any> | undefined;
           name?: undefined;
         }
       | {
