@@ -7,7 +7,7 @@
 > **TupleToUnion**\<`T`\> = `T`\[`number`\]
 
 Defined in:
-[packages/ts-utils/source/types/TupleToUnion.ts:10](https://github.com/jakubmazanec/tools/blob/cb8264c831f1e3ca31cf4c8013393ebc056dc355/packages/ts-utils/source/types/TupleToUnion.ts#L10)
+[packages/ts-utils/source/types/TupleToUnion.ts:10](https://github.com/jakubmazanec/tools/blob/075aed44df8e2790730e6f177b80898b32adf0d6/packages/ts-utils/source/types/TupleToUnion.ts#L10)
 
 Converts tuple type to union type:
 

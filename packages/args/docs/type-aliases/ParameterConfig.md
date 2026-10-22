@@ -9,6 +9,6 @@
 > [`StringParameterConfig`](StringParameterConfig.md)
 
 Defined in:
-[args/source/ParameterConfig.ts:97](https://github.com/jakubmazanec/tools/blob/cb8264c831f1e3ca31cf4c8013393ebc056dc355/packages/args/source/ParameterConfig.ts#L97)
+[args/source/ParameterConfig.ts:97](https://github.com/jakubmazanec/tools/blob/075aed44df8e2790730e6f177b80898b32adf0d6/packages/args/source/ParameterConfig.ts#L97)
 
 Parser's parameter configuration.

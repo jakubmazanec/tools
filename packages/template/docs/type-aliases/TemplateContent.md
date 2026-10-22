@@ -7,6 +7,6 @@
 > **TemplateContent** = `string`
 
 Defined in:
-[template/source/TemplateContent.ts:4](https://github.com/jakubmazanec/tools/blob/cb8264c831f1e3ca31cf4c8013393ebc056dc355/packages/template/source/TemplateContent.ts#L4)
+[template/source/TemplateContent.ts:4](https://github.com/jakubmazanec/tools/blob/075aed44df8e2790730e6f177b80898b32adf0d6/packages/template/source/TemplateContent.ts#L4)
 
 Type representing a template content.

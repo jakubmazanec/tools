@@ -7,7 +7,7 @@
 > **is**\<`S`\>(`value`, `schema`): `value is output<S>`
 
 Defined in:
-[utils/is.ts:3](https://github.com/jakubmazanec/tools/blob/cb8264c831f1e3ca31cf4c8013393ebc056dc355/packages/zod-utils/source/utils/is.ts#L3)
+[utils/is.ts:3](https://github.com/jakubmazanec/tools/blob/075aed44df8e2790730e6f177b80898b32adf0d6/packages/zod-utils/source/utils/is.ts#L3)
 
 ## Type Parameters
 
