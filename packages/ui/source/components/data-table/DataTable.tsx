@@ -267,6 +267,7 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D, any>>>
     onGlobalFilterChange: clientSearch ? setSearch : undefined,
     columnResizeMode: 'onChange',
     globalFilterFn: fuzzyFilter,
+    getColumnCanGlobalFilter: () => true,
   });
 
   let page =
