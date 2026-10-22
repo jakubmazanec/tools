@@ -7,4 +7,4 @@
 > `const` **comboboxTheme**: `ComponentTheme`\<_typeof_ [`useComboboxTheme`](useComboboxTheme.md)\>
 
 Defined in:
-[packages/ui/source/components/Combobox.tsx:256](https://github.com/jakubmazanec/tools/blob/075aed44df8e2790730e6f177b80898b32adf0d6/packages/ui/source/components/Combobox.tsx#L256)
+[packages/ui/source/components/Combobox.tsx:256](https://github.com/jakubmazanec/tools/blob/e018b791b9e50b3160dac8d3c9fee73baea839fc/packages/ui/source/components/Combobox.tsx#L256)

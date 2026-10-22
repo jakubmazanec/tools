@@ -7,4 +7,4 @@
 > `const` **jsonSchema**: `z.ZodType`\<[`Json`](../type-aliases/Json.md)\>
 
 Defined in:
-[types/Json.ts:7](https://github.com/jakubmazanec/tools/blob/075aed44df8e2790730e6f177b80898b32adf0d6/packages/zod-utils/source/types/Json.ts#L7)
+[types/Json.ts:7](https://github.com/jakubmazanec/tools/blob/e018b791b9e50b3160dac8d3c9fee73baea839fc/packages/zod-utils/source/types/Json.ts#L7)

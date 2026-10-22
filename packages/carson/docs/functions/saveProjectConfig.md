@@ -7,7 +7,7 @@
 > **saveProjectConfig**(`options`): `Promise`\<`void`\>
 
 Defined in:
-[packages/carson/source/workspace/saveProjectConfig.ts:21](https://github.com/jakubmazanec/tools/blob/075aed44df8e2790730e6f177b80898b32adf0d6/packages/carson/source/workspace/saveProjectConfig.ts#L21)
+[packages/carson/source/workspace/saveProjectConfig.ts:21](https://github.com/jakubmazanec/tools/blob/e018b791b9e50b3160dac8d3c9fee73baea839fc/packages/carson/source/workspace/saveProjectConfig.ts#L21)
 
 Saves project configuration to the config file.
 

@@ -8,4 +8,4 @@
 > [`WithLocaleOrLocales`](WithLocaleOrLocales.md)
 
 Defined in:
-[packages/ui/source/utilities/formatDateTime.ts:4](https://github.com/jakubmazanec/tools/blob/075aed44df8e2790730e6f177b80898b32adf0d6/packages/ui/source/utilities/formatDateTime.ts#L4)
+[packages/ui/source/utilities/formatDateTime.ts:4](https://github.com/jakubmazanec/tools/blob/e018b791b9e50b3160dac8d3c9fee73baea839fc/packages/ui/source/utilities/formatDateTime.ts#L4)

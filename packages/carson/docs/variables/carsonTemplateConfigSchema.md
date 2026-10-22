@@ -8,4 +8,4 @@
 > `ZodOptional`\<`ZodBoolean`\>; \}, `$strict`\>
 
 Defined in:
-[packages/carson/source/template/CarsonTemplateConfig.ts:3](https://github.com/jakubmazanec/tools/blob/075aed44df8e2790730e6f177b80898b32adf0d6/packages/carson/source/template/CarsonTemplateConfig.ts#L3)
+[packages/carson/source/template/CarsonTemplateConfig.ts:3](https://github.com/jakubmazanec/tools/blob/e018b791b9e50b3160dac8d3c9fee73baea839fc/packages/carson/source/template/CarsonTemplateConfig.ts#L3)
