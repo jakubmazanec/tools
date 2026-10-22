@@ -36,7 +36,7 @@ export type RadioGroupProps<
         value?: V | undefined;
         defaultValue?: V | undefined;
         // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
-        field?: FieldMetadata<any, any> | undefined;
+        field?: FieldMetadata<any> | undefined;
         name?: undefined;
         className?: string | undefined;
         onChange?: ((value: V) => void) | undefined;

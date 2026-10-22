@@ -31,7 +31,7 @@ export type FieldProps<T extends ElementType> = ComponentProps<typeof useFieldTh
         className?: string | undefined;
         name?: undefined;
         // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
-        field?: FieldMetadata<any, any> | undefined;
+        field?: FieldMetadata<any> | undefined;
       }
   );
 
