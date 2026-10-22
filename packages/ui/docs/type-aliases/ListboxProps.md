@@ -4,19 +4,19 @@
 
 # Type Alias: ListboxProps\<T, V\>
 
-> **ListboxProps**\<`T`, `V`> \> = `ComponentProps`\<_typeof_
-> [`useListboxTheme`](../variables/useListboxTheme.md)> \> & `ComponentPropsWithoutRef`\<`T`> \> &
-> `ComponentRef`\<`T`> \> & `PropsWithChildren` & \{ `as?`: `T`; `className?`: `string`;
+> **ListboxProps**\<`T`, `V`\> = `ComponentProps`\<_typeof_
+> [`useListboxTheme`](../variables/useListboxTheme.md)\> & `ComponentPropsWithoutRef`\<`T`\> &
+> `ComponentRef`\<`T`\> & `PropsWithChildren` & \{ `as?`: `T`; `className?`: `string`;
 > `defaultValue?`: `V`[]; `hideSelected?`: \{ `limit`: `number`; `message?`: `string`; \}; `items?`:
-> [`ListboxItem`](ListboxItem.md)\<`V`>\>[]; `multiple`: `true`; `name?`: `string`; `onChange?`:
+> [`ListboxItem`](ListboxItem.md)\<`V`\>[]; `multiple`: `true`; `name?`: `string`; `onChange?`:
 > (`selectedValue`) => `void`; `placeholder?`: `string`; `showFilter?`: `boolean`; `value?`: `V`[];
 > \} \| \{ `as?`: `T`; `className?`: `string`; `defaultValue?`: `V`; `hideSelected?`: `never`;
-> `items?`: [`ListboxItem`](ListboxItem.md)\<`V`>\>[]; `multiple?`: `false`; `name?`: `string`;
+> `items?`: [`ListboxItem`](ListboxItem.md)\<`V`\>[]; `multiple?`: `false`; `name?`: `string`;
 > `onChange?`: (`selectedValue`) => `void`; `placeholder?`: `string`; `showFilter?`: `boolean`;
 > `value?`: `V`; \}
 
 Defined in:
-[packages/ui/source/components/Listbox.tsx:46](https://github.com/jakubmazanec/tools/blob/58225e9d3ad6348b685d0f2999c8be0390339cd4/packages/ui/source/components/Listbox.tsx#L46)
+[packages/ui/source/components/Listbox.tsx:46](https://github.com/jakubmazanec/tools/blob/cb8264c831f1e3ca31cf4c8013393ebc056dc355/packages/ui/source/components/Listbox.tsx#L46)
 
 ## Type Parameters
 

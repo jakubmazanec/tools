@@ -4,12 +4,12 @@
 
 # Type Alias: ListboxOptionProps\<T, V\>
 
-> **ListboxOptionProps**\<`T`, `V`> \> = `ComponentProps`\<_typeof_
-> [`useListboxOptionTheme`](../variables/useListboxOptionTheme.md)> \> &
-> `ComponentPropsWithoutRef`\<`T`> \> & `ComponentRef`\<`T`> \> & `PropsWithChildren` & `object`
+> **ListboxOptionProps**\<`T`, `V`\> = `ComponentProps`\<_typeof_
+> [`useListboxOptionTheme`](../variables/useListboxOptionTheme.md)\> &
+> `ComponentPropsWithoutRef`\<`T`\> & `ComponentRef`\<`T`\> & `PropsWithChildren` & `object`
 
 Defined in:
-[packages/ui/source/components/ListboxOption.tsx:22](https://github.com/jakubmazanec/tools/blob/58225e9d3ad6348b685d0f2999c8be0390339cd4/packages/ui/source/components/ListboxOption.tsx#L22)
+[packages/ui/source/components/ListboxOption.tsx:22](https://github.com/jakubmazanec/tools/blob/cb8264c831f1e3ca31cf4c8013393ebc056dc355/packages/ui/source/components/ListboxOption.tsx#L22)
 
 ## Type Declaration
 

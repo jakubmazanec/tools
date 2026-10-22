@@ -4,12 +4,12 @@
 
 # Type Alias: TextareaProps\<T\>
 
-> **TextareaProps**\<`T`> \> = `ComponentProps`\<_typeof_
-> [`useTextareaTheme`](../variables/useTextareaTheme.md)> \> & `ComponentPropsWithoutRef`\<`T`> \> &
-> `ComponentRef`\<`T`> \> & `object`
+> **TextareaProps**\<`T`\> = `ComponentProps`\<_typeof_
+> [`useTextareaTheme`](../variables/useTextareaTheme.md)\> & `ComponentPropsWithoutRef`\<`T`\> &
+> `ComponentRef`\<`T`\> & `object`
 
 Defined in:
-[packages/ui/source/components/Textarea.tsx:23](https://github.com/jakubmazanec/tools/blob/58225e9d3ad6348b685d0f2999c8be0390339cd4/packages/ui/source/components/Textarea.tsx#L23)
+[packages/ui/source/components/Textarea.tsx:23](https://github.com/jakubmazanec/tools/blob/cb8264c831f1e3ca31cf4c8013393ebc056dc355/packages/ui/source/components/Textarea.tsx#L23)
 
 ## Type Declaration
 
@@ -23,7 +23,7 @@ Defined in:
 
 ### icon?
 
-> `optional` **icon?**: `ComponentType`\<`object`>\>
+> `optional` **icon?**: `ComponentType`\<`object`\>
 
 ### name?
 

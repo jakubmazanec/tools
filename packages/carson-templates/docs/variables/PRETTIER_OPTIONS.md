@@ -7,7 +7,7 @@
 > `const` **PRETTIER\_OPTIONS**: `object`
 
 Defined in:
-[packages/carson-templates/source/constants.ts:74](https://github.com/jakubmazanec/tools/blob/58225e9d3ad6348b685d0f2999c8be0390339cd4/packages/carson-templates/source/constants.ts#L74)
+[packages/carson-templates/source/constants.ts:74](https://github.com/jakubmazanec/tools/blob/cb8264c831f1e3ca31cf4c8013393ebc056dc355/packages/carson-templates/source/constants.ts#L74)
 
 ## Type Declaration
 

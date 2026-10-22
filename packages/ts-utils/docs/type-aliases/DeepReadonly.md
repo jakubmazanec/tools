@@ -4,13 +4,13 @@
 
 # Type Alias: DeepReadonly\<T\>
 
-> **DeepReadonly**\<`T`> \> = `T` _extends_ [`Primitive`](Primitive.md) \| ((...`args`) =>
-> `unknown`) ? `T` : `T` _extends_ `ReadonlyMap`\<infer K, infer V\> ? `DeepReadonlyMap`\<`K`, `V`>
-> \> : `T` _extends_ `ReadonlySet`\<infer I\> ? `DeepReadonlySet`\<`I`> \> : `T` _extends_ `object`
-> ? `DeepReadonlyObject`\<`T`> \> : `unknown`
+> **DeepReadonly**\<`T`\> = `T` _extends_ [`Primitive`](Primitive.md) \| ((...`args`) => `unknown`)
+> ? `T` : `T` _extends_ `ReadonlyMap`\<infer K, infer V\> ? `DeepReadonlyMap`\<`K`, `V`\> : `T`
+> _extends_ `ReadonlySet`\<infer I\> ? `DeepReadonlySet`\<`I`\> : `T` _extends_ `object` ?
+> `DeepReadonlyObject`\<`T`\> : `unknown`
 
 Defined in:
-[packages/ts-utils/source/types/DeepReadonly.ts:22](https://github.com/jakubmazanec/tools/blob/58225e9d3ad6348b685d0f2999c8be0390339cd4/packages/ts-utils/source/types/DeepReadonly.ts#L22)
+[packages/ts-utils/source/types/DeepReadonly.ts:22](https://github.com/jakubmazanec/tools/blob/cb8264c831f1e3ca31cf4c8013393ebc056dc355/packages/ts-utils/source/types/DeepReadonly.ts#L22)
 
 Same as built-in `Readonly`, but works recursively:
 

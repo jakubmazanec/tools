@@ -4,7 +4,7 @@
 
 # Function: maxSatisfying()
 
-> **maxSatisfying**\<`T`>\>(`versions`, `range`, `optionsOrLoose?`): `T` \| `null`
+> **maxSatisfying**\<`T`\>(`versions`, `range`, `optionsOrLoose?`): `T` \| `null`
 
 Defined in: node\_modules/@types/semver/ranges/max-satisfying.d.ts:8
 

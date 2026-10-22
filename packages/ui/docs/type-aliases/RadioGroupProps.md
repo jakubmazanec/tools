@@ -4,16 +4,16 @@
 
 # Type Alias: RadioGroupProps\<T, V\>
 
-> **RadioGroupProps**\<`T`, `V`> \> = `ComponentProps`\<_typeof_
-> [`useRadioGroupTheme`](../variables/useRadioGroupTheme.md)> \> & `ComponentPropsWithoutRef`\<`T`>
-> \> & `ComponentRef`\<`T`> \> & `PropsWithChildren` & \{ `as?`: `T`; `className?`: `string`;
-> `defaultValue?`: `V`; `field?`: `FieldMetadata`\<`any`, `any`>\>; `name?`: `undefined`;
-> `onChange?`: (`value`) => `void`; `value?`: `V`; \} \| \{ `as?`: `T`; `className?`: `string`;
-> `defaultValue?`: `V`; `field?`: `undefined`; `name?`: `FieldName`\<`any`, `any`> \> \| `string`;
-> `onChange?`: (`value`) => `void`; `value?`: `V`; \}
+> **RadioGroupProps**\<`T`, `V`\> = `ComponentProps`\<_typeof_
+> [`useRadioGroupTheme`](../variables/useRadioGroupTheme.md)\> & `ComponentPropsWithoutRef`\<`T`\> &
+> `ComponentRef`\<`T`\> & `PropsWithChildren` & \{ `as?`: `T`; `className?`: `string`;
+> `defaultValue?`: `V`; `field?`: `FieldMetadata`\<`any`\>; `name?`: `undefined`; `onChange?`:
+> (`value`) => `void`; `value?`: `V`; \} \| \{ `as?`: `T`; `className?`: `string`; `defaultValue?`:
+> `V`; `field?`: `undefined`; `name?`: `FieldName`\<`any`, `any`\> \| `string`; `onChange?`:
+> (`value`) => `void`; `value?`: `V`; \}
 
 Defined in:
-[packages/ui/source/components/RadioGroup.tsx:26](https://github.com/jakubmazanec/tools/blob/58225e9d3ad6348b685d0f2999c8be0390339cd4/packages/ui/source/components/RadioGroup.tsx#L26)
+[packages/ui/source/components/RadioGroup.tsx:26](https://github.com/jakubmazanec/tools/blob/cb8264c831f1e3ca31cf4c8013393ebc056dc355/packages/ui/source/components/RadioGroup.tsx#L26)
 
 ## Type Parameters
 

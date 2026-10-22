@@ -67,5 +67,6 @@
 - [sort](functions/sort.md)
 - [subset](functions/subset.md)
 - [toComparators](functions/toComparators.md)
+- [truncate](functions/truncate.md)
 - [valid](functions/valid.md)
 - [validRange](functions/validRange.md)

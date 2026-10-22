@@ -7,7 +7,7 @@
 > **Header**(`__namedParameters`): `Element`
 
 Defined in:
-[cli/source/ui/Header.tsx:20](https://github.com/jakubmazanec/tools/blob/58225e9d3ad6348b685d0f2999c8be0390339cd4/packages/cli/source/ui/Header.tsx#L20)
+[cli/source/ui/Header.tsx:20](https://github.com/jakubmazanec/tools/blob/cb8264c831f1e3ca31cf4c8013393ebc056dc355/packages/cli/source/ui/Header.tsx#L20)
 
 Header component.
 

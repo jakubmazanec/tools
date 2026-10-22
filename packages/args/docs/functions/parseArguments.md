@@ -4,11 +4,11 @@
 
 # Function: parseArguments()
 
-> **parseArguments**\<`O`>\>(`argv`, `parserConfig`):
-> [`Arguments`](../type-aliases/Arguments.md)\<`O`>\>
+> **parseArguments**\<`O`\>(`argv`, `parserConfig`):
+> [`Arguments`](../type-aliases/Arguments.md)\<`O`\>
 
 Defined in:
-[args/source/parseArguments.ts:44](https://github.com/jakubmazanec/tools/blob/58225e9d3ad6348b685d0f2999c8be0390339cd4/packages/args/source/parseArguments.ts#L44)
+[args/source/parseArguments.ts:44](https://github.com/jakubmazanec/tools/blob/cb8264c831f1e3ca31cf4c8013393ebc056dc355/packages/args/source/parseArguments.ts#L44)
 
 Parses a list of command line arguments into an arguments object. Based on provided parser config,
 raw arguments can be parsed as commands, options and parameters.

@@ -4,7 +4,7 @@
 
 # Function: createColumnHelper()
 
-> **createColumnHelper**\<`TData`>\>(): `ColumnHelper`\<`TData`>\>
+> **createColumnHelper**\<`TData`\>(): `ColumnHelper`\<`TData`\>
 
 Defined in: node\_modules/@tanstack/table-core/build/lib/columnHelper.d.ts:8
 

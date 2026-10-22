@@ -5,7 +5,7 @@
 # Class: WorkspaceDependencies\<M\>
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceDependencies.ts:13](https://github.com/jakubmazanec/tools/blob/58225e9d3ad6348b685d0f2999c8be0390339cd4/packages/carson/source/workspace/WorkspaceDependencies.ts#L13)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:13](https://github.com/jakubmazanec/tools/blob/cb8264c831f1e3ca31cf4c8013393ebc056dc355/packages/carson/source/workspace/WorkspaceDependencies.ts#L13)
 
 A collection of WorkspaceDependency \| workspace dependencies that are installed in
 [a workspace](Workspace.md).
@@ -28,10 +28,10 @@ A collection of WorkspaceDependency \| workspace dependencies that are installed
 
 ### Constructor
 
-> **new WorkspaceDependencies**\<`M`>\>(...`args`): `WorkspaceDependencies`\<`M`>\>
+> **new WorkspaceDependencies**\<`M`\>(...`args`): `WorkspaceDependencies`\<`M`\>
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceDependencies.ts:17](https://github.com/jakubmazanec/tools/blob/58225e9d3ad6348b685d0f2999c8be0390339cd4/packages/carson/source/workspace/WorkspaceDependencies.ts#L17)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:17](https://github.com/jakubmazanec/tools/blob/cb8264c831f1e3ca31cf4c8013393ebc056dc355/packages/carson/source/workspace/WorkspaceDependencies.ts#L17)
 
 #### Parameters
 
@@ -255,10 +255,10 @@ array.
 
 ### workspace
 
-> **workspace**: [`Workspace`](Workspace.md)\<`M`>\>
+> **workspace**: [`Workspace`](Workspace.md)\<`M`\>
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceDependencies.ts:15](https://github.com/jakubmazanec/tools/blob/58225e9d3ad6348b685d0f2999c8be0390339cd4/packages/carson/source/workspace/WorkspaceDependencies.ts#L15)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:15](https://github.com/jakubmazanec/tools/blob/cb8264c831f1e3ca31cf4c8013393ebc056dc355/packages/carson/source/workspace/WorkspaceDependencies.ts#L15)
 
 The workspace the dependencies are installed in.
 
@@ -278,7 +278,7 @@ Defined in: node\_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts:314
 
 ### \[iterator\]()
 
-> **\[iterator\]**(): `ArrayIterator`\<`WorkspaceDependency`>\>
+> **\[iterator\]**(): `ArrayIterator`\<`WorkspaceDependency`\>
 
 Defined in: node\_modules/typescript/lib/lib.es2015.iterable.d.ts:76
 
@@ -434,7 +434,7 @@ Returns an iterable of key, value pairs for every entry in the array
 
 #### Call Signature
 
-> **every**\<`S`>\>(`predicate`, `thisArg?`): `this is S[]`
+> **every**\<`S`\>(`predicate`, `thisArg?`): `this is S[]`
 
 Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1438
 
@@ -550,7 +550,7 @@ index to stop filling the array at. If end is negative, it is treated as length+
 
 #### Call Signature
 
-> **filter**\<`S`>\>(`predicate`, `thisArg?`): `S`[]
+> **filter**\<`S`\>(`predicate`, `thisArg?`): `S`[]
 
 Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1474
 
@@ -624,7 +624,7 @@ undefined is used as the this value.
 
 #### Call Signature
 
-> **find**\<`S`>\>(`predicate`, `thisArg?`): `S` \| `undefined`
+> **find**\<`S`\>(`predicate`, `thisArg?`): `S` \| `undefined`
 
 Defined in: node\_modules/typescript/lib/lib.es2015.core.d.ts:27
 
@@ -727,7 +727,7 @@ provided, undefined is used instead.
 
 #### Call Signature
 
-> **findLast**\<`S`>\>(`predicate`, `thisArg?`): `S` \| `undefined`
+> **findLast**\<`S`\>(`predicate`, `thisArg?`): `S` \| `undefined`
 
 Defined in: node\_modules/typescript/lib/lib.es2023.array.d.ts:27
 
@@ -827,7 +827,7 @@ provided, undefined is used instead.
 
 ### flat()
 
-> **flat**\<`A`, `D`>\>(`this`, `depth?`): `FlatArray`\<`A`, `D`>\>[]
+> **flat**\<`A`, `D`\>(`this`, `depth?`): `FlatArray`\<`A`, `D`\>[]
 
 Defined in: node\_modules/typescript/lib/lib.es2019.array.d.ts:73
 
@@ -868,7 +868,7 @@ The maximum recursion depth
 
 ### flatMap()
 
-> **flatMap**\<`U`, `This`>\>(`callback`, `thisArg?`): `U`[]
+> **flatMap**\<`U`, `This`\>(`callback`, `thisArg?`): `U`[]
 
 Defined in: node\_modules/typescript/lib/lib.es2019.array.d.ts:62
 
@@ -950,7 +950,7 @@ undefined is used as the this value.
 > **getVersions**(`options?`): `Record`\<`string`, `string`[]\>
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceDependencies.ts:187](https://github.com/jakubmazanec/tools/blob/58225e9d3ad6348b685d0f2999c8be0390339cd4/packages/carson/source/workspace/WorkspaceDependencies.ts#L187)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:187](https://github.com/jakubmazanec/tools/blob/cb8264c831f1e3ca31cf4c8013393ebc056dc355/packages/carson/source/workspace/WorkspaceDependencies.ts#L187)
 
 Creates map of all dependnecies and their installed version.
 
@@ -1063,7 +1063,7 @@ omitted, the array elements are separated with a comma.
 
 ### keys()
 
-> **keys**(): `ArrayIterator`\<`number`>\>
+> **keys**(): `ArrayIterator`\<`number`\>
 
 Defined in: node\_modules/typescript/lib/lib.es2015.iterable.d.ts:86
 
@@ -1115,7 +1115,7 @@ the last index in the array.
 
 ### map()
 
-> **map**\<`U`>\>(`callbackfn`, `thisArg?`): `U`[]
+> **map**\<`U`\>(`callbackfn`, `thisArg?`): `U`[]
 
 Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1468
 
@@ -1178,7 +1178,7 @@ and the array is not modified.
 > **push**(...`newWorkspaceDependencies`): `number`
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceDependencies.ts:38](https://github.com/jakubmazanec/tools/blob/58225e9d3ad6348b685d0f2999c8be0390339cd4/packages/carson/source/workspace/WorkspaceDependencies.ts#L38)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:38](https://github.com/jakubmazanec/tools/blob/cb8264c831f1e3ca31cf4c8013393ebc056dc355/packages/carson/source/workspace/WorkspaceDependencies.ts#L38)
 
 Adds one or more new dependencies.
 
@@ -1257,7 +1257,7 @@ Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1487
 
 #### Call Signature
 
-> **reduce**\<`U`>\>(`callbackfn`, `initialValue`): `U`
+> **reduce**\<`U`\>(`callbackfn`, `initialValue`): `U`
 
 Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1493
 
@@ -1352,7 +1352,7 @@ Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1500
 
 #### Call Signature
 
-> **reduceRight**\<`U`>\>(`callbackfn`, `initialValue`): `U`
+> **reduceRight**\<`U`\>(`callbackfn`, `initialValue`): `U`
 
 Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1506
 
@@ -1830,7 +1830,7 @@ Elements to insert at the start of the array.
 
 ### values()
 
-> **values**(): `ArrayIterator`\<`WorkspaceDependency`>\>
+> **values**(): `ArrayIterator`\<`WorkspaceDependency`\>
 
 Defined in: node\_modules/typescript/lib/lib.es2015.iterable.d.ts:91
 
@@ -1886,7 +1886,7 @@ The copied array with the updated value.
 
 #### Call Signature
 
-> `static` **from**\<`T`>\>(`arrayLike`): `T`[]
+> `static` **from**\<`T`\>(`arrayLike`): `T`[]
 
 Defined in: node\_modules/typescript/lib/lib.es2015.core.d.ts:70
 
@@ -1916,7 +1916,7 @@ An array-like object to convert to an array.
 
 #### Call Signature
 
-> `static` **from**\<`T`, `U`>\>(`arrayLike`, `mapfn`, `thisArg?`): `U`[]
+> `static` **from**\<`T`, `U`\>(`arrayLike`, `mapfn`, `thisArg?`): `U`[]
 
 Defined in: node\_modules/typescript/lib/lib.es2015.core.d.ts:78
 
@@ -1962,7 +1962,7 @@ Value of 'this' used to invoke the mapfn.
 
 #### Call Signature
 
-> `static` **from**\<`T`>\>(`iterable`): `T`[]
+> `static` **from**\<`T`\>(`iterable`): `T`[]
 
 Defined in: node\_modules/typescript/lib/lib.es2015.iterable.d.ts:99
 
@@ -1992,7 +1992,7 @@ An iterable object to convert to an array.
 
 #### Call Signature
 
-> `static` **from**\<`T`, `U`>\>(`iterable`, `mapfn`, `thisArg?`): `U`[]
+> `static` **from**\<`T`, `U`\>(`iterable`, `mapfn`, `thisArg?`): `U`[]
 
 Defined in: node\_modules/typescript/lib/lib.es2015.iterable.d.ts:107
 
@@ -2040,10 +2040,10 @@ Value of 'this' used to invoke the mapfn.
 
 ### fromWorkspace()
 
-> `static` **fromWorkspace**\<`M`>\>(`workspace`, `options?`): `WorkspaceDependencies`\<`M`>\>
+> `static` **fromWorkspace**\<`M`\>(`workspace`, `options?`): `WorkspaceDependencies`\<`M`\>
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceDependencies.ts:81](https://github.com/jakubmazanec/tools/blob/58225e9d3ad6348b685d0f2999c8be0390339cd4/packages/carson/source/workspace/WorkspaceDependencies.ts#L81)
+[packages/carson/source/workspace/WorkspaceDependencies.ts:81](https://github.com/jakubmazanec/tools/blob/cb8264c831f1e3ca31cf4c8013393ebc056dc355/packages/carson/source/workspace/WorkspaceDependencies.ts#L81)
 
 Creates new WorkspaceDependencies instance from a [Workspace](Workspace.md) instance and its
 dependencies.
@@ -2100,7 +2100,7 @@ Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1518
 
 ### of()
 
-> `static` **of**\<`T`>\>(...`items`): `T`[]
+> `static` **of**\<`T`\>(...`items`): `T`[]
 
 Defined in: node\_modules/typescript/lib/lib.es2015.core.d.ts:84
 

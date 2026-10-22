@@ -4,7 +4,7 @@
 
 # Interface: RangeOptions
 
-Defined in: node\_modules/@types/semver/index.d.ts:110
+Defined in: node\_modules/@types/semver/index.d.ts:112
 
 ## Extends
 
@@ -16,7 +16,7 @@ Defined in: node\_modules/@types/semver/index.d.ts:110
 
 > `optional` **includePrerelease?**: `boolean`
 
-Defined in: node\_modules/@types/semver/index.d.ts:111
+Defined in: node\_modules/@types/semver/index.d.ts:113
 
 ---
 
@@ -24,7 +24,7 @@ Defined in: node\_modules/@types/semver/index.d.ts:111
 
 > `optional` **loose?**: `boolean`
 
-Defined in: node\_modules/@types/semver/index.d.ts:107
+Defined in: node\_modules/@types/semver/index.d.ts:109
 
 #### Inherited from
 

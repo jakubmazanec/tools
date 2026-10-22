@@ -5,10 +5,10 @@
 # Variable: ProgramError
 
 > `const` **ProgramError**: (`code`, `options?`) => `CustomError`\<`"UNKNOWN_ERROR"` \|
-> `"NO_NESTED_RENDER"`>\>
+> `"NO_NESTED_RENDER"`\>
 
 Defined in:
-[cli/source/program/ProgramError.ts:6](https://github.com/jakubmazanec/tools/blob/58225e9d3ad6348b685d0f2999c8be0390339cd4/packages/cli/source/program/ProgramError.ts#L6)
+[cli/source/program/ProgramError.ts:6](https://github.com/jakubmazanec/tools/blob/cb8264c831f1e3ca31cf4c8013393ebc056dc355/packages/cli/source/program/ProgramError.ts#L6)
 
 A subclass of `Error` that indicates a program failure.
 

@@ -4,7 +4,7 @@
 
 # Function: rsort()
 
-> **rsort**\<`T`>\>(`list`, `optionsOrLoose?`): `T`[]
+> **rsort**\<`T`\>(`list`, `optionsOrLoose?`): `T`[]
 
 Defined in: node\_modules/@types/semver/functions/rsort.d.ts:7
 

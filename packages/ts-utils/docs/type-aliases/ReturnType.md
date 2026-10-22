@@ -4,11 +4,11 @@
 
 # Type Alias: ReturnType\<T\>
 
-> **ReturnType**\<`T`> \> = `T` _extends_ (...`args`) => infer R ? `R` _extends_
-> `PromiseLike`\<infer J\> ? `J` : `R` : `never`
+> **ReturnType**\<`T`\> = `T` _extends_ (...`args`) => infer R ? `R` _extends_ `PromiseLike`\<infer
+> J\> ? `J` : `R` : `never`
 
 Defined in:
-[packages/ts-utils/source/types/ReturnType.ts:20](https://github.com/jakubmazanec/tools/blob/58225e9d3ad6348b685d0f2999c8be0390339cd4/packages/ts-utils/source/types/ReturnType.ts#L20)
+[packages/ts-utils/source/types/ReturnType.ts:20](https://github.com/jakubmazanec/tools/blob/cb8264c831f1e3ca31cf4c8013393ebc056dc355/packages/ts-utils/source/types/ReturnType.ts#L20)
 
 Constructs a type consisting of the return type of function `T`. Similarly like built-in
 `ReturnType` utility type, but works also on nullable and other types, and if you use it with async

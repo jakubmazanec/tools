@@ -4,10 +4,10 @@
 
 # Type Alias: NonArrayLike\<T\>
 
-> **NonArrayLike**\<`T`> \> = `T` _extends_ `ArrayLike`\<`any`> \> ? `never` : `T`
+> **NonArrayLike**\<`T`\> = `T` _extends_ `ArrayLike`\<`any`\> ? `never` : `T`
 
 Defined in:
-[packages/ts-utils/source/types/NonArrayLike.ts:3](https://github.com/jakubmazanec/tools/blob/58225e9d3ad6348b685d0f2999c8be0390339cd4/packages/ts-utils/source/types/NonArrayLike.ts#L3)
+[packages/ts-utils/source/types/NonArrayLike.ts:3](https://github.com/jakubmazanec/tools/blob/cb8264c831f1e3ca31cf4c8013393ebc056dc355/packages/ts-utils/source/types/NonArrayLike.ts#L3)
 
 ## Type Parameters
 

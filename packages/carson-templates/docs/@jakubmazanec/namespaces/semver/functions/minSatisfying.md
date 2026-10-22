@@ -4,7 +4,7 @@
 
 # Function: minSatisfying()
 
-> **minSatisfying**\<`T`>\>(`versions`, `range`, `optionsOrLoose?`): `T` \| `null`
+> **minSatisfying**\<`T`\>(`versions`, `range`, `optionsOrLoose?`): `T` \| `null`
 
 Defined in: node\_modules/@types/semver/ranges/min-satisfying.d.ts:8
 

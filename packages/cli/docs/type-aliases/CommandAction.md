@@ -4,10 +4,10 @@
 
 # Type Alias: CommandAction\<A, B, C, D, E\>
 
-> **CommandAction**\<`A`, `B`, `C`, `D`, `E`> \> = (`parsedArgs`, `program`) => `Promise`\<`void`>\>
+> **CommandAction**\<`A`, `B`, `C`, `D`, `E`\> = (`parsedArgs`, `program`) => `Promise`\<`void`\>
 
 Defined in:
-[cli/source/program/CommandAction.ts:8](https://github.com/jakubmazanec/tools/blob/58225e9d3ad6348b685d0f2999c8be0390339cd4/packages/cli/source/program/CommandAction.ts#L8)
+[cli/source/program/CommandAction.ts:8](https://github.com/jakubmazanec/tools/blob/cb8264c831f1e3ca31cf4c8013393ebc056dc355/packages/cli/source/program/CommandAction.ts#L8)
 
 Command action.
 

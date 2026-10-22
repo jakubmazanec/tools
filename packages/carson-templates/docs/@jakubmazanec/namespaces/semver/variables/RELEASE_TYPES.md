@@ -6,4 +6,4 @@
 
 > `const` **RELEASE\_TYPES**: [`ReleaseType`](../type-aliases/ReleaseType.md)[]
 
-Defined in: node\_modules/@types/semver/index.d.ts:102
+Defined in: node\_modules/@types/semver/index.d.ts:104
