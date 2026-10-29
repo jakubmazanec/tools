@@ -38,10 +38,10 @@
     "turbo": "^2.11.7",
     "typescript": "^6.0.3"
   },
-  "packageManager": "npm@11.21.0",
+  "packageManager": "npm@12.2.1",
   "engines": {
     "node": "^24.21.0",
-    "npm": "^11.21.0"
+    "npm": "^12.2.1"
   },
   "allowScripts": {
     "unrs-resolver@1.11.1": true,
