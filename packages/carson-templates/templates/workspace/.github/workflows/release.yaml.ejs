@@ -49,7 +49,7 @@ jobs:
     name: Release
     if: ${{ github.ref_name == '<%- getMainBranch(workspace) %>' }}
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 30
     permissions:
       contents: read
       id-token: write
@@ -280,7 +280,7 @@ for (let project of workspace.projects) {
     name: Release preview
     if: ${{ github.ref_name == '<%- getDevelopmentBranch(workspace) %>' }}
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 30
     permissions:
       contents: read
       id-token: write

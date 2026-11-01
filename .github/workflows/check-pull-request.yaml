@@ -22,7 +22,7 @@ jobs:
     name: Check pull request
     if: ${{ github.actor != 'renovate[bot]' }}
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 30
     permissions:
       contents: read
       id-token: write
