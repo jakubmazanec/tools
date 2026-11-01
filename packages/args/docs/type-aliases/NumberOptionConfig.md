@@ -15,4 +15,4 @@
 > [`ShortOptionName`](ShortOptionName.md); `type`: `"number"`; `validate?`: (`value`) => `void`; \}
 
 Defined in:
-[args/source/OptionConfig.ts:78](https://github.com/jakubmazanec/tools/blob/f6931eb053c871c3b37aae14791e7247401fe9a0/packages/args/source/OptionConfig.ts#L78)
+[args/source/OptionConfig.ts:78](https://github.com/jakubmazanec/tools/blob/3b02e1b63dedb17307164486fda2e986582d85d7/packages/args/source/OptionConfig.ts#L78)

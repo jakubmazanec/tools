@@ -9,7 +9,7 @@
 > `"MISSING_CARSON_TEMPLATE_ID"` \| `"UNKNOWN_ERROR"`, `ProjectErrorData`\>
 
 Defined in:
-[packages/carson/source/workspace/ProjectError.ts:7](https://github.com/jakubmazanec/tools/blob/f6931eb053c871c3b37aae14791e7247401fe9a0/packages/carson/source/workspace/ProjectError.ts#L7)
+[packages/carson/source/workspace/ProjectError.ts:7](https://github.com/jakubmazanec/tools/blob/3b02e1b63dedb17307164486fda2e986582d85d7/packages/carson/source/workspace/ProjectError.ts#L7)
 
 A subclass of `Error` that indicates a project failure.
 

@@ -72,7 +72,7 @@ Defined in: node\_modules/@types/semver/classes/range.d.ts:9
 
 ### set
 
-> **set**: readonly readonly [`Comparator`](Comparator.md)[][]
+> **set**: readonly (readonly [`Comparator`](Comparator.md)[])[]
 
 Defined in: node\_modules/@types/semver/classes/range.d.ts:16
 

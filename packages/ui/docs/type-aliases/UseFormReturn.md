@@ -7,7 +7,7 @@
 > **UseFormReturn**\<`S`\> = `object`
 
 Defined in:
-[packages/ui/source/components/useForm.ts:10](https://github.com/jakubmazanec/tools/blob/f6931eb053c871c3b37aae14791e7247401fe9a0/packages/ui/source/components/useForm.ts#L10)
+[packages/ui/source/components/useForm.ts:10](https://github.com/jakubmazanec/tools/blob/3b02e1b63dedb17307164486fda2e986582d85d7/packages/ui/source/components/useForm.ts#L10)
 
 ## Type Parameters
 
@@ -22,7 +22,7 @@ Defined in:
 > **fields**: `ReturnType`\<_typeof_ `useBaseForm`\>\[`1`\]
 
 Defined in:
-[packages/ui/source/components/useForm.ts:12](https://github.com/jakubmazanec/tools/blob/f6931eb053c871c3b37aae14791e7247401fe9a0/packages/ui/source/components/useForm.ts#L12)
+[packages/ui/source/components/useForm.ts:12](https://github.com/jakubmazanec/tools/blob/3b02e1b63dedb17307164486fda2e986582d85d7/packages/ui/source/components/useForm.ts#L12)
 
 ---
 
@@ -31,4 +31,4 @@ Defined in:
 > **form**: `ReturnType`\<_typeof_ `useBaseForm`\>\[`0`\]
 
 Defined in:
-[packages/ui/source/components/useForm.ts:11](https://github.com/jakubmazanec/tools/blob/f6931eb053c871c3b37aae14791e7247401fe9a0/packages/ui/source/components/useForm.ts#L11)
+[packages/ui/source/components/useForm.ts:11](https://github.com/jakubmazanec/tools/blob/3b02e1b63dedb17307164486fda2e986582d85d7/packages/ui/source/components/useForm.ts#L11)

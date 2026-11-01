@@ -8,4 +8,4 @@
 > [`CreateWorkspaceInput`](../variables/CreateWorkspaceInput.md)\>
 
 Defined in:
-[packages/carson/source/commands/create-workspace/CreateWorkspaceInput.ts:21](https://github.com/jakubmazanec/tools/blob/f6931eb053c871c3b37aae14791e7247401fe9a0/packages/carson/source/commands/create-workspace/CreateWorkspaceInput.ts#L21)
+[packages/carson/source/commands/create-workspace/CreateWorkspaceInput.ts:21](https://github.com/jakubmazanec/tools/blob/3b02e1b63dedb17307164486fda2e986582d85d7/packages/carson/source/commands/create-workspace/CreateWorkspaceInput.ts#L21)

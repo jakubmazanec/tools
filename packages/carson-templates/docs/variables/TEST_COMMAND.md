@@ -8,4 +8,4 @@
 > `'vitest run --coverage --passWithNoTests'`
 
 Defined in:
-[packages/carson-templates/source/constants.ts:199](https://github.com/jakubmazanec/tools/blob/f6931eb053c871c3b37aae14791e7247401fe9a0/packages/carson-templates/source/constants.ts#L199)
+[packages/carson-templates/source/constants.ts:199](https://github.com/jakubmazanec/tools/blob/3b02e1b63dedb17307164486fda2e986582d85d7/packages/carson-templates/source/constants.ts#L199)

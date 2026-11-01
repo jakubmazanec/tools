@@ -6,7 +6,7 @@
 
 ## Modules
 
-- [../index](../index/README.md)
+- [../index](index/README.md)
 
 ## Namespaces
 

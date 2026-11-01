@@ -7,7 +7,7 @@
 > **UseFormOptions**\<`S`\> = `object`
 
 Defined in:
-[packages/ui/source/components/useForm.ts:5](https://github.com/jakubmazanec/tools/blob/f6931eb053c871c3b37aae14791e7247401fe9a0/packages/ui/source/components/useForm.ts#L5)
+[packages/ui/source/components/useForm.ts:5](https://github.com/jakubmazanec/tools/blob/3b02e1b63dedb17307164486fda2e986582d85d7/packages/ui/source/components/useForm.ts#L5)
 
 ## Type Parameters
 
@@ -22,7 +22,7 @@ Defined in:
 > `optional` **onSubmit?**: `Parameters`\<_typeof_ `useBaseForm`\>\[`0`\]\[`"onSubmit"`\]
 
 Defined in:
-[packages/ui/source/components/useForm.ts:7](https://github.com/jakubmazanec/tools/blob/f6931eb053c871c3b37aae14791e7247401fe9a0/packages/ui/source/components/useForm.ts#L7)
+[packages/ui/source/components/useForm.ts:7](https://github.com/jakubmazanec/tools/blob/3b02e1b63dedb17307164486fda2e986582d85d7/packages/ui/source/components/useForm.ts#L7)
 
 ---
 
@@ -31,4 +31,4 @@ Defined in:
 > **schema**: `S`
 
 Defined in:
-[packages/ui/source/components/useForm.ts:6](https://github.com/jakubmazanec/tools/blob/f6931eb053c871c3b37aae14791e7247401fe9a0/packages/ui/source/components/useForm.ts#L6)
+[packages/ui/source/components/useForm.ts:6](https://github.com/jakubmazanec/tools/blob/3b02e1b63dedb17307164486fda2e986582d85d7/packages/ui/source/components/useForm.ts#L6)

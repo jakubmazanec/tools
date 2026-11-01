@@ -9,7 +9,13 @@
 > `ComponentRef`\<`T`\> & `object`
 
 Defined in:
-[packages/ui/source/components/Textarea.tsx:23](https://github.com/jakubmazanec/tools/blob/f6931eb053c871c3b37aae14791e7247401fe9a0/packages/ui/source/components/Textarea.tsx#L23)
+[packages/ui/source/components/Textarea.tsx:23](https://github.com/jakubmazanec/tools/blob/3b02e1b63dedb17307164486fda2e986582d85d7/packages/ui/source/components/Textarea.tsx#L23)
+
+## Type Parameters
+
+### T
+
+`T` _extends_ `ElementType`
 
 ## Type Declaration
 
@@ -28,9 +34,3 @@ Defined in:
 ### name?
 
 > `optional` **name?**: `string`
-
-## Type Parameters
-
-### T
-
-`T` _extends_ `ElementType`
