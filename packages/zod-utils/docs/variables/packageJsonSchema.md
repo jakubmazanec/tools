@@ -89,4 +89,4 @@
 > `ZodOptional`\<`ZodArray`\<`ZodString`\>\>; \}, `$strict`\>\]\>\>; \}, `$strip`\>
 
 Defined in:
-[types/PackageJson.ts:151](https://github.com/jakubmazanec/tools/blob/e018b791b9e50b3160dac8d3c9fee73baea839fc/packages/zod-utils/source/types/PackageJson.ts#L151)
+[types/PackageJson.ts:151](https://github.com/jakubmazanec/tools/blob/f6931eb053c871c3b37aae14791e7247401fe9a0/packages/zod-utils/source/types/PackageJson.ts#L151)

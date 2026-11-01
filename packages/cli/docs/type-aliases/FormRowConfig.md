@@ -9,6 +9,6 @@
 > `void`; \}
 
 Defined in:
-[cli/source/ui/form/FormRowConfig.ts:4](https://github.com/jakubmazanec/tools/blob/e018b791b9e50b3160dac8d3c9fee73baea839fc/packages/cli/source/ui/form/FormRowConfig.ts#L4)
+[cli/source/ui/form/FormRowConfig.ts:4](https://github.com/jakubmazanec/tools/blob/f6931eb053c871c3b37aae14791e7247401fe9a0/packages/cli/source/ui/form/FormRowConfig.ts#L4)
 
 Form row configuration.
