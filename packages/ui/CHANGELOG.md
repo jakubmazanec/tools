@@ -1,5 +1,26 @@
 # @jakubmazanec/ui
 
+## 0.6.2
+
+### Patch Changes
+
+- [#598](https://github.com/jakubmazanec/tools/pull/598)
+  [`3b02e1b`](https://github.com/jakubmazanec/tools/commit/3b02e1b63dedb17307164486fda2e986582d85d7)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@conform-to/react` updated to
+  version `^1.21.2`. Dependency `@conform-to/zod` updated to version `^1.21.2`. Dependency `zod`
+  updated to version `^4.6.7`. Dependency `@chromatic-com/storybook` updated to version `^5.5.1`.
+  Dependency `@storybook/addon-docs` updated to version `^10.6.2`. Dependency
+  `@storybook/addon-links` updated to version `^10.6.2`. Dependency `@storybook/react-vite` updated
+  to version `^10.6.2`. Dependency `@types/lodash` updated to version `^4.17.26`. Dependency
+  `@types/node` updated to version `^24.19.2`. Dependency `@vitest/browser-playwright` updated to
+  version `^4.1.12`. Dependency `@vitest/coverage-v8` updated to version `^4.1.12`. Dependency
+  `chromatic` updated to version `^18.13.0`. Dependency `playwright` updated to version `^1.64.1`.
+  Dependency `prettier` updated to version `^3.9.10`. Dependency `react` updated to version
+  `^19.3.1`. Dependency `react-dom` updated to version `^19.3.1`. Dependency `storybook` updated to
+  version `^10.6.2`. Dependency `typedoc-plugin-markdown` updated to version `^4.14.0`. Dependency
+  `vitest` updated to version `^4.1.12`. Dependency `node` updated to version `^24.22.0`. Dependency
+  `npm` updated to version `^11.21.1`.
+
 ## 0.6.1
 
 ### Patch Changes

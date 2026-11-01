@@ -1,5 +1,31 @@
 # @jakubmazanec/carson-templates
 
+## 9.2.0
+
+### Minor Changes
+
+- [#597](https://github.com/jakubmazanec/tools/pull/597)
+  [`f6931eb`](https://github.com/jakubmazanec/tools/commit/f6931eb053c871c3b37aae14791e7247401fe9a0)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – All workflows in the `workspace` template
+  have jobs with a 30 minute timeout.
+
+### Patch Changes
+
+- [#598](https://github.com/jakubmazanec/tools/pull/598)
+  [`3b02e1b`](https://github.com/jakubmazanec/tools/commit/3b02e1b63dedb17307164486fda2e986582d85d7)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@types/lodash` updated to version
+  `^4.17.26`. Dependency `@types/node` updated to version `^24.19.2`. Dependency
+  `@vitest/coverage-v8` updated to version `^4.1.12`. Dependency `execa` updated to version
+  `^10.2.0`. Dependency `prettier` updated to version `^3.9.10`. Dependency
+  `typedoc-plugin-markdown` updated to version `^4.14.0`. Dependency `vitest` updated to version
+  `^4.1.12`. Dependency `node` updated to version `^24.22.0`. Dependency `npm` updated to version
+  `^11.21.1`.
+
+- [#597](https://github.com/jakubmazanec/tools/pull/597)
+  [`f6931eb`](https://github.com/jakubmazanec/tools/commit/f6931eb053c871c3b37aae14791e7247401fe9a0)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixed security issues in the workflows in the
+  `workspace` template.
+
 ## 9.1.0
 
 ### Minor Changes
