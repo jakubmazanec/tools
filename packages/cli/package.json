@@ -36,15 +36,15 @@
     "latest-version": "^9.0.0",
     "lodash": "^4.18.1",
     "react-error-boundary": "^6.1.6",
-    "zod": "^4.6.5"
+    "zod": "^4.6.7"
   },
   "devDependencies": {
     "@jakubmazanec/eslint-config": "^5.0.0",
     "@types/fs-extra": "^11.0.4",
-    "@types/lodash": "^4.17.25",
-    "@types/node": "^24.19.1",
+    "@types/lodash": "^4.17.26",
+    "@types/node": "^24.19.2",
     "@types/react": "^19.3.0",
-    "@vitest/coverage-v8": "^4.1.11",
+    "@vitest/coverage-v8": "^4.1.12",
     "concurrently": "^10.0.6",
     "cross-env": "^10.1.0",
     "del-cli": "^7.0.0",
@@ -52,21 +52,21 @@
     "eslint": "^9.39.5",
     "ink": "^6.8.0",
     "ink-testing-library": "^4.0.0",
-    "prettier": "^3.9.9",
+    "prettier": "^3.9.10",
     "prettier-plugin-packagejson": "^2.5.22",
-    "react": "^19.3.0",
+    "react": "^19.3.1",
     "typedoc": "^0.28.20",
-    "typedoc-plugin-markdown": "^4.13.1",
+    "typedoc-plugin-markdown": "^4.14.0",
     "typescript": "^6.0.3",
-    "vitest": "^4.1.11"
+    "vitest": "^4.1.12"
   },
   "peerDependencies": {
     "ink": "6.x",
     "react": "19.x"
   },
-  "packageManager": "npm@11.21.0",
+  "packageManager": "npm@11.21.1",
   "engines": {
-    "node": "^24.21.0",
-    "npm": "^11.21.0"
+    "node": "^24.22.0",
+    "npm": "^11.21.1"
   }
 }
