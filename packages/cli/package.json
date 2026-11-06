@@ -64,9 +64,9 @@
     "ink": "6.x",
     "react": "19.x"
   },
-  "packageManager": "npm@11.21.1",
+  "packageManager": "npm@12.2.1",
   "engines": {
     "node": "^24.22.0",
-    "npm": "^11.21.1"
+    "npm": "^12.2.1"
   }
 }

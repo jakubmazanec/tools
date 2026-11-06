@@ -38,13 +38,9 @@
     "turbo": "^2.11.9",
     "typescript": "^6.0.3"
   },
-  "packageManager": "npm@11.21.1",
+  "packageManager": "npm@12.2.1",
   "engines": {
     "node": "^24.22.0",
-    "npm": "^11.21.1"
-  },
-  "allowScripts": {
-    "unrs-resolver@1.11.1": true,
-    "esbuild@0.28.1": true
+    "npm": "^12.2.1"
   }
 }
