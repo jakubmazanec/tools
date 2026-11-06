@@ -7,7 +7,7 @@
 > **FormConfig** = `object`
 
 Defined in:
-[cli/source/ui/form/FormConfig.ts:6](https://github.com/jakubmazanec/tools/blob/3b02e1b63dedb17307164486fda2e986582d85d7/packages/cli/source/ui/form/FormConfig.ts#L6)
+[cli/source/ui/form/FormConfig.ts:6](https://github.com/jakubmazanec/tools/blob/450f0242bda47e85fc9d57c7506e46bd780837d4/packages/cli/source/ui/form/FormConfig.ts#L6)
 
 Form configuration.
 
@@ -18,6 +18,6 @@ Form configuration.
 > **rows**: [`FormRowsConfig`](FormRowsConfig.md)
 
 Defined in:
-[cli/source/ui/form/FormConfig.ts:8](https://github.com/jakubmazanec/tools/blob/3b02e1b63dedb17307164486fda2e986582d85d7/packages/cli/source/ui/form/FormConfig.ts#L8)
+[cli/source/ui/form/FormConfig.ts:8](https://github.com/jakubmazanec/tools/blob/450f0242bda47e85fc9d57c7506e46bd780837d4/packages/cli/source/ui/form/FormConfig.ts#L8)
 
 Form rows configuration.

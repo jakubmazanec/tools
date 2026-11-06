@@ -130,7 +130,7 @@
 > `string`[]; \}; \}\>\>\>
 
 Defined in:
-[utils/readPackageJson.ts:13](https://github.com/jakubmazanec/tools/blob/3b02e1b63dedb17307164486fda2e986582d85d7/packages/zod-utils/source/utils/readPackageJson.ts#L13)
+[utils/readPackageJson.ts:13](https://github.com/jakubmazanec/tools/blob/450f0242bda47e85fc9d57c7506e46bd780837d4/packages/zod-utils/source/utils/readPackageJson.ts#L13)
 
 ## Type Parameters
 

@@ -7,7 +7,7 @@
 > **TextInputProps** = `BoxProps` & `object`
 
 Defined in:
-[cli/source/ui/form/TextInput.tsx:11](https://github.com/jakubmazanec/tools/blob/3b02e1b63dedb17307164486fda2e986582d85d7/packages/cli/source/ui/form/TextInput.tsx#L11)
+[cli/source/ui/form/TextInput.tsx:11](https://github.com/jakubmazanec/tools/blob/450f0242bda47e85fc9d57c7506e46bd780837d4/packages/cli/source/ui/form/TextInput.tsx#L11)
 
 Text input component props.
 

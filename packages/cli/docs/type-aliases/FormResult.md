@@ -7,7 +7,7 @@
 > **FormResult**\<`F`\> = [`FormValues`](FormValues.md)\<`F`\[`"config"`\]\>
 
 Defined in:
-[cli/source/ui/form/FormResult.ts:8](https://github.com/jakubmazanec/tools/blob/3b02e1b63dedb17307164486fda2e986582d85d7/packages/cli/source/ui/form/FormResult.ts#L8)
+[cli/source/ui/form/FormResult.ts:8](https://github.com/jakubmazanec/tools/blob/450f0242bda47e85fc9d57c7506e46bd780837d4/packages/cli/source/ui/form/FormResult.ts#L8)
 
 Form result. It is the value of all form rows after the last one is accepted.
 
