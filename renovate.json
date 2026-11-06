@@ -18,7 +18,7 @@
     },
     {
       "matchDepTypes": ["peerDependencies"],
-      "rangeStrategy": "replace"
+      "rangeStrategy": "widen"
     },
     {
       "matchDepTypes": ["overrides"],
