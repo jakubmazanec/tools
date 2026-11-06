@@ -10,7 +10,7 @@
 > `"FAILED_RENDER"` \| `"UNKNOWN_ERROR"`, `CarsonTemplateErrorData`\>
 
 Defined in:
-[packages/carson/source/template/CarsonTemplateError.ts:6](https://github.com/jakubmazanec/tools/blob/450f0242bda47e85fc9d57c7506e46bd780837d4/packages/carson/source/template/CarsonTemplateError.ts#L6)
+[packages/carson/source/template/CarsonTemplateError.ts:6](https://github.com/jakubmazanec/tools/blob/77af8fc6f94d0ddce4ffb0d7fbfc7006c5b3d620/packages/carson/source/template/CarsonTemplateError.ts#L6)
 
 A subclass of `Error` that indicates a Carson template failure.
 
