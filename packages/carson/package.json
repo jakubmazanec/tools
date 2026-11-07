@@ -66,7 +66,7 @@
     "del-cli": "^7.0.0",
     "esbuild": "^0.28.2",
     "eslint": "^9.39.5",
-    "ink": "^6.8.0",
+    "ink": "^8.0.0",
     "react": "^19.3.1",
     "tsx": "^4.23.15",
     "typedoc": "^0.28.20",
@@ -75,7 +75,7 @@
     "vitest": "^4.1.12"
   },
   "peerDependencies": {
-    "ink": "6.x",
+    "ink": "6.x || 8.x",
     "react": "19.x"
   },
   "packageManager": "npm@12.2.1",
