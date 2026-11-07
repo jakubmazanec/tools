@@ -7,7 +7,7 @@
 > **getReleaseLine**(`changeset`, `type`, `options?`): `Promise`\<`string`\>
 
 Defined in:
-[getReleaseLine.ts:8](https://github.com/jakubmazanec/tools/blob/8324896dad080c1b57affe1d8521d8205a016467/packages/changesets-changelog/source/getReleaseLine.ts#L8)
+[getReleaseLine.ts:8](https://github.com/jakubmazanec/tools/blob/ef3a0c83d217cca7411f534708a95e6cd278e00f/packages/changesets-changelog/source/getReleaseLine.ts#L8)
 
 ## Parameters
 

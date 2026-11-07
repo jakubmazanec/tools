@@ -7,7 +7,7 @@
 > **WorkspaceProjectGlobs**\<`M`\> = `M` _extends_ `true` ? `string`[] : `null`
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceProjectGlobs.ts:4](https://github.com/jakubmazanec/tools/blob/8324896dad080c1b57affe1d8521d8205a016467/packages/carson/source/workspace/WorkspaceProjectGlobs.ts#L4)
+[packages/carson/source/workspace/WorkspaceProjectGlobs.ts:4](https://github.com/jakubmazanec/tools/blob/ef3a0c83d217cca7411f534708a95e6cd278e00f/packages/carson/source/workspace/WorkspaceProjectGlobs.ts#L4)
 
 Type alias for [Workspace.projectGlobs](../classes/Workspace.md#projectglobs) property.
 

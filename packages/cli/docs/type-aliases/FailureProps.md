@@ -7,7 +7,7 @@
 > **FailureProps** = `BoxProps` & `object`
 
 Defined in:
-[cli/source/ui/Failure.tsx:12](https://github.com/jakubmazanec/tools/blob/8324896dad080c1b57affe1d8521d8205a016467/packages/cli/source/ui/Failure.tsx#L12)
+[cli/source/ui/Failure.tsx:12](https://github.com/jakubmazanec/tools/blob/ef3a0c83d217cca7411f534708a95e6cd278e00f/packages/cli/source/ui/Failure.tsx#L12)
 
 [Failure](../functions/Failure.md) component props.
 

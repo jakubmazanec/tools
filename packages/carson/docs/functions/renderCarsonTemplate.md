@@ -8,7 +8,7 @@
 > `Promise`\<[`TemplateRenders`](../type-aliases/TemplateRenders.md)\>
 
 Defined in:
-[packages/carson/source/template/renderCarsonTemplate.ts:20](https://github.com/jakubmazanec/tools/blob/8324896dad080c1b57affe1d8521d8205a016467/packages/carson/source/template/renderCarsonTemplate.ts#L20)
+[packages/carson/source/template/renderCarsonTemplate.ts:20](https://github.com/jakubmazanec/tools/blob/ef3a0c83d217cca7411f534708a95e6cd278e00f/packages/carson/source/template/renderCarsonTemplate.ts#L20)
 
 Renders a Carson template with provided template data.
 

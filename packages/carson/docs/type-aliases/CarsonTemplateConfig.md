@@ -8,6 +8,6 @@
 > [`carsonTemplateConfigSchema`](../variables/carsonTemplateConfigSchema.md)\>
 
 Defined in:
-[packages/carson/source/template/CarsonTemplateConfig.ts:15](https://github.com/jakubmazanec/tools/blob/8324896dad080c1b57affe1d8521d8205a016467/packages/carson/source/template/CarsonTemplateConfig.ts#L15)
+[packages/carson/source/template/CarsonTemplateConfig.ts:15](https://github.com/jakubmazanec/tools/blob/ef3a0c83d217cca7411f534708a95e6cd278e00f/packages/carson/source/template/CarsonTemplateConfig.ts#L15)
 
 Carson template config.

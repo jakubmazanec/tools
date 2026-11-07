@@ -7,7 +7,7 @@
 > **ProgramDetail** = `object`
 
 Defined in:
-[cli/source/program/ProgramDetail.ts:4](https://github.com/jakubmazanec/tools/blob/8324896dad080c1b57affe1d8521d8205a016467/packages/cli/source/program/ProgramDetail.ts#L4)
+[cli/source/program/ProgramDetail.ts:4](https://github.com/jakubmazanec/tools/blob/ef3a0c83d217cca7411f534708a95e6cd278e00f/packages/cli/source/program/ProgramDetail.ts#L4)
 
 Detailed program information.
 
@@ -18,7 +18,7 @@ Detailed program information.
 > `optional` **bin?**: `string`
 
 Defined in:
-[cli/source/program/ProgramDetail.ts:8](https://github.com/jakubmazanec/tools/blob/8324896dad080c1b57affe1d8521d8205a016467/packages/cli/source/program/ProgramDetail.ts#L8)
+[cli/source/program/ProgramDetail.ts:8](https://github.com/jakubmazanec/tools/blob/ef3a0c83d217cca7411f534708a95e6cd278e00f/packages/cli/source/program/ProgramDetail.ts#L8)
 
 ---
 
@@ -27,7 +27,7 @@ Defined in:
 > `optional` **description?**: `string`
 
 Defined in:
-[cli/source/program/ProgramDetail.ts:7](https://github.com/jakubmazanec/tools/blob/8324896dad080c1b57affe1d8521d8205a016467/packages/cli/source/program/ProgramDetail.ts#L7)
+[cli/source/program/ProgramDetail.ts:7](https://github.com/jakubmazanec/tools/blob/ef3a0c83d217cca7411f534708a95e6cd278e00f/packages/cli/source/program/ProgramDetail.ts#L7)
 
 ---
 
@@ -36,7 +36,7 @@ Defined in:
 > `optional` **name?**: `string`
 
 Defined in:
-[cli/source/program/ProgramDetail.ts:5](https://github.com/jakubmazanec/tools/blob/8324896dad080c1b57affe1d8521d8205a016467/packages/cli/source/program/ProgramDetail.ts#L5)
+[cli/source/program/ProgramDetail.ts:5](https://github.com/jakubmazanec/tools/blob/ef3a0c83d217cca7411f534708a95e6cd278e00f/packages/cli/source/program/ProgramDetail.ts#L5)
 
 ---
 
@@ -45,4 +45,4 @@ Defined in:
 > `optional` **version?**: `string`
 
 Defined in:
-[cli/source/program/ProgramDetail.ts:6](https://github.com/jakubmazanec/tools/blob/8324896dad080c1b57affe1d8521d8205a016467/packages/cli/source/program/ProgramDetail.ts#L6)
+[cli/source/program/ProgramDetail.ts:6](https://github.com/jakubmazanec/tools/blob/ef3a0c83d217cca7411f534708a95e6cd278e00f/packages/cli/source/program/ProgramDetail.ts#L6)

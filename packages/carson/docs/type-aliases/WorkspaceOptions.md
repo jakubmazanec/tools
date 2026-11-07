@@ -7,7 +7,7 @@
 > **WorkspaceOptions**\<`M`\> = `M` _extends_ `true` ? `object` : `object`
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceOptions.ts:11](https://github.com/jakubmazanec/tools/blob/8324896dad080c1b57affe1d8521d8205a016467/packages/carson/source/workspace/WorkspaceOptions.ts#L11)
+[packages/carson/source/workspace/WorkspaceOptions.ts:11](https://github.com/jakubmazanec/tools/blob/ef3a0c83d217cca7411f534708a95e6cd278e00f/packages/carson/source/workspace/WorkspaceOptions.ts#L11)
 
 [Workspace constructor](../classes/Workspace.md#constructor) options parameter.
 

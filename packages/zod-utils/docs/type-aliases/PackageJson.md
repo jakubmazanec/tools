@@ -7,4 +7,4 @@
 > **PackageJson** = `z.infer`\<_typeof_ [`packageJsonSchema`](../variables/packageJsonSchema.md)\>
 
 Defined in:
-[types/PackageJson.ts:304](https://github.com/jakubmazanec/tools/blob/8324896dad080c1b57affe1d8521d8205a016467/packages/zod-utils/source/types/PackageJson.ts#L304)
+[types/PackageJson.ts:304](https://github.com/jakubmazanec/tools/blob/ef3a0c83d217cca7411f534708a95e6cd278e00f/packages/zod-utils/source/types/PackageJson.ts#L304)
