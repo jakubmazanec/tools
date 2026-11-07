@@ -5,7 +5,7 @@
 # Interface: ReadFileOptions
 
 Defined in:
-[utils/readFile.ts:6](https://github.com/jakubmazanec/tools/blob/ef3a0c83d217cca7411f534708a95e6cd278e00f/packages/zod-utils/source/utils/readFile.ts#L6)
+[utils/readFile.ts:6](https://github.com/jakubmazanec/tools/blob/36b3404d1b71114f1d5127b86dcfe4cb029f111f/packages/zod-utils/source/utils/readFile.ts#L6)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in:
 > `optional` **parser?**: (`rawString`) => `unknown`
 
 Defined in:
-[utils/readFile.ts:7](https://github.com/jakubmazanec/tools/blob/ef3a0c83d217cca7411f534708a95e6cd278e00f/packages/zod-utils/source/utils/readFile.ts#L7)
+[utils/readFile.ts:7](https://github.com/jakubmazanec/tools/blob/36b3404d1b71114f1d5127b86dcfe4cb029f111f/packages/zod-utils/source/utils/readFile.ts#L7)
 
 #### Parameters
 
@@ -33,4 +33,4 @@ Defined in:
 > `optional` **throwOnZodError?**: `boolean`
 
 Defined in:
-[utils/readFile.ts:8](https://github.com/jakubmazanec/tools/blob/ef3a0c83d217cca7411f534708a95e6cd278e00f/packages/zod-utils/source/utils/readFile.ts#L8)
+[utils/readFile.ts:8](https://github.com/jakubmazanec/tools/blob/36b3404d1b71114f1d5127b86dcfe4cb029f111f/packages/zod-utils/source/utils/readFile.ts#L8)

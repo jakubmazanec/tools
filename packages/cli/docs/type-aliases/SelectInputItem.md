@@ -7,7 +7,7 @@
 > **SelectInputItem** = `object`
 
 Defined in:
-[cli/source/ui/form/SelectInputItem.ts:4](https://github.com/jakubmazanec/tools/blob/ef3a0c83d217cca7411f534708a95e6cd278e00f/packages/cli/source/ui/form/SelectInputItem.ts#L4)
+[cli/source/ui/form/SelectInputItem.ts:4](https://github.com/jakubmazanec/tools/blob/36b3404d1b71114f1d5127b86dcfe4cb029f111f/packages/cli/source/ui/form/SelectInputItem.ts#L4)
 
 Select input item.
 
@@ -18,7 +18,7 @@ Select input item.
 > **label**: `string`
 
 Defined in:
-[cli/source/ui/form/SelectInputItem.ts:6](https://github.com/jakubmazanec/tools/blob/ef3a0c83d217cca7411f534708a95e6cd278e00f/packages/cli/source/ui/form/SelectInputItem.ts#L6)
+[cli/source/ui/form/SelectInputItem.ts:6](https://github.com/jakubmazanec/tools/blob/36b3404d1b71114f1d5127b86dcfe4cb029f111f/packages/cli/source/ui/form/SelectInputItem.ts#L6)
 
 Text to display as a label.
 
@@ -29,6 +29,6 @@ Text to display as a label.
 > **value**: `string`
 
 Defined in:
-[cli/source/ui/form/SelectInputItem.ts:9](https://github.com/jakubmazanec/tools/blob/ef3a0c83d217cca7411f534708a95e6cd278e00f/packages/cli/source/ui/form/SelectInputItem.ts#L9)
+[cli/source/ui/form/SelectInputItem.ts:9](https://github.com/jakubmazanec/tools/blob/36b3404d1b71114f1d5127b86dcfe4cb029f111f/packages/cli/source/ui/form/SelectInputItem.ts#L9)
 
 Value.

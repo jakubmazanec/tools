@@ -7,4 +7,4 @@
 > `const` **prettier**: `eslint.Linter.Config`[]
 
 Defined in:
-[prettier.ts:13](https://github.com/jakubmazanec/tools/blob/ef3a0c83d217cca7411f534708a95e6cd278e00f/packages/eslint-config/source/configs/prettier.ts#L13)
+[prettier.ts:13](https://github.com/jakubmazanec/tools/blob/36b3404d1b71114f1d5127b86dcfe4cb029f111f/packages/eslint-config/source/configs/prettier.ts#L13)

@@ -7,7 +7,7 @@
 > **CreateWorkspaceProps** = `object`
 
 Defined in:
-[packages/carson/source/commands/create-workspace/CreateWorkspace.tsx:12](https://github.com/jakubmazanec/tools/blob/ef3a0c83d217cca7411f534708a95e6cd278e00f/packages/carson/source/commands/create-workspace/CreateWorkspace.tsx#L12)
+[packages/carson/source/commands/create-workspace/CreateWorkspace.tsx:12](https://github.com/jakubmazanec/tools/blob/36b3404d1b71114f1d5127b86dcfe4cb029f111f/packages/carson/source/commands/create-workspace/CreateWorkspace.tsx#L12)
 
 ## Properties
 
@@ -17,4 +17,4 @@ Defined in:
 > [`createWorkspaceCommand`](../variables/createWorkspaceCommand.md)\>
 
 Defined in:
-[packages/carson/source/commands/create-workspace/CreateWorkspace.tsx:13](https://github.com/jakubmazanec/tools/blob/ef3a0c83d217cca7411f534708a95e6cd278e00f/packages/carson/source/commands/create-workspace/CreateWorkspace.tsx#L13)
+[packages/carson/source/commands/create-workspace/CreateWorkspace.tsx:13](https://github.com/jakubmazanec/tools/blob/36b3404d1b71114f1d5127b86dcfe4cb029f111f/packages/carson/source/commands/create-workspace/CreateWorkspace.tsx#L13)
