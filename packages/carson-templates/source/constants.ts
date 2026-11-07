@@ -165,7 +165,7 @@ export const DEPENDENCY_VERSIONS: Record<string, string> = {
   'patch-package': '^8.0.0',
   playwright: '^1.60.0',
   prettier: '^3.0.0',
-  'prettier-plugin-packagejson': '^2.0.0',
+  'prettier-plugin-packagejson': '^3.0.0',
   'prettier-plugin-tailwindcss': '^0.8.0',
   react: '^19.0.0',
   'react-dom': '^19.0.0',
