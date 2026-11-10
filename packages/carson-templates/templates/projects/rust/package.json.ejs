@@ -1,0 +1,30 @@
+---
+to: 'package.json'
+strategy: merge
+---
+<%
+let packageJson = lodash.merge(
+  {
+    repository: {
+      type: 'git',
+      directory: project.relativePath,
+    },
+    private: true,
+    type: 'module',
+    scripts: {
+      clean: 'cargo clean && del-cli build',
+      format: `cargo fmt --all && ${FORMAT_COMMAND}`,
+      lint: 'cargo clippy --workspace --all-targets -- --deny warnings',
+      toolchain: 'rustup toolchain install',
+    },
+    devDependencies: getDependencies(
+      ['del-cli', 'prettier', 'prettier-plugin-packagejson'],
+      workspace,
+    ),
+    packageManager: `npm@${semver.minVersion(getDependencies(['npm'], workspace)['npm'])}`,
+    engines: getDependencies(['node', 'npm'], workspace),
+  },
+  project.config.overrides?.packageJson ?? {},
+);
+-%>
+<%- JSON.stringify(packageJson) %>

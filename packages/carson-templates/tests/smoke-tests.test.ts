@@ -28,6 +28,11 @@ describe.each([
       '@jakubmazanec/carson-templates:projects/react-library',
     ],
   },
+  {
+    label: '#2',
+    workspaceTemplateId: '@jakubmazanec/carson-templates:workspace',
+    projectTemplateIds: ['@jakubmazanec/carson-templates:projects/rust'],
+  },
 ])('Smoke tests $label', ({label, workspaceTemplateId, projectTemplateIds}) => {
   test('it works', async () => {
     let workspacePath = await createTempDirectory('carson-templates-test-');
@@ -177,6 +182,9 @@ describe.each([
     vitest.stubEnv('VITEST', '');
 
     try {
+      await execa('npm', ['run', 'toolchain', '--workspaces', '--if-present'], {
+        cwd: workspacePath,
+      });
       await execa('npm', ['run', 'build'], {cwd: workspacePath});
     } catch (error) {
       errors.push(error);
