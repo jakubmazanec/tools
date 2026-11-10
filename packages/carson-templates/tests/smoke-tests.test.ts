@@ -27,15 +27,23 @@ describe.each([
       '@jakubmazanec/carson-templates:projects/library',
       '@jakubmazanec/carson-templates:projects/react-library',
     ],
-    workflowSnippets: [],
+    rustJobCounts: new Map([
+      ['check-pull-request.yaml', 0],
+      ['release-pull-request.yaml', 0],
+      ['release.yaml', 0],
+    ]),
   },
   {
     label: '#2',
     workspaceTemplateId: '@jakubmazanec/carson-templates:workspace',
     projectTemplateIds: ['@jakubmazanec/carson-templates:projects/rust'],
-    workflowSnippets: ['npm run toolchain --workspace=apps/project-0', 'apps/project-0/target'],
+    rustJobCounts: new Map([
+      ['check-pull-request.yaml', 1],
+      ['release-pull-request.yaml', 1],
+      ['release.yaml', 2],
+    ]),
   },
-])('Smoke tests $label', ({label, workspaceTemplateId, projectTemplateIds, workflowSnippets}) => {
+])('Smoke tests $label', ({label, workspaceTemplateId, projectTemplateIds, rustJobCounts}) => {
   test('it works', async () => {
     let workspacePath = await createTempDirectory('carson-templates-test-');
     let errors: unknown[] = [];
@@ -180,13 +188,19 @@ describe.each([
       errors.push(error);
     }
 
-    let workflow = await fs.readFile(
-      path.join(workspacePath, '.github/workflows/check-pull-request.yaml'),
-      'utf8',
-    );
+    // Try reading the generated workflows.
+    let workflows: Array<{name: string; content: string; rustJobCount: number}> = [];
 
-    for (let workflowSnippet of workflowSnippets) {
-      expect(workflow).toContain(workflowSnippet);
+    try {
+      for (let [name, rustJobCount] of rustJobCounts) {
+        workflows.push({
+          name,
+          content: await fs.readFile(path.join(workspacePath, '.github/workflows', name), 'utf8'),
+          rustJobCount,
+        });
+      }
+    } catch (error) {
+      errors.push(error);
     }
 
     // Try building everything.
@@ -211,5 +225,17 @@ describe.each([
     }
 
     expect(errors).toHaveLength(0);
+
+    for (let {name, content, rustJobCount} of workflows) {
+      for (let snippet of [
+        'Install the Rust toolchains',
+        'npm run toolchain --workspace=apps/project-0',
+        'apps/project-0/target',
+      ]) {
+        expect(content.split(snippet).length - 1, `${name}: occurrences of "${snippet}"`).toBe(
+          rustJobCount,
+        );
+      }
+    }
   });
 });
