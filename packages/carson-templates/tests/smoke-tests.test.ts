@@ -27,13 +27,15 @@ describe.each([
       '@jakubmazanec/carson-templates:projects/library',
       '@jakubmazanec/carson-templates:projects/react-library',
     ],
+    workflowSnippets: [],
   },
   {
     label: '#2',
     workspaceTemplateId: '@jakubmazanec/carson-templates:workspace',
     projectTemplateIds: ['@jakubmazanec/carson-templates:projects/rust'],
+    workflowSnippets: ['npm run toolchain --workspace=apps/project-0', 'apps/project-0/target'],
   },
-])('Smoke tests $label', ({label, workspaceTemplateId, projectTemplateIds}) => {
+])('Smoke tests $label', ({label, workspaceTemplateId, projectTemplateIds, workflowSnippets}) => {
   test('it works', async () => {
     let workspacePath = await createTempDirectory('carson-templates-test-');
     let errors: unknown[] = [];
@@ -176,6 +178,15 @@ describe.each([
       );
     } catch (error: unknown) {
       errors.push(error);
+    }
+
+    let workflow = await fs.readFile(
+      path.join(workspacePath, '.github/workflows/check-pull-request.yaml'),
+      'utf8',
+    );
+
+    for (let workflowSnippet of workflowSnippets) {
+      expect(workflow).toContain(workflowSnippet);
     }
 
     // Try building everything.

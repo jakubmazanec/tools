@@ -87,6 +87,26 @@ if (workspace.projects.some((project) => project.config.deployment?.dbInstance))
 }
 -%>
 
+<%
+for (let project of workspace.projects.filter(isRustProject)) {
+-%>
+
+      - name: Install the Rust toolchains of <%- project.relativePath %>
+        run: npm run toolchain --workspace=<%- project.relativePath %>
+
+      - uses: actions/cache@v6
+        with:
+          path: |
+            ~/.cargo/registry/index
+            ~/.cargo/registry/cache
+            ~/.cargo/git/db
+            <%- project.relativePath %>/target
+          key: rust-${{ runner.os }}-<%- project.name %>-${{ hashFiles('<%- project.relativePath %>/Cargo.lock', '<%- project.relativePath %>/rust-toolchain.toml') }}
+          restore-keys: rust-${{ runner.os }}-<%- project.name %>-
+<%
+}
+-%>
+
       - name: Install packages
         run: npm ci
 
@@ -314,6 +334,26 @@ if (workspace.projects.some((project) => project.config.deployment?.dbInstance))
       - uses: geldata/setup-gel@v1
         with:
           server-version: none
+<%
+}
+-%>
+
+<%
+for (let project of workspace.projects.filter(isRustProject)) {
+-%>
+
+      - name: Install the Rust toolchains of <%- project.relativePath %>
+        run: npm run toolchain --workspace=<%- project.relativePath %>
+
+      - uses: actions/cache@v6
+        with:
+          path: |
+            ~/.cargo/registry/index
+            ~/.cargo/registry/cache
+            ~/.cargo/git/db
+            <%- project.relativePath %>/target
+          key: rust-${{ runner.os }}-<%- project.name %>-${{ hashFiles('<%- project.relativePath %>/Cargo.lock', '<%- project.relativePath %>/rust-toolchain.toml') }}
+          restore-keys: rust-${{ runner.os }}-<%- project.name %>-
 <%
 }
 -%>
