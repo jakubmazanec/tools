@@ -18,12 +18,14 @@ import {packageNameToDirectory} from './packageNameToDirectory.js';
 
 vitest.setConfig({testTimeout: 3_600_000});
 
+const APP_TEMPLATE_ID = '@jakubmazanec/carson-templates:projects/app';
+
 describe.each([
   {
     label: '#1',
     workspaceTemplateId: '@jakubmazanec/carson-templates:workspace',
     projectTemplateIds: [
-      '@jakubmazanec/carson-templates:projects/app',
+      APP_TEMPLATE_ID,
       '@jakubmazanec/carson-templates:projects/library',
       '@jakubmazanec/carson-templates:projects/react-library',
     ],
@@ -73,6 +75,8 @@ describe.each([
 
     let workspace = await Workspace.read(workspacePath);
 
+    let appProjectPaths: string[] = [];
+
     // Then we create all projects; be aware that if projectTemplateIds.length is greater than 1, workspace template must be for multi-project workspace.
     for (let [index, projectTemplateId] of projectTemplateIds.entries()) {
       let projectName = `project-${index}`;
@@ -115,6 +119,17 @@ describe.each([
             workspace,
           }),
         );
+
+        // The app template has the cross-origin isolation option, so we turn it on.
+        if (projectTemplateId === APP_TEMPLATE_ID) {
+          let projectConfigPath = path.join(projectPath, '.carson', 'project.json');
+
+          await fs.writeJson(projectConfigPath, {
+            ...(await fs.readJson(projectConfigPath)),
+            crossOriginIsolation: true,
+          });
+          appProjectPaths.push(projectPath);
+        }
       } catch (error: unknown) {
         errors.push(error);
       }
@@ -203,6 +218,17 @@ describe.each([
       errors.push(error);
     }
 
+    // Try reading the generated Vite configs of the apps.
+    let viteConfigs: string[] = [];
+
+    try {
+      for (let appProjectPath of appProjectPaths) {
+        viteConfigs.push(await fs.readFile(path.join(appProjectPath, 'vite.config.ts'), 'utf8'));
+      }
+    } catch (error) {
+      errors.push(error);
+    }
+
     // Try building everything.
     vitest.stubEnv('VITEST', '');
 
@@ -225,6 +251,12 @@ describe.each([
     }
 
     expect(errors).toHaveLength(0);
+
+    for (let viteConfig of viteConfigs) {
+      for (let snippet of ["'Cross-Origin-Embedder-Policy'", "'require-corp'"]) {
+        expect(viteConfig).toContain(snippet);
+      }
+    }
 
     for (let {name, content, rustJobCount} of workflows) {
       for (let snippet of [

@@ -4,6 +4,7 @@ strategy: overwrite
 ---
 <%
 let hasBrowserTests = hasProjectBrowserTests(project);
+let hasCrossOriginIsolation = project.config.crossOriginIsolation === true;
 -%>
 /**
  * DO NOT EDIT!
@@ -23,7 +24,26 @@ import {playwright} from '@vitest/browser-playwright';
 }
 -%>
 import _ from 'lodash';
+<%
+if (hasCrossOriginIsolation) {
+-%>
+import {type Connect, type Plugin} from 'vite';
+<%
+}
+-%>
 import {defineConfig} from 'vitest/config';
+<%
+if (hasCrossOriginIsolation) {
+-%>
+
+const setIsolationHeaders: Connect.NextHandleFunction = (request, response, next) => {
+  response.setHeader('Cross-Origin-Opener-Policy', 'same-origin');
+  response.setHeader('Cross-Origin-Embedder-Policy', 'require-corp');
+  next();
+};
+<%
+}
+-%>
 
 export default defineConfig(
   _.merge(
@@ -32,7 +52,25 @@ export default defineConfig(
         port: <%- JSON.stringify(APP_PORT) %>,
         strictPort: true,
       },
-      plugins: [tailwindcss(), !process.env.VITEST && reactRouter()],
+      plugins: [
+        tailwindcss(),
+        !process.env.VITEST && reactRouter(),
+<%
+if (hasCrossOriginIsolation) {
+-%>
+        {
+          name: 'cross-origin-isolation',
+          configureServer(server) {
+            server.middlewares.use(setIsolationHeaders);
+          },
+          configurePreviewServer(server) {
+            server.middlewares.use(setIsolationHeaders);
+          },
+        } satisfies Plugin,
+<%
+}
+-%>
+      ],
       test: {
         coverage: {
           include: [<%- JSON.stringify(`${SOURCE_DIRECTORY}/**`) %>],
