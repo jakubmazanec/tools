@@ -253,7 +253,12 @@ describe.each([
     expect(errors).toHaveLength(0);
 
     for (let viteConfig of viteConfigs) {
-      for (let snippet of ["'Cross-Origin-Embedder-Policy'", "'require-corp'"]) {
+      for (let snippet of [
+        "'Cross-Origin-Opener-Policy'",
+        "'same-origin'",
+        "'Cross-Origin-Embedder-Policy'",
+        "'require-corp'",
+      ]) {
         expect(viteConfig).toContain(snippet);
       }
     }

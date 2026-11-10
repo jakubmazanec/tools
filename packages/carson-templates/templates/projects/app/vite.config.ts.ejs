@@ -53,8 +53,6 @@ export default defineConfig(
         strictPort: true,
       },
       plugins: [
-        tailwindcss(),
-        !process.env.VITEST && reactRouter(),
 <%
 if (hasCrossOriginIsolation) {
 -%>
@@ -70,6 +68,8 @@ if (hasCrossOriginIsolation) {
 <%
 }
 -%>
+        tailwindcss(),
+        !process.env.VITEST && reactRouter(),
       ],
       test: {
         coverage: {
