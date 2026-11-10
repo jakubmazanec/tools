@@ -9,5 +9,6 @@ export * from './getProjectsWithBrowserTests.js';
 export * from './getReferences.js';
 export * from './getWorkspaceName.js';
 export * from './hasProjectBrowserTests.js';
+export * from './isRustProject.js';
 export {default as lodash} from 'lodash';
 export {default as semver} from 'semver';
