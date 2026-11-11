@@ -22,9 +22,9 @@
     "source"
   ],
   "scripts": {
-    "build": "del-cli build tsconfig.tsbuildinfo && esbuild \"source/**/*\" --platform=node --target=node24.22 --outdir=build --sourcemap --loader:.woff2=copy && tsc && storybook build",
+    "build": "del-cli build tsconfig.tsbuildinfo && esbuild \"source/**/*\" --platform=node --target=node26.13 --outdir=build --sourcemap --loader:.woff2=copy && tsc && storybook build",
     "clean": "del-cli coverage build *.tsbuildinfo",
-    "develop": "concurrently \"esbuild \"source/**/*\" --platform=node --target=node24.22 --outdir=build --sourcemap --loader:.woff2=copy --watch\" \"tsc --watch\" \"storybook dev -p 6006 --no-open\"",
+    "develop": "concurrently \"esbuild \"source/**/*\" --platform=node --target=node26.13 --outdir=build --sourcemap --loader:.woff2=copy --watch\" \"tsc --watch\" \"storybook dev -p 6006 --no-open\"",
     "document": "del-cli docs && typedoc --options typedoc.config.cjs",
     "format": "prettier . --write --ignore-unknown",
     "lint": "eslint .",
@@ -58,7 +58,7 @@
     "@tailwindcss/vite": "^4.3.3",
     "@types/culori": "^4.0.1",
     "@types/lodash": "^4.17.26",
-    "@types/node": "^24.19.2",
+    "@types/node": "^26.6.5",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "@vitest/browser-playwright": "^4.1.12",
@@ -90,7 +90,7 @@
   },
   "packageManager": "npm@12.2.1",
   "engines": {
-    "node": "^24.22.0",
+    "node": "^26.13.0",
     "npm": "^12.2.1"
   }
 }
