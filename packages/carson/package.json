@@ -57,7 +57,7 @@
     "@jakubmazanec/eslint-config": "^5.0.0",
     "@types/fs-extra": "^11.0.4",
     "@types/lodash": "^4.17.26",
-    "@types/node": "^24.19.2",
+    "@types/node": "^26.6.5",
     "@types/react": "^19.3.0",
     "@types/semver": "^7.8.0",
     "@types/zen-observable": "^0.8.7",
@@ -80,7 +80,7 @@
   },
   "packageManager": "npm@12.2.1",
   "engines": {
-    "node": "^24.22.0",
+    "node": "^26.13.0",
     "npm": "^12.2.1"
   }
 }
