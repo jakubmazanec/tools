@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "@changesets/get-github-info": "0.8.0",
-    "dotenv": "^17.4.2"
+    "dotenv": "^18.0.9"
   },
   "devDependencies": {
     "@changesets/parse": "^0.4.3",
