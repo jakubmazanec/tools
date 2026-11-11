@@ -44,7 +44,7 @@
     "@types/lodash": "^4.17.26",
     "@types/node": "^26.6.5",
     "@types/react": "^19.3.0",
-    "@vitest/coverage-v8": "^4.1.12",
+    "@vitest/coverage-v8": "^5.0.5",
     "concurrently": "^10.0.6",
     "cross-env": "^10.1.0",
     "del-cli": "^8.0.1",
@@ -58,7 +58,7 @@
     "typedoc": "^0.28.20",
     "typedoc-plugin-markdown": "^4.14.0",
     "typescript": "^6.0.3",
-    "vitest": "^4.1.12"
+    "vitest": "^5.0.5"
   },
   "peerDependencies": {
     "ink": "6.x",
