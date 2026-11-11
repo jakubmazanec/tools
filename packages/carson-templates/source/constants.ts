@@ -156,7 +156,7 @@ export const DEPENDENCY_VERSIONS: Record<string, string> = {
   chromatic: '^18.0.0',
   concurrently: '^10.0.0',
   'cross-env': '^10.0.0',
-  'del-cli': '^7.0.0',
+  'del-cli': '^8.0.0',
   esbuild: '^0.28.0',
   eslint: '^9.0.0',
   execa: '^10.0.0',
