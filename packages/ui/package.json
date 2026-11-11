@@ -65,7 +65,7 @@
     "@vitest/coverage-v8": "^4.1.12",
     "chromatic": "^18.13.0",
     "concurrently": "^10.0.6",
-    "del-cli": "^7.0.0",
+    "del-cli": "^8.0.1",
     "esbuild": "^0.28.2",
     "eslint": "^9.39.5",
     "playwright": "^1.64.1",
