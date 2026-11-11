@@ -7,7 +7,7 @@
 > **CreateWorkspace**(`__namedParameters`): `Element`
 
 Defined in:
-[packages/carson/source/commands/create-workspace/CreateWorkspace.tsx:16](https://github.com/jakubmazanec/tools/blob/36b3404d1b71114f1d5127b86dcfe4cb029f111f/packages/carson/source/commands/create-workspace/CreateWorkspace.tsx#L16)
+[packages/carson/source/commands/create-workspace/CreateWorkspace.tsx:16](https://github.com/jakubmazanec/tools/blob/a2ad76298b012139ad7499a776924f487807cb38/packages/carson/source/commands/create-workspace/CreateWorkspace.tsx#L16)
 
 ## Parameters
 

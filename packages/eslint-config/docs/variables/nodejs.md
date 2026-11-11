@@ -7,4 +7,4 @@
 > `const` **nodejs**: `eslint.Linter.Config`[]
 
 Defined in:
-[nodejs.ts:14](https://github.com/jakubmazanec/tools/blob/36b3404d1b71114f1d5127b86dcfe4cb029f111f/packages/eslint-config/source/configs/nodejs.ts#L14)
+[nodejs.ts:14](https://github.com/jakubmazanec/tools/blob/a2ad76298b012139ad7499a776924f487807cb38/packages/eslint-config/source/configs/nodejs.ts#L14)
