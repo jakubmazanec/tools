@@ -42,7 +42,7 @@
     "@types/fs-extra": "^11.0.4",
     "@types/lodash": "^4.17.26",
     "@types/node": "^26.6.5",
-    "@vitest/coverage-v8": "^4.1.12",
+    "@vitest/coverage-v8": "^5.0.5",
     "concurrently": "^10.0.6",
     "del-cli": "^8.0.1",
     "esbuild": "^0.28.2",
@@ -51,7 +51,7 @@
     "typedoc": "^0.28.20",
     "typedoc-plugin-markdown": "^4.14.0",
     "typescript": "^6.0.3",
-    "vitest": "^4.1.12"
+    "vitest": "^5.0.5"
   },
   "packageManager": "npm@12.2.1",
   "engines": {
