@@ -183,8 +183,8 @@ export const DEPENDENCY_VERSIONS: Record<string, string> = {
   vitest: '^4.0.0',
   'vitest-browser-react': '^2.0.0',
 
-  node: '^24.0.0',
-  '@types/node': '^24.0.0',
+  node: '^26.0.0',
+  '@types/node': '^26.0.0',
   npm: '^12.0.0',
 
   gel: '^6.7.0',

@@ -36,7 +36,7 @@ npm install @jakubmazanec/carson @jakubmazanec/carson-templates -g
 
 #### Prerequisites
 
-- Node.js 24 or later
+- Node.js 26 or later
 - TypeScript 6 or later
 
 <!-- prerequisites -->
