@@ -61,7 +61,7 @@ let packageJson = lodash.merge(
       develop: `concurrently "${getBuildToEsmCommand(workspace)} --watch" "tsc --watch"`,
       document: 'del-cli docs && typedoc --options typedoc.config.cjs',
       format: FORMAT_COMMAND,
-      lint: 'eslint .',
+      lint: 'eslint . --quiet',
       test: `del-cli coverage && ${TEST_COMMAND}`,
       typecheck: 'tsc --project tsconfig.typecheck.json',
     },

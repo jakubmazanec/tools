@@ -27,7 +27,7 @@
     "develop": "concurrently \"esbuild \"source/**/*\" --platform=node --target=node26.13 --outdir=build --sourcemap --loader:.woff2=copy --watch\" \"tsc --watch\" \"storybook dev -p 6006 --no-open\"",
     "document": "del-cli docs && typedoc --options typedoc.config.cjs",
     "format": "prettier . --write --ignore-unknown",
-    "lint": "eslint .",
+    "lint": "eslint . --quiet",
     "print-colors": "tsx tools/print-colors.ts",
     "test": "del-cli coverage && vitest run --coverage --passWithNoTests",
     "typecheck": "tsc --project tsconfig.typecheck.json"

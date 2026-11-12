@@ -73,7 +73,7 @@ let packageJson = lodash.merge(
       develop: `concurrently "${getBuildToEsmCommand(workspace)} --loader:.woff2=copy --watch" "tsc --watch" "storybook dev -p 6006 --no-open"`,
       document: 'del-cli docs && typedoc --options typedoc.config.cjs',
       format: FORMAT_COMMAND,
-      lint: 'eslint .',
+      lint: 'eslint . --quiet',
       test: `del-cli coverage && ${TEST_COMMAND}`,
       typecheck: 'tsc --project tsconfig.typecheck.json',
     },

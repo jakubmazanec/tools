@@ -22,7 +22,7 @@
     "develop": "concurrently \"esbuild \"source/**/*\" --platform=node --target=node26.13 --outdir=build --sourcemap --watch\" \"tsc --watch\"",
     "document": "del-cli docs && typedoc --options typedoc.config.cjs",
     "format": "prettier . --write --ignore-unknown",
-    "lint": "eslint .",
+    "lint": "eslint . --quiet",
     "test": "del-cli coverage && vitest run --coverage --passWithNoTests",
     "typecheck": "tsc --project tsconfig.typecheck.json"
   },
