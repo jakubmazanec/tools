@@ -5,7 +5,6 @@ export function getCommonPinningClasses(column: Column<any>): string {
   let isPinned = column.getIsPinned();
   let isLastLeftPinnedColumn = isPinned === 'left' && column.getIsLastColumn('left');
   let isFirstRightPinnedColumn = isPinned === 'right' && column.getIsFirstColumn('right');
-
   let borderClassName =
     isLastLeftPinnedColumn ? 'pr-2 border-r-2 border-neutral-100'
     : isFirstRightPinnedColumn ? 'pl-2 border-l-2 border-neutral-100'

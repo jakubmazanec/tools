@@ -37,7 +37,6 @@ for (let [ruleName, rule] of eslint.builtinRules.entries()) {
 let typescriptRules = (Object.entries(eslintPluginTypescript.rules) as Array<[string, Rule]>)
   .filter(([, rule]) => !rule.meta?.deprecated)
   .map(([ruleName]) => `@typescript-eslint/${ruleName}`);
-
 let stylisticRules = (
   Object.entries((eslintPluginStylistic as unknown as Linter.RulesRecord).rules!) as Array<
     [string, Rule]
@@ -45,25 +44,20 @@ let stylisticRules = (
 )
   .filter(([, rule]) => !rule.meta?.deprecated)
   .map(([ruleName]) => `@stylistic/js/${ruleName}`);
-
 let eslintCommentsRules = (
   Object.entries(eslintPluginEslintComments.rules) as Array<[string, Rule]>
 )
   .filter(([, rule]) => !rule.meta?.deprecated)
   .map(([ruleName]) => `eslint-comments/${ruleName}`);
-
 let commentLengthRules = (Object.entries(eslintPluginCommentLength.rules) as Array<[string, Rule]>)
   .filter(([, rule]) => !rule.meta?.deprecated)
   .map(([ruleName]) => `comment-length/${ruleName}`);
-
 let importRules = (Object.entries(eslintPluginImport.rules) as Array<[string, Rule]>)
   .filter(([, rule]) => !rule.meta?.deprecated)
   .map(([ruleName]) => `import/${ruleName}`);
-
 let vitestRules = (Object.entries(eslintPluginVitest.rules) as Array<[string, Rule]>)
   .filter(([, rule]) => !rule.meta?.deprecated)
   .map(([ruleName]) => `vitest/${ruleName}`);
-
 let jsxA11yRules = (
   Object.entries((eslintPluginJsxA11y as unknown as Linter.RulesRecord).rules!) as Array<
     [string, Rule]
@@ -71,7 +65,6 @@ let jsxA11yRules = (
 )
   .filter(([, rule]) => !rule.meta?.deprecated)
   .map(([ruleName]) => `jsx-a11y/${ruleName}`);
-
 let nodeRules = (
   Object.entries((eslintPluginNode as unknown as Linter.RulesRecord).rules!) as Array<
     [string, Rule]
@@ -79,7 +72,6 @@ let nodeRules = (
 )
   .filter(([, rule]) => !rule.meta?.deprecated)
   .map(([ruleName]) => `node/${ruleName}`);
-
 let prettierRules = (
   Object.entries((eslintPluginPrettier as unknown as Linter.RulesRecord).rules!) as Array<
     [string, Rule]
@@ -87,25 +79,20 @@ let prettierRules = (
 )
   .filter(([, rule]) => !rule.meta?.deprecated)
   .map(([ruleName]) => `prettier/${ruleName}`);
-
 let promiseRules = (Object.entries(eslintPluginPromise.rules) as Array<[string, Rule]>)
   .filter(([, rule]) => !rule.meta?.deprecated)
   .map(([ruleName]) => `promise/${ruleName}`);
-
 let reactRules = (Object.entries(eslintPluginReact.rules) as Array<[string, Rule]>)
   .filter(([, rule]) => !rule.meta?.deprecated)
   .map(([ruleName]) => `react/${ruleName}`);
-
 let reactHooksRules = (Object.entries(eslintPluginReactHooks.rules) as Array<[string, Rule]>)
   .filter(([, rule]) => !rule.meta?.deprecated)
   .map(([ruleName]) => `react-hooks/${ruleName}`);
-
 let testingLibraryRules = (
   Object.entries(eslintPluginTestingLibrary.rules) as Array<[string, Rule]>
 )
   .filter(([, rule]) => !rule.meta?.deprecated)
   .map(([ruleName]) => `testing-library/${ruleName}`);
-
 let unicornRules = (
   Object.entries((eslintPluginUnicorn as unknown as Linter.RulesRecord).rules!) as Array<
     [string, Rule]
@@ -113,11 +100,9 @@ let unicornRules = (
 )
   .filter(([, rule]) => !rule.meta?.deprecated)
   .map(([ruleName]) => `unicorn/${ruleName}`);
-
 let securityRules = (Object.entries(eslintPluginSecurity.rules) as Array<[string, Rule]>)
   .filter(([, rule]) => !rule.meta?.deprecated)
   .map(([ruleName]) => `security/${ruleName}`);
-
 let perfectionistRules = (Object.entries(eslintPluginPerfectionist.rules!) as Array<[string, Rule]>)
   .filter(([, rule]) => !rule.meta?.deprecated)
   .map(([ruleName]) => `perfectionist/${ruleName}`);

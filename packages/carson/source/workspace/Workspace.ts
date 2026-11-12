@@ -41,16 +41,41 @@ import {type WorkspaceRepository} from './WorkspaceRepository.js';
 import {type WorkspaceUpdateOptions} from './WorkspaceUpdateOptions.js';
 
 /**
- * Workspace represent a directory, usually a git repository, that contains {@link Project} instances.
+ * Workspace represent a directory, usually a git repository, that contains {@link Project}
+ * instances.
  *
  * @typeParam M If true, the workspace is multi-project workspace (so-called "monorepo").
  */
 export class Workspace<M extends boolean = true> {
-  /** Workspace path. */
-  readonly path: string;
+  /** All dependencies of all projects and workspace dependencies. */
+  allDependencies: WorkspaceDependencies<M> = [] as unknown as WorkspaceDependencies<M>;
+
+  /** Workspace configuration; if it's not found, the default is an empty object. */
+  config: WorkspaceConfig;
+
+  /** Dependencies of all projects. */
+  dependencies: WorkspaceDependencies<M> = [] as unknown as WorkspaceDependencies<M>;
+
+  /** Versions of each dependency. */
+  dependencyVersions: Record<string, string[]> = {};
+
+  /** Development dependencies of all projects. */
+  devDependencies: WorkspaceDependencies<M> = [] as unknown as WorkspaceDependencies<M>;
+
+  /** Errors found during reading from the file system. */
+  errors: Array<InstanceType<typeof WorkspaceError>> = [];
 
   /** Does the workspace contain a multiple projects? */
   readonly isMultiProject: M;
+
+  /**
+   * Parsed workspace `package.json` file (if the workspace contains multiple projects); if it's
+   * not found, the default is an empty object.
+   */
+  packageJson: WorkspacePackageJson<M>;
+
+  /** Workspace path. */
+  readonly path: string;
 
   /** Globs used to find projects. */
   projectGlobs: WorkspaceProjectGlobs<M>;
@@ -58,29 +83,8 @@ export class Workspace<M extends boolean = true> {
   /** Workspace projects. */
   projects: WorkspaceProjects<M>;
 
-  /** Workspace configuration; if it's not found, the default is an empty object. */
-  config: WorkspaceConfig;
-
-  /** Parsed workspace `package.json` file (if the workspace contains multiple projects); if it's not found, the default is an empty object. */
-  packageJson: WorkspacePackageJson<M>;
-
   /** Workspace git repository. */
   repository?: WorkspaceRepository;
-
-  /** Dependencies of all projects. */
-  dependencies: WorkspaceDependencies<M> = [] as unknown as WorkspaceDependencies<M>;
-
-  /** Development dependencies of all projects. */
-  devDependencies: WorkspaceDependencies<M> = [] as unknown as WorkspaceDependencies<M>;
-
-  /** All dependencies of all projects and workspace dependencies. */
-  allDependencies: WorkspaceDependencies<M> = [] as unknown as WorkspaceDependencies<M>;
-
-  /** Versions of each dependency. */
-  dependencyVersions: Record<string, string[]> = {};
-
-  /** Errors found during reading from the file system. */
-  errors: Array<InstanceType<typeof WorkspaceError>> = [];
 
   constructor(options: WorkspaceOptions<M>) {
     this.path = options.path;
@@ -164,7 +168,8 @@ export class Workspace<M extends boolean = true> {
    * @returns The new workspace.
    */
   static async create({args, path: workspacePath, templateId}: WorkspaceCreateOptions) {
-    // TODO: test that workspace returned by this method has the same value of isMultiProject when the same workspace is after its creation re-read with .read()
+    // TODO: test that workspace returned by this method has the same value of isMultiProject when
+    // the same workspace is after its creation re-read with .read()
     let workspace = new this({
       path: workspacePath,
       config: {
@@ -210,6 +215,113 @@ export class Workspace<M extends boolean = true> {
     });
 
     return Workspace.read(workspace.path);
+  }
+
+  /**
+   * Traverses file system up from the search path and tries to find a directory that is a root of
+   * a workspace.
+   *
+   * @param searchPath Search path.
+   * @returns Workspace path, if found.
+   */
+  static async find(searchPath: string): Promise<string | undefined> {
+    let startingPath = await findExistingDirectory(path.resolve(searchPath));
+    let currentPath = startingPath;
+    let singlePackageWorkspacePath: string | undefined;
+    let multiPackageWorkspacePath: string | undefined;
+
+    while (!(
+      isRootPath(currentPath) ||
+      (singlePackageWorkspacePath && multiPackageWorkspacePath)
+    )) {
+      if (await containsWorkspace(currentPath)) {
+        let packageJsonPath = path.join(currentPath, PACKAGE_JSON_FILENAME);
+        let workspaceConfigPath = path.join(
+          currentPath,
+          CARSON_CONFIG_DIRECTORY,
+          WORKSPACE_CONFIG_FILENAME,
+        );
+
+        if (await fs.pathExists(packageJsonPath)) {
+          let packageJson = await readFile(packageJsonPath, jsonSchema, {
+            parser: (rawString: string) => json5.parse<unknown>(rawString),
+          });
+
+          if (!(packageJson instanceof Error)) {
+            let projectGlobs = getPackageJsonWorkspaces(packageJson);
+
+            if (projectGlobs?.length) {
+              multiPackageWorkspacePath ??= currentPath;
+            } else {
+              singlePackageWorkspacePath ??= currentPath;
+            }
+          }
+        }
+
+        if (await fs.pathExists(workspaceConfigPath)) {
+          let workspaceConfig = await readFile(workspaceConfigPath, workspaceConfigSchema, {
+            parser: (rawString: string) => json5.parse<unknown>(rawString),
+          });
+
+          if (!(workspaceConfig instanceof z.ZodError)) {
+            let projectGlobs = workspaceConfig.projects;
+
+            if (projectGlobs?.length) {
+              multiPackageWorkspacePath ??= currentPath;
+            } else {
+              singlePackageWorkspacePath ??= currentPath;
+            }
+          }
+        } else {
+          singlePackageWorkspacePath ??= currentPath;
+        }
+      }
+
+      currentPath = path.dirname(currentPath);
+    }
+
+    if (multiPackageWorkspacePath) {
+      return multiPackageWorkspacePath;
+    } else if (singlePackageWorkspacePath) {
+      return singlePackageWorkspacePath;
+    }
+
+    return undefined;
+  }
+
+  /**
+   * Traverses file system up from the search path and tries to find and read a workspace.
+   */
+  static async findAndRead<O extends WorkspaceFindAndReadOptions | undefined = undefined>(
+    searchPath: string,
+    options?: O,
+  ): Promise<
+    O extends undefined ? Workspace | Workspace<false> | undefined
+    : NonNullable<O>['throwIfNotFound'] extends true ? Workspace | Workspace<false>
+    : Workspace | Workspace<false> | undefined
+  > {
+    let workspacePath = await Workspace.find(searchPath);
+
+    if (workspacePath) {
+      return Workspace.read(workspacePath) as Promise<
+        O extends undefined ? Workspace | Workspace<false> | undefined
+        : NonNullable<O>['throwIfNotFound'] extends true ? Workspace | Workspace<false>
+        : Workspace | Workspace<false> | undefined
+      >;
+    } else if (options?.throwIfNotFound) {
+      throw new WorkspaceError('NO_WORKSPACE_FOUND', {
+        messageParameters: [searchPath],
+        data: {
+          path: searchPath,
+        },
+      });
+    }
+
+    return undefined as unknown as Promise<
+      O extends undefined ? Workspace | Workspace<false> | undefined
+      : NonNullable<O>['throwIfNotFound'] extends true ? Workspace | Workspace<false>
+      : Workspace | Workspace<false> | undefined
+    >;
   }
 
   static async read(workspacePath: string): Promise<Workspace | Workspace<false>> {
@@ -323,109 +435,108 @@ export class Workspace<M extends boolean = true> {
     return workspace;
   }
 
-  /**
-   * Traverses file system up from the search path and tries to find a directory that is a root of a workspace.
-   *
-   * @param searchPath Search path.
-   * @returns Workspace path, if found.
-   */
-  static async find(searchPath: string): Promise<string | undefined> {
-    let startingPath = await findExistingDirectory(path.resolve(searchPath));
-    let currentPath = startingPath;
-    let singlePackageWorkspacePath: string | undefined;
-    let multiPackageWorkspacePath: string | undefined;
-
-    while (!(
-      isRootPath(currentPath) ||
-      (singlePackageWorkspacePath && multiPackageWorkspacePath)
-    )) {
-      if (await containsWorkspace(currentPath)) {
-        let packageJsonPath = path.join(currentPath, PACKAGE_JSON_FILENAME);
-        let workspaceConfigPath = path.join(
-          currentPath,
-          CARSON_CONFIG_DIRECTORY,
-          WORKSPACE_CONFIG_FILENAME,
-        );
-
-        if (await fs.pathExists(packageJsonPath)) {
-          let packageJson = await readFile(packageJsonPath, jsonSchema, {
-            parser: (rawString: string) => json5.parse<unknown>(rawString),
-          });
-
-          if (!(packageJson instanceof Error)) {
-            let projectGlobs = getPackageJsonWorkspaces(packageJson);
-
-            if (projectGlobs?.length) {
-              multiPackageWorkspacePath ??= currentPath;
-            } else {
-              singlePackageWorkspacePath ??= currentPath;
-            }
-          }
-        }
-        if (await fs.pathExists(workspaceConfigPath)) {
-          let workspaceConfig = await readFile(workspaceConfigPath, workspaceConfigSchema, {
-            parser: (rawString: string) => json5.parse<unknown>(rawString),
-          });
-
-          if (!(workspaceConfig instanceof z.ZodError)) {
-            let projectGlobs = workspaceConfig.projects;
-
-            if (projectGlobs?.length) {
-              multiPackageWorkspacePath ??= currentPath;
-            } else {
-              singlePackageWorkspacePath ??= currentPath;
-            }
-          }
-        } else {
-          singlePackageWorkspacePath ??= currentPath;
-        }
-      }
-
-      currentPath = path.dirname(currentPath);
-    }
-
-    if (multiPackageWorkspacePath) {
-      return multiPackageWorkspacePath;
-    } else if (singlePackageWorkspacePath) {
-      return singlePackageWorkspacePath;
-    }
-
-    return undefined;
-  }
-
-  /**
-   * Traverses file system up from the search path and tries to find and read a workspace.
-   */
-  static async findAndRead<O extends WorkspaceFindAndReadOptions | undefined = undefined>(
-    searchPath: string,
-    options?: O,
-  ): Promise<
-    O extends undefined ? Workspace | Workspace<false> | undefined
-    : NonNullable<O>['throwIfNotFound'] extends true ? Workspace | Workspace<false>
-    : Workspace | Workspace<false> | undefined
-  > {
-    let workspacePath = await Workspace.find(searchPath);
-
-    if (workspacePath) {
-      return Workspace.read(workspacePath) as Promise<
-        O extends undefined ? Workspace | Workspace<false> | undefined
-        : NonNullable<O>['throwIfNotFound'] extends true ? Workspace | Workspace<false>
-        : Workspace | Workspace<false> | undefined
-      >;
-    } else if (options?.throwIfNotFound) {
-      throw new WorkspaceError('NO_WORKSPACE_FOUND', {
-        messageParameters: [searchPath],
-        data: {
-          path: searchPath,
-        },
+  addProject(newProject: Project<M>): this {
+    if (this.projects.some((project) => newProject.path === project.path)) {
+      throw new WorkspaceError('DUPLICATE_PROJECT_PATH', {
+        messageParameters: [newProject.path],
       });
     }
 
-    return undefined as unknown as Promise<
-      O extends undefined ? Workspace | Workspace<false> | undefined
-      : NonNullable<O>['throwIfNotFound'] extends true ? Workspace | Workspace<false>
-      : Workspace | Workspace<false> | undefined
-    >;
+    if (this.projects.some((project) => newProject.name === project.name)) {
+      throw new WorkspaceError('DUPLICATE_PROJECT_NAME', {messageParameters: [newProject.name]});
+    }
+
+    if (!this.isMultiProject && this.projects.length >= 1) {
+      throw new WorkspaceError('TOO_MANY_PROJECTS');
+    }
+
+    if (!this.isMultiProject && newProject.path !== this.path) {
+      throw new WorkspaceError('PATH_MISMATCH');
+    }
+
+    this.projects.push(newProject);
+    this.sortProjects();
+    this.updateDependencies();
+
+    return this;
+  }
+
+  addProjects(newProjects: Array<Project<M>>): this {
+    for (let newProject of newProjects) {
+      if (this.projects.some((project) => newProject.path === project.path)) {
+        throw new WorkspaceError('DUPLICATE_PROJECT_PATH', {
+          messageParameters: [newProject.path],
+        });
+      }
+
+      if (this.projects.some((project) => newProject.name === project.name)) {
+        throw new WorkspaceError('DUPLICATE_PROJECT_NAME', {messageParameters: [newProject.name]});
+      }
+
+      if (!this.isMultiProject && this.projects.length >= 1) {
+        throw new WorkspaceError('TOO_MANY_PROJECTS');
+      }
+
+      if (!this.isMultiProject && newProject.path !== this.path) {
+        throw new WorkspaceError('PATH_MISMATCH');
+      }
+
+      this.projects.push(newProject);
+    }
+
+    this.sortProjects();
+    this.updateDependencies();
+
+    return this;
+  }
+
+  async createProject({
+    templateId,
+    projectPath,
+    projectName,
+    args,
+  }: WorkspaceCreateProjectOptions): Promise<Project<M>> {
+    let resolvedProjectPath = path.resolve(projectPath);
+
+    if (this.projects.some((project) => resolvedProjectPath === project.path)) {
+      throw new WorkspaceError('DUPLICATE_PROJECT_PATH', {
+        messageParameters: [resolvedProjectPath],
+      });
+    }
+
+    if (this.projects.some((project) => projectName === project.name)) {
+      throw new WorkspaceError('DUPLICATE_PROJECT_NAME', {messageParameters: [projectName]});
+    }
+
+    if (!this.isMultiProject && this.projects.length >= 1) {
+      throw new WorkspaceError('TOO_MANY_PROJECTS');
+    }
+
+    if (!this.isMultiProject && projectPath !== this.path) {
+      throw new WorkspaceError('PATH_MISMATCH');
+    }
+
+    let newProject = await Project.create({
+      templateId,
+      projectPath,
+      projectName,
+      args,
+      workspace: this,
+    });
+
+    this.addProject(newProject);
+
+    return newProject;
+  }
+
+  getProject(projectName: Project<M> | string): Project<M> | undefined {
+    for (let project of this.projects) {
+      if (project.name === projectName || project === projectName) {
+        return project;
+      }
+    }
+
+    return undefined;
   }
 
   async read(): Promise<this> {
@@ -441,7 +552,6 @@ export class Workspace<M extends boolean = true> {
     let errors: Array<InstanceType<typeof WorkspaceError>> = [];
     let repositoryUrl = await getRepositoryUrl(this.path);
     let repositoryBranches = await getRepositoryBranches(this.path);
-
     // load workspace config
     let workspaceConfigPath = path.join(
       this.path,
@@ -562,143 +672,6 @@ export class Workspace<M extends boolean = true> {
     return this;
   }
 
-  async update({args}: WorkspaceUpdateOptions): Promise<this> {
-    if (!this.config.template) {
-      throw new WorkspaceError('MISSING_CARSON_TEMPLATE_ID', {
-        messageParameters: [
-          path.join(this.path, CARSON_CONFIG_DIRECTORY, WORKSPACE_CONFIG_FILENAME),
-        ],
-      });
-    }
-
-    let template = await readCarsonTemplate(this.config.template);
-    let templateRenders = await renderCarsonTemplate({
-      template,
-      templateData: {
-        workspace: this,
-        args,
-      },
-    });
-
-    await applyTemplateRenders({
-      templateRenders,
-      targetPath: this.path,
-      snapshotPath:
-        template.config.autoEject ?
-          undefined
-        : path.join(this.path, CARSON_CONFIG_DIRECTORY, WORKSPACE_SNAPSHOT_FILENAME),
-      ignoreStrategies: ['create'],
-    });
-
-    await this.read();
-
-    return this;
-  }
-
-  getProject(projectName: Project<M> | string): Project<M> | undefined {
-    for (let project of this.projects) {
-      if (project.name === projectName || project === projectName) {
-        return project;
-      }
-    }
-
-    return undefined;
-  }
-
-  async createProject({
-    templateId,
-    projectPath,
-    projectName,
-    args,
-  }: WorkspaceCreateProjectOptions): Promise<Project<M>> {
-    let resolvedProjectPath = path.resolve(projectPath);
-
-    if (this.projects.some((project) => resolvedProjectPath === project.path)) {
-      throw new WorkspaceError('DUPLICATE_PROJECT_PATH', {
-        messageParameters: [resolvedProjectPath],
-      });
-    }
-
-    if (this.projects.some((project) => projectName === project.name)) {
-      throw new WorkspaceError('DUPLICATE_PROJECT_NAME', {messageParameters: [projectName]});
-    }
-
-    if (!this.isMultiProject && this.projects.length >= 1) {
-      throw new WorkspaceError('TOO_MANY_PROJECTS');
-    }
-
-    if (!this.isMultiProject && projectPath !== this.path) {
-      throw new WorkspaceError('PATH_MISMATCH');
-    }
-
-    let newProject = await Project.create({
-      templateId,
-      projectPath,
-      projectName,
-      args,
-      workspace: this,
-    });
-
-    this.addProject(newProject);
-
-    return newProject;
-  }
-
-  addProject(newProject: Project<M>): this {
-    if (this.projects.some((project) => newProject.path === project.path)) {
-      throw new WorkspaceError('DUPLICATE_PROJECT_PATH', {
-        messageParameters: [newProject.path],
-      });
-    }
-
-    if (this.projects.some((project) => newProject.name === project.name)) {
-      throw new WorkspaceError('DUPLICATE_PROJECT_NAME', {messageParameters: [newProject.name]});
-    }
-
-    if (!this.isMultiProject && this.projects.length >= 1) {
-      throw new WorkspaceError('TOO_MANY_PROJECTS');
-    }
-
-    if (!this.isMultiProject && newProject.path !== this.path) {
-      throw new WorkspaceError('PATH_MISMATCH');
-    }
-
-    this.projects.push(newProject);
-    this.sortProjects();
-    this.updateDependencies();
-
-    return this;
-  }
-
-  addProjects(newProjects: Array<Project<M>>): this {
-    for (let newProject of newProjects) {
-      if (this.projects.some((project) => newProject.path === project.path)) {
-        throw new WorkspaceError('DUPLICATE_PROJECT_PATH', {
-          messageParameters: [newProject.path],
-        });
-      }
-
-      if (this.projects.some((project) => newProject.name === project.name)) {
-        throw new WorkspaceError('DUPLICATE_PROJECT_NAME', {messageParameters: [newProject.name]});
-      }
-
-      if (!this.isMultiProject && this.projects.length >= 1) {
-        throw new WorkspaceError('TOO_MANY_PROJECTS');
-      }
-
-      if (!this.isMultiProject && newProject.path !== this.path) {
-        throw new WorkspaceError('PATH_MISMATCH');
-      }
-
-      this.projects.push(newProject);
-    }
-
-    this.sortProjects();
-    this.updateDependencies();
-
-    return this;
-  }
-
   async readProjects(): Promise<Array<Project<M>>> {
     if (this.projectGlobs) {
       let projects: Array<Project<M>> = [];
@@ -733,6 +706,39 @@ export class Workspace<M extends boolean = true> {
 
   protected sortProjects(): void {
     this.projects.sort(compareProjectPath);
+  }
+
+  async update({args}: WorkspaceUpdateOptions): Promise<this> {
+    if (!this.config.template) {
+      throw new WorkspaceError('MISSING_CARSON_TEMPLATE_ID', {
+        messageParameters: [
+          path.join(this.path, CARSON_CONFIG_DIRECTORY, WORKSPACE_CONFIG_FILENAME),
+        ],
+      });
+    }
+
+    let template = await readCarsonTemplate(this.config.template);
+    let templateRenders = await renderCarsonTemplate({
+      template,
+      templateData: {
+        workspace: this,
+        args,
+      },
+    });
+
+    await applyTemplateRenders({
+      templateRenders,
+      targetPath: this.path,
+      snapshotPath:
+        template.config.autoEject ?
+          undefined
+        : path.join(this.path, CARSON_CONFIG_DIRECTORY, WORKSPACE_SNAPSHOT_FILENAME),
+      ignoreStrategies: ['create'],
+    });
+
+    await this.read();
+
+    return this;
   }
 
   protected updateDependencies(): void {

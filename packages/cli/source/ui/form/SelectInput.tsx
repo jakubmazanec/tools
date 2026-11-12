@@ -17,7 +17,10 @@ type SelectInputProps = BoxProps & {
   /** Items to display in a list. */
   items: SelectInputItem[];
 
-  /** Should component listen to user's input? Useful in case there are multiple input components at the same time and input must be handled only by a specific component. */
+  /**
+   * Should component listen to user's input? Useful in case there are multiple input components at
+   * the same time and input must be handled only by a specific component.
+   */
   focus?: boolean | undefined;
 
   /** Index of initially selected item. */

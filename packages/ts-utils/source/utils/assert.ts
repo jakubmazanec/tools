@@ -13,8 +13,8 @@ export class AssertionError extends Error {
 }
 
 /**
- * A function that throws {@link AssertionError} (with optional message defined with `errorMessage`) if
- * `condition` is falsy.
+ * A function that throws {@link AssertionError} (with optional message defined with
+ * `errorMessage`) if `condition` is falsy.
  * You can use it to narrow types:
  *
  * ```TypeScript

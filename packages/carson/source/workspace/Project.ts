@@ -22,13 +22,23 @@ import {saveProjectConfig} from './saveProjectConfig.js';
 import {type Workspace} from './Workspace.js';
 
 /**
- * Project represent a self-contained piece of software (e.g. a package, or an app) that is part of a {@link Workspace}. Currently only Node.js projects are supported.
+ * Project represent a self-contained piece of software (e.g. a package, or an app) that is part of
+ * a {@link Workspace}. Currently only Node.js projects are supported.
  *
  * @typeParam M If true, the project belongs to a multi-project workspace.
  */
 export class Project<M extends boolean = true> {
+  /** Project configuration; if it's not found, the default is an empty object. */
+  config: ProjectConfig;
+
+  /** Errors found during reading from the file system. */
+  errors: Array<InstanceType<typeof ProjectError>> = [];
+
   /** Project name. */
   name?: string;
+
+  /** Parsed project `package.json` file; if it's not found, the default is an empty object. */
+  packageJson: PackageJson;
 
   /** Project path. */
   path: string;
@@ -36,17 +46,8 @@ export class Project<M extends boolean = true> {
   /** Project path relative to workspace path. */
   relativePath: string;
 
-  /** Project configuration; if it's not found, the default is an empty object. */
-  config: ProjectConfig;
-
-  /** Parsed project `package.json` file; if it's not found, the default is an empty object. */
-  packageJson: PackageJson;
-
   /** Parent {@link Workspace} instance. */
   workspace: Workspace<M>;
-
-  /** Errors found during reading from the file system. */
-  errors: Array<InstanceType<typeof ProjectError>> = [];
 
   constructor({
     path: projectPath,
@@ -56,7 +57,8 @@ export class Project<M extends boolean = true> {
     workspace,
     errors,
   }: ProjectOptions<M>) {
-    // TODO: check that this path and workspace path are correct, i.e. project path must always be inside of workspace path
+    // TODO: check that this path and workspace path are correct, i.e. project path must always be
+    // inside of workspace path
     this.path = projectPath;
 
     if (name) {
@@ -104,7 +106,8 @@ export class Project<M extends boolean = true> {
       workspace,
     });
 
-    // if the workspace is single-project, it shares a directory with the project, so we can't insist on it being an empty directory
+    // if the workspace is single-project, it shares a directory with the project, so we can't
+    // insist on it being an empty directory
     if (workspace.isMultiProject) {
       try {
         await ensureEmptyDirectory(project.path);
@@ -172,7 +175,6 @@ export class Project<M extends boolean = true> {
     }
 
     let errors: Array<InstanceType<typeof ProjectError>> = [];
-
     // load project config
     let projectConfigPath = path.join(this.path, CARSON_CONFIG_DIRECTORY, PROJECT_CONFIG_FILENAME);
     let doesProjectConfigExist = await fs.pathExists(projectConfigPath);

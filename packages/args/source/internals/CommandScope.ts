@@ -5,8 +5,8 @@ import {type NormalizedCommandsConfig} from './NormalizedCommandsConfig.js';
  * `CommandScope` handles storing information about parsing of a command.
  */
 export class CommandScope {
-  private readonly args: string[];
   readonly config: NormalizedCommandConfig;
+  private readonly args: string[];
 
   constructor(arg: string, normalizedCommandsConfig: NormalizedCommandsConfig) {
     let normalizedArgument = arg.toLowerCase();
@@ -22,6 +22,14 @@ export class CommandScope {
     this.args.push(arg.toLowerCase());
 
     return this;
+  }
+
+  getArgs() {
+    return [...this.args];
+  }
+
+  getValue() {
+    return this.config.command;
   }
 
   isComplete() {
@@ -50,13 +58,5 @@ export class CommandScope {
     }
 
     return isDone;
-  }
-
-  getValue() {
-    return this.config.command;
-  }
-
-  getArgs() {
-    return [...this.args];
   }
 }

@@ -2,7 +2,8 @@ import {ERROR_MESSAGE_TOKEN_PATTERN} from '../constants.js';
 import {type ErrorMessages} from '../types.js';
 
 /**
- * A function that generates an error message based on provided error code and message parameters. It is used only internally.
+ * A function that generates an error message based on provided error code and message parameters.
+ * It is used only internally.
  *
  * @param errorCode Error code.
  * @param errorMessages Object containing all possible error messages.

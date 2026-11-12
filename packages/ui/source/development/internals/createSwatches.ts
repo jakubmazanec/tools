@@ -12,7 +12,6 @@ export function createSwatches(palette: PaletteConfig) {
   let saturationScale = createSaturationScale(palette.s, palette.valueStop);
   let {h, s, l} = hexToHsl(palette.value);
   let distributionScale = createDistributionValues(l, palette.valueStop);
-
   let swatches = hueScale.map(({stop}, stopIndex) => {
     let newH = unsignedModulo(h + hueScale[stopIndex]!.tweak, 360);
     let newS = clamp(s + saturationScale[stopIndex]!.tweak, 0, 100);

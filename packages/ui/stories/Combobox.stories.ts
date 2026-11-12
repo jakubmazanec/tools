@@ -9,9 +9,7 @@ const items = [
   {label: '🥕 Carrots', value: 'carrots'},
   {label: '🍫 Chocolate', value: 'chocolate'},
 ];
-
 const manyItems = Array.from({length: 1000}, (_, i) => ({value: `${i + 1}`, label: `#${i + 1}`}));
-
 const meta = {
   title: 'Components/Combobox',
   component: Combobox,

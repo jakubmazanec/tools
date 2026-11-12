@@ -21,7 +21,6 @@ const packageJsonFundingSchema = z.union([
     .strict(),
   z.string(),
 ]);
-
 const packageJsonPublishConfigSchema = z.intersection(
   z.object({
     access: z.enum(['public', 'restricted']).optional(),
@@ -30,7 +29,6 @@ const packageJsonPublishConfigSchema = z.intersection(
   }),
   z.record(z.string(), z.unknown()),
 );
-
 const packageJsonPersonSchema = z.union([
   z
     .object({
@@ -41,7 +39,6 @@ const packageJsonPersonSchema = z.union([
     .strict(),
   z.string(),
 ]);
-
 const packageJsonBugsLocationSchema = z.union([
   z
     .object({
@@ -51,7 +48,6 @@ const packageJsonBugsLocationSchema = z.union([
     .strict(),
   z.string(),
 ]);
-
 const packageJsonDirectoryLocationsSchema = z
   .object({
     bin: z.string().optional(),
@@ -62,7 +58,6 @@ const packageJsonDirectoryLocationsSchema = z
     v: z.string().optional(),
   })
   .strict();
-
 const packageJsonScriptsSchema = z.intersection(
   z.record(z.string(), z.string()),
   z.object({
@@ -96,9 +91,7 @@ const packageJsonScriptsSchema = z.intersection(
     postrestart: z.string().optional(),
   }),
 );
-
 const packageJsonDependenciesSchema = z.record(z.string(), z.string());
-
 // eslint-disable-next-line @typescript-eslint/no-unused-vars -- needed
 const packageJsonExportConditionSchema = z.union([
   z.enum([
@@ -137,7 +130,6 @@ const packageJsonExportsSchema: z.ZodType<PackageJsonExports> = z.lazy(() =>
     z.record(z.string(), z.union([packageJsonExportsSchema, z.null()])),
   ]),
 );
-
 const packageJsonBundledDependenciesSchema = z.union([z.string().array(), z.boolean()]).optional();
 
 type PackageJsonExports =

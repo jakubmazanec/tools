@@ -39,9 +39,7 @@ export function DataTableSettings({
     useSensor(TouchSensor),
     useSensor(KeyboardSensor),
   );
-
   let id = useId();
-
   let handleDragEnd = useCallback(
     ({active, over}: DragEndEvent) => {
       if (over && active.id !== over.id) {

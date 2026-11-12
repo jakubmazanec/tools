@@ -37,7 +37,6 @@ export function DataTableSetting({
       id: column.id,
     },
   );
-
   let handleChange = useCallback(
     (checked: boolean) => {
       if (!checked && table.getFlatHeaders().length >= 2) {
@@ -48,19 +47,15 @@ export function DataTableSetting({
     },
     [column, table],
   );
-
   let handlePinLeftClick = useCallback(() => {
     column.pin('left');
   }, [column]);
-
   let handlePinRightClick = useCallback(() => {
     column.pin('right');
   }, [column]);
-
   let handleUnpinClick = useCallback(() => {
     column.pin(false);
   }, [column]);
-
   let resolvedHideColumnPinning = hideColumnPinning || !column.getCanPin();
 
   return (

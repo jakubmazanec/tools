@@ -8,7 +8,8 @@ import {type WorkspaceDependenciesGetVersionsOptions} from './WorkspaceDependenc
 import {type WorkspaceDependency} from './WorkspaceDependency.js';
 
 /**
- * A collection of {@link WorkspaceDependency | workspace dependencies} that are installed in {@link Workspace | a workspace}.
+ * A collection of {@link WorkspaceDependency | workspace dependencies} that are installed in
+ * {@link Workspace | a workspace}.
  */
 export class WorkspaceDependencies<M extends boolean = true> extends Array<WorkspaceDependency> {
   /** The workspace the dependencies are installed in. */
@@ -27,6 +28,128 @@ export class WorkspaceDependencies<M extends boolean = true> extends Array<Works
 
       this.workspace = workspace;
     }
+  }
+
+  /**
+   * Creates new {@link WorkspaceDependencies} instance from a {@link Workspace} instance and its
+   * dependencies.
+   *
+   * @param workspace The workspace from which the dependnecies are taken.
+   * @param options Options.
+   * @returns The new {@link WorkspaceDependencies} instance.
+   */
+  static fromWorkspace<M extends boolean = true>(
+    workspace: Workspace<M>,
+    options?: WorkspaceDependenciesFromWorkspaceOptions,
+  ) {
+    let workspaceDependencies: WorkspaceDependency[] = [];
+
+    if (options?.includeWorkspaceDependencies) {
+      for (let [dependencyName, dependencyVersion] of Object.entries({
+        ...workspace.packageJson?.dependencies,
+        ...workspace.packageJson?.devDependencies,
+        ...(workspace.packageJson?.engines as Record<string, string>),
+      })) {
+        let exactDependencyVersion =
+          semver.validRange(dependencyVersion) ?
+            (semver.minVersion(dependencyVersion)?.format() ??
+            semver.coerce(dependencyVersion)?.format() ??
+            dependencyVersion.trim())
+          : dependencyVersion.trim();
+        let workspaceDependency: WorkspaceDependency = {
+          name: dependencyName,
+          versions: [dependencyVersion],
+          exactVersions: [exactDependencyVersion],
+          projects: [],
+        };
+
+        workspaceDependencies.push(workspaceDependency);
+      }
+    }
+
+    for (let project of workspace.projects) {
+      if (!options?.includeOnlyDevDependencies) {
+        for (let [dependencyName, dependencyVersion] of Object.entries({
+          ...project.packageJson.dependencies,
+          ...(workspace.packageJson?.engines as Record<string, string>),
+        })) {
+          let exactDependencyVersion =
+            semver.validRange(dependencyVersion) ?
+              (semver.minVersion(dependencyVersion)?.format() ??
+              semver.coerce(dependencyVersion)?.format() ??
+              dependencyVersion.trim())
+            : dependencyVersion.trim();
+          let workspaceDependency: WorkspaceDependency = {
+            name: dependencyName,
+            versions: [dependencyVersion],
+            exactVersions: [exactDependencyVersion],
+            projects: [],
+          };
+
+          if (project.name) {
+            workspaceDependency.projects = [
+              {
+                name: project.name,
+                version: dependencyVersion,
+                exactVersion: exactDependencyVersion,
+              },
+            ];
+          }
+
+          workspaceDependencies.push(workspaceDependency);
+        }
+      }
+
+      if (options?.includeDevDependencies || options?.includeOnlyDevDependencies) {
+        for (let [dependencyName, dependencyVersion] of Object.entries({
+          ...project.packageJson.devDependencies,
+        })) {
+          let exactDependencyVersion =
+            semver.validRange(dependencyVersion) ?
+              (semver.minVersion(dependencyVersion)?.format() ??
+              semver.coerce(dependencyVersion)?.format() ??
+              dependencyVersion.trim())
+            : dependencyVersion.trim();
+          let workspaceDependency: WorkspaceDependency = {
+            name: dependencyName,
+            versions: [dependencyVersion],
+            exactVersions: [exactDependencyVersion],
+            projects: [],
+          };
+
+          if (project.name) {
+            workspaceDependency.projects = [
+              {
+                name: project.name,
+                version: dependencyVersion,
+                exactVersion: exactDependencyVersion,
+              },
+            ];
+          }
+
+          workspaceDependencies.push(workspaceDependency);
+        }
+      }
+    }
+
+    return new this(...workspaceDependencies, workspace);
+  }
+
+  /**
+   * Creates map of all dependnecies and their installed version.
+   *
+   * @param options Options.
+   * @returns Object whose keys are dependency names and values are sorted versions.
+   */
+  getVersions(options?: WorkspaceDependenciesGetVersionsOptions) {
+    let versions: Record<string, string[]> = {};
+
+    for (let dependency of this) {
+      versions[dependency.name] =
+        options?.useExactVersions ? dependency.exactVersions : dependency.versions;
+    }
+
+    return versions;
   }
 
   /**
@@ -69,129 +192,5 @@ export class WorkspaceDependencies<M extends boolean = true> extends Array<Works
     }
 
     return this.length;
-  }
-
-  /**
-   * Creates new {@link WorkspaceDependencies} instance from a {@link Workspace} instance and its dependencies.
-   *
-   * @param workspace The workspace from which the dependnecies are taken.
-   * @param options Options.
-   * @returns The new {@link WorkspaceDependencies} instance.
-   */
-  static fromWorkspace<M extends boolean = true>(
-    workspace: Workspace<M>,
-    options?: WorkspaceDependenciesFromWorkspaceOptions,
-  ) {
-    let workspaceDependencies: WorkspaceDependency[] = [];
-
-    if (options?.includeWorkspaceDependencies) {
-      for (let [dependencyName, dependencyVersion] of Object.entries({
-        ...workspace.packageJson?.dependencies,
-        ...workspace.packageJson?.devDependencies,
-        ...(workspace.packageJson?.engines as Record<string, string>),
-      })) {
-        let exactDependencyVersion =
-          semver.validRange(dependencyVersion) ?
-            (semver.minVersion(dependencyVersion)?.format() ??
-            semver.coerce(dependencyVersion)?.format() ??
-            dependencyVersion.trim())
-          : dependencyVersion.trim();
-
-        let workspaceDependency: WorkspaceDependency = {
-          name: dependencyName,
-          versions: [dependencyVersion],
-          exactVersions: [exactDependencyVersion],
-          projects: [],
-        };
-
-        workspaceDependencies.push(workspaceDependency);
-      }
-    }
-
-    for (let project of workspace.projects) {
-      if (!options?.includeOnlyDevDependencies) {
-        for (let [dependencyName, dependencyVersion] of Object.entries({
-          ...project.packageJson.dependencies,
-          ...(workspace.packageJson?.engines as Record<string, string>),
-        })) {
-          let exactDependencyVersion =
-            semver.validRange(dependencyVersion) ?
-              (semver.minVersion(dependencyVersion)?.format() ??
-              semver.coerce(dependencyVersion)?.format() ??
-              dependencyVersion.trim())
-            : dependencyVersion.trim();
-
-          let workspaceDependency: WorkspaceDependency = {
-            name: dependencyName,
-            versions: [dependencyVersion],
-            exactVersions: [exactDependencyVersion],
-            projects: [],
-          };
-
-          if (project.name) {
-            workspaceDependency.projects = [
-              {
-                name: project.name,
-                version: dependencyVersion,
-                exactVersion: exactDependencyVersion,
-              },
-            ];
-          }
-
-          workspaceDependencies.push(workspaceDependency);
-        }
-      }
-
-      if (options?.includeDevDependencies || options?.includeOnlyDevDependencies) {
-        for (let [dependencyName, dependencyVersion] of Object.entries({
-          ...project.packageJson.devDependencies,
-        })) {
-          let exactDependencyVersion =
-            semver.validRange(dependencyVersion) ?
-              (semver.minVersion(dependencyVersion)?.format() ??
-              semver.coerce(dependencyVersion)?.format() ??
-              dependencyVersion.trim())
-            : dependencyVersion.trim();
-
-          let workspaceDependency: WorkspaceDependency = {
-            name: dependencyName,
-            versions: [dependencyVersion],
-            exactVersions: [exactDependencyVersion],
-            projects: [],
-          };
-
-          if (project.name) {
-            workspaceDependency.projects = [
-              {
-                name: project.name,
-                version: dependencyVersion,
-                exactVersion: exactDependencyVersion,
-              },
-            ];
-          }
-
-          workspaceDependencies.push(workspaceDependency);
-        }
-      }
-    }
-
-    return new this(...workspaceDependencies, workspace);
-  }
-
-  /**
-   * Creates map of all dependnecies and their installed version.
-   *
-   * @param options Options.
-   * @returns Object whose keys are dependency names and values are sorted versions.
-   */
-  getVersions(options?: WorkspaceDependenciesGetVersionsOptions) {
-    let versions: Record<string, string[]> = {};
-
-    for (let dependency of this) {
-      versions[dependency.name] =
-        options?.useExactVersions ? dependency.exactVersions : dependency.versions;
-    }
-
-    return versions;
   }
 }

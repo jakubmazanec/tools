@@ -11,7 +11,6 @@ console.log(
       let tailwindConfigColors = createTailwindThemeColors(
         defaultCreateTailwindConfigOptions.colors,
       );
-
       let result = {
         name: 'Custom palette',
         hues: [] as unknown[],
@@ -41,7 +40,6 @@ console.log('\n\nTailwind theme colors:');
 console.log(
   (() => {
     let tailwindConfigColors = createTailwindThemeColors(defaultCreateTailwindConfigOptions.colors);
-
     let result = '';
 
     for (let key of Object.keys(tailwindConfigColors)) {

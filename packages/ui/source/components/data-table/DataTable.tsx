@@ -201,7 +201,6 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D, any>>>
   let [search, setSearch] = useState('');
   let [showRowSummary, setShowRowSummary] = useState(false);
   let [rowSummaryRow, setRowSummaryRow] = useState<Row<D> | null>(null);
-
   let handleColumnVisibilityChange = useCallback(
     (columnVisibilityState: Updater<VisibilityState>) => {
       setColumnVisibility(columnVisibilityState);
@@ -238,7 +237,6 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D, any>>>
     },
     [columnPinning, onColumnPinningChange],
   );
-
   let table = useReactTable<D>({
     data,
     columns,
@@ -269,7 +267,6 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D, any>>>
     globalFilterFn: fuzzyFilter,
     getColumnCanGlobalFilter: () => true,
   });
-
   let page =
     clientPagination ?
       table.getState().pagination.pageIndex + 1
@@ -279,16 +276,13 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D, any>>>
       table.getState().pagination.pageSize
     : (controlledPagination?.pageSize ?? DEFAULT_PAGE_SIZE);
   let pageCount = clientPagination ? table.getPageCount() : (controlledPagination?.pageCount ?? 1);
-
   let toggleFilters = useCallback(() => {
     setShowFilters((value) => !value);
   }, []);
-
   let handleRowClick = useCallback((row: Row<D>) => {
     setRowSummaryRow(row);
     setShowRowSummary(true);
   }, []);
-
   let handleCloseRowDialog = useCallback(() => {
     setShowRowSummary(false);
   }, []);

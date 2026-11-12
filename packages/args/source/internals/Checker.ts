@@ -11,47 +11,14 @@ import {isLongOption} from './isLongOption.js';
 export class Checker {
   errors: Error[] = [];
 
+  addError(error: Error) {
+    this.errors.push(error);
+  }
+
   checkCommandsConfig(commandsConfig: CommandsConfig | []) {
     for (let commandConfig of commandsConfig) {
       if (!isCommand(commandConfig)) {
         this.addError(new ValidationError('INVALID_COMMAND', {messageParameters: [commandConfig]}));
-      }
-    }
-  }
-
-  checkParametersConfig(parametersConfig: ParametersConfig | []) {
-    for (let [i, parameterConfig] of parametersConfig.entries()) {
-      // types of choices must be correct
-      if (
-        parameterConfig.type !== 'boolean' &&
-        parameterConfig.choices && // default values and chocies do not contradict each other
-        parameterConfig.defaultValue !== undefined &&
-        !parameterConfig.choices.includes(parameterConfig.defaultValue as never)
-      ) {
-        this.addError(
-          new ValidationError('INVALID_PARAMETER_DEFAULT_AND_CHOICES', {
-            messageParameters: [parameterConfig.label ?? i, parameterConfig.defaultValue],
-          }),
-        );
-      }
-
-      // if parameter is required, all parameters before must be required too
-      if (
-        i >= 1 &&
-        parameterConfig.required === true &&
-        !parametersConfig
-          .slice(0, i)
-          .every(
-            (previousParameterConfig) =>
-              previousParameterConfig.required === true ||
-              previousParameterConfig.defaultValue !== undefined,
-          )
-      ) {
-        this.addError(
-          new ValidationError('INVALID_PARAMETER_ORDER', {
-            messageParameters: [parameterConfig.label ?? i],
-          }),
-        );
       }
     }
   }
@@ -97,14 +64,36 @@ export class Checker {
     }
   }
 
-  checkParsedParameters(parametersConfig: ParametersConfig | [], parsedParameters: unknown[]) {
+  checkParametersConfig(parametersConfig: ParametersConfig | []) {
     for (let [i, parameterConfig] of parametersConfig.entries()) {
-      let parsedParameter = parsedParameters[i];
-
-      // required parameters must have value
-      if (parameterConfig.required === true && parsedParameter === undefined) {
+      // types of choices must be correct
+      if (
+        parameterConfig.type !== 'boolean' &&
+        parameterConfig.choices && // default values and chocies do not contradict each other
+        parameterConfig.defaultValue !== undefined &&
+        !parameterConfig.choices.includes(parameterConfig.defaultValue as never)
+      ) {
         this.addError(
-          new ValidationError('MISSING_PARAMETER', {
+          new ValidationError('INVALID_PARAMETER_DEFAULT_AND_CHOICES', {
+            messageParameters: [parameterConfig.label ?? i, parameterConfig.defaultValue],
+          }),
+        );
+      }
+
+      // if parameter is required, all parameters before must be required too
+      if (
+        i >= 1 &&
+        parameterConfig.required === true &&
+        !parametersConfig
+          .slice(0, i)
+          .every(
+            (previousParameterConfig) =>
+              previousParameterConfig.required === true ||
+              previousParameterConfig.defaultValue !== undefined,
+          )
+      ) {
+        this.addError(
+          new ValidationError('INVALID_PARAMETER_ORDER', {
             messageParameters: [parameterConfig.label ?? i],
           }),
         );
@@ -144,7 +133,18 @@ export class Checker {
     }
   }
 
-  addError(error: Error) {
-    this.errors.push(error);
+  checkParsedParameters(parametersConfig: ParametersConfig | [], parsedParameters: unknown[]) {
+    for (let [i, parameterConfig] of parametersConfig.entries()) {
+      let parsedParameter = parsedParameters[i];
+
+      // required parameters must have value
+      if (parameterConfig.required === true && parsedParameter === undefined) {
+        this.addError(
+          new ValidationError('MISSING_PARAMETER', {
+            messageParameters: [parameterConfig.label ?? i],
+          }),
+        );
+      }
+    }
   }
 }

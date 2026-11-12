@@ -34,7 +34,6 @@ export function createForm<C extends FormConfig>(formConfig: C): Form<C> {
       },
       [onChange, results],
     );
-
     let handleFinish = useCallback(
       (value: unknown, rowName: keyof C['rows']) => {
         onFinish({
@@ -47,7 +46,6 @@ export function createForm<C extends FormConfig>(formConfig: C): Form<C> {
       },
       [onFinish, results],
     );
-
     let inputElements = [];
     let activeInputName: string | null = null;
 

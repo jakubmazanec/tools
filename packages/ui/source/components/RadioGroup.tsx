@@ -71,7 +71,6 @@ export function RadioGroup<
 }: RadioGroupProps<T, V>) {
   let theme = useRadioGroupTheme({disabled});
   let formId = useFormId();
-
   let handleChange = useCallback(
     (newValue: V) => {
       onChange?.(newValue);

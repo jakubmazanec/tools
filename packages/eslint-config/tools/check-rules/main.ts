@@ -36,7 +36,6 @@ let typescriptRules = Object.entries(typescriptRulesConfig!).map(([ruleName]) =>
 let unicornRules = Object.entries(unicornRulesConfig!).map(([ruleName]) => ruleName);
 let securityRules = Object.entries(securityRulesConfig!).map(([ruleName]) => ruleName);
 let perfectionistRules = Object.entries(perfectionistRulesConfig!).map(([ruleName]) => ruleName);
-
 let usedRules = [
   ...a11yRules,
   ...eslintRules,
@@ -58,7 +57,6 @@ let usedRules = [
 ]
   .map((ruleName) => ruleName.replace(/^no-autofix\//, ''))
   .sort();
-
 let missingRules: string[] = [];
 
 allRules.forEach((ruleName: string) => {

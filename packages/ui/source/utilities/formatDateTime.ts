@@ -5,7 +5,6 @@ export type FormatDateTimeOptions = Intl.DateTimeFormatOptions & WithLocaleOrLoc
 
 export function formatDateTime(value: Date | string, options: FormatDateTimeOptions): string {
   let normalizedLocales = normalizeLocales(options);
-
   let formatter = getMemoized(
     () => createCacheKey('date', normalizedLocales, options),
     () => new Intl.DateTimeFormat(normalizedLocales, options),

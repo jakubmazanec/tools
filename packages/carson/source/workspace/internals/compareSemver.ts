@@ -16,7 +16,6 @@ export function compareSemver(a: string, b: string) {
     semver.validRange(b) ?
       (semver.minVersion(b)?.format() ?? semver.coerce(b)?.format() ?? '0.0.0')
     : '0.0.0';
-
   let comparison = semver.compare(firstSemver, secondSemver);
 
   if (comparison === 0 && (a !== firstSemver || b !== secondSemver)) {

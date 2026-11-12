@@ -44,7 +44,6 @@ export function ListboxOption<
   ...rest
 }: ListboxOptionProps<T, V>) {
   let theme = useListboxOptionTheme({disabled});
-
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   let props: HeadlessListboxOptionProps<any, any> = {
     as,

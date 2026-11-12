@@ -14,8 +14,8 @@ export const TemplateError = createCustomErrorWithData(
     FAILED_RENDER: 'Template rendering has failed.',
   },
   class TemplateErrorData {
-    template?: Template;
     path?: string;
+    template?: Template;
     zodIssues?: ZodIssue[];
   },
 );

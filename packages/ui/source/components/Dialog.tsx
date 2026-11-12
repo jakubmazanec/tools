@@ -48,11 +48,9 @@ export function Dialog<T extends ElementType = typeof DIALOG_ELEMENT>({
   ...rest
 }: DialogProps<T>) {
   let theme = useDialogTheme();
-
   let handleClose = useCallback(() => {
     onClose?.();
   }, [onClose]);
-
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   let props: HeadlessDialogProps<any> = filterProps({
     as,

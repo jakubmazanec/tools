@@ -37,7 +37,6 @@ export const DataTablePagination = memo(
   }: DataTablePaginationProps) => {
     let isFirstPage = page === 1;
     let isLastPage = page >= pageCount;
-
     let handlePageClick = useCallback(
       (newPage: number) => {
         if (clientPagination) {
@@ -52,7 +51,6 @@ export const DataTablePagination = memo(
       },
       [clientPagination, onPagination, pageCount, table],
     );
-
     let handleFirstPageClick = useCallback(() => {
       if (clientPagination) {
         table.firstPage();
@@ -64,7 +62,6 @@ export const DataTablePagination = memo(
         });
       }
     }, [clientPagination, onPagination, table]);
-
     let handleLastPageClick = useCallback(() => {
       if (clientPagination) {
         table.lastPage();
@@ -76,7 +73,6 @@ export const DataTablePagination = memo(
         });
       }
     }, [clientPagination, onPagination, pageCount, table]);
-
     let handlePreviousPageClick = useCallback(() => {
       if (clientPagination) {
         table.previousPage();
@@ -88,7 +84,6 @@ export const DataTablePagination = memo(
         });
       }
     }, [clientPagination, onPagination, page, pageCount, table]);
-
     let handleNextPageClick = useCallback(() => {
       if (clientPagination) {
         table.nextPage();
@@ -100,7 +95,6 @@ export const DataTablePagination = memo(
         });
       }
     }, [clientPagination, onPagination, page, pageCount, table]);
-
     let handlePageChange = useCallback(
       (event: ChangeEvent<HTMLInputElement>) => {
         let pageIndex = event.target.value ? Number(event.target.value) - 1 : 0;
@@ -117,7 +111,6 @@ export const DataTablePagination = memo(
       },
       [clientPagination, onPagination, pageCount, table],
     );
-
     let handlePageSizeChange = useCallback(
       (pageSize: string) => {
         if (clientPagination) {

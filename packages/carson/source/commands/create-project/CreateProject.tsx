@@ -56,6 +56,7 @@ export function CreateProject({args, workspace}: CreateProjectProps) {
           setStatus('finished');
         },
       });
+
       setSubscription(newSubscription);
     }
 

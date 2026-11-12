@@ -1,7 +1,6 @@
 import * as z from 'zod';
 
 let jsxSchema = z.enum(['preserve', 'react', 'react-jsx', 'react-jsxdev', 'react-native']);
-
 let moduleSchema = z.enum([
   'CommonJS',
   'AMD',
@@ -22,9 +21,7 @@ let moduleSchema = z.enum([
   'esnext',
   'none',
 ]);
-
 let newLineSchema = z.enum(['CRLF', 'LF', 'crlf', 'lf']);
-
 let targetSchema = z.enum([
   'ES3',
   'ES5',
@@ -49,7 +46,6 @@ let targetSchema = z.enum([
   'es2021',
   'esnext',
 ]);
-
 let libSchema = z.enum([
   'ES5',
   'ES6',
@@ -168,16 +164,13 @@ let libSchema = z.enum([
   'webworker.importscripts',
   'webworker.iterable',
 ]);
-
 let pluginSchema = z
   .object({
     name: z.string().optional(),
   })
   .strict()
   .and(z.record(z.string(), z.unknown()));
-
 let importsNotUsedAsValuesSchema = z.enum(['remove', 'preserve', 'error']);
-
 let fallbackPollingSchema = z.enum([
   'fixedPollingInterval',
   'priorityPollingInterval',
@@ -187,14 +180,12 @@ let fallbackPollingSchema = z.enum([
   'dynamicPriority',
   'fixedChunkSize',
 ]);
-
 let watchDirectory = z.enum([
   'useFsEvents',
   'fixedPollingInterval',
   'dynamicPriorityPolling',
   'fixedChunkSizePolling',
 ]);
-
 let watchFileSchema = z.enum([
   'fixedPollingInterval',
   'priorityPollingInterval',
@@ -203,7 +194,6 @@ let watchFileSchema = z.enum([
   'useFsEventsOnParentDirectory',
   'fixedChunkSizePolling',
 ]);
-
 let compilerOptionsSchema = z
   .object({
     allowJs: z.boolean().optional(),
@@ -311,7 +301,6 @@ let compilerOptionsSchema = z
     watchFile: watchFileSchema.optional(),
   })
   .strict();
-
 let typeAcquisitionSchema = z
   .object({
     enable: z.boolean().optional(),
@@ -319,7 +308,6 @@ let typeAcquisitionSchema = z
     exclude: z.string().array().optional(),
   })
   .strict();
-
 let referencesSchema = z
   .object({
     path: z.string(),

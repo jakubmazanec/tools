@@ -9,11 +9,11 @@ import {castValue} from './castValue.js';
  * `CommandScope` handles storing information about parsing of an option..
  */
 export class OptionScope {
-  name: string;
-
-  values: unknown[] = [];
-  previousParsedValue?: unknown[] | unknown;
   readonly config: OptionConfig;
+
+  name: string;
+  previousParsedValue?: unknown[] | unknown;
+  values: unknown[] = [];
 
   constructor(optionName: string, optionsConfig: OptionsConfig, allowUnknownOptions = false) {
     this.name = optionName;
@@ -62,23 +62,6 @@ export class OptionScope {
     }
   }
 
-  isComplete() {
-    if (!this.config.multiple && this.values.length === 1) {
-      return true;
-    }
-
-    if (
-      this.config.multiple &&
-      typeof this.config.arity === 'number' &&
-      this.values.length + ((this.previousParsedValue as unknown[] | undefined) ?? []).length ===
-        this.config.arity
-    ) {
-      return true;
-    }
-
-    return false;
-  }
-
   getValue() {
     let {config, previousParsedValue} = this;
     let {values} = this;
@@ -98,5 +81,22 @@ export class OptionScope {
     }
 
     return config.multiple ? values : values[0];
+  }
+
+  isComplete() {
+    if (!this.config.multiple && this.values.length === 1) {
+      return true;
+    }
+
+    if (
+      this.config.multiple &&
+      typeof this.config.arity === 'number' &&
+      this.values.length + ((this.previousParsedValue as unknown[] | undefined) ?? []).length ===
+        this.config.arity
+    ) {
+      return true;
+    }
+
+    return false;
   }
 }
