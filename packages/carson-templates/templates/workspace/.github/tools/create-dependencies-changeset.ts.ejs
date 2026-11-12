@@ -152,7 +152,7 @@ async function createChangesetForCarsonTemplates(
   let workspaceDependencyBumps = dependencyBumps.get(WORKSPACE_PLACEHOLDER_NAME);
 
   if (workspaceDependencyBumps) {
-    let message = `Applies templates from \`${TEMPLATE_PACKAGE_NAME}\` updated to version \`${workspaceDependencyBumps.get(TEMPLATE_PACKAGE_NAME) ?? '?'}\`.\n`;
+    let message = `Applied templates from \`${TEMPLATE_PACKAGE_NAME}\` updated to version \`${workspaceDependencyBumps.get(TEMPLATE_PACKAGE_NAME) ?? '?'}\`.\n`;
 
     let projects = await getProjectsWithCarson();
     let header = projects.map((projectName) => `'${projectName}': patch`).join('\n');
