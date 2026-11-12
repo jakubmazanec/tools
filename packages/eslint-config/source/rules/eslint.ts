@@ -43,7 +43,7 @@ export const eslintRules: eslint.Linter.Config['rules'] = {
   'id-match': 'off', // require identifiers to match a specified regular expression
   'init-declarations': 'off', // require or disallow initialization in variable declarations
   'logical-assignment-operators': ['warn', 'always', {enforceForIfStatements: true}], // require or disallow logical assignment logical operator shorthand
-  'max-classes-per-file': ['warn', 1], // enforce a maximum number of classes per file
+  'max-classes-per-file': 'off', // enforce a maximum number of classes per file
   'max-depth': 'off', // enforce a maximum depth that blocks can be nested
   'max-lines': 'off', // enforce a maximum number of lines per file
   'max-lines-per-function': 'off', // enforce a maximum number of line of code in a function

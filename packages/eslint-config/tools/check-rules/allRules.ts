@@ -6,6 +6,7 @@ import eslintPluginStylistic from '@stylistic/eslint-plugin';
 import eslintPluginTypescript from '@typescript-eslint/eslint-plugin';
 import eslintPluginVitest from '@vitest/eslint-plugin';
 import {type Linter} from 'eslint';
+import eslintPluginCommentLength from 'eslint-plugin-comment-length';
 import eslintPluginImport from 'eslint-plugin-import';
 import eslintPluginJsxA11y from 'eslint-plugin-jsx-a11y';
 import eslintPluginNode from 'eslint-plugin-n';
@@ -50,6 +51,10 @@ let eslintCommentsRules = (
 )
   .filter(([, rule]) => !rule.meta?.deprecated)
   .map(([ruleName]) => `eslint-comments/${ruleName}`);
+
+let commentLengthRules = (Object.entries(eslintPluginCommentLength.rules) as Array<[string, Rule]>)
+  .filter(([, rule]) => !rule.meta?.deprecated)
+  .map(([ruleName]) => `comment-length/${ruleName}`);
 
 let importRules = (Object.entries(eslintPluginImport.rules) as Array<[string, Rule]>)
   .filter(([, rule]) => !rule.meta?.deprecated)
@@ -122,6 +127,7 @@ export const allRules = [
   ...typescriptRules,
   ...stylisticRules,
   ...eslintCommentsRules,
+  ...commentLengthRules,
   ...importRules,
   ...vitestRules,
   ...jsxA11yRules,

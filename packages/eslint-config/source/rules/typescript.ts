@@ -71,7 +71,7 @@ export const typescriptRules: eslint.Linter.Config['rules'] = {
     'warn',
     {fixMixedExportsWithInlineTypeSpecifier: true},
   ], // enforces consistent usage of type exports
-  '@typescript-eslint/consistent-type-imports': 'warn', // enforces consistent usage of type imports
+  '@typescript-eslint/consistent-type-imports': 'error', // enforces consistent usage of type imports
   '@typescript-eslint/default-param-last': 'warn', // enforce default parameters to be last
   '@typescript-eslint/dot-notation': ['error', {allowKeywords: true}], // enforce dot notation whenever possible
   '@typescript-eslint/explicit-function-return-type': 'off', // require explicit return types on functions and class methods
@@ -270,7 +270,7 @@ export const typescriptRules: eslint.Linter.Config['rules'] = {
   '@typescript-eslint/no-non-null-asserted-optional-chain': 'error', // disallows using a non-null assertion after an optional chain expression
   '@typescript-eslint/no-non-null-assertion': 'warn', // disallows non-null assertions using the ! postfix operator
   '@typescript-eslint/no-redundant-type-constituents': 'warn', // disallow members of unions and intersections that do nothing or override type information
-  '@typescript-eslint/no-redeclare': 'error', // disallow variable redeclaration
+  '@typescript-eslint/no-redeclare': 'off', // disallow variable redeclaration
   '@typescript-eslint/no-deprecated': 'warn', // disallow using code marked as @deprecated
   '@typescript-eslint/no-restricted-imports': 'off', // disallow specified modules when loaded by import
   '@typescript-eslint/no-restricted-types': [

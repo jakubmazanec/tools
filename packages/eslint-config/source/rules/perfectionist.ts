@@ -10,7 +10,33 @@ export const perfectionistRules: eslint.Linter.Config['rules'] = {
       partitionByNewLine: true,
     },
   ], // enforce sorted arrays before include method
-  'perfectionist/sort-classes': 'off', // enforce sorted classes
+  'perfectionist/sort-classes': [
+    'error',
+    {
+      type: 'alphabetical',
+      ignoreCase: false,
+      groups: [
+        'property',
+        'private-property',
+        'static-property',
+        'static-block',
+        'constructor',
+        'init-method',
+        'static-method',
+        ['get-method', 'set-method'],
+        ['method', 'function-property'],
+        ['private-method', 'private-function-property'],
+        'unknown',
+      ],
+      customGroups: [
+        {
+          groupName: 'init-method',
+          selector: 'method',
+          elementNamePattern: '^init$',
+        },
+      ],
+    },
+  ], // enforce sorted classes
   'perfectionist/sort-decorators': 'off', // dnforce sorted decorators
   'perfectionist/sort-enums': [
     'error',
