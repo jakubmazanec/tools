@@ -61,7 +61,7 @@ let packageJson = lodash.merge(
       codegen: 'react-router typegen',
       develop: `react-router dev --port ${APP_PORT}`,
       format: FORMAT_COMMAND,
-      lint: 'eslint .',
+      lint: 'eslint . --quiet',
       start:
         `cross-env NODE_ENV=production PORT=${APP_PORT} react-router-serve ./build/server/index.js`,
       test: `del-cli coverage && ${TEST_COMMAND}`,
