@@ -13,9 +13,6 @@ Tool for managing workspace and project configuration.
 npm install @jakubmazanec/carson
 ```
 
-⚠️ This is an [ESM](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c) package!
-It cannot be required from a CommonJS module.
-
 Usually you also need a package containing Carson templates. Until you
 [create your own](#carson-templates), you can use mine:
 

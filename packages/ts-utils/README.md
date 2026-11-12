@@ -13,9 +13,6 @@ Collection of TypeScript types and utilities.
 npm install @jakubmazanec/ts-utils
 ```
 
-⚠️ This is an [ESM](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c) package!
-It cannot be required from a CommonJS module.
-
 <!-- prerequisites -->
 
 #### Prerequisites
