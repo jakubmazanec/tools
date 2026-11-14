@@ -1,5 +1,7 @@
 import {type Project, type Workspace} from '@jakubmazanec/carson';
 
+import {isRustProject} from './isRustProject.js';
+
 export function getReferences(
   workspace: Workspace | Workspace<false>,
   project: Project | Project<false>,
@@ -8,7 +10,7 @@ export function getReferences(
 
   for (let dependency of workspace.allDependencies) {
     for (let workspaceProject of workspace.projects) {
-      if (dependency.name === workspaceProject.name) {
+      if (dependency.name === workspaceProject.name && !isRustProject(workspaceProject)) {
         for (let dependencyProject of dependency.projects) {
           if (dependencyProject.name === project.name) {
             references.push({

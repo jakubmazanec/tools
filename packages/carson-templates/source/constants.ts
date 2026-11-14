@@ -51,6 +51,7 @@ export const FORMAT_IGNORE_PATTERNS = [
 ].sort();
 
 export const ECMASCRIPT_VERSION = 2025;
+export const RUST_VERSION = '1.99.1';
 
 export const TSCONFIG_COMPILER_OPTIONS = {
   composite: true,

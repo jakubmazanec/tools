@@ -1,0 +1,8 @@
+---
+to: 'rust-toolchain.toml'
+strategy: create
+---
+[toolchain]
+channel = "<%- RUST_VERSION %>"
+components = ["clippy", "rustfmt"]
+profile = "minimal"

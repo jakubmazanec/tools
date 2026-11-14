@@ -1,0 +1,18 @@
+---
+to: 'package.json'
+strategy: create
+---
+{
+  "name": "<%- project.name %>",
+  "version": "0.0.0",
+  "description": "",
+  "repository": {
+    "url": "<%- workspace.repository?.url ?? '' %>"
+  },
+  "license": "GPL-3.0-or-later",
+  "author": "<%- AUTHOR %>",
+  "scripts": {
+    "build": "cargo build --release",
+    "test": "cargo test --workspace"
+  }
+}
