@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "@changesets/parse": "^0.4.3",
-    "@changesets/types": "^6.1.0",
+    "@changesets/types": "^7.0.0",
     "@jakubmazanec/eslint-config": "^5.0.0",
     "@types/lodash": "^4.17.26",
     "@types/node": "^26.6.5",
