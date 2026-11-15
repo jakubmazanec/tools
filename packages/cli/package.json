@@ -41,8 +41,8 @@
   "devDependencies": {
     "@jakubmazanec/eslint-config": "^5.0.0",
     "@types/fs-extra": "^11.0.4",
-    "@types/lodash": "^4.17.26",
-    "@types/node": "^26.6.5",
+    "@types/lodash": "^4.17.27",
+    "@types/node": "^26.6.6",
     "@types/react": "^19.3.0",
     "@vitest/coverage-v8": "^5.0.5",
     "concurrently": "^10.0.6",
@@ -53,10 +53,10 @@
     "ink": "^6.8.0",
     "ink-testing-library": "^4.0.0",
     "prettier": "^3.9.10",
-    "prettier-plugin-packagejson": "^3.0.3",
+    "prettier-plugin-packagejson": "^3.1.0",
     "react": "^19.3.1",
     "typedoc": "^0.28.20",
-    "typedoc-plugin-markdown": "^4.14.0",
+    "typedoc-plugin-markdown": "^4.14.1",
     "typescript": "^6.0.3",
     "vitest": "^5.0.5"
   },
