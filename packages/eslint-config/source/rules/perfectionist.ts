@@ -41,18 +41,17 @@ export const perfectionistRules: eslint.Linter.Config['rules'] = {
       ignoreCase: false,
       sortSideEffects: true,
       groups: [
-        ['builtin', 'external', 'external-type', 'builtin-type'],
+        ['builtin', 'external', 'type-external', 'type-builtin'],
         [
           'internal',
           'parent',
           'sibling',
           'index',
-          'object',
           'style',
-          'internal-type',
-          'parent-type',
-          'sibling-type',
-          'index-type',
+          'type-internal',
+          'type-parent',
+          'type-sibling',
+          'type-index',
           'unknown',
         ],
         ['side-effect', 'side-effect-style'],
@@ -86,11 +85,11 @@ export const perfectionistRules: eslint.Linter.Config['rules'] = {
     {
       type: 'alphabetical',
       ignoreCase: false,
-      groups: ['reserved', 'shorthand', 'multiline', 'unknown', 'callback'],
-      customGroups: {
-        callback: '^on.+',
-        reserved: '^(ref|key)$',
-      },
+      groups: ['reserved', 'shorthand-prop', 'multiline-prop', 'unknown', 'callback'],
+      customGroups: [
+        {groupName: 'callback', elementNamePattern: '^on.+'},
+        {groupName: 'reserved', elementNamePattern: '^(ref|key)$'},
+      ],
     },
   ], // enforce sorted JSX props
   'perfectionist/sort-maps': [
