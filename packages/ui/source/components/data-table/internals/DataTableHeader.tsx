@@ -38,7 +38,6 @@ export function DataTableHeader({
 }: DataTableHeaderProps) {
   let sorting =
     clientSorting ? normalizeSorting(header) : normalizeSorting(header, controlledSorting);
-
   let contentElement = null;
 
   if (!header.isPlaceholder) {
@@ -97,13 +96,10 @@ export function DataTableHeader({
       onSorting(newSorting);
     }
   }, [sorting, clientSorting, onSorting, header.column]);
-
   let handleWidthReset = useCallback(() => {
     header.column.resetSize();
   }, [header.column]);
-
   let resolvedHideSorting = hideSorting || !header.column.getCanSort();
-
   let style: CSSProperties = {
     transition: 'width transform 0.2s ease-in-out',
     ...getCommonPinningStyles(header.column),

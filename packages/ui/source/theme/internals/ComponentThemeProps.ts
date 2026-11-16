@@ -7,5 +7,7 @@ export type ComponentThemeProps<D extends ComponentThemeDefinition | undefined> 
       {
         [J in keyof D['variants']]: D['variants'][J][number];
       }
-    : NonNullable<unknown>
-  : NonNullable<unknown>;
+    : // eslint-disable-next-line @typescript-eslint/no-generated-empty-object-type -- needed, a theme without variants takes no theme props
+      NonNullable<unknown>
+  : // eslint-disable-next-line @typescript-eslint/no-generated-empty-object-type -- needed, a theme without variants takes no theme props
+    NonNullable<unknown>;

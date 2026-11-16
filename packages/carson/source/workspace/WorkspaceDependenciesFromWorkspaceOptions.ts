@@ -1,5 +1,6 @@
 /**
- * {@link WorkspaceDependencies.fromWorkspace | WorkspaceDependencies.fromWorkspace} options parameter.
+ * {@link WorkspaceDependencies.fromWorkspace | WorkspaceDependencies.fromWorkspace} options
+ * parameter.
  */
 export type WorkspaceDependenciesFromWorkspaceOptions = {
   includeDevDependencies?: boolean;

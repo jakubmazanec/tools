@@ -52,7 +52,6 @@ export function Button<T extends ElementType = typeof BUTTON_ELEMENT>({
   ...rest
 }: ButtonProps<T>) {
   let theme = useButtonTheme({variant, size, disabled});
-
   let props: Record<string, unknown> = {
     as,
     ref,

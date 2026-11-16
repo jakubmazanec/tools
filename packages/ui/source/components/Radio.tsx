@@ -42,7 +42,6 @@ export function Radio<
   ...rest
 }: RadioProps<T, V>) {
   let theme = useRadioTheme({disabled});
-
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   let props: HeadlessRadioProps<any, V> = {
     as,

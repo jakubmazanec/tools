@@ -24,7 +24,10 @@ type FormRowProps<C extends FormConfig> = BoxProps & {
   /** Value. */
   value: unknown;
 
-  /** Should component listen to Listen to user's input? Useful in case there are multiple input components at the same time and input must be "routed" to a specific component. */
+  /**
+   * Should component listen to Listen to user's input? Useful in case there are multiple input
+   * components at the same time and input must be "routed" to a specific component.
+   */
   focus: boolean;
 
   /** Handler function that is called when value changes. */
@@ -33,7 +36,10 @@ type FormRowProps<C extends FormConfig> = BoxProps & {
   /** Handler function that is called when the value is accepted. */
   onComplete: (value: unknown, inputName: keyof C['rows']) => void;
 
-  /** Indicates whether value has been accepted. Component in the row then doesn't accept more input. */
+  /**
+   * Indicates whether value has been accepted. Component in the row then doesn't accept more
+   * input.
+   */
   isComplete: boolean;
 };
 
@@ -58,14 +64,12 @@ export function FormRow<C extends FormConfig>({
     },
     [rowName, onChange],
   );
-
   let handleFinish = useCallback(
     (newValue: unknown) => {
       onComplete(newValue, rowName);
     },
     [rowName, onComplete],
   );
-
   let handleSelectFinish = useCallback(
     (item: {value: unknown}) => {
       onComplete(item.value, rowName);

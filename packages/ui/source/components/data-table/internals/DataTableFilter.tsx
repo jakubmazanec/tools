@@ -43,12 +43,10 @@ export function DataTableFilter({
   faceting,
 }: DataTableFilterProps) {
   let {filterVariant} = column.columnDef.meta ?? {};
-
   let currentFilters =
     clientFilters ? normalizeFilters(table) : normalizeFilters(table, controlledFilters);
   let currentFilter =
     clientFilters ? normalizeFilter(column) : normalizeFilter(column, controlledFilters);
-
   let currentMin =
     filterVariant === 'range' ?
       ((currentFilter as [number?, number?] | undefined)?.[0] ?? undefined)
@@ -57,13 +55,11 @@ export function DataTableFilter({
     filterVariant === 'range' ?
       ((currentFilter as [number?, number?] | undefined)?.[1] ?? undefined)
     : undefined;
-
   let [filter, setFilter] = useState<string | undefined>(
     typeof currentFilter === 'string' ? currentFilter : undefined,
   );
   let [min, setMin] = useState(currentMin);
   let [max, setMax] = useState(currentMax);
-
   let facetingValues = useMemo(() => {
     if (!clientFaceting) {
       return faceting?.[column.id]?.values ?? [];
@@ -75,7 +71,6 @@ export function DataTableFilter({
 
     return [...column.getFacetedUniqueValues().keys()].sort().slice(0, 5000) as unknown[];
   }, [clientFaceting, column, faceting, filterVariant]);
-
   let facetingMin =
     clientFaceting ?
       Number(column.getFacetedMinMaxValues()?.[0] ?? null)
@@ -84,15 +79,12 @@ export function DataTableFilter({
     clientFaceting ?
       Number(column.getFacetedMinMaxValues()?.[1] ?? null)
     : (faceting?.[column.id]?.max ?? null);
-
   let handleMinRangeChange = useCallback((event: ChangeEvent<HTMLInputElement>) => {
     setMin(event.target.value ? Number(event.target.value) : undefined);
   }, []);
-
   let handleMaxRangeChange = useCallback((event: ChangeEvent<HTMLInputElement>) => {
     setMax(event.target.value ? Number(event.target.value) : undefined);
   }, []);
-
   let handleSelectFilterChange = useCallback(
     (value: string) => {
       if (clientFilters) {
@@ -105,7 +97,6 @@ export function DataTableFilter({
     },
     [clientFilters, column, currentFilters, onFiltering],
   );
-
   let handleTextFilterChange = useCallback(
     (value: string | undefined) => {
       if (value) {
@@ -128,7 +119,6 @@ export function DataTableFilter({
     },
     [clientFilters, column, currentFilters, onFiltering],
   );
-
   let handleFilterChange = useCallback((event: ChangeEvent<HTMLInputElement>) => {
     if (event.target.value) {
       setFilter(event.target.value);
@@ -136,7 +126,6 @@ export function DataTableFilter({
       setFilter(undefined);
     }
   }, []);
-
   let handleFilterClick = useCallback(() => {
     if (filterVariant === 'range') {
       if (!min && !max) {
@@ -188,7 +177,6 @@ export function DataTableFilter({
     min,
     onFiltering,
   ]);
-
   let handleFilterSubmit = useCallback(
     (event: FormEvent<HTMLFormElement>) => {
       event.preventDefault();
@@ -245,7 +233,6 @@ export function DataTableFilter({
       onFiltering,
     ],
   );
-
   let handleResetClick = useCallback(() => {
     setFilter(undefined);
     setMin(undefined);
@@ -259,7 +246,6 @@ export function DataTableFilter({
       onFiltering(removeFilter(currentFilters, column.id));
     }
   }, [clientFilters, column, currentFilters, onFiltering]);
-
   let filterElement = null;
 
   if (filterVariant === 'range') {

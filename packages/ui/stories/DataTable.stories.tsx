@@ -15,7 +15,6 @@ const meta = {
 export default meta;
 
 const DEFAULT_PAGE_SIZE = 50;
-
 let columnHelper = createColumnHelper<Person>();
 
 export const Example = {

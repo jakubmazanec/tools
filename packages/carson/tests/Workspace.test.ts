@@ -6,9 +6,10 @@ import {WorkspaceError} from '../source/workspace/WorkspaceError.js';
 import {type WorkspaceOptionsProject} from '../source/workspace/WorkspaceOptionsProject.js';
 import {TEST_WORKSPACES_PATH} from './constants.js';
 
-// we need to mock `isRootPath` so it considers directory with test workspaces as the file system root
+// we need to mock `isRootPath` so it considers directory with test workspaces as the file system
+// root
 vitest.mock(import('@jakubmazanec/fs-utils'), async (importOriginal) => {
-  const originalModule = await importOriginal<typeof import('@jakubmazanec/fs-utils')>();
+  const originalModule = await importOriginal();
 
   return {
     ...originalModule,
@@ -761,7 +762,6 @@ describe('Workspace', () => {
       }) => {
         let {Workspace} = await import('../source/workspace.js');
         let workspace = await Workspace.read(path.join(TEST_WORKSPACES_PATH, workspacePath));
-
         let projectsWithCorrectPath = projects.map((project: WorkspaceOptionsProject) => ({
           ...project,
           path: path.join(TEST_WORKSPACES_PATH, workspacePath, project.path),

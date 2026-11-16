@@ -16,24 +16,10 @@ import {type ProgramOptions} from './ProgramOptions.js';
 import {type ProgramStreams} from './ProgramStreams.js';
 
 /**
- * Program manages and executes {@link Command} instances attached to it based on parsing command line arguments.
+ * Program manages and executes {@link Command} instances attached to it based on parsing command
+ * line arguments.
  */
 export class Program {
-  /** Program name. */
-  readonly name?: string;
-
-  /** More readable program name. */
-  readonly displayName?: string;
-
-  /** Program version. */
-  readonly version?: string;
-
-  /** Program latest version. */
-  readonly latestVersion?: string;
-
-  /** Program description. */
-  readonly description?: string;
-
   /** Program executable name. */
   readonly bin?: string;
 
@@ -42,7 +28,22 @@ export class Program {
     Command<string, ParametersConfig | undefined, OptionsConfig | undefined, boolean, boolean>
   > = [];
 
+  /** Program description. */
+  readonly description?: string;
+
+  /** More readable program name. */
+  readonly displayName?: string;
+
+  /** Custom error boundary fallback component */
+  ErrorBoundaryFallbackComponent: ComponentType<FallbackProps>;
+
   protected isRendering = false;
+
+  /** Program latest version. */
+  readonly latestVersion?: string;
+
+  /** Program name. */
+  readonly name?: string;
 
   readonly streams: ProgramStreams = {
     stderr: process.stderr,
@@ -50,8 +51,8 @@ export class Program {
     stdout: process.stdout,
   };
 
-  /** Custom error boundary fallback component */
-  ErrorBoundaryFallbackComponent: ComponentType<FallbackProps>;
+  /** Program version. */
+  readonly version?: string;
 
   private constructor({
     name,

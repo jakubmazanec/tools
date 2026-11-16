@@ -34,7 +34,6 @@ export async function getDependencyReleaseLine(
   )
     .filter((_) => _)
     .join(', ')}]:`;
-
   let updatedDepenenciesLines = updatedDependencies.map(
     (dependency) => `  - ${dependency.name}@${dependency.newVersion}`,
   );

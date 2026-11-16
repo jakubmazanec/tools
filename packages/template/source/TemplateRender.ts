@@ -12,7 +12,9 @@ export type TemplateRender<
   A extends z.ZodObject | undefined = undefined,
   D extends z.ZodObject | undefined = undefined,
 > = {
-  /** Rendered template attributes. They created from the `to` and `variables` attributes, and from all of the custom template attributes.
+  /**
+   * Rendered template attributes. They created from the `to` and `variables` attributes, and from
+   * all of the custom template attributes.
    */
   attributes: A extends undefined ? Omit<TemplateAttributes, 'if'>
   : Omit<TemplateAttributes, 'if'> & z.infer<NonNullable<A>>;

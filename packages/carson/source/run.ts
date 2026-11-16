@@ -8,7 +8,6 @@ import {PACKAGE_PATH} from './constants.js';
 let programDetail = getProgramDetail(
   await readPackageJson(path.join(PACKAGE_PATH, 'package.json'), {throwOnZodError: true}),
 );
-
 let program = await Program.create({
   ...programDetail,
   displayName: 'Carson',

@@ -15,7 +15,8 @@ export type WrapperProps = {
 };
 
 /**
- * A component that wraps anything {@link Program} tries to render with an error boundary and all neccessary providers.
+ * A component that wraps anything {@link Program} tries to render with an error boundary and all
+ * neccessary providers.
  */
 export const Wrapper: FC<PropsWithChildren<WrapperProps>> = ({program, children}) => {
   let programContextValue = useMemo(

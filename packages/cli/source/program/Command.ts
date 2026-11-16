@@ -11,7 +11,8 @@ import {type CommandOptions} from './CommandOptions.js';
 import {type Program} from './Program.js';
 
 /**
- * Command encapsulates piece of a CLI's logic and is executed when {@link Program} instance parses that command from the command line arguments.
+ * Command encapsulates piece of a CLI's logic and is executed when {@link Program} instance parses
+ * that command from the command line arguments.
  */
 export class Command<
   A extends string,
@@ -20,12 +21,12 @@ export class Command<
   D extends boolean = false,
   E extends boolean = false,
 > {
-  readonly name: A;
-  readonly description?: string;
-  readonly parameters: B extends ParametersConfig ? B : null;
-  readonly options: C extends OptionsConfig ? C : null;
   readonly allowUnknownOptions: D;
   readonly allowUnknownParameters: E;
+  readonly description?: string;
+  readonly name: A;
+  readonly options: C extends OptionsConfig ? C : null;
+  readonly parameters: B extends ParametersConfig ? B : null;
   private readonly action: CommandAction<A, B, C, D, E>;
 
   /**
@@ -77,7 +78,8 @@ export class Command<
   }
 
   /**
-   * Parses a list of command line arguments into an arguments object. Parser is pre-configured based on this command.
+   * Parses a list of command line arguments into an arguments object. Parser is pre-configured
+   * based on this command.
    */
   parseArguments(argv: Argv): Arguments<{
     commands: readonly [A];

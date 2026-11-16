@@ -24,7 +24,6 @@ import {
 
 const REMINDER = ['15 minutes before', '30 minutes before', '60 minutes before'] as const;
 const PRIORITY = ['High', 'Medium', 'Low'] as const;
-
 let schema = z.object({
   name: z.string().optional(),
   description: z.string().optional(),
@@ -54,9 +53,7 @@ export function Example() {
       setTimeout(() => setIsIdle(true), 1000);
     },
   });
-
   let tasksFields = fields.tasks.getFieldList();
-
   let insertTask = useCallback(() => {
     form.insert({name: fields.tasks.name});
   }, [fields.tasks.name, form]);

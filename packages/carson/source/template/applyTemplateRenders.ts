@@ -25,7 +25,8 @@ export type ApplyTemplateRendersOptions = {
 };
 
 /**
- * Applies rendered Carson template to a specified path, i.e. creates and updates files based on the result of rendering each Carson template file.
+ * Applies rendered Carson template to a specified path, i.e. creates and updates files based on
+ * the result of rendering each Carson template file.
  */
 export async function applyTemplateRenders({
   templateRenders,

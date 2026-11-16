@@ -39,8 +39,10 @@ export const nodejsRules: eslint.Linter.Config['rules'] = {
   'node/prefer-global/timers': 'off', // enforce either global timer functions or `require("timers")`
   'node/prefer-global/url': 'warn', // enforce either URL or require("url").URL
   'node/prefer-global/url-search-params': 'warn', // enforce either URLSearchParams or require("url").URLSearchParams
+  'node/prefer-import/assert-strict': 'error', // enforce using `node:assert/strict` instead of `node:assert`
   'node/prefer-promises/dns': 'error', // enforce require("dns").promises
   'node/prefer-promises/fs': 'error', // enforce require("fs").promises
   'node/prefer-node-protocol': 'off', // enforce using the node: protocol when importing Node.js builtin modules
+  'node/prefer-process-get-builtin-module': 'off', // enforce using `process.getBuiltinModule()` to load Node.js built-in modules
   'node/process-exit-as-throw': 'off', // make process.exit() expressions the same code path as throw
 };

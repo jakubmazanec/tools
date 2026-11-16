@@ -77,7 +77,6 @@ export function createTailwindConfig({
   colors,
 }: CreateTailwindConfigOptions = defaultCreateTailwindConfigOptions): TailwindConfig {
   let themeColors = createTailwindThemeColors(colors);
-
   // TODO: find another solution; following is needed because of this: https://github.com/tailwindlabs/tailwindcss/issues/18237
   let root: Record<string, Record<string, string> | string> = {
     '--radius-none': '0',

@@ -106,7 +106,6 @@ export function Combobox<
   let field = useField();
   let fieldName = useFieldName();
   let [query, setQuery] = useState('');
-
   let handleChange = useCallback(
     (selectedValue: V | null) => {
       if (selectedValue) {
@@ -119,7 +118,6 @@ export function Combobox<
     },
     [onChange],
   );
-
   let displayValue = useCallback(
     (option: string) => {
       if (items) {
@@ -134,7 +132,6 @@ export function Combobox<
     },
     [items],
   );
-
   let handleQueryChange = useCallback((event: ChangeEvent<HTMLInputElement>) => {
     setQuery(event.target.value);
   }, []);

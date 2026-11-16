@@ -11,7 +11,6 @@ export async function getRepositoryBranches(repositoryPath: string): Promise<str
       binary: 'git',
       maxConcurrentProcesses: 1,
     });
-
     let branchSummary = await git.branch(['-r']);
 
     repositoryBranches = branchSummary.all.map((branch) =>

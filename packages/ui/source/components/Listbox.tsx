@@ -111,14 +111,12 @@ export function Listbox<
   let fieldName = useFieldName();
   let [query, setQuery] = useState('');
   let inputRef = useRef<HTMLInputElement>(null);
-
   let handleChange = useCallback(
     (selectedValue: V) => {
       onChange?.(selectedValue as V & V[]);
     },
     [onChange],
   );
-
   // hacky solution so the user is able to focus inout used for filtering
   let handleTab = useCallback(
     (event: KeyboardEvent) => {
@@ -133,7 +131,6 @@ export function Listbox<
     },
     [showFilter],
   );
-
   let handleQueryChange = useCallback((event: InputEvent<HTMLInputElement>) => {
     setQuery(event.currentTarget.value);
   }, []);
@@ -170,7 +167,6 @@ export function Listbox<
         return false;
       })
     : children;
-
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   let props: HeadlessListboxProps<any, any> = {
     as,

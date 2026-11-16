@@ -41,7 +41,6 @@ export function Textarea<T extends ElementType = typeof TEXTAREA_ELEMENT>({
   let theme = useTextareaTheme({disabled});
   let fieldName = useFieldName();
   let field = useField();
-
   let rootProps: Record<string, unknown> = {
     className: theme.root('relative', className),
     'data-component': 'textarea',

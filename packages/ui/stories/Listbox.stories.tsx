@@ -9,7 +9,6 @@ const items = [
   {label: '🥕 Carrots', value: 'carrots'},
   {label: '🍫 Chocolate', value: 'chocolate'},
 ];
-
 const meta = {
   title: 'Components/Listbox',
   component: Listbox,

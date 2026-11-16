@@ -10,7 +10,35 @@ export const perfectionistRules: eslint.Linter.Config['rules'] = {
       partitionByNewLine: true,
     },
   ], // enforce sorted arrays before include method
-  'perfectionist/sort-classes': 'off', // enforce sorted classes
+  'perfectionist/sort-arrays': 'off', // enforce sorted arrays
+  'perfectionist/sort-classes': [
+    'error',
+    {
+      type: 'alphabetical',
+      ignoreCase: false,
+      groups: [
+        'property',
+        'private-property',
+        'static-property',
+        'static-block',
+        'constructor',
+        'init-method',
+        'static-method',
+        ['get-method', 'set-method'],
+        ['method', 'function-property'],
+        ['private-method', 'private-function-property'],
+        'unknown',
+      ],
+      customGroups: [
+        {
+          groupName: 'init-method',
+          selector: 'method',
+          elementNamePattern: '^init$',
+        },
+      ],
+    },
+  ], // enforce sorted classes
+  'perfectionist/sort-constructor-parameters': 'off', // enforce sorted constructor parameters
   'perfectionist/sort-decorators': 'off', // dnforce sorted decorators
   'perfectionist/sort-enums': [
     'error',
@@ -20,6 +48,13 @@ export const perfectionistRules: eslint.Linter.Config['rules'] = {
       partitionByNewLine: true,
     },
   ], // enforce sorted TypeScript enums
+  'perfectionist/sort-export-attributes': [
+    'error',
+    {
+      type: 'alphabetical',
+      ignoreCase: false,
+    },
+  ], // enforce sorted export attributes
   'perfectionist/sort-exports': [
     'error',
     {
@@ -34,6 +69,13 @@ export const perfectionistRules: eslint.Linter.Config['rules'] = {
       ignoreCase: false,
     },
   ], // enforce sorted heritage clauses
+  'perfectionist/sort-import-attributes': [
+    'error',
+    {
+      type: 'alphabetical',
+      ignoreCase: false,
+    },
+  ], // enforce sorted import attributes
   'perfectionist/sort-imports': [
     'error',
     {

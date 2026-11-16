@@ -3,8 +3,8 @@ import {createErrorMessage} from './internals.js';
 import {type CustomError, type CustomErrorOptions, type ErrorMessages} from './types.js';
 
 /**
- * Function for creating custom error classes. Such custom error class properly subclasses built-in `Error` and simplifies
- * generating error messages via predefined error codes.
+ * Function for creating custom error classes. Such custom error class properly subclasses built-in
+ * `Error` and simplifies generating error messages via predefined error codes.
  *
  * @param errorName Error name.
  * @param errorMessages Object containing all possible error messages.

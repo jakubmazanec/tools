@@ -1,5 +1,6 @@
 import {
   a11yRules as a11yRulesConfig,
+  commentLengthRules as commentLengthRulesConfig,
   commentsRules as commentsRulesConfig,
   eslintRules as eslintRulesConfig,
   importRules as importRulesConfig,
@@ -21,6 +22,7 @@ import {allRules} from './allRules.js';
 let a11yRules = Object.entries(a11yRulesConfig!).map(([ruleName]) => ruleName);
 let eslintRules = Object.entries(eslintRulesConfig!).map(([ruleName]) => ruleName);
 let stylisticRules = Object.entries(stylisticRulesConfig!).map(([ruleName]) => ruleName);
+let commentLengthRules = Object.entries(commentLengthRulesConfig!).map(([ruleName]) => ruleName);
 let commentsRules = Object.entries(commentsRulesConfig!).map(([ruleName]) => ruleName);
 let importRules = Object.entries(importRulesConfig!).map(([ruleName]) => ruleName);
 let vitestRules = Object.entries(vitestRulesConfig!).map(([ruleName]) => ruleName);
@@ -34,11 +36,11 @@ let typescriptRules = Object.entries(typescriptRulesConfig!).map(([ruleName]) =>
 let unicornRules = Object.entries(unicornRulesConfig!).map(([ruleName]) => ruleName);
 let securityRules = Object.entries(securityRulesConfig!).map(([ruleName]) => ruleName);
 let perfectionistRules = Object.entries(perfectionistRulesConfig!).map(([ruleName]) => ruleName);
-
 let usedRules = [
   ...a11yRules,
   ...eslintRules,
   ...stylisticRules,
+  ...commentLengthRules,
   ...commentsRules,
   ...importRules,
   ...vitestRules,
@@ -55,7 +57,6 @@ let usedRules = [
 ]
   .map((ruleName) => ruleName.replace(/^no-autofix\//, ''))
   .sort();
-
 let missingRules: string[] = [];
 
 allRules.forEach((ruleName: string) => {

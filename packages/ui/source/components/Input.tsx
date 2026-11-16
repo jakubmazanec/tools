@@ -68,7 +68,6 @@ export function Input<T extends ElementType = typeof INPUT_ELEMENT>({
       inputRef.current.dispatchEvent(new Event('input', {bubbles: true}));
     }
   }, []);
-
   let rootProps: Record<string, unknown> = {
     className: theme.root('relative', className),
     'data-component': 'input',

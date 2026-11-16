@@ -71,7 +71,7 @@ export const typescriptRules: eslint.Linter.Config['rules'] = {
     'warn',
     {fixMixedExportsWithInlineTypeSpecifier: true},
   ], // enforces consistent usage of type exports
-  '@typescript-eslint/consistent-type-imports': 'warn', // enforces consistent usage of type imports
+  '@typescript-eslint/consistent-type-imports': 'error', // enforces consistent usage of type imports
   '@typescript-eslint/default-param-last': 'warn', // enforce default parameters to be last
   '@typescript-eslint/dot-notation': ['error', {allowKeywords: true}], // enforce dot notation whenever possible
   '@typescript-eslint/explicit-function-return-type': 'off', // require explicit return types on functions and class methods
@@ -100,7 +100,9 @@ export const typescriptRules: eslint.Linter.Config['rules'] = {
         match: false,
       },
     },
-    // variables and parameters must use camel case, pascal case or upper case with no leading and trailing underscores - exceptions are names that are only underscores (used e.g. for placeholder parameters)
+    // variables and parameters must use camel case, pascal case or upper case with no leading and
+    // trailing underscores - exceptions are names that are only underscores (used e.g. for
+    // placeholder parameters)
     {
       selector: 'variableLike',
       format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
@@ -118,7 +120,10 @@ export const typescriptRules: eslint.Linter.Config['rules'] = {
       leadingUnderscore: 'forbid',
       trailingUnderscore: 'forbid',
     },
-    /* TODO [@jakubmazanec]: enable this when we can discern things defined in external packages and other stuff - {
+
+    /*
+     * TODO [@jakubmazanec]: enable this when we can discern things defined in external packages
+     * and other stuff - {
             selector: 'variable',
             types: ['boolean'],
             format: ['PascalCase'],
@@ -149,8 +154,8 @@ export const typescriptRules: eslint.Linter.Config['rules'] = {
             selector: 'property',
             types: ['boolean'],
             format: ['PascalCase'],
-            prefix: ['is', 'are', 'was', 'should', 'has', 'can', 'did', 'will', 'use', 'allow'],
-            leadingUnderscore: 'allow',
+     * prefix: ['is', 'are', 'was', 'should', 'has', 'can', 'did', 'will', 'use', 'allow'],
+     * leadingUnderscore: 'allow',
             trailingUnderscore: 'forbid',
           },
           {
@@ -193,7 +198,8 @@ export const typescriptRules: eslint.Linter.Config['rules'] = {
             leadingUnderscore: 'forbid',
             trailingUnderscore: 'forbid',
           }, */
-    // "member-like" (i.e. properties, methods, etc.) must use camel case, pascal case or upper case with only leading underscore allowed
+    // "member-like" (i.e. properties, methods, etc.) must use camel case, pascal case or upper
+    // case with only leading underscore allowed
     {
       selector: 'memberLike',
       format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
@@ -239,6 +245,7 @@ export const typescriptRules: eslint.Linter.Config['rules'] = {
   ], // forbids the use of classes as namespaces
   '@typescript-eslint/no-floating-promises': 'error', // requires Promise-like values to be handled appropriately
   '@typescript-eslint/no-for-in-array': 'error', // disallow iterating over an array with a for-in loop
+  '@typescript-eslint/no-generated-empty-object-type': 'error', // disallow type operations that resolve to the "empty object" type
   '@typescript-eslint/no-implied-eval': 'error', // disallow the use of eval()-like methods
   '@typescript-eslint/no-import-type-side-effects': 'off', // enforce the use of top-level import type qualifier when an import only has specifiers with inline type qualifiers
   '@typescript-eslint/no-inferrable-types': [
@@ -270,9 +277,8 @@ export const typescriptRules: eslint.Linter.Config['rules'] = {
   '@typescript-eslint/no-non-null-asserted-optional-chain': 'error', // disallows using a non-null assertion after an optional chain expression
   '@typescript-eslint/no-non-null-assertion': 'warn', // disallows non-null assertions using the ! postfix operator
   '@typescript-eslint/no-redundant-type-constituents': 'warn', // disallow members of unions and intersections that do nothing or override type information
-  '@typescript-eslint/no-redeclare': 'error', // disallow variable redeclaration
+  '@typescript-eslint/no-redeclare': 'off', // disallow variable redeclaration
   '@typescript-eslint/no-deprecated': 'warn', // disallow using code marked as @deprecated
-  '@typescript-eslint/no-restricted-imports': 'off', // disallow specified modules when loaded by import
   '@typescript-eslint/no-restricted-types': [
     'error',
     {
@@ -300,6 +306,7 @@ export const typescriptRules: eslint.Linter.Config['rules'] = {
   '@typescript-eslint/no-unsafe-assignment': 'error', // disallows assigning any to variables and properties
   '@typescript-eslint/no-unsafe-call': 'error', // disallows calling an any type value
   '@typescript-eslint/no-unsafe-declaration-merging': 'error', // disallows unsafe declaration merging
+  '@typescript-eslint/no-unsafe-enum-assignment': 'error', // disallow assigning non-enum values to enum typed locations
   '@typescript-eslint/no-unsafe-enum-comparison': 'error', // disallow comparing an enum value with a non-enum value
   '@typescript-eslint/no-unused-expressions': 'error', // disallow unused expressions
   '@typescript-eslint/no-unused-private-class-members': 'error', // disallow unused private class members

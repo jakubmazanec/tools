@@ -44,7 +44,6 @@ export function ComboboxOption<
   ...rest
 }: ComboboxOptionProps<T, V>) {
   let theme = useComboboxOptionTheme({disabled});
-
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   let props: HeadlessComboboxOptionProps<any, any> = {
     as,

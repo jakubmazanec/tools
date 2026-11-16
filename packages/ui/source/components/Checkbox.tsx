@@ -52,7 +52,6 @@ export function Checkbox<T extends ElementType = typeof CHECKBOX_ELEMENT>({
   let fieldName = useFieldName();
   let field = useField();
   let formId = useFormId();
-
   let handleChange = useCallback(() => {
     onChange?.(!checked);
   }, [checked, onChange]);

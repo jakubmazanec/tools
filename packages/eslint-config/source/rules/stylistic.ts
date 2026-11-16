@@ -47,7 +47,15 @@ export const stylisticRules: eslint.Linter.Config['rules'] = {
   '@stylistic/js/keyword-spacing': 'off', // enforce consistent spacing before and after keywords
   '@stylistic/js/linebreak-style': 'off', // enforce consistent linebreak style
   '@stylistic/js/line-comment-position': 'off', // enforce position of line comments
-  '@stylistic/js/lines-around-comment': 'off', // require empty lines around comments
+  '@stylistic/js/lines-around-comment': [
+    'error',
+    {
+      beforeBlockComment: true,
+      allowClassStart: true,
+      allowObjectStart: true,
+      allowTypeStart: true,
+    },
+  ], // require empty lines around comments
   '@stylistic/js/lines-between-class-members': ['warn', 'always', {exceptAfterSingleLine: true}], // require or disallow an empty line between class members
   '@stylistic/js/max-len': 'off', // enforce a maximum line length
   '@stylistic/js/max-statements-per-line': 'off', // enforce a maximum number of statements allowed per line
@@ -75,12 +83,18 @@ export const stylisticRules: eslint.Linter.Config['rules'] = {
   '@stylistic/js/operator-linebreak': 'off', // enforce consistent linebreak style for operators
   '@stylistic/js/padded-blocks': 'off', // require or disallow padding within blocks
   '@stylistic/js/padding-line-between-statements': [
-    'warn',
+    'error',
     {blankLine: 'always', prev: '*', next: 'continue'},
     {blankLine: 'always', prev: '*', next: 'break'},
     {blankLine: 'always', prev: '*', next: 'return'},
     {blankLine: 'always', prev: 'import', next: '*'},
     {blankLine: 'any', prev: 'import', next: 'import'},
+    {blankLine: 'always', prev: ['const', 'let', 'var'], next: '*'},
+    {blankLine: 'always', prev: '*', next: ['const', 'let', 'var']},
+    {blankLine: 'never', prev: ['const', 'let', 'var'], next: ['const', 'let', 'var']},
+    {blankLine: 'always', prev: 'if', next: '*'},
+    {blankLine: 'always', prev: '*', next: 'if'},
+    {blankLine: 'always', prev: 'if', next: 'if'},
   ], // require or disallow padding lines between statements
   '@stylistic/js/quote-props': 'off', // require quotes around object literal property names
   '@stylistic/js/quotes': 'off', // enforce the consistent use of either backticks, double, or single quotes

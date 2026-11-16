@@ -29,13 +29,10 @@ export function DataTableSearch({
     clientSearch ?
       ((table.getState().globalFilter as string | undefined) ?? null)
     : (controlledSearch ?? null);
-
   let [search, setSearch] = useState(currentSearch ?? '');
-
   let handleSearchChange = useCallback((event: ChangeEvent<HTMLInputElement>) => {
     setSearch(event.target.value);
   }, []);
-
   let handleSearchClick = useCallback(() => {
     if (search) {
       if (clientSearch) {
@@ -55,7 +52,6 @@ export function DataTableSearch({
       }
     }
   }, [clientSearch, onSearch, search, table]);
-
   let handleSearchSubmit = useCallback(
     (event: FormEvent<HTMLFormElement>) => {
       event.preventDefault();
@@ -80,7 +76,6 @@ export function DataTableSearch({
     },
     [clientSearch, onSearch, search, table],
   );
-
   let handleResetClick = useCallback(() => {
     setSearch('');
 

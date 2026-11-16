@@ -7,6 +7,7 @@ export const securityRules: eslint.Linter.Config['rules'] = {
   'security/detect-child-process': 'warn', // detects instances of "child_process" & non-literal "exec()" calls
   'security/detect-disable-mustache-escape': 'warn', // detects "object.escapeMarkup = false", which can be used with some template engines to disable escaping of HTML entities
   'security/detect-eval-with-expression': 'warn', // dDetects "eval(variable)" which can allow an attacker to run arbitrary code inside your process
+  'security/detect-invisible-characters': 'warn', // detects invisible characters that have no visible glyph and can be used to hide malicious code
   'security/detect-new-buffer': 'warn', // detects instances of new Buffer(argument) where argument is any non-literal value
   'security/detect-no-csrf-before-method-override': 'warn', // detects Express "csrf" middleware setup before "method-override" middleware
   'security/detect-non-literal-fs-filename': 'off', // detects variable in filename argument of "fs" calls, which might allow an attacker to access anything on your system

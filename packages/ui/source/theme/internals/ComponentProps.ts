@@ -9,5 +9,7 @@ export type ComponentProps<U extends {themeDefinition: ComponentThemeDefinition 
   U['themeDefinition'] extends ComponentThemeDefinition ?
     U['themeDefinition']['variants'] extends ComponentThemeDefinitionVariants ?
       Partial<Writable<ComponentThemeProps<U['themeDefinition']>>>
-    : NonNullable<unknown>
-  : NonNullable<unknown>;
+    : // eslint-disable-next-line @typescript-eslint/no-generated-empty-object-type -- needed, `{}` vanishes from the component props intersections
+      NonNullable<unknown>
+  : // eslint-disable-next-line @typescript-eslint/no-generated-empty-object-type -- needed, `{}` vanishes from the component props intersections
+    NonNullable<unknown>;
