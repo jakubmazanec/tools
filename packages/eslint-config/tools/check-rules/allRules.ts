@@ -113,7 +113,7 @@ let securityRules = (Object.entries(eslintPluginSecurity.rules) as Array<[string
   .filter(([, rule]) => !rule.meta?.deprecated)
   .map(([ruleName]) => `security/${ruleName}`);
 
-let perfectionistRules = (Object.entries(eslintPluginPerfectionist.rules) as Array<[string, Rule]>)
+let perfectionistRules = (Object.entries(eslintPluginPerfectionist.rules!) as Array<[string, Rule]>)
   .filter(([, rule]) => !rule.meta?.deprecated)
   .map(([ruleName]) => `perfectionist/${ruleName}`);
 
