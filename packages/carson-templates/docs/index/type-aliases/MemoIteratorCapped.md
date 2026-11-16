@@ -6,7 +6,7 @@
 
 > **MemoIteratorCapped**\<`T`, `TResult`\> = (`prev`, `curr`) => `TResult`
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:233
+Defined in: node\_modules/@types/lodash/common/common.d.ts:237
 
 ## Type Parameters
 

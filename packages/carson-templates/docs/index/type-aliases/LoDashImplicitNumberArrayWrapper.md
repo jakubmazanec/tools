@@ -7,4 +7,4 @@
 > **LoDashImplicitNumberArrayWrapper** =
 > [`LoDashImplicitWrapper`](../interfaces/LoDashImplicitWrapper.md)\<`number`[]\>
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:272
+Defined in: node\_modules/@types/lodash/common/common.d.ts:276

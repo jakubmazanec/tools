@@ -7,12 +7,12 @@
 ## Call Signature
 
 > **createCustomErrorWithData**\<`ErrorCode`, `ErrorData`\>(`errorName`, `errorMessages`,
-> `errorData`): (`code`, `options?`) =>
+> `errorData`): new (`code`, `options?`) =>
 > [`CustomErrorWithData`](../type-aliases/CustomErrorWithData.md)\<`"UNKNOWN_ERROR"` \| `ErrorCode`,
 > `output`\<`ErrorData`\>\>
 
 Defined in:
-[createCustomErrorWithData.ts:21](https://github.com/jakubmazanec/tools/blob/a2ad76298b012139ad7499a776924f487807cb38/packages/error/source/createCustomErrorWithData.ts#L21)
+[createCustomErrorWithData.ts:22](https://github.com/jakubmazanec/tools/blob/66efa054b871c783405ec2cb1e4ebd507a77039a/packages/error/source/createCustomErrorWithData.ts#L22)
 
 Function for creating custom error classes. Such custom error class properly subclasses built-in
 `Error`, simplifies generating error messages via predefined error codes and allows attaching custom
@@ -53,19 +53,19 @@ schema.
 
 Class that implements [CustomErrorWithData](../type-aliases/CustomErrorWithData.md).
 
-(`code`, `options?`) =>
+new (`code`, `options?`) =>
 [`CustomErrorWithData`](../type-aliases/CustomErrorWithData.md)\<`"UNKNOWN_ERROR"` \| `ErrorCode`,
 `output`\<`ErrorData`\>\>
 
 ## Call Signature
 
 > **createCustomErrorWithData**\<`ErrorCode`, `ErrorData`\>(`errorName`, `errorMessages`,
-> `errorData`): (`code`, `options?`) =>
+> `errorData`): new (`code`, `options?`) =>
 > [`CustomErrorWithData`](../type-aliases/CustomErrorWithData.md)\<`"UNKNOWN_ERROR"` \| `ErrorCode`,
 > `InstanceType`\<`ErrorData`\>\>
 
 Defined in:
-[createCustomErrorWithData.ts:29](https://github.com/jakubmazanec/tools/blob/a2ad76298b012139ad7499a776924f487807cb38/packages/error/source/createCustomErrorWithData.ts#L29)
+[createCustomErrorWithData.ts:30](https://github.com/jakubmazanec/tools/blob/66efa054b871c783405ec2cb1e4ebd507a77039a/packages/error/source/createCustomErrorWithData.ts#L30)
 
 Function for creating custom error classes. Such custom error class properly subclasses built-in
 `Error`, simplifies generating error messages via predefined error codes and allows attaching custom
@@ -79,7 +79,7 @@ data to the error instance.
 
 #### ErrorData
 
-`ErrorData` _extends_ (...`args`) => `any`
+`ErrorData` _extends_ new (...`args`) => `any`
 
 ### Parameters
 
@@ -106,6 +106,6 @@ schema.
 
 Class that implements [CustomErrorWithData](../type-aliases/CustomErrorWithData.md).
 
-(`code`, `options?`) =>
+new (`code`, `options?`) =>
 [`CustomErrorWithData`](../type-aliases/CustomErrorWithData.md)\<`"UNKNOWN_ERROR"` \| `ErrorCode`,
 `InstanceType`\<`ErrorData`\>\>

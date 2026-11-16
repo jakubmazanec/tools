@@ -7,7 +7,7 @@
 > **ValueIterateeCustom**\<`T`, `TResult`\> = ((`value`) => `TResult`) \|
 > [`IterateeShorthand`](IterateeShorthand.md)\<`T`\>
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:239
+Defined in: node\_modules/@types/lodash/common/common.d.ts:243
 
 ## Type Parameters
 

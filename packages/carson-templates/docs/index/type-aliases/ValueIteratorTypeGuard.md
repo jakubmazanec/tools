@@ -6,7 +6,7 @@
 
 > **ValueIteratorTypeGuard**\<`T`, `S`\> = (`value`) => `value is S`
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:240
+Defined in: node\_modules/@types/lodash/common/common.d.ts:244
 
 ## Type Parameters
 

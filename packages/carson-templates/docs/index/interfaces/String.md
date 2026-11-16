@@ -4,7 +4,7 @@
 
 # Interface: String\<T\>
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:193
+Defined in: node\_modules/@types/lodash/common/common.d.ts:197
 
 ## Extends
 

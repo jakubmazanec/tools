@@ -7,4 +7,4 @@
 > **LoDashExplicitStringWrapper** =
 > [`LoDashExplicitWrapper`](../interfaces/LoDashExplicitWrapper.md)\<`string`\>
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:279
+Defined in: node\_modules/@types/lodash/common/common.d.ts:283

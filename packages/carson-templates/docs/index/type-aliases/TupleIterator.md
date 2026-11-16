@@ -6,7 +6,7 @@
 
 > **TupleIterator**\<`T`, `TResult`\> = (`value`, `index`, `collection`) => `TResult`
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:216
+Defined in: node\_modules/@types/lodash/common/common.d.ts:220
 
 ## Type Parameters
 

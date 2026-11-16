@@ -7,4 +7,4 @@
 > `const` **buttonTheme**: `ComponentTheme`\<_typeof_ [`useButtonTheme`](useButtonTheme.md)\>
 
 Defined in:
-[packages/ui/source/components/Button.tsx:101](https://github.com/jakubmazanec/tools/blob/a2ad76298b012139ad7499a776924f487807cb38/packages/ui/source/components/Button.tsx#L101)
+[packages/ui/source/components/Button.tsx:100](https://github.com/jakubmazanec/tools/blob/66efa054b871c783405ec2cb1e4ebd507a77039a/packages/ui/source/components/Button.tsx#L100)

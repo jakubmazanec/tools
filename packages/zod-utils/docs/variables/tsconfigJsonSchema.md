@@ -146,4 +146,4 @@
 > \}, `$strict`\>\>; \}, `$strict`\>
 
 Defined in:
-[types/TsconfigJson.ts:333](https://github.com/jakubmazanec/tools/blob/a2ad76298b012139ad7499a776924f487807cb38/packages/zod-utils/source/types/TsconfigJson.ts#L333)
+[types/TsconfigJson.ts:321](https://github.com/jakubmazanec/tools/blob/66efa054b871c783405ec2cb1e4ebd507a77039a/packages/zod-utils/source/types/TsconfigJson.ts#L321)

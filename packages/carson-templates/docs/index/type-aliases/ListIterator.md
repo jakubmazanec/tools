@@ -6,7 +6,7 @@
 
 > **ListIterator**\<`T`, `TResult`\> = (`value`, `index`, `collection`) => `TResult`
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:217
+Defined in: node\_modules/@types/lodash/common/common.d.ts:221
 
 ## Type Parameters
 

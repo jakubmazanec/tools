@@ -72,6 +72,7 @@
 - [DictionaryIteratee](type-aliases/DictionaryIteratee.md)
 - [DictionaryIterator](type-aliases/DictionaryIterator.md)
 - [DictionaryIteratorTypeGuard](type-aliases/DictionaryIteratorTypeGuard.md)
+- [DistributedExpChain](type-aliases/DistributedExpChain.md)
 - [EmptyObject](type-aliases/EmptyObject.md)
 - [EmptyObjectOf](type-aliases/EmptyObjectOf.md)
 - [ExpChain](type-aliases/ExpChain.md)

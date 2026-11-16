@@ -6,4 +6,4 @@
 
 > **PropertyPath** = [`Many`](Many.md)\<[`PropertyName`](PropertyName.md)\>
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:246
+Defined in: node\_modules/@types/lodash/common/common.d.ts:250

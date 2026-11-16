@@ -6,7 +6,7 @@
 
 > **NumericDictionaryIterator**\<`T`, `TResult`\> = (`value`, `key`, `collection`) => `TResult`
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:284
+Defined in: node\_modules/@types/lodash/common/common.d.ts:288
 
 ## Type Parameters
 

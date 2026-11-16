@@ -6,7 +6,7 @@
 
 > **ObjectIteratorTypeGuard**\<`TObject`, `S`\> = (`value`, `key`, `collection`) => `value is S`
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:225
+Defined in: node\_modules/@types/lodash/common/common.d.ts:229
 
 ## Type Parameters
 

@@ -7,7 +7,7 @@
 > **saveWorkspaceConfig**(`options`): `Promise`\<`void`\>
 
 Defined in:
-[packages/carson/source/workspace/saveWorkspaceConfig.ts:21](https://github.com/jakubmazanec/tools/blob/a2ad76298b012139ad7499a776924f487807cb38/packages/carson/source/workspace/saveWorkspaceConfig.ts#L21)
+[packages/carson/source/workspace/saveWorkspaceConfig.ts:21](https://github.com/jakubmazanec/tools/blob/66efa054b871c783405ec2cb1e4ebd507a77039a/packages/carson/source/workspace/saveWorkspaceConfig.ts#L21)
 
 Saves workspace configuration to the config file.
 

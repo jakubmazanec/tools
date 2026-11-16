@@ -6,7 +6,7 @@
 
 > **MemoVoidDictionaryIterator**\<`T`, `K`, `TResult`\> = (`acc`, `curr`, `key`, `dict`) => `void`
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:236
+Defined in: node\_modules/@types/lodash/common/common.d.ts:240
 
 ## Type Parameters
 

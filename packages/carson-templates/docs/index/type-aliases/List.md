@@ -6,7 +6,7 @@
 
 > **List**\<`T`\> = `ArrayLike`\<`T`\>
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:248
+Defined in: node\_modules/@types/lodash/common/common.d.ts:252
 
 Common interface between Arrays and jQuery objects
 

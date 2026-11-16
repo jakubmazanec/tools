@@ -4,7 +4,7 @@
 
 # Interface: Function\<T\>
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:191
+Defined in: node\_modules/@types/lodash/common/common.d.ts:195
 
 ## Extends
 

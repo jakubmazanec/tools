@@ -6,7 +6,7 @@
 
 > **MemoVoidIteratorCapped**\<`T`, `TResult`\> = (`acc`, `curr`) => `void`
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:237
+Defined in: node\_modules/@types/lodash/common/common.d.ts:241
 
 ## Type Parameters
 

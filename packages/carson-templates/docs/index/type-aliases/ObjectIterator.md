@@ -6,7 +6,7 @@
 
 > **ObjectIterator**\<`TObject`, `TResult`\> = (`value`, `key`, `collection`) => `TResult`
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:222
+Defined in: node\_modules/@types/lodash/common/common.d.ts:226
 
 ## Type Parameters
 

@@ -4,7 +4,7 @@
 
 # Interface: Primitive\<T\>
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:199
+Defined in: node\_modules/@types/lodash/common/common.d.ts:203
 
 ## Extends
 

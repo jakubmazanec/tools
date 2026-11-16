@@ -8,7 +8,7 @@
 > [`ObjectIterator`](ObjectIterator.md)\<[`Dictionary`](../interfaces/Dictionary.md)\<`T`\>,
 > `TResult`\>
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:280
+Defined in: node\_modules/@types/lodash/common/common.d.ts:284
 
 ## Type Parameters
 

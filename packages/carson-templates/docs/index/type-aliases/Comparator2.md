@@ -6,7 +6,7 @@
 
 > **Comparator2**\<`T1`, `T2`\> = (`a`, `b`) => `boolean`
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:244
+Defined in: node\_modules/@types/lodash/common/common.d.ts:248
 
 ## Type Parameters
 

@@ -4,7 +4,7 @@
 
 # Interface: MapCacheConstructor
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:172
+Defined in: node\_modules/@types/lodash/common/common.d.ts:176
 
 ## Constructors
 
@@ -12,7 +12,7 @@ Defined in: node\_modules/@types/lodash/common/common.d.ts:172
 
 > **new MapCacheConstructor**(): [`MapCache`](MapCache.md)
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:173
+Defined in: node\_modules/@types/lodash/common/common.d.ts:177
 
 #### Returns
 

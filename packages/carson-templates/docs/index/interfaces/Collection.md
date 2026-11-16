@@ -4,7 +4,7 @@
 
 # Interface: Collection\<T\>
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:175
+Defined in: node\_modules/@types/lodash/common/common.d.ts:179
 
 ## Extends
 
@@ -4815,7 +4815,7 @@ _.plant
 
 > **pop**(): `T` \| `undefined`
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:176
+Defined in: node\_modules/@types/lodash/common/common.d.ts:180
 
 #### Returns
 
@@ -5007,7 +5007,7 @@ _.pullAt
 
 > **push**(...`items`): `this`
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:177
+Defined in: node\_modules/@types/lodash/common/common.d.ts:181
 
 #### Parameters
 
@@ -5660,7 +5660,7 @@ _.setWith
 
 > **shift**(): `T` \| `undefined`
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:178
+Defined in: node\_modules/@types/lodash/common/common.d.ts:182
 
 #### Returns
 
@@ -5776,7 +5776,7 @@ _.some
 
 > **sort**(`compareFn?`): `this`
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:179
+Defined in: node\_modules/@types/lodash/common/common.d.ts:183
 
 #### Parameters
 
@@ -6016,7 +6016,7 @@ _.sortedUniqBy
 
 > **splice**(`start`, `deleteCount?`, ...`items`): `this`
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:180
+Defined in: node\_modules/@types/lodash/common/common.d.ts:184
 
 #### Parameters
 
@@ -7225,7 +7225,7 @@ _.unset
 
 > **unshift**(...`items`): `this`
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:181
+Defined in: node\_modules/@types/lodash/common/common.d.ts:185
 
 #### Parameters
 

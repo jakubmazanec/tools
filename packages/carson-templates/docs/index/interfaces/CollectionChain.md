@@ -4,7 +4,7 @@
 
 # Interface: CollectionChain\<T\>
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:183
+Defined in: node\_modules/@types/lodash/common/common.d.ts:187
 
 ## Extends
 
@@ -120,8 +120,8 @@ _.at
 
 ### attempt()
 
-> **attempt**\<`TResult`\>(...`args`): [`ObjectChain`](ObjectChain.md)\<`Error`\> \|
-> [`ExpChain`](../type-aliases/ExpChain.md)\<`TResult`\>
+> **attempt**\<`TResult`\>(...`args`): [`ExpChain`](../type-aliases/ExpChain.md)\<`Error` \|
+> `TResult`\>
 
 Defined in: node\_modules/@types/lodash/common/util.d.ts:23
 
@@ -139,7 +139,7 @@ Defined in: node\_modules/@types/lodash/common/util.d.ts:23
 
 #### Returns
 
-[`ObjectChain`](ObjectChain.md)\<`Error`\> \| [`ExpChain`](../type-aliases/ExpChain.md)\<`TResult`\>
+[`ExpChain`](../type-aliases/ExpChain.md)\<`Error` \| `TResult`\>
 
 #### See
 
@@ -537,8 +537,8 @@ _.cloneWith
 
 #### Call Signature
 
-> **cloneWith**\<`TResult`\>(`customizer`): `CollectionChain`\<`T`\> \|
-> [`ExpChain`](../type-aliases/ExpChain.md)\<`TResult`\>
+> **cloneWith**\<`TResult`\>(`customizer`): [`ExpChain`](../type-aliases/ExpChain.md)\<`T`[] \|
+> `TResult`\>
 
 Defined in: node\_modules/@types/lodash/common/lang.d.ts:151
 
@@ -556,7 +556,7 @@ Defined in: node\_modules/@types/lodash/common/lang.d.ts:151
 
 ##### Returns
 
-`CollectionChain`\<`T`\> \| [`ExpChain`](../type-aliases/ExpChain.md)\<`TResult`\>
+[`ExpChain`](../type-aliases/ExpChain.md)\<`T`[] \| `TResult`\>
 
 ##### See
 
@@ -781,8 +781,8 @@ _.defaultTo
 
 #### Call Signature
 
-> **defaultTo**\<`TDefault`\>(`defaultValue`): `CollectionChain`\<`T`\> \|
-> [`ExpChain`](../type-aliases/ExpChain.md)\<`TDefault`\>
+> **defaultTo**\<`TDefault`\>(`defaultValue`): [`ExpChain`](../type-aliases/ExpChain.md)\<`T`[] \|
+> `TDefault`\>
 
 Defined in: node\_modules/@types/lodash/common/util.d.ts:165
 
@@ -800,7 +800,7 @@ Defined in: node\_modules/@types/lodash/common/util.d.ts:165
 
 ##### Returns
 
-`CollectionChain`\<`T`\> \| [`ExpChain`](../type-aliases/ExpChain.md)\<`TDefault`\>
+[`ExpChain`](../type-aliases/ExpChain.md)\<`T`[] \| `TDefault`\>
 
 ##### See
 
@@ -1376,7 +1376,8 @@ _.filter
 
 #### Call Signature
 
-> **find**\<`S`\>(`predicate`, `fromIndex?`): [`ExpChain`](../type-aliases/ExpChain.md)\<`S`\>
+> **find**\<`S`\>(`predicate`, `fromIndex?`): [`ExpChain`](../type-aliases/ExpChain.md)\<`S` \|
+> `undefined`\>
 
 Defined in: node\_modules/@types/lodash/common/collection.d.ts:329
 
@@ -1398,7 +1399,7 @@ Defined in: node\_modules/@types/lodash/common/collection.d.ts:329
 
 ##### Returns
 
-[`ExpChain`](../type-aliases/ExpChain.md)\<`S`\>
+[`ExpChain`](../type-aliases/ExpChain.md)\<`S` \| `undefined`\>
 
 ##### See
 
@@ -1406,7 +1407,8 @@ _.find
 
 #### Call Signature
 
-> **find**(`predicate?`, `fromIndex?`): [`ExpChain`](../type-aliases/ExpChain.md)\<`T`\>
+> **find**(`predicate?`, `fromIndex?`): [`ExpChain`](../type-aliases/ExpChain.md)\<`T` \|
+> `undefined`\>
 
 Defined in: node\_modules/@types/lodash/common/collection.d.ts:333
 
@@ -1422,7 +1424,7 @@ Defined in: node\_modules/@types/lodash/common/collection.d.ts:333
 
 ##### Returns
 
-[`ExpChain`](../type-aliases/ExpChain.md)\<`T`\>
+[`ExpChain`](../type-aliases/ExpChain.md)\<`T` \| `undefined`\>
 
 ##### See
 
@@ -1486,7 +1488,8 @@ _.findKey
 
 #### Call Signature
 
-> **findLast**\<`S`\>(`predicate`, `fromIndex?`): [`ExpChain`](../type-aliases/ExpChain.md)\<`S`\>
+> **findLast**\<`S`\>(`predicate`, `fromIndex?`): [`ExpChain`](../type-aliases/ExpChain.md)\<`S` \|
+> `undefined`\>
 
 Defined in: node\_modules/@types/lodash/common/collection.d.ts:392
 
@@ -1508,7 +1511,7 @@ Defined in: node\_modules/@types/lodash/common/collection.d.ts:392
 
 ##### Returns
 
-[`ExpChain`](../type-aliases/ExpChain.md)\<`S`\>
+[`ExpChain`](../type-aliases/ExpChain.md)\<`S` \| `undefined`\>
 
 ##### See
 
@@ -1516,7 +1519,8 @@ _.findLast
 
 #### Call Signature
 
-> **findLast**(`predicate?`, `fromIndex?`): [`ExpChain`](../type-aliases/ExpChain.md)\<`T`\>
+> **findLast**(`predicate?`, `fromIndex?`): [`ExpChain`](../type-aliases/ExpChain.md)\<`T` \|
+> `undefined`\>
 
 Defined in: node\_modules/@types/lodash/common/collection.d.ts:396
 
@@ -1532,7 +1536,7 @@ Defined in: node\_modules/@types/lodash/common/collection.d.ts:396
 
 ##### Returns
 
-[`ExpChain`](../type-aliases/ExpChain.md)\<`T`\>
+[`ExpChain`](../type-aliases/ExpChain.md)\<`T` \| `undefined`\>
 
 ##### See
 
@@ -1594,13 +1598,13 @@ _.findLastKey
 
 ### first()
 
-> **first**(): [`ExpChain`](../type-aliases/ExpChain.md)\<`T`\>
+> **first**(): [`ExpChain`](../type-aliases/ExpChain.md)\<`T` \| `undefined`\>
 
 Defined in: node\_modules/@types/lodash/common/array.d.ts:456
 
 #### Returns
 
-[`ExpChain`](../type-aliases/ExpChain.md)\<`T`\>
+[`ExpChain`](../type-aliases/ExpChain.md)\<`T` \| `undefined`\>
 
 #### See
 
@@ -2137,8 +2141,8 @@ _.get
 
 #### Call Signature
 
-> **get**\<`TDefault`\>(`path`, `defaultValue`): [`ExpChain`](../type-aliases/ExpChain.md)\<`T`\> \|
-> [`ExpChain`](../type-aliases/ExpChain.md)\<`TDefault`\>
+> **get**\<`TDefault`\>(`path`, `defaultValue`): [`ExpChain`](../type-aliases/ExpChain.md)\<`T` \|
+> `TDefault`\>
 
 Defined in: node\_modules/@types/lodash/common/object.d.ts:1361
 
@@ -2160,8 +2164,7 @@ Defined in: node\_modules/@types/lodash/common/object.d.ts:1361
 
 ##### Returns
 
-[`ExpChain`](../type-aliases/ExpChain.md)\<`T`\> \|
-[`ExpChain`](../type-aliases/ExpChain.md)\<`TDefault`\>
+[`ExpChain`](../type-aliases/ExpChain.md)\<`T` \| `TDefault`\>
 
 ##### See
 
@@ -2298,13 +2301,13 @@ _.hasIn
 
 ### head()
 
-> **head**(): [`ExpChain`](../type-aliases/ExpChain.md)\<`T`\>
+> **head**(): [`ExpChain`](../type-aliases/ExpChain.md)\<`T` \| `undefined`\>
 
 Defined in: node\_modules/@types/lodash/common/array.d.ts:616
 
 #### Returns
 
-[`ExpChain`](../type-aliases/ExpChain.md)\<`T`\>
+[`ExpChain`](../type-aliases/ExpChain.md)\<`T` \| `undefined`\>
 
 #### See
 
@@ -3596,13 +3599,13 @@ _.keysIn
 
 ### last()
 
-> **last**(): [`ExpChain`](../type-aliases/ExpChain.md)\<`T`\>
+> **last**(): [`ExpChain`](../type-aliases/ExpChain.md)\<`T` \| `undefined`\>
 
 Defined in: node\_modules/@types/lodash/common/array.d.ts:865
 
 #### Returns
 
-[`ExpChain`](../type-aliases/ExpChain.md)\<`T`\>
+[`ExpChain`](../type-aliases/ExpChain.md)\<`T` \| `undefined`\>
 
 #### See
 
@@ -4072,13 +4075,13 @@ _.matchesProperty
 
 ### max()
 
-> **max**(): [`ExpChain`](../type-aliases/ExpChain.md)\<`T`\>
+> **max**(): [`ExpChain`](../type-aliases/ExpChain.md)\<`T` \| `undefined`\>
 
 Defined in: node\_modules/@types/lodash/common/math.d.ts:117
 
 #### Returns
 
-[`ExpChain`](../type-aliases/ExpChain.md)\<`T`\>
+[`ExpChain`](../type-aliases/ExpChain.md)\<`T` \| `undefined`\>
 
 #### See
 
@@ -4088,7 +4091,7 @@ _.max
 
 ### maxBy()
 
-> **maxBy**(`iteratee?`): [`ExpChain`](../type-aliases/ExpChain.md)\<`T`\>
+> **maxBy**(`iteratee?`): [`ExpChain`](../type-aliases/ExpChain.md)\<`T` \| `undefined`\>
 
 Defined in: node\_modules/@types/lodash/common/math.d.ts:153
 
@@ -4100,7 +4103,7 @@ Defined in: node\_modules/@types/lodash/common/math.d.ts:153
 
 #### Returns
 
-[`ExpChain`](../type-aliases/ExpChain.md)\<`T`\>
+[`ExpChain`](../type-aliases/ExpChain.md)\<`T` \| `undefined`\>
 
 #### See
 
@@ -4204,13 +4207,13 @@ _.methodOf
 
 ### min()
 
-> **min**(): [`ExpChain`](../type-aliases/ExpChain.md)\<`T`\>
+> **min**(): [`ExpChain`](../type-aliases/ExpChain.md)\<`T` \| `undefined`\>
 
 Defined in: node\_modules/@types/lodash/common/math.d.ts:233
 
 #### Returns
 
-[`ExpChain`](../type-aliases/ExpChain.md)\<`T`\>
+[`ExpChain`](../type-aliases/ExpChain.md)\<`T` \| `undefined`\>
 
 #### See
 
@@ -4220,7 +4223,7 @@ _.min
 
 ### minBy()
 
-> **minBy**(`iteratee?`): [`ExpChain`](../type-aliases/ExpChain.md)\<`T`\>
+> **minBy**(`iteratee?`): [`ExpChain`](../type-aliases/ExpChain.md)\<`T` \| `undefined`\>
 
 Defined in: node\_modules/@types/lodash/common/math.d.ts:269
 
@@ -4232,7 +4235,7 @@ Defined in: node\_modules/@types/lodash/common/math.d.ts:269
 
 #### Returns
 
-[`ExpChain`](../type-aliases/ExpChain.md)\<`T`\>
+[`ExpChain`](../type-aliases/ExpChain.md)\<`T` \| `undefined`\>
 
 #### See
 
@@ -4392,7 +4395,7 @@ _.now
 
 ### nth()
 
-> **nth**(`n?`): [`ExpChain`](../type-aliases/ExpChain.md)\<`T`\>
+> **nth**(`n?`): [`ExpChain`](../type-aliases/ExpChain.md)\<`T` \| `undefined`\>
 
 Defined in: node\_modules/@types/lodash/common/array.d.ts:928
 
@@ -4404,7 +4407,7 @@ Defined in: node\_modules/@types/lodash/common/array.d.ts:928
 
 #### Returns
 
-[`ExpChain`](../type-aliases/ExpChain.md)\<`T`\>
+[`ExpChain`](../type-aliases/ExpChain.md)\<`T` \| `undefined`\>
 
 #### See
 
@@ -4836,13 +4839,13 @@ _.plant
 
 ### pop()
 
-> **pop**(): [`ExpChain`](../type-aliases/ExpChain.md)\<`T`\>
+> **pop**(): [`ExpChain`](../type-aliases/ExpChain.md)\<`T` \| `undefined`\>
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:184
+Defined in: node\_modules/@types/lodash/common/common.d.ts:188
 
 #### Returns
 
-[`ExpChain`](../type-aliases/ExpChain.md)\<`T`\>
+[`ExpChain`](../type-aliases/ExpChain.md)\<`T` \| `undefined`\>
 
 ---
 
@@ -5030,7 +5033,7 @@ _.pullAt
 
 > **push**(...`items`): `this`
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:185
+Defined in: node\_modules/@types/lodash/common/common.d.ts:189
 
 #### Parameters
 
@@ -5196,7 +5199,7 @@ _.reduce
 
 #### Call Signature
 
-> **reduce**(`callback`): [`ExpChain`](../type-aliases/ExpChain.md)\<`T`\>
+> **reduce**(`callback`): [`ExpChain`](../type-aliases/ExpChain.md)\<`T` \| `undefined`\>
 
 Defined in: node\_modules/@types/lodash/common/collection.d.ts:1501
 
@@ -5209,7 +5212,7 @@ Defined in: node\_modules/@types/lodash/common/collection.d.ts:1501
 
 ##### Returns
 
-[`ExpChain`](../type-aliases/ExpChain.md)\<`T`\>
+[`ExpChain`](../type-aliases/ExpChain.md)\<`T` \| `undefined`\>
 
 ##### See
 
@@ -5253,7 +5256,7 @@ _.reduceRight
 
 #### Call Signature
 
-> **reduceRight**(`callback`): [`ExpChain`](../type-aliases/ExpChain.md)\<`T`\>
+> **reduceRight**(`callback`): [`ExpChain`](../type-aliases/ExpChain.md)\<`T` \| `undefined`\>
 
 Defined in: node\_modules/@types/lodash/common/collection.d.ts:1572
 
@@ -5266,7 +5269,7 @@ Defined in: node\_modules/@types/lodash/common/collection.d.ts:1572
 
 ##### Returns
 
-[`ExpChain`](../type-aliases/ExpChain.md)\<`T`\>
+[`ExpChain`](../type-aliases/ExpChain.md)\<`T` \| `undefined`\>
 
 ##### See
 
@@ -5485,13 +5488,13 @@ _.round
 
 ### sample()
 
-> **sample**(): [`ExpChain`](../type-aliases/ExpChain.md)\<`T`\>
+> **sample**(): [`ExpChain`](../type-aliases/ExpChain.md)\<`T` \| `undefined`\>
 
 Defined in: node\_modules/@types/lodash/common/collection.d.ts:1696
 
 #### Returns
 
-[`ExpChain`](../type-aliases/ExpChain.md)\<`T`\>
+[`ExpChain`](../type-aliases/ExpChain.md)\<`T` \| `undefined`\>
 
 #### See
 
@@ -5664,13 +5667,13 @@ _.setWith
 
 ### shift()
 
-> **shift**(): [`ExpChain`](../type-aliases/ExpChain.md)\<`T`\>
+> **shift**(): [`ExpChain`](../type-aliases/ExpChain.md)\<`T` \| `undefined`\>
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:186
+Defined in: node\_modules/@types/lodash/common/common.d.ts:190
 
 #### Returns
 
-[`ExpChain`](../type-aliases/ExpChain.md)\<`T`\>
+[`ExpChain`](../type-aliases/ExpChain.md)\<`T` \| `undefined`\>
 
 ---
 
@@ -5782,7 +5785,7 @@ _.some
 
 > **sort**(`compareFn?`): `this`
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:187
+Defined in: node\_modules/@types/lodash/common/common.d.ts:191
 
 #### Parameters
 
@@ -6022,7 +6025,7 @@ _.sortedUniqBy
 
 > **splice**(`start`, `deleteCount?`, ...`items`): `this`
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:188
+Defined in: node\_modules/@types/lodash/common/common.d.ts:192
 
 #### Parameters
 
@@ -7232,7 +7235,7 @@ _.unset
 
 > **unshift**(...`items`): `this`
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:189
+Defined in: node\_modules/@types/lodash/common/common.d.ts:193
 
 #### Parameters
 

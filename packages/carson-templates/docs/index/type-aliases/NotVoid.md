@@ -6,4 +6,4 @@
 
 > **NotVoid** = `unknown`
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:213
+Defined in: node\_modules/@types/lodash/common/common.d.ts:217

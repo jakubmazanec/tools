@@ -8,7 +8,7 @@
 > [`NotVoid`](NotVoid.md)\> \| [`IterateeShorthand`](IterateeShorthand.md)\<`TObject`\[keyof
 > `TObject`\]\>
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:223
+Defined in: node\_modules/@types/lodash/common/common.d.ts:227
 
 ## Type Parameters
 

@@ -8,7 +8,7 @@
 > [`ObjectIterator`](ObjectIterator.md)\<`TObject`, `TResult`\> \|
 > [`IterateeShorthand`](IterateeShorthand.md)\<`TObject`\[keyof `TObject`\]\>
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:224
+Defined in: node\_modules/@types/lodash/common/common.d.ts:228
 
 ## Type Parameters
 

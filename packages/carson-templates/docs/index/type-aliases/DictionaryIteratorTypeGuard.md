@@ -8,7 +8,7 @@
 > [`ObjectIteratorTypeGuard`](ObjectIteratorTypeGuard.md)\<[`Dictionary`](../interfaces/Dictionary.md)\<`T`\>,
 > `S`\>
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:282
+Defined in: node\_modules/@types/lodash/common/common.d.ts:286
 
 ## Type Parameters
 

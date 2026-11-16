@@ -7,7 +7,7 @@
 > **IterateeShorthand**\<`T`\> = [`PropertyName`](PropertyName.md) \|
 > \[[`PropertyName`](PropertyName.md), `any`\] \| [`PartialShallow`](PartialShallow.md)\<`T`\>
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:214
+Defined in: node\_modules/@types/lodash/common/common.d.ts:218
 
 ## Type Parameters
 

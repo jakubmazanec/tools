@@ -6,12 +6,12 @@
 
 > **FieldProps**\<`T`\> = `ComponentProps`\<_typeof_
 > [`useFieldTheme`](../variables/useFieldTheme.md)\> & `ComponentPropsWithoutRef`\<`T`\> &
-> `ComponentRef`\<`T`\> & `PropsWithChildren` & \{ `as?`: `T`; `className?`: `string`; `field?`:
+> `ComponentRef`\<`T`\> & `PropsWithChildren` & (\{ `as?`: `T`; `className?`: `string`; `field?`:
 > `undefined`; `name?`: `FieldName`\<`any`, `any`\> \| `string`; \} \| \{ `as?`: `T`; `className?`:
-> `string`; `field?`: `FieldMetadata`\<`any`\>; `name?`: `undefined`; \}
+> `string`; `field?`: `FieldMetadata`\<`any`\>; `name?`: `undefined`; \})
 
 Defined in:
-[packages/ui/source/components/Field.tsx:17](https://github.com/jakubmazanec/tools/blob/a2ad76298b012139ad7499a776924f487807cb38/packages/ui/source/components/Field.tsx#L17)
+[packages/ui/source/components/Field.tsx:17](https://github.com/jakubmazanec/tools/blob/66efa054b871c783405ec2cb1e4ebd507a77039a/packages/ui/source/components/Field.tsx#L17)
 
 ## Type Parameters
 

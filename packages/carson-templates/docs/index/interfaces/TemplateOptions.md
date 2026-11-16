@@ -19,7 +19,7 @@ Change the following template settings to use alternative delimiters.
 
 > `optional` **escape?**: `RegExp` \| `null`
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:120
+Defined in: node\_modules/@types/lodash/common/common.d.ts:124
 
 The "escape" delimiter.
 
@@ -33,7 +33,7 @@ The "escape" delimiter.
 
 > `optional` **evaluate?**: `RegExp` \| `null`
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:124
+Defined in: node\_modules/@types/lodash/common/common.d.ts:128
 
 The "evaluate" delimiter.
 
@@ -47,7 +47,7 @@ The "evaluate" delimiter.
 
 > `optional` **imports?**: [`Dictionary`](Dictionary.md)\<`any`\>
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:128
+Defined in: node\_modules/@types/lodash/common/common.d.ts:132
 
 An object to import into the template as local variables.
 
@@ -61,7 +61,7 @@ An object to import into the template as local variables.
 
 > `optional` **interpolate?**: `RegExp` \| `null`
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:132
+Defined in: node\_modules/@types/lodash/common/common.d.ts:136
 
 The "interpolate" delimiter.
 
@@ -87,7 +87,7 @@ _.sourceURL
 
 > `optional` **variable?**: `string`
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:136
+Defined in: node\_modules/@types/lodash/common/common.d.ts:140
 
 Used to reference the data object in the template text.
 

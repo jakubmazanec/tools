@@ -4,7 +4,7 @@
 
 # Interface: ObjectChain\<T\>
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:207
+Defined in: node\_modules/@types/lodash/common/common.d.ts:211
 
 ## Extends
 
@@ -925,8 +925,8 @@ _.at
 
 ### attempt()
 
-> **attempt**\<`TResult`\>(...`args`): `ObjectChain`\<`Error`\> \|
-> [`ExpChain`](../type-aliases/ExpChain.md)\<`TResult`\>
+> **attempt**\<`TResult`\>(...`args`): [`ExpChain`](../type-aliases/ExpChain.md)\<`Error` \|
+> `TResult`\>
 
 Defined in: node\_modules/@types/lodash/common/util.d.ts:23
 
@@ -944,7 +944,7 @@ Defined in: node\_modules/@types/lodash/common/util.d.ts:23
 
 #### Returns
 
-`ObjectChain`\<`Error`\> \| [`ExpChain`](../type-aliases/ExpChain.md)\<`TResult`\>
+[`ExpChain`](../type-aliases/ExpChain.md)\<`Error` \| `TResult`\>
 
 #### See
 
@@ -1322,8 +1322,8 @@ _.cloneWith
 
 #### Call Signature
 
-> **cloneWith**\<`TResult`\>(`customizer`): [`ExpChain`](../type-aliases/ExpChain.md)\<`T`\> \|
-> [`ExpChain`](../type-aliases/ExpChain.md)\<`TResult`\>
+> **cloneWith**\<`TResult`\>(`customizer`): [`ExpChain`](../type-aliases/ExpChain.md)\<`T` \|
+> `TResult`\>
 
 Defined in: node\_modules/@types/lodash/common/lang.d.ts:151
 
@@ -1341,8 +1341,7 @@ Defined in: node\_modules/@types/lodash/common/lang.d.ts:151
 
 ##### Returns
 
-[`ExpChain`](../type-aliases/ExpChain.md)\<`T`\> \|
-[`ExpChain`](../type-aliases/ExpChain.md)\<`TResult`\>
+[`ExpChain`](../type-aliases/ExpChain.md)\<`T` \| `TResult`\>
 
 ##### See
 
@@ -2522,7 +2521,8 @@ _.filter
 
 #### Call Signature
 
-> **find**\<`S`\>(`predicate`, `fromIndex?`): [`ExpChain`](../type-aliases/ExpChain.md)\<`S`\>
+> **find**\<`S`\>(`predicate`, `fromIndex?`): [`ExpChain`](../type-aliases/ExpChain.md)\<`S` \|
+> `undefined`\>
 
 Defined in: node\_modules/@types/lodash/common/collection.d.ts:339
 
@@ -2544,7 +2544,7 @@ Defined in: node\_modules/@types/lodash/common/collection.d.ts:339
 
 ##### Returns
 
-[`ExpChain`](../type-aliases/ExpChain.md)\<`S`\>
+[`ExpChain`](../type-aliases/ExpChain.md)\<`S` \| `undefined`\>
 
 ##### See
 
@@ -2552,8 +2552,8 @@ _.find
 
 #### Call Signature
 
-> **find**(`predicate?`, `fromIndex?`): [`ExpChain`](../type-aliases/ExpChain.md)\<`T`\[keyof
-> `T`\]\>
+> **find**(`predicate?`, `fromIndex?`): [`ExpChain`](../type-aliases/ExpChain.md)\<`T`\[keyof `T`\]
+> \| `undefined`\>
 
 Defined in: node\_modules/@types/lodash/common/collection.d.ts:343
 
@@ -2569,7 +2569,7 @@ Defined in: node\_modules/@types/lodash/common/collection.d.ts:343
 
 ##### Returns
 
-[`ExpChain`](../type-aliases/ExpChain.md)\<`T`\[keyof `T`\]\>
+[`ExpChain`](../type-aliases/ExpChain.md)\<`T`\[keyof `T`\] \| `undefined`\>
 
 ##### See
 
@@ -2607,7 +2607,8 @@ _.findKey
 
 #### Call Signature
 
-> **findLast**\<`S`\>(`predicate`, `fromIndex?`): [`ExpChain`](../type-aliases/ExpChain.md)\<`S`\>
+> **findLast**\<`S`\>(`predicate`, `fromIndex?`): [`ExpChain`](../type-aliases/ExpChain.md)\<`S` \|
+> `undefined`\>
 
 Defined in: node\_modules/@types/lodash/common/collection.d.ts:402
 
@@ -2629,7 +2630,7 @@ Defined in: node\_modules/@types/lodash/common/collection.d.ts:402
 
 ##### Returns
 
-[`ExpChain`](../type-aliases/ExpChain.md)\<`S`\>
+[`ExpChain`](../type-aliases/ExpChain.md)\<`S` \| `undefined`\>
 
 ##### See
 
@@ -2638,7 +2639,7 @@ _.findLast
 #### Call Signature
 
 > **findLast**(`predicate?`, `fromIndex?`): [`ExpChain`](../type-aliases/ExpChain.md)\<`T`\[keyof
-> `T`\]\>
+> `T`\] \| `undefined`\>
 
 Defined in: node\_modules/@types/lodash/common/collection.d.ts:406
 
@@ -2654,7 +2655,7 @@ Defined in: node\_modules/@types/lodash/common/collection.d.ts:406
 
 ##### Returns
 
-[`ExpChain`](../type-aliases/ExpChain.md)\<`T`\[keyof `T`\]\>
+[`ExpChain`](../type-aliases/ExpChain.md)\<`T`\[keyof `T`\] \| `undefined`\>
 
 ##### See
 
@@ -3147,8 +3148,7 @@ _.get
 
 > **get**\<`TKey`\>(`path`, `defaultValue`): `T`\[`TKey`\] _extends_ `any`[] ?
 > [`ExpChain`](../type-aliases/ExpChain.md)\<`Exclude`\<`any`\[`any`\], `undefined`\>\> :
-> [`CollectionChain`](CollectionChain.md)\<`never`\> \|
-> [`ExpChain`](../type-aliases/ExpChain.md)\<`Exclude`\<`T`\[`TKey`\], `undefined`\>\>
+> [`ExpChain`](../type-aliases/ExpChain.md)\<`never`[] \| `Exclude`\<`T`\[`TKey`\], `undefined`\>\>
 
 Defined in: node\_modules/@types/lodash/common/object.d.ts:1299
 
@@ -3172,8 +3172,7 @@ Defined in: node\_modules/@types/lodash/common/object.d.ts:1299
 
 `T`\[`TKey`\] _extends_ `any`[] ?
 [`ExpChain`](../type-aliases/ExpChain.md)\<`Exclude`\<`any`\[`any`\], `undefined`\>\> :
-[`CollectionChain`](CollectionChain.md)\<`never`\> \|
-[`ExpChain`](../type-aliases/ExpChain.md)\<`Exclude`\<`T`\[`TKey`\], `undefined`\>\>
+[`ExpChain`](../type-aliases/ExpChain.md)\<`never`[] \| `Exclude`\<`T`\[`TKey`\], `undefined`\>\>
 
 ##### See
 
@@ -3182,8 +3181,7 @@ _.get
 #### Call Signature
 
 > **get**\<`TKey`, `TDefault`\>(`path`, `defaultValue`):
-> [`ExpChain`](../type-aliases/ExpChain.md)\<`TDefault`\> \|
-> [`ExpChain`](../type-aliases/ExpChain.md)\<`Exclude`\<`T`\[`TKey`\], `undefined`\>\>
+> [`ExpChain`](../type-aliases/ExpChain.md)\<`TDefault` \| `Exclude`\<`T`\[`TKey`\], `undefined`\>\>
 
 Defined in: node\_modules/@types/lodash/common/object.d.ts:1303
 
@@ -3209,8 +3207,7 @@ Defined in: node\_modules/@types/lodash/common/object.d.ts:1303
 
 ##### Returns
 
-[`ExpChain`](../type-aliases/ExpChain.md)\<`TDefault`\> \|
-[`ExpChain`](../type-aliases/ExpChain.md)\<`Exclude`\<`T`\[`TKey`\], `undefined`\>\>
+[`ExpChain`](../type-aliases/ExpChain.md)\<`TDefault` \| `Exclude`\<`T`\[`TKey`\], `undefined`\>\>
 
 ##### See
 
@@ -3251,8 +3248,8 @@ _.get
 
 > **get**\<`TKey1`, `TKey2`\>(`path`, `defaultValue`): `T`\[`TKey1`\]\[`TKey2`\] _extends_ `any`[] ?
 > [`ExpChain`](../type-aliases/ExpChain.md)\<`Exclude`\<`any`\[`any`\], `undefined`\>\> :
-> [`CollectionChain`](CollectionChain.md)\<`never`\> \|
-> [`ExpChain`](../type-aliases/ExpChain.md)\<`Exclude`\<`T`\[`TKey1`\]\[`TKey2`\], `undefined`\>\>
+> [`ExpChain`](../type-aliases/ExpChain.md)\<`never`[] \| `Exclude`\<`T`\[`TKey1`\]\[`TKey2`\],
+> `undefined`\>\>
 
 Defined in: node\_modules/@types/lodash/common/object.d.ts:1311
 
@@ -3280,8 +3277,8 @@ Defined in: node\_modules/@types/lodash/common/object.d.ts:1311
 
 `T`\[`TKey1`\]\[`TKey2`\] _extends_ `any`[] ?
 [`ExpChain`](../type-aliases/ExpChain.md)\<`Exclude`\<`any`\[`any`\], `undefined`\>\> :
-[`CollectionChain`](CollectionChain.md)\<`never`\> \|
-[`ExpChain`](../type-aliases/ExpChain.md)\<`Exclude`\<`T`\[`TKey1`\]\[`TKey2`\], `undefined`\>\>
+[`ExpChain`](../type-aliases/ExpChain.md)\<`never`[] \| `Exclude`\<`T`\[`TKey1`\]\[`TKey2`\],
+`undefined`\>\>
 
 ##### See
 
@@ -3290,8 +3287,8 @@ _.get
 #### Call Signature
 
 > **get**\<`TKey1`, `TKey2`, `TDefault`\>(`path`, `defaultValue`):
-> [`ExpChain`](../type-aliases/ExpChain.md)\<`TDefault`\> \|
-> [`ExpChain`](../type-aliases/ExpChain.md)\<`Exclude`\<`T`\[`TKey1`\]\[`TKey2`\], `undefined`\>\>
+> [`ExpChain`](../type-aliases/ExpChain.md)\<`TDefault` \| `Exclude`\<`T`\[`TKey1`\]\[`TKey2`\],
+> `undefined`\>\>
 
 Defined in: node\_modules/@types/lodash/common/object.d.ts:1315
 
@@ -3321,8 +3318,8 @@ Defined in: node\_modules/@types/lodash/common/object.d.ts:1315
 
 ##### Returns
 
-[`ExpChain`](../type-aliases/ExpChain.md)\<`TDefault`\> \|
-[`ExpChain`](../type-aliases/ExpChain.md)\<`Exclude`\<`T`\[`TKey1`\]\[`TKey2`\], `undefined`\>\>
+[`ExpChain`](../type-aliases/ExpChain.md)\<`TDefault` \| `Exclude`\<`T`\[`TKey1`\]\[`TKey2`\],
+`undefined`\>\>
 
 ##### See
 
@@ -3367,9 +3364,8 @@ _.get
 
 > **get**\<`TKey1`, `TKey2`, `TKey3`\>(`path`, `defaultValue`): `T`\[`TKey1`\]\[`TKey2`\]\[`TKey3`\]
 > _extends_ `any`[] ? [`ExpChain`](../type-aliases/ExpChain.md)\<`Exclude`\<`any`\[`any`\],
-> `undefined`\>\> : [`CollectionChain`](CollectionChain.md)\<`never`\> \|
-> [`ExpChain`](../type-aliases/ExpChain.md)\<`Exclude`\<`T`\[`TKey1`\]\[`TKey2`\]\[`TKey3`\],
-> `undefined`\>\>
+> `undefined`\>\> : [`ExpChain`](../type-aliases/ExpChain.md)\<`never`[] \|
+> `Exclude`\<`T`\[`TKey1`\]\[`TKey2`\]\[`TKey3`\], `undefined`\>\>
 
 Defined in: node\_modules/@types/lodash/common/object.d.ts:1323
 
@@ -3401,9 +3397,8 @@ Defined in: node\_modules/@types/lodash/common/object.d.ts:1323
 
 `T`\[`TKey1`\]\[`TKey2`\]\[`TKey3`\] _extends_ `any`[] ?
 [`ExpChain`](../type-aliases/ExpChain.md)\<`Exclude`\<`any`\[`any`\], `undefined`\>\> :
-[`CollectionChain`](CollectionChain.md)\<`never`\> \|
-[`ExpChain`](../type-aliases/ExpChain.md)\<`Exclude`\<`T`\[`TKey1`\]\[`TKey2`\]\[`TKey3`\],
-`undefined`\>\>
+[`ExpChain`](../type-aliases/ExpChain.md)\<`never`[] \|
+`Exclude`\<`T`\[`TKey1`\]\[`TKey2`\]\[`TKey3`\], `undefined`\>\>
 
 ##### See
 
@@ -3412,9 +3407,8 @@ _.get
 #### Call Signature
 
 > **get**\<`TKey1`, `TKey2`, `TKey3`, `TDefault`\>(`path`, `defaultValue`):
-> [`ExpChain`](../type-aliases/ExpChain.md)\<`TDefault`\> \|
-> [`ExpChain`](../type-aliases/ExpChain.md)\<`Exclude`\<`T`\[`TKey1`\]\[`TKey2`\]\[`TKey3`\],
-> `undefined`\>\>
+> [`ExpChain`](../type-aliases/ExpChain.md)\<`TDefault` \|
+> `Exclude`\<`T`\[`TKey1`\]\[`TKey2`\]\[`TKey3`\], `undefined`\>\>
 
 Defined in: node\_modules/@types/lodash/common/object.d.ts:1327
 
@@ -3448,9 +3442,8 @@ Defined in: node\_modules/@types/lodash/common/object.d.ts:1327
 
 ##### Returns
 
-[`ExpChain`](../type-aliases/ExpChain.md)\<`TDefault`\> \|
-[`ExpChain`](../type-aliases/ExpChain.md)\<`Exclude`\<`T`\[`TKey1`\]\[`TKey2`\]\[`TKey3`\],
-`undefined`\>\>
+[`ExpChain`](../type-aliases/ExpChain.md)\<`TDefault` \|
+`Exclude`\<`T`\[`TKey1`\]\[`TKey2`\]\[`TKey3`\], `undefined`\>\>
 
 ##### See
 
@@ -3500,9 +3493,8 @@ _.get
 > **get**\<`TKey1`, `TKey2`, `TKey3`, `TKey4`\>(`path`, `defaultValue`):
 > `T`\[`TKey1`\]\[`TKey2`\]\[`TKey3`\]\[`TKey4`\] _extends_ `any`[] ?
 > [`ExpChain`](../type-aliases/ExpChain.md)\<`Exclude`\<`any`\[`any`\], `undefined`\>\> :
-> [`CollectionChain`](CollectionChain.md)\<`never`\> \|
-> [`ExpChain`](../type-aliases/ExpChain.md)\<`Exclude`\<`T`\[`TKey1`\]\[`TKey2`\]\[`TKey3`\]\[`TKey4`\],
-> `undefined`\>\>
+> [`ExpChain`](../type-aliases/ExpChain.md)\<`never`[] \|
+> `Exclude`\<`T`\[`TKey1`\]\[`TKey2`\]\[`TKey3`\]\[`TKey4`\], `undefined`\>\>
 
 Defined in: node\_modules/@types/lodash/common/object.d.ts:1335
 
@@ -3538,9 +3530,8 @@ Defined in: node\_modules/@types/lodash/common/object.d.ts:1335
 
 `T`\[`TKey1`\]\[`TKey2`\]\[`TKey3`\]\[`TKey4`\] _extends_ `any`[] ?
 [`ExpChain`](../type-aliases/ExpChain.md)\<`Exclude`\<`any`\[`any`\], `undefined`\>\> :
-[`CollectionChain`](CollectionChain.md)\<`never`\> \|
-[`ExpChain`](../type-aliases/ExpChain.md)\<`Exclude`\<`T`\[`TKey1`\]\[`TKey2`\]\[`TKey3`\]\[`TKey4`\],
-`undefined`\>\>
+[`ExpChain`](../type-aliases/ExpChain.md)\<`never`[] \|
+`Exclude`\<`T`\[`TKey1`\]\[`TKey2`\]\[`TKey3`\]\[`TKey4`\], `undefined`\>\>
 
 ##### See
 
@@ -3549,9 +3540,8 @@ _.get
 #### Call Signature
 
 > **get**\<`TKey1`, `TKey2`, `TKey3`, `TKey4`, `TDefault`\>(`path`, `defaultValue`):
-> [`ExpChain`](../type-aliases/ExpChain.md)\<`TDefault`\> \|
-> [`ExpChain`](../type-aliases/ExpChain.md)\<`Exclude`\<`T`\[`TKey1`\]\[`TKey2`\]\[`TKey3`\]\[`TKey4`\],
-> `undefined`\>\>
+> [`ExpChain`](../type-aliases/ExpChain.md)\<`TDefault` \|
+> `Exclude`\<`T`\[`TKey1`\]\[`TKey2`\]\[`TKey3`\]\[`TKey4`\], `undefined`\>\>
 
 Defined in: node\_modules/@types/lodash/common/object.d.ts:1339
 
@@ -3589,9 +3579,8 @@ Defined in: node\_modules/@types/lodash/common/object.d.ts:1339
 
 ##### Returns
 
-[`ExpChain`](../type-aliases/ExpChain.md)\<`TDefault`\> \|
-[`ExpChain`](../type-aliases/ExpChain.md)\<`Exclude`\<`T`\[`TKey1`\]\[`TKey2`\]\[`TKey3`\]\[`TKey4`\],
-`undefined`\>\>
+[`ExpChain`](../type-aliases/ExpChain.md)\<`TDefault` \|
+`Exclude`\<`T`\[`TKey1`\]\[`TKey2`\]\[`TKey3`\]\[`TKey4`\], `undefined`\>\>
 
 ##### See
 
@@ -3631,9 +3620,9 @@ _.get
 #### Call Signature
 
 > **get**\<`TPath`, `TDefault`\>(`path`, `defaultValue`):
-> [`ExpChain`](../type-aliases/ExpChain.md)\<`TDefault`\> \|
-> [`ExpChain`](../type-aliases/ExpChain.md)\<`Exclude`\<[`GetFieldType`](../type-aliases/GetFieldType.md)\<`T`,
-> `TPath`, `"Path"`\>, `null` \| `undefined`\>\>
+> [`ExpChain`](../type-aliases/ExpChain.md)\<`TDefault` \|
+> `Exclude`\<[`GetFieldType`](../type-aliases/GetFieldType.md)\<`T`, `TPath`, `"Path"`\>, `null` \|
+> `undefined`\>\>
 
 Defined in: node\_modules/@types/lodash/common/object.d.ts:1347
 
@@ -3659,9 +3648,9 @@ Defined in: node\_modules/@types/lodash/common/object.d.ts:1347
 
 ##### Returns
 
-[`ExpChain`](../type-aliases/ExpChain.md)\<`TDefault`\> \|
-[`ExpChain`](../type-aliases/ExpChain.md)\<`Exclude`\<[`GetFieldType`](../type-aliases/GetFieldType.md)\<`T`,
-`TPath`, `"Path"`\>, `null` \| `undefined`\>\>
+[`ExpChain`](../type-aliases/ExpChain.md)\<`TDefault` \|
+`Exclude`\<[`GetFieldType`](../type-aliases/GetFieldType.md)\<`T`, `TPath`, `"Path"`\>, `null` \|
+`undefined`\>\>
 
 ##### See
 
@@ -6555,7 +6544,8 @@ _.reduce
 
 #### Call Signature
 
-> **reduce**(`callback`): [`ExpChain`](../type-aliases/ExpChain.md)\<`T`\[keyof `T`\]\>
+> **reduce**(`callback`): [`ExpChain`](../type-aliases/ExpChain.md)\<`T`\[keyof `T`\] \|
+> `undefined`\>
 
 Defined in: node\_modules/@types/lodash/common/collection.d.ts:1511
 
@@ -6568,7 +6558,7 @@ Defined in: node\_modules/@types/lodash/common/collection.d.ts:1511
 
 ##### Returns
 
-[`ExpChain`](../type-aliases/ExpChain.md)\<`T`\[keyof `T`\]\>
+[`ExpChain`](../type-aliases/ExpChain.md)\<`T`\[keyof `T`\] \| `undefined`\>
 
 ##### See
 
@@ -6611,7 +6601,8 @@ _.reduceRight
 
 #### Call Signature
 
-> **reduceRight**(`callback`): [`ExpChain`](../type-aliases/ExpChain.md)\<`T`\[keyof `T`\]\>
+> **reduceRight**(`callback`): [`ExpChain`](../type-aliases/ExpChain.md)\<`T`\[keyof `T`\] \|
+> `undefined`\>
 
 Defined in: node\_modules/@types/lodash/common/collection.d.ts:1582
 
@@ -6624,7 +6615,7 @@ Defined in: node\_modules/@types/lodash/common/collection.d.ts:1582
 
 ##### Returns
 
-[`ExpChain`](../type-aliases/ExpChain.md)\<`T`\[keyof `T`\]\>
+[`ExpChain`](../type-aliases/ExpChain.md)\<`T`\[keyof `T`\] \| `undefined`\>
 
 ##### See
 
@@ -6821,13 +6812,13 @@ _.round
 
 ### sample()
 
-> **sample**(): [`ExpChain`](../type-aliases/ExpChain.md)\<`T`\[keyof `T`\]\>
+> **sample**(): [`ExpChain`](../type-aliases/ExpChain.md)\<`T`\[keyof `T`\] \| `undefined`\>
 
 Defined in: node\_modules/@types/lodash/common/collection.d.ts:1702
 
 #### Returns
 
-[`ExpChain`](../type-aliases/ExpChain.md)\<`T`\[keyof `T`\]\>
+[`ExpChain`](../type-aliases/ExpChain.md)\<`T`\[keyof `T`\] \| `undefined`\>
 
 #### See
 

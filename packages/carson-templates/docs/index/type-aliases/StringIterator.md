@@ -6,7 +6,7 @@
 
 > **StringIterator**\<`TResult`\> = (`char`, `index`, `string`) => `TResult`
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:226
+Defined in: node\_modules/@types/lodash/common/common.d.ts:230
 
 ## Type Parameters
 

@@ -6,7 +6,7 @@
 
 > **MemoIterator**\<`T`, `TResult`\> = (`prev`, `curr`, `indexOrKey`, `list`) => `TResult`
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:230
+Defined in: node\_modules/@types/lodash/common/common.d.ts:234
 
 ## Type Parameters
 

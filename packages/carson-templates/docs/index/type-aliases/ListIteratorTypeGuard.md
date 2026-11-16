@@ -6,7 +6,7 @@
 
 > **ListIteratorTypeGuard**\<`T`, `S`\> = (`value`, `index`, `collection`) => `value is S`
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:220
+Defined in: node\_modules/@types/lodash/common/common.d.ts:224
 
 ## Type Parameters
 

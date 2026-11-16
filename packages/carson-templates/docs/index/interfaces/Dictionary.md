@@ -4,7 +4,7 @@
 
 # Interface: Dictionary\<T\>
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:253
+Defined in: node\_modules/@types/lodash/common/common.d.ts:257
 
 ## Type Parameters
 

@@ -7,7 +7,7 @@
 > **ValueKeyIteratee**\<`T`\> = ((`value`, `key`) => [`NotVoid`](NotVoid.md)) \|
 > [`IterateeShorthand`](IterateeShorthand.md)\<`T`\>
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:241
+Defined in: node\_modules/@types/lodash/common/common.d.ts:245
 
 ## Type Parameters
 

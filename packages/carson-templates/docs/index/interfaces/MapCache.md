@@ -4,7 +4,7 @@
 
 # Interface: MapCache
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:141
+Defined in: node\_modules/@types/lodash/common/common.d.ts:145
 
 Creates a cache object to store key/value pairs.
 
@@ -14,7 +14,7 @@ Creates a cache object to store key/value pairs.
 
 > `optional` **clear?**: () => `void`
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:170
+Defined in: node\_modules/@types/lodash/common/common.d.ts:174
 
 Removes all key-value entries from the map.
 
@@ -28,7 +28,7 @@ Removes all key-value entries from the map.
 
 > **delete**(`key`): `boolean`
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:147
+Defined in: node\_modules/@types/lodash/common/common.d.ts:151
 
 Removes `key` and its value from the cache.
 
@@ -52,7 +52,7 @@ Returns `true` if the entry was removed successfully, else `false`.
 
 > **get**(`key`): `any`
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:153
+Defined in: node\_modules/@types/lodash/common/common.d.ts:157
 
 Gets the cached value for `key`.
 
@@ -76,7 +76,7 @@ Returns the cached value.
 
 > **has**(`key`): `boolean`
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:159
+Defined in: node\_modules/@types/lodash/common/common.d.ts:163
 
 Checks if a cached value for `key` exists.
 
@@ -100,7 +100,7 @@ Returns `true` if an entry for `key` exists, else `false`.
 
 > **set**(`key`, `value`): `this`
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:166
+Defined in: node\_modules/@types/lodash/common/common.d.ts:170
 
 Sets `value` to `key` of the cache.
 

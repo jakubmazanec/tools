@@ -7,6 +7,6 @@
 > **CommandsConfig** = readonly \[[`CommandConfig`](CommandConfig.md), `...CommandConfig[]`\]
 
 Defined in:
-[args/source/CommandsConfig.ts:4](https://github.com/jakubmazanec/tools/blob/a2ad76298b012139ad7499a776924f487807cb38/packages/args/source/CommandsConfig.ts#L4)
+[args/source/CommandsConfig.ts:4](https://github.com/jakubmazanec/tools/blob/66efa054b871c783405ec2cb1e4ebd507a77039a/packages/args/source/CommandsConfig.ts#L4)
 
 Parser's commands configuration.

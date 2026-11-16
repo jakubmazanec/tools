@@ -12,7 +12,7 @@ Defined in: node\_modules/@types/lodash/index.d.ts:20
 > [`Function`](Function.md)\<`any`\> & [`Object`](Object.md)\<`any`\> &
 > [`Primitive`](Primitive.md)\<`any`\> & [`String`](String.md)\<`string`\>
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:94
+Defined in: node\_modules/@types/lodash/common/common.d.ts:98
 
 Creates a lodash object which wraps value to enable implicit method chain sequences. Methods that
 operate on and return arrays, collections, and functions can be chained together. Methods that
@@ -97,7 +97,7 @@ trimEnd, trimStart, truncate, unescape, uniqueId, upperCase, upperFirst, value, 
 
 > **LoDashStatic**\<`T`\>(`value`): [`String`](String.md)\<`T`\>
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:95
+Defined in: node\_modules/@types/lodash/common/common.d.ts:99
 
 ### Type Parameters
 
@@ -119,7 +119,7 @@ Defined in: node\_modules/@types/lodash/common/common.d.ts:95
 
 > **LoDashStatic**\<`T`\>(`value`): [`Primitive`](Primitive.md)\<`T`\>
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:96
+Defined in: node\_modules/@types/lodash/common/common.d.ts:100
 
 ### Type Parameters
 
@@ -141,7 +141,7 @@ Defined in: node\_modules/@types/lodash/common/common.d.ts:96
 
 > **LoDashStatic**(`value`): [`String`](String.md)
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:97
+Defined in: node\_modules/@types/lodash/common/common.d.ts:101
 
 ### Parameters
 
@@ -157,7 +157,7 @@ Defined in: node\_modules/@types/lodash/common/common.d.ts:97
 
 > **LoDashStatic**\<`T`\>(`value`): [`Function`](Function.md)\<`T`\>
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:98
+Defined in: node\_modules/@types/lodash/common/common.d.ts:102
 
 ### Type Parameters
 
@@ -179,7 +179,7 @@ Defined in: node\_modules/@types/lodash/common/common.d.ts:98
 
 > **LoDashStatic**\<`T`\>(`value`): [`Collection`](Collection.md)\<`T`\>
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:99
+Defined in: node\_modules/@types/lodash/common/common.d.ts:103
 
 ### Type Parameters
 
@@ -201,7 +201,7 @@ Defined in: node\_modules/@types/lodash/common/common.d.ts:99
 
 > **LoDashStatic**\<`T`\>(`value`): [`Object`](Object.md)\<`T`\>
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:100
+Defined in: node\_modules/@types/lodash/common/common.d.ts:104
 
 ### Type Parameters
 
@@ -223,7 +223,7 @@ Defined in: node\_modules/@types/lodash/common/common.d.ts:100
 
 > **LoDashStatic**\<`T`\>(`value`): [`Primitive`](Primitive.md)\<`T`\>
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:101
+Defined in: node\_modules/@types/lodash/common/common.d.ts:105
 
 ### Type Parameters
 
@@ -7153,7 +7153,7 @@ _.forEach
 
 ###### collection
 
-`TArray` & `T`[] \| `null` \| `undefined`
+`TArray` & (`T`[] \| `null` \| `undefined`)
 
 ###### iteratee?
 
@@ -7213,7 +7213,7 @@ _.forEach
 
 ###### collection
 
-`TList` & [`List`](../type-aliases/List.md)\<`T`\> \| `null` \| `undefined`
+`TList` & ([`List`](../type-aliases/List.md)\<`T`\> \| `null` \| `undefined`)
 
 ###### iteratee?
 
@@ -7402,7 +7402,7 @@ _.forEachRight
 
 ###### collection
 
-`TArray` & `T`[] \| `null` \| `undefined`
+`TArray` & (`T`[] \| `null` \| `undefined`)
 
 ###### iteratee?
 
@@ -7462,7 +7462,7 @@ _.forEachRight
 
 ###### collection
 
-`TList` & [`List`](../type-aliases/List.md)\<`T`\> \| `null` \| `undefined`
+`TList` & ([`List`](../type-aliases/List.md)\<`T`\> \| `null` \| `undefined`)
 
 ###### iteratee?
 
@@ -7675,7 +7675,7 @@ The new partially applied function.
 
 > **templateSettings**: [`TemplateSettings`](TemplateSettings.md)
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:110
+Defined in: node\_modules/@types/lodash/common/common.d.ts:114
 
 By default, the template delimiters used by Lo-Dash are similar to those in embedded Ruby (ERB).
 Change the following template settings to use alternative delimiters.
@@ -7686,7 +7686,7 @@ Change the following template settings to use alternative delimiters.
 
 > **VERSION**: `string`
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:105
+Defined in: node\_modules/@types/lodash/common/common.d.ts:109
 
 The semantic version number.
 
@@ -12785,7 +12785,7 @@ Defined in: node\_modules/@types/lodash/common/collection.d.ts:802
 
 ###### collection
 
-`TArray` & `T`[] \| `null` \| `undefined`
+`TArray` & (`T`[] \| `null` \| `undefined`)
 
 ###### iteratee?
 
@@ -12849,7 +12849,7 @@ Defined in: node\_modules/@types/lodash/common/collection.d.ts:810
 
 ###### collection
 
-`TList` & [`List`](../type-aliases/List.md)\<`T`\> \| `null` \| `undefined`
+`TList` & ([`List`](../type-aliases/List.md)\<`T`\> \| `null` \| `undefined`)
 
 ###### iteratee?
 
@@ -13038,7 +13038,7 @@ Defined in: node\_modules/@types/lodash/common/collection.d.ts:883
 
 ###### collection
 
-`TArray` & `T`[] \| `null` \| `undefined`
+`TArray` & (`T`[] \| `null` \| `undefined`)
 
 ###### iteratee?
 
@@ -13102,7 +13102,7 @@ Defined in: node\_modules/@types/lodash/common/collection.d.ts:891
 
 ###### collection
 
-`TList` & [`List`](../type-aliases/List.md)\<`T`\> \| `null` \| `undefined`
+`TList` & ([`List`](../type-aliases/List.md)\<`T`\> \| `null` \| `undefined`)
 
 ###### iteratee?
 

@@ -7,7 +7,7 @@
 > **LoDashImplicitArrayWrapper**\<`T`\> =
 > [`LoDashImplicitWrapper`](../interfaces/LoDashImplicitWrapper.md)\<`T`[]\>
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:268
+Defined in: node\_modules/@types/lodash/common/common.d.ts:272
 
 ## Type Parameters
 

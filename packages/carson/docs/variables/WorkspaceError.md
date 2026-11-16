@@ -4,15 +4,15 @@
 
 # Variable: WorkspaceError
 
-> `const` **WorkspaceError**: (`code`, `options?`) =>
-> `CustomErrorWithData`\<`"INVALID_PACKAGE_JSON"` \| `"MISSING_CARSON_TEMPLATE_ID"` \|
-> `"UNKNOWN_ERROR"` \| `"INVALID_WORKSPACE_CONFIG"` \| `"NO_SUCH_WORKSPACE_PATH"` \|
-> `"NO_WORKSPACE_FOUND"` \| `"PATH_MISMATCH"` \| `"WORKSPACE_PATH_NOT_EMPTY"` \|
-> `"DUPLICATE_PROJECT_NAME"` \| `"DUPLICATE_PROJECT_PATH"` \| `"TOO_MANY_PROJECTS"` \|
-> `"PROJECT_GLOBS_MISMATCH"`, `WorkspaceErrorData`\>
+> `const` **WorkspaceError**: new (`code`, `options?`) =>
+> `CustomErrorWithData`\<`"INVALID_PACKAGE_JSON"` \| `"INVALID_WORKSPACE_CONFIG"` \|
+> `"NO_SUCH_WORKSPACE_PATH"` \| `"NO_WORKSPACE_FOUND"` \| `"PATH_MISMATCH"` \|
+> `"WORKSPACE_PATH_NOT_EMPTY"` \| `"MISSING_CARSON_TEMPLATE_ID"` \| `"DUPLICATE_PROJECT_NAME"` \|
+> `"DUPLICATE_PROJECT_PATH"` \| `"TOO_MANY_PROJECTS"` \| `"PROJECT_GLOBS_MISMATCH"` \|
+> `"UNKNOWN_ERROR"`, `WorkspaceErrorData`\>
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceError.ts:7](https://github.com/jakubmazanec/tools/blob/a2ad76298b012139ad7499a776924f487807cb38/packages/carson/source/workspace/WorkspaceError.ts#L7)
+[packages/carson/source/workspace/WorkspaceError.ts:7](https://github.com/jakubmazanec/tools/blob/66efa054b871c783405ec2cb1e4ebd507a77039a/packages/carson/source/workspace/WorkspaceError.ts#L7)
 
 A subclass of `Error` that indicates a workspace failure.
 
@@ -20,9 +20,9 @@ A subclass of `Error` that indicates a workspace failure.
 
 ### code
 
-`"INVALID_PACKAGE_JSON"` \| `"MISSING_CARSON_TEMPLATE_ID"` \| `"INVALID_WORKSPACE_CONFIG"` \|
-`"NO_SUCH_WORKSPACE_PATH"` \| `"NO_WORKSPACE_FOUND"` \| `"PATH_MISMATCH"` \|
-`"WORKSPACE_PATH_NOT_EMPTY"` \| `"DUPLICATE_PROJECT_NAME"` \| `"DUPLICATE_PROJECT_PATH"` \|
+`"INVALID_PACKAGE_JSON"` \| `"INVALID_WORKSPACE_CONFIG"` \| `"NO_SUCH_WORKSPACE_PATH"` \|
+`"NO_WORKSPACE_FOUND"` \| `"PATH_MISMATCH"` \| `"WORKSPACE_PATH_NOT_EMPTY"` \|
+`"MISSING_CARSON_TEMPLATE_ID"` \| `"DUPLICATE_PROJECT_NAME"` \| `"DUPLICATE_PROJECT_PATH"` \|
 `"TOO_MANY_PROJECTS"` \| `"PROJECT_GLOBS_MISMATCH"`
 
 ### options?
@@ -31,8 +31,8 @@ A subclass of `Error` that indicates a workspace failure.
 
 ## Returns
 
-`CustomErrorWithData`\<`"INVALID_PACKAGE_JSON"` \| `"MISSING_CARSON_TEMPLATE_ID"` \|
-`"UNKNOWN_ERROR"` \| `"INVALID_WORKSPACE_CONFIG"` \| `"NO_SUCH_WORKSPACE_PATH"` \|
-`"NO_WORKSPACE_FOUND"` \| `"PATH_MISMATCH"` \| `"WORKSPACE_PATH_NOT_EMPTY"` \|
-`"DUPLICATE_PROJECT_NAME"` \| `"DUPLICATE_PROJECT_PATH"` \| `"TOO_MANY_PROJECTS"` \|
-`"PROJECT_GLOBS_MISMATCH"`, `WorkspaceErrorData`\>
+`CustomErrorWithData`\<`"INVALID_PACKAGE_JSON"` \| `"INVALID_WORKSPACE_CONFIG"` \|
+`"NO_SUCH_WORKSPACE_PATH"` \| `"NO_WORKSPACE_FOUND"` \| `"PATH_MISMATCH"` \|
+`"WORKSPACE_PATH_NOT_EMPTY"` \| `"MISSING_CARSON_TEMPLATE_ID"` \| `"DUPLICATE_PROJECT_NAME"` \|
+`"DUPLICATE_PROJECT_PATH"` \| `"TOO_MANY_PROJECTS"` \| `"PROJECT_GLOBS_MISMATCH"` \|
+`"UNKNOWN_ERROR"`, `WorkspaceErrorData`\>

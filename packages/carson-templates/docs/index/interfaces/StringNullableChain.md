@@ -4,7 +4,7 @@
 
 # Interface: StringNullableChain
 
-Defined in: node\_modules/@types/lodash/common/common.d.ts:205
+Defined in: node\_modules/@types/lodash/common/common.d.ts:209
 
 ## Extends
 
@@ -92,8 +92,8 @@ _.add
 
 ### attempt()
 
-> **attempt**\<`TResult`\>(...`args`): [`ObjectChain`](ObjectChain.md)\<`Error`\> \|
-> [`ExpChain`](../type-aliases/ExpChain.md)\<`TResult`\>
+> **attempt**\<`TResult`\>(...`args`): [`ExpChain`](../type-aliases/ExpChain.md)\<`Error` \|
+> `TResult`\>
 
 Defined in: node\_modules/@types/lodash/common/util.d.ts:23
 
@@ -111,7 +111,7 @@ Defined in: node\_modules/@types/lodash/common/util.d.ts:23
 
 #### Returns
 
-[`ObjectChain`](ObjectChain.md)\<`Error`\> \| [`ExpChain`](../type-aliases/ExpChain.md)\<`TResult`\>
+[`ExpChain`](../type-aliases/ExpChain.md)\<`Error` \| `TResult`\>
 
 #### See
 
@@ -488,8 +488,8 @@ _.cloneWith
 
 #### Call Signature
 
-> **cloneWith**\<`TResult`\>(`customizer`): [`StringChain`](StringChain.md)\<`string`\> \|
-> [`ExpChain`](../type-aliases/ExpChain.md)\<`TResult`\>
+> **cloneWith**\<`TResult`\>(`customizer`): [`ExpChain`](../type-aliases/ExpChain.md)\<`string` \|
+> `TResult` \| `undefined`\>
 
 Defined in: node\_modules/@types/lodash/common/lang.d.ts:151
 
@@ -508,8 +508,7 @@ Defined in: node\_modules/@types/lodash/common/lang.d.ts:151
 
 ##### Returns
 
-[`StringChain`](StringChain.md)\<`string`\> \|
-[`ExpChain`](../type-aliases/ExpChain.md)\<`TResult`\>
+[`ExpChain`](../type-aliases/ExpChain.md)\<`string` \| `TResult` \| `undefined`\>
 
 ##### See
 
@@ -672,7 +671,7 @@ _.deburr
 
 #### Call Signature
 
-> **defaultTo**(`defaultValue`): [`StringChain`](StringChain.md)\<`string`\>
+> **defaultTo**(`defaultValue`): `StringNullableChain`
 
 Defined in: node\_modules/@types/lodash/common/util.d.ts:161
 
@@ -684,7 +683,7 @@ Defined in: node\_modules/@types/lodash/common/util.d.ts:161
 
 ##### Returns
 
-[`StringChain`](StringChain.md)\<`string`\>
+`StringNullableChain`
 
 ##### See
 
@@ -696,8 +695,8 @@ _.defaultTo
 
 #### Call Signature
 
-> **defaultTo**\<`TDefault`\>(`defaultValue`): [`StringChain`](StringChain.md)\<`string`\> \|
-> [`ExpChain`](../type-aliases/ExpChain.md)\<`TDefault`\>
+> **defaultTo**\<`TDefault`\>(`defaultValue`): [`ExpChain`](../type-aliases/ExpChain.md)\<`string`
+> \| `TDefault`\>
 
 Defined in: node\_modules/@types/lodash/common/util.d.ts:165
 
@@ -715,8 +714,7 @@ Defined in: node\_modules/@types/lodash/common/util.d.ts:165
 
 ##### Returns
 
-[`StringChain`](StringChain.md)\<`string`\> \|
-[`ExpChain`](../type-aliases/ExpChain.md)\<`TDefault`\>
+[`ExpChain`](../type-aliases/ExpChain.md)\<`string` \| `TDefault`\>
 
 ##### See
 
