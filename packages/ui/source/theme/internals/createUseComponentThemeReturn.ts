@@ -19,6 +19,7 @@ export function createUseComponentThemeReturn(
   cx: (...inputs: ClassName[]) => string,
   themeProps?:
     | ComponentThemeProps<{variants: ComponentThemeDefinitionVariants}>
+    // eslint-disable-next-line @typescript-eslint/no-generated-empty-object-type -- themes without variants take no theme props
     | ComponentThemeProps<undefined>,
   elementName?: string,
 ) {
