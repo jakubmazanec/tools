@@ -7,7 +7,7 @@
 > **createForm**\<`C`\>(`formConfig`): [`Form`](../type-aliases/Form.md)\<`C`\>
 
 Defined in:
-[cli/source/ui/form/createForm.tsx:15](https://github.com/jakubmazanec/tools/blob/66efa054b871c783405ec2cb1e4ebd507a77039a/packages/cli/source/ui/form/createForm.tsx#L15)
+[cli/source/ui/form/createForm.tsx:15](https://github.com/jakubmazanec/tools/blob/7027bd4db7e64559d83dd5cfca3306c9a5acc677/packages/cli/source/ui/form/createForm.tsx#L15)
 
 Creates form component that contains individual rows with inputs based on the provided config.
 

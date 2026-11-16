@@ -7,7 +7,7 @@
 > **WorkspaceOptionsProject** = `object`
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceOptionsProject.ts:8](https://github.com/jakubmazanec/tools/blob/66efa054b871c783405ec2cb1e4ebd507a77039a/packages/carson/source/workspace/WorkspaceOptionsProject.ts#L8)
+[packages/carson/source/workspace/WorkspaceOptionsProject.ts:8](https://github.com/jakubmazanec/tools/blob/7027bd4db7e64559d83dd5cfca3306c9a5acc677/packages/carson/source/workspace/WorkspaceOptionsProject.ts#L8)
 
 Type alias for WorkspaceOptions.projects \| WorkspaceOptions.projects property.
 
@@ -18,7 +18,7 @@ Type alias for WorkspaceOptions.projects \| WorkspaceOptions.projects property.
 > `optional` **config?**: [`ProjectConfig`](ProjectConfig.md)
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceOptionsProject.ts:10](https://github.com/jakubmazanec/tools/blob/66efa054b871c783405ec2cb1e4ebd507a77039a/packages/carson/source/workspace/WorkspaceOptionsProject.ts#L10)
+[packages/carson/source/workspace/WorkspaceOptionsProject.ts:10](https://github.com/jakubmazanec/tools/blob/7027bd4db7e64559d83dd5cfca3306c9a5acc677/packages/carson/source/workspace/WorkspaceOptionsProject.ts#L10)
 
 ---
 
@@ -27,7 +27,7 @@ Defined in:
 > `optional` **packageJson?**: `PackageJson`
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceOptionsProject.ts:11](https://github.com/jakubmazanec/tools/blob/66efa054b871c783405ec2cb1e4ebd507a77039a/packages/carson/source/workspace/WorkspaceOptionsProject.ts#L11)
+[packages/carson/source/workspace/WorkspaceOptionsProject.ts:11](https://github.com/jakubmazanec/tools/blob/7027bd4db7e64559d83dd5cfca3306c9a5acc677/packages/carson/source/workspace/WorkspaceOptionsProject.ts#L11)
 
 ---
 
@@ -36,4 +36,4 @@ Defined in:
 > **path**: `string`
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceOptionsProject.ts:9](https://github.com/jakubmazanec/tools/blob/66efa054b871c783405ec2cb1e4ebd507a77039a/packages/carson/source/workspace/WorkspaceOptionsProject.ts#L9)
+[packages/carson/source/workspace/WorkspaceOptionsProject.ts:9](https://github.com/jakubmazanec/tools/blob/7027bd4db7e64559d83dd5cfca3306c9a5acc677/packages/carson/source/workspace/WorkspaceOptionsProject.ts#L9)

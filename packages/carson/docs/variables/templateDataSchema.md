@@ -11,4 +11,4 @@
 > `$strict`\>
 
 Defined in:
-[packages/carson/source/template/TemplateData.ts:8](https://github.com/jakubmazanec/tools/blob/66efa054b871c783405ec2cb1e4ebd507a77039a/packages/carson/source/template/TemplateData.ts#L8)
+[packages/carson/source/template/TemplateData.ts:8](https://github.com/jakubmazanec/tools/blob/7027bd4db7e64559d83dd5cfca3306c9a5acc677/packages/carson/source/template/TemplateData.ts#L8)

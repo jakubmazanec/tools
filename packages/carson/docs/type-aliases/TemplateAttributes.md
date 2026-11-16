@@ -8,4 +8,4 @@
 > [`templateAttributesSchema`](../variables/templateAttributesSchema.md)\>
 
 Defined in:
-[packages/carson/source/template/TemplateAttributes.ts:20](https://github.com/jakubmazanec/tools/blob/66efa054b871c783405ec2cb1e4ebd507a77039a/packages/carson/source/template/TemplateAttributes.ts#L20)
+[packages/carson/source/template/TemplateAttributes.ts:20](https://github.com/jakubmazanec/tools/blob/7027bd4db7e64559d83dd5cfca3306c9a5acc677/packages/carson/source/template/TemplateAttributes.ts#L20)

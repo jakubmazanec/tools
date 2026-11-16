@@ -7,4 +7,4 @@
 > `const` **DEVELOPMENT\_BRANCH\_NAMES**: `Set`\<`string`\>
 
 Defined in:
-[packages/carson-templates/source/constants.ts:24](https://github.com/jakubmazanec/tools/blob/66efa054b871c783405ec2cb1e4ebd507a77039a/packages/carson-templates/source/constants.ts#L24)
+[packages/carson-templates/source/constants.ts:24](https://github.com/jakubmazanec/tools/blob/7027bd4db7e64559d83dd5cfca3306c9a5acc677/packages/carson-templates/source/constants.ts#L24)

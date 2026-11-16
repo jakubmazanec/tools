@@ -8,7 +8,7 @@
 > `Exclude`\<`{ [K in keyof T]: T extends Record<K, T[K]> ? K : never }`\[keyof `T`\], `undefined`\>
 
 Defined in:
-[packages/ts-utils/source/types/RequiredKeys.ts:10](https://github.com/jakubmazanec/tools/blob/66efa054b871c783405ec2cb1e4ebd507a77039a/packages/ts-utils/source/types/RequiredKeys.ts#L10)
+[packages/ts-utils/source/types/RequiredKeys.ts:10](https://github.com/jakubmazanec/tools/blob/7027bd4db7e64559d83dd5cfca3306c9a5acc677/packages/ts-utils/source/types/RequiredKeys.ts#L10)
 
 Extracts the non-optional keys of type `T`:
 
