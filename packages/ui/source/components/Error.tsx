@@ -1,9 +1,4 @@
-import {
-  type ComponentPropsWithoutRef,
-  createElement,
-  type ElementType,
-  type PropsWithChildren,
-} from 'react';
+import {type ComponentPropsWithoutRef, type ElementType, type PropsWithChildren} from 'react';
 
 import {
   type ComponentProps,
@@ -36,21 +31,25 @@ export function Error<T extends ElementType = typeof ERROR_ELEMENT>({
   let theme = useErrorTheme();
   let field = useField();
   let props = {
-    ref,
     className: theme(null, className),
     'data-component': 'error',
     ...rest,
   };
+  let Tag: ElementType = Component;
 
   if (field) {
-    return createElement(
-      Component,
-      props,
-      field.errors ? field.errors.map((error) => <Text key={error}>{error}</Text>) : null,
+    return (
+      <Tag {...props} ref={ref}>
+        {field.errors ? field.errors.map((error) => <Text key={error}>{error}</Text>) : null}
+      </Tag>
     );
   }
 
-  return createElement(Component, props, children);
+  return (
+    <Tag {...props} ref={ref}>
+      {children}
+    </Tag>
+  );
 }
 
 export const errorTheme: ComponentTheme<typeof useErrorTheme> = {

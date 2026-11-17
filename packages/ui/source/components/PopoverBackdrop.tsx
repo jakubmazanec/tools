@@ -37,13 +37,16 @@ export function PopoverBackdrop<T extends ElementType = typeof POPOVER_BACKDROP_
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   let props: HeadlessPopoverBackdropProps<any> = filterProps({
     as,
-    ref,
     className: theme(null, className),
     'data-component': 'popover-backdrop',
     ...rest,
   });
 
-  return <HeadlessPopoverBackdrop {...props}>{children}</HeadlessPopoverBackdrop>;
+  return (
+    <HeadlessPopoverBackdrop {...props} ref={ref}>
+      {children}
+    </HeadlessPopoverBackdrop>
+  );
 }
 
 export const popoverBackdropTheme: ComponentTheme<typeof usePopoverBackdropTheme> = {

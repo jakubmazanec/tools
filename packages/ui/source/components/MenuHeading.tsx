@@ -35,13 +35,16 @@ export function MenuHeading<T extends ElementType = typeof MENU_HEADING_ELEMENT>
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   let props: HeadlessMenuHeadingProps<any> = filterProps({
     as,
-    ref,
     className: theme(null, className),
     'data-component': 'menu-heading',
     ...rest,
   });
 
-  return <HeadlessMenuHeading {...props}>{children}</HeadlessMenuHeading>;
+  return (
+    <HeadlessMenuHeading {...props} ref={ref}>
+      {children}
+    </HeadlessMenuHeading>
+  );
 }
 
 export const menuHeadingTheme: ComponentTheme<typeof useMenuHeadingTheme> = {

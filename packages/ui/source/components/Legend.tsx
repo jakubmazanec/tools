@@ -32,13 +32,16 @@ export function Legend<T extends ElementType = typeof LEGEND_ELEMENT>({
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   let props: HeadlessLegendProps<any> = filterProps({
     as,
-    ref,
     className: theme(null, className),
     'data-component': 'legend',
     ...rest,
   });
 
-  return <HeadlessLegend {...props}>{children}</HeadlessLegend>;
+  return (
+    <HeadlessLegend {...props} ref={ref}>
+      {children}
+    </HeadlessLegend>
+  );
 }
 
 export const legendTheme: ComponentTheme<typeof useLegendTheme> = {

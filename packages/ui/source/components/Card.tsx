@@ -1,9 +1,4 @@
-import {
-  type ComponentPropsWithoutRef,
-  createElement,
-  type ElementType,
-  type PropsWithChildren,
-} from 'react';
+import {type ComponentPropsWithoutRef, type ElementType, type PropsWithChildren} from 'react';
 
 import {
   type ComponentProps,
@@ -33,13 +28,17 @@ export function Card<T extends ElementType = typeof CARD_ELEMENT>({
 }: CardProps<T>) {
   let theme = useCardTheme();
   let props = {
-    ref,
     className: theme(null, className),
     'data-component': 'card',
     ...rest,
   };
+  let Tag: ElementType = Component;
 
-  return createElement(Component, props, children);
+  return (
+    <Tag {...props} ref={ref}>
+      {children}
+    </Tag>
+  );
 }
 
 export const cardTheme: ComponentTheme<typeof useCardTheme> = {

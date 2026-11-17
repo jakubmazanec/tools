@@ -37,13 +37,16 @@ export function MenuSeparator<T extends ElementType = typeof MENU_SEPARATOR_ELEM
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   let props: HeadlessMenuSeparatorProps<any> = filterProps({
     as,
-    ref,
     className: theme(null, className),
     'data-component': 'menu-separator',
     ...rest,
   });
 
-  return <HeadlessMenuSeparator {...props}>{children}</HeadlessMenuSeparator>;
+  return (
+    <HeadlessMenuSeparator {...props} ref={ref}>
+      {children}
+    </HeadlessMenuSeparator>
+  );
 }
 
 export const menuSeparatorTheme: ComponentTheme<typeof useMenuSeparatorTheme> = {

@@ -35,14 +35,17 @@ export function DialogPanel<T extends ElementType = typeof DIALOG_PANEL_ELEMENT>
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   let props: HeadlessDialogPanelProps<any> = filterProps({
     as,
-    ref,
     className: theme(null, className),
     transition: true,
     'data-component': 'dialog-panel',
     ...rest,
   });
 
-  return <HeadlessDialogPanel {...props}>{children}</HeadlessDialogPanel>;
+  return (
+    <HeadlessDialogPanel {...props} ref={ref}>
+      {children}
+    </HeadlessDialogPanel>
+  );
 }
 
 export const dialogPanelTheme: ComponentTheme<typeof useDialogPanelTheme> = {

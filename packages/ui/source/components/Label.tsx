@@ -32,13 +32,16 @@ export function Label<T extends ElementType = typeof LABEL_ELEMENT>({
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   let props: HeadlessLabelProps<any> = filterProps({
     as,
-    ref,
     className: theme(null, className),
     'data-component': 'label',
     ...rest,
   });
 
-  return <HeadlessLabel {...props}>{children}</HeadlessLabel>;
+  return (
+    <HeadlessLabel {...props} ref={ref}>
+      {children}
+    </HeadlessLabel>
+  );
 }
 
 export const labelTheme: ComponentTheme<typeof useLabelTheme> = {

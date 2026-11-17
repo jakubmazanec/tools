@@ -179,7 +179,6 @@ export function Combobox<
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   let props: HeadlessComboboxProps<any, any, any> = {
     as,
-    ref,
     name: field?.name ?? fieldName ?? name,
     value: value ?? undefined,
     defaultValue,
@@ -198,7 +197,7 @@ export function Combobox<
   }
 
   return (
-    <HeadlessCombobox {...props}>
+    <HeadlessCombobox {...props} ref={ref}>
       <div className={theme.root('relative', className)} data-component="combobox">
         <HeadlessComboboxInput
           className={theme.input(null, className)}

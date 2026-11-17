@@ -1,13 +1,7 @@
 import * as icons16 from '@heroicons/react/16/solid';
 import * as icons20 from '@heroicons/react/20/solid';
 import * as icons24 from '@heroicons/react/24/outline';
-import {
-  type ComponentPropsWithoutRef,
-  createElement,
-  type ElementType,
-  type PropsWithChildren,
-  type ReactNode,
-} from 'react';
+import {type ComponentPropsWithoutRef, type ElementType, type PropsWithChildren} from 'react';
 
 import {
   type ComponentProps,
@@ -46,7 +40,6 @@ export function Icon<T extends ElementType = typeof ICON_ELEMENT>({
 }: IconProps<T>) {
   let theme = useIconTheme({size, variant});
   let props: Record<string, unknown> = {
-    ref,
     className: theme(null, className),
     'data-component': 'icon',
     ...rest,
@@ -78,7 +71,15 @@ export function Icon<T extends ElementType = typeof ICON_ELEMENT>({
     Child = icons24[resolvedName as keyof typeof icons24] as ElementType;
   }
 
-  return createElement(Component, props, (Child ? <Child /> : children) as ReactNode);
+  let Tag: ElementType = Component;
+
+  return (
+    <Tag {...props} ref={ref}>
+      {Child ?
+        <Child />
+      : children}
+    </Tag>
+  );
 }
 
 export const iconTheme: ComponentTheme<typeof useIconTheme> = {

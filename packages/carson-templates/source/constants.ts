@@ -138,26 +138,30 @@ export const DEPENDENCY_VERSIONS: Record<string, string> = {
   [CHANGELOG_PACKAGE_NAME]: '^2.0.0',
   [LINTER_CONFIG_PACKAGE_NAME]: '^5.0.0',
 
+  '@babel/core': '^7.29.0',
   '@changesets/cli': '^2.0.0',
   '@chromatic-com/storybook': '^5.0.0',
   '@react-router/dev': '^8.0.0',
   '@react-router/fs-routes': '^8.0.0',
   '@react-router/node': '^8.0.0',
   '@react-router/serve': '^8.0.0',
+  '@rolldown/plugin-babel': '^0.2.0',
   '@storybook/addon-links': '^10.0.0',
   '@storybook/addon-docs': '^10.0.0',
   '@storybook/react-vite': '^10.0.0',
+  '@types/babel__core': '^7.20.0',
   '@types/lodash': '^4.0.0',
   '@types/react': '^19.0.0',
   '@types/semver': '^7.0.0',
   '@types/react-dom': '^19.0.0',
+  '@vitejs/plugin-react': '^6.0.0',
   '@vitest/browser-playwright': '^5.0.0',
   '@vitest/coverage-v8': '^5.0.0',
+  'babel-plugin-react-compiler': '^1.0.0',
   chromatic: '^18.0.0',
   concurrently: '^10.0.0',
   'cross-env': '^10.0.0',
   'del-cli': '^8.0.0',
-  esbuild: '^0.28.0',
   eslint: '^9.0.0',
   execa: '^10.0.0',
   isbot: '^5.0.0',
@@ -174,6 +178,7 @@ export const DEPENDENCY_VERSIONS: Record<string, string> = {
   storybook: '^10.0.0',
   tailwindcss: '^4.0.0',
   '@tailwindcss/vite': '^4.0.0',
+  tsdown: '^0.22.0',
   tsx: '^4.0.0',
   turbo: '^2.0.0',
   typedoc: '^0.28.0',
@@ -195,5 +200,6 @@ export const TEST_GLOB = 'tests/**/*.test.?(c|m)[jt]s?(x)';
 export const BROWSER_TEST_GLOB = 'tests/**/*.browser.test.?(c|m)[jt]s?(x)';
 
 // commands
+export const BUILD_COMMAND = 'tsdown';
 export const FORMAT_COMMAND = 'prettier . --write --ignore-unknown';
 export const TEST_COMMAND = 'vitest run --coverage --passWithNoTests';

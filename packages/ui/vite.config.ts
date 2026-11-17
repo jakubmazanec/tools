@@ -6,7 +6,9 @@
  * Run `npx carson update workspace` to regenerate.
  */
 
+import babel from '@rolldown/plugin-babel';
 import tailwindcss from '@tailwindcss/vite';
+import {reactCompilerPreset} from '@vitejs/plugin-react';
 import {playwright} from '@vitest/browser-playwright';
 import _ from 'lodash';
 import {defineConfig} from 'vitest/config';
@@ -14,7 +16,7 @@ import {defineConfig} from 'vitest/config';
 export default defineConfig(
   _.merge(
     {
-      plugins: [tailwindcss()],
+      plugins: [babel({presets: [reactCompilerPreset()]}), tailwindcss()],
       test: {
         coverage: {
           include: ['source/**'],

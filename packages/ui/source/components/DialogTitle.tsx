@@ -32,13 +32,16 @@ export const DialogTitle = <T extends ElementType = typeof DIALOG_TITLE_ELEMENT>
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   let props: react.DialogTitleProps<any> = filterProps({
     as,
-    ref,
     className: theme(null, className),
     'data-component': 'dialog-title',
     ...rest,
   });
 
-  return <react.DialogTitle {...props}>{children}</react.DialogTitle>;
+  return (
+    <react.DialogTitle {...props} ref={ref}>
+      {children}
+    </react.DialogTitle>
+  );
 };
 
 export const dialogTitleTheme: ComponentTheme<typeof useDialogTitleTheme> = {

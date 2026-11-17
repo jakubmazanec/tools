@@ -37,7 +37,6 @@ export function MenuItems<T extends ElementType = typeof MENU_ITEMS_ELEMENT>({
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   let props: HeadlessMenuItemsProps<any> = filterProps({
     as,
-    ref,
     anchor,
     className: theme(null, className),
     transition: true,
@@ -45,7 +44,11 @@ export function MenuItems<T extends ElementType = typeof MENU_ITEMS_ELEMENT>({
     ...rest,
   });
 
-  return <HeadlessMenuItems {...props}>{children}</HeadlessMenuItems>;
+  return (
+    <HeadlessMenuItems {...props} ref={ref}>
+      {children}
+    </HeadlessMenuItems>
+  );
 }
 
 export const menuItemsTheme: ComponentTheme<typeof useMenuItemsTheme> = {
