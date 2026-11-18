@@ -1,3 +1,4 @@
+export * from './data-table/createColumnHelper.js';
 export * from './data-table/DataTable.js';
 export * from './data-table/DataTableColumnOrder.js';
 export * from './data-table/DataTableColumnPinning.js';

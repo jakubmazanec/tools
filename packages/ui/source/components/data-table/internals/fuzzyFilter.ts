@@ -1,11 +1,13 @@
 import {rankings, rankItem} from '@tanstack/match-sorter-utils';
 import {type FilterMeta, type Row, type RowData} from '@tanstack/react-table';
 
+import {type DataTableFeatures} from './dataTableFeatures.js';
+
 export function fuzzyFilter<TData extends RowData>(
-  row: Row<TData>,
+  row: Row<DataTableFeatures, TData>,
   columnId: string,
   value: unknown,
-  addMeta: (meta: FilterMeta) => void,
+  addMeta?: (meta: FilterMeta) => void,
 ) {
   let cellValue = row.getValue(columnId);
 
@@ -15,7 +17,7 @@ export function fuzzyFilter<TData extends RowData>(
 
   let itemRank = rankItem(cellValue, value as string, {threshold: rankings.CONTAINS});
 
-  addMeta({itemRank});
+  addMeta?.({itemRank});
 
   return itemRank.passed;
 }

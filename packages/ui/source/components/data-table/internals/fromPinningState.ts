@@ -5,12 +5,12 @@ import {type DataTableColumnPinning} from '../DataTableColumnPinning.js';
 export function fromPinningState(pinning: ColumnPinningState) {
   let result: DataTableColumnPinning = {};
 
-  for (let left of pinning.left ?? []) {
-    result[left] = 'left';
+  for (let start of pinning.start) {
+    result[start] = 'start';
   }
 
-  for (let right of pinning.right ?? []) {
-    result[right] = 'right';
+  for (let end of pinning.end) {
+    result[end] = 'end';
   }
 
   return result;

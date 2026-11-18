@@ -1,15 +1,16 @@
-import {type Column, flexRender, type Header, type Table} from '@tanstack/react-table';
+import {type Column, flexRender, type Header, type ReactTable} from '@tanstack/react-table';
 import {useCallback} from 'react';
 
 import {Checkbox} from '../../Checkbox.js';
 import {CheckboxField} from '../../CheckboxField.js';
 import {Label} from '../../Label.js';
+import {type DataTableFeatures} from './dataTableFeatures.js';
 
 export type DataTableHeaderColumnCheckboxProps = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
-  column: Column<any>;
+  column: Column<DataTableFeatures, any>;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
-  table: Table<any>;
+  table: ReactTable<DataTableFeatures, any>;
 };
 
 export function DataTableHeaderColumnCheckbox({column, table}: DataTableHeaderColumnCheckboxProps) {
@@ -36,7 +37,7 @@ export function DataTableHeaderColumnCheckbox({column, table}: DataTableHeaderCo
           table,
           column,
           // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/consistent-type-assertions -- needed
-          header: {column} as Header<any, any>,
+          header: {column} as Header<DataTableFeatures, any>,
         })}
       </Label>
     </CheckboxField>

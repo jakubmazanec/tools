@@ -1,13 +1,14 @@
-import {type Table} from '@tanstack/react-table';
+import {type ReactTable} from '@tanstack/react-table';
 
 import {Container} from '../../Container.js';
 import {Heading} from '../../Heading.js';
 import {type DataTableProps} from '../DataTable.js';
+import {type DataTableFeatures} from './dataTableFeatures.js';
 import {DataTableFilter} from './DataTableFilter.js';
 
 export type DataTableFiltersProps = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
-  table: Table<any>;
+  table: ReactTable<DataTableFeatures, any>;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   clientFilters: DataTableProps<any, any>['clientFilters'];
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed

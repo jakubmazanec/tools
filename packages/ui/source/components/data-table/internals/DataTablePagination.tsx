@@ -1,4 +1,4 @@
-import {type Table} from '@tanstack/react-table';
+import {type ReactTable} from '@tanstack/react-table';
 import {type ChangeEvent, memo, useCallback} from 'react';
 
 import {Button} from '../../Button.js';
@@ -10,13 +10,14 @@ import {ListboxOption} from '../../ListboxOption.js';
 import {Text} from '../../Text.js';
 import {type DataTableProps} from '../DataTable.js';
 import {MAX_PAGE_BUTTONS_COUNT, PAGE_SIZES} from './constants.js';
+import {type DataTableFeatures} from './dataTableFeatures.js';
 import {DataTablePageButton} from './DataTablePageButton.js';
 
 type PageSize = (typeof PAGE_SIZES)[number];
 
 export type DataTablePaginationProps = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
-  table: Table<any>;
+  table: ReactTable<DataTableFeatures, any>;
   page: number;
   pageSize: number;
   pageCount: number;

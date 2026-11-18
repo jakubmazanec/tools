@@ -10,16 +10,17 @@ import {
 } from '@dnd-kit/core';
 import {restrictToVerticalAxis} from '@dnd-kit/modifiers';
 import {arrayMove, SortableContext, verticalListSortingStrategy} from '@dnd-kit/sortable';
-import {type Table} from '@tanstack/react-table';
+import {type ReactTable} from '@tanstack/react-table';
 import {useCallback, useId} from 'react';
 
 import {Container} from '../../Container.js';
 import {type DataTableProps} from '../DataTable.js';
+import {type DataTableFeatures} from './dataTableFeatures.js';
 import {DataTableSetting} from './DataTableSetting.js';
 
 export type DataTableSettingsProps = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
-  table: Table<any>;
+  table: ReactTable<DataTableFeatures, any>;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   hideColumnVisibility: DataTableProps<any, any>['hideColumnVisibility'];
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
@@ -62,7 +63,7 @@ export function DataTableSettings({
       sensors={sensors}
       onDragEnd={handleDragEnd}
     >
-      <SortableContext items={table.getState().columnOrder} strategy={verticalListSortingStrategy}>
+      <SortableContext items={table.state.columnOrder} strategy={verticalListSortingStrategy}>
         <Container direction="column" spacing="small">
           {table.getAllLeafColumns().map((column) => (
             <DataTableSetting
