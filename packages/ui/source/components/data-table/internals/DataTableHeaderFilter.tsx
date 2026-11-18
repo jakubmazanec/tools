@@ -299,7 +299,7 @@ export function DataTableHeaderFilter({
             value,
             label: `${value as unknown}`,
           }))}
-          value={(currentFilter ?? '') as string}
+          value={currentFilter as string}
           onChange={handleTextFilterChange}
         />
         <Button aria-label="Cancel" variant="outline" onClick={handleResetClick}>

@@ -65,7 +65,7 @@ export type ComboboxProps<
       }
     | {
         as?: T | undefined;
-        value?: V | undefined;
+        value?: V | null | undefined;
         defaultValue?: V | undefined;
         multiple?: false | undefined;
         items?: Array<ComboboxItem<V>> | undefined;
@@ -181,7 +181,7 @@ export function Combobox<
     as,
     ref,
     name: field?.name ?? fieldName ?? name,
-    value: value ?? undefined,
+    value,
     defaultValue,
     multiple,
     disabled,

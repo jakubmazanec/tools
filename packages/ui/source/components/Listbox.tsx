@@ -71,7 +71,7 @@ export type ListboxProps<
       }
     | {
         as?: T | undefined;
-        value?: V | undefined;
+        value?: V | null | undefined;
         defaultValue?: V | undefined;
         multiple?: false | undefined;
         hideSelected?: never; // must be here so the type of props is correct
@@ -172,7 +172,7 @@ export function Listbox<
     as,
     ref,
     name: field?.name ?? fieldName ?? name,
-    value: value ?? undefined,
+    value,
     defaultValue,
     multiple,
     disabled,
