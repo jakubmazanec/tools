@@ -75,7 +75,7 @@
     "vitest": "^5.0.5"
   },
   "peerDependencies": {
-    "ink": "6.x || 8.x",
+    "ink": "8.x",
     "react": "19.x"
   },
   "packageManager": "npm@12.2.1",
