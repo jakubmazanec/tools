@@ -8,7 +8,7 @@ let tsconfig = {
   compilerOptions: {
     composite: false,
   },
-  include: project.config.deployment?.dbInstance
+  include: project.config.deployment?.gel
     ? ['./.react-router/types/**/*', `./${SOURCE_DIRECTORY}/**/*`, './dbschema/**/*', './tests/**/*', './*']
     : ['./.react-router/types/**/*', `./${SOURCE_DIRECTORY}/**/*`, './tests/**/*', './*'],
 };
