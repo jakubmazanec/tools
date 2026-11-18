@@ -158,7 +158,7 @@ export const DEPENDENCY_VERSIONS: Record<string, string> = {
   'cross-env': '^10.0.0',
   'del-cli': '^8.0.0',
   esbuild: '^0.28.0',
-  eslint: '^9.0.0',
+  eslint: '^10.0.0',
   execa: '^10.0.0',
   isbot: '^5.0.0',
   lodash: '^4.0.0',
