@@ -1,6 +1,6 @@
 {
   "name": "@jakubmazanec/zod-utils",
-  "version": "3.0.6",
+  "version": "4.0.0",
   "description": "Collection of Zod schemas and utilities.",
   "repository": {
     "type": "git",
@@ -27,10 +27,10 @@
     "typecheck": "tsc --project tsconfig.typecheck.json"
   },
   "dependencies": {
-    "@jakubmazanec/ts-utils": "^3.0.0"
+    "@jakubmazanec/ts-utils": "^4.0.0"
   },
   "devDependencies": {
-    "@jakubmazanec/eslint-config": "^5.0.0",
+    "@jakubmazanec/eslint-config": "^6.0.0",
     "@types/lodash": "^4.17.27",
     "@types/node": "^26.6.6",
     "@vitest/coverage-v8": "^5.0.5",

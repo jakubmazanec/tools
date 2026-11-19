@@ -1,5 +1,64 @@
 # @jakubmazanec/template
 
+## 3.0.0
+
+### Major Changes
+
+- [#607](https://github.com/jakubmazanec/tools/pull/607)
+  [`a2ad762`](https://github.com/jakubmazanec/tools/commit/a2ad76298b012139ad7499a776924f487807cb38)
+  ([@renovate](https://github.com/apps/renovate)) – BREAKING: Node.js v26 is now required.
+
+### Patch Changes
+
+- [#605](https://github.com/jakubmazanec/tools/pull/605)
+  [`c51208c`](https://github.com/jakubmazanec/tools/commit/c51208c64120bff3701e62a70cdcf208d267b880)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@vitest/coverage-v8` updated to
+  version `^5.0.5`. Dependency `vitest` updated to version `^5.0.5`.
+
+- [#583](https://github.com/jakubmazanec/tools/pull/583)
+  [`77af8fc`](https://github.com/jakubmazanec/tools/commit/77af8fc6f94d0ddce4ffb0d7fbfc7006c5b3d620)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `npm` updated to version `^12.2.1`.
+
+- [#613](https://github.com/jakubmazanec/tools/pull/613)
+  [`97c5e86`](https://github.com/jakubmazanec/tools/commit/97c5e862bf907f7273f2c1e30f8a804d6b4c7b36)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@types/lodash` updated to version
+  `^4.17.27`. Dependency `@types/node` updated to version `^26.6.6`. Dependency
+  `prettier-plugin-packagejson` updated to version `^3.1.0`. Dependency `typedoc-plugin-markdown`
+  updated to version `^4.14.1`.
+
+- [#603](https://github.com/jakubmazanec/tools/pull/603)
+  [`36b3404`](https://github.com/jakubmazanec/tools/commit/36b3404d1b71114f1d5127b86dcfe4cb029f111f)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `ejs` updated to version `^7.0.2`.
+
+- [#581](https://github.com/jakubmazanec/tools/pull/581)
+  [`8324896`](https://github.com/jakubmazanec/tools/commit/8324896dad080c1b57affe1d8521d8205a016467)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `prettier-plugin-packagejson` updated
+  to version `^3.0.3`.
+
+- [#601](https://github.com/jakubmazanec/tools/pull/601)
+  [`0365466`](https://github.com/jakubmazanec/tools/commit/03654667e94c7636c0c2a6a42add224c6882522a)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `del-cli` updated to version
+  `^8.0.1`.
+
+- [#615](https://github.com/jakubmazanec/tools/pull/615)
+  [`66efa05`](https://github.com/jakubmazanec/tools/commit/66efa054b871c783405ec2cb1e4ebd507a77039a)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – ESLint config updated.
+
+- [#612](https://github.com/jakubmazanec/tools/pull/612)
+  [`edf07b2`](https://github.com/jakubmazanec/tools/commit/edf07b23224386fb1d5603699e21a5cd6ac489ef)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Removed the outdated warning from `README.md`
+  that the package cannot be required from a CommonJS module.
+- Updated dependencies
+  [[`c51208c`](https://github.com/jakubmazanec/tools/commit/c51208c64120bff3701e62a70cdcf208d267b880),
+  [`77af8fc`](https://github.com/jakubmazanec/tools/commit/77af8fc6f94d0ddce4ffb0d7fbfc7006c5b3d620),
+  [`97c5e86`](https://github.com/jakubmazanec/tools/commit/97c5e862bf907f7273f2c1e30f8a804d6b4c7b36),
+  [`8324896`](https://github.com/jakubmazanec/tools/commit/8324896dad080c1b57affe1d8521d8205a016467),
+  [`a2ad762`](https://github.com/jakubmazanec/tools/commit/a2ad76298b012139ad7499a776924f487807cb38),
+  [`0365466`](https://github.com/jakubmazanec/tools/commit/03654667e94c7636c0c2a6a42add224c6882522a),
+  [`66efa05`](https://github.com/jakubmazanec/tools/commit/66efa054b871c783405ec2cb1e4ebd507a77039a),
+  [`edf07b2`](https://github.com/jakubmazanec/tools/commit/edf07b23224386fb1d5603699e21a5cd6ac489ef)]:
+  - @jakubmazanec/error@4.0.0
+
 ## 2.0.21
 
 ### Patch Changes

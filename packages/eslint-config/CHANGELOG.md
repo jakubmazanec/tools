@@ -1,5 +1,53 @@
 # @jakubmazanec/eslint-config
 
+## 6.0.0
+
+### Major Changes
+
+- [#607](https://github.com/jakubmazanec/tools/pull/607)
+  [`a2ad762`](https://github.com/jakubmazanec/tools/commit/a2ad76298b012139ad7499a776924f487807cb38)
+  ([@renovate](https://github.com/apps/renovate)) – BREAKING: Node.js v26 is now required.
+
+- [#615](https://github.com/jakubmazanec/tools/pull/615)
+  [`66efa05`](https://github.com/jakubmazanec/tools/commit/66efa054b871c783405ec2cb1e4ebd507a77039a)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – BREAKING: Updated ESLint rules.
+
+### Patch Changes
+
+- [#605](https://github.com/jakubmazanec/tools/pull/605)
+  [`c51208c`](https://github.com/jakubmazanec/tools/commit/c51208c64120bff3701e62a70cdcf208d267b880)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@vitest/coverage-v8` updated to
+  version `^5.0.5`. Dependency `vitest` updated to version `^5.0.5`.
+
+- [#583](https://github.com/jakubmazanec/tools/pull/583)
+  [`77af8fc`](https://github.com/jakubmazanec/tools/commit/77af8fc6f94d0ddce4ffb0d7fbfc7006c5b3d620)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `npm` updated to version `^12.2.1`.
+
+- [#613](https://github.com/jakubmazanec/tools/pull/613)
+  [`97c5e86`](https://github.com/jakubmazanec/tools/commit/97c5e862bf907f7273f2c1e30f8a804d6b4c7b36)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@typescript-eslint/eslint-plugin`
+  updated to version `^8.72.1`. Dependency `@typescript-eslint/parser` updated to version `^8.72.1`.
+  Dependency `@vitest/eslint-plugin` updated to version `^1.6.28`. Dependency
+  `eslint-plugin-security` updated to version `^4.2.1`. Dependency `globals` updated to version
+  `^17.14.0`. Dependency `@types/lodash` updated to version `^4.17.27`. Dependency `@types/node`
+  updated to version `^26.6.6`. Dependency `prettier-plugin-packagejson` updated to version
+  `^3.1.0`. Dependency `typedoc-plugin-markdown` updated to version `^4.14.1`.
+
+- [#520](https://github.com/jakubmazanec/tools/pull/520)
+  [`444735f`](https://github.com/jakubmazanec/tools/commit/444735f89c1d6e26b64039397178b3261cd1178c)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `eslint-plugin-perfectionist` updated
+  to version `^5.13.0`.
+
+- [#581](https://github.com/jakubmazanec/tools/pull/581)
+  [`8324896`](https://github.com/jakubmazanec/tools/commit/8324896dad080c1b57affe1d8521d8205a016467)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `prettier-plugin-packagejson` updated
+  to version `^3.0.3`.
+
+- [#601](https://github.com/jakubmazanec/tools/pull/601)
+  [`0365466`](https://github.com/jakubmazanec/tools/commit/03654667e94c7636c0c2a6a42add224c6882522a)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `del-cli` updated to version
+  `^8.0.1`.
+
 ## 5.0.2
 
 ### Patch Changes

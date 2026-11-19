@@ -1,6 +1,6 @@
 {
   "name": "@jakubmazanec/carson",
-  "version": "3.0.8",
+  "version": "4.0.0",
   "description": "Tool for managing workspace and project configuration.",
   "repository": {
     "type": "git",
@@ -32,13 +32,13 @@
     "typecheck": "tsc --project tsconfig.typecheck.json"
   },
   "dependencies": {
-    "@jakubmazanec/args": "^2.0.0",
-    "@jakubmazanec/cli": "^0.5.0",
-    "@jakubmazanec/error": "^3.0.0",
-    "@jakubmazanec/fs-utils": "^0.2.0",
-    "@jakubmazanec/template": "^2.0.0",
-    "@jakubmazanec/ts-utils": "^3.0.0",
-    "@jakubmazanec/zod-utils": "^3.0.0",
+    "@jakubmazanec/args": "^3.0.0",
+    "@jakubmazanec/cli": "^1.0.0",
+    "@jakubmazanec/error": "^4.0.0",
+    "@jakubmazanec/fs-utils": "^1.0.0",
+    "@jakubmazanec/template": "^3.0.0",
+    "@jakubmazanec/ts-utils": "^4.0.0",
+    "@jakubmazanec/zod-utils": "^4.0.0",
     "chalk": "^6.0.1",
     "fast-glob": "^3.3.3",
     "fflate": "^0.8.3",
@@ -54,7 +54,7 @@
     "zod": "^4.6.7"
   },
   "devDependencies": {
-    "@jakubmazanec/eslint-config": "^5.0.0",
+    "@jakubmazanec/eslint-config": "^6.0.0",
     "@types/fs-extra": "^11.0.4",
     "@types/lodash": "^4.17.27",
     "@types/node": "^26.6.6",

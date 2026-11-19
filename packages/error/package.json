@@ -1,6 +1,6 @@
 {
   "name": "@jakubmazanec/error",
-  "version": "3.0.20",
+  "version": "4.0.0",
   "description": "Collection of utilities for creating and handling errors.",
   "repository": {
     "type": "git",
@@ -30,7 +30,7 @@
     "zod": "^4.6.7"
   },
   "devDependencies": {
-    "@jakubmazanec/eslint-config": "^5.0.0",
+    "@jakubmazanec/eslint-config": "^6.0.0",
     "@types/lodash": "^4.17.27",
     "@types/node": "^26.6.6",
     "@vitest/coverage-v8": "^5.0.5",

@@ -1,6 +1,6 @@
 {
   "name": "@jakubmazanec/ts-utils",
-  "version": "3.0.21",
+  "version": "4.0.0",
   "description": "Collection of TypeScript types and utilities.",
   "repository": {
     "type": "git",
@@ -27,7 +27,7 @@
     "typecheck": "tsc --project tsconfig.typecheck.json"
   },
   "devDependencies": {
-    "@jakubmazanec/eslint-config": "^5.0.0",
+    "@jakubmazanec/eslint-config": "^6.0.0",
     "@types/lodash": "^4.17.27",
     "@types/node": "^26.6.6",
     "@vitest/coverage-v8": "^5.0.5",

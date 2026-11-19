@@ -1,5 +1,125 @@
 # @jakubmazanec/carson-templates
 
+## 10.0.0
+
+### Major Changes
+
+- [#607](https://github.com/jakubmazanec/tools/pull/607)
+  [`a2ad762`](https://github.com/jakubmazanec/tools/commit/a2ad76298b012139ad7499a776924f487807cb38)
+  ([@renovate](https://github.com/apps/renovate)) – BREAKING: Node.js v26 is now required.
+
+- [#605](https://github.com/jakubmazanec/tools/pull/605)
+  [`c51208c`](https://github.com/jakubmazanec/tools/commit/c51208c64120bff3701e62a70cdcf208d267b880)
+  ([@renovate](https://github.com/apps/renovate)) – BREAKING: All templates were updated to use
+  Vitest v5. This may require manual update (see https://vitest.dev/guide/migration.html#vitest-5).
+
+- [#583](https://github.com/jakubmazanec/tools/pull/583)
+  [`77af8fc`](https://github.com/jakubmazanec/tools/commit/77af8fc6f94d0ddce4ffb0d7fbfc7006c5b3d620)
+  ([@renovate](https://github.com/apps/renovate)) – BREAKING: All templates were updated to use Npm
+  v12. This may require manual update.
+
+- [#581](https://github.com/jakubmazanec/tools/pull/581)
+  [`8324896`](https://github.com/jakubmazanec/tools/commit/8324896dad080c1b57affe1d8521d8205a016467)
+  ([@renovate](https://github.com/apps/renovate)) – All templates were updated to use
+  `prettier-plugin-packagejson` v3.
+
+- [`80ab80c`](https://github.com/jakubmazanec/tools/commit/80ab80c90651d919fc0c63cbe9e711dbc3ca80df)
+  ([@renovate[bot]](https://github.com/renovate%5Bbot%5D)) – Template `workspace` was updated to use
+  `@changesets/cli` v3. All templates were updated to no longer ignore `CHANGELOG.md` in
+  `.prettierignore`.
+
+- [#607](https://github.com/jakubmazanec/tools/pull/607)
+  [`a2ad762`](https://github.com/jakubmazanec/tools/commit/a2ad76298b012139ad7499a776924f487807cb38)
+  ([@renovate](https://github.com/apps/renovate)) – BREAKING: All templates were updated to use
+  Node.js v26. This may require manual update (see https://nodejs.org/en/blog/release/v26.0.0).
+  GitHub workflows in template `workspace` now use full Node.js version.
+
+- [#601](https://github.com/jakubmazanec/tools/pull/601)
+  [`0365466`](https://github.com/jakubmazanec/tools/commit/03654667e94c7636c0c2a6a42add224c6882522a)
+  ([@renovate](https://github.com/apps/renovate)) – All templates were updated to use `del-cli` v8.
+
+### Minor Changes
+
+- [#610](https://github.com/jakubmazanec/tools/pull/610)
+  [`b0c442a`](https://github.com/jakubmazanec/tools/commit/b0c442a7c4205963646ac27a86956b48e4ff65d8)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – In templates `projects/app`,
+  `projects/library` and `projects/react-library`, script `lint` now runs ESLint in quiet mode
+  (`--quiet`), so only errors are reported.
+
+- [#599](https://github.com/jakubmazanec/tools/pull/599)
+  [`450f024`](https://github.com/jakubmazanec/tools/commit/450f0242bda47e85fc9d57c7506e46bd780837d4)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – In template `workspace`, Renovate bot config
+  was changed: peer dependency ranges are widened when a peer dependency gets a new major version
+  (e.g. `^9.0.0` becomes `^9.0.0 || ^10.0.0`), instead of replaced, so such update isn't a breaking
+  change.
+
+- [#608](https://github.com/jakubmazanec/tools/pull/608)
+  [`7f08aae`](https://github.com/jakubmazanec/tools/commit/7f08aae4b470e244cba9a9107ed5e8ea849f131c)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixed `.gitignore` in the `workspace`
+  template.
+
+### Patch Changes
+
+- [#611](https://github.com/jakubmazanec/tools/pull/611)
+  [`10461c0`](https://github.com/jakubmazanec/tools/commit/10461c05f113a38751068bceaa4d7cdea844f16b)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fixed script `create-dependencies-changeset`
+  in the `workspace` template.
+
+- [#605](https://github.com/jakubmazanec/tools/pull/605)
+  [`c51208c`](https://github.com/jakubmazanec/tools/commit/c51208c64120bff3701e62a70cdcf208d267b880)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@vitest/coverage-v8` updated to
+  version `^5.0.5`. Dependency `vitest` updated to version `^5.0.5`.
+
+- [#583](https://github.com/jakubmazanec/tools/pull/583)
+  [`77af8fc`](https://github.com/jakubmazanec/tools/commit/77af8fc6f94d0ddce4ffb0d7fbfc7006c5b3d620)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `npm` updated to version `^12.2.1`.
+
+- [#613](https://github.com/jakubmazanec/tools/pull/613)
+  [`97c5e86`](https://github.com/jakubmazanec/tools/commit/97c5e862bf907f7273f2c1e30f8a804d6b4c7b36)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `@types/lodash` updated to version
+  `^4.17.27`. Dependency `@types/node` updated to version `^26.6.6`. Dependency `execa` updated to
+  version `^10.2.1`. Dependency `prettier-plugin-packagejson` updated to version `^3.1.0`.
+  Dependency `typedoc-plugin-markdown` updated to version `^4.14.1`.
+
+- [#581](https://github.com/jakubmazanec/tools/pull/581)
+  [`8324896`](https://github.com/jakubmazanec/tools/commit/8324896dad080c1b57affe1d8521d8205a016467)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `prettier-plugin-packagejson` updated
+  to version `^3.0.3`.
+
+- [#601](https://github.com/jakubmazanec/tools/pull/601)
+  [`0365466`](https://github.com/jakubmazanec/tools/commit/03654667e94c7636c0c2a6a42add224c6882522a)
+  ([@renovate](https://github.com/apps/renovate)) – Dependency `del-cli` updated to version
+  `^8.0.1`.
+
+- [#616](https://github.com/jakubmazanec/tools/pull/616)
+  [`7027bd4`](https://github.com/jakubmazanec/tools/commit/7027bd4db7e64559d83dd5cfca3306c9a5acc677)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – Fix GitHub workflows broken Node.js version
+  handling in the template `workspace`.
+
+- [#615](https://github.com/jakubmazanec/tools/pull/615)
+  [`66efa05`](https://github.com/jakubmazanec/tools/commit/66efa054b871c783405ec2cb1e4ebd507a77039a)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – ESLint config updated.
+
+- [#612](https://github.com/jakubmazanec/tools/pull/612)
+  [`edf07b2`](https://github.com/jakubmazanec/tools/commit/edf07b23224386fb1d5603699e21a5cd6ac489ef)
+  ([@jakubmazanec](https://github.com/jakubmazanec)) – In templates `library` and `react-library`,
+  the outdated warning that the package cannot be required from a CommonJS module was removed from
+  `README.md`.
+- Updated dependencies
+  [[`c51208c`](https://github.com/jakubmazanec/tools/commit/c51208c64120bff3701e62a70cdcf208d267b880),
+  [`eb2af82`](https://github.com/jakubmazanec/tools/commit/eb2af82a75e95e24dc19b19306f720cf53356964),
+  [`77af8fc`](https://github.com/jakubmazanec/tools/commit/77af8fc6f94d0ddce4ffb0d7fbfc7006c5b3d620),
+  [`97c5e86`](https://github.com/jakubmazanec/tools/commit/97c5e862bf907f7273f2c1e30f8a804d6b4c7b36),
+  [`8324896`](https://github.com/jakubmazanec/tools/commit/8324896dad080c1b57affe1d8521d8205a016467),
+  [`a2ad762`](https://github.com/jakubmazanec/tools/commit/a2ad76298b012139ad7499a776924f487807cb38),
+  [`1f6f27d`](https://github.com/jakubmazanec/tools/commit/1f6f27d3feb4b0c0963e64c7c04c80a6339058cd),
+  [`ef3a0c8`](https://github.com/jakubmazanec/tools/commit/ef3a0c83d217cca7411f534708a95e6cd278e00f),
+  [`0365466`](https://github.com/jakubmazanec/tools/commit/03654667e94c7636c0c2a6a42add224c6882522a),
+  [`1f6f27d`](https://github.com/jakubmazanec/tools/commit/1f6f27d3feb4b0c0963e64c7c04c80a6339058cd),
+  [`66efa05`](https://github.com/jakubmazanec/tools/commit/66efa054b871c783405ec2cb1e4ebd507a77039a),
+  [`edf07b2`](https://github.com/jakubmazanec/tools/commit/edf07b23224386fb1d5603699e21a5cd6ac489ef)]:
+  - @jakubmazanec/carson@4.0.0
+
 ## 9.2.0
 
 ### Minor Changes
