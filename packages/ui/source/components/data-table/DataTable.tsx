@@ -4,22 +4,16 @@ import {
   type ColumnFiltersState,
   type ColumnOrderState,
   type ColumnPinningState,
+  type ColumnVisibilityState,
   flexRender,
-  getCoreRowModel,
-  getFacetedMinMaxValues,
-  getFacetedRowModel,
-  getFacetedUniqueValues,
-  getFilteredRowModel,
-  getPaginationRowModel,
-  getSortedRowModel,
   type Header,
   type PaginationState,
   type Row,
   type RowData,
   type SortingState,
+  type TableFeatures,
   type Updater,
-  useReactTable,
-  type VisibilityState,
+  useTable,
 } from '@tanstack/react-table';
 import {useCallback, useState} from 'react';
 
@@ -43,6 +37,8 @@ import {type DataTablePagination} from './DataTablePagination.js';
 import {type DataTableSearch} from './DataTableSearch.js';
 import {type DataTableSorting} from './DataTableSorting.js';
 import {
+  dataTableFeatures,
+  type DataTableFeatures,
   DataTableFilters as DataTableFiltersComponent,
   DataTableHeader,
   DataTableMenu,
@@ -56,7 +52,7 @@ import {DataTableRow} from './internals/DataTableRow.js';
 
 declare module '@tanstack/react-table' {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars -- false positive
-  interface ColumnMeta<TData extends RowData, TValue> {
+  interface ColumnMeta<TFeatures extends TableFeatures, TData extends RowData, TValue> {
     filterVariant?: 'range' | 'select' | 'text';
   }
 }
@@ -99,8 +95,11 @@ export type DataTableProps<D, C> = {
   showRowSummaryOnClick?: boolean | undefined;
 };
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed so the type parameters are useful
-export function DataTable<D extends RowData, C extends Array<ColumnDef<D, any>>>({
+export function DataTable<
+  D extends RowData,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed so the type parameters are useful
+  C extends Array<ColumnDef<DataTableFeatures, D, any>>,
+>({
   data,
   columns,
   clientPagination = false,
@@ -186,23 +185,24 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D, any>>>
   let [columnPinning, setColumnPinning] = useState<ColumnPinningState>(
     controlledColumnPinning ?
       {
-        left: Object.entries(controlledColumnPinning)
-          .filter(([, pinning]) => pinning === 'left')
+        start: Object.entries(controlledColumnPinning)
+          .filter(([, pinning]) => pinning === 'start')
           .map(([column]) => column),
-        right: Object.entries(controlledColumnPinning)
-          .filter(([, pinning]) => pinning === 'right')
+        end: Object.entries(controlledColumnPinning)
+          .filter(([, pinning]) => pinning === 'end')
           .map(([column]) => column),
       }
-    : {left: [], right: []},
+    : {start: [], end: []},
   );
   let [sorting, setSorting] = useState<SortingState>([]);
   let [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
   let [showFilters, setShowFilters] = useState(false);
   let [search, setSearch] = useState('');
   let [showRowSummary, setShowRowSummary] = useState(false);
-  let [rowSummaryRow, setRowSummaryRow] = useState<Row<D> | null>(null);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
+  let [rowSummaryRow, setRowSummaryRow] = useState<Row<DataTableFeatures, any> | null>(null);
   let handleColumnVisibilityChange = useCallback(
-    (columnVisibilityState: Updater<VisibilityState>) => {
+    (columnVisibilityState: Updater<ColumnVisibilityState>) => {
       setColumnVisibility(columnVisibilityState);
 
       if (typeof columnVisibilityState === 'function') {
@@ -237,16 +237,12 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D, any>>>
     },
     [columnPinning, onColumnPinningChange],
   );
-  let table = useReactTable<D>({
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed, `D` is generic here so typed rows would not be assignable to the internals' props
+  let table = useTable<DataTableFeatures, any>({
+    features: dataTableFeatures,
     data,
     columns,
-    getCoreRowModel: getCoreRowModel(),
-    getSortedRowModel: getSortedRowModel(),
-    getPaginationRowModel: clientPagination ? getPaginationRowModel() : undefined,
-    getFilteredRowModel: getFilteredRowModel(),
-    getFacetedRowModel: clientFaceting ? getFacetedRowModel() : undefined,
-    getFacetedUniqueValues: clientFaceting ? getFacetedUniqueValues() : undefined,
-    getFacetedMinMaxValues: clientFaceting ? getFacetedMinMaxValues() : undefined,
+    manualPagination: !clientPagination,
     state: {
       pagination: clientPagination ? pagination : undefined,
       columnVisibility,
@@ -268,18 +264,17 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D, any>>>
     getColumnCanGlobalFilter: () => true,
   });
   let page =
-    clientPagination ?
-      table.getState().pagination.pageIndex + 1
-    : (controlledPagination?.page ?? 1);
+    clientPagination ? table.state.pagination.pageIndex + 1 : (controlledPagination?.page ?? 1);
   let pageSize =
     clientPagination ?
-      table.getState().pagination.pageSize
+      table.state.pagination.pageSize
     : (controlledPagination?.pageSize ?? DEFAULT_PAGE_SIZE);
   let pageCount = clientPagination ? table.getPageCount() : (controlledPagination?.pageCount ?? 1);
   let toggleFilters = useCallback(() => {
     setShowFilters((value) => !value);
   }, []);
-  let handleRowClick = useCallback((row: Row<D>) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
+  let handleRowClick = useCallback((row: Row<DataTableFeatures, any>) => {
     setRowSummaryRow(row);
     setShowRowSummary(true);
   }, []);
@@ -396,7 +391,7 @@ export function DataTable<D extends RowData, C extends Array<ColumnDef<D, any>>>
                           table,
                           column: cell.column,
                           // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/consistent-type-assertions -- needed
-                          header: {column: cell.column} as Header<any, any>,
+                          header: {column: cell.column} as Header<DataTableFeatures, any>,
                         })}
                       </TableHeader>
                       <TableCell className="overflow-visible whitespace-normal">

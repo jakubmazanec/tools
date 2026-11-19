@@ -1,13 +1,15 @@
 import {type Column} from '@tanstack/react-table';
 
+import {type DataTableFeatures} from './dataTableFeatures.js';
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
-export function getCommonPinningClasses(column: Column<any>): string {
+export function getCommonPinningClasses(column: Column<DataTableFeatures, any>): string {
   let isPinned = column.getIsPinned();
-  let isLastLeftPinnedColumn = isPinned === 'left' && column.getIsLastColumn('left');
-  let isFirstRightPinnedColumn = isPinned === 'right' && column.getIsFirstColumn('right');
+  let isLastStartPinnedColumn = isPinned === 'start' && column.getIsLastColumn('start');
+  let isFirstEndPinnedColumn = isPinned === 'end' && column.getIsFirstColumn('end');
   let borderClassName =
-    isLastLeftPinnedColumn ? 'pr-2 border-r-2 border-neutral-100'
-    : isFirstRightPinnedColumn ? 'pl-2 border-l-2 border-neutral-100'
+    isLastStartPinnedColumn ? 'pr-2 border-r-2 border-neutral-100'
+    : isFirstEndPinnedColumn ? 'pl-2 border-l-2 border-neutral-100'
     : undefined;
   let opacityClassName = isPinned ? 'opacity-90' : 'opacity-100';
   let positionClassName = isPinned ? 'sticky' : 'relative';

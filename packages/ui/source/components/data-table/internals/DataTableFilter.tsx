@@ -1,4 +1,4 @@
-import {type Column, flexRender, type Header, type Table} from '@tanstack/react-table';
+import {type Column, flexRender, type Header, type ReactTable} from '@tanstack/react-table';
 import {type ChangeEvent, type FormEvent, useCallback, useMemo, useState} from 'react';
 
 import {Button} from '../../Button.js';
@@ -12,15 +12,16 @@ import {Label} from '../../Label.js';
 import {Listbox} from '../../Listbox.js';
 import {type DataTableProps} from '../DataTable.js';
 import {addFilter} from './addFilter.js';
+import {type DataTableFeatures} from './dataTableFeatures.js';
 import {normalizeFilter} from './normalizeFilter.js';
 import {normalizeFilters} from './normalizeFilters.js';
 import {removeFilter} from './removeFilter.js';
 
 export type DataTableFilterProps = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
-  table: Table<any>;
+  table: ReactTable<DataTableFeatures, any>;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
-  column: Column<any>;
+  column: Column<DataTableFeatures, any>;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   clientFilters: DataTableProps<any, any>['clientFilters'];
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
@@ -300,7 +301,7 @@ export function DataTableFilter({
             value,
             label: `${value as unknown}`,
           }))}
-          value={(currentFilter ?? '') as string}
+          value={currentFilter as string}
           onChange={handleTextFilterChange}
         />
         <Button aria-label="Cancel" variant="outline" onClick={handleResetClick}>
@@ -330,7 +331,7 @@ export function DataTableFilter({
             table,
             column,
             // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/consistent-type-assertions -- needed
-            header: {column} as Header<any, any>,
+            header: {column} as Header<DataTableFeatures, any>,
           })}
         </Label>
         {filterElement}

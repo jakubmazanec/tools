@@ -1,10 +1,11 @@
 import {type Column} from '@tanstack/react-table';
 
 import {type DataTableProps} from '../DataTable.js';
+import {type DataTableFeatures} from './dataTableFeatures.js';
 
 export function normalizeFilter(
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
-  column: Column<any>,
+  column: Column<DataTableFeatures, any>,
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   controlledFilters?: DataTableProps<any, any>['filters'],
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed

@@ -1,16 +1,17 @@
-import {type Table} from '@tanstack/react-table';
+import {type ReactTable} from '@tanstack/react-table';
 
 import {type DataTableProps} from '../DataTable.js';
+import {type DataTableFeatures} from './dataTableFeatures.js';
 
 export function normalizeFilters(
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
-  table: Table<any>,
+  table: ReactTable<DataTableFeatures, any>,
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   controlledFilters?: DataTableProps<any, any>['filters'],
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
 ): DataTableProps<any, any>['filters'] {
   if (controlledFilters === undefined) {
-    let filters = table.getState().columnFilters;
+    let filters = table.state.columnFilters;
 
     if (!filters.length) {
       return null;

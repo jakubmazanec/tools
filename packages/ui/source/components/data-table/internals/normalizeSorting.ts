@@ -2,10 +2,11 @@ import {type Header} from '@tanstack/react-table';
 
 import {type DataTableProps} from '../DataTable.js';
 import {type DataTableSorting} from '../DataTableSorting.js';
+import {type DataTableFeatures} from './dataTableFeatures.js';
 
 export function normalizeSorting(
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
-  header: Header<any, any>,
+  header: Header<DataTableFeatures, any>,
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   controlledSorting?: DataTableProps<any, any>['sorting'],
 ): DataTableSorting {

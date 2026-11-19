@@ -4,12 +4,13 @@ import {useCallback} from 'react';
 import {TableCell} from '../../TableCell.js';
 import {TableRow} from '../../TableRow.js';
 import {getCommonPinningClasses, getCommonPinningStyles} from '../internals.js';
+import {type DataTableFeatures} from './dataTableFeatures.js';
 
 export type DataTableRowProps = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
-  row: Row<any>;
+  row: Row<DataTableFeatures, any>;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
-  onClick?: ((row: Row<any>) => void) | undefined;
+  onClick?: ((row: Row<DataTableFeatures, any>) => void) | undefined;
 };
 
 export function DataTableRow({row, onClick}: DataTableRowProps) {

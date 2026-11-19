@@ -1,4 +1,4 @@
-import {type Table} from '@tanstack/react-table';
+import {type ReactTable} from '@tanstack/react-table';
 
 import {Button} from '../../Button.js';
 import {Container} from '../../Container.js';
@@ -7,11 +7,12 @@ import {Popover} from '../../Popover.js';
 import {PopoverButton} from '../../PopoverButton.js';
 import {PopoverPanel} from '../../PopoverPanel.js';
 import {type DataTableProps} from '../DataTable.js';
+import {type DataTableFeatures} from './dataTableFeatures.js';
 import {DataTableSettings} from './DataTableSettings.js';
 
 export type DataTableMenuProps = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
-  table: Table<any>;
+  table: ReactTable<DataTableFeatures, any>;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   hideFilters: DataTableProps<any, any>['hideFilters'];
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed

@@ -1,5 +1,6 @@
 export * from './internals/addFilter.js';
 export * from './internals/constants.js';
+export * from './internals/dataTableFeatures.js';
 export * from './internals/DataTableFilter.js';
 export * from './internals/DataTableFilters.js';
 export * from './internals/DataTableHeader.js';

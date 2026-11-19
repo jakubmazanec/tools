@@ -1,6 +1,6 @@
 import {useSortable} from '@dnd-kit/sortable';
 import {CSS} from '@dnd-kit/utilities';
-import {type Column, flexRender, type Header, type Table} from '@tanstack/react-table';
+import {type Column, flexRender, type Header, type ReactTable} from '@tanstack/react-table';
 import {useCallback} from 'react';
 
 import {Button} from '../../Button.js';
@@ -10,12 +10,13 @@ import {Container} from '../../Container.js';
 import {Icon} from '../../Icon.js';
 import {Label} from '../../Label.js';
 import {type DataTableProps} from '../DataTable.js';
+import {type DataTableFeatures} from './dataTableFeatures.js';
 
 export type DataTableSettingProps = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
-  table: Table<any>;
+  table: ReactTable<DataTableFeatures, any>;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
-  column: Column<any>;
+  column: Column<DataTableFeatures, any>;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   hideColumnVisibility: DataTableProps<any, any>['hideColumnVisibility'];
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
@@ -47,11 +48,11 @@ export function DataTableSetting({
     },
     [column, table],
   );
-  let handlePinLeftClick = useCallback(() => {
-    column.pin('left');
+  let handlePinStartClick = useCallback(() => {
+    column.pin('start');
   }, [column]);
-  let handlePinRightClick = useCallback(() => {
-    column.pin('right');
+  let handlePinEndClick = useCallback(() => {
+    column.pin('end');
   }, [column]);
   let handleUnpinClick = useCallback(() => {
     column.pin(false);
@@ -87,7 +88,7 @@ export function DataTableSetting({
             table,
             column,
             // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/consistent-type-assertions -- needed
-            header: {column} as Header<any, any>,
+            header: {column} as Header<DataTableFeatures, any>,
           })}
         </span>
       : <CheckboxField className="mr-auto">
@@ -97,7 +98,7 @@ export function DataTableSetting({
               table,
               column,
               // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/consistent-type-assertions -- needed
-              header: {column} as Header<any, any>,
+              header: {column} as Header<DataTableFeatures, any>,
             })}
           </Label>
         </CheckboxField>
@@ -105,12 +106,12 @@ export function DataTableSetting({
 
       {resolvedHideColumnPinning ? null : (
         <Container spacing="extra-small">
-          {column.getIsPinned() === 'left' ? null : (
+          {column.getIsPinned() === 'start' ? null : (
             <Button
               aria-label="Pin to left"
               size="small"
               variant="outline"
-              onClick={handlePinLeftClick}
+              onClick={handlePinStartClick}
             >
               <Icon name="ArrowLeftEndOnRectangle" size="small" />
             </Button>
@@ -120,12 +121,12 @@ export function DataTableSetting({
               <Icon name="XMark" size="small" />
             </Button>
           : null}
-          {column.getIsPinned() === 'right' ? null : (
+          {column.getIsPinned() === 'end' ? null : (
             <Button
               aria-label="Pin to right"
               size="small"
               variant="outline"
-              onClick={handlePinRightClick}
+              onClick={handlePinEndClick}
             >
               <Icon name="ArrowRightEndOnRectangle" size="small" />
             </Button>

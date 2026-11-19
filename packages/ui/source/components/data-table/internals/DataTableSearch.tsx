@@ -1,4 +1,4 @@
-import {type Table} from '@tanstack/react-table';
+import {type ReactTable} from '@tanstack/react-table';
 import {type ChangeEvent, type FormEvent, useCallback, useState} from 'react';
 
 import {Button} from '../../Button.js';
@@ -7,10 +7,11 @@ import {Form} from '../../Form.js';
 import {Icon} from '../../Icon.js';
 import {Input} from '../../Input.js';
 import {type DataTableProps} from '../DataTable.js';
+import {type DataTableFeatures} from './dataTableFeatures.js';
 
 export type DataTableSearchProps = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
-  table: Table<any>;
+  table: ReactTable<DataTableFeatures, any>;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   clientSearch: DataTableProps<any, any>['clientSearch'];
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
@@ -27,7 +28,7 @@ export function DataTableSearch({
 }: DataTableSearchProps) {
   let currentSearch =
     clientSearch ?
-      ((table.getState().globalFilter as string | undefined) ?? null)
+      ((table.state.globalFilter as string | undefined) ?? null)
     : (controlledSearch ?? null);
   let [search, setSearch] = useState(currentSearch ?? '');
   let handleSearchChange = useCallback((event: ChangeEvent<HTMLInputElement>) => {

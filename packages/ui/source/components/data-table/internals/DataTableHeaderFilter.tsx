@@ -1,4 +1,4 @@
-import {type Column, type Table} from '@tanstack/react-table';
+import {type Column, type ReactTable} from '@tanstack/react-table';
 import {type ChangeEvent, type FormEvent, useCallback, useMemo, useState} from 'react';
 
 import {Button} from '../../Button.js';
@@ -10,15 +10,16 @@ import {Input} from '../../Input.js';
 import {Listbox} from '../../Listbox.js';
 import {type DataTableProps} from '../DataTable.js';
 import {addFilter} from './addFilter.js';
+import {type DataTableFeatures} from './dataTableFeatures.js';
 import {normalizeFilter} from './normalizeFilter.js';
 import {normalizeFilters} from './normalizeFilters.js';
 import {removeFilter} from './removeFilter.js';
 
 export type DataTableHeaderFilterProps = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
-  table: Table<any>;
+  table: ReactTable<DataTableFeatures, any>;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
-  column: Column<any>;
+  column: Column<DataTableFeatures, any>;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   clientFilters: DataTableProps<any, any>['clientFilters'];
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
@@ -298,7 +299,7 @@ export function DataTableHeaderFilter({
             value,
             label: `${value as unknown}`,
           }))}
-          value={(currentFilter ?? '') as string}
+          value={currentFilter as string}
           onChange={handleTextFilterChange}
         />
         <Button aria-label="Cancel" variant="outline" onClick={handleResetClick}>

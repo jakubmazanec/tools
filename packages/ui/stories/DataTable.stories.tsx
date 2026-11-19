@@ -115,8 +115,8 @@ export const Example = {
     },
     columnOrder: ['lastName', 'firstName'],
     columnPinning: {
-      lastName: 'left',
-      firstName: 'left',
+      lastName: 'start',
+      firstName: 'start',
     },
     showRowSummaryOnClick: true,
     onPaginationChange: (...args) => {

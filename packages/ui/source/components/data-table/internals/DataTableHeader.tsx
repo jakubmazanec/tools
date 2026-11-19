@@ -6,13 +6,14 @@ import {Container} from '../../Container.js';
 import {Icon} from '../../Icon.js';
 import {TableHeader} from '../../TableHeader.js';
 import {type DataTableProps} from '../DataTable.js';
+import {type DataTableFeatures} from './dataTableFeatures.js';
 import {getCommonPinningClasses} from './getCommonPinningClasses.js';
 import {getCommonPinningStyles} from './getCommonPinningStyles.js';
 import {normalizeSorting} from './normalizeSorting.js';
 
 export type DataTableHeaderProps = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
-  header: Header<any, any>;
+  header: Header<DataTableFeatures, any>;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   clientSorting: DataTableProps<any, any>['clientSorting'];
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
