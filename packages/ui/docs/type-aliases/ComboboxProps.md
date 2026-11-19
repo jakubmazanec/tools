@@ -13,10 +13,10 @@
 > \| \{ `as?`: `T`; `className?`: `string`; `customValue?`: `boolean`; `defaultValue?`: `V`;
 > `immediate?`: `boolean`; `items?`: [`ComboboxItem`](ComboboxItem.md)\<`V`\>[]; `multiple?`:
 > `false`; `name?`: `string`; `onChange?`: (`selectedValue`) => `void`; `placeholder?`: `string`;
-> `value?`: `V`; `virtual?`: `boolean`; \})
+> `value?`: `V` \| `null`; `virtual?`: `boolean`; \})
 
 Defined in:
-[packages/ui/source/components/Combobox.tsx:44](https://github.com/jakubmazanec/tools/blob/7027bd4db7e64559d83dd5cfca3306c9a5acc677/packages/ui/source/components/Combobox.tsx#L44)
+[components/Combobox.tsx:44](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/ui/source/components/Combobox.tsx#L44)
 
 ## Type Parameters
 

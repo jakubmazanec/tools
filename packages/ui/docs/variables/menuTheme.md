@@ -7,4 +7,4 @@
 > `const` **menuTheme**: `ComponentTheme`\<_typeof_ [`useMenuTheme`](useMenuTheme.md)\>
 
 Defined in:
-[packages/ui/source/components/Menu.tsx:49](https://github.com/jakubmazanec/tools/blob/7027bd4db7e64559d83dd5cfca3306c9a5acc677/packages/ui/source/components/Menu.tsx#L49)
+[components/Menu.tsx:49](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/ui/source/components/Menu.tsx#L49)

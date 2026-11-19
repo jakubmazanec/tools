@@ -5,7 +5,7 @@
 # Class: Program
 
 Defined in:
-[cli/source/program/Program.ts:22](https://github.com/jakubmazanec/tools/blob/7027bd4db7e64559d83dd5cfca3306c9a5acc677/packages/cli/source/program/Program.ts#L22)
+[cli/source/program/Program.ts:22](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/cli/source/program/Program.ts#L22)
 
 Program manages and executes [Command](Command.md) instances attached to it based on parsing command
 line arguments.
@@ -17,7 +17,7 @@ line arguments.
 > `readonly` `optional` **bin?**: `string`
 
 Defined in:
-[cli/source/program/Program.ts:24](https://github.com/jakubmazanec/tools/blob/7027bd4db7e64559d83dd5cfca3306c9a5acc677/packages/cli/source/program/Program.ts#L24)
+[cli/source/program/Program.ts:24](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/cli/source/program/Program.ts#L24)
 
 Program executable name.
 
@@ -29,7 +29,7 @@ Program executable name.
 > `OptionsConfig` \| `undefined`, `boolean`, `boolean`\>[] = `[]`
 
 Defined in:
-[cli/source/program/Program.ts:27](https://github.com/jakubmazanec/tools/blob/7027bd4db7e64559d83dd5cfca3306c9a5acc677/packages/cli/source/program/Program.ts#L27)
+[cli/source/program/Program.ts:27](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/cli/source/program/Program.ts#L27)
 
 Program commands
 
@@ -40,7 +40,7 @@ Program commands
 > `readonly` `optional` **description?**: `string`
 
 Defined in:
-[cli/source/program/Program.ts:32](https://github.com/jakubmazanec/tools/blob/7027bd4db7e64559d83dd5cfca3306c9a5acc677/packages/cli/source/program/Program.ts#L32)
+[cli/source/program/Program.ts:32](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/cli/source/program/Program.ts#L32)
 
 Program description.
 
@@ -51,7 +51,7 @@ Program description.
 > `readonly` `optional` **displayName?**: `string`
 
 Defined in:
-[cli/source/program/Program.ts:35](https://github.com/jakubmazanec/tools/blob/7027bd4db7e64559d83dd5cfca3306c9a5acc677/packages/cli/source/program/Program.ts#L35)
+[cli/source/program/Program.ts:35](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/cli/source/program/Program.ts#L35)
 
 More readable program name.
 
@@ -62,7 +62,7 @@ More readable program name.
 > **ErrorBoundaryFallbackComponent**: `ComponentType`\<`FallbackProps`\>
 
 Defined in:
-[cli/source/program/Program.ts:38](https://github.com/jakubmazanec/tools/blob/7027bd4db7e64559d83dd5cfca3306c9a5acc677/packages/cli/source/program/Program.ts#L38)
+[cli/source/program/Program.ts:38](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/cli/source/program/Program.ts#L38)
 
 Custom error boundary fallback component
 
@@ -73,7 +73,7 @@ Custom error boundary fallback component
 > `protected` **isRendering**: `boolean` = `false`
 
 Defined in:
-[cli/source/program/Program.ts:40](https://github.com/jakubmazanec/tools/blob/7027bd4db7e64559d83dd5cfca3306c9a5acc677/packages/cli/source/program/Program.ts#L40)
+[cli/source/program/Program.ts:40](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/cli/source/program/Program.ts#L40)
 
 ---
 
@@ -82,7 +82,7 @@ Defined in:
 > `readonly` `optional` **latestVersion?**: `string`
 
 Defined in:
-[cli/source/program/Program.ts:43](https://github.com/jakubmazanec/tools/blob/7027bd4db7e64559d83dd5cfca3306c9a5acc677/packages/cli/source/program/Program.ts#L43)
+[cli/source/program/Program.ts:43](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/cli/source/program/Program.ts#L43)
 
 Program latest version.
 
@@ -93,7 +93,7 @@ Program latest version.
 > `readonly` `optional` **name?**: `string`
 
 Defined in:
-[cli/source/program/Program.ts:46](https://github.com/jakubmazanec/tools/blob/7027bd4db7e64559d83dd5cfca3306c9a5acc677/packages/cli/source/program/Program.ts#L46)
+[cli/source/program/Program.ts:46](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/cli/source/program/Program.ts#L46)
 
 Program name.
 
@@ -104,7 +104,7 @@ Program name.
 > `readonly` **streams**: [`ProgramStreams`](../type-aliases/ProgramStreams.md)
 
 Defined in:
-[cli/source/program/Program.ts:48](https://github.com/jakubmazanec/tools/blob/7027bd4db7e64559d83dd5cfca3306c9a5acc677/packages/cli/source/program/Program.ts#L48)
+[cli/source/program/Program.ts:48](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/cli/source/program/Program.ts#L48)
 
 ---
 
@@ -113,7 +113,7 @@ Defined in:
 > `readonly` `optional` **version?**: `string`
 
 Defined in:
-[cli/source/program/Program.ts:55](https://github.com/jakubmazanec/tools/blob/7027bd4db7e64559d83dd5cfca3306c9a5acc677/packages/cli/source/program/Program.ts#L55)
+[cli/source/program/Program.ts:55](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/cli/source/program/Program.ts#L55)
 
 Program version.
 
@@ -124,7 +124,7 @@ Program version.
 > **addCommand**(`command`): `this`
 
 Defined in:
-[cli/source/program/Program.ts:151](https://github.com/jakubmazanec/tools/blob/7027bd4db7e64559d83dd5cfca3306c9a5acc677/packages/cli/source/program/Program.ts#L151)
+[cli/source/program/Program.ts:151](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/cli/source/program/Program.ts#L151)
 
 Adds command to the program.
 
@@ -149,7 +149,7 @@ Program instance.
 > **renderElement**(`element`): `Promise`\<`void`\>
 
 Defined in:
-[cli/source/program/Program.ts:163](https://github.com/jakubmazanec/tools/blob/7027bd4db7e64559d83dd5cfca3306c9a5acc677/packages/cli/source/program/Program.ts#L163)
+[cli/source/program/Program.ts:163](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/cli/source/program/Program.ts#L163)
 
 Renders a React element using Ink and outputs to the configured streams.
 
@@ -172,7 +172,7 @@ The React element to render.
 > **run**(`argv`): `Promise`\<`void`\>
 
 Defined in:
-[cli/source/program/Program.ts:198](https://github.com/jakubmazanec/tools/blob/7027bd4db7e64559d83dd5cfca3306c9a5acc677/packages/cli/source/program/Program.ts#L198)
+[cli/source/program/Program.ts:198](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/cli/source/program/Program.ts#L198)
 
 Runs the program.
 
@@ -195,7 +195,7 @@ Unparsed command line arguments.
 > `static` **create**(`__namedParameters`): `Promise`\<`Program`\>
 
 Defined in:
-[cli/source/program/Program.ts:97](https://github.com/jakubmazanec/tools/blob/7027bd4db7e64559d83dd5cfca3306c9a5acc677/packages/cli/source/program/Program.ts#L97)
+[cli/source/program/Program.ts:97](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/cli/source/program/Program.ts#L97)
 
 #### Parameters
 

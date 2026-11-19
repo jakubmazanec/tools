@@ -12,7 +12,7 @@
 > `"UNKNOWN_ERROR"`, `WorkspaceErrorData`\>
 
 Defined in:
-[packages/carson/source/workspace/WorkspaceError.ts:7](https://github.com/jakubmazanec/tools/blob/7027bd4db7e64559d83dd5cfca3306c9a5acc677/packages/carson/source/workspace/WorkspaceError.ts#L7)
+[packages/carson/source/workspace/WorkspaceError.ts:7](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/carson/source/workspace/WorkspaceError.ts#L7)
 
 A subclass of `Error` that indicates a workspace failure.
 

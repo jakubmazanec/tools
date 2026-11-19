@@ -7,7 +7,7 @@
 > `const` **TYPEDOC\_CONFIG**: `object`
 
 Defined in:
-[packages/carson-templates/source/constants.ts:100](https://github.com/jakubmazanec/tools/blob/7027bd4db7e64559d83dd5cfca3306c9a5acc677/packages/carson-templates/source/constants.ts#L100)
+[packages/carson-templates/source/constants.ts:99](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/carson-templates/source/constants.ts#L99)
 
 ## Type Declaration
 
