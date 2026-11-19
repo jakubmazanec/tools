@@ -1,4 +1,4 @@
-import {getInfo, getInfoFromPullRequest} from '@changesets/get-github-info';
+import {getCommitInfo, getPullRequestInfo} from '@changesets/get-github-info';
 import {type NewChangeset, type VersionType} from '@changesets/types';
 
 export type GetReleaseLineChangeset = NewChangeset & {
@@ -50,34 +50,30 @@ export async function getReleaseLine(
 
     if (commitToFetchFrom) {
       try {
-        let {links} = await getInfo({
+        let info = await getCommitInfo({
           repo: String(options.repository),
           commit: commitToFetchFrom,
         });
 
-        commitLink = links.commit;
-        pullRequestLink = links.pull ?? undefined;
-        usersLink = links.user ?? undefined;
+        commitLink = info?.commit.markdownLink;
+        pullRequestLink = info?.pull?.markdownLink;
+        usersLink = info?.author?.markdownLink;
       } catch {
         commitLink = undefined;
       }
     }
   } else {
-    let {links} = await getInfoFromPullRequest({
+    let info = await getPullRequestInfo({
       repo: String(options.repository),
       pull: pullRequestFromSummary,
     });
 
-    if (commitFromSummary) {
-      links = {
-        ...links,
-        commit: `[\`${commitFromSummary}\`](https://github.com/${options.repository}/commit/${commitFromSummary})`,
-      };
-    }
-
-    commitLink = links.commit ?? undefined;
-    pullRequestLink = links.pull;
-    usersLink = links.user ?? undefined;
+    commitLink =
+      commitFromSummary ?
+        `[\`${commitFromSummary}\`](https://github.com/${options.repository}/commit/${commitFromSummary})`
+      : info?.commit?.markdownLink;
+    pullRequestLink = info?.pull.markdownLink;
+    usersLink = info?.author?.markdownLink;
   }
 
   if (usersFromSummary.length) {

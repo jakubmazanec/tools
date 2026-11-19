@@ -8,7 +8,7 @@ function urlToShortGithubUrl(value) {
 }
 -%>
 {
-  "$schema": "https://unpkg.com/@changesets/config@1.6.1/schema.json",
+  "$schema": "https://unpkg.com/@changesets/config@4.0.1/schema.json",
   <% if (workspace.repository?.url) { -%>
   "changelog": ["@jakubmazanec/changesets-changelog", {"repository": "<%- urlToShortGithubUrl(workspace.repository.url) %>"}],
   <% } -%>
@@ -18,6 +18,8 @@ function urlToShortGithubUrl(value) {
   "baseBranch": "development",
   "updateInternalDependencies": "minor",
   "ignore": [],
+  "privatePackages": {"version": true, "tag": false},
+  "format": "prettier",
   "snapshot": {
     "useCalculatedVersion": true,
     "prereleaseTemplate": "{tag}.{commit}"

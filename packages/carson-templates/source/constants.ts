@@ -45,7 +45,6 @@ export const FORMAT_IGNORE_PATTERNS = [
   'public/',
   'npm-shrinkwrap.json',
   'package-lock.json',
-  'CHANGELOG.md',
   'LICENSE.md',
   `${BUILD_DIRECTORY}/`,
 ].sort();
@@ -138,7 +137,7 @@ export const DEPENDENCY_VERSIONS: Record<string, string> = {
   [CHANGELOG_PACKAGE_NAME]: '^2.0.0',
   [LINTER_CONFIG_PACKAGE_NAME]: '^5.0.0',
 
-  '@changesets/cli': '^2.0.0',
+  '@changesets/cli': '^3.0.0',
   '@chromatic-com/storybook': '^5.0.0',
   '@react-router/dev': '^8.0.0',
   '@react-router/fs-routes': '^8.0.0',

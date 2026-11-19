@@ -1,4 +1,4 @@
-import parse from '@changesets/parse';
+import {parseChangesetFile} from '@changesets/parse';
 
 export function createGetReleaseLineArgs(
   content: string,
@@ -7,7 +7,7 @@ export function createGetReleaseLineArgs(
 ) {
   return [
     {
-      ...parse(
+      ...parseChangesetFile(
         `---
   pkg: "minor"
   ---

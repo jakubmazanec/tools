@@ -210,7 +210,7 @@ for (let project of workspace.projects) {
 
       - name: Add git tags
         run: |
-          npx changeset tag
+          npx changeset git-tag
 
       - name: Push changes
         run: |

@@ -8,7 +8,6 @@
 
 .cache/
 .turbo/
-CHANGELOG.md
 LICENSE.md
 build/
 coverage/
