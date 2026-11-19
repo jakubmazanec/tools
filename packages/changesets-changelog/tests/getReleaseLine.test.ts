@@ -18,26 +18,31 @@ let mockGithubData = getMockGithubData();
 
 vitest.mock(import('@changesets/get-github-info'), () => {
   let {user, pull, commit, repository} = getMockGithubData();
-  let links = {
-    user: `[@${user}](https://github.com/${user})`,
-    pull: `[#${pull}](https://github.com/${repository}/pull/${pull})`,
-    commit: `[\`${commit}\`](https://github.com/${repository}/commit/${commit})`,
+  let info = {
+    author: {
+      login: user,
+      url: `https://github.com/${user}`,
+      markdownLink: `[@${user}](https://github.com/${user})`,
+    },
+    pull: {
+      // eslint-disable-next-line id-denylist -- required by `@changesets/get-github-info` types
+      number: pull,
+      url: `https://github.com/${repository}/pull/${pull}`,
+      markdownLink: `[#${pull}](https://github.com/${repository}/pull/${pull})`,
+    },
+    commit: {
+      sha: commit,
+      url: `https://github.com/${repository}/commit/${commit}`,
+      markdownLink: `[\`${commit}\`](https://github.com/${repository}/commit/${commit})`,
+    },
   };
 
   return {
-    async getInfo() {
-      return {
-        pull,
-        user,
-        links,
-      };
+    async getCommitInfo() {
+      return info;
     },
-    async getInfoFromPullRequest() {
-      return {
-        commit,
-        user,
-        links,
-      };
+    async getPullRequestInfo() {
+      return info;
     },
   };
 });

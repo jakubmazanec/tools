@@ -1,4 +1,4 @@
-import {getInfo} from '@changesets/get-github-info';
+import {getCommitInfo} from '@changesets/get-github-info';
 import {type ModCompWithPackage, type NewChangesetWithCommit} from '@changesets/types';
 
 export async function getDependencyReleaseLine(
@@ -20,12 +20,12 @@ export async function getDependencyReleaseLine(
     await Promise.all(
       changesets.map(async (changeset) => {
         if (changeset.commit) {
-          let {links} = await getInfo({
+          let info = await getCommitInfo({
             repo: String(options.repository),
             commit: changeset.commit,
           });
 
-          return links.commit;
+          return info?.commit.markdownLink;
         }
 
         return undefined;
