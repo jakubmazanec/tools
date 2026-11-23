@@ -36,6 +36,11 @@
       "schedule": ["before 6am on monday"],
       "matchUpdateTypes": ["minor"],
       "matchCurrentVersion": ">=1.0.0"
+    },
+    {
+      "matchPackageNames": ["@jakubmazanec/carson", "@jakubmazanec/carson-templates"],
+      "groupName": "Carson",
+      "separateMajorMinor": false
     }
   ],
   "github-actions": {

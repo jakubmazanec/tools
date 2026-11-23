@@ -44,6 +44,12 @@ let renovateConfig = lodash.merge(
       },
       {...nonMajorGroup, matchUpdateTypes: ['patch', 'pin', 'digest']},
       {...nonMajorGroup, matchUpdateTypes: ['minor'], matchCurrentVersion: '>=1.0.0'},
+      {
+        // new majors of these packages usually require each other, so they must land in one PR
+        matchPackageNames: [CARSON_PACKAGE_NAME, TEMPLATE_PACKAGE_NAME],
+        groupName: 'Carson',
+        separateMajorMinor: false,
+      },
     ],
   },
   hasTemplatesProject ?

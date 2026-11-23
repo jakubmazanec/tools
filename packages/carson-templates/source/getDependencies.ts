@@ -44,8 +44,15 @@ export function getDependencies(dependencies: string[], workspace: Workspace | W
       }
 
       // we use existing version if its major version is equal or greater than major version
-      // recommended by the template
-      if (getMajorVersion(version) >= getMajorVersion(dependencyVersion)) {
+      // recommended by the template; for engines, the whole version is compared
+      if (
+        ['node', 'npm'].includes(dependencyName) ?
+          semver.gte(
+            semver.coerce(version) ?? '0.0.0',
+            semver.minVersion(dependencyVersion) ?? '0.0.0',
+          )
+        : getMajorVersion(version) >= getMajorVersion(dependencyVersion)
+      ) {
         if (semver.prerelease(version)?.length) {
           result[dependencyName] = version;
         } else {
