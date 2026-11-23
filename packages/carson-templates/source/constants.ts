@@ -107,26 +107,21 @@ export const TYPEDOC_CONFIG = {
 
 // dependencies
 let require = createRequire(import.meta.url);
+let templatesPackageJson = JSON.parse(
+  fs.readFileSync(require.resolve(`${TEMPLATE_PACKAGE_NAME}/package.json`), {
+    encoding: 'utf8',
+  }),
+) as {
+  version: string;
+  peerDependencies: Record<string, string>;
+  engines: {node: string; npm: string};
+};
 let carsonPackageVersion =
   semver
-    .minVersion(
-      (
-        JSON.parse(
-          fs.readFileSync(require.resolve(`${TEMPLATE_PACKAGE_NAME}/package.json`), {
-            encoding: 'utf8',
-          }),
-        ) as {peerDependencies: Record<string, string>}
-      ).peerDependencies[CARSON_PACKAGE_NAME] ?? '^1.0.0',
-    )
+    .minVersion(templatesPackageJson.peerDependencies[CARSON_PACKAGE_NAME] ?? '^1.0.0')
     ?.format() ?? '1.0.0';
 let isCarsonPackageVersionPrerelease = !!semver.prerelease(carsonPackageVersion)?.length;
-let templatesPackageVersion = (
-  JSON.parse(
-    fs.readFileSync(require.resolve(`${TEMPLATE_PACKAGE_NAME}/package.json`), {
-      encoding: 'utf8',
-    }),
-  ) as {version: string}
-).version;
+let templatesPackageVersion = templatesPackageJson.version;
 let isTemplatesPackageVersionPrerelease = !!semver.prerelease(templatesPackageVersion)?.length;
 
 export const DEPENDENCY_VERSIONS: Record<string, string> = {
@@ -188,6 +183,10 @@ export const DEPENDENCY_VERSIONS: Record<string, string> = {
 
   gel: '^6.7.0',
 };
+
+// the `node` and `npm` literals above only mark the major version for
+// `create-dependencies-changeset.mts`; templates require what this package itself requires
+Object.assign(DEPENDENCY_VERSIONS, templatesPackageJson.engines);
 
 // tests
 export const TEST_GLOB = 'tests/**/*.test.?(c|m)[jt]s?(x)';
