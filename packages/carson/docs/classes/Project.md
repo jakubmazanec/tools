@@ -5,7 +5,7 @@
 # Class: Project\<M\>
 
 Defined in:
-[packages/carson/source/workspace/Project.ts:30](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/carson/source/workspace/Project.ts#L30)
+[packages/carson/source/workspace/Project.ts:30](https://github.com/jakubmazanec/tools/blob/8fd6fdb95311d81f967ac798aa344a0dbb3b9193/packages/carson/source/workspace/Project.ts#L30)
 
 Project represent a self-contained piece of software (e.g. a package, or an app) that is part of a
 [Workspace](Workspace.md). Currently only Node.js projects are supported.
@@ -25,7 +25,7 @@ If true, the project belongs to a multi-project workspace.
 > **new Project**\<`M`\>(`__namedParameters`): `Project`\<`M`\>
 
 Defined in:
-[packages/carson/source/workspace/Project.ts:52](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/carson/source/workspace/Project.ts#L52)
+[packages/carson/source/workspace/Project.ts:52](https://github.com/jakubmazanec/tools/blob/8fd6fdb95311d81f967ac798aa344a0dbb3b9193/packages/carson/source/workspace/Project.ts#L52)
 
 #### Parameters
 
@@ -44,7 +44,7 @@ Defined in:
 > **config**: `object`
 
 Defined in:
-[packages/carson/source/workspace/Project.ts:32](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/carson/source/workspace/Project.ts#L32)
+[packages/carson/source/workspace/Project.ts:32](https://github.com/jakubmazanec/tools/blob/8fd6fdb95311d81f967ac798aa344a0dbb3b9193/packages/carson/source/workspace/Project.ts#L32)
 
 Project configuration; if it's not found, the default is an empty object.
 
@@ -65,7 +65,7 @@ Project configuration; if it's not found, the default is an empty object.
 > `"PROJECT_PATH_NOT_EMPTY"`, `ProjectErrorData`\>[] = `[]`
 
 Defined in:
-[packages/carson/source/workspace/Project.ts:35](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/carson/source/workspace/Project.ts#L35)
+[packages/carson/source/workspace/Project.ts:35](https://github.com/jakubmazanec/tools/blob/8fd6fdb95311d81f967ac798aa344a0dbb3b9193/packages/carson/source/workspace/Project.ts#L35)
 
 Errors found during reading from the file system.
 
@@ -76,7 +76,7 @@ Errors found during reading from the file system.
 > `optional` **name?**: `string`
 
 Defined in:
-[packages/carson/source/workspace/Project.ts:38](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/carson/source/workspace/Project.ts#L38)
+[packages/carson/source/workspace/Project.ts:38](https://github.com/jakubmazanec/tools/blob/8fd6fdb95311d81f967ac798aa344a0dbb3b9193/packages/carson/source/workspace/Project.ts#L38)
 
 Project name.
 
@@ -87,7 +87,7 @@ Project name.
 > **packageJson**: `object`
 
 Defined in:
-[packages/carson/source/workspace/Project.ts:41](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/carson/source/workspace/Project.ts#L41)
+[packages/carson/source/workspace/Project.ts:41](https://github.com/jakubmazanec/tools/blob/8fd6fdb95311d81f967ac798aa344a0dbb3b9193/packages/carson/source/workspace/Project.ts#L41)
 
 Parsed project `package.json` file; if it's not found, the default is an empty object.
 
@@ -449,7 +449,7 @@ Parsed project `package.json` file; if it's not found, the default is an empty o
 > **path**: `string`
 
 Defined in:
-[packages/carson/source/workspace/Project.ts:44](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/carson/source/workspace/Project.ts#L44)
+[packages/carson/source/workspace/Project.ts:44](https://github.com/jakubmazanec/tools/blob/8fd6fdb95311d81f967ac798aa344a0dbb3b9193/packages/carson/source/workspace/Project.ts#L44)
 
 Project path.
 
@@ -460,7 +460,7 @@ Project path.
 > **relativePath**: `string`
 
 Defined in:
-[packages/carson/source/workspace/Project.ts:47](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/carson/source/workspace/Project.ts#L47)
+[packages/carson/source/workspace/Project.ts:47](https://github.com/jakubmazanec/tools/blob/8fd6fdb95311d81f967ac798aa344a0dbb3b9193/packages/carson/source/workspace/Project.ts#L47)
 
 Project path relative to workspace path.
 
@@ -471,7 +471,7 @@ Project path relative to workspace path.
 > **workspace**: [`Workspace`](Workspace.md)\<`M`\>
 
 Defined in:
-[packages/carson/source/workspace/Project.ts:50](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/carson/source/workspace/Project.ts#L50)
+[packages/carson/source/workspace/Project.ts:50](https://github.com/jakubmazanec/tools/blob/8fd6fdb95311d81f967ac798aa344a0dbb3b9193/packages/carson/source/workspace/Project.ts#L50)
 
 Parent [Workspace](Workspace.md) instance.
 
@@ -482,7 +482,7 @@ Parent [Workspace](Workspace.md) instance.
 > **read**(): `Promise`\<`Project`\<`M`\>\>
 
 Defined in:
-[packages/carson/source/workspace/Project.ts:167](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/carson/source/workspace/Project.ts#L167)
+[packages/carson/source/workspace/Project.ts:167](https://github.com/jakubmazanec/tools/blob/8fd6fdb95311d81f967ac798aa344a0dbb3b9193/packages/carson/source/workspace/Project.ts#L167)
 
 #### Returns
 
@@ -495,7 +495,7 @@ Defined in:
 > **update**(`__namedParameters`): `Promise`\<`Project`\<`M`\>\>
 
 Defined in:
-[packages/carson/source/workspace/Project.ts:247](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/carson/source/workspace/Project.ts#L247)
+[packages/carson/source/workspace/Project.ts:247](https://github.com/jakubmazanec/tools/blob/8fd6fdb95311d81f967ac798aa344a0dbb3b9193/packages/carson/source/workspace/Project.ts#L247)
 
 #### Parameters
 
@@ -514,7 +514,7 @@ Defined in:
 > `static` **create**\<`M`\>(`__namedParameters`): `Promise`\<`Project`\<`M`\>\>
 
 Defined in:
-[packages/carson/source/workspace/Project.ts:93](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/carson/source/workspace/Project.ts#L93)
+[packages/carson/source/workspace/Project.ts:93](https://github.com/jakubmazanec/tools/blob/8fd6fdb95311d81f967ac798aa344a0dbb3b9193/packages/carson/source/workspace/Project.ts#L93)
 
 #### Type Parameters
 
@@ -539,7 +539,7 @@ Defined in:
 > `static` **read**\<`M`\>(`projectPath`, `workspace`): `Promise`\<`Project`\<`M`\>\>
 
 Defined in:
-[packages/carson/source/workspace/Project.ts:153](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/carson/source/workspace/Project.ts#L153)
+[packages/carson/source/workspace/Project.ts:153](https://github.com/jakubmazanec/tools/blob/8fd6fdb95311d81f967ac798aa344a0dbb3b9193/packages/carson/source/workspace/Project.ts#L153)
 
 #### Type Parameters
 

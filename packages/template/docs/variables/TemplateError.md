@@ -9,7 +9,7 @@
 > `"UNKNOWN_ERROR"`, `TemplateErrorData`\>
 
 Defined in:
-[template/source/TemplateError.ts:9](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/template/source/TemplateError.ts#L9)
+[template/source/TemplateError.ts:9](https://github.com/jakubmazanec/tools/blob/8fd6fdb95311d81f967ac798aa344a0dbb3b9193/packages/template/source/TemplateError.ts#L9)
 
 A subclass of `Error` that indicates a template failure.
 

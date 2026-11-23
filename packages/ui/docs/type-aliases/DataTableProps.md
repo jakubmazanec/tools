@@ -7,7 +7,7 @@
 > **DataTableProps**\<`D`, `C`\> = `object`
 
 Defined in:
-[components/data-table/DataTable.tsx:60](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/ui/source/components/data-table/DataTable.tsx#L60)
+[components/data-table/DataTable.tsx:60](https://github.com/jakubmazanec/tools/blob/8fd6fdb95311d81f967ac798aa344a0dbb3b9193/packages/ui/source/components/data-table/DataTable.tsx#L60)
 
 ## Type Parameters
 
@@ -26,7 +26,7 @@ Defined in:
 > `optional` **clientFaceting?**: `boolean`
 
 Defined in:
-[components/data-table/DataTable.tsx:89](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/ui/source/components/data-table/DataTable.tsx#L89)
+[components/data-table/DataTable.tsx:89](https://github.com/jakubmazanec/tools/blob/8fd6fdb95311d81f967ac798aa344a0dbb3b9193/packages/ui/source/components/data-table/DataTable.tsx#L89)
 
 ---
 
@@ -35,7 +35,7 @@ Defined in:
 > `optional` **clientFilters?**: `boolean`
 
 Defined in:
-[components/data-table/DataTable.tsx:85](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/ui/source/components/data-table/DataTable.tsx#L85)
+[components/data-table/DataTable.tsx:85](https://github.com/jakubmazanec/tools/blob/8fd6fdb95311d81f967ac798aa344a0dbb3b9193/packages/ui/source/components/data-table/DataTable.tsx#L85)
 
 ---
 
@@ -44,7 +44,7 @@ Defined in:
 > `optional` **clientPagination?**: `boolean`
 
 Defined in:
-[components/data-table/DataTable.tsx:63](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/ui/source/components/data-table/DataTable.tsx#L63)
+[components/data-table/DataTable.tsx:63](https://github.com/jakubmazanec/tools/blob/8fd6fdb95311d81f967ac798aa344a0dbb3b9193/packages/ui/source/components/data-table/DataTable.tsx#L63)
 
 ---
 
@@ -53,7 +53,7 @@ Defined in:
 > `optional` **clientSearch?**: `boolean`
 
 Defined in:
-[components/data-table/DataTable.tsx:91](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/ui/source/components/data-table/DataTable.tsx#L91)
+[components/data-table/DataTable.tsx:91](https://github.com/jakubmazanec/tools/blob/8fd6fdb95311d81f967ac798aa344a0dbb3b9193/packages/ui/source/components/data-table/DataTable.tsx#L91)
 
 ---
 
@@ -62,7 +62,7 @@ Defined in:
 > `optional` **clientSorting?**: `boolean`
 
 Defined in:
-[components/data-table/DataTable.tsx:81](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/ui/source/components/data-table/DataTable.tsx#L81)
+[components/data-table/DataTable.tsx:81](https://github.com/jakubmazanec/tools/blob/8fd6fdb95311d81f967ac798aa344a0dbb3b9193/packages/ui/source/components/data-table/DataTable.tsx#L81)
 
 ---
 
@@ -71,7 +71,7 @@ Defined in:
 > `optional` **columnOrder?**: `any`[]
 
 Defined in:
-[components/data-table/DataTable.tsx:74](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/ui/source/components/data-table/DataTable.tsx#L74)
+[components/data-table/DataTable.tsx:74](https://github.com/jakubmazanec/tools/blob/8fd6fdb95311d81f967ac798aa344a0dbb3b9193/packages/ui/source/components/data-table/DataTable.tsx#L74)
 
 ---
 
@@ -80,7 +80,7 @@ Defined in:
 > `optional` **columnPinning?**: [`DataTableColumnPinning`](DataTableColumnPinning.md)
 
 Defined in:
-[components/data-table/DataTable.tsx:77](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/ui/source/components/data-table/DataTable.tsx#L77)
+[components/data-table/DataTable.tsx:77](https://github.com/jakubmazanec/tools/blob/8fd6fdb95311d81f967ac798aa344a0dbb3b9193/packages/ui/source/components/data-table/DataTable.tsx#L77)
 
 ---
 
@@ -89,7 +89,7 @@ Defined in:
 > **columns**: `C`
 
 Defined in:
-[components/data-table/DataTable.tsx:62](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/ui/source/components/data-table/DataTable.tsx#L62)
+[components/data-table/DataTable.tsx:62](https://github.com/jakubmazanec/tools/blob/8fd6fdb95311d81f967ac798aa344a0dbb3b9193/packages/ui/source/components/data-table/DataTable.tsx#L62)
 
 ---
 
@@ -98,7 +98,7 @@ Defined in:
 > `optional` **columnVisibility?**: [`DataTableColumnVisibility`](DataTableColumnVisibility.md)
 
 Defined in:
-[components/data-table/DataTable.tsx:71](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/ui/source/components/data-table/DataTable.tsx#L71)
+[components/data-table/DataTable.tsx:71](https://github.com/jakubmazanec/tools/blob/8fd6fdb95311d81f967ac798aa344a0dbb3b9193/packages/ui/source/components/data-table/DataTable.tsx#L71)
 
 ---
 
@@ -107,7 +107,7 @@ Defined in:
 > **data**: `D`[]
 
 Defined in:
-[components/data-table/DataTable.tsx:61](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/ui/source/components/data-table/DataTable.tsx#L61)
+[components/data-table/DataTable.tsx:61](https://github.com/jakubmazanec/tools/blob/8fd6fdb95311d81f967ac798aa344a0dbb3b9193/packages/ui/source/components/data-table/DataTable.tsx#L61)
 
 ---
 
@@ -116,7 +116,7 @@ Defined in:
 > `optional` **faceting?**: [`DataTableFaceting`](DataTableFaceting.md)
 
 Defined in:
-[components/data-table/DataTable.tsx:90](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/ui/source/components/data-table/DataTable.tsx#L90)
+[components/data-table/DataTable.tsx:90](https://github.com/jakubmazanec/tools/blob/8fd6fdb95311d81f967ac798aa344a0dbb3b9193/packages/ui/source/components/data-table/DataTable.tsx#L90)
 
 ---
 
@@ -125,7 +125,7 @@ Defined in:
 > `optional` **filters?**: [`DataTableFilters`](DataTableFilters.md)
 
 Defined in:
-[components/data-table/DataTable.tsx:87](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/ui/source/components/data-table/DataTable.tsx#L87)
+[components/data-table/DataTable.tsx:87](https://github.com/jakubmazanec/tools/blob/8fd6fdb95311d81f967ac798aa344a0dbb3b9193/packages/ui/source/components/data-table/DataTable.tsx#L87)
 
 ---
 
@@ -134,7 +134,7 @@ Defined in:
 > `optional` **hideColumnOrder?**: `boolean`
 
 Defined in:
-[components/data-table/DataTable.tsx:75](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/ui/source/components/data-table/DataTable.tsx#L75)
+[components/data-table/DataTable.tsx:75](https://github.com/jakubmazanec/tools/blob/8fd6fdb95311d81f967ac798aa344a0dbb3b9193/packages/ui/source/components/data-table/DataTable.tsx#L75)
 
 ---
 
@@ -143,7 +143,7 @@ Defined in:
 > `optional` **hideColumnPinning?**: `boolean`
 
 Defined in:
-[components/data-table/DataTable.tsx:78](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/ui/source/components/data-table/DataTable.tsx#L78)
+[components/data-table/DataTable.tsx:78](https://github.com/jakubmazanec/tools/blob/8fd6fdb95311d81f967ac798aa344a0dbb3b9193/packages/ui/source/components/data-table/DataTable.tsx#L78)
 
 ---
 
@@ -152,7 +152,7 @@ Defined in:
 > `optional` **hideColumnResizing?**: `boolean`
 
 Defined in:
-[components/data-table/DataTable.tsx:80](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/ui/source/components/data-table/DataTable.tsx#L80)
+[components/data-table/DataTable.tsx:80](https://github.com/jakubmazanec/tools/blob/8fd6fdb95311d81f967ac798aa344a0dbb3b9193/packages/ui/source/components/data-table/DataTable.tsx#L80)
 
 ---
 
@@ -161,7 +161,7 @@ Defined in:
 > `optional` **hideColumnVisibility?**: `boolean`
 
 Defined in:
-[components/data-table/DataTable.tsx:72](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/ui/source/components/data-table/DataTable.tsx#L72)
+[components/data-table/DataTable.tsx:72](https://github.com/jakubmazanec/tools/blob/8fd6fdb95311d81f967ac798aa344a0dbb3b9193/packages/ui/source/components/data-table/DataTable.tsx#L72)
 
 ---
 
@@ -170,7 +170,7 @@ Defined in:
 > `optional` **hideFilters?**: `boolean`
 
 Defined in:
-[components/data-table/DataTable.tsx:86](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/ui/source/components/data-table/DataTable.tsx#L86)
+[components/data-table/DataTable.tsx:86](https://github.com/jakubmazanec/tools/blob/8fd6fdb95311d81f967ac798aa344a0dbb3b9193/packages/ui/source/components/data-table/DataTable.tsx#L86)
 
 ---
 
@@ -179,7 +179,7 @@ Defined in:
 > `optional` **hidePagination?**: `boolean`
 
 Defined in:
-[components/data-table/DataTable.tsx:64](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/ui/source/components/data-table/DataTable.tsx#L64)
+[components/data-table/DataTable.tsx:64](https://github.com/jakubmazanec/tools/blob/8fd6fdb95311d81f967ac798aa344a0dbb3b9193/packages/ui/source/components/data-table/DataTable.tsx#L64)
 
 ---
 
@@ -188,7 +188,7 @@ Defined in:
 > `optional` **hideSearch?**: `boolean`
 
 Defined in:
-[components/data-table/DataTable.tsx:92](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/ui/source/components/data-table/DataTable.tsx#L92)
+[components/data-table/DataTable.tsx:92](https://github.com/jakubmazanec/tools/blob/8fd6fdb95311d81f967ac798aa344a0dbb3b9193/packages/ui/source/components/data-table/DataTable.tsx#L92)
 
 ---
 
@@ -197,7 +197,7 @@ Defined in:
 > `optional` **hideSorting?**: `boolean`
 
 Defined in:
-[components/data-table/DataTable.tsx:83](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/ui/source/components/data-table/DataTable.tsx#L83)
+[components/data-table/DataTable.tsx:83](https://github.com/jakubmazanec/tools/blob/8fd6fdb95311d81f967ac798aa344a0dbb3b9193/packages/ui/source/components/data-table/DataTable.tsx#L83)
 
 ---
 
@@ -206,7 +206,7 @@ Defined in:
 > `optional` **onColumnOrderChange?**: (`columnOrder`) => `void`
 
 Defined in:
-[components/data-table/DataTable.tsx:76](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/ui/source/components/data-table/DataTable.tsx#L76)
+[components/data-table/DataTable.tsx:76](https://github.com/jakubmazanec/tools/blob/8fd6fdb95311d81f967ac798aa344a0dbb3b9193/packages/ui/source/components/data-table/DataTable.tsx#L76)
 
 #### Parameters
 
@@ -225,7 +225,7 @@ Defined in:
 > `optional` **onColumnPinningChange?**: (`columnPinning`) => `void`
 
 Defined in:
-[components/data-table/DataTable.tsx:79](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/ui/source/components/data-table/DataTable.tsx#L79)
+[components/data-table/DataTable.tsx:79](https://github.com/jakubmazanec/tools/blob/8fd6fdb95311d81f967ac798aa344a0dbb3b9193/packages/ui/source/components/data-table/DataTable.tsx#L79)
 
 #### Parameters
 
@@ -244,7 +244,7 @@ Defined in:
 > `optional` **onColumnVisibilityChange?**: (`columnVisibility`) => `void`
 
 Defined in:
-[components/data-table/DataTable.tsx:73](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/ui/source/components/data-table/DataTable.tsx#L73)
+[components/data-table/DataTable.tsx:73](https://github.com/jakubmazanec/tools/blob/8fd6fdb95311d81f967ac798aa344a0dbb3b9193/packages/ui/source/components/data-table/DataTable.tsx#L73)
 
 #### Parameters
 
@@ -263,7 +263,7 @@ Defined in:
 > `optional` **onFiltersChange?**: (`filters`) => `void`
 
 Defined in:
-[components/data-table/DataTable.tsx:88](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/ui/source/components/data-table/DataTable.tsx#L88)
+[components/data-table/DataTable.tsx:88](https://github.com/jakubmazanec/tools/blob/8fd6fdb95311d81f967ac798aa344a0dbb3b9193/packages/ui/source/components/data-table/DataTable.tsx#L88)
 
 #### Parameters
 
@@ -282,7 +282,7 @@ Defined in:
 > `optional` **onPaginationChange?**: (`pagination`) => `void`
 
 Defined in:
-[components/data-table/DataTable.tsx:66](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/ui/source/components/data-table/DataTable.tsx#L66)
+[components/data-table/DataTable.tsx:66](https://github.com/jakubmazanec/tools/blob/8fd6fdb95311d81f967ac798aa344a0dbb3b9193/packages/ui/source/components/data-table/DataTable.tsx#L66)
 
 #### Parameters
 
@@ -302,7 +302,7 @@ Defined in:
 > `optional` **onSearchChange?**: (`search`) => `void`
 
 Defined in:
-[components/data-table/DataTable.tsx:94](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/ui/source/components/data-table/DataTable.tsx#L94)
+[components/data-table/DataTable.tsx:94](https://github.com/jakubmazanec/tools/blob/8fd6fdb95311d81f967ac798aa344a0dbb3b9193/packages/ui/source/components/data-table/DataTable.tsx#L94)
 
 #### Parameters
 
@@ -321,7 +321,7 @@ Defined in:
 > `optional` **onSortingChange?**: (`sorting`) => `void`
 
 Defined in:
-[components/data-table/DataTable.tsx:84](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/ui/source/components/data-table/DataTable.tsx#L84)
+[components/data-table/DataTable.tsx:84](https://github.com/jakubmazanec/tools/blob/8fd6fdb95311d81f967ac798aa344a0dbb3b9193/packages/ui/source/components/data-table/DataTable.tsx#L84)
 
 #### Parameters
 
@@ -340,7 +340,7 @@ Defined in:
 > `optional` **pagination?**: [`DataTablePagination`](DataTablePagination.md)
 
 Defined in:
-[components/data-table/DataTable.tsx:65](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/ui/source/components/data-table/DataTable.tsx#L65)
+[components/data-table/DataTable.tsx:65](https://github.com/jakubmazanec/tools/blob/8fd6fdb95311d81f967ac798aa344a0dbb3b9193/packages/ui/source/components/data-table/DataTable.tsx#L65)
 
 ---
 
@@ -349,7 +349,7 @@ Defined in:
 > `optional` **search?**: [`DataTableSearch`](DataTableSearch.md)
 
 Defined in:
-[components/data-table/DataTable.tsx:93](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/ui/source/components/data-table/DataTable.tsx#L93)
+[components/data-table/DataTable.tsx:93](https://github.com/jakubmazanec/tools/blob/8fd6fdb95311d81f967ac798aa344a0dbb3b9193/packages/ui/source/components/data-table/DataTable.tsx#L93)
 
 ---
 
@@ -358,7 +358,7 @@ Defined in:
 > `optional` **showRowSummaryOnClick?**: `boolean`
 
 Defined in:
-[components/data-table/DataTable.tsx:95](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/ui/source/components/data-table/DataTable.tsx#L95)
+[components/data-table/DataTable.tsx:95](https://github.com/jakubmazanec/tools/blob/8fd6fdb95311d81f967ac798aa344a0dbb3b9193/packages/ui/source/components/data-table/DataTable.tsx#L95)
 
 ---
 
@@ -367,4 +367,4 @@ Defined in:
 > `optional` **sorting?**: [`DataTableSorting`](DataTableSorting.md)
 
 Defined in:
-[components/data-table/DataTable.tsx:82](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/ui/source/components/data-table/DataTable.tsx#L82)
+[components/data-table/DataTable.tsx:82](https://github.com/jakubmazanec/tools/blob/8fd6fdb95311d81f967ac798aa344a0dbb3b9193/packages/ui/source/components/data-table/DataTable.tsx#L82)

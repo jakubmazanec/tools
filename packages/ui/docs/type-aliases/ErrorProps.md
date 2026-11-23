@@ -9,7 +9,7 @@
 > `ComponentRef`\<`T`\> & `PropsWithChildren` & `object`
 
 Defined in:
-[components/Error.tsx:21](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/ui/source/components/Error.tsx#L21)
+[components/Error.tsx:21](https://github.com/jakubmazanec/tools/blob/8fd6fdb95311d81f967ac798aa344a0dbb3b9193/packages/ui/source/components/Error.tsx#L21)
 
 ## Type Parameters
 

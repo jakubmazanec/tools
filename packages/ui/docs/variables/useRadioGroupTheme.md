@@ -8,7 +8,7 @@
 > `overrideClassName?`) => `string`)
 
 Defined in:
-[components/RadioGroup.tsx:18](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/ui/source/components/RadioGroup.tsx#L18)
+[components/RadioGroup.tsx:18](https://github.com/jakubmazanec/tools/blob/8fd6fdb95311d81f967ac798aa344a0dbb3b9193/packages/ui/source/components/RadioGroup.tsx#L18)
 
 ## Type Declaration
 

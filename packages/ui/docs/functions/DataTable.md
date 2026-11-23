@@ -7,7 +7,7 @@
 > **DataTable**\<`D`, `C`\>(`__namedParameters`): `Element`
 
 Defined in:
-[components/data-table/DataTable.tsx:98](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/ui/source/components/data-table/DataTable.tsx#L98)
+[components/data-table/DataTable.tsx:98](https://github.com/jakubmazanec/tools/blob/8fd6fdb95311d81f967ac798aa344a0dbb3b9193/packages/ui/source/components/data-table/DataTable.tsx#L98)
 
 ## Type Parameters
 

@@ -75,7 +75,7 @@
 > enable?: boolean; exclude?: string\[\]; include?: string\[\] \} \}
 
 Defined in:
-[utils/isTsconfigJson.ts:3](https://github.com/jakubmazanec/tools/blob/80ab80c90651d919fc0c63cbe9e711dbc3ca80df/packages/zod-utils/source/utils/isTsconfigJson.ts#L3)
+[utils/isTsconfigJson.ts:3](https://github.com/jakubmazanec/tools/blob/8fd6fdb95311d81f967ac798aa344a0dbb3b9193/packages/zod-utils/source/utils/isTsconfigJson.ts#L3)
 
 ## Parameters
 
