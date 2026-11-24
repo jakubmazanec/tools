@@ -12,11 +12,7 @@ import {
 import {type ComponentRef} from './ComponentRef.js';
 import {filterProps} from './internals.js';
 
-export const usePopoverButtonTheme = createComponentTheme('PopoverButton', {
-  variants: {
-    disabled: [true, false],
-  },
-});
+export const usePopoverButtonTheme = createComponentTheme('PopoverButton');
 
 const POPOVER_BUTTON_ELEMENT = 'div';
 
@@ -27,12 +23,13 @@ export type PopoverButtonProps<T extends ElementType> = ComponentProps<
   ComponentRef<T> &
   PropsWithChildren & {
     as?: T | undefined;
+    disabled?: boolean | undefined;
     autoFocus?: boolean | undefined;
     className?: string;
   };
 
 export function PopoverButton<T extends ElementType = typeof POPOVER_BUTTON_ELEMENT>({
-  disabled = false,
+  disabled,
   as = POPOVER_BUTTON_ELEMENT as T,
   autoFocus,
   className,
@@ -40,7 +37,7 @@ export function PopoverButton<T extends ElementType = typeof POPOVER_BUTTON_ELEM
   children,
   ...rest
 }: PopoverButtonProps<T>) {
-  let theme = usePopoverButtonTheme({disabled});
+  let theme = usePopoverButtonTheme();
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   let props: HeadlessPopoverButtonProps<any> = filterProps({
     as,
@@ -57,10 +54,4 @@ export function PopoverButton<T extends ElementType = typeof POPOVER_BUTTON_ELEM
 
 export const popoverButtonTheme: ComponentTheme<typeof usePopoverButtonTheme> = {
   className: '',
-  variants: {
-    disabled: {
-      true: '',
-      false: '',
-    },
-  },
 };

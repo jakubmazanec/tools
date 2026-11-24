@@ -15,11 +15,7 @@ import {
 import {type ComponentRef} from './ComponentRef.js';
 import {FieldContext, FieldNameContext, useFormId} from './internals.js';
 
-export const useRadioGroupTheme = createComponentTheme('RadioGroup', {
-  variants: {
-    disabled: [true, false],
-  },
-});
+export const useRadioGroupTheme = createComponentTheme('RadioGroup');
 
 const RADIO_GROUP_ELEMENT = 'div';
 
@@ -29,8 +25,7 @@ export type RadioGroupProps<
 > = ComponentProps<typeof useRadioGroupTheme> &
   ComponentPropsWithoutRef<T> &
   ComponentRef<T> &
-  PropsWithChildren &
-  (
+  PropsWithChildren & {disabled?: boolean | undefined} & (
     | {
         as?: T | undefined;
         value?: V | undefined;
@@ -57,7 +52,7 @@ export function RadioGroup<
   T extends ElementType = typeof RADIO_GROUP_ELEMENT,
   V extends boolean | number | string = string,
 >({
-  disabled = false,
+  disabled,
   as = RADIO_GROUP_ELEMENT as T,
   value,
   defaultValue,
@@ -69,7 +64,7 @@ export function RadioGroup<
   children,
   ...rest
 }: RadioGroupProps<T, V>) {
-  let theme = useRadioGroupTheme({disabled});
+  let theme = useRadioGroupTheme();
   let formId = useFormId();
   let handleChange = useCallback(
     (newValue: V) => {
@@ -81,7 +76,8 @@ export function RadioGroup<
   if (field) {
     let props = {
       ref,
-      disabled,
+      // Headless UI ignores a parent's disabled state when given `false`, so pass `undefined`
+      disabled: disabled ? true : undefined,
       defaultValue,
       name: field.name,
       form: formId,
@@ -100,7 +96,8 @@ export function RadioGroup<
   if (name) {
     let props = {
       ref,
-      disabled,
+      // Headless UI ignores a parent's disabled state when given `false`, so pass `undefined`
+      disabled: disabled ? true : undefined,
       defaultValue,
       name,
       form: formId,
@@ -119,7 +116,8 @@ export function RadioGroup<
 
   let props = {
     ref,
-    disabled,
+    // Headless UI ignores a parent's disabled state when given `false`, so pass `undefined`
+    disabled: disabled ? true : undefined,
     value,
     defaultValue,
     className: theme(null, className),
@@ -133,10 +131,4 @@ export function RadioGroup<
 
 export const radioGroupTheme: ComponentTheme<typeof useRadioGroupTheme> = {
   className: 'flex flex-col gap-y-2',
-  variants: {
-    disabled: {
-      true: '',
-      false: '',
-    },
-  },
 };

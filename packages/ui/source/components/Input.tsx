@@ -20,9 +20,6 @@ import {useField} from './useField.js';
 import {useFieldName} from './useFieldName.js';
 
 export const useInputTheme = createComponentTheme('Input', {
-  variants: {
-    disabled: [true, false],
-  },
   elements: ['root', 'input', 'icon', 'clearButton'],
 });
 
@@ -32,6 +29,7 @@ export type InputProps<T extends ElementType> = ComponentProps<typeof useInputTh
   ComponentPropsWithoutRef<T> &
   ComponentRef<T> & {
     as?: T | undefined;
+    disabled?: boolean | undefined;
     name?: string | undefined;
     className?: string | undefined;
     icon?: ComponentType<object> | string | undefined;
@@ -39,7 +37,7 @@ export type InputProps<T extends ElementType> = ComponentProps<typeof useInputTh
   };
 
 export function Input<T extends ElementType = typeof INPUT_ELEMENT>({
-  disabled = false,
+  disabled,
   as = INPUT_ELEMENT as T,
   name,
   className,
@@ -48,7 +46,7 @@ export function Input<T extends ElementType = typeof INPUT_ELEMENT>({
   ref,
   ...rest
 }: InputProps<T>) {
-  let theme = useInputTheme({disabled});
+  let theme = useInputTheme();
   let fieldName = useFieldName();
   let field = useField();
   let inputRef = useRef<HTMLInputElement>(null);
@@ -75,7 +73,8 @@ export function Input<T extends ElementType = typeof INPUT_ELEMENT>({
   let inputProps: Record<string, unknown> = {
     as,
     ref: inputRef,
-    disabled,
+    // Headless UI ignores a parent's disabled state when given `false`, so pass `undefined`
+    disabled: disabled ? true : undefined,
     name: field?.name ?? fieldName ?? name,
     className: theme.input(),
     size: 1, // so the input default width without styling is small
@@ -126,26 +125,11 @@ export function Input<T extends ElementType = typeof INPUT_ELEMENT>({
 
 export const inputTheme: ComponentTheme<typeof useInputTheme> = {
   classNames: {
-    root: 'group flex w-full items-center rounded-2 border-2 border-neutral-100 hover:border-neutral-200 px-2.5 h-9 bg-white shadow-inner transition-colors focus-within:outline-solid focus-within:outline-2 focus-within:outline-blue-400/50 focus-within:outline-offset-[calc(var(--spacing)*0.5)]',
+    root: 'group group/input flex w-full items-center rounded-2 border-2 border-neutral-100 hover:border-neutral-200 px-2.5 h-9 bg-white shadow-inner transition-colors focus-within:outline-solid focus-within:outline-2 focus-within:outline-blue-400/50 focus-within:outline-offset-[calc(var(--spacing)*0.5)] has-data-disabled:text-neutral-200 has-data-disabled:cursor-not-allowed has-data-disabled:hover:border-neutral-100',
     input:
       'p-0 focus:outline-none w-full group-data-[icon]:pl-6 group-data-[clear-button]:pr-4 bg-transparent font-sans text-sm',
     icon: 'size-6 left-[0.3125rem] top-[0.3125rem] text-neutral-300',
-    clearButton: 'rounded-1 text-neutral-500 size-5 right-2 cursor-pointer',
-  },
-  variants: {
-    disabled: {
-      true: {
-        root: 'border-neutral-100 text-neutral-200 cursor-not-allowed',
-        input: '',
-        icon: '',
-        clearButton: '',
-      },
-      false: {
-        root: '',
-        input: '',
-        icon: '',
-        clearButton: '',
-      },
-    },
+    clearButton:
+      'rounded-1 text-neutral-500 size-5 right-2 cursor-pointer group-has-data-disabled/input:hidden',
   },
 };

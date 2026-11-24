@@ -15,12 +15,7 @@ import {useFormId} from './internals.js';
 import {useField} from './useField.js';
 import {useFieldName} from './useFieldName.js';
 
-export const useCheckboxTheme = createComponentTheme('Checkbox', {
-  variants: {
-    disabled: [true, false],
-  },
-  elements: ['root', 'icon'],
-});
+export const useCheckboxTheme = createComponentTheme('Checkbox', {elements: ['root', 'icon']});
 
 const CHECKBOX_ELEMENT = 'span';
 
@@ -29,6 +24,7 @@ export type CheckboxProps<T extends ElementType> = ComponentProps<typeof useChec
   Omit<ComponentPropsWithoutRef<T>, 'onChange'> & {
     as?: T | undefined;
     checked?: boolean | undefined;
+    disabled?: boolean | undefined;
     indeterminate?: boolean | undefined;
     autoFocus?: boolean | undefined;
     name?: string;
@@ -37,7 +33,7 @@ export type CheckboxProps<T extends ElementType> = ComponentProps<typeof useChec
   };
 
 export function Checkbox<T extends ElementType = typeof CHECKBOX_ELEMENT>({
-  disabled = false,
+  disabled,
   as = CHECKBOX_ELEMENT as T,
   checked,
   indeterminate,
@@ -48,7 +44,7 @@ export function Checkbox<T extends ElementType = typeof CHECKBOX_ELEMENT>({
   ref,
   ...rest
 }: CheckboxProps<T>) {
-  let theme = useCheckboxTheme({disabled});
+  let theme = useCheckboxTheme();
   let fieldName = useFieldName();
   let field = useField();
   let formId = useFormId();
@@ -64,6 +60,8 @@ export function Checkbox<T extends ElementType = typeof CHECKBOX_ELEMENT>({
       form: formId,
       name: field?.name ?? fieldName,
       indeterminate,
+      // Headless UI ignores a parent's disabled state when given `false`, so pass `undefined`
+      disabled: disabled ? true : undefined,
       autoFocus,
       className: theme.root('relative', className),
       'data-component': 'checkbox',
@@ -86,6 +84,8 @@ export function Checkbox<T extends ElementType = typeof CHECKBOX_ELEMENT>({
     checked: Boolean(checked),
     name,
     indeterminate,
+    // Headless UI ignores a parent's disabled state when given `false`, so pass `undefined`
+    disabled: disabled ? true : undefined,
     autoFocus,
     className: theme.root('relative', className),
     'data-component': 'checkbox',
@@ -104,19 +104,7 @@ export function Checkbox<T extends ElementType = typeof CHECKBOX_ELEMENT>({
 
 export const checkboxTheme: ComponentTheme<typeof useCheckboxTheme> = {
   classNames: {
-    root: 'group/checkbox inline-block size-5 cursor-pointer',
-    icon: 'flex justify-content justify-item size-5 *:rounded-2 *:bg-white *:border-2 *:border-neutral-100 *:hover:border-neutral-200 *:shadow-inner *:transition-colors *:text-transparent *:hover:text-neutral-100 group-data-[checked]/checkbox:*:bg-neutral-950 group-data-[checked]/checkbox:*:border-neutral-950 group-data-[checked]/checkbox:*:text-white hover:group-data-[checked]/checkbox:*:border-neutral-950 hover:group-data-[checked]/checkbox:*:text-white',
-  },
-  variants: {
-    disabled: {
-      true: {
-        root: 'cursor-not-allowed',
-        icon: '*:hover:text-transparent *:border-neutral-50 *:hover:border-neutral-50 group-data-[checked]/checkbox:*:bg-neutral-100 group-data-[checked]/checkbox:*:border-neutral-100 group-data-[checked]/checkbox:*:text-white hover:group-data-[checked]/checkbox:*:border-neutral-100 hover:group-data-[checked]/checkbox:*:text-white',
-      },
-      false: {
-        root: '',
-        icon: '',
-      },
-    },
+    root: 'group/checkbox inline-block size-5 cursor-pointer data-disabled:cursor-not-allowed',
+    icon: 'flex justify-content justify-item size-5 *:rounded-2 *:bg-white *:border-2 *:border-neutral-100 *:hover:border-neutral-200 *:shadow-inner *:transition-colors *:text-transparent *:hover:text-neutral-100 group-data-[checked]/checkbox:*:bg-neutral-950 group-data-[checked]/checkbox:*:border-neutral-950 group-data-[checked]/checkbox:*:text-white hover:group-data-[checked]/checkbox:*:border-neutral-950 hover:group-data-[checked]/checkbox:*:text-white group-data-disabled/checkbox:*:hover:text-transparent group-data-disabled/checkbox:*:border-neutral-50 group-data-disabled/checkbox:*:hover:border-neutral-50 group-data-disabled/checkbox:group-data-[checked]/checkbox:*:bg-neutral-100 group-data-disabled/checkbox:group-data-[checked]/checkbox:*:border-neutral-100 group-data-disabled/checkbox:group-data-[checked]/checkbox:*:text-white group-data-disabled/checkbox:hover:group-data-[checked]/checkbox:*:border-neutral-100 group-data-disabled/checkbox:hover:group-data-[checked]/checkbox:*:text-white',
   },
 };

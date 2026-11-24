@@ -12,11 +12,7 @@ import {
 import {type ComponentRef} from './ComponentRef.js';
 import {filterProps} from './internals.js';
 
-export const useMenuButtonTheme = createComponentTheme('MenuButton', {
-  variants: {
-    disabled: [true, false],
-  },
-});
+export const useMenuButtonTheme = createComponentTheme('MenuButton');
 
 const MENU_BUTTON_ELEMENT = 'button';
 
@@ -25,18 +21,19 @@ export type MenuButtonProps<T extends ElementType> = ComponentProps<typeof useMe
   ComponentRef<T> &
   PropsWithChildren & {
     as?: T | undefined;
+    disabled?: boolean | undefined;
     className?: string;
   };
 
 export function MenuButton<T extends ElementType = typeof MENU_BUTTON_ELEMENT>({
-  disabled = false,
+  disabled,
   as = MENU_BUTTON_ELEMENT as T,
   className,
   ref,
   children,
   ...rest
 }: MenuButtonProps<T>) {
-  let theme = useMenuButtonTheme({disabled});
+  let theme = useMenuButtonTheme();
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   let props: HeadlessMenuButtonProps<any> = filterProps({
     as,
@@ -52,10 +49,4 @@ export function MenuButton<T extends ElementType = typeof MENU_BUTTON_ELEMENT>({
 
 export const menuButtonTheme: ComponentTheme<typeof useMenuButtonTheme> = {
   className: 'text-sm',
-  variants: {
-    disabled: {
-      true: '',
-      false: '',
-    },
-  },
 };

@@ -96,6 +96,14 @@ export const DisabledText = {
   },
 } satisfies StoryObj<typeof meta>;
 
+export const Pending = {
+  args: {
+    submit: true,
+    idle: false,
+    children: 'Pending',
+  },
+} satisfies StoryObj<typeof meta>;
+
 export const WithIcon = {
   args: {
     variant: 'solid',

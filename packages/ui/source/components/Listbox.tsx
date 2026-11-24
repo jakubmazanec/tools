@@ -32,7 +32,6 @@ import {useField} from './useField.js';
 import {useFieldName} from './useFieldName.js';
 
 export const useListboxTheme = createComponentTheme('Listbox', {
-  variants: {disabled: [true, false], invalid: [true, false]},
   elements: ['root', 'label', 'icon', 'options', 'filter'],
 });
 
@@ -49,8 +48,7 @@ export type ListboxProps<
 > = ComponentProps<typeof useListboxTheme> &
   ComponentPropsWithoutRef<T> &
   ComponentRef<T> &
-  PropsWithChildren &
-  (
+  PropsWithChildren & {disabled?: boolean | undefined; invalid?: boolean | undefined} & (
     | {
         as?: T | undefined;
         value?: V[] | undefined;
@@ -88,8 +86,8 @@ export function Listbox<
   T extends ElementType = typeof LISTBOX_ELEMENT,
   V extends boolean | number | string = string,
 >({
-  disabled = false,
-  invalid = false,
+  disabled,
+  invalid,
   as = LISTBOX_ELEMENT as unknown as T,
   value,
   defaultValue,
@@ -105,7 +103,7 @@ export function Listbox<
   children,
   ...rest
 }: ListboxProps<T, V>) {
-  let theme = useListboxTheme({disabled, invalid});
+  let theme = useListboxTheme();
   let formId = useFormId();
   let field = useField();
   let fieldName = useFieldName();
@@ -175,7 +173,8 @@ export function Listbox<
     value,
     defaultValue,
     multiple,
-    disabled,
+    // Headless UI ignores a parent's disabled state when given `false`, so pass `undefined`
+    disabled: disabled ? true : undefined,
     invalid,
     form: formId,
     onChange: handleChange,
@@ -348,45 +347,11 @@ export function Listbox<
 
 export const listboxTheme: ComponentTheme<typeof useListboxTheme> = {
   classNames: {
-    root: 'flex w-full min-w-32 items-center rounded-2 border-2 border-neutral-100 hover:border-neutral-200 bg-white px-2.5 h-9 pr-9 gap-x-2 transition-colors shadow-inner font-sans text-sm',
+    root: 'group/listbox flex w-full min-w-32 items-center rounded-2 border-2 border-neutral-100 hover:border-neutral-200 bg-white px-2.5 h-9 pr-9 gap-x-2 transition-colors shadow-inner font-sans text-sm data-disabled:text-neutral-200 data-disabled:cursor-not-allowed data-disabled:hover:border-neutral-100 data-invalid:border-danger-500 data-disabled:data-invalid:hover:border-danger-500',
     label: 'flex gap-x-2',
-    icon: 'text-neutral-500 size-5 top-1.5 right-1.5 cursor-pointer',
+    icon: 'text-neutral-500 size-5 top-1.5 right-1.5 cursor-pointer group-data-disabled/listbox:text-neutral-200',
     options:
       'flex flex-col gap-y-1 shadow p-1 z-30 rounded-2 border-2 border-neutral-100 hover:border-neutral-200 bg-white text-left w-[var(--button-width)] [--anchor-gap:theme(spacing.1)] [--anchor-padding:theme(spacing.2)] [scrollbar-width:thin] empty:invisible transition-colors',
     filter: '[&>[data-component=input]]:rounded',
-  },
-  variants: {
-    disabled: {
-      true: {
-        root: 'border-neutral-100 text-neutral-200 cursor-not-allowed',
-        label: '',
-        icon: 'text-neutral-200',
-        options: 'border-neutral-100',
-        filter: '',
-      },
-      false: {
-        root: '',
-        label: '',
-        icon: '',
-        options: '',
-        filter: '',
-      },
-    },
-    invalid: {
-      true: {
-        root: '',
-        label: '',
-        icon: '',
-        options: '',
-        filter: '',
-      },
-      false: {
-        root: '',
-        label: '',
-        icon: '',
-        options: '',
-        filter: '',
-      },
-    },
   },
 };
