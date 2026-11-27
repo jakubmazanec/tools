@@ -43,3 +43,24 @@ export const Disabled = {
     </Fieldset>
   ),
 } satisfies StoryObj<typeof meta>;
+
+export const Invalid = {
+  render: () => (
+    <>
+      {[false, true].map((disabled) => (
+        <Fieldset key={String(disabled)} disabled={disabled}>
+          <Checkbox invalid aria-label="Checkbox" />
+          <Checkbox checked invalid aria-label="Checked checkbox" />
+          <RadioGroup invalid defaultValue="first">
+            <Radio aria-label="First radio" value="first" />
+            <Radio aria-label="Second radio" value="second" />
+          </RadioGroup>
+          <Input invalid aria-label="Input" />
+          <Textarea invalid aria-label="Textarea" />
+          <Listbox invalid items={items} />
+          <Combobox invalid items={items} />
+        </Fieldset>
+      ))}
+    </>
+  ),
+} satisfies StoryObj<typeof meta>;
