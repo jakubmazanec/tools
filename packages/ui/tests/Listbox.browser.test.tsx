@@ -4,6 +4,7 @@ import {render} from 'vitest-browser-react';
 import {page} from 'vitest/browser';
 
 import {Button, defaultTheme, Field, Listbox, ThemeProvider} from '../source/main.js';
+import {disableTransitions, getBorderColor} from './borderColor.js';
 import {ConformForm} from './ConformForm.js';
 
 import '../.storybook/tailwind.css';
@@ -56,12 +57,32 @@ describe(Listbox, () => {
       .toHaveAttribute('data-invalid');
   });
 
-  test('keeps a danger border when invalid, also on hover and when disabled', async () => {
-    let style = document.createElement('style');
+  test.each([undefined, false])(
+    'is invalid when its field has errors (invalid=%s)',
+    async (invalid) => {
+      await render(
+        <ConformForm>
+          {(fields) => (
+            <Field field={fields.listbox}>
+              <Listbox
+                invalid={invalid}
+                items={[{value: 'done', label: 'Done'}]}
+                placeholder="Choice"
+              />
+            </Field>
+          )}
+        </ConformForm>,
+      );
+      await page.getByRole('button', {name: 'Submit'}).click();
 
-    // Transitions would make the computed colour lag behind the hover.
-    style.textContent = '* { transition: none !important; }';
-    document.head.append(style);
+      await expect
+        .element(page.getByRole('button', {name: 'Choice'}))
+        .toHaveAttribute('data-invalid');
+    },
+  );
+
+  test('keeps a danger border when invalid, also on hover and when disabled', async () => {
+    disableTransitions();
     await render(
       <ThemeProvider theme={defaultTheme}>
         <Listbox items={[{value: 'done', label: 'Done'}]} placeholder="Valid" />
@@ -70,26 +91,24 @@ describe(Listbox, () => {
       </ThemeProvider>,
     );
 
-    let getBorderColor = (name: string) =>
-      getComputedStyle(page.getByRole('button', {name}).element()).borderColor;
+    let getButtonBorderColor = (name: string) =>
+      getBorderColor(page.getByRole('button', {name}).element());
 
     // Move the mouse off the measured controls; an earlier test may have left it over one.
     await page.getByRole('button', {name: 'Valid'}).hover();
 
-    let invalidColor = getBorderColor('Invalid');
+    let invalidColor = getButtonBorderColor('Invalid');
 
-    expect(getBorderColor('Both')).toBe(invalidColor);
+    expect(getButtonBorderColor('Both')).toBe(invalidColor);
 
     await page.getByRole('button', {name: 'Invalid'}).hover();
 
-    expect(getBorderColor('Valid')).not.toBe(invalidColor);
-    expect(getBorderColor('Invalid')).toBe(invalidColor);
+    expect(getButtonBorderColor('Valid')).not.toBe(invalidColor);
+    expect(getButtonBorderColor('Invalid')).toBe(invalidColor);
 
     await page.getByRole('button', {name: 'Both'}).hover();
 
-    expect(getBorderColor('Both')).toBe(invalidColor);
-
-    style.remove();
+    expect(getButtonBorderColor('Both')).toBe(invalidColor);
   });
 
   test('keeps its filter input valid when its field has errors', async () => {

@@ -174,6 +174,8 @@ export function Combobox<
         return false;
       })
     : children;
+  // Field errors also make it invalid, so `invalid={false}` works like leaving the prop out
+  let isInvalid = invalid === true || field?.errors !== undefined;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   let props: HeadlessComboboxProps<any, any, any> = {
     as,
@@ -184,7 +186,7 @@ export function Combobox<
     multiple,
     // Headless UI ignores a parent's disabled state when given `false`, so pass `undefined`
     disabled: disabled ? true : undefined,
-    invalid,
+    invalid: isInvalid,
     immediate,
     form: formId,
     onChange: handleChange,
@@ -201,6 +203,8 @@ export function Combobox<
     <HeadlessCombobox {...props}>
       <div className={theme.root('relative', className)} data-component="combobox">
         <HeadlessComboboxInput
+          // Headless UI leaves `aria-invalid` off the combobox input although ARIA allows it
+          aria-invalid={isInvalid ? true : undefined}
           className={theme.input(null, className)}
           displayValue={displayValue}
           size={1} // so the input default width without styling is small

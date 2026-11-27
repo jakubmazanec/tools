@@ -175,7 +175,8 @@ export function Listbox<
     multiple,
     // Headless UI ignores a parent's disabled state when given `false`, so pass `undefined`
     disabled: disabled ? true : undefined,
-    invalid,
+    // Field errors also make it invalid, so `invalid={false}` works like leaving the prop out
+    invalid: invalid === true || field?.errors !== undefined,
     form: formId,
     onChange: handleChange,
     ...rest,
