@@ -14,6 +14,7 @@ import {
   type PropsWithChildren,
   type ReactNode,
   useCallback,
+  useId,
   useRef,
   useState,
 } from 'react';
@@ -107,6 +108,7 @@ export function Listbox<
   let formId = useFormId();
   let field = useField();
   let fieldName = useFieldName();
+  let filterId = useId();
   let [query, setQuery] = useState('');
   let inputRef = useRef<HTMLInputElement>(null);
   let handleChange = useCallback(
@@ -332,7 +334,13 @@ export function Listbox<
         {showFilter ?
           <div className={theme.filter()}>
             <FieldContext value={undefined}>
-              <Input ref={inputRef} showClearButton value={query} onInput={handleQueryChange} />
+              <Input
+                ref={inputRef}
+                showClearButton
+                id={filterId}
+                value={query}
+                onInput={handleQueryChange}
+              />
             </FieldContext>
           </div>
         : null}

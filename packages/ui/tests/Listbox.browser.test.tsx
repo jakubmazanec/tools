@@ -129,4 +129,22 @@ describe(Listbox, () => {
     await expect.element(filter).not.toHaveAttribute('data-invalid');
     await expect.element(filter).not.toHaveAttribute('aria-invalid');
   });
+
+  test('gives its filter input its own id', async () => {
+    await render(
+      <ConformForm>
+        {(fields) => (
+          <Field field={fields.listbox}>
+            <Listbox showFilter items={[{value: 'done', label: 'Done'}]} placeholder="Choice" />
+          </Field>
+        )}
+      </ConformForm>,
+    );
+    await page.getByRole('button', {name: 'Choice'}).click();
+
+    let button = page.getByRole('button', {name: 'Choice'}).element();
+    let filter = page.getByRole('listbox').getByRole('textbox').element();
+
+    expect(filter.id).not.toBe(button.id);
+  });
 });
