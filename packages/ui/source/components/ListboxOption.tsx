@@ -13,7 +13,6 @@ import {type ComponentRef} from './ComponentRef.js';
 import {Icon} from './Icon.js';
 
 export const useListboxOptionTheme = createComponentTheme('ListboxOption', {
-  variants: {disabled: [true, false]},
   elements: ['root', 'icon'],
 });
 
@@ -26,6 +25,7 @@ export type ListboxOptionProps<
   ComponentPropsWithoutRef<T> &
   ComponentRef<T> &
   PropsWithChildren & {
+    disabled?: boolean | undefined;
     as?: T | undefined;
     value: V;
     className?: string;
@@ -35,7 +35,7 @@ export function ListboxOption<
   T extends ElementType = typeof LISTBOX_OPTION_ELEMENT,
   V extends boolean | number | string = string,
 >({
-  disabled = false,
+  disabled,
   as = LISTBOX_OPTION_ELEMENT as T,
   value,
   className,
@@ -43,7 +43,7 @@ export function ListboxOption<
   children,
   ...rest
 }: ListboxOptionProps<T, V>) {
-  let theme = useListboxOptionTheme({disabled});
+  let theme = useListboxOptionTheme();
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   let props: HeadlessListboxOptionProps<any, any> = {
     as,
@@ -67,19 +67,7 @@ export function ListboxOption<
 
 export const listboxOptionTheme: ComponentTheme<typeof useListboxOptionTheme> = {
   classNames: {
-    root: 'group/option p-1 pr-6 rounded-1 hover:bg-neutral-50 data-[active]:bg-neutral-50 text-sm transition-colors relative',
-    icon: 'hidden group-data-[selected]/option:block right-1 top-1 text-neutral-500',
-  },
-  variants: {
-    disabled: {
-      true: {
-        root: 'text-neutral-200 cursor-not-allowed',
-        icon: 'text-neutral-200',
-      },
-      false: {
-        root: '',
-        icon: '',
-      },
-    },
+    root: 'group/option p-1 pr-6 rounded-1 hover:bg-neutral-50 data-[active]:bg-neutral-50 text-sm transition-colors relative data-disabled:text-neutral-200 data-disabled:cursor-not-allowed data-disabled:hover:bg-transparent',
+    icon: 'hidden group-data-[selected]/option:block right-1 top-1 text-neutral-500 group-data-disabled/option:text-neutral-200',
   },
 };

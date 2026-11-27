@@ -15,11 +15,7 @@ import {
 import {type ComponentRef} from './ComponentRef.js';
 import {FieldContext, FieldNameContext, useFormId} from './internals.js';
 
-export const useRadioGroupTheme = createComponentTheme('RadioGroup', {
-  variants: {
-    disabled: [true, false],
-  },
-});
+export const useRadioGroupTheme = createComponentTheme('RadioGroup');
 
 const RADIO_GROUP_ELEMENT = 'div';
 
@@ -29,8 +25,7 @@ export type RadioGroupProps<
 > = ComponentProps<typeof useRadioGroupTheme> &
   ComponentPropsWithoutRef<T> &
   ComponentRef<T> &
-  PropsWithChildren &
-  (
+  PropsWithChildren & {disabled?: boolean | undefined; invalid?: boolean | undefined} & (
     | {
         as?: T | undefined;
         value?: V | undefined;
@@ -57,7 +52,8 @@ export function RadioGroup<
   T extends ElementType = typeof RADIO_GROUP_ELEMENT,
   V extends boolean | number | string = string,
 >({
-  disabled = false,
+  disabled,
+  invalid,
   as = RADIO_GROUP_ELEMENT as T,
   value,
   defaultValue,
@@ -69,7 +65,7 @@ export function RadioGroup<
   children,
   ...rest
 }: RadioGroupProps<T, V>) {
-  let theme = useRadioGroupTheme({disabled});
+  let theme = useRadioGroupTheme();
   let formId = useFormId();
   let handleChange = useCallback(
     (newValue: V) => {
@@ -77,11 +73,17 @@ export function RadioGroup<
     },
     [onChange],
   );
+  // Field errors also make it invalid, so `invalid={false}` works like leaving the prop out
+  let isInvalid = invalid === true || field?.errors !== undefined;
 
   if (field) {
     let props = {
       ref,
-      disabled,
+      // Headless UI ignores a parent's disabled state when given `false`, so pass `undefined`
+      disabled: disabled ? true : undefined,
+      // Headless UI has no `invalid` here, so set the attributes ourselves
+      'aria-invalid': isInvalid ? true : undefined,
+      'data-invalid': isInvalid ? '' : undefined,
       defaultValue,
       name: field.name,
       form: formId,
@@ -100,7 +102,11 @@ export function RadioGroup<
   if (name) {
     let props = {
       ref,
-      disabled,
+      // Headless UI ignores a parent's disabled state when given `false`, so pass `undefined`
+      disabled: disabled ? true : undefined,
+      // Headless UI has no `invalid` here, so set the attributes ourselves
+      'aria-invalid': isInvalid ? true : undefined,
+      'data-invalid': isInvalid ? '' : undefined,
       defaultValue,
       name,
       form: formId,
@@ -119,7 +125,11 @@ export function RadioGroup<
 
   let props = {
     ref,
-    disabled,
+    // Headless UI ignores a parent's disabled state when given `false`, so pass `undefined`
+    disabled: disabled ? true : undefined,
+    // Headless UI has no `invalid` here, so set the attributes ourselves
+    'aria-invalid': isInvalid ? true : undefined,
+    'data-invalid': isInvalid ? '' : undefined,
     value,
     defaultValue,
     className: theme(null, className),
@@ -132,11 +142,5 @@ export function RadioGroup<
 }
 
 export const radioGroupTheme: ComponentTheme<typeof useRadioGroupTheme> = {
-  className: 'flex flex-col gap-y-2',
-  variants: {
-    disabled: {
-      true: '',
-      false: '',
-    },
-  },
+  className: 'group/radio-group flex flex-col gap-y-2',
 };

@@ -17,8 +17,7 @@ const FIELD_ELEMENT = 'div';
 export type FieldProps<T extends ElementType> = ComponentProps<typeof useFieldTheme> &
   ComponentPropsWithoutRef<T> &
   ComponentRef<T> &
-  PropsWithChildren &
-  (
+  PropsWithChildren & {disabled?: boolean | undefined} & (
     | {
         as?: T | undefined;
         className?: string | undefined;
@@ -39,6 +38,7 @@ export function Field<T extends ElementType = typeof FIELD_ELEMENT>({
   as = FIELD_ELEMENT as T,
   name,
   field,
+  disabled,
   className,
   ref,
   children,
@@ -49,6 +49,8 @@ export function Field<T extends ElementType = typeof FIELD_ELEMENT>({
   let props: HeadlessFieldProps<any> = filterProps({
     as,
     ref,
+    // Headless UI ignores a parent's disabled state when given `false`, so pass `undefined`
+    disabled: disabled ? true : undefined,
     className: theme(null, className),
     'data-component': 'field',
     ...rest,

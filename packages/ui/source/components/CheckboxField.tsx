@@ -12,8 +12,7 @@ import {FieldContext, FieldNameContext} from './internals.js';
 export const useCheckboxFieldTheme = createComponentTheme('CheckboxField');
 
 export type CheckboxFieldProps = PropsWithChildren<
-  ComponentProps<typeof useCheckboxFieldTheme> &
-    (
+  ComponentProps<typeof useCheckboxFieldTheme> & {disabled?: boolean | undefined} & (
       | {
           className?: string | undefined;
           // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
@@ -29,13 +28,18 @@ export type CheckboxFieldProps = PropsWithChildren<
     )
 >;
 
-export function CheckboxField({field, name, className, children}: CheckboxFieldProps) {
+export function CheckboxField({field, name, disabled, className, children}: CheckboxFieldProps) {
   let theme = useCheckboxFieldTheme();
 
   if (field) {
     return (
       <FieldContext value={field}>
-        <HeadlessField className={theme(null, className)} data-component="checkbox-field">
+        <HeadlessField
+          className={theme(null, className)}
+          data-component="checkbox-field"
+          // Headless UI ignores a parent's disabled state when given `false`, so pass `undefined`
+          disabled={disabled ? true : undefined}
+        >
           {children}
         </HeadlessField>
       </FieldContext>
@@ -45,14 +49,24 @@ export function CheckboxField({field, name, className, children}: CheckboxFieldP
   if (name) {
     return (
       <FieldNameContext value={name}>
-        <HeadlessField className={theme(null, className)} data-component="checkbox-field">
+        <HeadlessField
+          className={theme(null, className)}
+          data-component="checkbox-field"
+          // Headless UI ignores a parent's disabled state when given `false`, so pass `undefined`
+          disabled={disabled ? true : undefined}
+        >
           {children}
         </HeadlessField>
       </FieldNameContext>
     );
   }
 
-  return <HeadlessField className={theme(null, className)}>{children}</HeadlessField>;
+  // Headless UI ignores a parent's disabled state when given `false`, so pass `undefined`
+  return (
+    <HeadlessField className={theme(null, className)} disabled={disabled ? true : undefined}>
+      {children}
+    </HeadlessField>
+  );
 }
 
 export const checkboxFieldTheme: ComponentTheme<typeof useCheckboxFieldTheme> = {

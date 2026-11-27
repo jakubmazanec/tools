@@ -1,4 +1,8 @@
 import {
+  Description as HeadlessDescription,
+  type DescriptionProps as HeadlessDescriptionProps,
+} from '@headlessui/react';
+import {
   type ComponentPropsWithoutRef,
   createElement,
   type ElementType,
@@ -11,8 +15,10 @@ import {
   createComponentTheme,
 } from '../theme/internals.js';
 import {type ComponentRef} from './ComponentRef.js';
+import {filterProps} from './internals.js';
 import {Text} from './Text.js';
 import {useField} from './useField.js';
+import {useFieldName} from './useFieldName.js';
 
 export const useErrorTheme = createComponentTheme('Error');
 
@@ -35,6 +41,7 @@ export function Error<T extends ElementType = typeof ERROR_ELEMENT>({
 }: ErrorProps<T>) {
   let theme = useErrorTheme();
   let field = useField();
+  let fieldName = useFieldName();
   let props = {
     ref,
     className: theme(null, className),
@@ -42,14 +49,18 @@ export function Error<T extends ElementType = typeof ERROR_ELEMENT>({
     ...rest,
   };
 
-  if (field) {
-    return createElement(
-      Component,
-      props,
-      field.errors ? field.errors.map((error) => <Text key={error}>{error}</Text>) : null,
+  if (field || fieldName) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
+    let headlessProps: HeadlessDescriptionProps<any> = filterProps({as: Component, ...props});
+
+    return (
+      <HeadlessDescription {...headlessProps}>
+        {field ? field.errors?.map((error) => <Text key={error}>{error}</Text>) : children}
+      </HeadlessDescription>
     );
   }
 
+  // A Headless UI Description throws without a Headless UI parent
   return createElement(Component, props, children);
 }
 

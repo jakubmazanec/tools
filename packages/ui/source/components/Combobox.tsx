@@ -30,7 +30,6 @@ import {useField} from './useField.js';
 import {useFieldName} from './useFieldName.js';
 
 export const useComboboxTheme = createComponentTheme('Combobox', {
-  variants: {disabled: [true, false], invalid: [true, false]},
   elements: ['root', 'input', 'icon', 'options'],
 });
 
@@ -47,8 +46,7 @@ export type ComboboxProps<
 > = ComponentProps<typeof useComboboxTheme> &
   ComponentPropsWithoutRef<T> &
   ComponentRef<T> &
-  PropsWithChildren &
-  (
+  PropsWithChildren & {disabled?: boolean | undefined; invalid?: boolean | undefined} & (
     | {
         as?: T | undefined;
         value?: V[] | undefined;
@@ -83,8 +81,8 @@ export function Combobox<
   T extends ElementType = typeof COMBOBOX_ELEMENT,
   V extends boolean | number | string = string,
 >({
-  disabled = false,
-  invalid = false,
+  disabled,
+  invalid,
   as = COMBOBOX_ELEMENT as unknown as T,
   value,
   defaultValue,
@@ -101,7 +99,7 @@ export function Combobox<
   children,
   ...rest
 }: ComboboxProps<T, V>) {
-  let theme = useComboboxTheme({disabled, invalid});
+  let theme = useComboboxTheme();
   let formId = useFormId();
   let field = useField();
   let fieldName = useFieldName();
@@ -176,6 +174,8 @@ export function Combobox<
         return false;
       })
     : children;
+  // Field errors also make it invalid, so `invalid={false}` works like leaving the prop out
+  let isInvalid = invalid === true || field?.errors !== undefined;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   let props: HeadlessComboboxProps<any, any, any> = {
     as,
@@ -184,7 +184,9 @@ export function Combobox<
     value,
     defaultValue,
     multiple,
-    disabled,
+    // Headless UI ignores a parent's disabled state when given `false`, so pass `undefined`
+    disabled: disabled ? true : undefined,
+    invalid: isInvalid,
     immediate,
     form: formId,
     onChange: handleChange,
@@ -201,6 +203,8 @@ export function Combobox<
     <HeadlessCombobox {...props}>
       <div className={theme.root('relative', className)} data-component="combobox">
         <HeadlessComboboxInput
+          // Headless UI leaves `aria-invalid` off the combobox input although ARIA allows it
+          aria-invalid={isInvalid ? true : undefined}
           className={theme.input(null, className)}
           displayValue={displayValue}
           size={1} // so the input default width without styling is small
@@ -252,41 +256,11 @@ export function Combobox<
 
 export const comboboxTheme: ComponentTheme<typeof useComboboxTheme> = {
   classNames: {
-    root: 'w-full min-w-32',
+    root: 'w-full min-w-32 has-data-disabled:text-neutral-200 has-data-disabled:cursor-not-allowed',
     input:
-      'flex w-full items-center rounded-2 border-2 border-neutral-100 hover:border-neutral-200 bg-white px-2.5 h-9 pr-9 gap-x-2 transition-colors shadow-inner font-sans text-sm',
-    icon: 'text-neutral-500 size-5 top-2 right-2 cursor-pointer',
+      'flex w-full items-center rounded-2 border-2 border-neutral-100 hover:border-neutral-200 bg-white px-2.5 h-9 pr-9 gap-x-2 transition-colors shadow-inner font-sans text-sm data-disabled:hover:border-neutral-100 data-invalid:border-danger-500 data-disabled:data-invalid:hover:border-danger-500',
+    icon: 'text-neutral-500 size-5 top-2 right-2 cursor-pointer data-disabled:text-neutral-200',
     options:
       'flex flex-col gap-y-1 shadow p-1 z-30 rounded-2 border-2 border-neutral-100 hover:border-neutral-200 bg-white text-left w-[var(--input-width)] [--anchor-gap:var(--spacing)] [--anchor-padding:calc(var(--spacing)*2)] [scrollbar-width:thin] empty:invisible transition-colors',
-  },
-  variants: {
-    disabled: {
-      true: {
-        root: 'border-neutral-100 text-neutral-200 cursor-not-allowed',
-        input: '',
-        icon: 'text-neutral-200',
-        options: 'border-neutral-100',
-      },
-      false: {
-        root: '',
-        input: '',
-        icon: '',
-        options: '',
-      },
-    },
-    invalid: {
-      true: {
-        root: '',
-        input: '',
-        icon: '',
-        options: '',
-      },
-      false: {
-        root: '',
-        input: '',
-        icon: '',
-        options: '',
-      },
-    },
   },
 };

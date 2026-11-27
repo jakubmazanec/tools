@@ -9,12 +9,7 @@ import {
 import {type ComponentRef} from './ComponentRef.js';
 import {Icon} from './Icon.js';
 
-export const useRadioTheme = createComponentTheme('Radio', {
-  variants: {
-    disabled: [true, false],
-  },
-  elements: ['root', 'icon'],
-});
+export const useRadioTheme = createComponentTheme('Radio', {elements: ['root', 'icon']});
 
 const RADIO_ELEMENT = 'span';
 
@@ -25,6 +20,7 @@ export type RadioProps<T extends ElementType, V extends boolean | number | strin
   ComponentRef<T> & {
     as?: T | undefined;
     value: V;
+    disabled?: boolean | undefined;
     autoFocus?: boolean | undefined;
     className?: string;
   };
@@ -33,7 +29,7 @@ export function Radio<
   T extends ElementType = typeof RADIO_ELEMENT,
   V extends boolean | number | string = string,
 >({
-  disabled = false,
+  disabled,
   as = RADIO_ELEMENT as T,
   value,
   autoFocus,
@@ -41,13 +37,14 @@ export function Radio<
   ref,
   ...rest
 }: RadioProps<T, V>) {
-  let theme = useRadioTheme({disabled});
+  let theme = useRadioTheme();
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   let props: HeadlessRadioProps<any, V> = {
     as,
     ref,
     value,
-    disabled,
+    // Headless UI ignores a parent's disabled state when given `false`, so pass `undefined`
+    disabled: disabled ? true : undefined,
     autoFocus,
     className: theme.root('relative', className),
     'data-component': 'radio',
@@ -69,19 +66,7 @@ export function Radio<
 
 export const radioTheme: ComponentTheme<typeof useRadioTheme> = {
   classNames: {
-    root: 'group/radio inline-block size-5 rounded-full',
-    icon: 'flex justify-content justify-item size-5 *:rounded-full *:bg-white *:border-2 *:border-neutral-100 *:hover:border-neutral-200 *:shadow-inner *:transition-colors *:text-transparent *:hover:text-neutral-100 group-data-[checked]/radio:*:bg-neutral-950 group-data-[checked]/radio:*:border-neutral-950 group-data-[checked]/radio:*:text-white group-data-[checked]/radio:*:hover:border-neutral-950',
-  },
-  variants: {
-    disabled: {
-      true: {
-        root: 'border-neutral-100 text-neutral-200 cursor-not-allowed',
-        icon: 'opacity-0',
-      },
-      false: {
-        root: '',
-        icon: '',
-      },
-    },
+    root: 'group/radio inline-block size-5 rounded-full data-disabled:cursor-not-allowed',
+    icon: 'flex justify-content justify-item size-5 *:rounded-full *:bg-white *:border-2 *:border-neutral-100 *:hover:border-neutral-200 *:shadow-inner *:transition-colors *:text-transparent *:hover:text-neutral-100 group-data-[checked]/radio:*:bg-neutral-950 group-data-[checked]/radio:*:border-neutral-950 group-data-[checked]/radio:*:text-white group-data-[checked]/radio:*:hover:border-neutral-950 group-data-disabled/radio:*:hover:text-transparent group-data-disabled/radio:*:border-neutral-50 group-data-disabled/radio:*:hover:border-neutral-50 group-data-disabled/radio:group-data-[checked]/radio:*:bg-neutral-100 group-data-disabled/radio:group-data-[checked]/radio:*:border-neutral-100 group-data-disabled/radio:group-data-[checked]/radio:*:text-white group-data-disabled/radio:hover:group-data-[checked]/radio:*:border-neutral-100 group-data-disabled/radio:hover:group-data-[checked]/radio:*:text-white group-data-invalid/radio-group:*:border-danger-500 group-data-invalid/radio-group:*:hover:border-danger-500 group-data-invalid/radio-group:group-data-[checked]/radio:*:border-danger-500 group-data-invalid/radio-group:hover:group-data-[checked]/radio:*:border-danger-500',
   },
 };

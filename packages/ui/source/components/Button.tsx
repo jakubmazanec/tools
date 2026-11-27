@@ -20,7 +20,6 @@ export const useButtonTheme = createComponentTheme('Button', {
   variants: {
     variant: ['solid', 'outline', 'text', 'invisible'],
     size: ['small', 'medium', 'large'],
-    disabled: [true, false],
   },
 });
 
@@ -32,6 +31,7 @@ export type ButtonProps<T extends ElementType> = ComponentProps<typeof useButton
     as?: T | undefined;
     submit?: boolean | undefined;
     idle?: boolean | undefined;
+    disabled?: boolean | undefined;
     autoFocus?: boolean | undefined;
     className?: string | undefined;
     // ref?: Ref<R> | undefined;
@@ -41,24 +41,31 @@ export type ButtonProps<T extends ElementType> = ComponentProps<typeof useButton
 export function Button<T extends ElementType = typeof BUTTON_ELEMENT>({
   variant = 'solid',
   size = 'medium',
-  disabled = false,
+  disabled,
   as = BUTTON_ELEMENT as T,
   idle = true,
   autoFocus = false,
   submit = false,
   className,
+  onClick,
   ref,
   children,
   ...rest
 }: ButtonProps<T>) {
-  let theme = useButtonTheme({variant, size, disabled});
+  let theme = useButtonTheme({variant, size});
+  let pending = submit && !idle;
   let props: Record<string, unknown> = {
     as,
     ref,
-    className: theme(disabled ? 'pointer-events-none' : null, className),
-    disabled: disabled || (submit && !idle),
+    className: theme('data-disabled:not-disabled:pointer-events-none', className),
+    // Headless UI ignores a parent's disabled state when given `false`, so pass `undefined`
+    disabled: pending || disabled ? true : undefined,
+    'data-pending': pending ? '' : undefined,
     autoFocus,
     'data-component': 'button',
+    // A disabled Headless UI element turns its existing onClick into preventDefault, which
+    // stops a link's click (fired by mouse and Enter); it adds no handler, so always pass one.
+    onClick: onClick ?? (() => {}),
     ...rest,
   };
 
@@ -68,6 +75,11 @@ export function Button<T extends ElementType = typeof BUTTON_ELEMENT>({
 
   if (submit) {
     props.type = 'submit';
+  }
+
+  if (disabled && as !== BUTTON_ELEMENT) {
+    props['aria-disabled'] = true;
+    props.tabIndex = -1;
   }
 
   if (typeof children === 'function') {
@@ -89,7 +101,7 @@ export function Button<T extends ElementType = typeof BUTTON_ELEMENT>({
 
   return (
     <HeadlessButton {...props}>
-      {submit && !idle ?
+      {pending ?
         <Spinner data-icon />
       : null}
       {enhancedChildren}
@@ -102,10 +114,13 @@ export const buttonTheme: ComponentTheme<typeof useButtonTheme> = {
     'rounded-2 inline-flex items-center justify-center text-nowrap font-sans font-medium text-sm transition-colors',
   variants: {
     variant: {
-      solid: 'text-white bg-neutral-900 hover:bg-neutral-800',
-      outline: 'text-neutral-950 border-2 border-neutral-100 hover:border-neutral-200',
-      text: 'text-neutral-950 border-2 border-transparent hover:border-neutral-200',
-      invisible: 'cursor-default text-neutral-200 hover:text-neutral-600 select-none',
+      solid:
+        'text-white bg-neutral-900 hover:bg-neutral-800 data-disabled:not-data-pending:bg-neutral-200 data-disabled:not-data-pending:hover:bg-neutral-200 data-pending:hover:bg-neutral-900',
+      outline:
+        'text-neutral-950 border-2 border-neutral-100 hover:border-neutral-200 data-disabled:not-data-pending:text-neutral-200 data-disabled:hover:border-neutral-100',
+      text: 'text-neutral-950 border-2 border-transparent hover:border-neutral-200 data-disabled:not-data-pending:text-neutral-200 data-disabled:hover:border-transparent',
+      invisible:
+        'cursor-default text-neutral-200 hover:text-neutral-600 select-none data-disabled:hover:text-neutral-200',
     },
     size: {
       small:
@@ -114,10 +129,6 @@ export const buttonTheme: ComponentTheme<typeof useButtonTheme> = {
         'leading-6 px-2.5 h-9 min-w-9 gap-x-1 *:first:data-[slot=icon]:-ml-1.5 *:last:data-[slot=icon]:-mr-1.5',
       large:
         'text-lg leading-6 px-3 h-10 min-w-10 gap-x-1 *:first:data-[slot=icon]:-ml-1 *:last:data-[slot=icon]:-mr-1',
-    },
-    disabled: {
-      true: '',
-      false: '',
     },
   },
   compoundVariants: [
@@ -150,26 +161,6 @@ export const buttonTheme: ComponentTheme<typeof useButtonTheme> = {
       variant: 'invisible',
       size: 'large',
       className: 'px-2 h-7 min-w-7',
-    },
-    {
-      variant: 'solid',
-      disabled: true,
-      className: 'text-white bg-neutral-200 hover:bg-neutral-200',
-    },
-    {
-      variant: 'outline',
-      disabled: true,
-      className: 'text-neutral-200 hover:border-neutral-100',
-    },
-    {
-      variant: 'text',
-      disabled: true,
-      className: 'text-neutral-200 hover:border-transparent',
-    },
-    {
-      variant: 'invisible',
-      disabled: true,
-      className: 'text-neutral-200 ',
     },
   ],
 };

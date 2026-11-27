@@ -12,11 +12,7 @@ import {
 import {type ComponentRef} from './ComponentRef.js';
 import {filterProps} from './internals.js';
 
-export const useMenuItemTheme = createComponentTheme('MenuItem', {
-  variants: {
-    disabled: [true, false],
-  },
-});
+export const useMenuItemTheme = createComponentTheme('MenuItem');
 
 const MENU_ITEM_ELEMENT = 'div';
 
@@ -25,18 +21,19 @@ export type MenuItemProps<T extends ElementType> = ComponentProps<typeof useMenu
   ComponentRef<T> &
   PropsWithChildren & {
     as?: T | undefined;
+    disabled?: boolean | undefined;
     className?: string;
   };
 
 export function MenuItem<T extends ElementType = typeof MENU_ITEM_ELEMENT>({
-  disabled = false,
+  disabled,
   as = MENU_ITEM_ELEMENT as T,
   className,
   ref,
   children,
   ...rest
 }: MenuItemProps<T>) {
-  let theme = useMenuItemTheme({disabled});
+  let theme = useMenuItemTheme();
   // eslint-disable-next-line @typescript-eslint/no-explicit-any -- needed
   let props: HeadlessMenuItemProps<any> = filterProps({
     as,
@@ -52,11 +49,5 @@ export function MenuItem<T extends ElementType = typeof MENU_ITEM_ELEMENT>({
 
 export const menuItemTheme: ComponentTheme<typeof useMenuItemTheme> = {
   className:
-    'p-1 rounded-1 text-neutral-950 hover:bg-neutral-50 data-[active]:bg-neutral-50 text-sm transition-colors',
-  variants: {
-    disabled: {
-      true: 'text-neutral-200 hover:bg-transparent',
-      false: '',
-    },
-  },
+    'p-1 rounded-1 text-neutral-950 hover:bg-neutral-50 data-[active]:bg-neutral-50 text-sm transition-colors data-disabled:text-neutral-200 data-disabled:hover:bg-transparent',
 };
