@@ -25,7 +25,7 @@ export type RadioGroupProps<
 > = ComponentProps<typeof useRadioGroupTheme> &
   ComponentPropsWithoutRef<T> &
   ComponentRef<T> &
-  PropsWithChildren & {disabled?: boolean | undefined} & (
+  PropsWithChildren & {disabled?: boolean | undefined; invalid?: boolean | undefined} & (
     | {
         as?: T | undefined;
         value?: V | undefined;
@@ -53,6 +53,7 @@ export function RadioGroup<
   V extends boolean | number | string = string,
 >({
   disabled,
+  invalid,
   as = RADIO_GROUP_ELEMENT as T,
   value,
   defaultValue,
@@ -72,12 +73,17 @@ export function RadioGroup<
     },
     [onChange],
   );
+  // Field errors also make it invalid, so `invalid={false}` works like leaving the prop out
+  let isInvalid = invalid === true || field?.errors !== undefined;
 
   if (field) {
     let props = {
       ref,
       // Headless UI ignores a parent's disabled state when given `false`, so pass `undefined`
       disabled: disabled ? true : undefined,
+      // Headless UI has no `invalid` here, so set the attributes ourselves
+      'aria-invalid': isInvalid ? true : undefined,
+      'data-invalid': isInvalid ? '' : undefined,
       defaultValue,
       name: field.name,
       form: formId,
@@ -98,6 +104,9 @@ export function RadioGroup<
       ref,
       // Headless UI ignores a parent's disabled state when given `false`, so pass `undefined`
       disabled: disabled ? true : undefined,
+      // Headless UI has no `invalid` here, so set the attributes ourselves
+      'aria-invalid': isInvalid ? true : undefined,
+      'data-invalid': isInvalid ? '' : undefined,
       defaultValue,
       name,
       form: formId,
@@ -118,6 +127,9 @@ export function RadioGroup<
     ref,
     // Headless UI ignores a parent's disabled state when given `false`, so pass `undefined`
     disabled: disabled ? true : undefined,
+    // Headless UI has no `invalid` here, so set the attributes ourselves
+    'aria-invalid': isInvalid ? true : undefined,
+    'data-invalid': isInvalid ? '' : undefined,
     value,
     defaultValue,
     className: theme(null, className),
@@ -130,5 +142,5 @@ export function RadioGroup<
 }
 
 export const radioGroupTheme: ComponentTheme<typeof useRadioGroupTheme> = {
-  className: 'flex flex-col gap-y-2',
+  className: 'group/radio-group flex flex-col gap-y-2',
 };
