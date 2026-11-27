@@ -26,7 +26,7 @@ import {
 import {type ComponentRef} from './ComponentRef.js';
 import {Icon} from './Icon.js';
 import {Input} from './Input.js';
-import {useFormId} from './internals.js';
+import {FieldContext, useFormId} from './internals.js';
 import {ListboxOption} from './ListboxOption.js';
 import {useField} from './useField.js';
 import {useFieldName} from './useFieldName.js';
@@ -330,7 +330,9 @@ export function Listbox<
       >
         {showFilter ?
           <div className={theme.filter()}>
-            <Input ref={inputRef} showClearButton value={query} onInput={handleQueryChange} />
+            <FieldContext value={undefined}>
+              <Input ref={inputRef} showClearButton value={query} onInput={handleQueryChange} />
+            </FieldContext>
           </div>
         : null}
         {items ?

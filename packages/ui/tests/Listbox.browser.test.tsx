@@ -3,7 +3,8 @@ import {describe, expect, test, vitest} from 'vitest';
 import {render} from 'vitest-browser-react';
 import {page} from 'vitest/browser';
 
-import {Button, defaultTheme, Listbox, ThemeProvider} from '../source/main.js';
+import {Button, defaultTheme, Field, Listbox, ThemeProvider} from '../source/main.js';
+import {ConformForm} from './ConformForm.js';
 
 import '../.storybook/tailwind.css';
 
@@ -89,5 +90,24 @@ describe(Listbox, () => {
     expect(getBorderColor('Both')).toBe(invalidColor);
 
     style.remove();
+  });
+
+  test('keeps its filter input valid when its field has errors', async () => {
+    await render(
+      <ConformForm>
+        {(fields) => (
+          <Field field={fields.listbox}>
+            <Listbox showFilter items={[{value: 'done', label: 'Done'}]} placeholder="Choice" />
+          </Field>
+        )}
+      </ConformForm>,
+    );
+    await page.getByRole('button', {name: 'Submit'}).click();
+    await page.getByRole('button', {name: 'Choice'}).click();
+
+    let filter = page.getByRole('listbox').getByRole('textbox');
+
+    await expect.element(filter).not.toHaveAttribute('data-invalid');
+    await expect.element(filter).not.toHaveAttribute('aria-invalid');
   });
 });

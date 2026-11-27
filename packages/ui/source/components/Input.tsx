@@ -30,6 +30,7 @@ export type InputProps<T extends ElementType> = ComponentProps<typeof useInputTh
   ComponentRef<T> & {
     as?: T | undefined;
     disabled?: boolean | undefined;
+    invalid?: boolean | undefined;
     name?: string | undefined;
     className?: string | undefined;
     icon?: ComponentType<object> | string | undefined;
@@ -38,6 +39,7 @@ export type InputProps<T extends ElementType> = ComponentProps<typeof useInputTh
 
 export function Input<T extends ElementType = typeof INPUT_ELEMENT>({
   disabled,
+  invalid,
   as = INPUT_ELEMENT as T,
   name,
   className,
@@ -75,6 +77,8 @@ export function Input<T extends ElementType = typeof INPUT_ELEMENT>({
     ref: inputRef,
     // Headless UI ignores a parent's disabled state when given `false`, so pass `undefined`
     disabled: disabled ? true : undefined,
+    // Field errors also make it invalid, so `invalid={false}` works like leaving the prop out
+    invalid: invalid === true || field?.errors !== undefined,
     name: field?.name ?? fieldName ?? name,
     className: theme.input(),
     size: 1, // so the input default width without styling is small
@@ -125,7 +129,7 @@ export function Input<T extends ElementType = typeof INPUT_ELEMENT>({
 
 export const inputTheme: ComponentTheme<typeof useInputTheme> = {
   classNames: {
-    root: 'group group/input flex w-full items-center rounded-2 border-2 border-neutral-100 hover:border-neutral-200 px-2.5 h-9 bg-white shadow-inner transition-colors focus-within:outline-solid focus-within:outline-2 focus-within:outline-blue-400/50 focus-within:outline-offset-[calc(var(--spacing)*0.5)] has-data-disabled:text-neutral-200 has-data-disabled:cursor-not-allowed has-data-disabled:hover:border-neutral-100',
+    root: 'group group/input flex w-full items-center rounded-2 border-2 border-neutral-100 hover:border-neutral-200 px-2.5 h-9 bg-white shadow-inner transition-colors focus-within:outline-solid focus-within:outline-2 focus-within:outline-blue-400/50 focus-within:outline-offset-[calc(var(--spacing)*0.5)] has-data-disabled:text-neutral-200 has-data-disabled:cursor-not-allowed has-data-disabled:hover:border-neutral-100 has-data-invalid:border-danger-500 has-data-disabled:has-data-invalid:hover:border-danger-500',
     input:
       'p-0 focus:outline-none w-full group-data-[icon]:pl-6 group-data-[clear-button]:pr-4 bg-transparent font-sans text-sm',
     icon: 'size-6 left-[0.3125rem] top-[0.3125rem] text-neutral-300',
